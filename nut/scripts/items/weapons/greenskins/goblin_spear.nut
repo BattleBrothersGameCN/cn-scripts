@@ -1,0 +1,37 @@
+this.goblin_spear <- this.inherit("scripts/items/weapons/weapon", {
+	m = {},
+	function create()
+	{
+		this.weapon.create();
+		this.m.ID = "weapon.goblin_spear";
+		this.m.Name = "地精穿刺矛";
+		this.m.Description = "一个拥有锋利金属尖头的长杆。";
+		this.m.Categories = "矛，单手持";
+		this.m.IconLarge = "weapons/melee/goblin_weapon_03.png";
+		this.m.Icon = "weapons/melee/goblin_weapon_03_70x70.png";
+		this.m.SlotType = this.Const.ItemSlot.Mainhand;
+		this.m.ItemType = this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded | this.Const.Items.ItemType.Defensive;
+		this.m.IsDoubleGrippable = true;
+		this.m.AddGenericSkill = true;
+		this.m.ShowQuiver = false;
+		this.m.ShowArmamentIcon = true;
+		this.m.ArmamentIcon = "icon_goblin_weapon_03";
+		this.m.Value = 300;
+		this.m.Condition = 36.000000;
+		this.m.ConditionMax = 36.000000;
+		this.m.StaminaModifier = -3;
+		this.m.RegularDamage = 25;
+		this.m.RegularDamageMax = 35;
+		this.m.ArmorDamageMult = 0.700000;
+		this.m.DirectDamageMult = 0.250000;
+	}
+
+	function onEquip()
+	{
+		this.weapon.onEquip();
+		local thrust = this.new("scripts/skills/actives/thrust");
+		this.addSkill(thrust);
+		this.addSkill(this.new("scripts/skills/actives/spearwall"));
+	}
+
+});

@@ -1,0 +1,41 @@
+this.fighting_spear <- this.inherit("scripts/items/weapons/weapon", {
+	m = {},
+	function create()
+	{
+		this.weapon.create();
+		this.m.ID = "weapon.fighting_spear";
+		this.m.Name = "战矛";
+		this.m.Description = "一把为战斗特制的长而可靠耐用的矛。";
+		this.m.Categories = "矛，单手持";
+		this.m.IconLarge = "weapons/melee/spear_03.png";
+		this.m.Icon = "weapons/melee/spear_03_70x70.png";
+		this.m.SlotType = this.Const.ItemSlot.Mainhand;
+		this.m.ItemType = this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded | this.Const.Items.ItemType.Defensive;
+		this.m.IsDoubleGrippable = true;
+		this.m.AddGenericSkill = true;
+		this.m.ShowQuiver = false;
+		this.m.ShowArmamentIcon = true;
+		this.m.ArmamentIcon = "icon_spear_03";
+		this.m.Value = 2250;
+		this.m.Condition = 72.000000;
+		this.m.ConditionMax = 72.000000;
+		this.m.StaminaModifier = -10;
+		this.m.RegularDamage = 35;
+		this.m.RegularDamageMax = 40;
+		this.m.ArmorDamageMult = 1.000000;
+		this.m.DirectDamageMult = 0.250000;
+	}
+
+	function onEquip()
+	{
+		this.weapon.onEquip();
+		this.addSkill(this.new("scripts/skills/actives/thrust"));
+		this.addSkill(this.new("scripts/skills/actives/spearwall"));
+	}
+
+	function onUpdateProperties( _properties )
+	{
+		this.weapon.onUpdateProperties(_properties);
+	}
+
+});
