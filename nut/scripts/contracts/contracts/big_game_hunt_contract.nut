@@ -497,7 +497,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 								template = "在 %s 附近狩猎野兽"
 							};
 							env.setdelegate(this);
-							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\'Region\')).Name)")();
+							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
 						}());
 						this.World.Contracts.finishActiveContract();
 						return 0;
@@ -537,7 +537,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 								template = "在 %s 附近狩猎野兽"
 							};
 							env.setdelegate(this);
-							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\'Region\')).Name)")();
+							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
 						}());
 						this.World.Contracts.finishActiveContract();
 						return 0;
@@ -577,7 +577,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 								template = "在 %s 附近狩猎野兽"
 							};
 							env.setdelegate(this);
-							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\'Region\')).Name)")();
+							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
 						}());
 						this.World.Contracts.finishActiveContract();
 						return 0;

@@ -74,7 +74,7 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 							template = "确保 %s 的安全"
 						};
 						env.setdelegate(this);
-						return this.compilestring("return RenderTemplate(template, Flags.get(\'DestinationName\'))")();
+						return this.compilestring("return RenderTemplate(template, Flags.get(\"DestinationName\"))")();
 					}()
 				];
 
