@@ -571,7 +571,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 								template = "未能突破针对 %s 的围攻"
 							};
 							env.setdelegate(this);
-							return this.compilestring("return RenderTemplate(template, Flags.get(\'ObjectiveName\'))")();
+							return this.compilestring("return RenderTemplate(template, Flags.get(\"ObjectiveName\"))")();
 						}());
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
