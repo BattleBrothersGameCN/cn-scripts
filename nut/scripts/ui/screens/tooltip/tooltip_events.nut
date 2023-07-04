@@ -705,7 +705,7 @@ this.tooltip_events <- {
 						id = 3,
 						type = "hint",
 						icon = "ui/icons/mouse_right_button_alt.png",
-						text = "支付[img]gfx/ui/tooltips/money.png[/img]。" + price + "进行修理"
+						text = "支付[img]gfx/ui/tooltips/money.png[/img]" + price + "进行修理"
 					});
 				}
 				else
@@ -1286,7 +1286,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "各种各样的箭矢、弩矢和投掷武器，用于战斗后自动补充箭袋。 更换一支箭矢或箭矢将会占用一个点的弹药，更换一支手炮的一发将占用两个点，更换一支投掷武器或一支火矛将占用三个点。 弹药耗尽会使你的箭袋空空荡荡，你的人将无法射击。 你可以总共携带不超过  " + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].Ammo + this.World.Assets.m.AmmoMaxAdditional) + "单位。"
+						text = "整理好的各种箭矢、弩矢、投掷武器，用来在战斗后自动重新装填弹药袋。补充一支箭矢或弩矢消耗一点弹药，补充一发火铳弹消耗两点弹药，补充一个投掷武器或重装填火矛消耗三点弹药。弹药耗尽会使你的箭袋空空荡荡，你的人将无法射击。你可以总共携带不超过" + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].Ammo + this.World.Assets.m.AmmoMaxAdditional) + "单位。"
 					}
 				];
 
@@ -1594,7 +1594,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "确定使用近战攻击击中目标的基本概率，比如使用剑和矛。 可以随着角色获得经验而增加。"
+						text = "决定使用近战攻击击中目标的基本概率，比如使用剑和矛。可以随着角色获得经验而增加。"
 					}
 				];
 
@@ -1622,7 +1622,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "一个更高的近战防御降低了被近战攻击击中的概率，比如矛的刺击。 它可以随着角色获得经验和装备好盾牌而增加。"
+						text = "更高的近战防御降低了被近战攻击击中的概率，比如矛的刺击。它可以随着角色获得经验和装备好盾牌而增加。"
 					}
 				];
 
@@ -1729,7 +1729,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "才能"
+						text = "天赋"
 					},
 					{
 						id = 2,
@@ -2359,7 +2359,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "如果可能的话，自动将装备放回战斗前的摆放位置中。 例如，如果一个角色开始使用弩作战，但在战斗中变为长矛，则在战斗结束时，他们将自动再次手握弩。"
+						text = "如果可能的话，自动将装备放回战斗前的摆放位置中。例如，如果一个角色开始使用弩作战，但在战斗中变为长矛，则在战斗结束时，他们将自动再次手握弩。"
 					}
 				];
 
@@ -2618,7 +2618,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "结束全部回合 (R)"
+						text = "结束回合 (R)"
 					},
 					{
 						id = 2,
@@ -2796,7 +2796,7 @@ this.tooltip_events <- {
 						id = 2,
 						type = "text",
 						icon = "ui/icons/shield_damage.png",
-						text = "受到了 [color=" + this.Const.UI.Color.NegativeValue + "]" + combatStats.DamageReceivedArmor + "[/color] 盔甲伤害"
+						text = "受到了 [color=" + this.Const.UI.Color.NegativeValue + "]" + combatStats.DamageReceivedArmor + "[/color] 护甲伤害"
 					});
 				}
 
@@ -2897,7 +2897,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "切换到查看你的雇佣兵战团的仓库，或在战斗中当前选定角色下方的地面。"
+						text = "切换到查看雇佣兵战团的仓库，或战斗中选定角色下方的地面。"
 					}
 				];
 
@@ -2911,7 +2911,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "切换到查看当前选定角色的特技。\n\n括号中的数字（如果有）是可用的特技点数。"
+						text = "切换到查看选定角色的特技。\n\n括号中的数字（如果有）是可用的特技点数。"
 					}
 				];
 
@@ -3186,7 +3186,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "营地 (T)"
+						text = "扎营 (T)"
 					},
 					{
 						id = 2,
@@ -3212,7 +3212,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "随从(P)"
+						text = "随从 (P)"
 					},
 					{
 						id = 2,
@@ -3352,7 +3352,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "可获得的合同"
+						text = "可接受的合同"
 					},
 					{
 						id = 2,
@@ -3367,7 +3367,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "可获得的合同"
+						text = "可接受的合同"
 					},
 					{
 						id = 2,
@@ -3716,7 +3716,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "手工制作"
+						text = "制作"
 					},
 					{
 						id = 2,

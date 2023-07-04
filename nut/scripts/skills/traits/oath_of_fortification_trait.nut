@@ -6,7 +6,7 @@ this.oath_of_fortification_trait <- this.inherit("scripts/skills/traits/characte
 		this.m.ID = "trait.oath_of_fortification";
 		this.m.Name = "壁垒誓言";
 		this.m.Icon = "ui/traits/trait_icon_86.png";
-		this.m.Description = "该角色立下了壁垒誓言，发誓对他的盾牌寄予无上的信任。";
+		this.m.Description = "该角色已经立下了壁垒誓言，发誓对他的盾牌寄予无上的信任。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

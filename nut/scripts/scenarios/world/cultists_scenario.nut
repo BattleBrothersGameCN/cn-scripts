@@ -4,7 +4,7 @@ this.cultists_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 	{
 		this.m.ID = "scenario.cultists";
 		this.m.Name = "达库尔邪教徒";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_140.png[/img][/p][p]达库尔即将降临。你带领着一小群献身于这位古老神明的信徒，现在是时候宣扬祂的教义了。寻找更多的追随者，获取财富，并通过献祭来取悦达库尔。\n\n[color=#bcad8c]邪教徒: [/color]从四个装备简陋的邪教徒开始。更多的邪教徒可能会免费聚集到你身边。\n[color=#bcad8c]献祭: [/color]达库尔偶尔会要求你献祭，但也会对那些忠于祂的人给予恩惠。[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_140.png[/img][/p][p]达库尔在等待。你带领着一小群献身于这位古老神明的信徒，现在是时候宣扬祂的教义了。寻找更多的追随者，获取财富，并通过献祭来取悦达库尔。\n\n[color=#bcad8c]邪教徒: [/color]从四个装备简陋的邪教徒开始。更多的邪教徒可能会免费聚集到你身边。\n[color=#bcad8c]献祭: [/color]达库尔偶尔会要求你献祭，但也会对那些忠于祂的人给予恩惠。[/p]";
 		this.m.Difficulty = 2;
 		this.m.Order = 80;
 	}

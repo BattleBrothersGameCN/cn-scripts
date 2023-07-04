@@ -176,7 +176,7 @@ this.character_screen <- {
 	function setBattlePreparationMode()
 	{
 		this.m.InventoryMode = this.Const.CharacterScreen.InventoryMode.BattlePreparation;
-		this.m.JSDataSourceHandle.asyncCall("setInventoryMode", "战斗准备");
+		this.m.JSDataSourceHandle.asyncCall("setInventoryMode", "battle-preparation");
 	}
 
 	function isInStashMode()

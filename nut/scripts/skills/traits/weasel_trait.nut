@@ -46,7 +46,7 @@ this.weasel_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/melee_defense.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+25[/color] 近战防御，在撤退时"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+25[/color] 在撤退时的近战防御"
 			}
 		];
 	}

@@ -494,7 +494,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, function ()
 						{
 							local env = {
-								template = "在 %s 附近狩猎野兽"
+								template = "狩猎%s附近的野兽"
 							};
 							env.setdelegate(this);
 							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
@@ -534,7 +534,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, function ()
 						{
 							local env = {
-								template = "在 %s 附近狩猎野兽"
+								template = "狩猎%s附近的野兽"
 							};
 							env.setdelegate(this);
 							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
@@ -574,7 +574,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, function ()
 						{
 							local env = {
-								template = "在 %s 附近狩猎野兽"
+								template = "狩猎%s附近的野兽"
 							};
 							env.setdelegate(this);
 							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
