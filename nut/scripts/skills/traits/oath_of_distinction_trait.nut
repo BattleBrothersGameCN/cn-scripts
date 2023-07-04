@@ -6,7 +6,7 @@ this.oath_of_distinction_trait <- this.inherit("scripts/skills/traits/character_
 		this.m.ID = "trait.oath_of_distinction";
 		this.m.Name = "超群誓言";
 		this.m.Icon = "ui/traits/trait_icon_88.png";
-		this.m.Description = "此角立下了超群誓言，发誓在寻求胜利时不得借助盟友的支持。";
+		this.m.Description = "该角色已经立下了超群誓言，发誓在寻求胜利时不得借助盟友的支持。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

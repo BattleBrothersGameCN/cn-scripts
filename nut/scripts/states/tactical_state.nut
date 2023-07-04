@@ -1969,7 +1969,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 						}
 						else if (this.World.Assets.getOrigin().getID() != "scenario.deserters")
 						{
-							bro.worsenMood(this.Const.MoodChange.BattleRetreat, "从战斗中撤退");
+							bro.worsenMood(this.Const.MoodChange.BattleRetreat, "从战斗中撤退了");
 						}
 					}
 					else if (bro.getMoodState() > this.Const.MoodState.Concerned && !bro.getCurrentProperties().IsContentWithBeingInReserve && !this.World.Assets.m.IsDisciplined)
@@ -2833,7 +2833,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 				if (entity != null && this.isKindOf(entity, "actor"))
 				{
-					this.logDebug("消灭目标:" + entity.getName());
+					this.logDebug("消灭目标：" + entity.getName());
 
 					if (entity == this.Tactical.TurnSequenceBar.getActiveEntity())
 					{
@@ -2864,7 +2864,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 				if (entity != null && this.isKindOf(entity, "actor"))
 				{
-					this.logDebug("消灭目标:" + entity.getName());
+					this.logDebug("消灭目标：" + entity.getName());
 
 					if (entity == this.Tactical.TurnSequenceBar.getActiveEntity())
 					{

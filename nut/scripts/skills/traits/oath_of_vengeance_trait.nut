@@ -8,7 +8,7 @@ this.oath_of_vengeance_trait <- this.inherit("scripts/skills/traits/character_tr
 		this.m.ID = "trait.oath_of_vengeance";
 		this.m.Name = "复仇誓言";
 		this.m.Icon = "ui/traits/trait_icon_77.png";
-		this.m.Description = "该角色已经宣誓复仇，发誓要与困扰人类的绿皮族作战。";
+		this.m.Description = "该角色已经立下复仇誓言，发誓要与困扰人类的绿皮族作战。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

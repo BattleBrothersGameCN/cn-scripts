@@ -6,8 +6,8 @@ this.hammer_mastery_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.m.ID = "ambition.hammer_mastery";
 		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们战团没有做好与装甲对手作战的准备。\n我们得训练俩人精通战锤来战斗，没有骑士能逃出我们的魔掌。";
-		this.m.UIText = "有人掌握锤精通特技";
-		this.m.TooltipText = "有2人掌握锤精通特技。";
+		this.m.UIText = "培训掌握锤精通特技的成员";
+		this.m.TooltipText = "拥有 2 个掌握锤精通特技的人。";
 		this.m.SuccessText = "[img]gfx/ui/events/event_82.png[/img]人们聚集在一起，观看 %hammerbrother% 在一棵松树上练习击打的勇猛，啪－啪－啪。%SPEECH_ON%看那锤头！ 你几乎可以直接打穿任何头盔，好看看那个颅骨碗里有什么！%SPEECH_OFF%他又挥了一下，树干从中间裂开，上半部分直接落在营地里。%nothammerbrother% 从座位上爬起来，把汤洒了一身，险些被压碎。 %SPEECH_ON%我原以为这世上没什么新鲜的东西，但我从来没有用倒下的树杀过人！%SPEECH_OFF%%hammerbrother% 笑着喊道。你可以期望下次遇到重装甲的敌人时，你会好过。";
 		this.m.SuccessButtonText = "盔甲，什么盔甲？";
 	}

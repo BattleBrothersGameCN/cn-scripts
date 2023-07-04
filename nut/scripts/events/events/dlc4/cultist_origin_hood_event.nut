@@ -15,7 +15,7 @@ this.cultist_origin_hood_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "达库尔即将降临。",
+					Text = "达库尔在等待。",
 					function getResult( _event )
 					{
 						return 0;

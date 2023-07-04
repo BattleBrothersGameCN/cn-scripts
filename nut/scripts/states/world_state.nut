@@ -2313,7 +2313,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			}
 			else
 			{
-				text = "你不知道你将面对谁。自担风险地攻击，必要时随时准备撤退！";
+				text = "你不知道你将面对谁。攻击风险自担，必要时随时准备撤退！";
 			}
 		}
 

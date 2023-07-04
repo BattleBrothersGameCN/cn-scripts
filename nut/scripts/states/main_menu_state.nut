@@ -441,7 +441,7 @@ this.main_menu_state <- this.inherit("scripts/states/state", {
 			},
 			{
 				id = 1,
-				name = "横扫",
+				name = "扫荡",
 				description = "[p=c][img]gfx/ui/events/event_133.png[/img][/p]\n[p=c]少量简单的对手分布在整个地图中，许多地形特征阻挡视线。非常适合用来适应视野、战争迷雾以及远程作战。容易。[/p]"
 			},
 			{
