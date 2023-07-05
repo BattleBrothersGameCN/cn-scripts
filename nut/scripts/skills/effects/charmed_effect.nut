@@ -20,7 +20,7 @@ this.charmed_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.charmed";
-		this.m.Name = "Charmed";
+		this.m.Name = "被魅惑";
 		this.m.Icon = "skills/status_effect_85.png";
 		this.m.IconMini = "status_effect_85_mini";
 		this.m.Overlay = "status_effect_85";

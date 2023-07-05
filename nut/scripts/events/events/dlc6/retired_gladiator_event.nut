@@ -189,7 +189,7 @@ this.retired_gladiator_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Sorry.",
+					Text = "对不起。",
 					function getResult( _event )
 					{
 						return 0;

@@ -168,7 +168,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Whoops.",
+					Text = "哎哟。",
 					function getResult( _event )
 					{
 						return 0;

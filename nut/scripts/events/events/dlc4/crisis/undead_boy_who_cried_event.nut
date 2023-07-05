@@ -274,7 +274,7 @@ this.undead_boy_who_cried_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Oh.",
+					Text = "唉。",
 					function getResult( _event )
 					{
 						return 0;

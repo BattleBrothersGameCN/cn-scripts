@@ -204,7 +204,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Goddammit.",
+					Text = "该死。",
 					function getResult( _event )
 					{
 						return 0;

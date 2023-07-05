@@ -341,7 +341,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			{
 				if (this.World.Assets.isCamping())
 				{
-					this.World.TopbarDayTimeModule.showMessage("ENCAMPED", "");
+					this.World.TopbarDayTimeModule.showMessage("扎营中", "");
 				}
 				else
 				{
@@ -350,7 +350,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			}
 			else
 			{
-				this.World.TopbarDayTimeModule.showMessage("PAUSED", "（按空格键）");
+				this.World.TopbarDayTimeModule.showMessage("已暂停", "（按空格键）");
 			}
 		}
 
@@ -1683,7 +1683,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 		{
 			if (this.World.Assets.isCamping())
 			{
-				this.World.TopbarDayTimeModule.showMessage("ENCAMPED", "");
+				this.World.TopbarDayTimeModule.showMessage("扎营中", "");
 			}
 			else
 			{
@@ -1692,7 +1692,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 		}
 		else
 		{
-			this.World.TopbarDayTimeModule.showMessage("PAUSED", "（按空格键）");
+			this.World.TopbarDayTimeModule.showMessage("已暂停", "（按空格键）");
 		}
 	}
 

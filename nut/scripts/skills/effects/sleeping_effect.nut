@@ -17,7 +17,7 @@ this.sleeping_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.sleeping";
-		this.m.Name = "Sleeping";
+		this.m.Name = "沉睡";
 		this.m.Icon = "skills/status_effect_82.png";
 		this.m.IconMini = "status_effect_82_mini";
 		this.m.Overlay = "status_effect_82";

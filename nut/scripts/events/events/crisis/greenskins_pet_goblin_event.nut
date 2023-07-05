@@ -218,7 +218,7 @@ this.greenskins_pet_goblin_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Goddammit.",
+					Text = "该死。",
 					function getResult( _event )
 					{
 						return 0;

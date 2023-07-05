@@ -22,7 +22,7 @@ this.oathtaker_joins_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Hugo.",
+					Text = "天呀。",
 					function getResult( _event )
 					{
 						return "C";

@@ -124,7 +124,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "Your secret is safe with me. ",
+					Text = "我会为你保密的。",
 					function getResult( _event )
 					{
 						return "D";
@@ -202,7 +202,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "That was easy.",
+					Text = "这很简单。",
 					function getResult( _event )
 					{
 						return 0;
@@ -264,7 +264,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Oh.",
+					Text = "噢。",
 					function getResult( _event )
 					{
 						return 0;
@@ -338,7 +338,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "That was easy.",
+					Text = "这很简单。",
 					function getResult( _event )
 					{
 						return 0;

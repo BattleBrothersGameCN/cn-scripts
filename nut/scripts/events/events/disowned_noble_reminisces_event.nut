@@ -46,7 +46,7 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Anytime.",
+					Text = "随时可以。",
 					function getResult( _event )
 					{
 						return 0;

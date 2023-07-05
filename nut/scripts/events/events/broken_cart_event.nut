@@ -50,7 +50,7 @@ this.broken_cart_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Farewell.",
+					Text = "再会。",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(2);

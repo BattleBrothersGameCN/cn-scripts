@@ -15,7 +15,7 @@ this.barbarian_tells_story_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Captivating.",
+					Text = "引人入胜啊。",
 					function getResult( _event )
 					{
 						return 0;

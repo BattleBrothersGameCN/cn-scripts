@@ -704,7 +704,7 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "Hrm.",
+					Text = "嗯。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractPoor);

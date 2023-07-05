@@ -249,7 +249,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Insane.",
+					Text = "疯了。",
 					function getResult( _event )
 					{
 						return 0;

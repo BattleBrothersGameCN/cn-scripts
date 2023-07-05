@@ -147,7 +147,7 @@ this.historian_mysterious_text_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Incredible.",
+					Text = "难以置信。",
 					function getResult( _event )
 					{
 						return 0;

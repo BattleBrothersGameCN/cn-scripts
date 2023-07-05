@@ -116,7 +116,7 @@ this.graverobber_finds_item_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Fascinating.",
+					Text = "真不错。",
 					function getResult( _event )
 					{
 						return 0;

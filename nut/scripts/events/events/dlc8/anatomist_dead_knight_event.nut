@@ -39,7 +39,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "No.",
+					Text = "不了。",
 					function getResult( _event )
 					{
 						return 0;

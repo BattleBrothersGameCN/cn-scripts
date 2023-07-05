@@ -46,7 +46,7 @@ this.beggar_begs_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Ok.",
+					Text = "这就对了。",
 					function getResult( _event )
 					{
 						return 0;
@@ -68,7 +68,7 @@ this.beggar_begs_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Ok.",
+					Text = "这就对了。",
 					function getResult( _event )
 					{
 						return 0;

@@ -106,7 +106,7 @@ this.undead_zombie_in_granary_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Gross.",
+					Text = "恶心。",
 					function getResult( _event )
 					{
 						return 0;

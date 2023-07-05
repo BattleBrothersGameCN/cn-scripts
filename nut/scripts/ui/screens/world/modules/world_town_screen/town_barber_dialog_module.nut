@@ -42,7 +42,7 @@ this.town_barber_dialog_module <- this.inherit("scripts/ui/screens/ui_module", {
 		}
 
 		return {
-			Title = "Barber",
+			Title = "理发店",
 			SubTitle = "在理发店定制你的人的外观",
 			Roster = roster,
 			Assets = this.m.Parent.queryAssetsInformation()

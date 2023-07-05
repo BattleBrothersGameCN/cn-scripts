@@ -221,7 +221,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Oops.",
+					Text = "哎哟。",
 					function getResult( _event )
 					{
 						return 0;

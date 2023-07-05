@@ -100,7 +100,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Oof.",
+					Text = "唉。",
 					function getResult( _event )
 					{
 						return 0;
