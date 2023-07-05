@@ -77,7 +77,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Bye.",
+					Text = "再见。",
 					function getResult( _event )
 					{
 						return 0;
@@ -114,7 +114,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Beautiful.",
+					Text = "漂亮。",
 					function getResult( _event )
 					{
 						return 0;
@@ -210,7 +210,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Thanks.",
+					Text = "谢谢。",
 					function getResult( _event )
 					{
 						return 0;

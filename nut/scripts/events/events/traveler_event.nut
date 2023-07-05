@@ -398,7 +398,7 @@ this.traveler_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Aye.",
+					Text = "嗯。",
 					function getResult( _event )
 					{
 						return "N2";
@@ -458,7 +458,7 @@ this.traveler_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Interesting.",
+					Text = "有趣。",
 					function getResult( _event )
 					{
 						return 0;
@@ -478,7 +478,7 @@ this.traveler_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Interesting.",
+					Text = "有趣。",
 					function getResult( _event )
 					{
 						return 0;
@@ -526,7 +526,7 @@ this.traveler_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Indeed.",
+					Text = "的确。",
 					function getResult( _event )
 					{
 						return 0;

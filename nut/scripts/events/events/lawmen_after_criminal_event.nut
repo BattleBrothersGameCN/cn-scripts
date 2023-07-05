@@ -158,7 +158,7 @@ this.lawmen_after_criminal_event <- this.inherit("scripts/events/event", {
 			Banner = [],
 			Options = [
 				{
-					Text = "Phew.",
+					Text = "万幸。",
 					function getResult( _event )
 					{
 						return 0;

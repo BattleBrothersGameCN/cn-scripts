@@ -77,7 +77,7 @@ this.childrens_crusade_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Godspeed.",
+					Text = "祝一路平安。",
 					function getResult( _event )
 					{
 						return 0;

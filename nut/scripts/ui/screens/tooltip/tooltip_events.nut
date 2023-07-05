@@ -1533,7 +1533,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "Fatigue"
+						text = "疲劳值"
 					},
 					{
 						id = 2,
@@ -2892,7 +2892,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "Stash/Ground"
+						text = "仓库/地面"
 					},
 					{
 						id = 2,

@@ -14,7 +14,7 @@ this.arena_tournament_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Interesting.",
+					Text = "有趣。",
 					function getResult( _event )
 					{
 						return 0;

@@ -164,13 +164,13 @@ this.addict_steals_potion_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_05.png[/img]{You pull %addict% out of the barrel and throw him to the ground. He wobbles there as though the earth was a staircase and he was looking down the top step\'s precipice.%SPEECH_ON%Oy, sir, careful, it\'s just down and down!%SPEECH_OFF%At first you think to kick his arse, but relent. You crouch and set down next to the man as he rolls over to stare at the clouds. After a while he looks over.%SPEECH_ON%You trying to help me?%SPEECH_OFF%You nod and say you are, but %addict% simply smiles and shakes his head.%SPEECH_ON%Ain\'t talking to you, I\'m talking to you!%SPEECH_OFF%He points behind you at the barrel, and by the time you look back the man is up to his feet and charging forward.%SPEECH_ON%Fat sumbitch gon\' be smart with me huh!%SPEECH_OFF%The sellsword tackles the barrel and it splinters from top to bottom and a number of items within spill out and shatter. A few mercenaries rush over and get the man and take him away while you count what\'s been lost.}",
+			Text = "[img]gfx/ui/events/event_05.png[/img]{你将%addict%从桶里拖了出来，把他摔到了地上。他在那里摇摇晃晃，仿佛地球是一架楼梯，他正在看着上面的悬崖。%SPEECH_ON%喂，先生，小心点，这只是往下，一直往下！%SPEECH_OFF%一开始你想踢他的屁股，但还是放弃了。你蹲下身子，坐在那个人旁边，他翻了个身，看着云彩。过了一会儿，他转过头来。%SPEECH_ON%你要帮我？%SPEECH_OFF%你点了点头，说你是的，但%addict%只是微笑着摇了摇头。%SPEECH_ON%我不是在和你说话，我是在和你说话！%SPEECH_OFF%他指着你身后的桶，当你回头看的时候，那个人已经站起来向前冲了过去。%SPEECH_ON%这个胖老头想跟我搞聪明啊！%SPEECH_OFF%佣兵扑向桶，它从上到下裂开了，里面的一些物品散落开来并碎了。几个佣兵跑过来把这个人带走，与此同时，你正在数着失去了什么。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "Goddammit.",
+					Text = "该死。",
 					function getResult( _event )
 					{
 						return 0;

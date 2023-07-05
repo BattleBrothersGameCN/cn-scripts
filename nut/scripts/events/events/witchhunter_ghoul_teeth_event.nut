@@ -15,7 +15,7 @@ this.witchhunter_ghoul_teeth_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Useful.",
+					Text = "真有用。",
 					function getResult( _event )
 					{
 						return 0;

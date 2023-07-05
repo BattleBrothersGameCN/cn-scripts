@@ -343,7 +343,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Embarrassing.",
+					Text = "丢人了。",
 					function getResult( _event )
 					{
 						this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationOffense, "你和你的人企图盗窃当地的坟墓");

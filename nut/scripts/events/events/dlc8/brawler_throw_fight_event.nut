@@ -61,7 +61,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{你让 %brawler% 故意输掉比赛。不出所料，他对此不满，但你提醒他，你是战团的队长，虽然上场打架的是他。但现在因为第三方与你做生意，所以这场比赛也就成了战团的事情。他叹了口气并点了点头。\n\n打斗后，正如指示的那样，%brawler% 故意吃了几个拳头，然后“假装”被击倒，避开了一招弱弱的拳击。观众欢呼，弱者欢呼，在擂台上跑来跑去，举手欢呼。比赛结束后，赌博经纪人过来为刚刚”交易“支付了 %reward% 克朗。其中一位经纪人瞥向 %brawler%。%SPEECH_ON%该死，伙计，如果刚刚被人识穿了得引发骚乱。你真应该去学学怎样演戏，刚刚 KO 你的那拳还不如媳妇打屁股。下次等到有力的勾拳才演，好吗？%SPEECH_OFF% 格斗家笑了笑，但他的笑容很勉强。他为了一些克朗而丢尽了自尊。在 %townname% 某个地方，你能听到人们欢呼着另一位格斗家的名字。}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{你让 %brawler% 故意输掉比赛。不出所料，他对此不满，但你提醒他，你是战团的队长，虽然上场打架的是他。但现在因为第三方与你做生意，所以这场比赛也就成了战团的事情。他叹了口气并点了点头。\n\n当打斗开始后，正如指示的那样，%brawler% 故意吃了几个拳头，然后“假装”被击倒，避开了一招弱弱的拳击。观众欢呼，弱者欢呼，在擂台上跑来跑去，举手欢呼。比赛结束后，赌博经纪人过来为刚刚”交易“支付了 %reward% 克朗。其中一位经纪人瞥向 %brawler%。%SPEECH_ON%该死，伙计，如果刚刚被人识穿了得引发骚乱。你真应该去学学怎样演戏，刚刚 KO 你的那拳还不如媳妇打屁股。下次等到有力的勾拳才演，好吗？%SPEECH_OFF% 格斗家笑了笑，但他的笑容很勉强。他为了一些克朗而丢尽了自尊。在 %townname% 某个地方，你能听到人们欢呼着另一位格斗家的名字。}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -84,7 +84,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/asset_money.png",
 					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]400[/color] 克朗"
 				});
-				_event.m.Brawler.worsenMood(0.500000, "被告知放水。");
+				_event.m.Brawler.worsenMood(0.500000, "被告知放水");
 				_event.m.Brawler.worsenMood(2.000000, "输掉了一场战斗比赛。");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
@@ -100,7 +100,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You order %brawler% to take a fall. As expected, he resists the idea, but you remind him that you are captain to the company, and while brawling is his business, the fact a third party entered into business with you makes the brawler\'s business your business. He sighs and nods.\n\nWhen the fight occurs, %brawler% does as instructed and goes down to a single punch. He stares at you from the floor of the fighting pit, and you see a fire in his eyes. You tell him to stay down, but instead he gets up and promptly destroys the other fighter with a flurry of hooks and uppercuts. He wins the fight and is carried out of the arena by the crowd. You try and hurry after them and see where he went, only to find him in an alleyway beaten to a pulp. He grins up at you.%SPEECH_ON%Them bettin\' brokers weren\'t happy, but fark them. They shoulda bet on my pride.%SPEECH_OFF%He falls unconscious.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{你让 %brawler% 故意输掉比赛。不出所料，他对此不满，但你提醒他，你是战团的队长，虽然上场打架的是他。但现在因为第三方与你做生意，所以这场比赛也就成了战团的事情。他叹了口气并点了点头。\n\n当打斗开始后，%brawler%按照指示在被一拳打中后迅速倒下。他趴着擂台地上盯着你，眼中仿佛燃烧着火焰。你示意他别再起来，但他却站起来，很快用一连串的勾拳和上勾拳将另一位斗士击败。他赢得了比赛，被人群抬出了竞技场。你急忙跟着他们去看他去哪里，却在小巷里找到他被打得面目全非。他冲你露出了一个微笑。%SPEECH_ON%那些博彩经纪人不高兴了，但去他们的。他们本应该在我的荣誉上下注。%SPEECH_OFF% 他失去了知觉。}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -123,8 +123,8 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/days_wounded.png",
 					text = _event.m.Brawler.getName() + "遭受重伤"
 				});
-				_event.m.Brawler.worsenMood(0.500000, "被告知放水。");
-				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛。");
+				_event.m.Brawler.worsenMood(0.500000, "被告知放水");
+				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -139,7 +139,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{You tell the gambling brokers that %brawler% will fight however he pleases. The brokers, not wanting to cross paths with a sellsword, do not argue the issue any further. They simply leave before you can even bet on your own man. Now knowing there is a fight, though, you go and watch as %brawler% completely smashes down %townname%\'s best brawler. The beatdown was so obviously going to happen that everyone bet on %brawler% and there\'s a run on the gambling brokers. Fights break out and some betters and brokers start smashing each other. There\'s no money made out of the fight, but %brawler% is elated to be the champion of %townname%.}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{你告诉赌博经纪人，%brawler%会按他的意愿打架。经纪人们不想与雇佣兵为敌，不再争论这个问题。他们离开了，甚至没有让你下注。不过，你现在知道了有一场比赛，于是你去观看这场%brawler%彻底战胜%townname% 最好的格斗家的比赛。比赛的结果是多么的显而易见，以至于几乎所有人都押注在 %brawler% 身上，这导致赌博经纪人出现了挤兑。冲突爆发，一些赌徒和经纪人开始互相殴打。虽然这场比赛没有赚到钱，但%brawler%很高兴能成为%townname%的冠军。}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -186,7 +186,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					text = _event.m.Brawler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_defense_boost + "[/color] 近战防御"
 				});
 				_event.m.Brawler.improveMood(0.500000, "被允许以自己的方式战斗。");
-				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛。");
+				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -207,7 +207,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Damn.",
+					Text = "该死。",
 					function getResult( _event )
 					{
 						return 0;
@@ -252,7 +252,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					text = _event.m.Brawler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_skill_boost + "[/color] 近战技能"
 				});
 				_event.m.Brawler.improveMood(0.500000, "被允许以自己的方式战斗。");
-				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛。");
+				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -267,7 +267,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "F",
-			Text = "[img]gfx/ui/events/event_06.png[/img]{你告诉赌博经纪人，%brawler%会按他的意愿打架。经纪人们不想与雇佣兵为敌，不再争论这个问题。他们离开了，甚至没有让你下注。然而，你现在知道了有一个比赛，于是你去观看比赛。%brawler%这个家伙没有任何关心他对手的技巧，开始随意左右扔钩拳。没有一个左勾拳可以让他的对手防备，他的对手紧张起来，然后尖叫着扔了一个绝望的勾拳。%brawler%的头转向旁边，他失去了意识倒在地上。群众欢呼雀跃，至少那些没有输了一堆克朗的人欢呼。一名赌徒数他的钱时走到你面前，面带微笑地说到。%SPEECH_ON%最好还是去接你的家伙吧。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_06.png[/img]{你告诉赌博经纪人，%brawler%会按他的意愿打架。经纪人们不想与雇佣兵为敌，不再争论这个问题。他们离开了，甚至没有让你下注。然而，你现在知道了有一个比赛，于是你去观看比赛。%brawler%这个家伙丝毫不顾对手的动作，一上场就胡乱打出左右勾拳。没有一个勾拳可以威胁到他的对手，他的对手认真起来，然后尖叫着打出了一击绝望的勾拳。%brawler%的头被打歪了，他失去了意识倒在地上。群众顿时沸腾起来，至少那些没有输钱的人是这样。一名赌徒数他的钱时走到你面前，面带微笑地说到。%SPEECH_ON%最好还是去接你的伙计吧。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -291,7 +291,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					text = _event.m.Brawler.getName() + " 遭受 " + injury.getNameOnly()
 				});
 				_event.m.Brawler.improveMood(0.500000, "被允许以自己的方式战斗。");
-				_event.m.Brawler.worsenMood(2.000000, "在搏斗锦标赛中遭到重创。");
+				_event.m.Brawler.worsenMood(2.000000, "在搏斗锦标赛中遭到重创");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -323,7 +323,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Brawler.getImagePath());
-				_event.m.Brawler.worsenMood(2.000000, "被拒绝参加战斗比赛。");
+				_event.m.Brawler.worsenMood(2.000000, "被拒绝参加战斗比赛");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
 				{

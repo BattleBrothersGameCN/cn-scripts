@@ -110,7 +110,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Fark.",
+					Text = "操蛋。",
 					function getResult( _event )
 					{
 						return 0;

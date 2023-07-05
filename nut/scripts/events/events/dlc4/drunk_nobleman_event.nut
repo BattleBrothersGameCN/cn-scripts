@@ -88,7 +88,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
-					text = "你与" + f.getName() + "遭受了"
+					text = "你与" + f.getName() + "的关系受到了影响"
 				});
 				local money = this.Math.rand(1, 100);
 				this.World.Assets.addMoney(money);
@@ -122,7 +122,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Deal.",
+					Text = "成交。",
 					function getResult( _event )
 					{
 						return "D";
@@ -166,7 +166,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "%terrainImage%{You look back at the company, then unsheathe your sword as you turn around. You swing it up and clip the crossbow and the man shoots it just over your shoulder. You drive the blade down the slat of wood and cut the cords of the weapon and stab the steel into the man\'s chest. He goes down easy and you hear men shout in the distance, but they\'re scared and scampering away. Thieves like this know not to fight with sellswords. You collect whatever goods the man had already stolen up to this point.}",
+			Text = "%terrainImage%{你回头看了看战团，然后在你转回来的时候一并拔出了剑。你把它举了起来，然后砍在了弩上，那人射击了，弩箭擦着你的肩膀飞了过去。 你把锋刃压了下来，绕过了板条直接砍断了弩弦，然后直接把剑刺入了男人的胸膛。 他顺理成章地倒下了，而你听见了不远处有一帮人在叫喊，但是他们是在尖叫，逃走。 像这样子的盗贼不知道该怎么和佣兵战斗。你拿走了那个人到目前为止偷走的所有的东西。}",
 			Image = "",
 			List = [],
 			Characters = [],

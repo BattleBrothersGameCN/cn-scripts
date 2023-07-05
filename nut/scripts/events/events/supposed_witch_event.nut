@@ -314,7 +314,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Disturbing.",
+					Text = "让人不安。",
 					function getResult( _event )
 					{
 						return 0;

@@ -101,7 +101,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Aaaaahh.",
+					Text = "哎呀呀。",
 					function getResult( _event )
 					{
 						return 0;

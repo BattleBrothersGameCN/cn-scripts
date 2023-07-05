@@ -72,7 +72,7 @@ this.herbs_along_the_way_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Ewww.",
+					Text = "额。",
 					function getResult( _event )
 					{
 						return 0;

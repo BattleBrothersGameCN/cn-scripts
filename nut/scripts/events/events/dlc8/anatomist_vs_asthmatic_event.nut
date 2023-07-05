@@ -55,7 +55,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Surely...",
+					Text = "对吧......",
 					function getResult( _event )
 					{
 						return 0;

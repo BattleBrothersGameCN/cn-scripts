@@ -137,7 +137,7 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Impressive.",
+					Text = "令人印象深刻。",
 					function getResult( _event )
 					{
 						return 0;

@@ -46,7 +46,7 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 			Characters = [],
 			Options = [
 				{
-					Text = "Alright.",
+					Text = "行吧。",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);

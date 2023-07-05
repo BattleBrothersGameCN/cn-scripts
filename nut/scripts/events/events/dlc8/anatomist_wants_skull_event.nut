@@ -71,7 +71,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Hmm.",
+					Text = "嗯。",
 					function getResult( _event )
 					{
 						return 0;

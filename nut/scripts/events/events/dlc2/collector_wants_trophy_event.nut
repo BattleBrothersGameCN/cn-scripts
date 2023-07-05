@@ -17,7 +17,7 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "Deal.",
+					Text = "成交。",
 					function getResult( _event )
 					{
 						if (_event.m.Peddler != null)
@@ -72,7 +72,7 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Deal.",
+					Text = "成交。",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoney(_event.m.Reward);

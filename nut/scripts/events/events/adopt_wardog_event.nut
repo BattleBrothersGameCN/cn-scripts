@@ -204,7 +204,7 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Nice.",
+					Text = "很好。",
 					function getResult( _event )
 					{
 						return 0;

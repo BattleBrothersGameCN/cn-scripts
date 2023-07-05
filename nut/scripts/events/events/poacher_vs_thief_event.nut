@@ -16,7 +16,7 @@ this.poacher_vs_thief_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Right.",
+					Text = "对的。",
 					function getResult( _event )
 					{
 						return 0;

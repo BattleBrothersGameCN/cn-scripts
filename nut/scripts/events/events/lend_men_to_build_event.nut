@@ -201,7 +201,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Godspeed.",
+					Text = "祝一路平安。",
 					function getResult( _event )
 					{
 						return 0;

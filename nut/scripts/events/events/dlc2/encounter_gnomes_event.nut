@@ -13,7 +13,7 @@ this.encounter_gnomes_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Strange.",
+					Text = "奇怪。",
 					function getResult( _event )
 					{
 						return 0;

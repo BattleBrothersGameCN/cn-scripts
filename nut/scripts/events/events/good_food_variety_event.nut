@@ -13,7 +13,7 @@ this.good_food_variety_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "Enjoy.",
+					Text = "享用吧。",
 					function getResult( _event )
 					{
 						return 0;
