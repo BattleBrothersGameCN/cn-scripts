@@ -17,7 +17,7 @@ this.recovery_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "我可以整晚都这样！ 多亏了一种能量物质的混合物，委婉地称之为“第二呼吸药水”，这个角色的心脏在加速，他不容易疲劳，他的体力也得到了增强。 还有，这里热吗？";
+		return "我可以坚持一整晚！得益于一瓶被委婉称为\'回春药水\'的混合各种机能强化物质的药水，这个角色的心脏在狂飙，他的体力得到了强化且不会轻易疲惫。还有，这里咋这么热？";
 	}
 
 	function getTooltip()
@@ -43,7 +43,7 @@ this.recovery_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "hint",
 				icon = "ui/icons/action_points.png",
-				text = "会在1场战斗之后消失"
+				text = "会在 1 场战斗之后消失"
 			}
 		];
 		return ret;

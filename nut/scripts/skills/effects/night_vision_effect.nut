@@ -18,7 +18,7 @@ this.night_vision_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "多亏了炼金术奇迹，这个角色的夜晚和白天一样明亮。";
+		return "多亏了一瓶炼金术的精华，对这个角色而言夜晚就和白天一样明亮。";
 	}
 
 	function getTooltip()
@@ -38,13 +38,13 @@ this.night_vision_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "不受夜间惩罚影响。"
+				text = "不受夜间惩罚影响"
 			},
 			{
 				id = 7,
 				type = "hint",
 				icon = "ui/icons/action_points.png",
-				text = "会在1场战斗之后消失"
+				text = "会在 1 场战斗之后消失"
 			}
 		];
 		return ret;

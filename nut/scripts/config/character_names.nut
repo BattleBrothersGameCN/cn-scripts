@@ -247,14 +247,14 @@ gt.Const.Strings.CharacterNamesFemale <- [
 	"厄尔马",
 	"阿德拉",
 	"比伊特",
-	"伯莎(Bertha)",
+	"伯莎",
 	"博格希尔",
-	"布伦希尔德(Brunhild)",
+	"布伦希尔德",
 	"弗里达",
 	"古德兰",
 	"希尔达",
 	"西格里德",
-	"玛蒂尔达(Mathilda)",
+	"玛蒂尔达",
 	"杰希尔德"
 ];
 gt.Const.Strings.BarbarianNames <- [
@@ -895,7 +895,7 @@ gt.Const.Strings.BanditLeaderNames <- [
 	"蜂蜜酒罐·%randomname%",
 	"血腥·%randomname%",
 	"可怕的%randomname%",
-	"猪",
+	"猪人(the Swine)",
 	"残忍的%randomname%",
 	"流放者·%randomname%",
 	"强盗 男爵",

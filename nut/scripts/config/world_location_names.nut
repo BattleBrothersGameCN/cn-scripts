@@ -42,7 +42,7 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"埃尔伯根",
 	"哈牡卢登",
 	"美丽之丘",
-	"铁石(Eisenstein)",
+	"铁石",
 	"塔德恩",
 	"海默尔顿",
 	"赛格兰",

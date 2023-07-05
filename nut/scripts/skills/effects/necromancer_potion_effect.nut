@@ -3,7 +3,7 @@ this.necromancer_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.necromancer_potion";
-		this.m.Name = "幻觉";
+		this.m.Name = "预知幻视";
 		this.m.Icon = "skills/status_effect_138.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_138";
@@ -16,7 +16,7 @@ this.necromancer_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色有奇怪的关于过去和未来的预知。虽然在营火边不太愉快，但似乎确实使他们更能够快速连接和消化新的经验。";
+		return "这个角色有着关于事物过去怎样及未来如何的奇怪幻视。虽然没法用来在营火边活跃气氛，但似乎确实能使他可以快速关联并吸收新的经验。";
 	}
 
 	function getTooltip()

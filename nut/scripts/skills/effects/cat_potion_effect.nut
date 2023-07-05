@@ -3,7 +3,7 @@ this.cat_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.cat_potion";
-		this.m.Name = "增强反射能力(Heightened Reflexes)";
+		this.m.Name = "增强反应能力";
 		this.m.Icon = "skills/status_effect_93.png";
 		this.m.IconMini = "status_effect_93_mini";
 		this.m.Overlay = "status_effect_93";
@@ -16,7 +16,7 @@ this.cat_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "多亏了精神活性物质的混合，这个角色的感官会被增强，他们的反应会变得敏锐，同时也会表现出偏执的行为。";
+		return "得益于一瓶混合各种精神活性物质的药水，这个角色的感知能力和反应能力都得到了增强，但同时也更倾向于展示出偏执多疑的行为。";
 	}
 
 	function getTooltip()
@@ -42,7 +42,7 @@ this.cat_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "hint",
 				icon = "ui/icons/action_points.png",
-				text = "会在1场战斗之后消失"
+				text = "会在 1 场战斗之后消失"
 			}
 		];
 		return ret;

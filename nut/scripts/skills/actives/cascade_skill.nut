@@ -4,7 +4,7 @@ this.cascade_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.cascade";
 		this.m.Name = "连环击";
-		this.m.Description = "向你的对手发起3次攻击。会绕过盾牌的掩护。";
+		this.m.Description = "向你的对手倾泻你链枷的三个头。会绕过盾牌的掩护。";
 		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_125.png";
 		this.m.IconDisabled = "skills/active_125_sw.png";

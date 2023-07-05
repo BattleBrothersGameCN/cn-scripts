@@ -16,7 +16,7 @@ this.orc_young_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的手腕发生了变异，以至于可以减轻对抗外力的初始冲击。更实际的说，当攻击敌人时，可以削弱其保护装备的质量。此外，它们还可以做出一些非常奇特的影子木偶。";
+		return "这个角色的手腕发生了变异，使其可以缓冲相对力量的初始冲击。更实际的说，这能在打击敌人时削弱敌人盔甲的保护性。此外，他还能做出一些匪夷所思的手影。";
 	}
 
 	function getTooltip()
@@ -36,7 +36,7 @@ this.orc_young_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/armor_damage.png",
-				text = "攻击增加[color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color]护甲有效性"
+				text = "攻击对护甲有额外的 [color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 伤害"
 			},
 			{
 				id = 12,

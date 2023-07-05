@@ -14,7 +14,7 @@ this.smoke_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色身上笼罩着浓密的烟雾。在不断地出现和消失中，他们可以自由移动并忽略任何控制区。";
+		return "这个角色被层层浓烟所笼罩。在不停的时隐时现中，他们可以自由移动并忽略任何控制区域。";
 	}
 
 	function getTooltip()
@@ -46,7 +46,7 @@ this.smoke_effect <- this.inherit("scripts/skills/skill", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "不受控制区影响。"
+				text = "不受控制区域影响"
 			}
 		];
 	}

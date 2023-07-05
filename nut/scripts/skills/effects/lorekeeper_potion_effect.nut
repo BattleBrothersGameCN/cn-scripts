@@ -16,7 +16,7 @@ this.lorekeeper_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.lorekeeper_potion";
-		this.m.Name = "资深守史员的肋骨(Lorekeeper\'s Rib Bone)";
+		this.m.Name = "博学者的肋骨";
 		this.m.Icon = "skills/status_effect_151.png";
 		this.m.IconMini = "status_effect_151_mini";
 		this.m.Overlay = "status_effect_151";
@@ -29,7 +29,7 @@ this.lorekeeper_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色身体里融合了部分博学者的骨骼，因此具有在看似致命的伤口下能够快速恢复的能力。但如果他们能在夜里不尖叫就好了……";
+		return "这个角色的身体里整合进了博学者的部分骨骼，结果是具备了在遭受似乎致命的伤口时快速恢复的能力。但如果他们能在夜里不尖叫就好了……";
 	}
 
 	function getTooltip()
@@ -49,7 +49,7 @@ this.lorekeeper_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "每场战斗一次，在遭受致命伤害时抵抗该次伤害并恢复所有生命值"
+				text = "每场战斗只能触发一次，在遭受致命伤害时抵抗该次伤害并恢复所有生命值"
 			},
 			{
 				id = 12,

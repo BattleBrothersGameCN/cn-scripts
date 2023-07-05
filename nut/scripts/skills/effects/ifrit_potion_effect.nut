@@ -8,7 +8,7 @@ this.ifrit_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.ifrit_potion";
-		this.m.Name = "石头皮肤";
+		this.m.Name = "护体石肤";
 		this.m.Icon = "skills/status_effect_141.png";
 		this.m.IconMini = "status_effect_141_mini";
 		this.m.Overlay = "status_effect_141";
@@ -21,7 +21,7 @@ this.ifrit_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的皮肤发生了变异，现在形成了坚硬的、岩石般的斑块，更加坚韧难刺破。当这些斑块破裂时，它们会逐渐重新形成，这显然是一个相当痛苦、不舒服的过程。你应该告诉他们停止抠那个痂。";
+		return "这个角色的皮肤发生了变异，现在形成了坚硬的、如岩石般的难以刺穿的斑块。当这些斑块破损时，它们会通过一个明显又疼又不舒服的过程逐渐重新形成。你应该告诉他不要再扣那个痂了。";
 	}
 
 	function getTooltip()
@@ -41,7 +41,7 @@ this.ifrit_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/armor_body.png",
-				text = "这个角色的皮肤坚硬如石头，赋予[color=" + this.Const.UI.Color.PositiveValue + "]25[/color] 天生护甲点数"
+				text = "这个角色的皮肤坚硬如石头，增加 [color=" + this.Const.UI.Color.PositiveValue + "]25[/color] 天然护甲点数"
 			},
 			{
 				id = 12,

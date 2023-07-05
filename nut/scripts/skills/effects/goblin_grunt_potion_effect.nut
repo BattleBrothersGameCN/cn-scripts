@@ -3,7 +3,7 @@ this.goblin_grunt_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.goblin_grunt_potion";
-		this.m.Name = "反应性腿部肌肉(Reactive Leg Muscles)";
+		this.m.Name = "反应性腿部肌肉";
 		this.m.Icon = "skills/status_effect_124.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_124";
@@ -16,7 +16,7 @@ this.goblin_grunt_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的腿部基因发生了突变，允许他们进行更为流畅和快速的迅猛动作。在休息时，肌肉可以偶尔在皮肤下看到微微的抽动。";
+		return "这个角色的腿部基因发生了突变，允许他们进行更为流畅和快速的迅猛动作。在休息时，偶尔能看到肌肉还在皮肤下面抽动。";
 	}
 
 	function getTooltip()

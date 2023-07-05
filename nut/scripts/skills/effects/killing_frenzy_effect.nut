@@ -17,7 +17,7 @@ this.killing_frenzy_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色正处于杀戮狂暴之中，还会持续 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.TurnsLeft + "[/color] 回合。再次击杀对手将刷新杀戮狂暴的持续时间至 2 回合。";
+		return "哇！ 这个角色正处于杀戮狂暴之中，还会持续 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.TurnsLeft + "[/color] 回合。再次击杀对手将刷新杀戮狂暴的持续时间至 2 回合。";
 	}
 
 	function getTooltip()

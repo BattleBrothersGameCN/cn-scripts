@@ -16,7 +16,7 @@ this.ijirok_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色有些问题。除了一阵阵疯狂的笑声和咕哝的责骂声之外，他们的身体似乎常常会随意反抗施加在它身上的变化。在战斗中，这往往会让他们顶住一些有害效果的影响。";
+		return "这个角色有些问题。除了一阵阵疯狂的笑声和咕哝的责骂声之外，他们的身体似乎常常会随意反抗施加在它身上的变化。在战斗中，这倒是有幸让他有时可以避免遭受削弱效果。";
 	}
 
 	function getTooltip()
@@ -36,7 +36,7 @@ this.ijirok_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "有 ]50%[/color] 几率抵抗任何不良状态，例如茫然或眩晕"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 几率抵抗任何不良状态，例如茫然或击晕"
 			},
 			{
 				id = 12,

@@ -27,18 +27,18 @@ this.manhunter_background <- this.inherit("scripts/skills/backgrounds/character_
 		];
 		this.m.Titles = [
 			"猎奴者(the Manhunter)",
-			"猎人捕捉者(the Mancatcher)",
+			"猎人者(the Mancatcher)",
 			"猎人(the Hunter)",
 			"无情者(the Ruthless)",
 			"赏金猎人(the Bounty Hunter)",
-			"无情者(the Brutal)",
-			"残酷的",
-			"无情者(the Unforgiving)",
-			"无情的",
+			"凶残者(the Brutal)",
+			"残酷者(the Cruel)",
+			"无慈悲者(the Unforgiving)",
+			"无情者(the Merciless)",
 			"追踪者(the Tracker)",
 			"捕手(the Catcher)",
 			"无心者(the Heartless)",
-			"猪人族(the Swine)",
+			"猪人(the Swine)",
 			"奴隶贩子(the Slaver)"
 		];
 		this.m.Faces = this.Const.Faces.SouthernMale;

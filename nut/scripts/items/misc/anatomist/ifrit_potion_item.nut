@@ -53,7 +53,7 @@ this.ifrit_potion_item <- this.inherit("scripts/items/misc/anatomist/anatomist_p
 			id = 11,
 			type = "text",
 			icon = "ui/icons/armor_body.png",
-			text = "使皮肤变硬如石头，增加[color=" + this.Const.UI.Color.PositiveValue + "]25[/color] 天生护甲点数"
+			text = "使皮肤变硬如石头，增加[color=" + this.Const.UI.Color.PositiveValue + "]25[/color] 天然护甲点数"
 		});
 		result.push({
 			id = 65,

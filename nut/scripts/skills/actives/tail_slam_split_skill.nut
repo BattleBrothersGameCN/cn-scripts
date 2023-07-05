@@ -5,7 +5,7 @@ this.tail_slam_split_skill <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.tail_slam_split";
 		this.m.Name = "尾部猛击";
 		this.m.Description = "";
-		this.m.KilledString = "粉碎";
+		this.m.KilledString = "压碎";
 		this.m.Icon = "skills/active_108.png";
 		this.m.IconDisabled = "skills/active_108.png";
 		this.m.Overlay = "active_108";

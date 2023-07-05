@@ -5,7 +5,7 @@ this.captain_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.captain";
-		this.m.Name = "受附近队长的鼓舞。";
+		this.m.Name = "受附近队长的鼓舞";
 		this.m.Description = "由于附近有队长在指挥和监督，这个角色的决心暂时性的增加了。";
 		this.m.Icon = "ui/perks/perk_26.png";
 		this.m.IconMini = "perk_26_mini";

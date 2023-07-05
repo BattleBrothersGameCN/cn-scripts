@@ -5,7 +5,7 @@ this.direwolf_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.direwolf_potion";
-		this.m.Name = "弹性肌腱(Elasticized Sinew)";
+		this.m.Name = "弹性肌腱";
 		this.m.Icon = "skills/status_effect_139.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_139";
@@ -18,7 +18,7 @@ this.direwolf_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的肌肉已经发生了变异，对动作的冲动有不同的反应。因此，中途中断或停止运动会更少疲劳，使从受阻或阻塞的攻击中恢复更容易。";
+		return "这个角色的肌肉已经发生了变异并对动作的突变产生了不同的反应。中途中断或中断动作会积累更少疲劳，因此可以从打偏或被格挡的攻击中快速恢复过来。";
 	}
 
 	function getTooltip()
@@ -38,7 +38,7 @@ this.direwolf_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "攻击未命中会[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 疲劳值消耗返还"
+				text = "攻击未命中时会退还 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 疲劳值"
 			},
 			{
 				id = 12,

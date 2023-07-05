@@ -4,7 +4,7 @@ this.rangers_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 	{
 		this.m.ID = "scenario.rangers";
 		this.m.Name = "偷猎者团队";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_10.png[/img][/p][p]多年来，你一直在当地的森林里偷猎，快速地站起来躲避你主人的手下，过着体面的生活。 但是油水变得越来越少，你面临着一个决定，当你只知道如何使用弓时，如何谋生？\n\n[color=#bcad8c]猎人：[/color] 初始队伍包含三个巡林者。\n[color=#bcad8c]专家侦察员：[/color] 你移动的更快，并且总是可以得到附近敌人的详细侦查报告。\n[color=#bcad8c]轻装旅行：[/color] 你的战团只能携带略少的物品。[[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_10.png[/img][/p][p]多年来，你一直在当地的森林里偷猎，快速地站起来躲避你主人的手下，过着体面的生活。 但是油水变得越来越少，你面临着一个决定，当你只知道如何使用弓时，如何谋生？\n\n[color=#bcad8c]猎人：[/color] 初始队伍包含三个巡林者。\n[color=#bcad8c]专家侦察员：[/color] 你移动的更快，并且总是可以得到附近敌人的详细侦查报告。\n[color=#bcad8c]轻装旅行：[/color] 你的战团只能携带略少的物品。[/p]";
 		this.m.Difficulty = 2;
 		this.m.Order = 30;
 	}
