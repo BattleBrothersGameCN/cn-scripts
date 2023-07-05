@@ -16,7 +16,7 @@ this.goblin_poison_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色被毒素侵袭。他的视野模糊，口齿不清，移动时需要付出大量努力才能协调。效果会在[color= 后逐渐消退。" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色血管中正流淌着毒素。他视野模糊，口齿不清，需要大量的努力才能协调的移动。效果会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合中慢慢消失。";
 	}
 
 	function getTooltip()

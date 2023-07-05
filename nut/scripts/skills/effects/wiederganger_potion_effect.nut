@@ -3,7 +3,7 @@ this.wiederganger_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.wiederganger_potion";
-		this.m.Name = "皮下反应(Subdermal Reactivity)";
+		this.m.Name = "皮下反应";
 		this.m.Icon = "skills/status_effect_135.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_135";
@@ -16,7 +16,7 @@ this.wiederganger_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "只是肉伤而已！该角色的皮下肌肉已经发生了变异，自动应对突然的外伤，从而减少在战斗中受伤的机会。";
+		return "只是点皮肉伤而已！这个角色的皮下肌肉已经变异并自动对外力创伤做出反应，从而减少在战斗中遭受伤势的概率。";
 	}
 
 	function getTooltip()

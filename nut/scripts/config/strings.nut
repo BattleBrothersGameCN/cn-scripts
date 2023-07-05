@@ -167,7 +167,7 @@ gt.Const.Strings.EntityName <- [
 	"骑士",
 	"驴",
 	"强盗暴徒",
-	"盗猎者",
+	"强盗偷猎者",
 	"强盗神射手",
 	"强盗掠夺者",
 	"强盗首领",
@@ -276,7 +276,7 @@ gt.Const.Strings.EntityNamePlural <- [
 	"骑士",
 	"驴",
 	"强盗暴徒",
-	"盗猎者",
+	"强盗偷猎者",
 	"强盗射手",
 	"强盗掠夺者",
 	"强盗首领",
@@ -1241,8 +1241,8 @@ gt.Const.Strings.EngageEnemyNumbers <- [
 ];
 gt.Const.Strings.InventoryHeader <- [
 	"驴",
-	"大车",
-	"车皮",
+	"马车",
+	"货车",
 	"大货车"
 ];
 gt.Const.Strings.InventoryUpgradeHeader <- [
@@ -1261,14 +1261,14 @@ gt.Const.Strings.InventoryUpgradeCosts <- [
 	"20,000"
 ];
 gt.Const.Strings.PerkName <- {
-	Bullseye = "靶心",
+	Bullseye = "神射",
 	Ballistics = "弹道学",
 	Berserk = "狂暴",
 	DevastatingStrikes = "毁灭打击",
 	KillingFrenzy = "杀戮",
 	ShieldBash = "盾击",
 	Brawny = "强壮",
-	Stalwart = "坚定的",
+	Stalwart = "坚实",
 	Taunt = "嘲讽",
 	Steadfast = "坚定不移",
 	Colossus = "巨像",
@@ -1294,7 +1294,7 @@ gt.Const.Strings.PerkName <- {
 	CoupDeGrace = "刽子手",
 	Weaponmaster = "武器大师",
 	FastAdaption = "快速适应",
-	SunderingStrikes = "天崩地裂的罢工",
+	SunderingStrikes = "崩裂打击",
 	BattleFlow = "战斗流程",
 	HeadHunter = "猎头者",
 	RallyTheTroops = "集结部队",
@@ -1304,7 +1304,7 @@ gt.Const.Strings.PerkName <- {
 	Footwork = "步法",
 	Rotation = "换位",
 	Underdog = "落单狗",
-	Recover = "恢复",
+	Recover = "深呼吸",
 	Gifted = "天才",
 	Adrenaline = "肾上腺素",
 	Backstabber = "背刺者",
@@ -1341,7 +1341,7 @@ gt.Const.Strings.PerkDescription <- {
 	CoupDeGrace = "对受到任何伤残目标(如断臂)造成额外的[color=" + this.Const.UI.Color.PositiveValue + "]20%[/color]伤害。",
 	SteelBrow = "击中头部不再对该角色造成严重伤害，这也显着降低了头部遭受严重伤害的风险。",
 	Anticipation = "当被远程武器攻击时，攻击者每远离一格, 则获得[color=" + this.Const.UI.Color.PositiveValue + "] 1+ 10% 基础远程防御[/color]作为额外的远程防御，并且至少获得 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color]点远程防御加成。",
-	HoldOut = "保持在一起! 任何具有有限持续时间的负面状态效果（例如流血、魅惑）的持续时间都会减少到[color=" + this.Const.UI.Color.NegativeValue + "]1[/color]回合。那些效果在几个回合内逐渐减弱的状态效果（例如妖精之毒）从一开始就处于最弱的状态。",
+	HoldOut = "保持在一起! 任何具有有限持续时间的负面状态效果（例如流血、魅惑）的持续时间都会减少到[color=" + this.Const.UI.Color.NegativeValue + "]1[/color]回合。那些效果在几个回合内逐渐减弱的状态效果（例如地精毒药）从一开始就处于最弱的状态。",
 	Dodge = "你真的太快了! 获得[color=" + this.Const.UI.Color.PositiveValue + "]角色当前主动性的15%[/color]作为近战和远程防御的加成。",
 	Nimble = "轻甲专精! 通过灵活地躲避或偏转打击来回避所有攻击。所受的伤害最多可以减少[color=" + this.Const.UI.Color.PositiveValue + "]60%[/color]，但在盔甲和头盔的最大疲劳值超过[color=" + this.Const.UI.Color.PositiveValue + "] 15 [/color]时会技能效果会大幅下降。你的盔甲和头盔越轻，你就越受益。\n\n\'强壮\'不影响该特性。\n\n不影响精神攻击和状态效果的伤害, 但是可以帮助避免受到它们",
 	BattleForged = "重甲专精! 受到的护甲伤害会减少，减少的百分比等于盔甲和头盔当前总护甲值之和的[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]。你的盔甲和头盔越重，你的好处就越多。\n\n不影响精神攻击或状态效果的伤害，但可以帮助避免收到它们。",
@@ -1392,7 +1392,7 @@ gt.Const.Strings.PerkDescription <- {
 };
 gt.Const.Strings.Tooltip <- {
 	World = {
-		Hint_FocusParty = "点击聚焦派对",
+		Hint_FocusParty = "点击聚焦队伍",
 		Hint_FocusLocation = "点击聚焦位置"
 	},
 	Tactical = {

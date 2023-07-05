@@ -3,7 +3,7 @@ this.skeleton_warrior_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.skeleton_warrior_potion";
-		this.m.Name = "四肢硬化";
+		this.m.Name = "关节锁定";
 		this.m.Icon = "skills/status_effect_131.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_131";

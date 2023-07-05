@@ -3,7 +3,7 @@ this.rachegeist_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.rachegeist_potion";
-		this.m.Name = "恐怖光环(Ghastly Aura)";
+		this.m.Name = "恐怖光环";
 		this.m.Icon = "skills/status_effect_153.png";
 		this.m.IconMini = "status_effect_153_mini";
 		this.m.Overlay = "status_effect_153";
@@ -16,7 +16,7 @@ this.rachegeist_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色摄入了一种物质，现在已经在他们的血液中，会产生一个动能场。 这个场随着他们的健康状况恶化而变得更加强大，最终会产生蓝色波光，并对他们打出或受到的任何攻击产生显著影响。 当独自一人时，他们也声称听到持续的，几乎察觉不到的耳语声，但这可能只是迷信。";
+		return "这个角色摄入了一种物质，这种现在已经流淌在他血管的物质能产生一个动能场。这个场随着他们的健康状况恶化而变得更加强大，最终会产生蓝色波光，并对他们打出或受到的任何攻击产生显著影响。他还声称独自一人时总是听到几乎无法察觉也不曾断绝的耳语声，但这可能只是迷信。";
 	}
 
 	function getTooltip()

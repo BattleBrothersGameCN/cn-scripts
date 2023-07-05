@@ -5,7 +5,7 @@ this.chilled_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.chilled";
-		this.m.Name = "冷冻";
+		this.m.Name = "冻僵";
 		this.m.Icon = "skills/status_effect_109.png";
 		this.m.IconMini = "status_effect_109_mini";
 		this.m.Overlay = "status_effect_109";
@@ -17,7 +17,7 @@ this.chilled_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色已经冻僵了。 他们的四肢冻僵了，需要很大的努力才能协调地移动。该效果将会慢慢消失, 剩余[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色已经冻僵了。由于四肢都被冻得僵硬，需要大量的努力才能协调地移动。效果会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合中慢慢消失。";
 	}
 
 	function getTooltip()
@@ -59,7 +59,7 @@ this.chilled_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "拥有非自然的生理结构，因此不受寒冷影响。");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "非自然的生理功能帮助他免受寒冷影响");
 			}
 
 			this.removeSelf();

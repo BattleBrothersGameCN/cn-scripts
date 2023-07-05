@@ -6,7 +6,7 @@ this.battle_standard_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.battle_standard";
 		this.m.Name = "为了战团！";
-		this.m.Description = "随着战团荣耀的战斗标准的临近，这个角色感到不得不向前推进，并在表情上吐弃着危险。";
+		this.m.Description = "由于战团光荣的战旗就在附近，这个角色感到不得不向前推进并蔑视危险。";
 		this.m.Icon = "ui/perks/perk_28.png";
 		this.m.IconMini = "perk_28_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect;

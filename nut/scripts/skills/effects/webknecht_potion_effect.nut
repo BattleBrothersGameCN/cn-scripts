@@ -3,7 +3,7 @@ this.webknecht_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.webknecht_potion";
-		this.m.Name = "变异循环系统";
+		this.m.Name = "变异的循环系统";
 		this.m.Icon = "skills/status_effect_144.png";
 		this.m.IconMini = "status_effect_144_mini";
 		this.m.Overlay = "status_effect_144";
@@ -16,7 +16,7 @@ this.webknecht_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色的身体发生了变异，毒素和其他危险物质通过血液传播的速度要慢得多，这使得它们可以被处理掉而没有严重的健康影响。有意思的是，这似乎并不影响他们喝醉的能力。";
+		return "该角色的身体发生了变异，毒素和其他危险物质通过血液传播的速度要慢得多，这使得它们可以在不产生严重健康影响的情况下被代谢。有意思的是，这似乎并不影响他把自己灌醉的能力。";
 	}
 
 	function getTooltip()

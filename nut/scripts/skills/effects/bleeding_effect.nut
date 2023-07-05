@@ -30,7 +30,7 @@ this.bleeding_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色从最近受到的伤口大量出血，每回合损失 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.Damage + "[/color] 生命值, 持续 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色一个最近遭受的伤口正在大量流血，每回合将会失去 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.Damage + "[/color] 生命值, 持续 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
 	}
 
 	function applyDamage()
@@ -61,7 +61,7 @@ this.bleeding_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "由于他的非自然生理，他的流血伤口很快愈合。");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "非自然的生理功能帮助他的伤口迅速止血");
 			}
 
 			this.removeSelf();

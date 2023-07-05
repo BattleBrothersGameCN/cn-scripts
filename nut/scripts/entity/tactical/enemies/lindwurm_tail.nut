@@ -287,7 +287,7 @@ this.lindwurm_tail <- this.inherit("scripts/entity/tactical/actor", {
 			{
 				overflowDamage = overflowDamage - this.m.Body.m.BaseProperties.Armor[_hitInfo.BodyPart] * this.m.Body.m.BaseProperties.ArmorMult[_hitInfo.BodyPart];
 				this.m.Body.m.BaseProperties.Armor[_hitInfo.BodyPart] = this.Math.max(0, this.m.Body.m.BaseProperties.Armor[_hitInfo.BodyPart] * this.m.Body.m.BaseProperties.ArmorMult[_hitInfo.BodyPart] - _hitInfo.DamageArmor);
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "\'s自然护甲被击中[b]" + this.Math.floor(_hitInfo.DamageArmor) + "[/b] 伤害");
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的天然护甲被击中[b]" + this.Math.floor(_hitInfo.DamageArmor) + "[/b] 伤害");
 			}
 
 			if (overflowDamage > 0)

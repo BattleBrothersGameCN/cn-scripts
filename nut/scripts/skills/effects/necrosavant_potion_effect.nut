@@ -23,7 +23,7 @@ this.necrosavant_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的身体拥有惊人的能力，可以将不同血型的血液或者来自完全不同生物的血液融入自己的身体。这使他们能够通过皮肤毛孔吸收血液（或者更加剧烈地直接饮用）来获得显著的治愈能力。";
+		return "这个角色的身体有着惊人的能力，可以将不同血型的血液乃至不同生物的血液整合进自己。这让他可以通过毛孔吸收血液进行治疗(或者直接饮血以得到更剧烈的效果)。";
 	}
 
 	function getTooltip()
@@ -139,7 +139,7 @@ this.necrosavant_potion_effect <- this.inherit("scripts/skills/skill", {
 				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect, actor.getPos());
 			}
 
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + " 治疗生命值 " + this.Math.min(actor.getHitpointsMax() - actor.getHitpoints(), hitpointsHealed) + " 点");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "恢复了" + this.Math.min(actor.getHitpointsMax() - actor.getHitpoints(), hitpointsHealed) + "点生命值");
 		}
 
 		actor.setHitpoints(this.Math.min(actor.getHitpointsMax(), actor.getHitpoints() + hitpointsHealed));

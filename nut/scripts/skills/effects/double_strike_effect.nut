@@ -5,7 +5,7 @@ this.double_strike_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.double_strike";
-		this.m.Name = "双重打击!";
+		this.m.Name = "双重打击！";
 		this.m.Icon = "skills/status_effect_01.png";
 		this.m.IconMini = "status_effect_01_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect;
@@ -16,7 +16,7 @@ this.double_strike_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色刚刚命中了一次打击，准备施展强大的续击！下一次攻击将造成[color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color] 对单个目标造成伤害。如果攻击有多个目标，只有第一个会受到增加的伤害。如果攻击未命中，效果会浪费。";
+		return "在刚刚完成了一次命中后，这个角色准备好进行更强大的后续攻击！下一次攻击将造成 [color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color] 对单个目标造成伤害。如果攻击有多个目标，只有第一个会受到额外伤害。如果攻击未命中，此效果会被浪费。";
 	}
 
 	function onAdded()

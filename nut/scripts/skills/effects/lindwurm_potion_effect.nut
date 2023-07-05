@@ -16,7 +16,7 @@ this.lindwurm_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个人物的血液高压并且长时间暴露在空气中后会灼烧。攻击者一旦破皮就会不愉快地被血液喷射。";
+		return "这个角色的血液压力极高，并且长时间暴漏于空气时会有腐蚀性。击破他表皮的攻击者通常会在惊讶中被喷溅一脸。";
 	}
 
 	function getTooltip()
@@ -36,7 +36,7 @@ this.lindwurm_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "该角色的血液充满酸性，在相邻攻击者造成打击伤害时会对其造成伤害。"
+				text = "这个角色的血液含酸，近身攻击者对其造成生命值伤害时都会被喷溅酸液"
 			},
 			{
 				id = 12,

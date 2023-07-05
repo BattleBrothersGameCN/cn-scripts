@@ -3,7 +3,7 @@ this.fallen_hero_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.fallen_hero_potion";
-		this.m.Name = "反应性肌肉组织(Reactive Muscle Tissue)";
+		this.m.Name = "反应性肌肉组织";
 		this.m.Icon = "skills/status_effect_136.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_136";
@@ -16,7 +16,7 @@ this.fallen_hero_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的身体对于物理创伤有反应，分泌一种含钙物质，会在撞击点处导致肌肉反射性收缩以最小化肌肉损伤。";
+		return "这个角色的身体面对物理创伤会反应式的分泌一种含钙物质，会使被冲击处的肌肉反射式的收缩以最小化肌肉损伤。";
 	}
 
 	function getTooltip()

@@ -16,7 +16,7 @@ this.reforming_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的肉体正在重建，他们将暂时失去行动能力[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合, 无法行动。";
+		return "这个角色的肉体正在重塑，他将暂时失去行动能力[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合, 期间无法行动。";
 	}
 
 	function addTurns( _t )

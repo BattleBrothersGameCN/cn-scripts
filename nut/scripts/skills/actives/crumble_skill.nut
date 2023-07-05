@@ -5,7 +5,7 @@ this.crumble_skill <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.crumble";
 		this.m.Name = "崩裂";
 		this.m.Description = "使敌人阵形崩裂的猛烈打击。它可以覆盖2格的距离，可以从前线后方使用，超出大多数其他近战武器的范围。";
-		this.m.KilledString = "被砸碎";
+		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_205.png";
 		this.m.IconDisabled = "skills/active_205_sw.png";
 		this.m.Overlay = "active_205";

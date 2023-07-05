@@ -16,7 +16,7 @@ this.orc_warrior_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的身体突变发展出了许多冗余的突触，使其即使受到致命打击也能够维持对视觉、听觉和肌肉控制的一定程度的掌控。";
+		return "这个角色的身体突变并长出了许多冗余的突触，使其即使受到致命打击也能够维持对视觉、听觉和肌肉控制的一定程度的掌控。";
 	}
 
 	function getTooltip()

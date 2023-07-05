@@ -9,7 +9,7 @@ this.swallowed_whole_effect <- this.inherit("scripts/skills/skill", {
 
 	function getName()
 	{
-		return "吞下了 " + this.m.Name;
+		return "吞下了" + this.m.Name;
 	}
 
 	function create()

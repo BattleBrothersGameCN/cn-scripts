@@ -16,7 +16,7 @@ this.horrified_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色吓坏了，直到下一个回合才能行动。";
+		return "这个角色被吓坏了，直到下一个回合才能行动。";
 	}
 
 	function addTurns( _t )
@@ -30,7 +30,7 @@ this.horrified_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.actor) + "因为他不自然的生理机能抵抗了恐惧");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.actor) + "非自然的生理功能帮助他免受惊骇");
 			}
 
 			this.removeSelf();

@@ -36,7 +36,7 @@ this.geist_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/direct_damage.png",
-				text = "额外的[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color] 的伤害在使用近战武器时无视护甲"
+				text = "使用近战武器时有额外 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color] 无视护甲的伤害"
 			},
 			{
 				id = 12,

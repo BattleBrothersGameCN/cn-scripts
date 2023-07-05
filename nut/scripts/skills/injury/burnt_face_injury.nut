@@ -4,7 +4,7 @@ this.burnt_face_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.burnt_face";
-		this.m.Name = "烧伤的脸";
+		this.m.Name = "脸部烧伤";
 		this.m.Description = "脸部和眼睛上的烧伤痂导致难以看清并聚焦于目标。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_48";

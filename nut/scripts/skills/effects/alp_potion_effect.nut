@@ -3,7 +3,7 @@ this.alp_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.alp_potion";
-		this.m.Name = "强化眼棒(Enhanced Eye Rods)";
+		this.m.Name = "强化眼杆细胞";
 		this.m.Icon = "skills/status_effect_147.png";
 		this.m.IconMini = "status_effect_147_mini";
 		this.m.Overlay = "status_effect_147";
@@ -36,7 +36,7 @@ this.alp_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "不受夜间惩罚影响。"
+				text = "不受夜间惩罚影响"
 			},
 			{
 				id = 12,

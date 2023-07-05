@@ -16,7 +16,7 @@ this.apotheosis_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色摄入了一种特别强效的兴奋剂。虽然其传输机制本身具有革命性，但这种药物本身并不像其华丽的名称所暗示的那样强大。";
+		return "该角色摄入了一种特别强效的兴奋剂。虽然其给药机制本身具有革命性，但这种药物本身并不像其华丽的名称所暗示的那样强大。";
 	}
 
 	function getTooltip()

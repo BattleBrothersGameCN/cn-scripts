@@ -7,7 +7,7 @@ if (!("Strings" in gt.Const))
 
 gt.Const.Strings.ShieldNames <- [
 	"盾",
-	"堡垒(Bulwark)",
+	"堡垒",
 	"保护者",
 	"护板",
 	"盾墙",
@@ -616,7 +616,7 @@ gt.Const.Strings.SouthernPrefix <- [
 gt.Const.Strings.SouthernSuffix <- [
 	"·南方",
 	"·镀金",
-	"·沙漠(of the Desert)",
+	"·沙漠",
 	"·沙地",
 	"·旭日",
 	"·晨光",
@@ -750,7 +750,7 @@ gt.Const.Strings.WardogNames <- [
 	"戈隆德",
 	"疾风",
 	"巴拉格",
-	"布拉森(Brazen)",
+	"布拉森",
 	"布雷泽",
 	"小骨头",
 	"布兰特",

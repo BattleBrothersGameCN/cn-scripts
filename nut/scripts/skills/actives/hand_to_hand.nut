@@ -5,7 +5,7 @@ this.hand_to_hand <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.hand_to_hand";
 		this.m.Name = "徒手攻击";
 		this.m.Description = "标准的拳头攻击。甩拳！";
-		this.m.KilledString = "被殴打致死";
+		this.m.KilledString = "殴打致死";
 		this.m.Icon = "skills/active_08.png";
 		this.m.IconDisabled = "skills/active_08_sw.png";
 		this.m.Overlay = "active_08";

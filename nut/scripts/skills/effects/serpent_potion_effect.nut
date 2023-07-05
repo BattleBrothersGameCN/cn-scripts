@@ -3,7 +3,7 @@ this.serpent_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.serpent_potion";
-		this.m.Name = "强化机会主义(Enhanced Opportunism)";
+		this.m.Name = "强化投机";
 		this.m.Icon = "skills/status_effect_142.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_142";
@@ -16,7 +16,7 @@ this.serpent_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的眼睛被改造了，更容易发现目标的防御漏洞。它们似乎还会发出非常微弱的嘶嘶声。";
+		return "这个角色的眼睛发生了突变，更容易发现目标的防御漏洞。它们似乎还会发出非常微弱的嘶嘶声。";
 	}
 
 	function getTooltip()
@@ -36,7 +36,7 @@ this.serpent_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "获得额外的[color=" + this.Const.UI.Color.PositiveValue + "]+3%[/color]（每有一个友军位于目标周围）近战命中率"
+				text = "每有一个盟友包围攻击目标获得额外 [color=" + this.Const.UI.Color.PositiveValue + "]+3%[/color] 近战命中率"
 			},
 			{
 				id = 12,

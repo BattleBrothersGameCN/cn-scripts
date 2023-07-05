@@ -3,7 +3,7 @@ this.kraken_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.kraken_potion";
-		this.m.Name = "兽化";
+		this.m.Name = "血肉升华";
 		this.m.Icon = "skills/status_effect_154.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_154";
@@ -16,7 +16,7 @@ this.kraken_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色从某种无限的力量源中汲取力量，其健康和耐力相当于两个人。你假装没有注意到他们留下的被内脏撕裂的尸体。";
+		return "该角色从某种无限的力量源中汲取力量，其健康和耐力相当于两个人。你假装没有注意到他留下的被掏空内脏的尸体。";
 	}
 
 	function getTooltip()

@@ -53,7 +53,7 @@ this.lorekeeper_potion_item <- this.inherit("scripts/items/misc/anatomist/anatom
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "每场战斗一次，在遭受致命伤害时抵抗该次伤害并恢复所有生命值"
+			text = "每场战斗只能触发一次，在遭受致命伤害时抵抗该次伤害并恢复所有生命值"
 		});
 		result.push({
 			id = 65,
