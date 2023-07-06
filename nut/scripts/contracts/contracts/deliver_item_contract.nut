@@ -458,7 +458,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "嗯......",
+					Text = "嗯...",
 					function getResult()
 					{
 						this.Flags.set("IsMercenaries", false);

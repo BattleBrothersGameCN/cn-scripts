@@ -303,7 +303,7 @@ this.contract <- {
 			}
 		}
 
-		this.logError("屏幕 \"\"" + _id + "合同没有找到" + this.m.Type + "\".");
+		this.logError("Screen \"" + _id + "合同没有找到" + this.m.Type + "\".");
 		return null;
 	}
 
