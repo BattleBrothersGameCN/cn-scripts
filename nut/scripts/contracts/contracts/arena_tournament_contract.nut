@@ -607,7 +607,7 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 				}
 				else if (this.Flags.get("Round") > 1)
 				{
-					this.Contract.setScreen("胜利" + this.Flags.get("Round"));
+					this.Contract.setScreen("Won" + this.Flags.get("Round"));
 					this.World.Contracts.showActiveContract();
 				}
 			}

@@ -30,7 +30,7 @@ this.scout_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "赢得了(Won)" + this.Math.min(5, this.World.Statistics.getFlags().getAsInt("BeastsDefeated")) + "/5场野兽战斗";
+		this.m.Requirements[0].Text = "赢得了" + this.Math.min(5, this.World.Statistics.getFlags().getAsInt("BeastsDefeated")) + "/5场野兽战斗";
 
 		if (this.World.Statistics.getFlags().getAsInt("BeastsDefeated") >= 5)
 		{
