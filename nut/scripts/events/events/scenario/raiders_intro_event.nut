@@ -36,7 +36,7 @@ this.raiders_intro_event <- this.inherit("scripts/events/event", {
 
 	function onPrepare()
 	{
-		this.m.Title = "北方掠夺者";
+		this.m.Title = "北方掠袭者们";
 	}
 
 	function onPrepareVariables( _vars )

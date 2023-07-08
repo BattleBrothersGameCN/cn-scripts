@@ -360,7 +360,7 @@ this.faction_manager <- {
 
 		local f = this.new("scripts/factions/nomad_faction");
 		f.setID(this.m.Factions.len());
-		f.setName("沙漠袭击者(Desert Raiders)");
+		f.setName("沙漠掠袭者");
 		f.setDiscovered(true);
 		f.addTrait(this.Const.FactionTrait.OrientalBandits);
 		this.m.Factions.push(f);

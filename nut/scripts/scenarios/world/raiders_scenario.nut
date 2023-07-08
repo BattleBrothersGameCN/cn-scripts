@@ -72,7 +72,7 @@ this.raiders_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 		bros[2].setStartValuesEx([
 			"barbarian_background"
 		]);
-		bros[2].getBackground().m.RawDescription = "野蛮人的掠夺者经常从他们陌生的土地上掠夺。 大多数人把他们的掠夺看作是物质和女人的问题，但有时他们会奴役有巨大潜力的难对付的男孩。%name%，一个北方人，就是这样一个孩子，他被培养成一个他们自己的掠夺者。 他的一半生活在原始氏族里，另一半生活在带走他的人那里。 这使他成为一个勇猛而野蛮的战士。";
+		bros[2].getBackground().m.RawDescription = "野蛮人的掠袭者经常从他们陌生的土地上掠夺。 大多数人把他们的掠袭看作是物质和女人的问题，但有时他们会奴役有巨大潜力的难对付的男孩。%name%，一个北方人，就是这样一个孩子，他被培养成一个他们自己的掠袭者。 他的一半生活在原始氏族里，另一半生活在带走他的人那里。 这使他成为一个勇猛而野蛮的战士。";
 		bros[2].improveMood(1.000000, "一次成功的掠夺");
 		bros[2].setPlaceInFormation(5);
 		bros[2].m.PerkPoints = 2;

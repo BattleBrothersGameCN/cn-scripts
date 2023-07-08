@@ -18,7 +18,7 @@ this.slave_barbarian_background <- this.inherit("scripts/skills/backgrounds/slav
 			"囚犯(the Prisoner)",
 			"坏运气(the Unlucky)",
 			"受奴役者(the Enslaved)",
-			"掠夺者(the Raider)",
+			"掠袭者(the Raider)",
 			"俘虏(the Captive)",
 			"不自由者(the Unfree)",
 			"桀骜不驯者(the Unruly)",

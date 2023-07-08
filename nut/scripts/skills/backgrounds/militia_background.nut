@@ -8,7 +8,7 @@ this.militia_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.Icon = "ui/backgrounds/background_35.png";
 		this.m.BackgroundDescription = "任何参加过民兵组织的人都至少接受过一些基本的战斗训练。";
 		this.m.GoodEnding = "像%name%这样的前民兵最终离开了%companyname%。他游历各地，拜访村庄并帮助他们建立可靠的民兵组织以保卫自己。在这个越来越危险的世界中取得了成功后，%name%最终成为一个知名人物，被称作某种“修补师”专门去确保那些村子们的安全。你最后听到的消息是，他已经购买了一块土地，并远离了世界的纷乱，组建了家庭。";
-		this.m.BadEnding = "%name%离开了崩溃中的战团并回到了他的村庄。回到民兵队伍后，不久就开始遭受{绿皮 | 掠夺者}的攻击，他被召唤出战。据说他挺身而出，在击杀无数敌人后鼓舞了防线，直到伤重不支。当你访问那个村庄时，你发现孩子们在一个以民兵形象为样本的雕像下打闹。";
+		this.m.BadEnding = "%name%离开了崩溃中的战团并回到了他的村庄。回到民兵队伍后，不久就开始遭受{绿皮 | 掠袭者}的攻击，他被召唤出战。据说他挺身而出，在击杀无数敌人后鼓舞了防线，直到伤重不支。当你访问那个村庄时，你发现孩子们在一个以民兵形象为样本的雕像下打闹。";
 		this.m.HiringCost = 100;
 		this.m.DailyCost = 10;
 		this.m.Excluded = [

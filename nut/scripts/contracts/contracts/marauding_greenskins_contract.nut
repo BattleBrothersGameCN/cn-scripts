@@ -160,7 +160,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 				}
 				else
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "地精突袭者", false, this.Const.World.Spawn.GoblinRaiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "地精掠袭者", false, this.Const.World.Spawn.GoblinRaiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 					party.setDescription("一群淘气的地精，小而狡猾，不可低估。");
 					party.getLoot().ArmorParts = this.Math.rand(0, 10);
 					party.getLoot().Medicine = this.Math.rand(0, 2);

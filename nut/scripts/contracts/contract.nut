@@ -1452,7 +1452,7 @@ this.contract <- {
 		}
 		else if (_factionType == this.Const.FactionType.Goblins)
 		{
-			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(enemyBase.getTile(), "地精袭击者 ", false, this.Const.World.Spawn.GoblinRaiders, _resources);
+			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(enemyBase.getTile(), "地精掠袭者", false, this.Const.World.Spawn.GoblinRaiders, _resources);
 			party.setDescription("一群淘气的地精，小而狡猾，不可低估。");
 			party.setFootprintType(this.Const.World.FootprintsType.Goblins);
 			party.getLoot().ArmorParts = this.Math.rand(0, 10);

@@ -31,7 +31,7 @@ this.nomad_background <- this.inherit("scripts/skills/backgrounds/character_back
 			"trait.insecure"
 		];
 		this.m.Titles = [
-			"沙漠掠夺者(the Desert Raider)",
+			"沙漠掠袭者(the Desert Raider)",
 			"·沙漠(of the Desert)",
 			"沙漠之子(Son of the Desert)",
 			"沙漠之灾(the Desert Scourge)",
