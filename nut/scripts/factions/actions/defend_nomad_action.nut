@@ -81,7 +81,7 @@ this.defend_nomad_action <- this.inherit("scripts/factions/faction_action", {
 		{
 			local party = this.getFaction().spawnEntity(spawnpoints[i], "游牧民", false, this.Const.World.Spawn.NomadDefenders, this.m.Settlement.getResources() * 0.660000);
 			party.getSprite("banner").setBrush(this.m.Settlement.getBanner());
-			party.setDescription("一群沙漠掠夺者，狩猎任何试图穿越沙海的人。");
+			party.setDescription("一群沙漠掠袭者，狩猎任何试图穿越沙海的人。");
 			party.setFootprintType(this.Const.World.FootprintsType.Nomads);
 			party.getFlags().set("IsRandomlySpawned", true);
 			local c = party.getController();

@@ -493,7 +493,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "没能协助" + this.Contract.m.Destination.getName() + "来自南方掠夺者。");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "没能协助" + this.Contract.m.Destination.getName() + "来自南方劫掠者");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -598,7 +598,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractPoor);
 						this.World.Assets.addMoney(this.Math.round(this.Contract.m.Payment.getOnCompletion() / 2));
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractPoor, "保卫了" + this.Contract.m.Destination.getName() + "来自南方掠夺者。");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractPoor, "保卫了" + this.Contract.m.Destination.getName() + "来自南方劫掠者");
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isHolyWar())
@@ -636,7 +636,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "保卫了" + this.Contract.m.Destination.getName() + "来自南方掠夺者。");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "保卫了" + this.Contract.m.Destination.getName() + "来自南方劫掠者");
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isHolyWar())

@@ -110,7 +110,7 @@ this.morale_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "我们赢不了！这个角色的士气正在瓦解，他很快就要逃离战场了。"
+					text = "我们赢不了！这个角色的士气降至了瓦解，他很快就要逃离战场了。"
 				},
 				{
 					id = 11,

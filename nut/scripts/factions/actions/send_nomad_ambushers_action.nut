@@ -85,7 +85,7 @@ this.send_nomad_ambushers_action <- this.inherit("scripts/factions/faction_actio
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "游牧民", false, this.Const.World.Spawn.NomadRaiders, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult());
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一群沙漠掠夺者，狩猎任何试图穿越沙海的人。");
+		party.setDescription("一群沙漠掠袭者，狩猎任何试图穿越沙海的人。");
 		party.setFootprintType(this.Const.World.FootprintsType.Nomads);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().Money = this.Math.rand(50, 200);

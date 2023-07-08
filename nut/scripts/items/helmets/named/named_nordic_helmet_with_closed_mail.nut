@@ -6,7 +6,7 @@ this.named_nordic_helmet_with_closed_mail <- this.inherit("scripts/items/helmets
 		this.m.ID = "armor.head.named_nordic_helmet_with_closed_mail";
 		this.m.Description = "这顶带护面的北欧头盔是特别制作的，它的保护性和令人印象深刻的外观一样。";
 		this.m.NameList = [
-			"海上掠夺者头盔",
+			"海上掠袭者头盔",
 			"猫头鹰头盔",
 			"装饰的北欧头盔",
 			"酋长头盔",

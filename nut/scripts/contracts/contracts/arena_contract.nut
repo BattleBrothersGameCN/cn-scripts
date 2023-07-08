@@ -336,7 +336,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 					else
 					{
 						this.Flags.set("Number", this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.BanditRaider, baseDifficulty - this.Const.World.Spawn.Troops.Swordmaster.Cost, 2));
-						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗一名剑术大师和%amount%名掠夺者";
+						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗一名剑术大师和%amount%名掠袭者";
 					}
 
 					this.Text += "%SPEECH_ON%他们在他的名字旁边标上了一颗星，这是盖尔德的标志。这意味着他的道路是镀金的。你需要知道的是，他是一个剑术大师。你可能会觉得他是一位年长者，但你不会是第一个我这样告诉的人，明白吗？愿你的道路像镀金一样，因为这位剑术大师的道路肯定是如此。%SPEECH_OFF%";
@@ -351,7 +351,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 					else
 					{
 						this.Flags.set("Number", this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.BanditRaider, baseDifficulty - this.Const.World.Spawn.Troops.HedgeKnight.Cost, 2));
-						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗一位雇佣骑士和%amount%名掠夺者";
+						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗一位雇佣骑士和%amount%名掠袭者";
 					}
 
 					this.Text += "%SPEECH_ON%我相信北方人称他为“仇恨骑士”。我可能说错了。不要告诉其他角斗场主人我在说北方垃圾的话，但这个骑士是我在这里见过的最危险的人之一，如果你希望你的道路继续被镀金，那么我建议你做好准备，在战斗前好好休息一下。%SPEECH_OFF%";

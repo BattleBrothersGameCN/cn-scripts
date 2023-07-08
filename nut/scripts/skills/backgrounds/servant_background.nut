@@ -8,7 +8,7 @@ this.servant_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.Icon = "ui/backgrounds/background_16.png";
 		this.m.BackgroundDescription = "仆人不经常从事艰苦的体力劳动。";
 		this.m.GoodEnding = "原来%name%这个仆人一直积攒着他在%companyname%赚来的每一枚克朗。当他储蓄够了的时候，他退休了，买了一块土地并缓慢地攀登社会阶层。他最终在一张舒适的床上离开了人世，被朋友、家人和忠诚的仆人所包围。";
-		this.m.BadEnding = "%name%这个仆人已经厌倦了雇佣兵的生活并离开了战团。他回去为贵族服务。当掠夺者攻击他的领主城堡时，仆人被贵族推出门外，只有一把厨房刀来自保。他被发现躺在一堆破椅子中，没有脑袋，周围散落着几具袭击者的尸体。";
+		this.m.BadEnding = "%name%这个仆人已经厌倦了雇佣兵的生活并离开了战团。他回去为贵族服务。当掠袭者攻击他的领主城堡时，仆人被贵族推出门外，只有一把厨房刀来自保。他被发现躺在一堆破椅子中，没有脑袋，周围散落着几具袭击者的尸体。";
 		this.m.HiringCost = 45;
 		this.m.DailyCost = 4;
 		this.m.Excluded = [

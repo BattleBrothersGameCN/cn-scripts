@@ -93,7 +93,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 					id = 11,
 					type = "text",
 					icon = "ui/icons/special.png",
-					text = "只能拥有[color=" + this.Const.UI.Color.NegativeValue + "]溃散[/color]或更糟士气"
+					text = "只能拥有[color=" + this.Const.UI.Color.NegativeValue + "]瓦解[/color]或更糟士气"
 				}
 			];
 			break;
