@@ -38,18 +38,18 @@ this.hedge_knight_background <- this.inherit("scripts/skills/backgrounds/charact
 			this.Const.Attributes.RangedSkill
 		];
 		this.m.Titles = [
-			"独狼",
-			"狼",
-			"猎犬",
-			"钢铁侠",
-			"杀手",
+			"独狼(the Lone Wolf)",
+			"狼(the Wolf)",
+			"猎犬(the Hound)",
+			"钢铁挥舞者(Steelwielder)",
+			"杀手(the Slayer)",
 			"比武骑士(the Jouster)",
 			"巨人(the Giant)",
 			"大山(The Mountain)",
 			"强面(Strongface)",
-			"污染者",
-			"骑士杀手",
-			"雇佣骑士 (the Hedge Knight)"
+			"亵渎者(the Defiler)",
+			"骑士杀手(the Knightslayer)",
+			"雇佣骑士(the Hedge Knight)"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.AllMale;

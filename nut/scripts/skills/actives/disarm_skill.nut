@@ -90,7 +90,7 @@ this.disarm_skill <- this.inherit("scripts/skills/skill", {
 
 				if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
 				{
-					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "缴械了" + this.Const.UI.getColorizedEntityName(target) + "持续 1 回合");
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "缴械了" + this.Const.UI.getColorizedEntityName(target) + "，持续 1 回合");
 				}
 			}
 		}

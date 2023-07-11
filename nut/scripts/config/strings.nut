@@ -373,7 +373,7 @@ gt.Const.Strings.Tactical.EntityDescription <- {
 	RuinedPillar = "TODO",
 	Cart = "满载贸易商品的运货马车。",
 	Donkey = "用来拉重车的驴。",
-	Plant = "一种能阻挡移动和视线的外来植物。"
+	Plant = "异域植物，阻挡移动和视线。"
 };
 gt.Const.Strings.FootprintsType <- [
 	"",
@@ -646,7 +646,7 @@ gt.Const.Strings.Tactical.TerrainDescription <- [
 	"冰冻的地面覆盖着一层薄薄的雪。",
 	"光滑的石头地面提供了良好的立足点。",
 	"粗糙的石头地面。",
-	"灼热的沙漠沙子。",
+	"炙热的沙漠沙子。",
 	"清澈而浅的水。"
 ];
 gt.Const.Strings.UI <- {

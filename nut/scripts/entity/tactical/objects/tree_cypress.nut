@@ -7,7 +7,7 @@ this.tree_cypress <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "一棵柏树。 阻挡了移动和视线。";
+		return "一棵柏树。阻挡移动和视线。";
 	}
 
 	function onInit()
