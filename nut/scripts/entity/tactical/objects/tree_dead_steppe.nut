@@ -7,7 +7,7 @@ this.tree_dead_steppe <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "这棵树枯萎了，已经死了很久了。 阻挡了移动和视线。";
+		return "这棵枯树已经死了很久了。阻挡移动和视线。";
 	}
 
 	function onInit()

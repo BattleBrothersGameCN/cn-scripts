@@ -7,7 +7,7 @@ this.tree_olive <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "一棵大橄榄树。 阻挡了移动和视线。";
+		return "一棵大橄榄树。阻挡移动和视线。";
 	}
 
 	function onInit()

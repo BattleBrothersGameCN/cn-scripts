@@ -7,7 +7,7 @@ this.tundra_brush <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "茂密的灌木阻挡了移动和视线。";
+		return "茂密的灌木丛，阻挡移动和视线。";
 	}
 
 	function onInit()

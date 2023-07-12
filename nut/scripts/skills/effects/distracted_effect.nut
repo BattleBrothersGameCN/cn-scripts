@@ -17,7 +17,7 @@ this.distracted_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色是肮脏伎俩的受害者。将会分神[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合，他的反应会变慢并且更难准确的进行打击。";
+		return "这个角色是肮脏伎俩的受害者。将会分神 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合，他的反应会变慢并且更难准确地进行打击。";
 	}
 
 	function getTooltip()

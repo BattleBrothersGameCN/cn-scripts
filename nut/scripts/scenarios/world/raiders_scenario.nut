@@ -3,7 +3,7 @@ this.raiders_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 	function create()
 	{
 		this.m.ID = "scenario.raiders";
-		this.m.Name = "北方掠夺者";
+		this.m.Name = "北方掠袭者";
 		this.m.Description = "[p=c][img]gfx/ui/events/event_139.png[/img][/p][p]在你的成年生活中，你一直在这片土地上掠夺和抢劫。 但是，如果当地的农民穷得像老鼠一样，你可能最终想要扩大到佣兵工作的盈利领域，也就是说，如果你的潜在雇主愿意原谅你过去的违法行为。\n\n[color=#bcad8c]战团：[/color] 从三个有经验的野蛮人开始。\n[color=#bcad8c]抢劫者：[/color] 你有更高的几率从被杀死的敌人那里得到任何物品作为战利品。\n[color=#bcad8c]不法之徒：[/color] 从与大多数人类派别的坏关系开始。[/p]";
 		this.m.Difficulty = 2;
 		this.m.Order = 60;
