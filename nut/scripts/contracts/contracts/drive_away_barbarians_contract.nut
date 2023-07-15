@@ -9,7 +9,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 	{
 		this.contract.create();
 		this.m.Type = "contract.drive_away_barbarians";
-		this.m.Name = "驱赶野蛮人";
+		this.m.Name = "击退野蛮人";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
 	}
 
@@ -49,7 +49,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"驱逐野蛮部族在" + this.Flags.get("DestinationName") + "(%origin% %direction%)"
+					"击退野蛮人于" + this.Flags.get("DestinationName") + "(%origin% %direction%)"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -237,7 +237,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{%employer% 沉吟着推过来一张破纸片给你。上面是一份罪行清单。你点点头，表示这真的是太多的恶行。那人也点了点头。%SPEECH_ON%要是那只是普通罪犯的事就随便找个警察或是赏金猎人去干。但我把你叫来，就是因为这是野蛮人所为。他们所做的一切，那里面列的清单上的所有内容，我需要找人去对付他们。他们的村庄在这里往%direction%。我需要你去拜访他们，让他们明白，尽管我们生活在有炉火和文明的世界里，但野性的火花仍未散去，而野蛮的行为必将得到野蛮的报应。明白了吗？%SPEECH_OFF%你现在注意到罪行清单上充满了各种颜色的墨汁，好像这个写下它的人越写越生气。 | 一个本地骑士队和%employer%在房间里。他们毫无表情地看着你，就像你是只推开门悠闲走进来的狗。%employer%从他的椅子上伸手拿起一卷卷轴，把它朝你扔过来。%SPEECH_ON%野蛮人留下了这个，当我去查明一个附近被夷为平地的农场时。%SPEECH_OFF%纸上有符文的图案和类似绞刑的描绘。%employer%点了点头。%SPEECH_ON%他们屠杀了农民，至少是男人们。老神明们知道妇女们遭到了什么。往%direction%的方向走，雇佣兵，找到负责这一切的野蛮人。你将为他们的彻底消灭付出可观的价格。%SPEECH_OFF% | 当你走进房间时，%employer%看起来相当不满。他说%townname%曾经与北方的野蛮人有良好的关系。%SPEECH_ON%但我想，我只是在自欺欺人地认为我们能够和那些野蛮人保持平等关系。%SPEECH_OFF%他声称他们一直在袭击商队，谋杀旅行者和攻击民居。%SPEECH_ON%所以我会以同样的方式对待他们。往%direction%的方向走，将他们的整个村庄屠杀。你能胜任这个任务吗？%SPEECH_OFF% | %employer%”看到你走进房间大笑起来。%SPEECH_ON%并没有取笑你，雇佣兵，只是为了解决一个问题，找个能快速而彻底消灭野蛮人的佣兵。你看，就在这附近有一群穿着熊皮、凶恶无比的家伙，他们一直在剥头皮、砍杀商队和旅行者，我不能容忍。部分原因是他们错了，尤其是我有钱支付你这样的野蛮人为我解决问题。%SPEECH_OFF%他再次笑了起来。你感觉这个男人从来没有拔出过剑。%SPEECH_ON%那么，佣兵，你有兴趣屠杀一些野蛮人吗？%SPEECH_OFF% | 当你进入%employer%的房间时，他正在盯着一只狗的头看。脖子上稳定的滴水滴落在桌子的边缘。这个人正在摩挲它的一只耳朵。%SPEECH_ON%谁会杀了一个人的狗，割了它的头，还他妈地送回来？%SPEECH_OFF%你想象着某个人有着仇敌，但什么也没说。%employer%对其中一名仆人示意，狗头被带走了。他现在看着你。%SPEECH_ON%野蛮的%direction%人做了这个。首先，他们对商人和定居者动手，就像野蛮人一样强奸和抢劫。所以我做出了回应，杀了他们几个，结果我得到了这个。好了，不再容忍这些婊子们了。我要你去他们的村庄，直到最后一个都消灭干净。%SPEECH_OFF%你几乎问道这是否包括摧毁他们的狗。 | 你看见 %employer% 站在椅子旁边，身旁有一个脸上满是泥水和污垢的女人。她的头发散乱，身上遍布各种伤痕。她咆哮着看着你，好像这一切都是你的错。%employer% 用脚踢了她一下。%SPEECH_ON%别在意这个狐婆，佣兵。我们抓到她和她的朋友正在攻击谷仓。我杀了那些野蛮人，只是觉得玩弄一下她有些好玩，但欺负她就像欺负一只狗一样没意思。她的男子气概让人失去兴致。%SPEECH_OFF%他又踢了她一下，她咆哮着反击。%SPEECH_ON%明白了吗？我有消息！我们找到了她来的地方，我有意将其彻底摧毁。 你就有所作为了。野蛮人村庄在 %direction%。消灭他们，你会得到丰厚的报酬。%SPEECH_OFF%那个女人听不懂正在说些什么，但眼神的迷茫似乎表明她开始明白为什么一个像你这样的男人走进来了。 %employer% 咧嘴一笑。%SPEECH_ON% 你有兴趣吗，还是我要找个性格更加恶劣的人？%SPEECH_OFF% | %employer% 的房间里挤满了一群农民，比他的身份能承受的近距离接触要多得多，但令人惊讶的是，他们似乎并不想对他进行私刑。看到你，%employer% 叫你过来。%SPEECH_ON%啊，终于来了！我们的答案在这里！雇佣兵，%direction% 的野蛮人一直在掠夺附近的村庄，强奸任何一个有洞的东西。我们受够了，坦白地说，我和其他人一样都不希望野蛮人的鸟进入我的屁股。%SPEECH_OFF% 地下的人群嘲笑着，一个人大喊：野蛮人{砍了他母亲的头 | 还杀了他的宠物山羊 | 偷走了所有的狗，这些混蛋 | 吃了他最小的儿子的肝脏}。%employer% 点了点头。%SPEECH_ON%是的。是的，兄弟们，是的！所以我说，雇佣兵，你要计划一条通往野蛮人村庄的道路，并对他们进行适度、适当、文明的审判。%SPEECH_OFF% | %employer%招呼你进房间。他手持火钳，钳头上挂着一张头皮。%SPEECH_ON%北方的野蛮人今天送来了这个。头皮上粘着他们使臣（快递员），他们把他的眼睛和舌头都拿走了。这就是这些野蛮人的本性，他们想要和我交流却不发一句话。我的感觉是，在你的帮助下我将以其人之道，还治其人之身，佣兵。去%direction%找到他们的村庄，将其烧毁。%SPEECH_OFF%头皮从火钳上滑落，噗哧一声掉在石板地面上。 | %employer% 不情愿地欢迎你，当一个人沦为需要雇佣军来帮助的时候，他不得不这样做。他简明地讲述了情况。%SPEECH_ON%野蛮人建了一个村庄，在此方向，派遣了抢劫队伍。他们强奸，抢劫，完全就是人形昆虫和害虫。我想让他们全部灭亡，到最后一个人。你愿意接下这个任务吗？%SPEECH_OFF% | %employer%抱着一只猫坐在他的膝盖上，但当你走近时，你意识到只有它的头还在那里，他只是用拇指拨弄着一个没了四肢的尾巴。他皱起了嘴唇。%SPEECH_ON%野蛮的野蛮人做了这件事。他们还强奸和掠夺了许多周围的农场，还从一棵树上吊死了一对孪生婴儿，但是这件事...%SPEECH_OFF%他张开手掌，猫的头滚落到石头地面上，发出了阵阵的声响。%SPEECH_ON%不再这样了。我希望你朝%direction%走，并找到那些野蛮人所谓的家园，并像他们对我们所做的那样对待他们！%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{%employer%叹了口气，将一张纸片推到你面前。那是一份罪行清单。你点点头，观察到确实有相当多的不法行为。他也点了点头。%SPEECH_ON%要是那只是普通罪犯所为，我本可以找个巡警或是赏金猎人来处理。但我将你带到这里，佣兵，因为这是野蛮人的作为。他们所做的一切，那清单上列出的所有内容，我需要对他们采取同样的行动。他们的村庄在这里的%direction%边。我需要你去拜访他们，并让他们明白，尽管我们生活在有炉火和文明的世界里，但野性的火花仍未离我们远去，而野蛮行径必将得到野蛮的报应。明白吗？%SPEECH_OFF%你现在注意到那罪行清单上布满了折断的羽毛笔尖，仿佛写下这份清单的人对它的分类越来越不满意。 | 一个本地骑士队和%employer%在房间里。他们毫无表情地看着你，就像你是只推开门悠闲走进来的狗。%employer%从他的椅子上伸手拿起一卷卷轴，把它朝你扔过来。%SPEECH_ON%野蛮人留下了这个，当我去查明一个附近被夷为平地的农场时。%SPEECH_OFF%纸上有符文的图案和类似绞刑的描绘。%employer%点了点头。%SPEECH_ON%他们屠杀了农民，至少是男人们。老神明们知道妇女们遭到了什么。往%direction%的方向走，雇佣兵，找到负责这一切的野蛮人。你将为他们的彻底消灭付出可观的价格。%SPEECH_OFF% | 当你走进房间时，%employer%看起来相当不满。他说%townname%曾经与北方的野蛮人有良好的关系。%SPEECH_ON%但我想，我只是在自欺欺人地认为我们能够和那些野蛮人保持平等关系。%SPEECH_OFF%他声称他们一直在袭击商队，谋杀旅行者和攻击民居。%SPEECH_ON%所以我会以同样的方式对待他们。往%direction%的方向走，将他们的整个村庄屠杀。你能胜任这个任务吗？%SPEECH_OFF% | %employer%”看到你走进房间大笑起来。%SPEECH_ON%并没有取笑你，雇佣兵，只是为了解决一个问题，找个能快速而彻底消灭野蛮人的佣兵。你看，就在这附近有一群穿着熊皮、凶恶无比的家伙，他们一直在剥头皮、砍杀商队和旅行者，我不能容忍。部分原因是他们错了，尤其是我有钱支付你这样的野蛮人为我解决问题。%SPEECH_OFF%他再次笑了起来。你感觉这个男人从来没有拔出过剑。%SPEECH_ON%那么，佣兵，你有兴趣屠杀一些野蛮人吗？%SPEECH_OFF% | 当你进入%employer%的房间时，他正在盯着一只狗的头看。脖子上稳定的滴水滴落在桌子的边缘。这个人正在摩挲它的一只耳朵。%SPEECH_ON%谁会杀了一个人的狗，割了它的头，还他妈地送回来？%SPEECH_OFF%你想象着某个人有着仇敌，但什么也没说。%employer%对其中一名仆人示意，狗头被带走了。他现在看着你。%SPEECH_ON%野蛮的%direction%人做了这个。首先，他们对商人和定居者动手，就像野蛮人一样强奸和抢劫。所以我做出了回应，杀了他们几个，结果我得到了这个。好了，不再容忍这些婊子们了。我要你去他们的村庄，直到最后一个都消灭干净。%SPEECH_OFF%你几乎问道这是否包括摧毁他们的狗。 | 你看见 %employer% 站在椅子旁边，身旁有一个脸上满是泥水和污垢的女人。她的头发散乱，身上遍布各种伤痕。她咆哮着看着你，好像这一切都是你的错。%employer% 用脚踢了她一下。%SPEECH_ON%别在意这个狐婆，佣兵。我们抓到她和她的朋友正在攻击谷仓。我杀了那些野蛮人，只是觉得玩弄一下她有些好玩，但欺负她就像欺负一只狗一样没意思。她的男子气概让人失去兴致。%SPEECH_OFF%他又踢了她一下，她咆哮着反击。%SPEECH_ON%明白了吗？我有消息！我们找到了她来的地方，我有意将其彻底摧毁。 你就有所作为了。野蛮人村庄在 %direction%。消灭他们，你会得到丰厚的报酬。%SPEECH_OFF%那个女人听不懂正在说些什么，但眼神的迷茫似乎表明她开始明白为什么一个像你这样的男人走进来了。 %employer% 咧嘴一笑。%SPEECH_ON% 你有兴趣吗，还是我要找个性格更加恶劣的人？%SPEECH_OFF% | %employer% 的房间里挤满了一群农民，比他的身份能承受的近距离接触要多得多，但令人惊讶的是，他们似乎并不想对他进行私刑。看到你，%employer% 叫你过来。%SPEECH_ON%啊，终于来了！我们的答案在这里！雇佣兵，%direction% 的野蛮人一直在掠夺附近的村庄，强奸任何一个有洞的东西。我们受够了，坦白地说，我和其他人一样都不希望野蛮人的鸟进入我的屁股。%SPEECH_OFF% 地下的人群嘲笑着，一个人大喊：野蛮人{砍了他母亲的头 | 还杀了他的宠物山羊 | 偷走了所有的狗，这些混蛋 | 吃了他最小的儿子的肝脏}。%employer% 点了点头。%SPEECH_ON%是的。是的，兄弟们，是的！所以我说，雇佣兵，你要计划一条通往野蛮人村庄的道路，并对他们进行适度、适当、文明的审判。%SPEECH_OFF% | %employer%招呼你进房间。他手持火钳，钳头上挂着一张头皮。%SPEECH_ON%北方的野蛮人今天送来了这个。头皮上粘着他们使臣（快递员），他们把他的眼睛和舌头都拿走了。这就是这些野蛮人的本性，他们想要和我交流却不发一句话。我的感觉是，在你的帮助下我将以其人之道，还治其人之身，佣兵。去%direction%找到他们的村庄，将其烧毁。%SPEECH_OFF%头皮从火钳上滑落，噗哧一声掉在石板地面上。 | %employer% 不情愿地欢迎你，当一个人沦为需要雇佣军来帮助的时候，他不得不这样做。他简明地讲述了情况。%SPEECH_ON%野蛮人建了一个村庄，在此方向，派遣了抢劫队伍。他们强奸，抢劫，完全就是人形昆虫和害虫。我想让他们全部灭亡，到最后一个人。你愿意接下这个任务吗？%SPEECH_OFF% | %employer%抱着一只猫坐在他的膝盖上，但当你走近时，你意识到只有它的头还在那里，他只是用拇指拨弄着一个没了四肢的尾巴。他皱起了嘴唇。%SPEECH_ON%野蛮的野蛮人做了这件事。他们还强奸和掠夺了许多周围的农场，还从一棵树上吊死了一对孪生婴儿，但是这件事...%SPEECH_OFF%他张开手掌，猫的头滚落到石头地面上，发出了阵阵的声响。%SPEECH_ON%不再这样了。我希望你朝%direction%走，并找到那些野蛮人所谓的家园，并像他们对我们所做的那样对待他们！%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
@@ -429,7 +429,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
 						this.World.Assets.addMoralReputation(5);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "无法摧毁一个威胁的野蛮人营地。" + this.Contract.m.Home.getName());
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "没能摧毁一个带来威胁的野蛮人营地" + this.Contract.m.Home.getName());
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -537,7 +537,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 					{
 						this.World.getPlayerRoster().add(this.Contract.m.Dude);
 						this.World.getTemporaryRoster().clear();
-						this.Contract.m.Dude.worsenMood(1.000000, "看到他的村庄被屠杀了。");
+						this.Contract.m.Dude.worsenMood(1.000000, "看到他的村庄被屠。");
 						this.Contract.m.Dude.onHired();
 						this.Contract.m.Dude = null;
 						return 0;
@@ -605,7 +605,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion() * 2);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "你摧毁了一个威胁的野蛮人营地。" + this.Contract.m.Home.getName());
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "你摧毁了一个带来威胁的野蛮人营地" + this.Contract.m.Home.getName());
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "你拯救了" + this.Contract.m.Home.getName() + "来自野蛮人的复仇");
 						this.World.Contracts.finishActiveContract();
 						return 0;
@@ -640,7 +640,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 						this.Contract.m.Home.addSituation(this.new("scripts/entity/world/settlements/situations/raided_situation"), 4);
 						this.Contract.m.Home.setLastSpawnTimeToNow();
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail * 2);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 2, "你没有成功救下。" + this.Contract.m.Home.getName() + "来自为复仇而来的野蛮人。");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 2, "你没有成功救下" + this.Contract.m.Home.getName() + "来自为复仇而来的野蛮人。");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -663,7 +663,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "你摧毁了一个威胁的野蛮人营地。" + this.Contract.m.Home.getName());
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "你摧毁了一个带来威胁的野蛮人营地" + this.Contract.m.Home.getName());
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
