@@ -178,22 +178,14 @@ this.injury <- this.inherit("scripts/skills/skill", {
 				{
 					d = function ()
 					{
-						local env = {
-							template = "会在 %s 天后痊愈"
-						};
-						env.setdelegate(this);
-						return this.compilestring("return RenderTemplate(template, ht.Min)")();
+						return this.RenderTemplate("会在 %s 天后痊愈", ht.Min);
 					}();
 				}
 				else if (ht.Max > 1)
 				{
 					d = function ()
 					{
-						local env = {
-							template = "会在 %s 到 %s 天内痊愈"
-						};
-						env.setdelegate(this);
-						return this.compilestring("return RenderTemplate(template, ht.Min, ht.Max)")();
+						return this.RenderTemplate("会在 %s 到 %s 天内痊愈", ht.Min, ht.Max);
 					}();
 				}
 				else
@@ -214,22 +206,14 @@ this.injury <- this.inherit("scripts/skills/skill", {
 				{
 					d = function ()
 					{
-						local env = {
-							template = "会在 %s 天后消失"
-						};
-						env.setdelegate(this);
-						return this.compilestring("return RenderTemplate(template, ht.Min)")();
+						return this.RenderTemplate("会在 %s 天后消失", ht.Min);
 					}();
 				}
 				else if (ht.Max > 1)
 				{
 					d = function ()
 					{
-						local env = {
-							template = "会在 %s 到 %s 天内消失"
-						};
-						env.setdelegate(this);
-						return this.compilestring("return RenderTemplate(template, ht.Min, ht.Max)")();
+						return this.RenderTemplate("会在 %s 到 %s 天内消失", ht.Min, ht.Max);
 					}();
 				}
 				else

@@ -567,11 +567,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, function ()
 						{
-							local env = {
-								template = "未能突破针对%s的围攻"
-							};
-							env.setdelegate(this);
-							return this.compilestring("return RenderTemplate(template, Flags.get(\"ObjectiveName\"))")();
+							return this.RenderTemplate("未能突破针对%s的围攻", this.Flags.get("ObjectiveName"));
 						}());
 						this.World.Contracts.finishActiveContract(true);
 						return 0;

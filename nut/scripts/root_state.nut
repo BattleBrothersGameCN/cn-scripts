@@ -17,6 +17,8 @@ this.root_state <- this.inherit("scripts/states/state", {
 
 					foreach( val in vargv )
 					{
+						this.print("val" + val);
+
 						if (this.type(val) == "string")
 						{
 							args.append(val);
