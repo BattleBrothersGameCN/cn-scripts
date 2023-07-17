@@ -70,11 +70,7 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 				this.Contract.m.BulletpointsObjectives = [
 					function ()
 					{
-						local env = {
-							template = "确保%s的安全"
-						};
-						env.setdelegate(this);
-						return this.compilestring("return RenderTemplate(template, Flags.get(\"DestinationName\"))")();
+						return this.RenderTemplate("确保%s的安全", this.Flags.get("DestinationName"));
 					}()
 				];
 

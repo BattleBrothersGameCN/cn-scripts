@@ -493,11 +493,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.Assets.addMoney(this.Contract.m.Payment.getPerCount() * this.Flags.get("HeadsCollected"));
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, function ()
 						{
-							local env = {
-								template = "狩猎%s附近的野兽"
-							};
-							env.setdelegate(this);
-							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
+							return this.RenderTemplate("狩猎%s附近的野兽", this.World.State.getRegion(this.Flags.get("Region")).Name);
 						}());
 						this.World.Contracts.finishActiveContract();
 						return 0;
@@ -533,11 +529,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.Assets.addMoney(this.Contract.m.Payment.getPerCount() * this.Flags.get("HeadsCollected"));
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, function ()
 						{
-							local env = {
-								template = "狩猎%s附近的野兽"
-							};
-							env.setdelegate(this);
-							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
+							return this.RenderTemplate("狩猎%s附近的野兽", this.World.State.getRegion(this.Flags.get("Region")).Name);
 						}());
 						this.World.Contracts.finishActiveContract();
 						return 0;
@@ -573,11 +565,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.Assets.addMoney(this.Contract.m.Payment.getPerCount() * this.Flags.get("HeadsCollected"));
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, function ()
 						{
-							local env = {
-								template = "狩猎%s附近的野兽"
-							};
-							env.setdelegate(this);
-							return this.compilestring("return RenderTemplate(template, World.State.getRegion(Flags.get(\"Region\")).Name)")();
+							return this.RenderTemplate("狩猎%s附近的野兽", this.World.State.getRegion(this.Flags.get("Region")).Name);
 						}());
 						this.World.Contracts.finishActiveContract();
 						return 0;
