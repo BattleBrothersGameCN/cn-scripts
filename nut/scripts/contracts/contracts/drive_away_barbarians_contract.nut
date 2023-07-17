@@ -640,7 +640,10 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 						this.Contract.m.Home.addSituation(this.new("scripts/entity/world/settlements/situations/raided_situation"), 4);
 						this.Contract.m.Home.setLastSpawnTimeToNow();
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail * 2);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 2, "你没有成功救下" + this.Contract.m.Home.getName() + "来自为复仇而来的野蛮人。");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 2, function ()
+						{
+							return this.RenderTemplate("你没能从野蛮人的复仇中保护%s", this.Contract.m.Home.getName());
+						}());
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
