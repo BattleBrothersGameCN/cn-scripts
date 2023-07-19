@@ -1095,7 +1095,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 			}
 			else if (_fatalityType == this.Const.FatalityType.Kraken)
 			{
-				killedBy = "被克拉肯吞噬了。";
+				killedBy = "被克拉肯吞噬了";
 			}
 			else if (_fatalityType == this.Const.FatalityType.Suicide)
 			{
@@ -1113,13 +1113,13 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 			{
 				if (_fatalityType == this.Const.FatalityType.Decapitated)
 				{
-					killedBy = "被斩首";
+					killedBy = "斩首";
 				}
 				else if (_fatalityType == this.Const.FatalityType.Disemboweled)
 				{
 					if (this.Math.rand(1, 2) == 1)
 					{
-						killedBy = "被开膛";
+						killedBy = "开膛";
 					}
 					else
 					{
