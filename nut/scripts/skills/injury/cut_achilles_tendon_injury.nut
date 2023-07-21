@@ -32,7 +32,7 @@ this.cut_achilles_tendon_injury <- this.inherit("scripts/skills/injury/injury", 
 				id = 7,
 				type = "text",
 				icon = "ui/icons/action_points.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]2[/color] 额外的行动点，在每移动一格时消耗增加"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]+2[/color] 移动AP消耗（每格）"
 			},
 			{
 				id = 7,
