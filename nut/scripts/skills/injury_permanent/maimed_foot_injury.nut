@@ -26,7 +26,7 @@ this.maimed_foot_injury <- this.inherit("scripts/skills/injury_permanent/permane
 				id = 7,
 				type = "text",
 				icon = "ui/icons/action_points.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 额外的行动点，在每移动一格时消耗增加"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]+1[/color] 移动AP消耗（每格）"
 			},
 			{
 				id = 7,
