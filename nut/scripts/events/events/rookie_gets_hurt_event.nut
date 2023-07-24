@@ -196,7 +196,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 
 	function onUpdateScore()
 	{
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 10.000000)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.000000)
 		{
 			return;
 		}
