@@ -663,7 +663,7 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 			],
 			function start()
 			{
-				this.Text = "[img]gfx/ui/events/event_155.png[/img]数十名男子在竞技场入口处闲逛。有些人沉默不语，不想暴露出他们的能力。然而，其他人则毫不掩饰地吹嘘自己的功夫，或是希望自己的虚张声势掩盖他们的短板。";
+				this.Text = "[img]gfx/ui/events/event_155.png[/img]数十名男子聚集在竞技场的入口处。有些人沉默不语，不愿透露自己的能力。然而，另一些人则泰然自若地吹嘘和夸耀着，要么是发自内心地信任自己的武艺，要么是希望他们的虚张声势能掩盖他们技艺上的漏洞。\n\n";
 				this.Text += "队长, 通常是你见过的最不感兴趣的有趣工作的人, 今天实际上相当活跃。他一只手拿着一卷卷轴，另一只手竖起三根手指。%SPEECH_ON%三轮！三轮比赛，接连不断，每一轮比上一轮更难。用相同的五个人赢得所有三轮比赛，赢得一项名为 %prizename% 的著名%prizetype%大奖！那是一项锦标赛！你想要参加吗？%SPEECH_OFF%";
 				this.Text += "竞技场主继续说道。%SPEECH_ON%准备好后，让那些将参加战斗的人戴上我们提供的竞技场项圈。%SPEECH_OFF%";
 			}

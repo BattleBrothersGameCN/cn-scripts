@@ -315,8 +315,8 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 			],
 			function start()
 			{
-				this.Text = "[img]gfx/ui/events/event_155.png[/img]数十名男子在竞技场入口处闲逛。有些人沉默不语，不想暴露出他们的能力。然而，其他人则毫不掩饰地吹嘘自己的功夫，或是希望自己的虚张声势掩盖他们的短板。";
-				this.Text += "一个头发花白的竞技场的管理者，举起一卷卷轴，用钩子做成的手敲击着它。";
+				this.Text = "[img]gfx/ui/events/event_155.png[/img]数十名男子聚集在竞技场的入口处。有些人沉默不语，不愿透露自己的能力。然而，另一些人则泰然自若地吹嘘和夸耀着，要么是发自内心地信任自己的武艺，要么是希望他们的虚张声势能掩盖他们技艺上的漏洞。\n\n";
+				this.Text += "一个头发花白的男子，竞技场的主人，举起一卷卷轴，并用替下了手掌的钩子轻轻敲击它。";
 				local baseDifficulty = 30;
 
 				if (this.World.Statistics.getFlags().getAsInt("ArenaRegularFightsWon") > 0 && this.World.Statistics.getFlags().getAsInt("ArenaRegularFightsWon") % 5 == 0)
@@ -339,7 +339,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗一名剑术大师和%amount%名掠袭者";
 					}
 
-					this.Text += "%SPEECH_ON%他们在他的名字旁边标上了一颗星，这是盖尔德的标志。这意味着他的道路是镀金的。你需要知道的是，他是一个剑术大师。你可能会觉得他是一位年长者，但你不会是第一个我这样告诉的人，明白吗？愿你的道路像镀金一样，因为这位剑术大师的道路肯定是如此。%SPEECH_OFF%";
+					this.Text += "%SPEECH_ON%他们在他的名字旁边标上了一颗星，镀金者的标志。这意味着他的道路是镀金的。你需要知道的是，他是一位剑术大师。你可能会对他是一位年长者感到心宽，但你不是我第一个这样告知的人，明白吗？愿你的道路像镀金一样，因为这位剑术大师的道路肯定是如此。%SPEECH_OFF%";
 				}
 				else if (this.Flags.get("IsHedgeKnight"))
 				{
@@ -550,7 +550,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "让我们给观众们呐喊的理由！",
+					Text = "让我们给观众们来点欢呼的理由！",
 					function getResult()
 					{
 						local p = this.Const.Tactical.CombatInfo.getClone();
@@ -970,7 +970,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Failure2",
 			Title = "在竞技场",
-			Text = "{[img]gfx/ui/events/event_155.png[/img]你的角斗比赛的时间已经到了，但你没有出现在那里。也许出现了更重要的事情，或者你只是像懦夫一样躲起来了。无论哪种情况，你的声誉都会因此受损。",
+			Text = "{[img]gfx/ui/events/event_155.png[/img]你的角斗比赛的时间已经到了，但你没有出现在那里。也许出现了更重要的事情，或者你只是像懦夫一样躲起来了。不管怎样，你的声誉都会因此受损。",
 			Image = "",
 			Characters = [],
 			List = [],
