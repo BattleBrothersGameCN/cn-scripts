@@ -369,7 +369,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗一名剑舞者和%amount%名游牧民";
 					}
 
-					this.Text += "竞技场队长举起一张卷轴，用钩手轻轻叩了叩。%SPEECH_ON%大名鼎鼎的刀蝶族正式登场。也许长得有点娘，但能获得“刀蝶”称号的人必须像风一样娴熟地舞动刀剑。当然，舞蹈技巧只是额外加分，但他们在这方面也毫不逊色。%SPEECH_OFF%";
+					this.Text += "竞技场主管举起一张卷轴，用钩手叩了叩。%SPEECH_ON%这一轮登场的将是来自游牧部族的刀锋舞者。你也许觉得他这副模样是言过其实，但只有挥舞起刀剑来都像鸟儿乘风一样自然的人，才能获得“刀锋舞者”的头衔。当然，舞蹈技巧只是额外加分，可他们在这方面都毫不逊色。%SPEECH_OFF%";
 				}
 				else if (this.Flags.get("IsSandGolems"))
 				{
@@ -421,7 +421,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					this.Flags.set("Number", this.Math.max(2, this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Gladiator, baseDifficulty)));
 					this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗%amount%名角斗士";
-					this.Text += "%SPEECH_ON%嗯，呵呵，吉尔德肯定有幽默感。你将面对%number%名角斗士。但坦白说，我是这么对他们说的。而且我每天都这么说。明白了吗？你应该尽你的能力做好准备。%SPEECH_OFF%";
+					this.Text += "%SPEECH_ON%哦，呵呵，镀金者肯定有幽默感。你将面对%number%名角斗士。愿你走在金光大道上，但坦白说，我对他们也是这么说的。而且我每天都这么说。明白了吗？你应该尽你的能力做好准备。%SPEECH_OFF%";
 				}
 				else if (this.Flags.get("IsSpiders"))
 				{
