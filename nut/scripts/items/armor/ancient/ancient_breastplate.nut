@@ -5,7 +5,7 @@ this.ancient_breastplate <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.ancient_breastplate";
 		this.m.Name = "古代胸甲";
-		this.m.Description = "一件已经褪色的厚实的古代护胸甲。";
+		this.m.Description = "一件厚实的古代护胸甲，金属的光泽已经褪去。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
