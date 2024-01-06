@@ -5,7 +5,7 @@ this.terrified_villagers_situation <- this.inherit("scripts/entity/world/settlem
 		this.situation.create();
 		this.m.ID = "situation.terrified_villagers";
 		this.m.Name = "吓坏了的村民";
-		this.m.Description = "这里的村民对未知的恐怖感到恐惧。街上潜在的新兵越来越少，人们对陌生人的态度也越来越差。";
+		this.m.Description = "这里的村民对未知的恐怖感到恐惧。有意被收编的人少之又少，讨价还价更是不受欢迎。";
 		this.m.Icon = "ui/settlement_status/settlement_effect_09.png";
 		this.m.Rumors = [
 			"死人并不是真的死了，有时候他们会回来缠着活人！你不相信我？你自己去%settlement%看看吧！",

@@ -8,8 +8,8 @@ this.visit_settlements_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.m.ButtonText = "我知道你们现在闲得发慌，而且我们还得宣传\n咱们的战团。让我们到处拜访每一处定居点！";
 		this.m.UIText = "拜访每一座城镇与城堡";
 		this.m.TooltipText = "拜访每一座村落，城镇，城堡来了解他们的商品与服务设施，并且推广战团。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_16.png[/img]你很快发现斯卡德尔（注：古代北欧诗人）所唱的旅行热情并不像他们说的那样普遍。你决定让战团开拓视野，但是这项决定却引起了不满，人们开始抱怨强行行军和辗转夜路。不过并不是所有人都参与抱怨。%SPEECH_ON%如果一天的行军或一夜的雨水让你筋疲力尽，你如何面对兽人的攻击？%SPEECH_OFF%%sergeantbrother%问道，只得到了一个尖刻的回答。%SPEECH_ON%保持干燥和警觉。%SPEECH_OFF%你催促他们前进，并在每个村庄和城镇鼓舞士气，他们将这个请求牢记在心，并参与打斗，昏倒在镇广场上，威胁商人，骚扰村庄的女孩。无论这些穷苦的商人和农民怎么看待你的战团，至少他们不会很快忘记你！探索了地图的边缘后，%companyname%的名字更广为人知，你对这片土地的了解也更深入了。";
-		this.m.SuccessButtonText = "记住咱们的名字，“%companyname%”！";
+		this.m.SuccessText = "[img]gfx/ui/events/event_16.png[/img]你很快发现斯卡德尔（注：古代北欧诗人）所唱的旅行热情并不像他们说的那样普遍。你决定让战团开拓视野，但是这项决定却引起了不满，人们开始抱怨强行行军和辗转夜路。不过并不是所有人都参与抱怨。%SPEECH_ON%如果一天的行军或一夜的雨水就能让你筋疲力尽，你如何面对兽人的攻击？%SPEECH_OFF%%sergeantbrother%问道，只得到了一个尖刻的回答。%SPEECH_ON%保持干燥和警觉。%SPEECH_OFF%你催促他们前进，并在每个村庄和城镇散播战团的名声，他们将这个请求牢记在心，参与打斗，在镇广场上晕倒，威胁商人，骚扰村庄的女孩。无论这些倒霉的商人和农民怎么看待你的战团，至少他们不会很快忘记你！探索了地图的边缘后，%companyname%的名字更广为人知，你对这片土地的了解也更深入了。";
+		this.m.SuccessButtonText = "让他们记住咱们的名字，“%companyname%”！";
 	}
 
 	function getTooltipText()

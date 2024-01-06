@@ -9,7 +9,7 @@ this.have_all_provisions_ambition <- this.inherit("scripts/ambitions/ambition", 
 		this.m.RewardTooltip = "能大大改善你手下的情绪。";
 		this.m.UIText = "拥有每一种食物类型";
 		this.m.TooltipText = "仓库中拥有每一种食物类型来举办一场盛宴。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_61.png[/img]你花了大量的人力去追赶食物供给者和与农夫讨价还价，然后收集了一系列食物，即使是最疲惫的贵族也会注意到。 储藏室已经满了，你可以为 %companyname% 举办一场盛宴，请每个人都吃得饱饱的。 你的兄弟们不要浪费时间。 他们举止粗俗，却有胃口。%randombrother% 利用这个机会分享他对肉类的知识%SPEECH_ON%这只野兽死的时候心里充满了喜悦，这就是为什么它如此温柔。%SPEECH_OFF%令他的战友们钦佩的是，%strongest_brother% 打了个雷鸣般的嗝。%SPEECH_ON%我不好意思这么说，但我接下来只能继续喝水，不能再喝酒了。%SPEECH_OFF%在这之后，没有太多的谈话了，但油腻的胡子和饱满的肚子保证了他们会在下次跟你见面时心情愉快。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_61.png[/img]花大力气奔走在粮商与农夫之间，你收集到了整日山珍海味的贵族也会注目的食物。 储藏室已经满了，你随即为 %companyname% 举办一场盛宴，请兄弟们吃个够。 你的兄弟们立即投入‘战斗’。 礼仪里缺了的就在肚子里补上。%randombrother% 利用这个机会分享他对肉类的知识%SPEECH_ON%这只野兽死的时候心里充满了喜悦，这就是为什么它如此嫩滑。%SPEECH_OFF%令他的战友们钦佩的是，%strongest_brother% 打了个雷鸣般的嗝。%SPEECH_ON%我不好意思这么说，但我接下来只能喝水顺气，喝不下再多酒了。%SPEECH_OFF%在这之后，没有太多的谈话了，但油腻的胡子和饱满的肚子保证了他们会在下次跟你见面时心情愉快。";
 		this.m.SuccessButtonText = "这是你们应得的。";
 	}
 

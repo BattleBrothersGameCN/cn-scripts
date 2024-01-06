@@ -36,7 +36,7 @@ this.web_effect <- this.inherit("scripts/skills/skill", {
 				id = 13,
 				type = "text",
 				icon = "ui/icons/direct_damage.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]所受来自蛛魔的攻击将所造成两倍伤害，且忽视护甲[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]蛛魔对此角色造成的忽略护甲伤害翻倍[/color]"
 			},
 			{
 				id = 7,
