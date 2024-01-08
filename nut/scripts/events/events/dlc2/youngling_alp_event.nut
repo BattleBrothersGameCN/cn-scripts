@@ -12,7 +12,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_33.png[/img]{%callbrother%跑进你的帐篷里，说有东西在监视营地。你走到外面看到远处有一个轮廓，躲在灌木和树枝后面。它发出嘶嘶声，你知道它在盯着什么，否则它不会发出这样的声音。它的手臂又长又细，末端是爪子。你拿了一把火把，向野兽扔去。火把着地，向外溅出一片橙色的光芒，野兽尖叫着逃离火花的云团。最后你看到的是那张满是尖牙的嘴渐渐消失在黑暗中。%SPEECH_ON%我想它是个鬼压床，指挥官。据我们所知，它独自一人。%SPEECH_OFF%你问佣兵是否有预知能力。他耸耸肩。%SPEECH_ON%是的，有一些，但我也在喝酒，所以可能有误。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_33.png[/img]{%callbrother%跑进你的帐篷里，说有东西在监视营地。你走到外面看到远处有一个轮廓，躲在灌木和树枝后面。它发出嘶嘶声，你知道它在盯着什么，否则它不会发出这样的声音。它的手臂又长又细，末端是爪子。你拿了一把火把，向野兽扔去。火把着地，向外溅出一片橙色的光芒，野兽尖叫着逃离火花的云团。最后你看到的是那张满是尖牙的嘴渐渐消失在黑暗中。%SPEECH_ON%我想它是个梦魔，指挥官。据我们所知，就它一个。%SPEECH_OFF%你问佣兵是否有出现过幻觉。他耸耸肩。%SPEECH_ON%是的，有一些，但我也在喝酒，所以可能有误。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -26,7 +26,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "忽视它。",
+					Text = "别管它。",
 					function getResult( _event )
 					{
 						return "C";
@@ -66,7 +66,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_122.png[/img]{这位地精可能还很年轻并且孤身一人。即使是怪物，也需要通过努力工作来成为真正可怕的野兽，但这一只看起来还未如此。你派了一对雇佣兵去杀死这只野兽。他们在黑暗中逐渐逼近。你看到他们在埋伏中崛起，然后听到了一阵嘈杂的声音和尖叫，接着是一声更不像人声的尖叫。现在哭喊的是一个人。有人在说话，声音很轻。很长很长时间的安静。然后他们俩回来了。一个人捂着头好像被一阵剧痛折磨了一样，另一个人看着你点了点头。%SPEECH_ON%我们杀死了它，并且，嗯，我想我们需要躺下休息一下。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_122.png[/img]{这位梦魔可能还很年轻并且孤身一人。即使是怪物，也需要通过努力工作来成为真正可怕的野兽，但这一只看起来还未如此。你派了一对雇佣兵去杀死这只野兽。他们在黑暗中逐渐逼近。你看到他们在埋伏中崛起，然后听到了一阵嘈杂的声音和尖叫，接着是一声更不像人声的尖叫。现在哭喊的是一个人。有人在说话，声音很轻。很长很长时间的安静。然后他们俩回来了。一个人捂着头好像被一阵剧痛折磨了一样，另一个人看着你点了点头。%SPEECH_ON%我们杀死了它，并且，嗯，我想我们需要躺下休息一下。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -124,7 +124,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_33.png[/img]{你告诉士兵们忽略那只狮鹫。如果它真的对你们构成威胁，早就已经表现出来了。相反它让你知道它的存在，无论是出于无知还是傲慢，这都不会让你困扰。然而有几个人不同意这个决定，他们整夜都在观察那只野兽。}",
+			Text = "[img]gfx/ui/events/event_33.png[/img]{你告诉士兵们忽略那只梦魔。如果它真的对你们构成威胁，早就已经表现出来了。相反它让你知道它的存在，无论是出于无知还是傲慢，这都不会让你困扰。然而有几个人不同意这个决定，他们整夜都在观察那只野兽。}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -163,7 +163,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_122.png[/img]{%beastslayer% 兽人猎手走过来。%SPEECH_ON%不危险，它只是有些困惑。我来处理它。%SPEECH_OFF%他嚼着干饼干，咕哝着把饼干放进口袋，独自一人走向黑暗。片刻后，山怪的轮廓突然消失了。几分钟后，猎手回来了，把最后一口饼干塞进嘴里。你问为什么山妖没闹腾。兽人猎手笑了。%SPEECH_ON%你说%callbrother%从你的帐篷里把你叫出来了，是吧？是啊。%callbrother%在哪儿？%SPEECH_OFF%兽人猎手指了指篝火。佣兵在那里，睡着了。沉睡着。%beastslayer%拿了另一块饼干。%SPEECH_ON%年轻的山妖还在学习如何读取你的思想。它们不擅长并且往往在尝试时引起注意。它们就像无法撬开锁的小偷，所以只能敲门。%SPEECH_OFF%有几个人听了这话，似乎被这些可怕生物的显而易见的缺陷激励了。}  ",
+			Text = "[img]gfx/ui/events/event_122.png[/img]{野兽猎手%beastslayer% 走了过来。%SPEECH_ON%不危险，它只是有些困惑。我来处理它。%SPEECH_OFF%他嚼着干饼干，咕哝着把饼干放进口袋，独自一人走向黑暗。片刻后，梦魔的轮廓突然消失了。几分钟后，猎手回来了，把最后一口饼干塞进嘴里。你问为什么梦魔没怎么反抗。野兽猎手笑了。%SPEECH_ON%你说%callbrother%从你的帐篷里把你叫出来了，是吧？是啊。%callbrother%在哪儿？%SPEECH_OFF%兽人猎手指了指篝火。佣兵在那里，睡着了。沉睡着。%beastslayer%又拿了一块饼干。%SPEECH_ON%年轻的梦魔还在学习如何读取你的思想。它们尚不擅长这样，经常会被人发现。它们就像无法撬开锁的小偷，所以只能敲门。%SPEECH_OFF%有几个人听了这话，似乎被这些可怕生物的显而易见的缺陷激励了。}  ",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -180,7 +180,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Beastslayer.getImagePath());
-				_event.m.Beastslayer.improveMood(0.500000, "派出没有经验的梦魇");
+				_event.m.Beastslayer.improveMood(0.500000, "杀死了梦魔崽子");
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )

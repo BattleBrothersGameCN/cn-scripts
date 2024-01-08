@@ -9,8 +9,8 @@ this.cultist_procession_situation <- this.inherit("scripts/entity/world/settleme
 		this.m.Icon = "ui/settlement_status/settlement_effect_37.png";
 		this.m.Rumors = [
 			"我刚看到最令人毛骨悚然的游行队伍经过 %settlement%！蒙面的人影，鞭打着自己的后背，直到他们都血淋淋的…",
-			"%settlement% 到处都是奇怪的邪教徒，他们肯定在干坏事！我得说，应该有人把女巫猎人送过去！",
-			"它醒了！沉睡的野兽即将从长达一个世纪的沉睡中醒来！去 %settlement%，我的宗教兄弟们也会告诉你的！达库尔会来的！"
+			"奇怪的邪教徒蜂拥到 %settlement% 去了，肯定不是为了干什么好事！要我说，应该有人把女巫猎人派过去！",
+			"它醒了！沉睡的野兽即将从长达几个世纪的沉睡中醒来！去 %settlement%，我虔诚的兄弟们也会这么说的！达库尔就要来了！"
 		];
 		this.m.IsStacking = false;
 		this.m.ValidDays = 2;

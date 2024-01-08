@@ -11,7 +11,7 @@ this.defeat_undead_location_ambition <- this.inherit("scripts/ambitions/ambition
 		this.m.RewardTooltip = "你将获得一件特殊的配饰，使佩戴者在抵御恐惧和精神控制效果时的决心翻倍。";
 		this.m.UIText = "摧毁亡灵营地";
 		this.m.TooltipText = "摧毁四个亡灵营地来证明战团的实力，无论是作为合同的一部分，还是通过自己发现。 你还需要在仓库中留出足够的空间来存放一个新物品。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_46.png[/img]得益于 %companyname%，%recently_destroyed% 的蹒跚怪物永远不会再威胁无辜的人。 但人类需要数天的时间、大量的饮品来应付所面临的恐怖。%SPEECH_ON%肮脏的东西如何在光天化日下显露出来的？%SPEECH_OFF%%randombrother% 问道，温和地凝视着远方。%SPEECH_ON%它直接倒塌成一堆腐烂的骨头和灰尘。 除了它的诅咒，没有什么能把它连接在一起。%SPEECH_OFF%甚至更为可怕的恐惧也在蔓延，想法来自 %fearful_brother%。%SPEECH_ON%他们在 %randomtown% 回禀我，任何一个被恐怖屠戮的好人都注定要自己从坟墓里复活，永远不能坐在众神面前。%SPEECH_OFF%部分人大声反对这一点，不是因为他们更懂，而是因为他们不希望这是真的。 在有人开始讲鬼故事之前，你下令把火堆起来。 这些人今晚可能难以入睡，但随着黎明的到来，士气会再次高涨。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_46.png[/img]得益于 %companyname%，%recently_destroyed% 的蹒跚怪物永远不会再威胁无辜的人。 但兄弟们需要数天的时间、大量的酒来摆脱所面临的恐怖。%SPEECH_ON%光天化日之下，如此亵渎的东西怎么会敢于现身？%SPEECH_OFF%%randombrother% 问道，温和地凝视着远方。%SPEECH_ON%它直接倒塌成一堆腐烂的骨头和灰尘。这些东西能维持形状，肯定是受到了诅咒。%SPEECH_OFF% %fearful_brother% 甚至产生了更深邃的恐惧。%SPEECH_ON%我在 %randomtown% 的时候听说过，任何一个被这些东西杀死的好人都注定要自己从坟墓里复活，永远不能坐在众神面前。%SPEECH_OFF%部分人大声反对这一点，不是因为他们更懂，而是因为他们不希望这是真的。 在有人开始讲鬼故事之前，你下令把火堆生起来。 这些人今晚可能难以入睡，但随着黎明的到来，士气会再次高涨。";
 		this.m.SuccessButtonText = "尽管如此，但我们又胜利了！";
 	}
 

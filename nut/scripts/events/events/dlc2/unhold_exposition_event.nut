@@ -13,7 +13,7 @@ this.unhold_exposition_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "有人应该付钱让我们照顾他们。",
+					Text = "看来会有人掏钱请我们对付这些东西。",
 					function getResult( _event )
 					{
 						return 0;
