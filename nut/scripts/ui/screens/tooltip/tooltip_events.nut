@@ -2387,7 +2387,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "始终将树和其他大型地图对象的顶部渲染为半透明，而不是仅当它们实际阻塞某些对象时。"
+						text = "始终以半透明显示树木和其他大型地图对象的顶部，反选此选项将仅在它们遮挡对象时启用此效果。"
 					}
 				];
 
@@ -2701,7 +2701,7 @@ this.tooltip_events <- {
 							id = 1,
 							type = "text",
 							icon = "ui/icons/days_wounded.png",
-							text = "将会痊愈在[color=" + this.Const.UI.Color.NegativeValue + "]" + entity.getDaysWounded() + "[/color] 天"
+							text = "将在[color=" + this.Const.UI.Color.NegativeValue + "]" + entity.getDaysWounded() + "[/color] 天内治愈"
 						});
 					}
 				}
@@ -3177,7 +3177,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "显示或隐藏游戏世界的其他方留下的足迹，以便你可以更容易地跟踪或避免它们。"
+						text = "显示或隐藏其他队伍在世界上留下的足迹，以便你追踪或躲避他们。"
 					}
 				];
 
@@ -3482,7 +3482,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "狗舍"
+						text = "训犬屋"
 					},
 					{
 						id = 2,
