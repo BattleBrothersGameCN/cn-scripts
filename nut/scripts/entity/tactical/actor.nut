@@ -1540,7 +1540,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 				this.getSkills().removeByType(this.Const.SkillType.DamageOverTime);
 				this.m.Hitpoints = this.getHitpointsMax();
 				lorekeeperPotionEffect.setSpent(true);
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "由贤者之力重生!");
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "被博学者的力量复活!");
 			}
 			else
 			{
