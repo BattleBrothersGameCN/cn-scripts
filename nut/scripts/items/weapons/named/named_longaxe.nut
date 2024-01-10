@@ -8,7 +8,7 @@ this.named_longaxe <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.m.ID = "weapon.named_longaxe";
 		this.m.NameList = this.Const.Strings.LongaxeNames;
 		this.m.Description = "在一个很长的木柄上有一个相对较薄而锋利的刀片，能在一定距离内进行毁灭性的劈砍，或者在前排后方让对手的盾牌无法使用。这把长斧肯定出自大师级工匠之手。";
-		this.m.Categories = "长柄斧，双手持";
+		this.m.Categories = "斧，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.TwoHanded;

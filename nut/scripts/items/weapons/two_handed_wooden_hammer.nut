@@ -6,7 +6,7 @@ this.two_handed_wooden_hammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.two_handed_wooden_hammer";
 		this.m.Name = "双手木槌";
 		this.m.Description = "一种需要双手持握的大型木槌。能制造毁灭性的打击，甚至能把重甲敌人锤到一边去或者锤倒在地。";
-		this.m.Categories = "长柄锤，双手持";
+		this.m.Categories = "锤，双手持";
 		this.m.IconLarge = "weapons/melee/hammer_two_handed_02.png";
 		this.m.Icon = "weapons/melee/hammer_two_handed_02_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

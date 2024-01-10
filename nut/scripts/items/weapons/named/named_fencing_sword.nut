@@ -8,7 +8,7 @@ this.named_fencing_sword <- this.inherit("scripts/items/weapons/named/named_weap
 		this.m.ID = "weapon.named_fencing_sword";
 		this.m.NameList = this.Const.Strings.FencingSwordNames;
 		this.m.Description = "制作一把既精致又柔韧的刺剑并不比挥舞它容易。制造这把武器的铁匠一定是巅峰级的大师。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;
 		this.m.IsDoubleGrippable = true;

@@ -10,7 +10,7 @@ this.named_khopesh <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.m.PrefixList = this.Const.Strings.OldWeaponPrefix;
 		this.m.UseRandomName = false;
 		this.m.Description = "一把优雅的弧形弯刀，配着华丽的手柄。像这样的武器已经遗失了几个世纪，据说可以追溯到帝国的鼎盛时期。";
-		this.m.Categories = "刀，单手持";
+		this.m.Categories = "砍刀，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;
 		this.m.IsDoubleGrippable = true;

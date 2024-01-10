@@ -10,7 +10,7 @@ this.named_goblin_falchion <- this.inherit("scripts/items/weapons/named/named_we
 		this.m.PrefixList = this.Const.Strings.GoblinWeaponPrefix;
 		this.m.UseRandomName = false;
 		this.m.Description = "由锋利的黑色岩石制成，这种歹毒的武器撕裂伤口的速度比眼睛看到的还快。一件真正了不起的作品。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;
 		this.m.IsDoubleGrippable = true;

@@ -8,7 +8,7 @@ this.named_warbrand <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.m.ID = "weapon.named_warbrand";
 		this.m.NameList = this.Const.Strings.WarbrandNames;
 		this.m.Description = "一把精心制作的双手剑的变体型号，有着长而薄的锋刃，单侧开锋且没有护手。既可用于快速挥砍，也可用于横扫打击。";
-		this.m.Categories = "长剑，双手持";
+		this.m.Categories = "剑，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.TwoHanded;

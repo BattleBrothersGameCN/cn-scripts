@@ -6,7 +6,7 @@ this.arming_sword <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.arming_sword";
 		this.m.Name = "武装剑";
 		this.m.Description = "一种易于挥砍和戳刺的轻质直剑。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/sword_02.png";
 		this.m.Icon = "weapons/melee/sword_02_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

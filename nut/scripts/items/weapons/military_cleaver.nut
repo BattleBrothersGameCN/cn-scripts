@@ -6,7 +6,7 @@ this.military_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.military_cleaver";
 		this.m.Name = "军用砍刀";
 		this.m.Description = "一把用来造成毁灭性打击的大而锋利的金属刀。";
-		this.m.Categories = "刀，单手持";
+		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/cleaver_01.png";
 		this.m.Icon = "weapons/melee/cleaver_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

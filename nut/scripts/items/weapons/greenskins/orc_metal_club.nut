@@ -6,7 +6,7 @@ this.orc_metal_club <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.orc_metal_club";
 		this.m.Name = "棍棒";
 		this.m.Description = "镶有金属板的大木棒。不是为人的手制作的。";
-		this.m.Categories = "狼牙棒, 单手持";
+		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/orc_club_02_140x70.png";
 		this.m.Icon = "weapons/melee/orc_club_02_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

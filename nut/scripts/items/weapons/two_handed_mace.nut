@@ -6,7 +6,7 @@ this.two_handed_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.two_handed_mace";
 		this.m.Name = "双手狼牙棒";
 		this.m.Description = "一种顶端有铁刺的大木棒。无论敌人穿什么样的盔甲，受到这种武器的打击会让其神志不清，陷入茫然。";
-		this.m.Categories = "狼牙棒, 双手持";
+		this.m.Categories = "骨朵, 双手持";
 		this.m.IconLarge = "weapons/melee/mace_two_handed_01.png";
 		this.m.Icon = "weapons/melee/mace_two_handed_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

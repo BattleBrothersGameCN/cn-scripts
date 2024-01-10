@@ -6,7 +6,7 @@ this.bardiche <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.bardiche";
 		this.m.Name = "月牙斧";
 		this.m.Description = "一把大斧头，较长的头部能对敌人造成毁灭性的打击。";
-		this.m.Categories = "长柄斧，双手持";
+		this.m.Categories = "斧，双手持";
 		this.m.IconLarge = "weapons/melee/bardiche_01.png";
 		this.m.Icon = "weapons/melee/bardiche_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

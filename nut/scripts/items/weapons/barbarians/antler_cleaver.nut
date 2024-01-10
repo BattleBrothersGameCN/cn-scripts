@@ -6,7 +6,7 @@ this.antler_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.antler_cleaver";
 		this.m.Name = "鹿角刀";
 		this.m.Description = "一把用开锋鹿角制作的粗糙砍刀。又钝又重，但依然危险。";
-		this.m.Categories = "刀，单手持";
+		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/wildmen_01.png";
 		this.m.Icon = "weapons/melee/wildmen_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

@@ -6,7 +6,7 @@ this.noble_sword <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.noble_sword";
 		this.m.Name = "贵族剑";
 		this.m.Description = "一把平衡性良好的双锋利刃。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/sword_03.png";
 		this.m.Icon = "weapons/melee/sword_03_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

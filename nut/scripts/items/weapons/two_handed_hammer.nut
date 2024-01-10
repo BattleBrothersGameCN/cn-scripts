@@ -6,7 +6,7 @@ this.two_handed_hammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.two_handed_hammer";
 		this.m.Name = "双手巨锤";
 		this.m.Description = "一把需要两手握持的大型沉重铁锤。虽然不够优雅，但一点也不缺乏原始的破坏力。因此它可以通过打飞或击倒来粉碎甚至是重装甲的敌人防线。";
-		this.m.Categories = "长柄锤，双手持";
+		this.m.Categories = "锤，双手持";
 		this.m.IconLarge = "weapons/melee/hammer_two_handed_01.png";
 		this.m.Icon = "weapons/melee/hammer_two_handed_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

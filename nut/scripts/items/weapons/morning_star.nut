@@ -8,7 +8,7 @@ this.morning_star <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.morning_star";
 		this.m.Name = "晨星棒";
 		this.m.Description = "一柄带有尖钉金属头的木杆，可以用来造成蛮力与穿刺结合的打击。";
-		this.m.Categories = "狼牙棒, 单手持";
+		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/morning_star_01.png";
 		this.m.Icon = "weapons/melee/morning_star_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

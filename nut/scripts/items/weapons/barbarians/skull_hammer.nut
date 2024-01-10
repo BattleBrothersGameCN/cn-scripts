@@ -6,7 +6,7 @@ this.skull_hammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.skull_hammer";
 		this.m.Name = "双手颅骨锤";
 		this.m.Description = "一把粗糙的双手金属锤，用于同时粉碎盔甲与穿戴者。";
-		this.m.Categories = "长柄锤，双手持";
+		this.m.Categories = "锤，双手持";
 		this.m.IconLarge = "weapons/melee/wildmen_07.png";
 		this.m.Icon = "weapons/melee/wildmen_07_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

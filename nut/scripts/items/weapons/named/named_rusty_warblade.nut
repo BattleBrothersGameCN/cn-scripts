@@ -11,7 +11,7 @@ this.named_rusty_warblade <- this.inherit("scripts/items/weapons/named/named_wea
 		this.m.SuffixList = this.Const.Strings.BarbarianSuffix;
 		this.m.UseRandomName = false;
 		this.m.Description = "这把巨大且制作精良的战刀上覆盖着符文和装饰品，这是北方野蛮部落的典型特征。";
-		this.m.Categories = "刀，双手持";
+		this.m.Categories = "砍刀，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.TwoHanded;

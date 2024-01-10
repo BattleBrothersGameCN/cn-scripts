@@ -6,7 +6,7 @@ this.fighting_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.fighting_axe";
 		this.m.Name = "战斧";
 		this.m.Description = "为对抗重装敌人而设计的斧子，相当坚固。";
-		this.m.Categories = "短斧，单手持";
+		this.m.Categories = "斧，单手持";
 		this.m.IconLarge = "weapons/melee/axe_03.png";
 		this.m.Icon = "weapons/melee/axe_03_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

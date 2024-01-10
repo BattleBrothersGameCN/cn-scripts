@@ -18,7 +18,7 @@ this.crossbow <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.crossbow";
 		this.m.Name = "弩";
 		this.m.Description = "一种可以在中等距离上射击弩矢的拉杆式弩。 即使是在门外汉的手上也极为有效，但需要几乎整回合的时间来重新装载。";
-		this.m.Categories = "十字弩, 双手持";
+		this.m.Categories = "弩, 双手持";
 		this.m.IconLarge = "weapons/ranged/crossbow_01.png";
 		this.m.Icon = "weapons/ranged/crossbow_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

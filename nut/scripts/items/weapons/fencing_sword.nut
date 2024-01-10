@@ -6,7 +6,7 @@ this.fencing_sword <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.fencing_sword";
 		this.m.Name = "刺剑";
 		this.m.Description = "轻柔而高雅的利刃，偏向迅捷而灵活的战斗风格。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/sword_fencing_01.png";
 		this.m.Icon = "weapons/melee/sword_fencing_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

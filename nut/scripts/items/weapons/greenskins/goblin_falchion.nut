@@ -6,7 +6,7 @@ this.goblin_falchion <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.goblin_falchion";
 		this.m.Name = "残暴弯形剑";
 		this.m.Description = "一种用于切割的轻型地精弯形剑。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/goblin_weapon_02.png";
 		this.m.Icon = "weapons/melee/goblin_weapon_02_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

@@ -6,7 +6,7 @@ this.falchion <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.falchion";
 		this.m.Name = "弯形大刀";
 		this.m.Description = "一种弯曲的剑，最适合砍杀没有装甲的对手。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/sword_04.png";
 		this.m.Icon = "weapons/melee/sword_04_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

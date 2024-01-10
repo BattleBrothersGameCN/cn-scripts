@@ -40,7 +40,7 @@ this.minstrel_follower <- this.inherit("scripts/retinue/follower", {
 			}
 		}
 
-		this.m.Requirements[0].Text = "访问了" + settlementsVisited + "/" + maxSettlements + "定居点";
+		this.m.Requirements[0].Text = "访问了" + settlementsVisited + "/" + maxSettlements + "处定居点";
 
 		if (settlementsVisited >= maxSettlements)
 		{
