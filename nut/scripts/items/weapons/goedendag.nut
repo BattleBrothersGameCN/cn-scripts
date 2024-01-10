@@ -6,7 +6,7 @@ this.goedendag <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.goedendag";
 		this.m.Name = "日安棒";
 		this.m.Description = "一根顶端有尖钉的金属加固棍棒。可用于刺击敌人，或者击打他们至屈服。";
-		this.m.Categories = "长矛/狼牙棒，双手持";
+		this.m.Categories = "矛/骨朵，双手持";
 		this.m.IconLarge = "weapons/melee/goedendag_01.png";
 		this.m.Icon = "weapons/melee/goedendag_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

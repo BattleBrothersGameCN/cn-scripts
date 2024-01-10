@@ -692,7 +692,7 @@ gt.Const.Strings.MasterArcherNames <- [
 gt.Const.Strings.OathbringerNames <- [
 	"守誓者",
 	"誓约使者·%randomname%",
-	"安瑟姆的锤子",
+	"安瑟姆之锤",
 	"安瑟姆之盾",
 	"安瑟姆之剑",
 	"安瑟姆的冒名顶替(Anselm\'s Stolen Valor)",

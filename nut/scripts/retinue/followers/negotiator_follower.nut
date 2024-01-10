@@ -35,7 +35,7 @@ this.negotiator_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "完成了。" + this.Math.min(15, this.World.Contracts.getContractsFinished()) + "/15 合同";
+		this.m.Requirements[0].Text = "完成" + this.Math.min(15, this.World.Contracts.getContractsFinished()) + "/15 个合同";
 
 		if (this.World.Contracts.getContractsFinished() >= 15)
 		{

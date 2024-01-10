@@ -8,7 +8,7 @@ this.light_southern_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.light_southern_mace";
 		this.m.Name = "轻型南方狼牙棒";
 		this.m.Description = "一种金属棒，有延伸的凸缘以增加对抗装甲的效力。";
-		this.m.Categories = "狼牙棒, 单手持";
+		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/light_southern_mace_01.png";
 		this.m.Icon = "weapons/melee/light_southern_mace_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

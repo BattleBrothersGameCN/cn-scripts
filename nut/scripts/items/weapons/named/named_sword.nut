@@ -8,7 +8,7 @@ this.named_sword <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.m.ID = "weapon.named_sword";
 		this.m.NameList = this.Const.Strings.SwordNames;
 		this.m.Description = "一把平衡性良好的双锋利刃。像这样精心制作的武器很难找到。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;
 		this.m.IsDoubleGrippable = true;

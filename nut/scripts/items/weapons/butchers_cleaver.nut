@@ -6,7 +6,7 @@ this.butchers_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.butchers_cleaver";
 		this.m.Name = "屠夫切肉刀";
 		this.m.Description = "一种有厚的矩形刀片的刀具，用来劈砍肉和骨头。";
-		this.m.Categories = "刀，单手持";
+		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/cleaver_02.png";
 		this.m.Icon = "weapons/melee/cleaver_02_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

@@ -17,8 +17,8 @@ this.heavy_crossbow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.heavy_crossbow";
 		this.m.Name = "重弩";
-		this.m.Description = "一把有转轴的重型弩，可以在中等距离射击弩矢，即使对重装甲目标也非常有效。 需要几乎整回合的时间来重新装弹。";
-		this.m.Categories = "十字弩, 双手持";
+		this.m.Description = "一把有曲柄绞盘的重型弩，可以在中等距离射击弩矢，即使对重装甲目标也非常有效。 需要几乎整回合的时间来重新装弹。";
+		this.m.Categories = "弩, 双手持";
 		this.m.IconLarge = "weapons/ranged/crossbow_03.png";
 		this.m.Icon = "weapons/ranged/crossbow_03_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

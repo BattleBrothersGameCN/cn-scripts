@@ -5,7 +5,7 @@ this.hooked_blade <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.hooked_blade";
 		this.m.Name = "钩刃";
-		this.m.Description = "这是一种适合在战斗中使用的农具，长柄上有一个钩状的刀片，可以在一定距离内打击和拉近目标。";
+		this.m.Description = "这是一种为战斗改装的农具，长柄上有一个钩状的刀片，可以在一定距离内打击和拉近目标。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.IconLarge = "weapons/melee/hooked_blade_01.png";
 		this.m.Icon = "weapons/melee/hooked_blade_01_70x70.png";

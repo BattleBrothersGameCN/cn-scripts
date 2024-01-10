@@ -8,7 +8,7 @@ this.winged_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.winged_mace";
 		this.m.Name = "飞翼杖";
 		this.m.Description = "一种全金属的棒槌，上面附有锋刃。";
-		this.m.Categories = "狼牙棒, 单手持";
+		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/mace_01.png";
 		this.m.Icon = "weapons/melee/mace_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

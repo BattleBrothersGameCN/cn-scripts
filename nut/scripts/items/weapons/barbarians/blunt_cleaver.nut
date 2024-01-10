@@ -6,7 +6,7 @@ this.blunt_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.blunt_cleaver";
 		this.m.Name = "粗钝砍刀";
 		this.m.Description = "这把砍刀又重又不锋利，但仍然能够造成可怕的伤口。";
-		this.m.Categories = "刀，单手持";
+		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/wildmen_04.png";
 		this.m.Icon = "weapons/melee/wildmen_04_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

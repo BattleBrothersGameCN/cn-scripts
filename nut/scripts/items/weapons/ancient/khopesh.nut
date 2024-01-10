@@ -6,7 +6,7 @@ this.khopesh <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.khopesh";
 		this.m.Name = "镰弯刀";
 		this.m.Description = "一柄古老的，带有奇怪装饰的长柄弯刀。它的形状使得它对抗护甲特别有效。";
-		this.m.Categories = "刀，单手持";
+		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/kopesh_01.png";
 		this.m.Icon = "weapons/melee/kopesh_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

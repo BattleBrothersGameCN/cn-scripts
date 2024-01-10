@@ -20,7 +20,7 @@ this.named_crossbow <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.m.ID = "weapon.named_crossbow";
 		this.m.NameList = this.Const.Strings.CrossbowNames;
 		this.m.Description = "一把可以在中等距离上射击弩矢的拉杆式弩。即使是在门外汉的手上也极为有效，但需要几乎整回合的时间来重新装载。平衡良好且弩弦强韧，这把弩绝对是大师级工匠的杰作。";
-		this.m.Categories = "十字弩, 双手持";
+		this.m.Categories = "弩, 双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.RangedWeapon | this.Const.Items.ItemType.Defensive;

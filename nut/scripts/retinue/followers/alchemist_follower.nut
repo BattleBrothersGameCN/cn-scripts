@@ -9,7 +9,7 @@ this.alchemist_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Image = "ui/campfire/alchemist_01";
 		this.m.Cost = 2500;
 		this.m.Effects = [
-			"有25%的几率不消耗你使用的任何工艺组件",
+			"有25%的几率不消耗你使用的原料",
 			"解锁“蛇油”配方，通过制作各种低层组件来赚钱"
 		];
 		this.m.Requirements = [
@@ -31,7 +31,7 @@ this.alchemist_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "在剥制屋里制造 " + this.Math.min(15, this.World.Statistics.getFlags().getAsInt("ItemsCrafted")) + "/15 件物品在剥制屋";
+		this.m.Requirements[0].Text = "在剥制屋里制造 " + this.Math.min(15, this.World.Statistics.getFlags().getAsInt("ItemsCrafted")) + "/15 件物品";
 
 		if (this.World.Statistics.getFlags().getAsInt("ItemsCrafted") >= 15)
 		{

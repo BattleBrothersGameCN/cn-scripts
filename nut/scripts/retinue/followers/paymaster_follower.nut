@@ -33,7 +33,7 @@ this.paymaster_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "有一个花名册的" + this.Math.min(16, this.World.getPlayerRoster().getSize()) + "/16位队员";
+		this.m.Requirements[0].Text = "有" + this.Math.min(16, this.World.getPlayerRoster().getSize()) + "/16位队员登记在册";
 
 		if (this.World.getPlayerRoster().getSize() >= 16)
 		{

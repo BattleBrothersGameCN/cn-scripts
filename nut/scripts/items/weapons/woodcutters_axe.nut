@@ -6,7 +6,7 @@ this.woodcutters_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.woodcutters_axe";
 		this.m.Name = "伐木斧";
 		this.m.Description = "一柄长长的双手斧，每一次挥动都异常沉重。一般是双手握持着它来砍伐大树，但用来砍人应该也不错。";
-		this.m.Categories = "长柄斧，双手持";
+		this.m.Categories = "斧，双手持";
 		this.m.IconLarge = "weapons/melee/axe_two_handed_02.png";
 		this.m.Icon = "weapons/melee/axe_two_handed_02_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

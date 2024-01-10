@@ -8,7 +8,7 @@ this.named_bardiche <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.m.ID = "weapon.named_bardiche";
 		this.m.NameList = this.Const.Strings.AxeNames;
 		this.m.Description = "这把由稀有合金制成的重型月牙斧比同类武器要优秀得多。";
-		this.m.Categories = "长柄斧，双手持";
+		this.m.Categories = "斧，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.TwoHanded;

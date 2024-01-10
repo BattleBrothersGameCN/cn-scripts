@@ -5,12 +5,12 @@ this.scavenger_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.scavenger";
 		this.m.Name = "拾荒者";
-		this.m.Description = "无论是你某个伙计的儿子，还是你拽进来的流浪儿，拾荒者都会从每一个战场上收集零碎的东西。";
+		this.m.Description = "无论是你某个伙计的儿子，还是你拽进来的野孩子，拾荒者通过从战场上收集零零碎碎拥有了一席之地。";
 		this.m.Image = "ui/campfire/scavenger_01";
 		this.m.Cost = 3000;
 		this.m.Effects = [
 			"回收一部分你在战斗中使用的弹药",
-			"从战斗中被你摧毁的每一件盔甲中回收工具和补给"
+			"从战斗中你摧毁的每一件盔甲中回收工具和补给"
 		];
 		this.m.Requirements = [
 			{

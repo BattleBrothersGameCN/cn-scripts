@@ -7,7 +7,7 @@ this.lute <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.lute";
 		this.m.Name = "鲁特琴";
-		this.m.Description = "一种乐器，适合右手演奏，拨动它的弦能够发出令人愉快的声音（砸在敌人身体上发出的声音同样令人愉快）。";
+		this.m.Description = "一种乐器，在合适的人手里，拨动它的弦能够发出令人愉快的声音（砸在敌人身体上发出的声音同样令人愉快）。";
 		this.m.Categories = "乐器, 双手持";
 		this.m.IconLarge = "weapons/melee/lute_01.png";
 		this.m.Icon = "weapons/melee/lute_01_70x70.png";

@@ -6,7 +6,7 @@ this.crude_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.crude_axe";
 		this.m.Name = "粗制斧";
 		this.m.Description = "一把制作粗糙的斧头，沉重且带有锯齿。";
-		this.m.Categories = "短斧，单手持";
+		this.m.Categories = "斧，单手持";
 		this.m.IconLarge = "weapons/melee/wildmen_05.png";
 		this.m.Icon = "weapons/melee/wildmen_05_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

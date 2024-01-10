@@ -10,7 +10,7 @@ this.named_shamshir <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.m.PrefixList = this.Const.Strings.SouthernPrefix;
 		this.m.SuffixList = this.Const.Strings.SouthernSuffix;
 		this.m.Description = "在这里，一件狮尾弯刀已经是一件精致而奇特的武器了，但这件作品的质量异常的好。 它会像切瓜一样轻易地切开肉和骨头。";
-		this.m.Categories = "短剑，单手持";
+		this.m.Categories = "剑，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;
 		this.m.IsDoubleGrippable = true;

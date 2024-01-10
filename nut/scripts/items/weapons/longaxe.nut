@@ -6,7 +6,7 @@ this.longaxe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.longaxe";
 		this.m.Name = "长斧";
 		this.m.Description = "在一个很长的木柄上有一个相对较薄而锋利的刀片，能在一定距离内进行毁灭性的劈砍，或者在前排后方让对手的盾牌无法使用。";
-		this.m.Categories = "长柄斧，双手持";
+		this.m.Categories = "斧，双手持";
 		this.m.IconLarge = "weapons/melee/longaxe_01.png";
 		this.m.Icon = "weapons/melee/longaxe_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

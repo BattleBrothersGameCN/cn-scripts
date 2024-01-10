@@ -8,7 +8,7 @@ this.nomad_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.nomad_mace";
 		this.m.Name = "游牧狼牙棒";
 		this.m.Description = "一根有着金属头的简单木棒。像这样的武器在沙漠游牧民中很流行。";
-		this.m.Categories = "狼牙棒, 单手持";
+		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/wooden_nomad_mace_01.png";
 		this.m.Icon = "weapons/melee/wooden_nomad_mace_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

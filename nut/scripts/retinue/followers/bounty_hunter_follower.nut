@@ -33,7 +33,7 @@ this.bounty_hunter_follower <- this.inherit("scripts/retinue/follower", {
 	function onEvaluate()
 	{
 		local namedItems = this.getNumberOfNamedItems();
-		this.m.Requirements[0].Text = "拥有" + this.Math.min(3, namedItems) + "/3件命名或传说物品";
+		this.m.Requirements[0].Text = "拥有" + this.Math.min(3, namedItems) + "/3件著名或传说物品";
 
 		if (namedItems >= 3)
 		{

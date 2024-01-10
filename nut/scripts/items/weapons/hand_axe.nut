@@ -6,7 +6,7 @@ this.hand_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.hand_axe";
 		this.m.Name = "手斧";
 		this.m.Description = "一把带有中等长度手柄和精炼斧首的单手斧。";
-		this.m.Categories = "短斧，单手持";
+		this.m.Categories = "斧，单手持";
 		this.m.IconLarge = "weapons/melee/axe_02.png";
 		this.m.Icon = "weapons/melee/axe_02_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;

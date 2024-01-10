@@ -1315,14 +1315,14 @@ gt.Const.Strings.PerkName <- {
 	SpecBow = "弓精通",
 	SpecCrossbow = "弩和火器精通",
 	SpecThrowing = "投掷精通",
-	SpecAxe = "斧头精通",
+	SpecAxe = "斧精通",
 	SpecCleaver = "砍刀精通",
 	SpecDagger = "匕首精通",
-	SpecSword = "剑术精通",
+	SpecSword = "剑精通",
 	SpecSpear = "矛精通",
-	SpecPolearm = "掌握长柄武器",
-	SpecHammer = "锤子掌握",
-	SpecMace = "权杖精通",
+	SpecPolearm = "长柄精通",
+	SpecHammer = "锤精通",
+	SpecMace = "骨朵精通",
 	SpecFlail = "链枷掌握"
 };
 gt.Const.Strings.PerkDescription <- {

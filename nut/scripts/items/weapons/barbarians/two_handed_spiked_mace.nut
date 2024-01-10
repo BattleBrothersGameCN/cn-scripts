@@ -6,7 +6,7 @@ this.two_handed_spiked_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ID = "weapon.two_handed_spiked_mace";
 		this.m.Name = "双手尖刺棒";
 		this.m.Description = "一个装饰有人头骨的大棒子。无论敌人穿什么样的盔甲，受到这种武器的打击会让其神志不清，陷入茫然。";
-		this.m.Categories = "狼牙棒, 双手持";
+		this.m.Categories = "骨朵, 双手持";
 		this.m.IconLarge = "weapons/melee/wildmen_06.png";
 		this.m.Icon = "weapons/melee/wildmen_06_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
