@@ -6,7 +6,7 @@ this.brave_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.brave";
 		this.m.Name = "勇敢";
 		this.m.Icon = "ui/traits/trait_icon_37.png";
-		this.m.Description = "继续前进。这个角色将勇敢地冒险进入未知领域。";
+		this.m.Description = "前进就是了。这个角色将勇敢地冒险进入未知领域。";
 		this.m.Titles = [
 			"勇士(the Brave)",
 			"英雄(the Hero)"

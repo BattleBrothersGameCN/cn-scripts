@@ -6,7 +6,7 @@ this.cultist_prophet_trait <- this.inherit("scripts/skills/traits/character_trai
 		this.m.ID = "trait.cultist_prophet";
 		this.m.Name = "达库尔先知";
 		this.m.Icon = "ui/traits/trait_icon_69.png";
-		this.m.Description = "这个人物是一个达库尔的先知，是他意志的血肉信道、传达其真理的尘世之声。 其他的信徒听取他的每一句话，在他的训谕下感受到超越他们身体极限的必要。";
+		this.m.Description = "这个人物是一名达库尔先知，是其意志的血肉信道、其真理的尘世之声。 其他的信徒听取他的每一句话，在他的强令威压下超越他们身体的极限。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 

@@ -4,7 +4,7 @@ this.athletic_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.athletic";
-		this.m.Name = "身强体壮";
+		this.m.Name = "健壮";
 		this.m.Icon = "ui/traits/trait_icon_21.png";
 		this.m.Description = "这个角色身体健康壮实。";
 		this.m.Titles = [];
@@ -34,7 +34,7 @@ this.athletic_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]-2[/color] 疲劳值增量（每行走一格）"
+				text = "走过一格的疲劳值积累减少[color=" + this.Const.UI.Color.PositiveValue + "]2[/color]"
 			}
 		];
 	}

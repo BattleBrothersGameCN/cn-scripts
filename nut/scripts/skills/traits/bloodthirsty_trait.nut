@@ -10,7 +10,7 @@ this.bloodthirsty_trait <- this.inherit("scripts/skills/traits/character_trait",
 		this.m.Titles = [
 			"屠夫",
 			"疯子(the Mad)",
-			"残酷的"
+			"残酷者"
 		];
 		this.m.Excluded = [
 			"trait.weasel",

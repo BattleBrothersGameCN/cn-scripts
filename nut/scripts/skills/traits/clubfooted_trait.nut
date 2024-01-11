@@ -36,7 +36,7 @@ this.clubfooted_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]+2[/color] 疲劳值增量（每行走一格）"
+				text = "走过一格的疲劳值积累增加[color=" + this.Const.UI.Color.NegativeValue + "]2[/color]"
 			}
 		];
 	}

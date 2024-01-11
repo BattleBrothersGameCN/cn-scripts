@@ -76,7 +76,7 @@ this.addict_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "目前没有效果，因为在过去5天内服用了药物"
+				text = "暂不生效，过去5天内服用了药物"
 			});
 		}
 

@@ -6,7 +6,7 @@ this.fear_greenskins_trait <- this.inherit("scripts/skills/traits/character_trai
 		this.m.ID = "trait.fear_greenskins";
 		this.m.Name = "惧怕绿皮";
 		this.m.Icon = "ui/traits/trait_icon_49.png";
-		this.m.Description = "在这个角色的生活中，一些过去的事件或特别令人信服的故事让他害怕绿皮的能力，使他在战场上面对他们时不那么可靠。";
+		this.m.Description = "要么是过去的经历，要么是逼真的故事。这个角色以往的生活让他觉得绿皮锐不可当，在战场面对它们时会不太靠谱。";
 		this.m.Excluded = [
 			"trait.fearless",
 			"trait.brave",

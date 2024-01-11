@@ -4,7 +4,7 @@ this.disloyal_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.disloyal";
-		this.m.Name = "不忠诚";
+		this.m.Name = "不忠";
 		this.m.Icon = "ui/traits/trait_icon_35.png";
 		this.m.Description = "我必须把自己放在第一位！这个角色相当不忠诚，一旦你的克朗或食物用完，他会很快离开。";
 		this.m.Titles = [
