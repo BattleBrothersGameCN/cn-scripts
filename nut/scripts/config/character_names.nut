@@ -565,7 +565,7 @@ gt.Const.Strings.ExecutionerChampionTitles <- [
 	"天灾",
 	"被诅咒的人",
 	"沙巨人",
-	"镀金者被选中了",
+	"镀金者之选",
 	"山",
 	"弯刀",
 	"%randomsouthernname% 镀金者",

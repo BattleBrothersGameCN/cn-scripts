@@ -232,11 +232,11 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 		if (!this.World.Assets.isIronman())
 		{
-			this.showDialogPopup("退出到主菜单", "你确定要退出这场战斗并返回主菜单吗？\n\n在战斗中取得的任何进展都将丢失，如果可以的话在战斗开始前会自动保存。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
+			this.showDialogPopup("退出到主菜单", "你确定要退出这场战斗并返回主菜单吗？\n\n在战斗中取得的任何进展都将丢失，但战斗开始前已经进行了自动保存。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
 		}
 		else
 		{
-			this.showDialogPopup("退出并退休", "你确定你想退出这场战斗，从而失去你的铁人模式和退出你的战团？\n\n你的存档将被删除，你将无法继续。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
+			this.showDialogPopup("退出并退休", "你确定你想退出这场战斗，并因此失去你的铁人模式游戏并从战团退休吗？\n\n你的存档将被删除，你将无法继续。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
 		}
 
 		this.Cursor.setCursor(this.Const.UI.Cursor.Hand);
@@ -1137,7 +1137,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 				break;
 
 			case this.Const.Tactical.ActionState.TravelPath:
-				this.logInfo("实体正在旅行中！");
+				this.logInfo("实体正在移动中！");
 				return;
 
 			case this.Const.Tactical.ActionState.ExecuteSkill:
@@ -2428,22 +2428,22 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 		{
 		case this.Const.Tactical.CombatResult.EnemyDestroyed:
 			result.title = "胜利";
-			result.subTitle = "敌人被消灭了, 在" + rounds + "回合后" + (rounds > 1 ? "s" : "");
+			result.subTitle = "敌人被消灭了, 战斗历时" + rounds + "回合后" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.EnemyRetreated:
 			result.title = "胜利";
-			result.subTitle = "敌人撤退了, 在" + rounds + "回合后" + (rounds > 1 ? "s" : "");
+			result.subTitle = "敌人撤退了, 战斗历时" + rounds + "回合后" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.PlayerDestroyed:
 			result.title = "失败";
-			result.subTitle = "你战败了, 在" + rounds + "回合后" + (rounds > 1 ? "s" : "");
+			result.subTitle = "你战败了, 战斗历时" + rounds + "回合后" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.PlayerRetreated:
 			result.title = "撤退";
-			result.subTitle = "你撤退了, 在" + rounds + "回合后" + (rounds > 1 ? "s" : "");
+			result.subTitle = "你撤退了, 战斗历时" + rounds + "回合后" + (rounds > 1 ? "s" : "");
 
 			if (!this.isScenarioMode())
 			{

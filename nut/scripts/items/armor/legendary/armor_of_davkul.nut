@@ -5,7 +5,7 @@ this.armor_of_davkul <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.armor_of_davkul";
 		this.m.Name = "达库尔的神体";
-		this.m.Description = "一件可怕的达库尔神体，这份古老的力量不属于这世界，是由 %sacrifice% 的身体残骸塑造而成。 它永远不会破裂，而是在原地不断地再生它那伤痕累累的皮肤。";
+		this.m.Description = "达库尔(Davkul)骇人的一面，这是来自异界的古老力量，以及 %sacrifice% 身体最后的遗留和重塑。它永远不会破裂，而是在原地不断地再生它那伤痕累累的皮肤。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
@@ -32,7 +32,7 @@ this.armor_of_davkul <- this.inherit("scripts/items/armor/armor", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "回复自身 [color=" + this.Const.UI.Color.PositiveValue + "]90[/color] 点耐久(每回合)。"
+			text = "每回合回复自身 [color=" + this.Const.UI.Color.PositiveValue + "]90[/color] 点耐久。"
 		});
 		return result;
 	}

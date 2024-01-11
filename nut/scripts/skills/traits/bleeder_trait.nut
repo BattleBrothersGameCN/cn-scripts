@@ -31,7 +31,7 @@ this.bleeder_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "受到的流血伤害持续 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 额外回合"
+				text = "将受到额外 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 回合的流血伤害"
 			}
 		];
 	}

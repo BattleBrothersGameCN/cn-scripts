@@ -6,7 +6,7 @@ this.cultist_chosen_trait <- this.inherit("scripts/skills/traits/character_trait
 		this.m.ID = "trait.cultist_chosen";
 		this.m.Name = "达库尔神选者";
 		this.m.Icon = "ui/traits/trait_icon_68.png";
-		this.m.Description = "这个角色感受到了达库尔的选择，这在这个世界上是不多的。他欣然接受肉体上的痛苦和危难，因为这能使他更接近救赎，且他相信他的神会保护他，使他能够按照神的命令行事。";
+		this.m.Description = "这个角色感应到了达库尔的选择，这在这个世界上并不多见。他欣然接受肉体上的痛苦和危难，因为这能使他更接近救赎，且他相信他的神会保护他，使他能够履行他的神赋予他的使命。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 

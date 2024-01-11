@@ -6,7 +6,7 @@ this.arena_veteran_trait <- this.inherit("scripts/skills/traits/character_trait"
 		this.m.ID = "trait.arena_veteran";
 		this.m.Name = "竞技场老兵";
 		this.m.Icon = "ui/traits/trait_icon_75.png";
-		this.m.Description = "作为一个有着许多伤疤的竞技场老兵，这个角色知道如何让人群为血腥的场面欢呼。获胜的几率越低，娱乐效果越好！";
+		this.m.Description = "作为一个有着许多伤疤的竞技场老兵，这个角色知道如何让人群为血腥的场面欢呼。实力越是悬殊，娱乐效果越好！";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 
@@ -41,7 +41,7 @@ this.arena_veteran_trait <- this.inherit("scripts/skills/traits/character_trait"
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 几率在受非必死击杀且生命值归零时幸存"
+				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 几率在被非致命伤害击倒时幸存"
 			}
 		];
 	}

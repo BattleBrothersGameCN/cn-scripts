@@ -10,7 +10,7 @@ this.bright_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Titles = [
 			"快人(the Quick)",
 			"狐狸(the Fox)",
-			"捷思(the Bright)",
+			"捷思(Quickmind)",
 			"明日之星(the Bright)",
 			"智者"
 		];

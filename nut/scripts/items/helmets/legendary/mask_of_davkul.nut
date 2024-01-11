@@ -5,7 +5,7 @@ this.mask_of_davkul <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.mask_of_davkul";
 		this.m.Name = "达库尔的凝视";
-		this.m.Description = "达库尔的凝视是远古黑暗力量赐予人类的礼物，通过最难以言表的仪式与人类的皮肤和骨骼融合在一起的一顶头盔。 在未来某时，人类将与来自另一个领域的造物成为一体。 它永远不会破裂，而是在原地不断地再生它那伤痕累累的皮肤。";
+		this.m.Description = "达库尔的凝视是远古黑暗力量赐予人类的礼物，通过最难以言表的仪式与人类的皮肤和骨骼融合在一起的一顶头盔。是对未来的一瞥，一个人类将和其他世界的造物融为一体的未来。 它永远不会破裂，而是在原地不断地再生它那伤痕累累的皮肤。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;
@@ -34,7 +34,7 @@ this.mask_of_davkul <- this.inherit("scripts/items/helmets/helmet", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "回复自身 [color=" + this.Const.UI.Color.PositiveValue + "]90[/color] 点耐久(每回合)。"
+			text = "每回合回复自身 [color=" + this.Const.UI.Color.PositiveValue + "]90[/color] 点耐久。"
 		});
 		return result;
 	}

@@ -41,7 +41,7 @@ this.ailing_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "中毒效果持续时间延长 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 额外回合"
+				text = "中毒效果持续时间额外延长 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 回合"
 			}
 		];
 	}

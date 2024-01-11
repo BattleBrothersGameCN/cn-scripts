@@ -6,7 +6,7 @@ this.cultist_zealot_trait <- this.inherit("scripts/skills/traits/character_trait
 		this.m.ID = "trait.cultist_zealot";
 		this.m.Name = "达库尔狂信者";
 		this.m.Icon = "ui/traits/trait_icon_65.png";
-		this.m.Description = "这个角色是一个达库尔的狂信追随者，以至于他开始接受身体上的痛苦，因为这让他更接近救赎。";
+		this.m.Description = "这个角色是一名达库尔的狂信追随者，狂热到将接纳身体上的痛苦视为救赎之道。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 
