@@ -3,7 +3,7 @@ this.goblin_grunt_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.goblin_grunt_potion";
-		this.m.Name = "反应性腿部肌肉";
+		this.m.Name = "活化腿部肌肉";
 		this.m.Icon = "skills/status_effect_124.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_124";

@@ -144,7 +144,7 @@ this.injury <- this.inherit("scripts/skills/skill", {
 					id = 7,
 					type = "text",
 					icon = "ui/icons/warning.png",
-					text = "由于钢铁意志效果，战斗结束后才会生效"
+					text = "由于钢铁意志效果，下一场战斗结束后才会生效"
 				});
 			}
 		}
@@ -155,7 +155,7 @@ this.injury <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "hint",
 				icon = "ui/icons/warning.png",
-				text = "不会痊愈，因为你没有医疗用品"
+				text = "因缺乏医疗用品而不能痊愈"
 			});
 		}
 		else if (this.getContainer().getActor().getSkills().hasSkill("trait.oath_of_sacrifice") && this.m.IsHealingMentioned)
@@ -164,7 +164,7 @@ this.injury <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "hint",
 				icon = "ui/icons/warning.png",
-				text = "不会痊愈，因为这个角色立下了牺牲誓言"
+				text = "因立下牺牲誓言而不会痊愈"
 			});
 		}
 		else

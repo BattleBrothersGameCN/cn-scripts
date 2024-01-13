@@ -4,7 +4,7 @@ this.broken_arm_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.broken_arm";
-		this.m.Name = "手臂折断";
+		this.m.Name = "手臂骨折";
 		this.m.Description = "臂骨断裂导致几乎无法有效地使用任何武器。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_18";

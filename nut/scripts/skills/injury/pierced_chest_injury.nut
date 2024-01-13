@@ -4,7 +4,7 @@ this.pierced_chest_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.pierced_chest";
-		this.m.Name = "胸部刺伤";
+		this.m.Name = "胸部穿孔";
 		this.m.Description = "一次刺击刺穿了胸部，损伤了肌肉组织并划伤了肋骨。尽管重要器官没有被击中，但呼吸起来依旧十分痛苦。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_35";

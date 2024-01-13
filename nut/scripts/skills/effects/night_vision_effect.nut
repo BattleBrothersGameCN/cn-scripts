@@ -44,7 +44,7 @@ this.night_vision_effect <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "hint",
 				icon = "ui/icons/action_points.png",
-				text = "会在 1 场战斗之后消失"
+				text = "会在 1 场战斗之后消退"
 			}
 		];
 		return ret;

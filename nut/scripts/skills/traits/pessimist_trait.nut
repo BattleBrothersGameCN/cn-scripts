@@ -33,7 +33,7 @@ this.pessimist_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 决心，在消极士气检查时"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 决心，在负面士气检查时"
 			},
 			{
 				id = 11,

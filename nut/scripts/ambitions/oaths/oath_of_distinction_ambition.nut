@@ -10,7 +10,7 @@ this.oath_of_distinction_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{许多剑术大师都是独处的。 他们的想法是，他们不是在与前面的人战斗，而是在为中间的空间而战。 虽然你不可能理解剑术大师和佣兵在空中舞剑的细微差别，但你会意识到这一公理的核心真理。 宣誓者，虽然可敬、勤奋，但内心仍然勇敢得近乎残酷，过分自信得荒谬可笑。 超群誓言在精神上遵循了剑术大师的技艺，而宣誓者则铭记于心。 每个人都独立自主地努力证明自己，证明自己值得别人的称赞。 如果有任何无偏见的俗人碰巧在观看，那么就不可能说 %companyname% 没有作为一个精良的队伍脱颖而出。\n\n但是区别是不可避免的。 我们不能整天霸占着荣耀！ 到下一个誓言！}";
 		this.m.SuccessButtonText = "{为了小安瑟姆！ | 宣誓者万岁！ | 誓约使者去死吧！}";
 		this.m.OathName = "超群誓言";
-		this.m.OathBoonText = "你的战团成员获得 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 决心，[color=" + this.Const.UI.Color.PositiveValue + "]+3[/color] 每回合疲劳值恢复量，并造成 [color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 伤害（如果相邻格没有盟友）";
+		this.m.OathBoonText = "你的战团成员获得 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 决心，[color=" + this.Const.UI.Color.PositiveValue + "]+3[/color] 每回合疲劳值恢复量，并造成 [color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 伤害（相邻格没有盟友时）";
 		this.m.OathBurdenText = "你的人不会从盟友的击杀中获得经验。";
 	}
 

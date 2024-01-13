@@ -6,7 +6,7 @@ this.glorious_quickness_trait <- this.inherit("scripts/skills/traits/character_t
 		this.m.ID = "trait.glorious";
 		this.m.Name = "荣耀迅捷";
 		this.m.Icon = "ui/traits/trait_icon_71.png";
-		this.m.Description = "在南方的竞技场上锻造的这个角色已经打了很多仗，是迅速处理多个对手的专家。 他美妙的生活方式要求很高的薪水，但他永远不会抛弃你，也不能被解雇。 如果三个初始成员都死了，你的战役就结束了。";
+		this.m.Description = "这个角色在南方的竞技场上经历过许多战斗的锻炼，是迅速处理多个对手的专家。 他奢华的生活方式需要高薪来维持，但他永远不会抛弃你，也不能被解雇。 如果三个初始成员都死了，你的战役就结束了。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 

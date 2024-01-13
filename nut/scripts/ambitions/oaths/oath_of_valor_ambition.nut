@@ -22,7 +22,7 @@ this.oath_of_valor_ambition <- this.inherit("scripts/ambitions/oaths/oath_ambiti
 
 	function getRewardTooltip()
 	{
-		return "誓言目标: 以寡敌众赢得目标的战斗次数" + this.getBonusObjectiveProgress() + "/" + this.getBonusObjectiveGoal() + ").";
+		return "誓言目标: 以寡敌众赢得目标的战斗次数(" + this.getBonusObjectiveProgress() + "/" + this.getBonusObjectiveGoal() + ").";
 	}
 
 	function getBonusObjectiveProgress()

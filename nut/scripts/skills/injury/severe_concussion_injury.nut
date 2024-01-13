@@ -4,7 +4,7 @@ this.severe_concussion_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.severe_concussion";
-		this.m.Name = "严重脑震荡";
+		this.m.Name = "重度脑震荡";
 		this.m.Description = "严重的脑震荡使人很难集中注意力和看东西，甚至走直线。更不用说恶心，在某些情况下还有失忆。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_17";

@@ -5,7 +5,7 @@ this.injured_knee_cap_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.injured_knee_cap";
 		this.m.Name = "膝盖受伤";
-		this.m.Description = "敏感的膝盖受伤了，使得每次行动都十分疼，极大的限制了这个角色的活动性。";
+		this.m.Description = "敏感的膝盖受伤了，使得每次行动都十分痛苦，极大的限制了这个角色的活动能力。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_40";
 		this.m.Icon = "ui/injury/injury_icon_40.png";

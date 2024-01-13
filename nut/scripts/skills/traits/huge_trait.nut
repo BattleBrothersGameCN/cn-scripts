@@ -4,9 +4,9 @@ this.huge_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.huge";
-		this.m.Name = "庞大";
+		this.m.Name = "魁梧";
 		this.m.Icon = "ui/traits/trait_icon_61.png";
-		this.m.Description = "由于这个角色特别庞大且魁梧，他的攻击造成的伤害相当大，但他也是一个比大多数人更大的目标。";
+		this.m.Description = "这个角色出奇地又高又壮，造成的伤害相当可观，但他也是一个比大多数人更大的目标。";
 		this.m.Titles = [
 			"大山(The Mountain)",
 			"壮牛(the Ox)",

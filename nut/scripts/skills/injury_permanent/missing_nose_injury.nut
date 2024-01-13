@@ -4,7 +4,7 @@ this.missing_nose_injury <- this.inherit("scripts/skills/injury_permanent/perman
 	{
 		this.permanent_injury.create();
 		this.m.ID = "injury.missing_nose";
-		this.m.Name = "鼻缺失";
+		this.m.Name = "鼻缺损";
 		this.m.Description = "鼻子上只剩下一个大洞，这让这个角色很难看。";
 		this.m.Icon = "ui/injury/injury_permanent_icon_04.png";
 	}

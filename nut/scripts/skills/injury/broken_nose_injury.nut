@@ -4,8 +4,8 @@ this.broken_nose_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.broken_nose";
-		this.m.Name = "鼻梁折断";
-		this.m.Description = "钝力打断了这个角色的鼻子，使他难以正常呼吸。";
+		this.m.Name = "鼻骨骨折";
+		this.m.Description = "钝器打断了这个角色的鼻子，使他难以正常呼吸。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_22";
 		this.m.Icon = "ui/injury/injury_icon_22.png";

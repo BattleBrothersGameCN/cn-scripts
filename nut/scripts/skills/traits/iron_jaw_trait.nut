@@ -6,7 +6,7 @@ this.iron_jaw_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.iron_jaw";
 		this.m.Name = "铁颌";
 		this.m.Icon = "ui/traits/trait_icon_44.png";
-		this.m.Description = "这个角色能够摆脱那些会让一个弱者瘫痪的打击。";
+		this.m.Description = "这个角色能轻易摆脱那些能瘫痪脆弱者的打击。";
 		this.m.Titles = [
 			"铁颌(Ironjaw)",
 			"岩石(the Rock)",

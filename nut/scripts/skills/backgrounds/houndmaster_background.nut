@@ -52,7 +52,7 @@ this.houndmaster_background <- this.inherit("scripts/skills/backgrounds/characte
 				id = 14,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "这个角色释放的战犬将以自信的士气开始。"
+				text = "这个角色释放的战犬将以自信的士气加入战斗。"
 			}
 		];
 	}

@@ -22,7 +22,7 @@ this.perk_battle_forged <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "重甲专精! 装甲受到的损伤会减少，减少的百分比等于盔甲和头盔当前总护甲值之和的[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]。你的盔甲和头盔越重，受益越高。";
+		return "重甲专精! 装甲受到的损伤会减少，减少的百分比等于盔甲和头盔当前总护甲值之和的[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]。你的盔甲和头盔越厚重，受益越高。";
 	}
 
 	function getTooltip()
@@ -37,7 +37,7 @@ this.perk_battle_forged <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "只受到 [color=" + this.Const.UI.Color.PositiveValue + "]" + fm + "%[/color] 护甲伤害(对所有类型的攻击均生效)"
+				text = "只受到 [color=" + this.Const.UI.Color.PositiveValue + "]" + fm + "%[/color] 的护甲伤害(对且仅对所有攻击生效)"
 			});
 		}
 		else

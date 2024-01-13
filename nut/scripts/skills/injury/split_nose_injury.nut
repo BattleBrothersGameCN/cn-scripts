@@ -5,7 +5,7 @@ this.split_nose_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.split_nose";
 		this.m.Name = "鼻子劈裂";
-		this.m.Description = "一次差点命中的挥砍将这个角色的鼻子一分为二，使得任何呼吸的尝试都像是在练习吞咽大量血液";
+		this.m.Description = "一次差点要命的挥砍将这个角色的鼻子一分为二，使得任何呼吸的尝试都像是在练习吞咽大量血液";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_34";
 		this.m.Icon = "ui/injury/injury_icon_34.png";

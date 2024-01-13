@@ -6,7 +6,7 @@ this.old_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.old";
 		this.m.Name = "年迈";
 		this.m.Icon = "skills/status_effect_60.png";
-		this.m.Description = "这个角色最终还是老了。";
+		this.m.Description = "这个角色终究还是老了。";
 	}
 
 	function getTooltip()

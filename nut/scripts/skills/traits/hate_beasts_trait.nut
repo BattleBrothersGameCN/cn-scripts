@@ -6,7 +6,7 @@ this.hate_beasts_trait <- this.inherit("scripts/skills/traits/character_trait", 
 		this.m.ID = "trait.hate_beasts";
 		this.m.Name = "憎恨野兽";
 		this.m.Icon = "ui/traits/trait_icon_51.png";
-		this.m.Description = "这个角色生活中过去发生的一些事情激起了他对所有野兽和怪物的强烈仇恨。";
+		this.m.Description = "这个角色过去生活中的一些事情激起了他对所有野兽和怪物的强烈仇恨。";
 		this.m.Excluded = [
 			"trait.weasel",
 			"trait.craven",

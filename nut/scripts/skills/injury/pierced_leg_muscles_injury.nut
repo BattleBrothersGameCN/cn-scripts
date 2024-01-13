@@ -4,8 +4,8 @@ this.pierced_leg_muscles_injury <- this.inherit("scripts/skills/injury/injury", 
 	{
 		this.injury.create();
 		this.m.ID = "injury.pierced_leg_muscles";
-		this.m.Name = "腿部肌肉刺伤";
-		this.m.Description = "被刺穿的腿部肌肉使得进行迅速且突然的行动即便不是不可能，也会是一段痛苦的经历。";
+		this.m.Name = "腿部肌肉穿孔";
+		this.m.Description = "被刺穿的腿部肌肉使得突然快速行动即使可能，也会是一段痛苦的经历。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_11";
 		this.m.Icon = "ui/injury/injury_icon_11.png";

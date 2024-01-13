@@ -62,7 +62,7 @@ this.bandage_ally_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "移除动脉断裂、颈静脉断裂和颈部擦破"
+				text = "移除动脉断裂、颈静脉断裂和颈部划伤"
 			}
 		];
 

@@ -41,7 +41,7 @@ this.vampire_racial <- this.inherit("scripts/skills/skill", {
 				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect, actor.getPos());
 			}
 
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "恢复了" + this.Math.min(actor.getHitpointsMax() - actor.getHitpoints(), this.Math.round(_damageInflictedHitpoints * 1.000000)) + "点生命");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "恢复了" + this.Math.min(actor.getHitpointsMax() - actor.getHitpoints(), this.Math.round(_damageInflictedHitpoints * 1.000000)) + "点生命值");
 		}
 
 		actor.setHitpoints(this.Math.min(actor.getHitpointsMax(), actor.getHitpoints() + this.Math.round(_damageInflictedHitpoints * 1.000000)));

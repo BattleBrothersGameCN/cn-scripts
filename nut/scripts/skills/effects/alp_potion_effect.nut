@@ -3,7 +3,7 @@ this.alp_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.alp_potion";
-		this.m.Name = "强化眼杆细胞";
+		this.m.Name = "强化视杆细胞";
 		this.m.Icon = "skills/status_effect_147.png";
 		this.m.IconMini = "status_effect_147_mini";
 		this.m.Overlay = "status_effect_147";

@@ -4,7 +4,7 @@ this.night_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "special.night";
 		this.m.Name = "夜晚";
-		this.m.Description = "那个影子刚刚动了吗？昏暗的月光让人很难看清前方几英尺以外的地方，缩小了视野范围，对于那些在黑暗中看不见东西的人来说，使用远程武器是一个糟糕的提议。";
+		this.m.Description = "刚刚那影子是不是动了？昏暗的月光让人很难看清前方几英尺以外的地方，缩小了视野范围，对于那些在黑暗中看不见东西的人来说，使用远程武器是一个糟糕的提议。";
 		this.m.Icon = "skills/status_effect_35.png";
 		this.m.IconMini = "status_effect_35_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect | this.Const.SkillType.Special;

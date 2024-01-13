@@ -34,7 +34,7 @@ this.perk_nimble <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "只受到 [color=" + this.Const.UI.Color.PositiveValue + "]" + fm + "%[/color]生命值伤害(对所有类型的攻击均生效)"
+				text = "只受到 [color=" + this.Const.UI.Color.PositiveValue + "]" + fm + "%[/color]的生命值伤害(对且仅对所有攻击生效)"
 			});
 		}
 		else

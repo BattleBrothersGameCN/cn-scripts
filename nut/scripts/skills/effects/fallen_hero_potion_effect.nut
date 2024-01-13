@@ -3,7 +3,7 @@ this.fallen_hero_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.fallen_hero_potion";
-		this.m.Name = "反应性肌肉组织";
+		this.m.Name = "活化肌肉组织";
 		this.m.Icon = "skills/status_effect_136.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_136";

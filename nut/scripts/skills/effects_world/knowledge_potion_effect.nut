@@ -7,7 +7,7 @@ this.knowledge_potion_effect <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "effects.knowledge_potion";
 		this.m.Name = "强化学习";
-		this.m.Description = "由于一种被委婉地称为“知识药水”的热带混合体，这个角色的认知功能，特别是他的记忆和学习能力，随着他表现出紧张的滴答声的倾向而得到增强。";
+		this.m.Description = "多亏了一种被委婉地称为“知识药水”的混合物，这个角色的认知功能，特别是他的记忆和学习能力，和他表现出的紧张多动倾向一同得到了增强。";
 		this.m.Icon = "skills/status_effect_94.png";
 		this.m.Type = this.m.Type | this.Const.SkillType.StatusEffect | this.Const.SkillType.DrugEffect;
 		this.m.IsHealingMentioned = false;

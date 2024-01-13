@@ -5,7 +5,7 @@ this.cut_leg_muscles_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.cut_leg_muscles";
 		this.m.Name = "腿部肌肉割伤";
-		this.m.Description = "腿部肌肉上的一处割伤使得任何快速且突然的行动不再可能。";
+		this.m.Description = "腿部肌肉上的一处割伤剥夺了突然快速行动的可能。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_06";
 		this.m.Icon = "ui/injury/injury_icon_06.png";
