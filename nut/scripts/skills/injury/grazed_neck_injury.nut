@@ -39,7 +39,7 @@ this.grazed_neck_injury <- this.inherit("scripts/skills/injury/injury", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/health.png",
-				text = "这个角色将持续每回合失去 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 生命值"
+				text = "每个回合，这个角色将失去 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 点生命值，直到战斗结束"
 			});
 		}
 		else

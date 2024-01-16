@@ -45,7 +45,7 @@ this.acid_effect <- this.inherit("scripts/skills/skill", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/armor_head.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]20%[/color] 头部盔甲每回合都会损失"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]20%[/color] 头部护甲值损失（每回合）"
 			});
 		}
 
@@ -55,7 +55,7 @@ this.acid_effect <- this.inherit("scripts/skills/skill", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/armor_body.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]20%[/color] 身体护甲每回合都会损失"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]20%[/color] 身体护甲值损失（每回合）"
 			});
 		}
 

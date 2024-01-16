@@ -5,7 +5,7 @@ this.deep_abdominal_cut_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.deep_abdominal_cut";
 		this.m.Name = "腹部深切口";
-		this.m.Description = "腹部的一处深切口伤到了许多肌肉，使得光是走路或站直都疼，并减弱了这个角色的体质。";
+		this.m.Description = "这个角色的腹部深深的挨上了一刀，伤到了许多肌肉，光是走路或站直都疼，体质也因此下降。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_32";
 		this.m.Icon = "ui/injury/injury_icon_32.png";

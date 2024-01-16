@@ -5,7 +5,7 @@ this.fractured_skull_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.fractured_skull";
 		this.m.Name = "颅骨骨折";
-		this.m.Description = "这个角色的头骨遭受了多处骨折，大脑遭受了钝力冲击，导致肿胀和颅内压力的升高。";
+		this.m.Description = "这个角色的头骨遭受了多处骨折，大脑遭受了钝力冲击，导致水肿和颅压升高。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_05";
 		this.m.Icon = "ui/injury/injury_icon_05.png";

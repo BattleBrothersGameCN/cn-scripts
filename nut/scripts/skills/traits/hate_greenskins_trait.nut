@@ -6,7 +6,7 @@ this.hate_greenskins_trait <- this.inherit("scripts/skills/traits/character_trai
 		this.m.ID = "trait.hate_greenskins";
 		this.m.Name = "憎恨绿皮";
 		this.m.Icon = "ui/traits/trait_icon_52.png";
-		this.m.Description = "在这个角色的生活中，一些过去的事件激起了对所有绿色和卑鄙事物的强烈仇恨。";
+		this.m.Description = "这个角色过去生活中的一些事情激起了他对所有绿色和卑鄙事物的强烈仇恨。";
 		this.m.Titles = [
 			"兽人克星"
 		];

@@ -38,7 +38,7 @@ this.new_trained_effect <- this.inherit("scripts/skills/skill", {
 			id = 7,
 			type = "hint",
 			icon = "ui/icons/action_points.png",
-			text = "将在之后消失" + (this.m.Duration - this.m.Battles) + "更多战斗"
+			text = "将在" + (this.m.Duration - this.m.Battles) + "场战斗之后消失"
 		});
 		return ret;
 	}

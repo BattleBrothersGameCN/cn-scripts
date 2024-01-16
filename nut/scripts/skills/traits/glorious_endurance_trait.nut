@@ -13,7 +13,7 @@ this.glorious_endurance_trait <- this.inherit("scripts/skills/traits/character_t
 
 	function getDescription()
 	{
-		return "在南方的竞技场上锻造的这个角色已经打了很多仗，每一次打击只会增强他不屈不挠的意志和耐力。 他美妙的生活方式要求很高的薪水，但他永远不会抛弃你，也不能被解雇。 如果三个初始成员都死了，你的战役就结束了。";
+		return "这个角色在南方的竞技场上经历过许多战斗的锻炼，每一次打击只会增强他不屈不挠的意志和耐力。 他奢华的生活方式需要高薪来维持，但他永远不会抛弃你，也不能被解雇。 如果三个初始成员都死了，你的战役就结束了。";
 	}
 
 	function getTooltip()

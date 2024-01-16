@@ -30,7 +30,7 @@ this.bleeding_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色一个最近遭受的伤口正在大量流血，每回合将会失去 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.Damage + "[/color] 生命值, 持续 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色最近遭受的一个伤口正在大量流血，每回合将会失去 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.Damage + "[/color] 生命值, 持续 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
 	}
 
 	function applyDamage()

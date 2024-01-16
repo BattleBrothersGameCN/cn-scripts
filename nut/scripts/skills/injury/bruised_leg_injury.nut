@@ -5,7 +5,7 @@ this.bruised_leg_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.bruised_leg";
 		this.m.Name = "腿部瘀伤";
-		this.m.Description = "腿部严重擦伤极大地限制了活动性，但很快就会恢复。";
+		this.m.Description = "腿部严重瘀伤极大地限制了活动性，好在不久就能痊愈。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_26";
 		this.m.Icon = "ui/injury/injury_icon_26.png";

@@ -4,12 +4,12 @@ this.paranoid_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.paranoid";
-		this.m.Name = "偏执狂";
+		this.m.Name = "被害妄想";
 		this.m.Icon = "ui/traits/trait_icon_55.png";
 		this.m.Description = "我发誓那边的灌木在动！这个角色格外谨慎，不愿意前进。";
 		this.m.Titles = [
 			"狂人(the Crazy)",
-			"偏执狂(the Paranoid)"
+			"多疑者(the Paranoid)"
 		];
 		this.m.Excluded = [
 			"trait.optimist",

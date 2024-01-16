@@ -4,7 +4,7 @@ this.pierced_hand_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.pierced_hand";
-		this.m.Name = "手部刺伤";
+		this.m.Name = "手部穿孔";
 		this.m.Description = "手上多一个洞或许无法阻止一个坚定的战士，但确实会使掌握武器变得更困难。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_41";

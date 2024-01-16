@@ -36,7 +36,7 @@ this.unhold_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/health.png",
-				text = "每回合回复 [color=" + this.Const.UI.Color.PositiveValue + "]10[/color] 生命值"
+				text = "每回合回复 [color=" + this.Const.UI.Color.PositiveValue + "]10[/color] 点生命值"
 			},
 			{
 				id = 12,

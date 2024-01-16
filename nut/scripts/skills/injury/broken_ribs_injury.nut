@@ -4,7 +4,7 @@ this.broken_ribs_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.broken_ribs";
-		this.m.Name = "肋骨断裂";
+		this.m.Name = "肋骨骨折";
 		this.m.Description = "数根肋骨被钝力所折断，导致每一次呼吸都成为一段痛苦的过程。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_20";

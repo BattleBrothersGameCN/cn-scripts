@@ -4,7 +4,7 @@ this.injured_shoulder_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.injured_shoulder";
-		this.m.Name = "肩膀受伤";
+		this.m.Name = "肩部受伤";
 		this.m.Description = "肩部肌肉受伤使得很难用力进行攻击。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_12";

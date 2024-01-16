@@ -5,7 +5,7 @@ this.missing_hand_injury <- this.inherit("scripts/skills/injury_permanent/perman
 		this.permanent_injury.create();
 		this.m.ID = "injury.missing_hand";
 		this.m.Name = "手缺失";
-		this.m.Description = "失去的手阻止这个角色使用盾牌和双手武器。";
+		this.m.Description = "缺一只手让这个角色无法使用盾牌和双手武器。";
 		this.m.Icon = "ui/injury/injury_permanent_icon_07.png";
 	}
 

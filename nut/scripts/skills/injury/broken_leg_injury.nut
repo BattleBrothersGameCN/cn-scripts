@@ -4,7 +4,7 @@ this.broken_leg_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.broken_leg";
-		this.m.Name = "腿骨断裂";
+		this.m.Name = "腿部骨折";
 		this.m.Description = "腿骨断裂极大的限制了活动性，并且需要很长时间才能痊愈。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_04";

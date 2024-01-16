@@ -6,7 +6,7 @@ this.lucky_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.lucky";
 		this.m.Name = "幸运";
 		this.m.Icon = "ui/traits/trait_icon_54.png";
-		this.m.Description = "这个角色天生有在最后一秒摆脱伤害的天赋。";
+		this.m.Description = "这个角色有在最后关头摆脱伤害的天赋。";
 		this.m.Titles = [
 			"幸运星(the Lucky)",
 			"蒙福者(the Blessed)"

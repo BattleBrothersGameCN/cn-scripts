@@ -5,7 +5,7 @@ this.traumatized_injury <- this.inherit("scripts/skills/injury_permanent/permane
 		this.permanent_injury.create();
 		this.m.ID = "injury.traumatized";
 		this.m.Name = "精神创伤";
-		this.m.Description = "这个角色已经到了另一边。面对自己的死亡，他经历了垂死和回归，留下了一个破碎的人。";
+		this.m.Description = "这个角色已经死过一次了。死亡曾经就摆在他的面前，死去活来的经历留下了一个垮了的人。";
 		this.m.Icon = "ui/injury/injury_permanent_icon_13.png";
 	}
 

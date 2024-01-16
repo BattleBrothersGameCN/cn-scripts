@@ -4,8 +4,8 @@ this.maimed_foot_injury <- this.inherit("scripts/skills/injury_permanent/permane
 	{
 		this.permanent_injury.create();
 		this.m.ID = "injury.maimed_foot";
-		this.m.Name = "残废足";
-		this.m.Description = "脚上的伤从来没有完全愈合，这使得很难赢得任何舞蹈比赛或其他快速移动。";
+		this.m.Name = "足部伤残";
+		this.m.Description = "脚上从未痊愈的伤口，使得诸如舞蹈比赛之类的快速移动难以完成。";
 		this.m.Icon = "ui/injury/injury_permanent_icon_06.png";
 	}
 

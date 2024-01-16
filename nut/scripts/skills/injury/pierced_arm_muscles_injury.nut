@@ -4,7 +4,7 @@ this.pierced_arm_muscles_injury <- this.inherit("scripts/skills/injury/injury", 
 	{
 		this.injury.create();
 		this.m.ID = "injury.pierced_arm_muscles";
-		this.m.Name = "手臂肌肉刺伤";
+		this.m.Name = "手臂肌肉穿孔";
 		this.m.Description = "一次刺击已经刺穿了手臂并且损伤了肌肉组织，限制了它的行动。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_13";

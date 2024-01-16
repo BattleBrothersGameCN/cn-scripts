@@ -2,7 +2,7 @@ this.oath_of_fortification_warning <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "special.oath_of_fortification_warning";
-		this.m.Name = "壁垒！";
+		this.m.Name = "筑垒！";
 		this.m.Icon = "skills/status_effect_159.png";
 		this.m.IconMini = "status_effect_159_mini";
 		this.m.Overlay = "status_effect_159";

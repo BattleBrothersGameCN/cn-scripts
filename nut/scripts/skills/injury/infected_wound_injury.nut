@@ -5,7 +5,7 @@ this.infected_wound_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.infected_wound";
 		this.m.Name = "伤口感染";
-		this.m.Description = "一个未能保持清洁的伤口已经溃烂，非常痛苦并且损耗了这个角色的体质。";
+		this.m.Description = "不干净的伤口带来了溃烂的痛苦，也损耗了这个角色的体质。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_16";
 		this.m.Icon = "ui/injury/injury_icon_16.png";

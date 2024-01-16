@@ -5,7 +5,7 @@ this.drunk_effect <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "effects.drunk";
 		this.m.Name = "醉酒";
-		this.m.Description = "反应迟钝的人。这个人喝醉了，会损害身心的能力。";
+		this.m.Description = "嗝。这个人喝醉了，身心能力受损。";
 		this.m.Icon = "skills/status_effect_61.png";
 		this.m.Type = this.m.Type | this.Const.SkillType.StatusEffect | this.Const.SkillType.SemiInjury | this.Const.SkillType.DrugEffect;
 		this.m.IsHealingMentioned = false;

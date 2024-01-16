@@ -16,7 +16,7 @@ this.ancient_priest_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的身体发生了变异，使得他们的应战反应发生了改变。在高压情况下，他们的边缘系统被拒绝了逃跑所需的资源，使得他们在战线上几乎无法被瓦解。";
+		return "这个角色的身体发生了变异，使得他们的战逃反应发生了改变。在高压情况下，他们的边缘系统遮断了逃跑的策略，使得他们在战线中是事实上的牢不可破。";
 	}
 
 	function getTooltip()

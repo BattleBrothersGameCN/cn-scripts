@@ -4,8 +4,8 @@ this.collapsed_lung_part_injury <- this.inherit("scripts/skills/injury_permanent
 	{
 		this.permanent_injury.create();
 		this.m.ID = "injury.collapsed_lung_part";
-		this.m.Name = "部分肺萎陷";
-		this.m.Description = "肺的一部分已经死亡，这使得这个角色很难呼吸。";
+		this.m.Name = "局部肺萎陷";
+		this.m.Description = "肺的一部分已经坏死，使得这个角色呼吸困难。";
 		this.m.Icon = "ui/injury/injury_permanent_icon_05.png";
 	}
 

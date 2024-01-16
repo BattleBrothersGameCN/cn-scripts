@@ -6,7 +6,7 @@ this.tiny_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.tiny";
 		this.m.Name = "矮小";
 		this.m.Icon = "ui/traits/trait_icon_02.png";
-		this.m.Description = "由于身材非常矮小，这个角色习惯于溜过。";
+		this.m.Description = "由于身材非常矮小，这个角色常常能溜走。";
 		this.m.Titles = [
 			"矮人(the Dwarf)",
 			"半身人(the Halfman)",

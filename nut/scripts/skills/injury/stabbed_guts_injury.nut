@@ -5,7 +5,7 @@ this.stabbed_guts_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.stabbed_guts";
 		this.m.Name = "肠胃捅伤";
-		this.m.Description = "肠子上的伤口会流失体质，感染的可能性很高，并且可能会缓慢而痛苦的死亡却没有办法。";
+		this.m.Description = "肠道损伤会带来体质的损耗、极高的感染率和缓慢而痛苦的死亡。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_39";
 		this.m.Icon = "ui/injury/injury_icon_39.png";
