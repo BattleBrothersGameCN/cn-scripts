@@ -5,7 +5,7 @@ this.orchard_location <- this.inherit("scripts/entity/world/attached_location", 
 		this.attached_location.create();
 		this.m.Name = "果园";
 		this.m.ID = "attached_location.orchard";
-		this.m.Description = "成行茂密的果树与成熟的果实环绕着一个小仓库，所有东西都存放在那里，直到在当地市场上销售。";
+		this.m.Description = "一行行果树密密麻麻，挂满了成熟的果实，围绕着一间小仓库。这些果实会被储存在那里，直到在当地市场上销售。";
 		this.m.Sprite = "world_orchard_01";
 		this.m.SpriteDestroyed = "world_orchard_01_ruins";
 	}

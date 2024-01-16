@@ -5,7 +5,7 @@ this.fishing_huts_location <- this.inherit("scripts/entity/world/attached_locati
 		this.attached_location.create();
 		this.m.Name = "渔舍";
 		this.m.ID = "attached_location.fishing_huts";
-		this.m.Description = "一小群被网、矛、钩和其他捕鱼装备包围的小屋。篮子里的鱼内脏散发出来的气味传得很远。";
+		this.m.Description = "一小群被渔网、鱼叉、钓钩和其他捕鱼装备包围的小屋。成筐的鱼内脏的腥味传得很远。";
 		this.m.Sprite = "world_fishing_huts_01";
 		this.m.SpriteDestroyed = "world_fishing_huts_01_ruins";
 	}

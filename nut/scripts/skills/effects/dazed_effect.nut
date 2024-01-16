@@ -17,7 +17,7 @@ this.dazed_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色受到了如此沉重的打击，感到茫然、困惑和神志不清。剩余[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色受到了相当沉重的打击，感到茫然、困惑和神志不清。剩余[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
 	}
 
 	function getTooltip()

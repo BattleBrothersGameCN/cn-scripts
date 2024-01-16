@@ -5,7 +5,7 @@ this.surface_copper_vein_location <- this.inherit("scripts/entity/world/attached
 		this.attached_location.create();
 		this.m.Name = "露天铜矿脉";
 		this.m.ID = "attached_location.surface_copper_vein";
-		this.m.Description = "一个采矿营地已经建立了起来，旨在从露出地表的铜矿脉中开采铜矿石，并在现场将其熔炼成铜锭。";
+		this.m.Description = "一个采矿营地已经建立了起来，旨在从露出地表的铜矿脉中开采矿石，并就地将其熔炼成铜锭。";
 		this.m.Sprite = "world_copper_vein_01";
 		this.m.SpriteDestroyed = "world_copper_vein_01_ruins";
 	}

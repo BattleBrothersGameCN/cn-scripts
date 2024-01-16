@@ -3,7 +3,7 @@ this.drums_of_war_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.drums_of_war";
-		this.m.Name = "战争之鼓";
+		this.m.Name = "战鼓";
 		this.m.Description = "";
 		this.m.Icon = "skills/status_effect_105.png";
 		this.m.Overlay = "status_effect_105";

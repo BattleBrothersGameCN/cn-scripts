@@ -3,9 +3,9 @@ this.incense_dryer_location <- this.inherit("scripts/entity/world/attached_locat
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "熏香干燥处";
+		this.m.Name = "香料晒场";
 		this.m.ID = "attached_location.incense_dryer";
-		this.m.Description = "树汁被从周围的树上收集起来放到阳光下晒干来产出有价值的熏香。";
+		this.m.Description = "周围的树上收集到的树汁被放到阳光下晒干制成值钱的熏香。";
 		this.m.Sprite = "world_incense_01";
 		this.m.SpriteDestroyed = "world_incense_01_ruins";
 	}

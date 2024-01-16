@@ -3,7 +3,7 @@ this.stealth_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.stealth";
-		this.m.Name = "隐身";
+		this.m.Name = "潜行";
 		this.m.Description = "TODO";
 		this.m.Icon = "skills/status_effect_03.png";
 		this.m.IconMini = "status_effect_03_mini";

@@ -5,7 +5,7 @@ this.pig_farm_location <- this.inherit("scripts/entity/world/attached_location",
 		this.attached_location.create();
 		this.m.Name = "养猪场";
 		this.m.ID = "attached_location.pig_farm";
-		this.m.Description = "这个猪场的气味和泥泞的猪圈里传来的尖叫声一样独特。这里生产的猪排通常在附近的定居点出售。";
+		this.m.Description = "来自猪场的气味和泥泞猪圈的尖叫让你一下就能找到这里。这里生产的猪排通常在附近的定居点出售。";
 		this.m.Sprite = "world_pig_farm_01";
 		this.m.SpriteDestroyed = "world_pig_farm_01_ruins";
 	}

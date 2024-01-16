@@ -3,9 +3,9 @@ this.beekeeper_location <- this.inherit("scripts/entity/world/attached_location"
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "养蜂人";
+		this.m.Name = "养蜂小屋";
 		this.m.ID = "attached_location.beekeeper";
-		this.m.Description = "这些被嗡嗡蜂群包围的小棚屋是养蜂人的家。他们生产的蜂蜜是为糕点和其他食物增甜的珍贵原料。";
+		this.m.Description = "这些被嗡嗡蜂群包围的小棚屋是养蜂人的家。他们生产的蜂蜜是为糕点等食物增甜的珍贵原料。";
 		this.m.Sprite = "world_bee_keeper_01";
 		this.m.SpriteDestroyed = "world_bee_keeper_01_ruins";
 	}

@@ -5,7 +5,7 @@ this.stone_watchtower_oriental_location <- this.inherit("scripts/entity/world/at
 		this.attached_location.create();
 		this.m.Name = "石头岗楼";
 		this.m.ID = "attached_location.stone_watchtower";
-		this.m.Description = "由训练有素的警卫士兵占领的石头岗楼。";
+		this.m.Description = "由训练有素的执勤士兵把守的石头岗楼。";
 		this.m.Sprite = "world_southern_watchtower";
 		this.m.SpriteDestroyed = "world_southern_watchtower_ruins";
 		this.m.IsMilitary = true;

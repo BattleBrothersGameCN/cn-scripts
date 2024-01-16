@@ -17,7 +17,7 @@ this.staggered_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色受到了如此沉重的打击，以至于失去平衡东倒西歪且行动迟缓。剩余[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色受到了相当沉重的打击，以至于失去平衡东倒西歪且行动迟缓。剩余[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
 	}
 
 	function getTooltip()

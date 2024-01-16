@@ -7,7 +7,7 @@ this.workshop_location <- this.inherit("scripts/entity/world/attached_location",
 		this.attached_location.create();
 		this.m.Name = "作坊";
 		this.m.ID = "attached_location.workshop";
-		this.m.Description = "该作坊精通制造各种工具和其他维持马车和机器工作所需的供应品。";
+		this.m.Description = "这家工坊精于制造用于维持马车和机器运转的各类工具和耗材。";
 		this.m.Sprite = "world_workshop_01";
 		this.m.SpriteDestroyed = "world_workshop_01_ruins";
 	}

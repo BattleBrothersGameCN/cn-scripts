@@ -70,7 +70,7 @@ this.small_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 		this.m.HousesMin = 1;
 		this.m.HousesMax = 2;
 		this.m.AttachedLocationsMax = 3 + 1;
-		this.m.ProduceString = "鱼村";
+		this.m.ProduceString = "鱼";
 	}
 
 	function onBuild()
