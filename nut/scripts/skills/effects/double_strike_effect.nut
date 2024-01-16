@@ -16,7 +16,7 @@ this.double_strike_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "在刚刚完成了一次命中后，这个角色准备好进行更强大的后续攻击！下一次攻击将造成 [color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color] 对单个目标造成伤害。如果攻击有多个目标，只有第一个会受到额外伤害。如果攻击未命中，此效果会被浪费。";
+		return "在刚刚完成了一次命中后，这个角色准备好进行更强大的后续攻击！下一次攻击会对单个目标额外造成 [color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color] 伤害。如果攻击有多个目标，只有第一个会受到额外伤害。如果攻击未命中，此效果会被浪费。";
 	}
 
 	function onAdded()

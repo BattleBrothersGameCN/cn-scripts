@@ -3,9 +3,9 @@ this.wool_spinner_location <- this.inherit("scripts/entity/world/attached_locati
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "纺毛处";
+		this.m.Name = "毛纺厂";
 		this.m.ID = "attached_location.wool_spinner";
-		this.m.Description = "在这里放牧的羊的毛被纺成毛料，然后运到下一个定居点。像这样的精致商品很有价值。";
+		this.m.Description = "在这里放牧的羊的毛被纺成毛料，然后运到下一个定居点。像这样的精致商品有利可图。";
 		this.m.Sprite = "world_wool_spinner_01";
 		this.m.SpriteDestroyed = "world_wool_spinner_01_ruins";
 	}

@@ -34,7 +34,7 @@ this.debilitating_attack_effect <- this.inherit("scripts/skills/skill", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-50%[/color] 目标的伤害，持续1回合"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-50%[/color] 目标造成的伤害，持续1回合"
 			}
 		];
 	}

@@ -7,7 +7,7 @@ this.medium_coast_fort <- this.inherit("scripts/entity/world/settlement", {
 			"西堡",
 			"基尔伯格",
 			"奥特恩堡",
-			"布兰肯堡",
+			"苍茫堡",
 			"坎普堡",
 			"斯托尔堡",
 			"维克堡",

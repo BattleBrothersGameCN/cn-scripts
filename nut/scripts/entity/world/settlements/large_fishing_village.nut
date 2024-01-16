@@ -4,25 +4,25 @@ this.large_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 	{
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
-			"海城市",
-			"维克斯塔特",
-			"孔尼克斯哈芬",
-			"格拉芬黑文",
-			"霍尔尼斯城",
-			"尼伟兰德",
-			"坎普斯塔特",
+			"海镇",
+			"维京镇",
+			"国王之港",
+			"伯爵港",
+			"冻鱼之地",
+			"新地镇",
+			"战争镇",
 			"克拉肯之地",
-			"布兰肯斯塔特",
-			"哈肯斯塔特",
-			"蒂芬斯塔特",
-			"魏森施塔特",
-			"科布曼港",
-			"格罗滕黑文",
+			"苍茫镇",
+			"耙犁镇",
+			"洼镇",
+			"白镇",
+			"治安官港",
+			"谷粒港",
 			"国王之水",
-			"昆恩斯蒙德",
-			"克罗能科格",
-			"斯坦凯",
-			"迪克斯塔特"
+			"国王之口",
+			"乌鸦坝",
+			"石头港",
+			"堤坝镇"
 		]);
 		this.m.DraftList = [
 			"apprentice_background",
@@ -88,7 +88,7 @@ this.large_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 		this.m.HousesMin = 3;
 		this.m.HousesMax = 5;
 		this.m.AttachedLocationsMax = 6 + 2;
-		this.m.ProduceString = "鱼城";
+		this.m.ProduceString = "鱼";
 	}
 
 	function onBuild()

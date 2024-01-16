@@ -3,7 +3,7 @@ this.silk_farm_location <- this.inherit("scripts/entity/world/attached_location"
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "丝绸厂";
+		this.m.Name = "蚕丝作坊";
 		this.m.ID = "attached_location.silk_farm";
 		this.m.Description = "在这些棚屋里，珍贵的丝绸被用秘密的方法从小虫子的茧中纺出。";
 		this.m.Sprite = "world_silk_01";

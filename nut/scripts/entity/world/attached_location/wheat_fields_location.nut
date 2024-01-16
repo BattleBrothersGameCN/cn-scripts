@@ -5,7 +5,7 @@ this.wheat_fields_location <- this.inherit("scripts/entity/world/attached_locati
 		this.attached_location.create();
 		this.m.Name = "麦田";
 		this.m.ID = "attached_location.wheat_fields";
-		this.m.Description = "从远处可以看到金色的小麦在阳光下闪闪发光。许多来自附近定居点的人在这里工作，主要是雇农和日结工。";
+		this.m.Description = "阳光照耀下的麦田远远地就发着闪闪金光，许多来自附近定居点的雇农和短工工作在这里。";
 		this.m.Sprite = "world_wheat_farm_01";
 		this.m.SpriteDestroyed = "world_wheat_farm_01_ruins";
 	}

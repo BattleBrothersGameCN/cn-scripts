@@ -5,7 +5,7 @@ this.spider_poison_coat_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.spider_poison_coat";
-		this.m.Name = "带毒武器";
+		this.m.Name = "浸毒武器";
 		this.m.Icon = "skills/status_effect_88.png";
 		this.m.IconMini = "status_effect_88_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect;

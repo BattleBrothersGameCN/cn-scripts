@@ -29,7 +29,7 @@ this.lorekeeper_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的身体里整合进了博学者的部分骨骼，结果是具备了在遭受似乎致命的伤口时快速恢复的能力。但如果他们能在夜里不尖叫就好了……";
+		return "这个角色的身体里整合进了博学者的部分骨骼，结果是具备了在遭受看似致命的伤口时快速恢复的能力。如果他们能别在夜里尖叫就更好了……";
 	}
 
 	function getTooltip()
