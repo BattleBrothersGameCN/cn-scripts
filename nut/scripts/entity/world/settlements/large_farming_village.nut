@@ -31,7 +31,7 @@ this.large_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"夜魔镇",
 			"侧室边城",
 			"贵族之地",
-			"杰出之地",
+			"英杰之地",
 			"斯佩尔特麦边城",
 			"天鹅镇",
 			"绿色森林"

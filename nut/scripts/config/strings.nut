@@ -567,21 +567,21 @@ gt.Const.Strings.CityStateTitles <- [
 ];
 gt.Const.Strings.BusinessReputation <- [
 	"背信弃义",
-	"无能为役",
-	"毫不可靠",
-	"默默无名",
-	"受人认可",
-	"坚实可靠",
-	"胜任的",
-	"素养专业",
-	"名声在外",
-	"有口皆碑",
-	"声誉优良",
-	"声誉辉煌",
-	"受人传颂",
-	"大名鼎鼎",
-	"震古铄今",
-	"不朽传奇"
+	"难担重任",
+	"庸庸碌碌",
+	"籍籍无名",
+	"初露锋芒",
+	"言而有信",
+	"能担其任",
+	"得心应手",
+	"声名斐然",
+	"家喻户晓",
+	"久负盛名",
+	"丰功伟绩",
+	"留名青史",
+	"功高盖世",
+	"彪炳千秋",
+	"万古流芳"
 ];
 gt.Const.Strings.MoralReputation <- [
 	"令人畏惧",
@@ -1323,7 +1323,7 @@ gt.Const.Strings.PerkName <- {
 	SpecPolearm = "长柄精通",
 	SpecHammer = "锤精通",
 	SpecMace = "骨朵精通",
-	SpecFlail = "链枷掌握"
+	SpecFlail = "链枷精通"
 };
 gt.Const.Strings.PerkDescription <- {
 	Relentless = "不要慢下来! 在任何时候，你的主动性都只减少累积疲劳值的[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]，而不是全部的。此外，使用\'等待\'命令将不再使你在下一回合的主动性受到惩罚。",
@@ -1380,15 +1380,15 @@ gt.Const.Strings.PerkDescription <- {
 	SpecBow = "精通射箭，从远处用箭射向你的对手。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。/n\n使用弓箭时的视野范围和最大射程增加[color=" + this.Const.UI.Color.PositiveValue + "]+1[/color].",
 	SpecCrossbow = "精通弓箭和火器，并学习最佳瞄准位置。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n弩箭额外造成的无视护甲的 [color=" + this.Const.UI.Color.PositiveValue + "]20%[/color] 伤害。\n\n火铳现在仅需要 [color=" + this.Const.UI.Color.NegativeValue + "]6[/color] 个行动点数来重新装填，并且可以每回合发射，而不是每隔一回合。",
 	SpecThrowing = "精通投掷武器，在敌人靠近之前就将其击伤或杀死。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n当攻击距离为2格时，伤害会增加[color=" + this.Const.UI.Color.PositiveValue + "]30%[/color](当攻击距离为2格时)\n\n伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]20%[/color]。",
-	SpecAxe = "精通用斧头和破坏盾牌的战斗。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n“裂盾”对盾牌造成的伤害会增加[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]。\n\n\'环劈\'获得 [color=" + this.Const.UI.Color.PositiveValue + "]+5%[/color] 命中率加成。\n\n长斧对近身敌人不再有攻击惩罚。",
-	SpecCleaver = "精通如何使用劈刀造成可怕的伤口。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n劈刀和鞭子造成的流血伤害(每回合)分别增加到[color=" + this.Const.UI.Color.PositiveValue + "]10[/color] 和 [color=" + this.Const.UI.Color.PositiveValue + "]20[/color]\n\n \'缴械(Disarm)\' 的命中率惩罚减半。",
+	SpecAxe = "精通斧头，摧毁盾牌。斧技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n斧技能“裂盾”造成的盾牌伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]\n\n“环劈”的命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]\n\n使用长斧攻击近身敌人不再有命中率惩罚。",
+	SpecCleaver = "精通砍刀，造成可怕的伤口。砍刀技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n砍刀和鞭子造成的每回合流血伤害分别加倍至 [color=" + this.Const.UI.Color.PositiveValue + "]10[/color] 和 [color=" + this.Const.UI.Color.PositiveValue + "]20[/color]\n\n“缴械”的命中率惩罚减半。",
 	SpecDagger = "精通迅捷而致命的匕首。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n\'刺杀\'、\'穿刺\'和\'致命一击\'的行动点成本降低，以允许每回合进行额外的攻击。",
 	SpecSword = "精通剑术, 利用对手的失误逆风翻盘。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n\'还击\'不再有命中几率的惩罚。\n\n\'冲撞\'造成伤害的门槛减低[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]伤害门槛\n\n\'裂盾(split)\'和\'挥击(Swing)\'不再受到命中率惩罚, 反而提高[color=" + this.Const.UI.Color.PositiveValue + "]+5%[/color]",
-	SpecSpear = "精通长矛, 让敌人进退两难。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n即使控制区内有敌人, \'矛墙\'技能仍可对任何试图进入控制区的敌人进行攻击。\n\n\'长戟类(Spetum)\'和\'战叉类(Warfork)\'武器攻击直接相邻的目标不再有惩罚。",
+	SpecSpear = "精通长矛，御敌于外。矛技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n一旦敌人攻入了控制区域，“矛墙”不再失效。相反，“矛墙”仍可使用，并继续对其他试图进入控制区域的敌人进行免费攻击。\n\n使用长戟和战叉攻击近身敌人不再有命中率惩罚。",
 	SpecPolearm = "精通长柄武器, 将敌人拒之门外。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n长柄武器技能的行动点消耗减少到[color=" + this.Const.UI.Color.NegativeValue + "]5[/color], 并且攻击直接相邻的目标不再有惩罚。",
 	SpecHammer = "精通铁锤, 擅长与重装敌人对战。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n\'摧毁盔甲\'会护甲造成的伤害提高 [color=" + this.Const.UI.Color.PositiveValue + "]33%[/color]\n\n\'震碎\'的命中率提高[color=" + this.Const.UI.Color.PositiveValue + "]+5%[/color] 命中率。\n\n长柄锤(Polehammer)攻击直接相邻的目标不再有惩罚。",
 	SpecMace = "精通钉头锤, 不管穿没穿装甲，锤就完事。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n只要免疫豁免未通过, \'锤倒\'，\'撞倒\'和\'击倒\'的击昏概率提升至[color=" + this.Const.UI.Color.PositiveValue + "]100%[/color]。\n\n\'长棍\'(Polemace)攻击直接相邻的目标不再有惩罚。",
-	SpecFlail = "精通连枷, 绕过盾牌攻击敌人。武器技能减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累。\n\n\'抽打(Lash)\'和\'雹击(Hail)\'无视盾牌加成。\n\n\'砸击(Pound)\'在击中头部时忽略[color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 护甲。\n\n\'打谷(Thresh)\'的命中率提高[color=" + this.Const.UI.Color.PositiveValue + "]+5%[/color]"
+	SpecFlail = "精通链枷，绕过对手的盾牌。链枷技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n\'抽打(Lash)\'和\'雹击(Hail)\'无视盾牌加成。\n\n\'砸击(Pound)\'在击中头部时忽略[color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 护甲。\n\n\'打谷(Thresh)\'的命中率提高[color=" + this.Const.UI.Color.PositiveValue + "]+5%[/color]"
 };
 gt.Const.Strings.Tooltip <- {
 	World = {
