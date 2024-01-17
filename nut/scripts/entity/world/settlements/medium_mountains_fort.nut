@@ -18,7 +18,7 @@ this.medium_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"沙芬堡",
 			"沃尔芬斯坦",
 			"布伦沃德",
-			"赫尔登堡",
+			"英杰堡",
 			"温堡",
 			"剑堡",
 			"兰岑堡",
