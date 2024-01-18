@@ -67,7 +67,7 @@ this.adopt_warhound_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				local item = this.new("scripts/items/accessory/warhound_item");
-				item.m.Name = "勇士战猎犬";
+				item.m.Name = "战獒“勇士”";
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -118,7 +118,7 @@ this.adopt_warhound_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Houndmaster.getImagePath());
 				local item = this.new("scripts/items/accessory/warhound_item");
-				item.m.Name = "勇士战猎犬";
+				item.m.Name = "战獒“勇士”";
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,

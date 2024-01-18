@@ -473,28 +473,28 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 					this.Flags.set("Champion1", this.Const.World.Common.generateName(this.Const.World.Spawn.Troops.Gladiator.NameList) + (this.Const.World.Spawn.Troops.Gladiator.TitleList != null ? " " + this.Const.World.Spawn.Troops.Gladiator.TitleList[this.Math.rand(0, this.Const.World.Spawn.Troops.Gladiator.TitleList.len() - 1)] : ""));
 					this.Flags.set("Number", this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Gladiator, baseDifficulty - this.Const.World.Spawn.Troops.Gladiator.Cost * 2, 2));
 					this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗%champion1%和%amount%名角斗士";
-					this.Text += "%SPEECH_ON%认识这张脸吗？艺术家们在这本小册子上花费了时间，并将其分发给楼上的所有人。这是队长1号(%champion1%)，是这片土地上最伟大的斗士之一。也许有一天，如果大臣能找到一个如此有才华的人来挽救你那被毁掉的脑子，他们也会让你的脸看起来那么漂亮，hegheghegh。%SPEECH_OFF%";
+					this.Text += "%SPEECH_ON%认识这张脸吗？艺术家们可不会白白花那么多时间又是画册子又发给你们看的。这是%champion1%，是这片土地上最伟大的斗士之一。也许有一天他们会把你的脸蛋也整的这么漂亮，前提是维齐尔能找到那么本事的人，来挽救你，呃，耳朵中间夹着的那些东西，嘿嘿呵。%SPEECH_OFF%";
 				}
 				else if (this.Flags.get("IsSwordmasterChampion"))
 				{
 					this.Flags.set("Champion1", this.Const.World.Common.generateName(this.Const.World.Spawn.Troops.Swordmaster.NameList) + (this.Const.World.Spawn.Troops.Swordmaster.TitleList != null ? " " + this.Const.World.Spawn.Troops.Swordmaster.TitleList[this.Math.rand(0, this.Const.World.Spawn.Troops.Swordmaster.TitleList.len() - 1)] : ""));
 					this.Flags.set("Number", this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Mercenary, baseDifficulty - this.Const.World.Spawn.Troops.Gladiator.Cost * 2, 2));
 					this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗%champion1%和%amount%名佣兵";
-					this.Text += "%SPEECH_ON%认识这张脸吗？艺术家们在这本小册子上花费了时间，并将其分发给楼上的所有人。这是队长1号(%champion1%)，是这片土地上最伟大的斗士之一。也许有一天，如果大臣能找到一个如此有才华的人来挽救你那被毁掉的脑子，他们也会让你的脸看起来那么漂亮，hegheghegh。%SPEECH_OFF%";
+					this.Text += "%SPEECH_ON%认识这张脸吗？艺术家们可不会白白花那么多时间又是画册子又发给你们看的。这是%champion1%，是这片土地上最伟大的斗士之一。也许有一天他们会把你的脸蛋也整的这么漂亮，前提是维齐尔能找到那么本事的人，来挽救你，呃，耳朵中间夹着的那些东西，嘿嘿呵。%SPEECH_OFF%";
 				}
 				else if (this.Flags.get("IsExecutionerChampion"))
 				{
 					this.Flags.set("Champion1", this.Const.World.Common.generateName(this.Const.World.Spawn.Troops.Executioner.NameList) + (this.Const.World.Spawn.Troops.Executioner.TitleList != null ? " " + this.Const.World.Spawn.Troops.Executioner.TitleList[this.Math.rand(0, this.Const.World.Spawn.Troops.Executioner.TitleList.len() - 1)] : ""));
 					this.Flags.set("Number", this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Gladiator, baseDifficulty - this.Const.World.Spawn.Troops.Gladiator.Cost * 2, 2));
 					this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗%champion1%和%amount%名角斗士";
-					this.Text += "%SPEECH_ON%认识这张脸吗？艺术家们在这本小册子上花费了时间，并将其分发给楼上的所有人。这是队长1号(%champion1%)，是这片土地上最伟大的斗士之一。也许有一天，如果大臣能找到一个如此有才华的人来挽救你那被毁掉的脑子，他们也会让你的脸看起来那么漂亮，hegheghegh。%SPEECH_OFF%";
+					this.Text += "%SPEECH_ON%认识这张脸吗？艺术家们可不会白白花那么多时间又是画册子又发给你们看的。这是%champion1%，是这片土地上最伟大的斗士之一。也许有一天他们会把你的脸蛋也整的这么漂亮，前提是维齐尔能找到那么本事的人，来挽救你，呃，耳朵中间夹着的那些东西，嘿嘿呵。%SPEECH_OFF%";
 				}
 				else if (this.Flags.get("IsDesertDevilChampion"))
 				{
 					this.Flags.set("Champion1", this.Const.World.Common.generateName(this.Const.World.Spawn.Troops.DesertDevil.NameList) + (this.Const.World.Spawn.Troops.DesertDevil.TitleList != null ? " " + this.Const.World.Spawn.Troops.DesertDevil.TitleList[this.Math.rand(0, this.Const.World.Spawn.Troops.DesertDevil.TitleList.len() - 1)] : ""));
 					this.Flags.set("Number", this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.NomadOutlaw, baseDifficulty - this.Const.World.Spawn.Troops.Gladiator.Cost * 2, 2));
 					this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗%champion1%和%amount%名游牧民";
-					this.Text += "%SPEECH_ON%认识这张脸吗？艺术家们在这本小册子上花费了时间，并将其分发给楼上的所有人。这是队长1号(%champion1%)，是这片土地上最伟大的斗士之一。也许有一天，如果大臣能找到一个如此有才华的人来挽救你那被毁掉的脑子，他们也会让你的脸看起来那么漂亮，hegheghegh。%SPEECH_OFF%";
+					this.Text += "%SPEECH_ON%认识这张脸吗？艺术家们可不会白白花那么多时间又是画册子又发给你们看的。这是%champion1%，是这片土地上最伟大的斗士之一。也许有一天他们会把你的脸蛋也整的这么漂亮，前提是维齐尔能找到那么本事的人，来挽救你，呃，耳朵中间夹着的那些东西，嘿嘿呵。%SPEECH_OFF%";
 				}
 
 				if (this.World.Statistics.getFlags().getAsInt("ArenaRegularFightsWon") > 0 && this.World.Statistics.getFlags().getAsInt("ArenaRegularFightsWon") % 5 == 0)
