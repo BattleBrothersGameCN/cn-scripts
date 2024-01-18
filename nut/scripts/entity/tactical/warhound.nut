@@ -1,7 +1,7 @@
 this.warhound <- this.inherit("scripts/entity/tactical/actor", {
 	m = {
 		Item = null,
-		Name = "战犬"
+		Name = "战獒"
 	},
 	function setItem( _i )
 	{

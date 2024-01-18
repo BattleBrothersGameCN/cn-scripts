@@ -100,7 +100,7 @@ this.dog_in_swamp_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "我想我会给你起名的…游泳者。",
+					Text = "以后你的名字就叫…泳者。",
 					function getResult( _event )
 					{
 						return 0;
@@ -112,7 +112,7 @@ this.dog_in_swamp_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Helper.getImagePath());
 				local item = this.new("scripts/items/accessory/wardog_item");
-				item.m.Name = "游泳者(Swimmer)";
+				item.m.Name = "\"泳者\"";
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -199,7 +199,7 @@ this.dog_in_swamp_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Beastslayer.getImagePath());
 				local item = this.new("scripts/items/accessory/wardog_item");
-				item.m.Name = "游泳者(Swimmer)";
+				item.m.Name = "\"泳者\"";
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -224,7 +224,7 @@ this.dog_in_swamp_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "我想我会给你起名的…游泳者。",
+					Text = "以后你的名字就叫…泳者。",
 					function getResult( _event )
 					{
 						return 0;
@@ -235,7 +235,7 @@ this.dog_in_swamp_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				local item = this.new("scripts/items/accessory/wardog_item");
-				item.m.Name = "游泳者(Swimmer)";
+				item.m.Name = "\"泳者\"";
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,

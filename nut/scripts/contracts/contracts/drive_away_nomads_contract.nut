@@ -442,7 +442,7 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{一个仆人挡住了见%employer%的路。他递给你一卷卷轴和一个包袋。虽然仆人已经递给了你纸张，但他仍然把手放在后背上，看着天花板背诵。%SPEECH_ON%根据事先的安排，王室成员获得了%reward_completion%克朗的奖励。收到奖励后，他立刻离开了产业。%SPEECH_OFF%仆人低头对你点了点头。%SPEECH_ON%你可以走了。%SPEECH_OFF%他说。 | 你试图进入%employer%的房间，但是一个身上有伤疤的大卫士用长柄武器挡住了门口。%SPEECH_ON%没有访客。%SPEECH_OFF%你说你有事情要找大臣。卫士摇了摇头。一个仆人从你身后走了过来，把一个包袋放在你的手臂上，然后飞快地离开了。卫士把武器收回到自己的身边。%SPEECH_ON%当你第一次离开大臣时，你已经解决了与他的琐事。你不应该再破坏他的心情。现在离开。在你破坏我的心情之前走。%SPEECH_OFF% | 当你走近%employer%的房间时，一个女人从大厅对面鼓掌。你转过头去，她已经离你太近了。四只鸟停在她的肩膀上，随着她的每一步摇曳。%SPEECH_ON%队长。%SPEECH_OFF%她拿出一个包袋递给你。%SPEECH_ON%进入他的房间已经足够了，%employer%不必再闻到你的气息。如果你要侮辱我们，就数一数钱。如果你想让我们高兴，就离开吧。%SPEECH_OFF%她转身走开，异国情调的裙子左右摇摆。其中一只鸟在她的肩上旋转并对你吱吱叫着。}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{一个仆人挡住了你见%employer%的路。他递给你一卷卷轴和一个小包。虽然仆人已经把文牒交给你了，他仍然背起手，看着天花板念念有词起来。%SPEECH_ON%根据事先的安排，逐币者将获得%reward_completion%克朗作为奖赏。收到奖励后，他们应该立即离开。%SPEECH_OFF%仆人低头看着你，点头示意。%SPEECH_ON%走吧。%SPEECH_OFF%他说。 | 你试图进入%employer%的房间，但一个有疤的大个子卫兵把矛尖横在了门前。%SPEECH_ON%不准进去。%SPEECH_OFF%你说你有事情要找维齐尔。卫兵摇了摇头。一个仆人从你身后快步走了过来，把一个小包按在你的手臂上，然后又快步走开了。卫兵把武器收回身边。%SPEECH_ON%你和维齐尔的琐事在你第一次离开时就结束了。别去坏了他的心情。现在就走，在你坏了我的心情之前。%SPEECH_OFF% | 当你走向%employer%的房间时，一个女人的拍手声从大厅另一头传了过来。你转过头去，她已经快走到你面前了。四只鸟停在她的肩膀上，随着她的每一步摇曳。%SPEECH_ON%逐币者。%SPEECH_OFF%她拿出一个小包递给你。%SPEECH_ON%%employer%不想再闻到你的气味，进到这里就够了。如果你要侮辱我们，就数一数钱。如果你想让我们高兴，就离开吧。%SPEECH_OFF%她转身走开，异国情调的裙子左右摇摆。她肩上的一只鸟朝你转了过来，喳喳的叫着，似乎不太高兴。}",
 			Image = "",
 			Characters = [],
 			List = [],

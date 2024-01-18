@@ -765,7 +765,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "Failure",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{你没有保护好%holysite%，让北方人攻破了。现在留在这里没有任何意义，回去找%employer%的唯一理由就是希望你的头能够被放在大臣金镶嵌的盘子里。}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{你没能从北方人手中保护好%holysite%。待在这儿是没什么用了，如果你实在是想把你的头放在维齐尔镶金的盘子里的话，回去找%employer%也行。}",
 			Image = "",
 			Characters = [],
 			List = [],
