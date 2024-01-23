@@ -7,7 +7,7 @@ this.large_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"海镇",
 			"维京镇",
 			"国王之港",
-			"伯爵港",
+			"擢爵港",
 			"冻鱼之地",
 			"新地镇",
 			"战争镇",

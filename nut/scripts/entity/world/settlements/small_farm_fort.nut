@@ -28,7 +28,7 @@ this.small_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"草地守卫",
 			"海因沃尔",
 			"克鲁格沃尔",
-			"格拉芬堡",
+			"擢爵堡",
 			"弗斯滕沃尔",
 			"萨瓦赫特",
 			"魏赫瓦赫特"

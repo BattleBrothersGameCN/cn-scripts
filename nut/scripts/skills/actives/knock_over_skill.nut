@@ -11,7 +11,7 @@ this.knock_over_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.knock_over";
-		this.m.Name = "撞翻";
+		this.m.Name = "撞倒";
 		this.m.Description = "一记重击，意在击晕或失能任何不幸被命中的家伙 1 回合，但不会造成很大伤害。被击晕的目标无法保持盾墙、矛墙或类似的防御技能。";
 		this.m.Icon = "skills/active_206.png";
 		this.m.IconDisabled = "skills/active_206_sw.png";
@@ -72,7 +72,7 @@ this.knock_over_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] %[/color] 几率在击中时造成击昏"
+				text = "命中时有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 几率造成击晕"
 			});
 		}
 		else
@@ -81,7 +81,7 @@ this.knock_over_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.StunChance + "%[/color] 几率在命中时击晕"
+				text = "命中时有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.StunChance + "%[/color] 几率造成击晕"
 			});
 		}
 

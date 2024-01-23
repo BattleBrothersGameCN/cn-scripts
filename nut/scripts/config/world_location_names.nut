@@ -48,7 +48,7 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"赛格兰",
 	"奥哈特",
 	"费摩恩",
-	"韦德诺",
+	"河草滩",
 	"芦苇丘",
 	"奥坦道夫",
 	"塞尔海姆",

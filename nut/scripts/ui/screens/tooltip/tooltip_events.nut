@@ -997,7 +997,7 @@ this.tooltip_events <- {
 						id = 3,
 						type = "hint",
 						icon = "ui/icons/icon_locked.png",
-						text = "特技被锁定，直到 " + (perk.Unlocks - player.getPerkPointsSpent()) + "更多的技能点已经使用。"
+						text = "特技被锁定，直到 " + (perk.Unlocks - player.getPerkPointsSpent()) + "更多的特技点已经使用。"
 					});
 				}
 				else
@@ -2868,7 +2868,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这个角色已经升级了。 增加他的属性并选择一个特技！"
+						text = "这个角色升级了。增加他的属性值并选择一个特技！"
 					}
 				];
 				return result;

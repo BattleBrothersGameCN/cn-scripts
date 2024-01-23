@@ -4,7 +4,7 @@ this.medium_farming_village <- this.inherit("scripts/entity/world/settlement", {
 	{
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
-			"魏德菲尔德",
+			"草场地",
 			"海梅尔恩",
 			"萨克斯多夫",
 			"科肯多夫",
@@ -17,7 +17,7 @@ this.medium_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"姆伦海姆",
 			"格伦费尔德",
 			"因文道夫",
-			"韦德诺",
+			"河草滩",
 			"格拉芬海德",
 			"赫尔曼霍夫",
 			"科珀道夫",
@@ -25,7 +25,7 @@ this.medium_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"瓦雷尔",
 			"德雷菲登",
 			"博克霍恩",
-			"胡夫斯拉格",
+			"蹄耕地",
 			"哈格",
 			"瓦根海姆",
 			"哈灵根",

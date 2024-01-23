@@ -4,7 +4,7 @@ this.large_farming_village <- this.inherit("scripts/entity/world/settlement", {
 	{
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
-			"柳树边城",
+			"草场边城",
 			"天空边城",
 			"烧水之地",
 			"老镇",
