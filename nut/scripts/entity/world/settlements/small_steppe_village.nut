@@ -8,7 +8,7 @@ this.small_steppe_village <- this.inherit("scripts/entity/world/settlement", {
 			"克劳赫塔尔",
 			"布伦内塔尔",
 			"尔拉赫",
-			"特莱滕",
+			"猎场镇",
 			"坦特林根",
 			"天空村",
 			"瑟恩",

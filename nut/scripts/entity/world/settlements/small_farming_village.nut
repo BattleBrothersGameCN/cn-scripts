@@ -4,12 +4,12 @@ this.small_farming_village <- this.inherit("scripts/entity/world/settlement", {
 	{
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
-			"魏德菲尔德",
+			"草场地",
 			"海梅尔恩",
 			"萨克斯多夫",
 			"科肯多夫",
 			"奥尔腾霍夫",
-			"韦德诺",
+			"河草滩",
 			"斯涅伦",
 			"诺多夫",
 			"弗赖多夫",
@@ -43,7 +43,7 @@ this.small_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"魏恩加滕",
 			"孔尼希费尔德",
 			"罗森霍夫",
-			"韦登巴赫"
+			"草场溪"
 		]);
 		this.m.DraftList = [
 			"beggar_background",

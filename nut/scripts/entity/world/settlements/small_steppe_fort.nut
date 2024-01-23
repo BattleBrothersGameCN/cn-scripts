@@ -7,7 +7,7 @@ this.small_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"沃伦瓦赫特",
 			"克劳奇瓦尔",
 			"埃拉赫沃尔",
-			"特莱滕卫所",
+			"猎场卫所",
 			"瑟恩沃尔",
 			"罗森沃尔",
 			"沙兵",

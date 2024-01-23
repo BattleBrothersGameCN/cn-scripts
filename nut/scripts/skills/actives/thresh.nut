@@ -6,7 +6,7 @@ this.thresh <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.thresh";
 		this.m.Name = "打谷";
-		this.m.Description = "用一个不顾后果的环形大挥击把你周围的所有目标打谷一样来一轮，敌人和朋友一个待遇。不难躲开，因为它没有针对任何目标，但如果它连贯起来，可能会是毁灭性的。有几率击昏击中的目标一个回合。小心你身边的自己人，除非你想降工资！";
+		this.m.Description = "用一个不顾后果的环形大挥击把你周围的所有目标打谷一样来一轮，敌人和朋友一个待遇。不难躲开，因为它没有针对任何目标，但如果它连贯起来，可能会是毁灭性的。有几率击晕击中的目标一个回合。小心你身边的自己人，除非你想降工资！";
 		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_46.png";
 		this.m.IconDisabled = "skills/active_46_sw.png";
@@ -65,7 +65,7 @@ this.thresh <- this.inherit("scripts/skills/skill", {
 				id = 8,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.StunChance + "%[/color] 几率在击中时造成击昏"
+				text = "命中时有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.StunChance + "%[/color] 几率造成击晕"
 			},
 			{
 				id = 9,

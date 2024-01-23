@@ -7,7 +7,7 @@ this.medium_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"沃伦堡",
 			"克劳赫堡",
 			"埃拉克堡",
-			"特莱滕堡",
+			"猎场堡",
 			"通堡",
 			"罗思堡",
 			"桑能堡",

@@ -8,10 +8,10 @@ this.large_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"苍鹭要塞",
 			"戍卫要塞",
 			"国王要塞",
-			"伯爵要塞",
+			"擢爵要塞",
 			"白之要塞",
 			"围场要塞",
-			"柳树要塞",
+			"草场要塞",
 			"洪原要塞",
 			"亲卫要塞",
 			"皇冠要塞",
@@ -24,7 +24,7 @@ this.large_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"旷野要塞",
 			"殿堂要塞",
 			"大麦要塞",
-			"井之要塞",
+			"打井要塞",
 			"露水要塞"
 		]);
 		this.m.DraftList = [

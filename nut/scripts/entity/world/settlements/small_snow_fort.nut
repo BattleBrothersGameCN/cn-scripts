@@ -13,7 +13,7 @@ this.small_snow_fort <- this.inherit("scripts/entity/world/settlement", {
 			"角之塔",
 			"夏之芽",
 			"布拉明沃德",
-			"瓦尔德加德",
+			"岩山卫",
 			"诺尔沃德",
 			"碧克托恩",
 			"唐纳斯沃尔德",

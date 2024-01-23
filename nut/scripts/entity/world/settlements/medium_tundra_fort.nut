@@ -13,7 +13,7 @@ this.medium_tundra_fort <- this.inherit("scripts/entity/world/settlement", {
 			"霍姆斯加德",
 			"萨默斯霍尔姆",
 			"布拉明霍尔姆",
-			"瓦尔德加德",
+			"岩山卫",
 			"诺雷霍尔姆",
 			"比耶赫维尔",
 			"唐纳斯加德",

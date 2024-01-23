@@ -15,7 +15,7 @@ this.large_coast_fort <- this.inherit("scripts/entity/world/settlement", {
 			"鳗鱼要塞",
 			"风暴要塞",
 			"存在要塞",
-			"丘陵要塞",
+			"沙丘要塞",
 			"海之边境要塞",
 			"海岸要塞",
 			"雨之要塞",

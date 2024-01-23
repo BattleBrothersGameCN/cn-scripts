@@ -19,7 +19,7 @@ this.small_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"索默斯塔德",
 			"霍恩",
 			"布拉明",
-			"瓦尔德",
+			"岩镇",
 			"诺尔",
 			"维斯塔特",
 			"奥尔宾",

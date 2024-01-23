@@ -25,7 +25,7 @@ this.large_lumber_village <- this.inherit("scripts/entity/world/settlement", {
 			"密林边城",
 			"幽林边城",
 			"国王之森",
-			"伯爵林地",
+			"擢爵林地",
 			"国王林地"
 		]);
 		this.m.DraftList = [
