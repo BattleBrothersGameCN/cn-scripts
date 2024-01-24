@@ -8,8 +8,8 @@ this.new_trained_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.trained";
-		this.m.Name = "训练经验(Training Experience)";
-		this.m.Description = "这个角色最近有幸与经验丰富的战士一起训练和学习，他已经浸透了知识，现在需要运用他在战场上所学的知识，以便完全掌握并使之成为自己的。";
+		this.m.Name = "训练经历";
+		this.m.Description = "这个角色最近有幸与经验丰富的战士一起训练和学习，他已经浸透了知识，现在需要学以致用。";
 		this.m.Icon = "skills/status_effect_62.png";
 		this.m.Type = this.m.Type | this.Const.SkillType.StatusEffect;
 	}
@@ -38,7 +38,7 @@ this.new_trained_effect <- this.inherit("scripts/skills/skill", {
 			id = 7,
 			type = "hint",
 			icon = "ui/icons/action_points.png",
-			text = "将在" + (this.m.Duration - this.m.Battles) + "场战斗之后消失"
+			text = "将在" + (this.m.Duration - this.m.Battles) + "场战斗之后失效"
 		});
 		return ret;
 	}

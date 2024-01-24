@@ -9,11 +9,11 @@ this.small_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"迈尔维克",
 			"桑德多夫",
 			"桑维克",
-			"霍尔尼斯",
+			"冻鱼镇",
 			"霍尔姆维克",
 			"尼维克",
 			"哈特伦德",
-			"斯托尔",
+			"树桩乡",
 			"海滨村",
 			"桑德坎普",
 			"沙丘",
@@ -21,12 +21,12 @@ this.small_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"桑德海姆",
 			"塞坎普",
 			"克拉肯多夫",
-			"白水村",
+			"苍水村",
 			"哈肯西",
 			"奥特恩多夫",
 			"塞费尔德",
 			"霍拉姆",
-			"克鲁姆角",
+			"表土岬",
 			"哥特蒙德",
 			"安格尔恩",
 			"桑德霍尔姆",
@@ -36,7 +36,7 @@ this.small_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"苏德桑德",
 			"格罗森科格",
 			"阿尔贝克",
-			"堤防"
+			"海堤镇"
 		]);
 		this.m.DraftList = [
 			"beggar_background",

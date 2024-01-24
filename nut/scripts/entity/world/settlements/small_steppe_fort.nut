@@ -14,7 +14,7 @@ this.small_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"松韵威尔",
 			"西格沃特",
 			"尚茨塔尔",
-			"苏德尚策堡",
+			"南风砦",
 			"斯特劳希瓦赫特",
 			"卡格沃尔",
 			"多恩沃尔",

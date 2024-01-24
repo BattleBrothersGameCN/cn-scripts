@@ -12,7 +12,7 @@ this.small_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"斯泰因瓦赫特",
 			"艾森沃尔",
 			"贾德沃尔",
-			"霍恩山策",
+			"高山砦",
 			"瓦尔海姆",
 			"格罗南沃尔",
 			"萨瓦赫特",

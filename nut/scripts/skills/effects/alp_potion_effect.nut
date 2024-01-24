@@ -16,7 +16,7 @@ this.alp_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这名角色的眼睛已经突变，可以更快、更剧烈地对低光环境做出反应。因此，他们几乎可以在夜间拥有与白天相当的视力。";
+		return "这名角色的眼睛已经突变，可以更快、更剧烈地对低光环境做出反应。拜其所赐，他们夜间的视力可以与白天相当。";
 	}
 
 	function getTooltip()
@@ -42,7 +42,7 @@ this.alp_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 12,
 				type = "hint",
 				icon = "ui/tooltips/warning.png",
-				text = "下次喝下突变药剂时会导致更长时间的疾病"
+				text = "下次喝下突变药剂会导致更长时间的疾病"
 			}
 		];
 		return ret;

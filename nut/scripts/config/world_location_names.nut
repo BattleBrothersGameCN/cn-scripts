@@ -12,7 +12,7 @@ if (!("Location" in gt.Const.World))
 
 gt.Const.World.LocationNames.VillageWestern <- [
 	"维森多夫",
-	"艾克索恩",
+	"麋鹿岬",
 	"登科瓦尔德",
 	"奥特多弗",
 	"瓦伦多弗",

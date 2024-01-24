@@ -5,7 +5,7 @@ this.hangover_effect <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "effects.hangover";
 		this.m.Name = "宿醉";
-		this.m.Description = "不要那么大声！这个角色受到了近来过度饮酒的影响。";
+		this.m.Description = "小点声！这个角色受到了近来过度饮酒的影响。";
 		this.m.Icon = "skills/status_effect_62.png";
 		this.m.Type = this.m.Type | this.Const.SkillType.StatusEffect | this.Const.SkillType.SemiInjury;
 		this.m.IsHealingMentioned = false;

@@ -6,7 +6,7 @@ this.acid_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.acid";
-		this.m.Name = "被喷酸";
+		this.m.Name = "酸液溅浸";
 		this.m.Icon = "skills/status_effect_78.png";
 		this.m.IconMini = "status_effect_78_mini";
 		this.m.SoundOnUse = [

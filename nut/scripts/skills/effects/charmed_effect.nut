@@ -37,7 +37,7 @@ this.charmed_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色被魅惑了。他无法再控制自己的行为，成了一个除去服从主人之外别无选择的木偶。将在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合后消退。\n\n角色的决心越高，抵抗魅惑的几率就越高。";
+		return "这个角色被魅惑了。他对自己的行为失去控制，成了主人的提线木偶。将在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合后消退。\n\n角色的决心越高，抵抗魅惑的几率就越高。";
 	}
 
 	function addTurns( _t )

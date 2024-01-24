@@ -23,7 +23,7 @@ this.medium_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"剑堡",
 			"兰岑堡",
 			"天空堡",
-			"格拉尼切恩茨",
+			"花岗岩砦",
 			"艾尔茨堡",
 			"沃尔肯堡",
 			"霍赫堡",

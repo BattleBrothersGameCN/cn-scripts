@@ -5,7 +5,7 @@ this.exhausted_effect <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "effects.exhausted";
 		this.m.Name = "筋疲力尽";
-		this.m.Description = "最近发生的事件使这个角色身体疲惫不堪，几乎无法跟上战团的其他成员，更不用说战斗了。休息几天应该会有效果。";
+		this.m.Description = "最近发生的事件使这个角色身体疲惫不堪，光是行军都险些掉队，更不用说战斗了。休息几天应该会有效果。";
 		this.m.Icon = "skills/status_effect_53.png";
 		this.m.IconMini = "status_effect_53_mini";
 		this.m.Type = this.m.Type | this.Const.SkillType.StatusEffect | this.Const.SkillType.SemiInjury;

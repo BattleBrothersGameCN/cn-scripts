@@ -18,7 +18,7 @@ this.direwolf_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的肌肉已经发生了变异并对动作的突变产生了不同的反应。中途中断或中断动作会积累更少疲劳，因此可以从打偏或被格挡的攻击中快速恢复过来。";
+		return "这个角色的肌肉已经发生了变异，对运动神经冲动的反应发生改变。中途中断或停止动作不容易疲劳，更容易从失手或被格挡的攻击中恢复。";
 	}
 
 	function getTooltip()
@@ -44,7 +44,7 @@ this.direwolf_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 12,
 				type = "hint",
 				icon = "ui/tooltips/warning.png",
-				text = "下次喝下突变药剂时会导致更长时间的疾病"
+				text = "下次喝下突变药剂会导致更长时间的疾病"
 			}
 		];
 		return ret;

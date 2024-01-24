@@ -6,7 +6,7 @@ this.large_farming_village <- this.inherit("scripts/entity/world/settlement", {
 		this.m.Name = this.getRandomName([
 			"草场边城",
 			"天空边城",
-			"烧水之地",
+			"沸水地",
 			"老镇",
 			"仓促边城",
 			"新边疆",
@@ -19,7 +19,7 @@ this.large_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"国王之地",
 			"三爵镇",
 			"围场镇",
-			"飞鸟边城",
+			"蕨之边城",
 			"冰雹之地",
 			"叠石镇",
 			"草地边城",

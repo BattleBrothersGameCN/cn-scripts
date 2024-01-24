@@ -36,13 +36,13 @@ this.ancient_priest_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/morale.png",
-				text = "士气无法降低至溃逃，只能达到瓦解"
+				text = "士气最低降至瓦解，不会溃逃"
 			},
 			{
 				id = 12,
 				type = "hint",
 				icon = "ui/tooltips/warning.png",
-				text = "下次喝下突变药剂时会导致更长时间的疾病"
+				text = "下次喝下突变药剂会导致更长时间的疾病"
 			}
 		];
 		return ret;

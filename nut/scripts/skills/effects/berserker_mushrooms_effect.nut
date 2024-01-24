@@ -18,7 +18,7 @@ this.berserker_mushrooms_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "杀戮！！！这个角色正处于蘑菇引起的迷幻狂怒状态中，只想粉碎并毁灭挡在他面前的任何活物，而且压根不在乎自身安全。粉碎！！！ 毁灭！！！";
+		return "杀戮！！！这个角色正处于蘑菇引起的迷幻狂怒状态中，对于自身安全不怎么在乎，只想粉碎并毁灭挡在他面前的任何活物。粉碎！！！ 毁灭！！！";
 	}
 
 	function getTooltip()

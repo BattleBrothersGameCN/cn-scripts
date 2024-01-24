@@ -4,8 +4,8 @@ this.raided_situation <- this.inherit("scripts/entity/world/settlements/situatio
 	{
 		this.situation.create();
 		this.m.ID = "situation.raided";
-		this.m.Name = "掠夺";
-		this.m.Description = "这地方最近被掠夺了！它遭受了破坏，失去了宝贵的货物和补给，生命也因此丧失了。";
+		this.m.Name = "被掠夺";
+		this.m.Description = "这地方最近被掠夺了！它遭受了破坏，失去了宝贵的货物和补给，许多人因此丧命。";
 		this.m.Icon = "ui/settlement_status/settlement_effect_08.png";
 		this.m.Rumors = [
 			"你是掠袭者吗？当然，看起来和闻起来都像！你的人抢劫 %settlement%？离开这里，我说，我们不想你们这种人在身边！",

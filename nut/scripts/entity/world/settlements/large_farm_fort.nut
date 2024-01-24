@@ -8,7 +8,7 @@ this.large_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"苍鹭要塞",
 			"戍卫要塞",
 			"国王要塞",
-			"擢爵要塞",
+			"擢爵砦",
 			"白之要塞",
 			"围场要塞",
 			"草场要塞",
@@ -19,13 +19,13 @@ this.large_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"刨刀要塞",
 			"绿地要塞",
 			"阔地要塞",
-			"雄狮要塞",
+			"雄狮砦",
 			"牧场要塞",
 			"旷野要塞",
 			"殿堂要塞",
 			"大麦要塞",
 			"打井要塞",
-			"露水要塞"
+			"露水砦"
 		]);
 		this.m.DraftList = [
 			"apprentice_background",

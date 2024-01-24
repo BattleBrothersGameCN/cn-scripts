@@ -16,7 +16,7 @@ this.apotheosis_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色摄入了一种特别强效的兴奋剂。虽然其给药机制本身具有革命性，但这种药物本身并不像其华丽的名称所暗示的那样强大。";
+		return "该角色摄入了一种特别强效的兴奋剂。虽然其给药机制具有革命性，但这种药物并不像其华丽的名称所暗示的那样强大。";
 	}
 
 	function getTooltip()
@@ -48,7 +48,7 @@ this.apotheosis_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 12,
 				type = "hint",
 				icon = "ui/tooltips/warning.png",
-				text = "下次喝下突变药剂时会导致更长时间的疾病"
+				text = "下次喝下突变药剂会导致更长时间的疾病"
 			}
 		];
 		return ret;

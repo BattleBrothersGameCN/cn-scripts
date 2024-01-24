@@ -37,7 +37,7 @@ this.small_swamp_fort <- this.inherit("scripts/entity/world/settlement", {
 			"布鲁赫瓦赫特",
 			"里德韦尔",
 			"罗尔沃尔",
-			"达斯特沃尔"
+			"暗林寨"
 		]);
 		this.m.DraftList = [
 			"cultist_background",

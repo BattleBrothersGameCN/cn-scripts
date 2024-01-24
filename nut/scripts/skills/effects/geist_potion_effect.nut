@@ -42,7 +42,7 @@ this.geist_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 12,
 				type = "hint",
 				icon = "ui/tooltips/warning.png",
-				text = "下次喝下突变药剂时会导致更长时间的疾病"
+				text = "下次喝下突变药剂会导致更长时间的疾病"
 			}
 		];
 		return ret;
