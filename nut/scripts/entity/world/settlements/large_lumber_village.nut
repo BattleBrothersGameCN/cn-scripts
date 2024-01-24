@@ -13,7 +13,7 @@ this.large_lumber_village <- this.inherit("scripts/entity/world/settlement", {
 			"橡树镇",
 			"鸮鹰边城",
 			"冰雹之地",
-			"Waid镇",
+			"菘蓝镇",
 			"车运镇",
 			"马鹿边城",
 			"村庄镇",

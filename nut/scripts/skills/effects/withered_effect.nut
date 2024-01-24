@@ -17,7 +17,7 @@ this.withered_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的身体素质被黑暗魔法凋零到了老年的模样。效果会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合中慢慢消失。";
+		return "这个角色的身体素质被黑暗魔法凋零到了老年的模样。效果会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合中慢慢消退。";
 	}
 
 	function getTooltip()

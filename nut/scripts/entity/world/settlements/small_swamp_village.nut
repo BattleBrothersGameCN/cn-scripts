@@ -21,7 +21,7 @@ this.small_swamp_village <- this.inherit("scripts/entity/world/settlement", {
 			"阿伦",
 			"苏德尔布什",
 			"阿尔滕福斯",
-			"布赖滕布伦",
+			"阔泽",
 			"格伦巴赫",
 			"绿水村",
 			"施马尔福特",
