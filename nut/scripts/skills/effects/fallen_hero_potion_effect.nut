@@ -16,7 +16,7 @@ this.fallen_hero_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的身体面对物理创伤会反应式的分泌一种含钙物质，会使被冲击处的肌肉反射式的收缩以最小化肌肉损伤。";
+		return "这个角色的身体面对物理创伤会反应式的分泌一种含钙物质，使被冲击处的肌肉反射式的收缩从而最小化肌肉损伤。";
 	}
 
 	function getTooltip()

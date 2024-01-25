@@ -16,7 +16,7 @@ this.geist_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色能够分泌一种在刺激时能够快速振动的物质。当应用于武器时，这会产生强大的动能力量，有助于穿透护甲。";
+		return "这个角色能够分泌一种在受刺激时快速振动的物质。当应用于武器时，这会产生强大的动能力量，有助于穿透护甲。";
 	}
 
 	function getTooltip()

@@ -25,7 +25,7 @@ this.anatomist_bummed_at_mutations_event <- this.inherit("scripts/events/event",
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.250000, "因突变而变化的事情令他感到不安。");
+				_event.m.Anatomist.worsenMood(1.250000, "变异对他的改变令他感到不安。");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

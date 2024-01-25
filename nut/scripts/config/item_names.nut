@@ -201,7 +201,7 @@ gt.Const.Strings.PikeNames <- [
 	"针鞘"
 ];
 gt.Const.Strings.BillNames <- [
-	"打谷者",
+	"狂舞者",
 	"镰",
 	"钩镰",
 	"长柄刀刃",
@@ -778,7 +778,7 @@ gt.Const.Strings.WardogNames <- [
 	"大人",
 	"卡西欧",
 	"爪爪",
-	"拉什",
+	"抽打者",
 	"大头",
 	"瘦仔",
 	"尖刺",

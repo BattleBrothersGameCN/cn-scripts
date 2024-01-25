@@ -939,7 +939,7 @@ gt.Const.Strings.KrakenNames <- [
 	"卡阿斯鲁·毁灭者(Kha-Athlu the All-Ender)",
 	"不朽者沙加鲁斯(Shaggaruth the Unending)",
 	"无尽喉咙 (Gla-Oth the Endless Maw)",
-	"古沼洛克·千臂打谷者(Gu-Shogg the Thousand-Armed Thresherg)",
+	"古沼洛克·千臂乱舞者(Gu-Shogg the Thousand-Armed Thresherg)",
 	"万物元首·赫坦纳希提",
 	"世界吞噬者夏舒塔尔(Xa-Shutar the Eater of Worlds)",
 	"托霍乔斯·全能终结者(Thohochoth the All-Ender)",

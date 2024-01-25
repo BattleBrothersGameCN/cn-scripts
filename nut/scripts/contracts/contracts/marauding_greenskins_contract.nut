@@ -416,7 +416,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 			List = [],
 			Options = [
 				{
-					Text = "我们必须接近。",
+					Text = "他们就在附近。",
 					function getResult()
 					{
 						return 0;
@@ -433,7 +433,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 			List = [],
 			Options = [
 				{
-					Text = "我们必须接近。",
+					Text = "他们就在附近。",
 					function getResult()
 					{
 						return 0;

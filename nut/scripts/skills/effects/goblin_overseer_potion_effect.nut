@@ -16,7 +16,7 @@ this.goblin_overseer_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色的眼睛已经永久性变异，现在能够感知风和空气的最微妙的移动。虽然这看似微不足道，但使他们能够更好地预测发射攻击的轨迹，并更好地攻击目标的易受打击部位。";
+		return "该角色的眼睛已经永久性变异，现在能够感知风和空气的最微妙的移动。虽然这看似微不足道，但使他能够更好地预测投射攻击的轨迹，更好地攻击目标的防护薄弱部位。";
 	}
 
 	function getTooltip()
@@ -36,7 +36,7 @@ this.goblin_overseer_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/direct_damage.png",
-				text = "使用弓或弩时可造成额外的 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color] 无视护甲的伤害"
+				text = "使用弓或弩时额外造成 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color] 无视护甲的伤害"
 			},
 			{
 				id = 12,
