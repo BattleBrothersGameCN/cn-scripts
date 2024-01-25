@@ -5,7 +5,7 @@ this.insect_swarm_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.insect_swarm";
-		this.m.Name = "虫群";
+		this.m.Name = "虫群笼罩";
 		this.m.Icon = "skills/status_effect_57.png";
 		this.m.IconMini = "status_effect_57_mini";
 		this.m.Overlay = "status_effect_57";

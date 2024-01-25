@@ -18,7 +18,7 @@ this.night_vision_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "多亏了一瓶炼金术的精华，对这个角色而言夜晚就和白天一样明亮。";
+		return "多亏了一瓶炼金术的精华，这个角色眼中的夜晚亮如白昼。";
 	}
 
 	function getTooltip()

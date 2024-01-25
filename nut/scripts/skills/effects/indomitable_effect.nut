@@ -14,7 +14,7 @@ this.indomitable_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色已经聚集了他们所有的体力和意志力，变得不屈不挠，直到下一个回合。";
+		return "这个角色已经聚集了他所有的体力和意志力，变得不屈不挠，直到下一个回合。";
 	}
 
 	function getTooltip()
@@ -34,7 +34,7 @@ this.indomitable_effect <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "只受到 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 所有伤害"
+				text = "受到的所有伤害降至 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]"
 			},
 			{
 				id = 6,

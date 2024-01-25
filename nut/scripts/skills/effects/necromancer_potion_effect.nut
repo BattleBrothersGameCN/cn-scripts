@@ -16,7 +16,7 @@ this.necromancer_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色有着关于事物过去怎样及未来如何的奇怪幻视。虽然没法用来在营火边活跃气氛，但似乎确实能使他可以快速关联并吸收新的经验。";
+		return "这个角色有着关于事物过去和未来的奇怪幻视。虽然没法用来在营火边活跃气氛，但似乎确实能使他可以更快的将事物联系起来并吸收新的经验。";
 	}
 
 	function getTooltip()

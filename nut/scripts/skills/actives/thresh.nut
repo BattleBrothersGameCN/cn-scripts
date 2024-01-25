@@ -5,7 +5,7 @@ this.thresh <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.thresh";
-		this.m.Name = "打谷";
+		this.m.Name = "狂舞挥打";
 		this.m.Description = "用一个不顾后果的环形大挥击把你周围的所有目标打谷一样来一轮，敌人和朋友一个待遇。不难躲开，因为它没有针对任何目标，但如果它连贯起来，可能会是毁灭性的。有几率击晕击中的目标一个回合。小心你身边的自己人，除非你想降工资！";
 		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_46.png";

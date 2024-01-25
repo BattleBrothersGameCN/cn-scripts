@@ -16,7 +16,7 @@ this.nachzehrer_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色的身体变异，使得皮肤和肌肉组织再生速度比正常情况下快得多。由此，深层伤口的愈合速度比正常情况下更快。另外他也开始变得特别喜欢带血肉，但那应该是无关的。";
+		return "该角色的身体变异使得其皮肤和肌肉组织能异常快速地再生。得益于此，深层伤口的愈合速度比正常情况下更快。另外他也开始变得特别喜欢生肉，但这和他的再生能力应该没什么关系。";
 	}
 
 	function getTooltip()

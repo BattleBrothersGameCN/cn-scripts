@@ -3,7 +3,7 @@ this.gruesome_feast_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.gruesome_feast";
-		this.m.Name = "享用了盛宴";
+		this.m.Name = "大快朵颐";
 		this.m.Icon = "skills/status_effect_10.png";
 		this.m.IconMini = "status_effect_10_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect;

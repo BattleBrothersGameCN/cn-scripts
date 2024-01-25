@@ -16,7 +16,7 @@ this.honor_guard_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的皮肤和皮下组织已经突变，能够迅速缝合在一起。这种效果在小的穿刺伤口上最为明显，因为那里的肉可以从各个方向均匀地封闭伤口。";
+		return "这个角色的皮肤和皮下组织已经突变，能够迅速自发地缝合在一起。这种效果在小的穿刺伤口上最为明显，因为那里的肉可以从各个方向均匀地封闭伤口。";
 	}
 
 	function getTooltip()

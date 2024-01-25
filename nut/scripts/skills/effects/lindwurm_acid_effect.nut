@@ -6,7 +6,7 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.lindwurm_acid";
-		this.m.Name = "沾上酸液";
+		this.m.Name = "酸液溅浸";
 		this.m.Icon = "skills/status_effect_78.png";
 		this.m.IconMini = "status_effect_78_mini";
 		this.m.SoundOnUse = [
@@ -21,7 +21,7 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的盔甲被喷溅了林德蠕龙的酸液，现在酸液正在慢慢地腐蚀盔甲。(剩余 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色的盔甲被喷溅了林德蠕龙的酸液，现在酸液正在慢慢地腐蚀盔甲。剩余 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
 	}
 
 	function getTooltip()

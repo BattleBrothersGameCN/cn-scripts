@@ -16,7 +16,7 @@ this.kraken_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色从某种无限的力量源中汲取力量，其健康和耐力相当于两个人。你假装没有注意到他留下的被掏空内脏的尸体。";
+		return "该角色从某种无限的源泉中汲取力量，其健康和耐力倍于常人。你假装没有注意到他身后留下的掏空内脏的尸体。";
 	}
 
 	function getTooltip()

@@ -27,7 +27,7 @@ this.nightmare_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色被非自然的噩梦吞噬，无法行动。 当恐怖吞噬他的理智时，他会受到 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.getDamage() + "[/color] 每回合基于他的决心值造成伤害。角色可以被附近的盟友强制唤醒，但他自己不会醒来。";
+		return "这个角色被非自然的噩梦吞噬，无法行动。随着恐怖渐渐吞噬他的理智，基于决心值，每回合会受到 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.getDamage() + "[/color] 点伤害。角色可以被附近的盟友强制唤醒，但他自己不会醒来。";
 	}
 
 	function getTooltip()

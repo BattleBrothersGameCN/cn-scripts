@@ -6,7 +6,7 @@ this.holy_water_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.holy_water";
-		this.m.Name = "沾上圣水";
+		this.m.Name = "圣水溅浸";
 		this.m.Icon = "skills/status_effect_68.png";
 		this.m.IconMini = "status_effect_68_mini";
 		this.m.Overlay = "status_effect_68";

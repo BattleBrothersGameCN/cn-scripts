@@ -16,7 +16,7 @@ this.hyena_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "当这个角色的皮肤破损时会分泌一种能极大加快该部位凝血速度的物质。因此，出血伤口的伤害要小得多，尽管仍会有一些失血。";
+		return "当这个角色的皮肤破损时会分泌一种能极大加快该部位凝血速度的物质。因此，出血伤口的伤害要小得多，但不免仍有一些失血。";
 	}
 
 	function getTooltip()

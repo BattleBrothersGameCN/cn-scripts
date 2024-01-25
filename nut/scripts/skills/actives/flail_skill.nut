@@ -3,7 +3,7 @@ this.flail_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.flail";
-		this.m.Name = "雹击";
+		this.m.Name = "链枷打击";
 		this.m.Description = "向对手甩击。伤害有点难以预测，但能够绕过盾牌的掩护。";
 		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_39.png";

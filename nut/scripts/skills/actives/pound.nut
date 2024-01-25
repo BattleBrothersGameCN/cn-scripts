@@ -5,7 +5,7 @@ this.pound <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.pound";
-		this.m.Name = "砸击";
+		this.m.Name = "重磅打击";
 		this.m.Description = "用链条和敲击头将目标敲入地面。有点难以估计，但如果运气好的话，可以越过或绕过盾牌的掩护。一个被强力击中的目标可能会昏迷一个回合。";
 		this.m.KilledString = "砸击致死";
 		this.m.Icon = "skills/active_50.png";

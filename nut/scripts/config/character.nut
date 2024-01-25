@@ -315,8 +315,8 @@ gt.Const.FatigueStateName <- [
 gt.Const.ArmorStateName <- [
 	"",
 	"四分五裂",
-	"存在凹陷",
-	"刮痕累累",
+	"坑坑洼洼",
+	"刮痕寥寥",
 	"完好无损"
 ];
 gt.Const.MoodChange <- {

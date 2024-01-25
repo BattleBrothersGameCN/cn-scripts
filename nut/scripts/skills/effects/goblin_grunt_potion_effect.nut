@@ -16,7 +16,7 @@ this.goblin_grunt_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的腿部基因发生了突变，允许他们进行更为流畅和快速的迅猛动作。在休息时，偶尔能看到肌肉还在皮肤下面抽动。";
+		return "这个角色的腿部发生了变异，使他能流畅和迅速的做出突然且复杂的动作。在休息时，偶尔能看到肌肉还在皮肤下面抽动。";
 	}
 
 	function getTooltip()

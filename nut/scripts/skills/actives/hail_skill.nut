@@ -3,7 +3,7 @@ this.hail_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.hail";
-		this.m.Name = "冰雹击";
+		this.m.Name = "劈头盖脸";
 		this.m.Description = "瞄准对手的头。三个头的每一个都可以单独命中并造成武器伤害的三分之一，并能绕过盾牌的掩护。";
 		this.m.Icon = "skills/active_126.png";
 		this.m.IconDisabled = "skills/active_126_sw.png";
