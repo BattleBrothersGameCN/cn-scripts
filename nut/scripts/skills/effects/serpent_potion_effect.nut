@@ -3,7 +3,7 @@ this.serpent_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.serpent_potion";
-		this.m.Name = "强化投机";
+		this.m.Name = "趁火打劫";
 		this.m.Icon = "skills/status_effect_142.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_142";
@@ -36,7 +36,7 @@ this.serpent_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "每有一个盟友包围攻击目标获得额外 [color=" + this.Const.UI.Color.PositiveValue + "]+3%[/color] 近战命中率"
+				text = "攻击目标周围每有一名盟友，近战命中率提升 [color=" + this.Const.UI.Color.PositiveValue + "]+3%[/color]"
 			},
 			{
 				id = 12,

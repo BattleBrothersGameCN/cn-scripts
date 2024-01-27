@@ -5,7 +5,7 @@ this.withered_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.withered";
-		this.m.Name = "老化";
+		this.m.Name = "凋零";
 		this.m.Icon = "skills/status_effect_123.png";
 		this.m.IconMini = "status_effect_123_mini";
 		this.m.Overlay = "status_effect_123";

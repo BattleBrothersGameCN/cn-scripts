@@ -36,13 +36,13 @@ this.rachegeist_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/regular_damage.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+25%[/color]伤害当生命值低于[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+25%[/color]伤害，前提是生命值低于[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]"
 			},
 			{
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "只受到[color=" + this.Const.UI.Color.PositiveValue + "]75%[/color]任何伤害, 当生命值低于[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]"
+				text = "受到的伤害降低到[color=" + this.Const.UI.Color.PositiveValue + "]75%[/color], 前提是生命值低于[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]"
 			},
 			{
 				id = 12,

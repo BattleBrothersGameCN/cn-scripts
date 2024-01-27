@@ -101,7 +101,7 @@ this.overhead_strike <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "命中时有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.StunChance + "%[/color] 几率造成击晕"
+				text = "命中时有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.StunChance + "%[/color] 几率造成昏迷"
 			});
 		}
 

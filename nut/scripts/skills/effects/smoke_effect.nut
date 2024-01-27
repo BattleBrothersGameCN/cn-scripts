@@ -14,7 +14,7 @@ this.smoke_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色被层层浓烟所笼罩。在不停的时隐时现中，他们可以自由移动并忽略任何控制区域。";
+		return "这个角色被层层浓烟所笼罩。烟雾中的景象忽隐忽现，让他们有机会无视控制区域自由移动。";
 	}
 
 	function getTooltip()

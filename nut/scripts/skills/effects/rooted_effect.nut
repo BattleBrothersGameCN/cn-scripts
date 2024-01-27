@@ -4,7 +4,7 @@ this.rooted_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.rooted";
 		this.m.Name = "困在藤蔓里";
-		this.m.Description = "非自然长出的茂密藤蔓将这个角色固定在了原地并阻碍了他自我保护的能力。想要挣脱，藤蔓必须被砍掉。";
+		this.m.Description = "非自然长出的茂密藤蔓将这个角色固定在了原地并阻碍了他自我保护的能力。只有砍掉藤蔓才能挣脱。";
 		this.m.Icon = "skills/status_effect_55.png";
 		this.m.IconMini = "status_effect_55_mini";
 		this.m.Overlay = "status_effect_55";

@@ -8,7 +8,7 @@ this.bowyer_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.Icon = "ui/backgrounds/background_29.png";
 		this.m.BackgroundDescription = "弓匠通常对如何使用他们以前制造的远程武器有一定的了解。";
 		this.m.GoodEnding = "在一次比武上，一个年轻男孩使用了一支形状奇特但制作完美的弓。他瞄准时手有些颤抖，但射出的箭却没有晃动。在他赢得比赛后，你询问这个男孩从哪里得到了这么了不起的弓。他说是一位名叫%name%的弓匠造的。显然，他以制作世界上最好的弓而闻名！";
-		this.m.BadEnding = "你离开%companyname%后，曾寄信询问弓匠%name%的近况。你得到消息称，他发现了一种制作最好弓的方法，并没有将这个秘密告诉战团，而是离开去开创自己的事业。他没走多远：他所学到的一切都随着他一起死在了{北 | 南 | 西 | 东}边的一条泥泞的路上，讽刺的是，他的身体上被刺了据说一打的箭。";
+		this.m.BadEnding = "你离开%companyname%后，曾寄信询问弓匠%name%的近况。你得到消息称，他发现了一种制作最好弓的方法，并没有将这个秘密告诉战团，而是离开去开创自己的事业。他没走多远：他所学到的一切都随着他一起死在了{北 | 南 | 西 | 东}边的一条泥泞的路上，讽刺的是，他的身体上扎着据说一打的箭。";
 		this.m.HiringCost = 80;
 		this.m.DailyCost = 8;
 		this.m.Excluded = [

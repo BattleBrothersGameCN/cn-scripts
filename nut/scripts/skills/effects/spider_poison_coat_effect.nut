@@ -16,7 +16,7 @@ this.spider_poison_coat_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色正在使用一把涂有浓缩织网者毒液的武器。接下来的几次攻击如果至少造成[color=" + this.Const.UI.Color.NegativeValue + "]" + this.Const.Combat.PoisonEffectMinDamage + "[/color]生命值伤害则使目标中毒。受影响的目标在效果消失之前每回合失去[color=" + this.Const.UI.Color.NegativeValue + "]10[/color]生命值";
+		return "这个角色正在使用一把涂有浓缩织网者毒液的武器。接下来的几次攻击如果至少造成[color=" + this.Const.UI.Color.NegativeValue + "]" + this.Const.Combat.PoisonEffectMinDamage + "[/color] 点生命值伤害则使目标中毒。受影响的目标在效果消失之前每回合失去[color=" + this.Const.UI.Color.NegativeValue + "]10[/color]生命值";
 	}
 
 	function getTooltip()

@@ -39,7 +39,7 @@ this.orc_berserker_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "该角色每次受到生命值伤害时获得两层狂暴，并在每回合结束时失去一层。"
+				text = "该角色每次受到生命值伤害时获得两层狂暴，每回合结束时失去一层。"
 			},
 			{
 				id = 12,
@@ -62,7 +62,7 @@ this.orc_berserker_potion_effect <- this.inherit("scripts/skills/skill", {
 					id = 12,
 					type = "text",
 					icon = "ui/icons/damage_dealt.png",
-					text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.RageStacks + "[/color] 伤害"
+					text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.RageStacks + "[/color] 伤害输出"
 				},
 				{
 					id = 12,
@@ -90,7 +90,7 @@ this.orc_berserker_potion_effect <- this.inherit("scripts/skills/skill", {
 		if (!actor.isHiddenToPlayer())
 		{
 			this.spawnIcon("status_effect_143", actor.getTile());
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + " 获得愤怒！");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + " 获得狂暴！");
 		}
 	}
 

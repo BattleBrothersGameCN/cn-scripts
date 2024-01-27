@@ -1169,7 +1169,7 @@ this.skill <- {
 		{
 			ret.push({
 				icon = "ui/tooltips/negative.png",
-				text = "免疫击晕"
+				text = "免疫昏迷"
 			});
 		}
 
@@ -1193,7 +1193,7 @@ this.skill <- {
 		{
 			ret.push({
 				icon = "ui/tooltips/negative.png",
-				text = "免疫撞退或钩拉"
+				text = "免疫击退和钩拽技能"
 			});
 		}
 

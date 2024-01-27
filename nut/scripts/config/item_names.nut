@@ -280,7 +280,7 @@ gt.Const.Strings.DaggerNames <- [
 	"小剑",
 	"胫刃",
 	"毒刃",
-	"线针",
+	"刺针",
 	"剔骨刀"
 ];
 gt.Const.Strings.CrossbowNames <- [

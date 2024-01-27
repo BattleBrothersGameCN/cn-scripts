@@ -4,7 +4,7 @@ this.nine_lives_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.nine_lives";
 		this.m.Name = "猫有九命";
-		this.m.Description = "这个角色似乎有九条命！刚刚经历了与死亡的近距离接触后，他们的求生意志在下一回合之前都将特别强烈。";
+		this.m.Description = "这个角色死里逃生！刚刚与死亡擦肩而过，他们的求生意志在下回合到来之前都特别强烈。";
 		this.m.Icon = "ui/perks/perk_07.png";
 		this.m.IconMini = "perk_07_mini";
 		this.m.Overlay = "perk_07";

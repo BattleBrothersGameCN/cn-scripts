@@ -48,7 +48,7 @@ this.return_favor <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "获得 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 的概率使任何在近战攻击时没有击中此角色的对手晕眩（仍然存在抗性和免疫能力）。"
+				text = "获得 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 的概率使任何在近战攻击时没有击中此角色的对手昏迷（仍然存在抗性和免疫能力）。"
 			}
 		];
 		return ret;

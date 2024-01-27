@@ -46,7 +46,7 @@ this.deathblow_skill <- this.inherit("scripts/skills/skill", {
 			id = 8,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "当目标带有茫然、击晕或被困在网中的状态效果时，造成 [color=" + this.Const.UI.Color.DamageValue + "]33%[/color] 额外伤害，并额外穿透 [color=" + this.Const.UI.Color.DamageValue + "]20%[/color] 护甲"
+			text = "当目标带有茫然、昏迷或被困在网中的状态效果时，造成 [color=" + this.Const.UI.Color.DamageValue + "]33%[/color] 额外伤害，并额外穿透 [color=" + this.Const.UI.Color.DamageValue + "]20%[/color] 护甲"
 		});
 		return ret;
 	}
