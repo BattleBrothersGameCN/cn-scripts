@@ -16,7 +16,7 @@ this.skeleton_warrior_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的身体经过基因突变，使他们能够将肢体锁定在某些位置上，几乎可以无限期地保持，这使他们能够轻松抵御攻击。";
+		return "这个角色的身体发生变异，使他们能够将肢体无限期固定在某些位置上，这使他们能够轻松抵御攻击。";
 	}
 
 	function getTooltip()

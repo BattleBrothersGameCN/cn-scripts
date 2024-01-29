@@ -36,7 +36,7 @@ this.orc_warrior_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "有 ]33%[/color] chance 的几率抵抗茫然、踉跄、眩晕、分神和凋零效果"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]33%[/color] 的几率抵抗茫然、踉跄、昏迷、分神和凋零效果"
 			},
 			{
 				id = 12,

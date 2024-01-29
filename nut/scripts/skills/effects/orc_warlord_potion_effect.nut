@@ -3,7 +3,7 @@ this.orc_warlord_potion_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.orc_warlord_potion";
-		this.m.Name = "力量真言药剂";
+		this.m.Name = "力量圣洗";
 		this.m.Icon = "skills/status_effect_130.png";
 		this.m.IconMini = "";
 		this.m.Overlay = "status_effect_130";
@@ -16,7 +16,7 @@ this.orc_warlord_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色的边缘系统被改变，注入了额外的物质，使其能够进行更长时间的特别剧烈的无氧运动。他们的皮肤似乎比你记忆中略微呈绿色，但你肯定那只是巧合。";
+		return "该角色的边缘系统被注入了额外的物质，使其能够进行持久而剧烈的无氧运动。他们的皮肤似乎比你记忆中的更绿一些，但你肯定那只是巧合。";
 	}
 
 	function getTooltip()

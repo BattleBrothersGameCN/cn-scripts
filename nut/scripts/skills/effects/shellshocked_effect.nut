@@ -5,7 +5,7 @@ this.shellshocked_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.shellshocked";
-		this.m.Name = "被炮弹震伤";
+		this.m.Name = "炮火震撼";
 		this.m.Icon = "skills/status_effect_119.png";
 		this.m.IconMini = "status_effect_119_mini";
 		this.m.Overlay = "status_effect_119";
@@ -22,7 +22,7 @@ this.shellshocked_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色在臼炮爆炸附近受到炮弹冲击。他们的耳朵在响，他们的视力模糊，他们有点迷失方向。(剩余 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色在附近的臼炮炮火中受到冲击。他们头晕耳鸣，他们视力模糊，他们有点找不着北。效果会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合中慢慢消退。";
 	}
 
 	function getTooltip()
@@ -89,7 +89,7 @@ this.shellshocked_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "因为他不自然的生理机能抵抗了炮弹震伤");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "因为他不自然的生理机能抵抗了炮火震撼");
 			}
 
 			this.removeSelf();

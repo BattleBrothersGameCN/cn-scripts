@@ -4,8 +4,8 @@ this.seasonal_fair_situation <- this.inherit("scripts/entity/world/settlements/s
 	{
 		this.situation.create();
 		this.m.ID = "situation.seasonal_fair";
-		this.m.Name = "季节性交易会";
-		this.m.Description = "来自四面八方的商人聚集在这里参加季节性交易会。很多人从周围的乡村聚集在这里，现在是出售商品或通过大量的报价进行翻箱倒柜的好时机。";
+		this.m.Name = "时令大集";
+		this.m.Description = "时令大集吸引了来自天南海北的商人。周围乡村的人们大量涌向这里，出售商品或寻珍探宝也正是时候。";
 		this.m.Icon = "ui/settlement_status/settlement_effect_28.png";
 		this.m.Rumors = [
 			"你在问这附近发生了什么事？嗯，%settlement% 有个集市。来自四面八方的商人聚集在一起献上他们的货物。",

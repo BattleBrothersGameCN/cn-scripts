@@ -16,7 +16,7 @@ this.poison_coat_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色正在使用涂有毒药的武器。接下来的几次攻击如果至少造成[color=" + this.Const.UI.Color.NegativeValue + "]" + this.Const.Combat.PoisonEffectMinDamage + "[/color]生命值伤害则使目标中毒。受影响的目标在效果消失之前会视野模糊且行动失衡。";
+		return "这个角色正在使用涂有毒药的武器。接下来的几次攻击如果至少造成[color=" + this.Const.UI.Color.NegativeValue + "]" + this.Const.Combat.PoisonEffectMinDamage + "[/color]点生命值伤害则使目标中毒。受影响的目标在效果消失之前会视野模糊且行动失调。";
 	}
 
 	function getTooltip()

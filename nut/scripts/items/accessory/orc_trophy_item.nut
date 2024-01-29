@@ -57,7 +57,7 @@ this.orc_trophy_item <- this.inherit("scripts/items/accessory/accessory", {
 			id = 10,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "授予击晕免疫"
+			text = "授予昏迷免疫"
 		});
 		return result;
 	}

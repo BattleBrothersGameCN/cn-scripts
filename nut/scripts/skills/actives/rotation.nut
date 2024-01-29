@@ -4,7 +4,7 @@ this.rotation <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.rotation";
 		this.m.Name = "换位";
-		this.m.Description = "与另一个相邻的角色交换位置，前提是使用技能的角色和交换位置的目标均未被击晕或定身。轮换战线来确保生力军位于前列！";
+		this.m.Description = "与一个直接相邻的角色交换位置，只要两个角色都没有被击晕、定身。轮换战线来确保生力军位于前列！";
 		this.m.Icon = "ui/perks/perk_11_active.png";
 		this.m.IconDisabled = "ui/perks/perk_11_active_sw.png";
 		this.m.Overlay = "perk_11_active";

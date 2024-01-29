@@ -1327,10 +1327,10 @@ gt.Const.Strings.PerkName <- {
 };
 gt.Const.Strings.PerkDescription <- {
 	Relentless = "不要慢下来! 在任何时候，你的主动性都只减少累积疲劳值的[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]，而不是全部的。此外，使用\'等待\'命令将不再使你在下一回合的主动性受到惩罚。",
-	Rotation = "解锁“旋转”技能，该技能允许两个角色在无视控制区域的情况下切换位置，只要两个角色都没有被击晕、定身或以其他方式禁用。",
+	Rotation = "解锁“换位”技能，该技能允许两个角色在无视控制区域的情况下切换位置，只要两个角色都没有被击晕、定身或因其他方式失能。",
 	Footwork = "解锁“步法”技能，使您可以通过熟练的步法离开控制区域而不会触发自由攻击。",
 	Debilitate = "解锁 \'衰弱\' 技能，该技能可以使你的下一次攻击使目标瘫痪一回合，使其造成伤害的能力降低[color=" + this.Const.UI.Color.NegativeValue + "]-50%[/color].",
-	Indomitable = "解锁 \'不屈\' 技能，该技能给予[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]的伤害减免，以及对被击晕、撞退或抓住的免疫，持续一回合。",
+	Indomitable = "解锁 \'不屈\' 技能，该技能给予[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]的伤害减免，以及对昏迷、击退或勾拽的免疫，持续一回合。",
 	RallyTheTroops = "解锁“集结”技能，可以集结逃跑的盟友，并提高附近所有盟友的士气到稳定的等级。使用技能的角色决心越高，成功的几率就越高。",
 	Adrenaline = "解锁“肾上腺素”技能，让你在下一轮的回合顺序中处于首位，在你的敌人之前进行另一个回合。感受肾上腺素在你的血管中奔涌！",
 	Fearsome = "让他们四散而逃! 任何对命中点造成至少1点伤害的攻击都会触发对手的士气检查，其惩罚等于[color=" + this.Const.UI.Color.NegativeValue + "]你的决心 * 20%[/color] - 10(这与无惩罚和仅在造成15点或以上伤害时进行士气检查不同)",
@@ -1356,13 +1356,13 @@ gt.Const.Strings.PerkDescription <- {
 	KillingFrenzy = "进入杀戮时刻！ 每次击杀后会获得增加所有伤害 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]的加成，持续 2 回合。再次击杀不叠加，但会刷新计时器。",
 	ShieldBash = "撞退技能额外造成 [color=" + this.Const.UI.Color.DamageValue + "]10 ~ 25[/color] 点伤害（对护甲只造成 50%）和 [color=" + this.Const.UI.Color.DamageValue + "]10[/color] 点疲劳值。同时, 撞退技能的疲劳值消耗减少 10",
 	Brawny = "穿着盔甲和头盔的疲劳值和主动惩罚降低了 [color=" + this.Const.UI.Color.NegativeValue + "]30%[/color].",
-	Stalwart = "免疫位移技能。适用于诸如撞退、钩子和其他改变角色位置的技能。",
+	Stalwart = "免疫位移技能。适用于诸如击退、勾拽和其他改变角色位置的技能。",
 	Steadfast = "被常规攻击击中不会再导致疲劳值积累。专门针对疲劳值的攻击不受影响。",
 	Taunt = "解锁“嘲讽”技能，使目标对手采取进攻行动而不是防御行动，并攻击嘲讽角色而不是另一个可能更脆弱的角色。",
 	Colossus = "来吧！ 生命值上限增加 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]，同时也降低了遭受攻击时获得部位伤残的概率。",
 	ShieldExpert = "学会更好地将攻击偏向一边而不是正面阻挡。\n\n盾牌防御增加 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color], 这也适用于盾墙技能的额外防御加成。\n\n盾牌受到的伤害减少 [color=" + this.Const.UI.Color.NegativeValue + "]50%[/color], 但至少为 1。\n\n “撞退”技能命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]+15%[/color]。",
 	NineLives = "每场战斗只能触发一次。在受到致命一击时，你在保留极少生命值的情况下存活，同时解除所有持续性伤害效果（如出血、中毒）。当然，下一次攻击很可能会将你击杀，但直到你的下一轮行动开始之前，你会拥有更高的防御力来帮助你幸存。",
-	BatteringRam = "免疫眩晕。",
+	BatteringRam = "免疫昏迷。",
 	BagsAndBelts = "解锁两个额外的包槽以携带所有您喜爱的物品。放在袋子里的物品不再对最大疲劳值造成惩罚，除了双手武器。",
 	Student = "只要你下定决心，一切都可以学到。 从战斗中获得额外的 [color=" + this.Const.UI.Color.PositiveValue + "]20%[/color] 经验。 在第 11 个角色级别，您获得额外的特权点，并且此特权变得无效。\n\n在游玩 “猎奴者” 起源时，您的奴隶在第 7 个角色级别获得返还的特权点。",
 	Gifted = "当你天生就有天赋时，雇佣兵的生活会变得很容易。立即升级以增加此角色的属性，数值为最大掷骰数，但没有天赋加成。",
@@ -1387,7 +1387,7 @@ gt.Const.Strings.PerkDescription <- {
 	SpecSpear = "精通长矛，御敌于外。矛技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“矛墙”不再因敌人成功进入控制区域而立即失效。此外，“矛墙”仍可主动启用，并继续对其他试图进入控制区域的敌人进行免费攻击。\n\n使用三叉戟和战叉攻击近身敌人不再有命中率惩罚。",
 	SpecPolearm = "精通长柄，御敌于外。长柄技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n长柄武器技能消耗的AP降低至 [color=" + this.Const.UI.Color.NegativeValue + "]5[/color]，并且使用长柄武器攻击近身敌人不再有命中率惩罚。",
 	SpecHammer = "精通锤子，对抗重甲对手。锤技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“破坏护甲”和“摧毁护甲”造成的护甲伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]33%[/color]\n\n“震碎”的命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]\n\n使用长锤攻击近身敌人不再有命中率惩罚。",
-	SpecMace = "精通骨朵，不论护甲一通暴打。骨朵技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n如果目标不免疫，“锤倒”、“撞倒”和“击倒”有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 的几率使其眩晕。\n\n使用长棍攻击近身敌人不再有命中率惩罚。",
+	SpecMace = "精通骨朵，不论护甲一通暴打。骨朵技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n如果目标不免疫，“锤倒”、“撞倒”和“击倒”有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 的几率使其昏迷。\n\n使用长棍攻击近身敌人不再有命中率惩罚。",
 	SpecFlail = "精通链枷，绕过对手的盾牌。链枷技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n\'当头一击\'和\'劈头盖脸\'无视盾牌加成。\n\n\'重磅打击\'在击中头部时忽略[color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 护甲。\n\n\'狂舞挥打\'的命中率提高[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]"
 };
 gt.Const.Strings.Tooltip <- {

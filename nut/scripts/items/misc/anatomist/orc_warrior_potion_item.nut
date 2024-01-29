@@ -53,7 +53,7 @@ this.orc_warrior_potion_item <- this.inherit("scripts/items/misc/anatomist/anato
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "有 ]33%[/color] 的几率抵抗茫然、踉跄、眩晕、分神和凋零效果"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "有 ]33%[/color] 的几率抵抗茫然、踉跄、昏迷、分神和凋零效果"
 		});
 		result.push({
 			id = 65,

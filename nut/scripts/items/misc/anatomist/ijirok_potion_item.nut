@@ -53,7 +53,7 @@ this.ijirok_potion_item <- this.inherit("scripts/items/misc/anatomist/anatomist_
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "有 ]50%[/color] 几率抵抗任何不良状态，例如茫然或眩晕"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "有 ]50%[/color] 几率抵抗任何不良状态，例如茫然或昏迷"
 		});
 		result.push({
 			id = 65,

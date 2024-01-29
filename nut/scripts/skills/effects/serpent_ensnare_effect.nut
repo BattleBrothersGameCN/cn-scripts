@@ -15,7 +15,7 @@ this.serpent_ensnare_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.serpent_ensnare";
 		this.m.Name = "被缠住";
-		this.m.Description = "这个角色被一条巨大的蛇缠住了。每回合，这条蛇都会威胁着越来越紧地抓紧他们，导致失去[color=" + this.Const.UI.Color.NegativeValue + "]10[/color] 生命值";
+		this.m.Description = "这个角色被一条巨大的蛇缠住了。这条蛇缠绕地越来越紧，仿佛要将人勒断。受害者每回合失去[color=" + this.Const.UI.Color.NegativeValue + "]10[/color] 点生命值";
 		this.m.Icon = "skills/status_effect_113.png";
 		this.m.IconMini = "status_effect_113_mini";
 		this.m.Overlay = "status_effect_113";

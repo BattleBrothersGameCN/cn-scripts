@@ -14,7 +14,7 @@ this.spearwall_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "在将长矛就位之后，这个角色会自动对任何试图进入他控制区域的对手进行一次免费攻击。";
+		return "在将长矛就位之后，这个角色会自动对试图进入控制区域的敌人进行免费攻击。";
 	}
 
 	function onAdded()

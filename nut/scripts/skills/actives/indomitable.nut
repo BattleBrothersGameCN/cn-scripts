@@ -53,7 +53,7 @@ this.indomitable <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "变得免疫击晕"
+				text = "变得免疫昏迷"
 			},
 			{
 				id = 6,

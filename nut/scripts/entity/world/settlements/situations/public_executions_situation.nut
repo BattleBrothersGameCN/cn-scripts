@@ -9,7 +9,7 @@ this.public_executions_situation <- this.inherit("scripts/entity/world/settlemen
 		this.m.Icon = "ui/settlement_status/settlement_effect_14.png";
 		this.m.Rumors = [
 			"一大群人正赶往 %settlement% 观看盛大的盛会！男人，女人，年轻人，都在路上要赶去看即将到来的处决！",
-			"我听说他们在 %settlement% 附近抓了几个强盗，把他们送进了砧板。他们活该，在路上伏击穷人…",
+			"我听说他们在 %settlement% 附近抓了几个强盗，把他们送上了断头台。他们活该，在路上伏击穷人…",
 			"现在，我们穷人没有什么好享受的，但是，一个好的绞刑总是受欢迎的。秋天以后这里就没人来过了，但他们在 %settlement% 有一些人，这是 %randomname% 告诉我的。"
 		];
 		this.m.IsStacking = false;

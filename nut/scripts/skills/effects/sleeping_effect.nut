@@ -40,7 +40,7 @@ this.sleeping_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色已经陷入了不自然的睡眠，无法行动。他们会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + (this.m.TurnsLeft - 1) + "[/color] 回合后醒来，但也可以被盟友强制唤醒，并且在受到任何伤害时都会醒来。\n\n角色决心越高，抵抗睡意的几率就越高。";
+		return "这个角色已经陷入了不自然的睡眠，无法行动。他们会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + (this.m.TurnsLeft - 1) + "[/color] 回合后醒来，也可以被盟友或者伤害强制唤醒。\n\n角色决心越高，抵抗睡意的几率就越高。";
 	}
 
 	function getTooltip()

@@ -36,7 +36,7 @@ this.ijirok_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 几率抵抗任何不良状态，例如茫然或击晕"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 几率抵抗任何不良状态，例如茫然或昏迷"
 			},
 			{
 				id = 12,
