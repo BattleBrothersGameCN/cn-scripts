@@ -30,7 +30,7 @@ this.superstitious_trait <- this.inherit("scripts/skills/traits/character_trait"
 				id = 10,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color] 决心，面对恐惧、恐慌或精神控制的士气检查时"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color] 决心（仅在恐惧、恐慌或精神控制士气检查中生效）"
 			}
 		];
 	}

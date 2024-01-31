@@ -21,7 +21,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 		}
 
 		this.m.Type = "contract.decisive_battle";
-		this.m.Name = "战斗";
+		this.m.Name = "会战";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
 	}
 
@@ -258,7 +258,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"在军营里等着，直到你的军队被召唤"
+					"待在营地，听候指令"
 				];
 
 				if (this.Contract.m.Warcamp != null && !this.Contract.m.Warcamp.isNull())
@@ -993,7 +993,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "请告诉我们来这里的目的。",
+					Text = "做我们该做的。",
 					function getResult()
 					{
 						if (this.Flags.get("IsAmbush"))
@@ -1016,7 +1016,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Ambush",
 			Title = "在农场…",
-			Text = "[img]gfx/ui/events/event_10.png[/img]{当你接近农民时，突然从你的两侧传来一声喊叫，然后一群手持精良武器的人跳了出来。这是一场伏击！ | 你正在接近农家小屋，满载食物的车开始倒退。随着它们往后移动，它们慢慢地暴露了一支武器精良的队伍。农民们迅速离开。%randombrother%拔出武器。%SPEECH_ON% 这是一场伏击！ %SPEECH_OFF% | 你接近食品车。当%randombrother%走向前方并卸下其中一个车厢的掩盖物时，农民们让开了。车里什么都没有。突然，一支箭向车厢侧面猛然撞击发出木质咔嚓声。农民们躲了下来，手持精良武器的人从两侧涌入。这是一场伏击！}",
+			Text = "[img]gfx/ui/events/event_10.png[/img]{你朝农民们走去，突然一群全副武装的人从两侧叫喊着跳了出来。有埋伏！ | 你离农舍越来越近，满载粮食的货车却开始倒退。随着它往后移动，一支全副武装的队伍慢慢现身。农民们赶紧跑开了。%randombrother%拔出武器。%SPEECH_ON% 有埋伏！ %SPEECH_OFF% | 你接近运粮车。当%randombrother%上前撤去车厢的篷布时，农民们让开了。车里什么都没有。突然，一支箭猛地撞向车厢侧面，发出咔嚓一声。农民们俯身跑开，全副武装的人从两侧涌入。有埋伏！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -1059,7 +1059,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "你忘了你的位置，农夫。 你想让我们强行拿走吗？",
+					Text = "别忘了自己的身份，种地的。你想让我们来硬的吗？",
 					function getResult()
 					{
 						return "TakeItByForce";
@@ -1236,7 +1236,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 				local startTile = this.World.getEntityByID(this.Flags.get("InterceptSuppliesStart")).getTile();
 				local destTile = this.World.getEntityByID(this.Flags.get("InterceptSuppliesDest")).getTile();
 				local enemyFaction = this.World.FactionManager.getFaction(this.Flags.get("EnemyNobleHouse"));
-				local party = enemyFaction.spawnEntity(startTile, "供应商队", false, this.Const.World.Spawn.NobleCaravan, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				local party = enemyFaction.spawnEntity(startTile, "补给车队", false, this.Const.World.Spawn.NobleCaravan, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				party.getSprite("base").Visible = false;
 				party.getSprite("banner").setBrush(this.World.FactionManager.getFaction(this.Flags.get("EnemyNobleHouse")).getBannerSmall());
 				party.setMirrored(true);
@@ -1315,7 +1315,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "在接下来的战斗中，还有一个问题需要解决。",
+					Text = "会战中需要面对的问题又少了一个。",
 					function getResult()
 					{
 						this.Contract.setState("Running_ReturnAfterIntercept");
@@ -1415,7 +1415,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "让我们实话实说。 如果你回来的话，这里有 %bribe% 克朗。",
+					Text = "我们打开天窗说亮话。 如果你们回来的话，这 %bribe% 克朗就归你了。",
 					function getResult()
 					{
 						return "DesertersAcceptBribe";
@@ -1427,7 +1427,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "DesertersAcceptBribe",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_88.png[/img]{你拿出一个袋子，放进%bribe%克朗。%SPEECH_ON%我会亲自支付你们回到战营。%commander%对你们大为光火，不要有丝毫怀疑，但他需要每一个人。如果你们在即将到来的战斗中为他而战，我毫不怀疑他会原谅你们这个小错误。%SPEECH_OFF% | 你给了这些逃兵%bribe%克朗。士兵们相互看了看，然后跟你说话。%SPEECH_ON%指挥官把我们都送上绞刑架时，金钱有什么用呢？%SPEECH_OFF%你点点头回答。%SPEECH_ON%好问题，但%commander%不是傻瓜。他需要在即将到来的战斗中集齐所有的人。在那场战斗中证明自己，你们这场可怜的别扭就会被忘记。%SPEECH_OFF%}{逃兵们思考了一下，最终同意跟你回去。 | 逃兵们商量了一阵，达成了某种共识。在一片喧嚣声中，他们的领袖走了出来。%SPEECH_ON%尽管存在一些反对意见，但我们同意跟你回到战营。我希望我不会后悔。%SPEECH_OFF% | 短暂的讨论过后，逃兵们进行了投票。虽然不是一致的，但他们达成了协议：他们将和你一起回到%commander%那里。 | 逃兵们争论接下来该怎么办。不可避免地，这又到了一场投票的时候。可预见的是，结果是平局的。随后，这些人同意抛硬币：正面的话，他们回战营，反面则离开。领袖掷了硬币，所有人都看着它旋转和闪耀。硬币正面朝上。他们每个人看到这个结果都叹了一口气，好像机会和幸运让他们从一个超出自己选择外的巨大责任中解脱出来。}",
+			Text = "[img]gfx/ui/events/event_88.png[/img]{你掏出一个袋子，放进%bribe%克朗。%SPEECH_ON%我愿意自掏腰包请你们回到营地。但别搞错了，%commander%对你们大为光火，可是他需要每一个人。如果你们在即将到来的战斗中为他而战，我毫不怀疑他会原谅你们这个小错误。%SPEECH_OFF% | 你给了这些逃兵%bribe%克朗。士兵们相互看了看，然后说道。%SPEECH_ON%要是指挥官把我们绞死了，这钱给谁花去？%SPEECH_OFF%你点点头回答。%SPEECH_ON%问得好，但%commander%可不傻。他会把自己能找到的人都投入战斗。如果能在这场战斗中证明自己，这点小毛病自然不成问题。%SPEECH_OFF%}{逃兵们思考了一下，最终同意跟你回去。 | 逃兵们商量了一阵，达成了某种共识。在一片喧闹声中，他们的领袖走了出来。%SPEECH_ON%尽管存在一些反对意见，但我们同意跟你回到战营。我希望我不会后悔。%SPEECH_OFF% | 短暂的讨论过后，逃兵们进行了投票。虽然不是全票通过，但他们达成了协议：他们将和你一起回到%commander%那里。 | 逃兵们争论接下来该怎么办。不可避免地，这又到了一场投票的时候。可预见的是，结果是平局。随后，这些人同意抛硬币：正面的话，他们回战营，反面则离开。领头的掷了硬币，旋转、闪烁，所有人目不转睛的盯着它。硬币正面朝上。他们每个人看到这个结果都叹了一口气，好像命运让他们从一个超出自己选择能力的巨大责任中解脱出来。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -1607,7 +1607,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "DesertersRefuseMotivation",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_88.png[/img]{当逃兵要离开时，%motivator%挺身而出，清了清嗓子。%SPEECH_ON%那就是你们的打算吗？你们要像一群软弱无力的家伙一样逃避你们的责任吗？我知道你们的感受。我知道你们认为这场战争没有意义，或者冒险去为一些完全不了解你们所经历的高傲贵族牺牲。那很公平。但是你们将来会醒来，抱着你们的孙子，他会问你们有关战争的问题。而你们将不得不对那个小男孩撒谎。%SPEECH_OFF% | %motivator%把手指放在嘴唇上，发出了一声清脆的哨声。逃兵们转向他，他开始讲话。%SPEECH_ON%那就是你打算负担的重任吗？当你的孩子问到你为什么当时背叛同伴而导致他们死亡时，你会告诉他们什么呢？毫无疑问，你的离去将导致无辜之人的死亡。你们的离开将产生你们无法衡量的后果！%SPEECH_OFF% | %motivator%呼唤逃兵。%SPEECH_ON%好吧，现在你们离开。您可以扔下你们的旗帜，结束这次出征。那么当%feudfamily%获胜时，会发生什么呢？%SPEECH_OFF% 一个逃兵耸了耸肩。%SPEECH_ON%他们不认识我。我会回家种地养家。%SPEECH_OFF% %motivator%笑了，摇了摇头。%SPEECH_ON%是吗？当这些外来人看到你的妻子，看到你的孩子时，你会怎么办？确切地说，你认为这场战争是为了什么？这里将没有你可以回去的家，你这个蠢货！%SPEECH_OFF%}{逃兵们无法做出决定，于是通过投票，选择继续逃跑。他们的领袖告诉您这个民主的结果并给您告别。%commander%不会高兴，但您取出剑告诉逃兵只有另一条路可走。领袖转身，拔出剑点头示意。%SPEECH_ON%好的，我想你们不是跋山涉水走到这里，只是为了听我们说再见。准备行动吧，战友们。%SPEECH_OFF% | %commander%会不满，但逃兵拒绝回来。他们认为没有理由重新投入战争。您祝福他们的领袖好运。他感谢您，但随后沉默，因为您拔出武器，其余的%companyname%紧随其后。领袖叹了口气。%SPEECH_ON%是啊，我就知道会这样。%SPEECH_OFF%您点了点头。%SPEECH_ON%没有个人恩怨。我不管你们做什么，但这里是商业上的问题，我们必须把它看到最后。%SPEECH_OFF% | 逃兵们无法做出决定，于是转向机会：他们的领袖掏出硬币，将其抛向空中。正面他们回到营地，反面他们继续离开。硬币落在反面。逃兵们集体松了口气。领袖拍了拍你的肩膀。%SPEECH_ON%命运已经决定了我们的命运。%SPEECH_OFF%你点头，拔出剑，其他公司紧随其后。%SPEECH_ON%在我们杀死你们的时候，要记得这一点。%SPEECH_OFF%领袖微笑着，拔出了他的剑。%SPEECH_ON%没关系。我们宁愿在自由的门前死，也不愿回到那个压迫的生活中。%SPEECH_OFF% | 领袖礼貌地拒绝回去。%SPEECH_ON%我们并不轻易选择这条路，雇佣兵。我们不会回来的。%SPEECH_OFF%你命令%companyname%拔出武器。逃兵的领袖叹了口气，但理解地点了点头。%SPEECH_ON%我想这就是它的前程。我们曾经谈过这件事，我们已经准备好在这里死亡，走自己想去的路，而不是在外面按照某个人的命令死亡。这是我们现在的世界。%SPEECH_OFF%你耸了耸肩回应。%SPEECH_ON%对我们来说，这只是生意。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_88.png[/img]{当逃兵要离开时，%motivator%挺身而出，清了清嗓子。%SPEECH_ON%那就是你们的打算吗？这么逃避责任，你们是痿了吗？我知道你们怎么想的。我知道你们认为这场战争没有意义，冒险去为一些完全不在乎你们的高傲贵族牺牲更没有意义，完全没错。但是将来某一天，你们抱着你的孙子，他会问你你在战争中的英勇事迹，而你只能睁着眼睛说瞎话，到时候你就会幡然醒悟。%SPEECH_OFF% | %motivator%把手指放在嘴唇上，发出了一声清脆的哨声。逃兵们转向他，他开始讲话。%SPEECH_ON%你希望这成为你们一辈子的负担吗？当你的孩子问到你为什么背弃战友任由他们去死，你会告诉他们什么呢？毫无疑问，你的离去将导致无辜之人的死亡。你们的离开将产生无法估量的后果！%SPEECH_OFF% | %motivator%呼唤逃兵。%SPEECH_ON%好，你们走吧。把旗帜扔在脚下，自诩是有功之人。等到%feudfamily%获胜了，会发生什么？%SPEECH_OFF% 一个逃兵耸了耸肩。%SPEECH_ON%他们又不认识我。我会回家种地。%SPEECH_OFF% %motivator%笑了，摇了摇头。%SPEECH_ON%是吗？当这些外来人看到你的妻子，看到你的孩子时，你会怎么办？确切地说，你认为这场战争是为了什么？到时候你将无家可归，你个蠢货！%SPEECH_OFF%}{逃兵们无法做出决定，于是通过投票，选择继续逃跑。他们的领袖告诉您这个民主的结果并向你告别。%commander%并不高兴，但你取出剑告诉逃兵他们别无选择。领队转身，拔出剑点头示意。%SPEECH_ON%好吧，我想你们跋山涉水，不只是为了送送我们。拿起武器，战友们。%SPEECH_OFF% | %commander%会不满，但逃兵拒绝回来。他们认为没有理由重新投入战争。你祝他们的领队好运。他感谢你，但又随你拔出武器陷入了沉默，%companyname%的其他成员紧随其后。领队叹了口气。%SPEECH_ON%是啊，我就知道会这样。%SPEECH_OFF%你点点头。%SPEECH_ON%这无关个人恩怨，也无关你们做什么，这是生意问题，我们必须做到最后。%SPEECH_OFF% | 逃兵们莫衷一是，决定听天由命：他们的领队掏出硬币，将其抛向空中。正面他们回到营地，反面他们继续离开。硬币落在反面。逃兵们集体松了口气。领队拍了拍你的肩膀。%SPEECH_ON%天意如此。%SPEECH_OFF%你点点头，拔出剑，战团的其他人照做了。%SPEECH_ON%你知道我们会因此杀了你们%SPEECH_OFF%领队微笑着，拔出了他的剑。%SPEECH_ON%没错。死在自由门前也好过活在苦海之中。%SPEECH_OFF% | 领队礼貌地拒绝回去。%SPEECH_ON%我们慎重考虑过了，雇佣兵。我们不会回去的。%SPEECH_OFF%你命令%companyname%拔出武器。领队叹了口气，却也理解地点了点头。%SPEECH_ON%我已经想到会是这样。我们已经讨论过这件事，也为死在这里做好了准备，宁愿为自己而死，而不是在按照某个人的命令而死。这对我们来说就是一切。%SPEECH_OFF%你耸了耸肩回应。%SPEECH_ON%我们只是收钱办事罢了。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -1720,7 +1720,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "不是每一场战斗都能赢…",
+					Text = "没有谁能百战百胜…",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);

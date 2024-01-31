@@ -27,7 +27,7 @@ this.protective_runes_upgrade <- this.inherit("scripts/items/armor_upgrades/armo
 			id = 14,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+20[/color] 决心，面对恐惧、恐慌或精神控制的士气检查时"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+20[/color] 决心（仅在恐惧、恐慌或精神控制士气检查中生效）"
 		});
 		return result;
 	}
@@ -38,7 +38,7 @@ this.protective_runes_upgrade <- this.inherit("scripts/items/armor_upgrades/armo
 			id = 14,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+20[/color] 决心，面对恐惧、恐慌或精神控制的士气检查时"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+20[/color] 决心（仅在恐惧、恐慌或精神控制士气检查中生效）"
 		});
 	}
 

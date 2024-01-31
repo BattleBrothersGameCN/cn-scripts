@@ -1252,7 +1252,7 @@ gt.Const.Strings.InventoryUpgradeHeader <- [
 ];
 gt.Const.Strings.InventoryUpgradeText <- [
 	"买车",
-	"买一辆马车",
+	"买一辆货车",
 	"买一辆大货车"
 ];
 gt.Const.Strings.InventoryUpgradeCosts <- [

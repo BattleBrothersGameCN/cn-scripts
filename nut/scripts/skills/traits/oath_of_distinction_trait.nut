@@ -34,7 +34,7 @@ this.oath_of_distinction_trait <- this.inherit("scripts/skills/traits/character_
 				id = 10,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "+3[/color]每回合疲劳值回复量（相邻格没有盟友时）"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+3[/color]每回合疲劳值回复量（相邻格没有盟友时）"
 			},
 			{
 				id = 10,
