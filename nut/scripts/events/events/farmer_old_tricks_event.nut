@@ -9,7 +9,7 @@ this.farmer_old_tricks_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_82.png[/img],你发现 %farmhand% 坐在战团的载重货车旁。 他在牙缝里滚动着一些干草茎，设法把它们磨碎，把碎渣吐出来。 你问他在想什么。这个农夫耸耸肩。%SPEECH_ON%我父亲告诉过我的捆干草的事。 他有一种旋转手腕的方法，在每次抓或放干草时非常有效。 然而我第二个环节还没有做好。%SPEECH_OFF%这人把稻草拿出来一弹。你问道。%SPEECH_ON%但是你能做好第一个环节是吧？ 你在哪里刺和拉干草？%SPEECH_OFF%他点了点头。你告诉那个人，他只需要第个一环节的技术就可以把一个人的内脏取出来。 你看到他的脸因为现实而容光焕发。%SPEECH_ON%是的…确实是这样！ 我之前怎么没想到呢？ 你真是个天才，先生！ 下次出手我要试试！ 这就像给干草打捆一样简单！%SPEECH_OFF%他尖叫着，声音充满了血性，但这很好。",
+			Text = "[img]gfx/ui/events/event_82.png[/img]你发现%farmhand%坐在战团的货车旁。他用牙间嚼着一些稻草，来回磨蹭，然后吐出碎屑。你问他在想什么，雇农耸了耸肩。%SPEECH_ON%父亲告诉过我关于打捆干草的事。他有一套在抓草和放草时转动手腕的方法。可我总是做不好第二步。%SPEECH_OFF%雇农拿出稻草，轻轻一弹。你问道。%SPEECH_ON%但第一步你能做好吧？就是刺中干草然后猛拉的那个动作？%SPEECH_OFF%他点点头。你告诉他，只要用那个技巧的第一步就够把敌人开膛破肚的了。他恍然大悟。%SPEECH_ON%对啊...太对了！我之前为啥没想到呢？您真是天才，先生！下次出手我试试看！就像打捆干草一样！%SPEECH_OFF%当然，尖叫声和流血会多很多了。",
 			Image = "",
 			List = [],
 			Characters = [],

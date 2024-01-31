@@ -7,8 +7,8 @@ this.thief_background <- this.inherit("scripts/skills/backgrounds/character_back
 		this.m.Name = "盗贼";
 		this.m.Icon = "ui/backgrounds/background_11.png";
 		this.m.BackgroundDescription = "一个厉害的盗贼会有快速的反应力和躲避任何抓捕者的能力。";
-		this.m.GoodEnding = "盗贼%name%退出了打斗，并从地图上消失了。你们自那以后再也没有听说过这个人，但有传言说，一位贵族的金库在一次完美的劫盗中被完全掏空了。";
-		this.m.BadEnding = "盗贼%name%嗅出了征兆，在趁还来得及的时候退出了%companyname%。他带着积攒的钱财招募了一支盗贼团队。最后你听说他们完成了一场完美的大劫案，只可惜其中一位同伴却对他背地里捅刀子，拿走了所有赃物。";
+		this.m.GoodEnding = "盗贼%name%退出了战斗这行，并从地图上消失了。你们自那以后再也没有听说过这个人，但有传言说，一位贵族的金库在一次完美的劫盗中被完全掏空了。";
+		this.m.BadEnding = "盗贼%name%嗅出了征兆，趁还来得及的时候退出了%companyname%。他带着积攒的钱财招募了一支盗贼团队。最后你听说他们完成了一场完美的大劫案，只可惜其中一位同伴却对他背地里捅刀子，拿走了所有赃物。";
 		this.m.HiringCost = 95;
 		this.m.DailyCost = 10;
 		this.m.Excluded = [
