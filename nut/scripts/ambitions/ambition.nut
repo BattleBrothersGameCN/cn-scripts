@@ -134,7 +134,7 @@ this.ambition <- {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/ambition_tooltip.png",
-			text = "你的名望会提高，这意味着合同的报酬会更高，并有可能解锁新类型的合同。"
+			text = "你的名望会提高，这意味着合同报酬的增长和合同类型的增加。"
 		});
 		return ret;
 	}

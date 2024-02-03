@@ -3572,7 +3572,7 @@ this.tooltip_events <- {
 						id = 3,
 						type = "hint",
 						icon = "ui/tooltips/warning.png",
-						text = "你需要至少5个空的仓库空间才能参与这场竞技大赛"
+						text = "你需要至少5个空的仓库栏位才能参与这场竞技大赛"
 					});
 				}
 				else if (this.World.Contracts.getActiveContract() == null && this.World.Assets.getStash().getNumberOfEmptySlots() < 3)
