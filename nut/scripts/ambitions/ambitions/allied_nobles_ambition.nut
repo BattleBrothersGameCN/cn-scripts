@@ -5,12 +5,12 @@ this.allied_nobles_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.allied_nobles";
 		this.m.Duration = 40.000000 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "我们应赢得一个贵族家族的信任，成为他们的盟友。\n他们自然会与好朋友分享他们丰富的军械库。";
-		this.m.RewardTooltip = "你将被授予与你结盟的贵族家族独有的装备";
-		this.m.UIText = "与一个贵族家族达到“盟友”关系";
-		this.m.TooltipText = "通过履行派系成员的合同，将与任何贵家族族的关系提升至“盟友”。不履行合同或背叛他们的信任会降低你们的关系。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_78.png[/img]你早就听说贵族是一群难以相处、善变的人，而且你的经历也证明了这一点，但你与%noblehouse%的关系证明了它是有益的，最终甚至是愉快的。尽管在宴会上他们可能不会把你当作平等的人，但在战场上他们也不是你的对手。通过辛勤的工作和一贯的忠诚赢得他们的信任，%companyname%终于被认为是%noblehouse%可信赖的盟友。\n\n这种地位的好处之一是你的士兵被允许浏览贵族们的军械库。一些激进的与贵族意见相左者可能会因你们与贵族结盟、在盾牌上整上他们的旗帜而称你们为贵族的走狗，但从不当着你的面。";
-		this.m.SuccessButtonText = "极好的。";
+		this.m.ButtonText = "我们应赢得一个贵族家族的信任，成为他们的盟友。\n他们自然会与好朋友分享他们殷实的军械库里的宝贝。";
+		this.m.RewardTooltip = "你将被授予结盟的贵族家族独有的装备";
+		this.m.UIText = "与一个贵族家族达成“盟友”关系";
+		this.m.TooltipText = "通过履行派系成员的合同，将与任一贵族家族的关系提升至“盟友”。半途而废或背叛他们会降低你们的关系。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_78.png[/img]你早就听说贵族是一群难以相处、反复无常的人，而且你的经历也验证了这一点，但终究你与%noblehouse%的关系是有益的，甚至是愉快的。尽管在宴会上他们可能不会把你当作平等的人，但在战场上他们也不是你的对手。通过辛勤的工作和一贯的忠诚，%companyname%终于被%noblehouse%看作可信赖的盟友。\n\n这种地位的好处之一是你的士兵获得了浏览贵族们的军械库的许可。一些与贵族意见相左者的激进分子可能会因你们与贵族结盟、在盾牌上整上他们的旗帜而称你们为贵族的走狗，但没有人当面这么做。";
+		this.m.SuccessButtonText = "好极了。";
 	}
 
 	function onUpdateScore()

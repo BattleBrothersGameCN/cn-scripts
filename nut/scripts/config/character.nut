@@ -314,7 +314,7 @@ gt.Const.FatigueStateName <- [
 ];
 gt.Const.ArmorStateName <- [
 	"",
-	"四分五裂",
+	"支离破碎",
 	"坑坑洼洼",
 	"刮痕寥寥",
 	"完好无损"

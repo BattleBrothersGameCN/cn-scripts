@@ -466,7 +466,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					this.Flags.set("Number", this.Math.max(2, this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Mercenary, baseDifficulty)));
 					this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场以开始对抗%amount%名佣兵";
-					this.Text += "%SPEECH_ON%像你这样的克朗族人从北方冒险而来。在那里，他们被称为“雇佣兵”。嗬！这算是怎样的诗歌？他们不知道并非每个男人都使用剑吗？他们那里的人可不太聪明。这就是为什么我喜欢南方。阳光明媚，人们也因此而聪明。%SPEECH_OFF%";
+					this.Text += "%SPEECH_ON%像你这样的逐币者从北方冒险而来。在那里，他们被称为“雇佣兵”。嗬！这算是怎样的诗歌？他们不知道并非每个男人都使用剑吗？他们那里的人可不太聪明。这就是为什么我喜欢南方。阳光明媚，人们也因此而聪明。%SPEECH_OFF%";
 				}
 				else if (this.Flags.get("IsGladiatorChampion"))
 				{
