@@ -54,7 +54,7 @@ this.cudgel_skill <- this.inherit("scripts/skills/skill", {
 			id = 7,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 几率在命中时造成眩晕"
+			text = "命中时有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 几率造成茫然"
 		});
 		return ret;
 	}

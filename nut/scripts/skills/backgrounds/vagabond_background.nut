@@ -28,7 +28,7 @@ this.vagabond_background <- this.inherit("scripts/skills/backgrounds/character_b
 			"背包客(Bindlestiff)",
 			"褴褛汉(Tatterdemalion)",
 			"无家可归者(the Homeless)",
-			"不息者(the Restless)",
+			"不得安歇者(the Restless)",
 			"旅行者(the Traveller)",
 			"乌鸦(the Raven)"
 		];

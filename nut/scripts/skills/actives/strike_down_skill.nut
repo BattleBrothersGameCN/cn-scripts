@@ -60,7 +60,7 @@ this.strike_down_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 几率在命中时严重击晕目标"
+				text = "命中时有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 几率严重击晕目标"
 			});
 		}
 		else
@@ -69,7 +69,7 @@ this.strike_down_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.StunChance + "%\"[/color] 几率击晕目标 2 回合"
+				text = "命中时有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.StunChance + "%[/color] 几率击晕目标 2 回合"
 			});
 		}
 
