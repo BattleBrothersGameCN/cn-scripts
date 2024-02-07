@@ -4,7 +4,7 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 	{
 		this.m.ID = "scenario.gladiators";
 		this.m.Name = "角斗士";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_155.png[/img][/p][p]你已经在南方的竞技场战斗多年了。 首先是为了你的自由，然后是为了克朗，最后是为了不朽。 命运还为你准备了什么？\n\n[color=#bcad8c]角斗士：[/color] 从三个经验丰富的角斗士开始，他们装备精良，但日工资很高。\n[color=#bcad8c]竞技场传奇：[/color] 每个角斗士在战斗中都有自己独特的特点。\n[color=#bcad8c]荣耀之三：[/color] 你的花名册上不能超过12个人，如果你的三个特殊角斗士都死了，你的战役就结束了。[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_155.png[/img][/p][p]你们已经在南方的竞技场中战斗多年了。一开始是为了自由，然后是为了克朗，最后是为了成就不朽。命运还会为你们准备些什么呢？\n\n[color=#bcad8c]角斗士：[/color]从三名经验丰富、装备精良但日薪很高的角斗士开始。\n[color=#bcad8c]竞技场传奇：[/color]每名角斗士在战斗中都有独特的特性。\n[color=#bcad8c]荣耀三人组：[/color]你的花名册上永远不能超过12人，如果你开始的三名角斗士全部死亡，你的战役就结束了。[/p]";
 		this.m.Difficulty = 3;
 		this.m.Order = 100;
 		this.m.IsFixedLook = true;
@@ -95,11 +95,11 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[2].getItems().equip(this.new("scripts/items/weapons/oriental/qatal_dagger"));
 		bros[2].getItems().equip(this.new("scripts/items/tools/throwing_net"));
 		bros[2].improveMood(0.750000, "渴望在竞技场外证明自己");
-		bros[0].getBackground().m.RawDescription = "{%fullname% 认为肌肉是荣耀。错了，队长，应该是我！ " + bros[2].getName() + ", 谁命令这个领域的女士们。不用问我怎么做。看啊！看看！看看它的大小！是啊。我就是这么想的。 傻瓜，训练你想要的，你不能这样！}";
+		bros[0].getBackground().m.RawDescription = "{%fullname% 认为肌肉带来荣耀。大错特错。队长，我，" + bros[2].getName() + ", 才能让这里所有的女士言听计从。不用问我怎么做的。看啊！好好看看！看看它的大小！没错。我就是这么想的。 傻子们，随你们怎么练，你也练不出这个来！}";
 		bros[0].getBackground().buildDescription(true);
-		bros[1].getBackground().m.RawDescription = "{%fullname% 不是这里最好的战士，让我们说清楚。队长, 看我的肌肉, 不是我， " + bros[0].getName() + ", 谁能获得人生最大的回报：对自己敌人的恐惧！听着，如果我擦一点泡沫，然后抓住阳光，肌肉就会发光。 当所有的女人都说她们就在这里，尤其是在这里，在我美丽的胸脯上找到了天堂，难道不是把我的胸肌错当成了天堂吗？}";
+		bros[1].getBackground().m.RawDescription = "{%fullname% 可不是这里最好的战士，让我们说清楚。队长，看我的肌肉，难道我， " + bros[0].getName() + "，不才是那个得到人生最大奖励的人吗：所有敌人都对我感到恐惧！看啊，只要涂上一点泡沫，跑到阳光底下，我的肌肉就会发光。 所有的女人都说她们就在这儿，特别是这儿，我美丽的胸脯上找到了天堂的时候，难道不是错把我的胸肌当成天堂了吗？}";
 		bros[1].getBackground().buildDescription(true);
-		bros[2].getBackground().m.RawDescription = "{你为什么看着%fullname%？队长，应该是我！" + bros[1].getName() + ", 谁是你最伟大的角斗士. 我就是那个扫过林德蠕龙腿，用它自己的尾巴把它勒死的人！ 你们这些混蛋怎么说？ 你说这是个大故事？ 呸！充其量只是一只横着的蜥蜴。}";
+		bros[2].getBackground().m.RawDescription = "{你看%fullname%做什么？队长，我，" + bros[1].getName() + ", 正是你最伟大的角斗士. 我就是那个扫过林德蠕龙腿，让它用尾巴勒死自己的人！ 你们这些混蛋说什么？ 说我吹大牛？ 呸！那充其量就是一只倒着的蜥蜴。}";
 		bros[2].getBackground().buildDescription(true);
 		this.World.Assets.m.BusinessReputation = 100;
 		this.World.Assets.getStash().resize(this.World.Assets.getStash().getCapacity() - 9);
@@ -195,7 +195,7 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 			{
 				if (bro.getFlags().get("IsPlayerCharacter"))
 				{
-					bro.getBackground().m.RawDescription = "{%fullname% 对一个好朋友的去世感到悲伤，但是他在展望未来的时候知道有一个人一直在他身后。就是以兄弟般的方式在他身后。精神上的。只有兄弟般的精神上的。}";
+					bro.getBackground().m.RawDescription = "{%fullname% 对一个好朋友的去世感到悲伤，但是他在展望未来的时候知道有一个人一直在他身后。以一种兄弟般的方式，就是这样。精神上的。只是兄弟般的精神上的。}";
 					bro.getBackground().buildDescription(true);
 				}
 			}
@@ -208,7 +208,7 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 			{
 				if (bro.getFlags().get("IsPlayerCharacter"))
 				{
-					bro.getBackground().m.RawDescription = "{你应该知道些什么，队长。 我很高兴你能置身事外。 大概有十年了，我还没有感受到这样的生活。 如果你看到我在那即将倒下，你就呆在原地，因为我正站在我想站的地方。}";
+					bro.getBackground().m.RawDescription = "{你应该知道些什么，队长。 我很高兴你能置身事外。 大概有十年了，我头一次这么真切的感到自己活着。 如果你看到我快要倒下，请你不要管我，那正是我所要追求的。}";
 					bro.getBackground().buildDescription(true);
 				}
 			}

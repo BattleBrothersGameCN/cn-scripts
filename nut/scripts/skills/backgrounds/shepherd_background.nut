@@ -6,9 +6,9 @@ this.shepherd_background <- this.inherit("scripts/skills/backgrounds/character_b
 		this.m.ID = "background.shepherd";
 		this.m.Name = "牧羊人";
 		this.m.Icon = "ui/backgrounds/background_44.png";
-		this.m.BackgroundDescription = "牧羊人习惯于体力劳动，而且以用投石索击退偶尔出现的狼出名。";
-		this.m.GoodEnding = "像%name%这样的牧羊人能够加入佣兵战团是十分不寻常的，但他证明了自己是一个出色的战士。随着伤病不断增多，他最终选择退役，拄着手杖回到牧场放羊，直到最后的平静日子。";
-		this.m.BadEnding = "你认为一个牧羊人在雇佣军的队伍中会格格不入，而最终%name%也认同了这一点。他在你离开%companyname%不久后也离开了，据你最后听到的消息，他又回到了放羊的生活中。虽然大多数人在离开战团时情绪低落，但%name%受到的伤害并没有使他放弃安逸的生活方式 —— 盯着那吓人程度仅仅等同于坏梦的白绒绒可爱小动物。";
+		this.m.BackgroundDescription = "牧羊人习惯于体力劳动，并以用投石索击退偶尔出现的狼出名。";
+		this.m.GoodEnding = "像%name%这样加入佣兵战团的牧羊人是十分不寻常的，但他证明了自己是一个出色的战士。随着伤病不断增多，他最终选择退役，拄着手杖回到牧场放羊，直到最后的平静日子。";
+		this.m.BadEnding = "你认为一个牧羊人在雇佣军的队伍中会格格不入，而最终%name%也认同了这一点。他在你离开%companyname%不久后也离开了，据你最后听到的消息，他又回到了放羊的生活中。虽然大多数人在离开战团时情绪低落，但%name%受到的伤害并没有使他放弃安逸的生活方式 —— 盯着那群吓人程度仅等于噩梦的白绒绒可爱小动物。";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [

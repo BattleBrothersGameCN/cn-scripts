@@ -112,7 +112,7 @@ this.sling_stone_skill <- this.inherit("scripts/skills/skill", {
 			id = 7,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]100%[/color] 几率在命中目标头部时造成茫然"
+			text = "命中目标头部时有 [color=" + this.Const.UI.Color.NegativeValue + "]100%[/color] 几率造成茫然"
 		});
 
 		if (this.Tactical.isActive() && this.getContainer().getActor().getTile().hasZoneOfControlOtherThan(this.getContainer().getActor().getAlliedFactions()))
