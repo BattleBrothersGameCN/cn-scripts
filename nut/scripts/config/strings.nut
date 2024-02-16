@@ -676,9 +676,9 @@ gt.Const.Strings.ItemSlotName <- [
 gt.Const.Strings.World.TimeOfDay <- [
 	"黎明",
 	"早晨",
-	"正午",
+	"中午",
 	"下午",
-	"晚上",
+	"傍晚",
 	"黄昏",
 	"夜晚",
 	"黎明"

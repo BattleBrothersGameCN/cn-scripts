@@ -66,7 +66,7 @@ this.town_temple_dialog_module <- this.inherit("scripts/ui/screens/ui_module", {
 
 		return {
 			Title = "神殿",
-			SubTitle = "让你的伤者得到牧师的治疗和祈祷",
+			SubTitle = "让牧师为你的伤员治疗并祈祷",
 			Roster = roster,
 			Assets = this.m.Parent.queryAssetsInformation()
 		};
