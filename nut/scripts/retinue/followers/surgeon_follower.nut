@@ -5,7 +5,7 @@ this.surgeon_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.surgeon";
 		this.m.Name = "外科医生";
-		this.m.Description = "这位外科医生是解剖学知识的行家。雇佣兵战团对这类人而言是完美的，既可以将这些知识应用于治疗，也可以更多地了解人类的内部构造。";
+		this.m.Description = "外科医生是一位行走的解剖学百科全书。雇佣兵战团算是他的最佳去处，既能运用这些知识来治疗伤员，又能更深入地了解人体的构造。";
 		this.m.Image = "ui/campfire/surgeon_01";
 		this.m.Cost = 3500;
 		this.m.Effects = [
@@ -27,7 +27,7 @@ this.surgeon_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "在神殿治疗受伤的队员" + this.Math.min(5, this.World.Statistics.getFlags().getAsInt("InjuriesTreatedAtTemple")) + "/5 次";
+		this.m.Requirements[0].Text = "在神殿治疗伤员" + this.Math.min(5, this.World.Statistics.getFlags().getAsInt("InjuriesTreatedAtTemple")) + "/5次";
 
 		if (this.World.Statistics.getFlags().getAsInt("InjuriesTreatedAtTemple") >= 5)
 		{

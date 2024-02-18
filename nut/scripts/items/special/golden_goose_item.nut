@@ -4,7 +4,7 @@ this.golden_goose_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.golden_goose";
-		this.m.Name = "黄金鹅";
+		this.m.Name = "金鹅";
 		this.m.Description = "一个用纯金制作的小鹅雕像。每天有一个小小的金蛋神秘地从雕像上冒出来。";
 		this.m.Icon = "loot/golden_goose.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
