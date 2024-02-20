@@ -4,7 +4,7 @@ this.rondel_dagger <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.rondel_dagger";
-		this.m.Name = "龙德尔匕首";
+		this.m.Name = "圆盘匕首";
 		this.m.Description = "一种细长的四棱柱匕首，用来刺穿盔甲上的弱点。";
 		this.m.Categories = "匕首，单手持";
 		this.m.IconLarge = "weapons/melee/dagger_02.png";
