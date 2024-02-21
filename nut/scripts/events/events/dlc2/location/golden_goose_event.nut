@@ -59,7 +59,7 @@ this.golden_goose_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "让我们离开这里。",
+					Text = "我们走吧。",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
