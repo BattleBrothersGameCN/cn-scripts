@@ -10,7 +10,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A1",
-			Text = "[img]gfx/ui/events/event_144.png[/img]{你在漫天飞雪里发现了一个洞穴，它的入口被密集的冰柱挡住了。 穿过冰柱向内看去，你发现洞穴里面有一个很陡峭的斜坡，这个斜坡通向一个可能被冻结了很久的地下河河岸。 好像有人在河道边缩成一团，用鹤嘴锄反复敲打着冰块。 风将冰柱吹得呼呼作响。 你对那个缩成一团的人喊叫，但没有得到任何响应。\n\n将冰柱打碎并且进入里面需要一段时间。 幸运的是，一个佣兵说有其他的入口。 虽然这个入口也被堵住了，但可以让一个足够强的人挤过去，他要面对的是里面的任何危险。}",
+			Text = "[img]gfx/ui/events/event_144.png[/img]{你在冰层中发现了一座洞穴，其深邃的入口被厚实冰柱构成的大门所遮掩。透过冰柱间的缝隙窥视，你看到洞穴急剧向下倾斜，似乎通往一个早已冰封的地下河岸。有个人影蜷缩在旁，不断地用镐头敲击着冰面。风在洞穴的冰齿间呼啸，发出尖锐的摩擦声。你向那个蜷缩的人喊话，但没有任何回应。\n\n要砍穿这厚实冰柱进入洞穴，需要耗费不少时间。幸运的是，一名佣兵报告说可能存在一个后门。虽然同样被堵塞，但一个足够强壮的人或许能够挤过去，直面洞内的任何危险。}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -48,7 +48,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				{
 					local bro = roster[i];
 					this.Options.push({
-						Text = "我需要你去侦察前方，" + bro.getName() + ".",
+						Text = "我需要你前去侦察，" + bro.getName() + ".",
 						function getResult( _event )
 						{
 							_event.m.Champion = bro;
@@ -60,7 +60,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				}
 
 				$[stack offset 0].Options.push({
-					Text = "我们应该离开这儿。",
+					Text = "我们应该离开这个地方。",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -77,7 +77,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "A2",
-			Text = "[img]gfx/ui/events/event_144.png[/img]{你跟着一个神秘人的脚印找到了这个冰洞。 因为一扇厚厚的冰柱门恰如其分地阻挡你进入，所以这里最近应该没有人侵入。 洞穴的另一边，有个老人面朝下倒在雪地里，死气沉沉，一只胳膊伸向洞口。\n\n 穿过冰柱向内看去，你发现洞穴里面有一个很陡峭的斜坡，这个斜坡通向一个可能被冻结了很久的地下河河岸。 好像有人在河道边缩成一团，用鹤嘴锄反复敲打着冰块。 风将冰柱吹得呼呼作响。 你对那个缩成一团的人喊叫，但没有得到任何响应。\n\n将冰柱打碎并且进入里面需要一段时间。 幸运的是，一个佣兵说有其他的入口。 虽然这个入口也被堵住了，但可以让一个足够强的人挤过去，他要面对的是里面的任何危险。}",
+			Text = "[img]gfx/ui/events/event_144.png[/img]{你追踪那位神秘信使的足迹来到了冰洞。由厚实冰柱构成的大门牢牢守护着你的入口，显然这里近期未曾有人踏足。在洞口的一侧，老人面朝下躺在雪地里，已然离世，他的一只手臂伸出，指向洞穴深处。\n\n透过冰柱间的缝隙窥视，你看到洞穴急剧向下倾斜，似乎通往一个早已冰封的地下河岸。有个人影蜷缩在旁，不断地用镐头敲击着冰面。风在洞穴的冰齿间呼啸，发出尖锐的摩擦声。你向那个蜷缩的人喊话，但没有任何回应。\n\n要砍穿这厚实冰柱进入洞穴，需要耗费不少时间。幸运的是，一名佣兵报告说可能存在一个后门。虽然同样被堵塞，但一个足够强壮的人或许能够挤过去，直面洞内的任何危险。}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -105,7 +105,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				{
 					local bro = roster[i];
 					this.Options.push({
-						Text = "我需要你去侦察前方，" + bro.getName() + ".",
+						Text = "我需要你前去侦察，" + bro.getName() + ".",
 						function getResult( _event )
 						{
 							_event.m.Champion = bro;
@@ -117,7 +117,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				}
 
 				$[stack offset 0].Options.push({
-					Text = "我们应该离开这儿。",
+					Text = "我们应该离开这个地方。",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
@@ -185,7 +185,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				_event.m.Title = "当你接近时……";
-				this.Options[0].Text = "你可以把他打败，%chosen%！";
+				this.Options[0].Text = "%chosen%，拿下他！";
 				this.Characters.push(_event.m.Champion.getImagePath());
 			}
 
@@ -198,7 +198,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "做的很好，%chosen%。",
+					Text = "%chosen%，干得好。",
 					function getResult( _event )
 					{
 						return "D";
