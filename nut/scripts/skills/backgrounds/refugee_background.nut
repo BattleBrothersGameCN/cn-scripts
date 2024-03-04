@@ -6,9 +6,9 @@ this.refugee_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.ID = "background.refugee";
 		this.m.Name = "难民";
 		this.m.Icon = "ui/backgrounds/background_38.png";
-		this.m.BackgroundDescription = "难民缺乏为家园而战的信念，但他们现在已经习惯了漫长而疲惫的旅行。";
-		this.m.GoodEnding = "%name%这个难民表现出了他天生的战斗才能，但他最终退役离开了%companyname%。传言称他回到了家乡，目前正在用他所有的财富来帮助重建家乡。";
-		this.m.BadEnding = "由于%companyname%的垮台已经板上钉钉，难民%name%离开了战团。他用所剩无几的克朗买了一双鞋，返回家的废墟尝试重建它。在回家的路上，一个不识字的野人杀死了他并吃掉了那双鞋。";
+		this.m.BackgroundDescription = "难民缺乏为家园而战的信念，但他们惯于漫长而疲惫的旅行。";
+		this.m.GoodEnding = "难民%name%表现出了天生的战斗才能，但他最终还是选择退役，离开了%companyname%。传言称他回到了家乡，正倾尽他所有的财富重建家园。";
+		this.m.BadEnding = "鉴于%companyname%的垮台已经板上钉钉，难民%name%离开了战团。他用所剩无几的克朗买了一双鞋，打算在家乡的废墟上重建家园。在回家的路上，一个不识字的野人杀死了他并吃掉了那双鞋。";
 		this.m.HiringCost = 40;
 		this.m.DailyCost = 4;
 		this.m.Excluded = [

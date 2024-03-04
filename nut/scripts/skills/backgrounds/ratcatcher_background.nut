@@ -7,8 +7,8 @@ this.ratcatcher_background <- this.inherit("scripts/skills/backgrounds/character
 		this.m.Name = "捕鼠者";
 		this.m.Icon = "ui/backgrounds/background_41.png";
 		this.m.BackgroundDescription = "捕鼠者需要快速反应才能捉住他们的猎物。";
-		this.m.GoodEnding = "%name%捉鼠人出身神秘，亦归于神秘。离开了%companyname%后，他开了一家捉鼠战团。他的生意非常好，直到有传言称他没有杀死任何老鼠，而是将成千上万的老鼠藏在城外的一个仓库里。据你最后所知，这个人对他新交的众多朋友非常满意。";
-		this.m.BadEnding = "你本以为%name%不适合当佣兵，但是他证明了自己的能力。不幸的是，%companyname%瓦解了，他又回去抓老鼠了。你听说他的尸体在下水道里被发现，浑身覆盖着啃咬中的老鼠，据说他脸上带着微笑。";
+		this.m.GoodEnding = "捉鼠人%name%出身神秘，亦归于神秘。离开了%companyname%后，他开了一家捉鼠公司。他的生意非常好，直到有传言称他没有杀死任何老鼠，而是将成千上万的老鼠藏在城外的一个仓库里。据你最后所知，这个人对他新交的众多朋友非常满意。";
+		this.m.BadEnding = "你本以为%name%不适合当佣兵，但是他证明了自己的能力。不幸的是，%companyname%瓦解了，他又回去抓老鼠了。你听说他的尸体在下水道里被发现，老鼠爬满了全身，啃食着他的血肉，据说他脸上带着微笑。";
 		this.m.HiringCost = 40;
 		this.m.DailyCost = 4;
 		this.m.Excluded = [

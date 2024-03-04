@@ -31,7 +31,7 @@ this.monk_turned_flagellant_background <- this.inherit("scripts/skills/backgroun
 
 	function onBuildDescription()
 	{
-		return "这个世界对于%name%而言太过黑暗，无法继续他的修行。一次与一个自笞者的对话让他意识到，旧神们对人类通过合理手段追求正义并不满意。现在，这位曾经的僧侣被发现开始鞭打自己，一次一次地用鲜血将正义注入这个世界。";
+		return "这个世界太过黑暗，让%name%的修行之路无以为继。一位自笞者通过谈话向他展示了旧神对人们期望通过温和手段追求正义的不满。现在，这位曾经的僧侣开始鞭打自己，一次又一次将血淋淋的正义洒向这个世界。";
 	}
 
 	function onAdded()

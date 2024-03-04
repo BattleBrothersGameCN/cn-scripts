@@ -211,7 +211,7 @@ gt.Const.Strings.EntityName <- [
 	"装甲巨魔",
 	"蛮王",
 	"战獒",
-	"伊吉洛克",
+	"伊吉罗克",
 	"狂暴野蛮人",
 	"大蛇",
 	"伊夫利特",
@@ -1386,7 +1386,7 @@ gt.Const.Strings.PerkDescription <- {
 	SpecSword = "精通剑术，利用对手的失误把握优势。剑技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“还击”不再有命中率惩罚。\n\n“划砍”造成伤残的阈值降低 [color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]\n\n剑技能“裂盾”和“挥斩”不再有命中率惩罚，并且命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]",
 	SpecSpear = "精通长矛，御敌于外。矛技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“矛墙”不再因敌人成功进入控制区域而立即失效。此外，“矛墙”仍可主动启用，并继续对其他试图进入控制区域的敌人进行免费攻击。\n\n使用三叉戟和战叉攻击近身敌人不再有命中率惩罚。",
 	SpecPolearm = "精通长柄，御敌于外。长柄技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n长柄武器技能消耗的AP降低至 [color=" + this.Const.UI.Color.NegativeValue + "]5[/color]，并且使用长柄武器攻击近身敌人不再有命中率惩罚。",
-	SpecHammer = "精通锤子，对抗重甲对手。锤技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“破坏护甲”和“摧毁护甲”造成的护甲伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]33%[/color]\n\n“震碎”的命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]\n\n使用长锤攻击近身敌人不再有命中率惩罚。",
+	SpecHammer = "精通锤子，对抗重甲对手。锤技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“摧毁盔甲”和“粉碎盔甲”造成的护甲伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]33%[/color]\n\n“震碎”的命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]\n\n使用长锤攻击近身敌人不再有命中率惩罚。",
 	SpecMace = "精通骨朵，不论护甲一通暴打。骨朵技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n如果目标不免疫，“锤倒”、“撞倒”和“击倒”有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 的几率使其昏迷。\n\n使用长棍攻击近身敌人不再有命中率惩罚。",
 	SpecFlail = "精通链枷，绕过对手的盾牌。链枷技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n\'当头一击\'和\'劈头盖脸\'无视盾牌加成。\n\n\'重磅打击\'在击中头部时忽略[color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 护甲。\n\n\'狂舞挥打\'的命中率提高[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]"
 };
