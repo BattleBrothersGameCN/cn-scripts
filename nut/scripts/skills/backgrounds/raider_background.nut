@@ -6,7 +6,7 @@ this.raider_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.ID = "background.raider";
 		this.m.Name = "掠袭者";
 		this.m.Icon = "ui/backgrounds/background_49.png";
-		this.m.BackgroundDescription = "任何一个存活至今的掠袭者都会有一些战斗方面的专长。";
+		this.m.BackgroundDescription = "但凡活下来的掠袭者都会有一些战斗方面的专长。";
 		this.m.GoodEnding = "作为一个前掠袭者，%name%很好地适应了%companyname%并证明了自己是一名出色的战士。他在攒了一大笔克朗后便退出了战团并回到了他的家乡。他最后一次被人看见时正驾着一条内河船驶向一个小村庄。";
 		this.m.BadEnding = "随着%companyname%的快速衰落，掠袭者%name%离开了战团继续走自己的路。他重回掠袭行列，带着贪婪和暴力袭击沿岸的河边村庄。你不确定这是否属实，但有消息称他被一个年轻马夫用草叉戳了个透心凉。据说镇上的人把他的残躯挂在外墙上作为对未来掠袭者的警告。";
 		this.m.HiringCost = 160;

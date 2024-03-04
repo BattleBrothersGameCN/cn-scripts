@@ -7,7 +7,7 @@ this.sellsword_background <- this.inherit("scripts/skills/backgrounds/character_
 		this.m.Name = "佣兵";
 		this.m.Icon = "ui/backgrounds/background_10.png";
 		this.m.BackgroundDescription = "佣兵价格不菲，但战争生涯将他们铸就为了技艺精湛的战士。";
-		this.m.GoodEnding = "佣兵%name%离开了%companyname%，并创立了自己的雇佣兵战团。据你所知，这是一次非常成功的创业，他经常与%companyname%合作。";
+		this.m.GoodEnding = "佣兵%name%离开%companyname%后，成立了自己的雇佣兵战团。据你了解，这创业很成功，他经常与%companyname%搭档合作。";
 		this.m.BadEnding = "佣兵%name%离开了%companyname%，并创立了自己的竞争战团。在一场贵族间的战斗中，这两个战团站在了对立面。一名来自%companyname%的雇佣兵用一顶雇佣骑士头盔砸碎了%name%的头，致他死亡。";
 		this.m.HiringCost = 100;
 		this.m.DailyCost = 35;

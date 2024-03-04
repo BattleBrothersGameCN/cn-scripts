@@ -513,7 +513,7 @@ gt.Const.Strings.HandgonneNames <- [
 	"龙舌",
 	"戈恩",
 	"雷霆棒",
-	"喷火器"
+	"火舌喷吐者"
 ];
 gt.Const.Strings.SwordlanceNames <- [
 	"利刃法杖",

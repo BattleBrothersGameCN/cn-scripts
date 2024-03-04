@@ -63,7 +63,7 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[0].getItems().equip(this.new("scripts/items/weapons/scimitar"));
 		bros[0].getItems().equip(this.new("scripts/items/tools/throwing_net"));
 		bros[0].improveMood(0.750000, "渴望在竞技场外证明自己");
-		bros[1].setTitle("大熊(the Bear)");
+		bros[1].setTitle("大熊");
 		bros[1].getSkills().add(this.new("scripts/skills/traits/glorious_endurance_trait"));
 		bros[1].getTalents().resize(this.Const.Attributes.COUNT, 0);
 		bros[1].getTalents()[this.Const.Attributes.Hitpoints] = 3;

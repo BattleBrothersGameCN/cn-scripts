@@ -10,13 +10,13 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]营火闪耀着耀眼的光芒，照耀着那些身着鲜艳橙色衣服者的面庞，仿佛他们自己就是燃烧着的木头。\n\n 就是在这里，你发现 %monk% 和 %flagellant% 相互交谈。 他们的讨论的是，一个很简单的事。 僧侣恳求苦修者把鞭子放下。 虽然你没必要介入，但你不得不承认，用一种被美化的仪式摧残自己的身体并不是最好的生活方式。 但是随后苦修者用一些话来反驳，让你们两个人停了下来。 这是一个精心设计的短语，如果你认为它可以证明这家伙的个人习惯是正确的，你就会尽可能快地把这个概念从你的头脑中踢出去。 非常的让人不安，这家伙说的太轻描淡写了。 如此抚慰人心的声音竟能温暖地裹在伤痕累累的躯壳里。 什么造就了它？\n\n 这个僧侣结结巴巴地说了一会儿，然后把手放到了那个被鞭笞的人的肩膀上，按着他，让他们互相对视。 他轻声细语，这些话会让你耳朵发痒，但却不会大声地说出它们的真正含义。 你只能假设，他们的目的是，再次说服苦修者过上更好，更少暴力的生活。\n\n 但是，再一次的，苦修者开始回应，然后他们继续开始辩论。",
+			Text = "[img]gfx/ui/events/event_05.png[/img]营火闪耀着耀眼的光芒，将人们的面庞扭曲成橙色，仿佛他们自己就是燃烧着的木头。\n\n 在这里，你发现 %monk% 和 %flagellant% 在谈着什么。起初，他们的讨论并不复杂。 僧侣恳求自笞者不再挥鞭。 虽然你没必要介入，但你不得不承认，用一种被美化的仪式摧残自己的身体并不是最好的活法。 但紧接着自笞者反驳的话，让你们两个人停了下来。 这段话语经过精心设计，如果你不把它忘掉，恐怕就会越来越认同自笞者的想法。 更让人不安的是，这家伙说地如此的轻描淡写。 一具伤痕累累的躯壳里竟然能温暖地编织出这么抚慰人心的声音。 是什么造就了它？\n\n 这个僧侣结结巴巴地说了一会儿，然后把手放到了自笞者的肩膀上，按着他，让他们互相对视。 他轻声细语，这些话会让你耳朵发痒，但你并不能听清其中的意思。 你只能假设，它们的目的是，再次说服苦修者过上更好，不那么暴力的生活。\n\n 但是，再一次的，苦修者开始回应，然后他们继续你来我往地辩论起来。",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "这真带劲儿。咱们看看接下来会发生什么。",
+					Text = "真有趣。咱们看看接下来会发生什么。",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -24,7 +24,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "好吧，你们闹够了。我们有很多实际的事要做。",
+					Text = "好了，你们闹够了吧。我们有很多实际的事要做。",
 					function getResult( _event )
 					{
 						return 0;
@@ -41,13 +41,13 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_05.png[/img]决定让他俩继续讨论，你走开了一段时间。 当你回来的时候，你发现苦修者坐在僧侣旁边。 两个人在一根圆木上来回地看了看，双手合十，祈祷着，低声说着神圣的话语，张开了嘴唇。 你没有必要去听他们在说什么，因为这本身就是一个令人欣慰的景象。 当你对如何侍奉神明不以为然的时候，你会不由自主地感到一丝欣慰，因为苦修者放下了折磨自己的工具。",
+			Text = "[img]gfx/ui/events/event_05.png[/img]决定让他俩继续讨论，你走开了一段时间。 当你回来的时候，你发现苦修者坐在僧侣旁边。 两个人在一根圆木上来回地看了看，双手合十，祈祷着，神圣的低语，从他们的嘴唇里冒了出来。 你没有必要去听他们在说什么，因为这本身就是一个令人欣慰的景象。 你并不知道什么是安抚众神最好的方式，但你会不由自主地感到一丝欣慰，因为苦修者放下了折磨自己的工具。",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "愿这人现在平静下来。",
+					Text = "愿这人找到自己的宁静。",
 					function getResult( _event )
 					{
 						return 0;
@@ -68,7 +68,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 13,
 						icon = background.getIcon(),
-						text = _event.m.Flagellant.getName() + "现在是一个被平息的苦修者"
+						text = _event.m.Flagellant.getName() + "现在是一个被安抚的自笞者"
 					}
 				];
 				_event.m.Monk.getBaseProperties().Bravery += 2;
@@ -83,7 +83,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]决定让他俩继续讨论，你走开了一段时间。\n\n你回来的时候，僧侣光着身子，眼里含着泪水。 他的体型像个懦夫，但是面色坚毅，仿佛这就是他想要的。 他吸了一口气，直起身子，把手腕甩过肩膀。 苦修者的鞭子握在手里，你听到皮鞭打在僧侣背上的声音。 他把鞭子衰远，鞭刃和倒刺撕裂血肉的声音在你耳中回响。 苦修者自己什么也没说。 他在僧侣的旁边坐了下来。 他凝视着大地，但他的眼睛里几乎没有一丝生命的微光，尽管你肯定能看到他在殴打自己时，生命的血液从他的背部流出。\n\n你又一次离开，但脚下的草地却没有了那种嘎吱嘎吱的声音，空气中弥漫着一股金属的味道。 Little leather snickers follow you all the way back to your tent.",
+			Text = "[img]gfx/ui/events/event_05.png[/img]决定让他俩继续讨论，你走开了一段时间。\n\n你回来的时候，僧侣光着身子，弯下腰，眼里含着泪水。 他的身体胆怯的发抖，但他的面色坚毅，仿佛这就是他想要的。 他吸了一口气，直起身子，把手腕甩过肩膀。 只见他手里握着的自笞者的鞭子，只听到皮鞭打在僧侣背上的声音。 他拉动鞭子，鞭刃和倒刺撕裂血肉的声音在你耳中回响。 苦修者什么也没说，只是在僧侣的旁边坐了下来。 他凝视着大地，眼里没有一丝生命的微光，但你确确实实看到了随着每次鞭打，他背部流出的充满生命的血液。\n\n你又一次离开，但脚下的草地少了嘎吱嘎吱的声响，空气中却多了一股金属的味道。你走回帐篷的路上，皮鞭的声音还在继续。",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -110,7 +110,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 13,
 						icon = background.getIcon(),
-						text = _event.m.Monk.getName() + "现在是僧侣转化的苦修者"
+						text = _event.m.Monk.getName() + "现在是从僧侣转变为的自笞者"
 					}
 				];
 				_event.m.Flagellant.getBaseProperties().Bravery += 2;

@@ -69,7 +69,7 @@ this.research_notes_legendary_item <- this.inherit("scripts/items/item", {
 			},
 			{
 				flag = "isIjirokPotionDiscovered",
-				creatureName = "伊杰洛克(Ijirok)",
+				creatureName = "伊吉罗克",
 				potionName = "疯嚣之神灵药"
 			},
 			{

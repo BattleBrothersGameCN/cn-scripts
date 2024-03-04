@@ -8,7 +8,7 @@ this.nomad_background <- this.inherit("scripts/skills/backgrounds/character_back
 		this.m.Icon = "ui/backgrounds/background_63.png";
 		this.m.BackgroundDescription = "任何一个在沙漠中生存下来的游牧民都会有一些战斗的经验。";
 		this.m.GoodEnding = "游牧民%name%在你离开几个月后也离开了%companyname%。他显然去了南方，现在领导着他们所谓的“腿上之城” —— 一支漫游于沙漠中的巨大人群。这个社会显然非常富裕和成功，以至于维齐尔们担心自己的人民会涌去那里。";
-		this.m.BadEnding = "你获悉游牧民%name%离开了战团，希望能够找到新的平原漫游。显然，他萌生了远行至北方并与那里的野蛮人和平共处的念头。值得称赞的是，除了一些外在的相似之处，野蛮人和游牧民还分享着相似的生活方式、文化、语言、宗教、法律、斗争、冲突和一些其他方面。这位游牧民在进入野蛮人的营地后几乎立即被屠杀，他的遗体在一场战士仪式中被吃掉。";
+		this.m.BadEnding = "你获悉游牧民%name%离开了战团，希望能在新的土地上漫游。显然，他萌生了远行至北方并与那里的野蛮人和平共处的念头。诚如他所言，除了一些外在的不同之外，野蛮人和游牧民有着相似的生活方式、文化、语言、宗教、法律、斗争和冲突。这位游牧民在进入野蛮人的营地后几乎立即被屠杀，他的遗体在一场战士仪式中被吃掉。";
 		this.m.HiringCost = 200;
 		this.m.DailyCost = 28;
 		this.m.Excluded = [
