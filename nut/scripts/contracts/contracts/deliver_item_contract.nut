@@ -731,7 +731,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			ShowEmployer = false,
 			Options = [
 				{
-					Text = "当之无愧的克朗。",
+					Text = "受之无愧。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
@@ -780,7 +780,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			ShowEmployer = false,
 			Options = [
 				{
-					Text = "当之无愧的克朗。",
+					Text = "受之无愧。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);

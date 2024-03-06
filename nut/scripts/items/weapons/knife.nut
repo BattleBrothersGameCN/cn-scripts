@@ -4,8 +4,8 @@ this.knife <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.knife";
-		this.m.Name = "短刀";
-		this.m.Description = "一把短刀，并非为战斗制作。";
+		this.m.Name = "小刀";
+		this.m.Description = "一把短刀，并非为战斗而制。";
 		this.m.Categories = "匕首，单手持";
 		this.m.IconLarge = "weapons/melee/knife_01.png";
 		this.m.Icon = "weapons/melee/knife_01_70x70.png";
