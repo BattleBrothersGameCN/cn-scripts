@@ -3,8 +3,8 @@ this.deathblow_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.deathblow";
-		this.m.Name = "致命攻击";
-		this.m.Description = "对已经被削弱的目标进行致命打击以终结它。";
+		this.m.Name = "致命一击";
+		this.m.Description = "对已遭削弱的目标致命一击，将其终结。";
 		this.m.KilledString = "捅死";
 		this.m.Icon = "skills/active_199.png";
 		this.m.IconDisabled = "skills/active_199_sw.png";

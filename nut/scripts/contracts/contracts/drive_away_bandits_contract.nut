@@ -445,7 +445,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "我们不是为杀它们而收费的。",
+					Text = "杀了他们也没人多给我们钱。",
 					function getResult()
 					{
 						return 0;
@@ -503,7 +503,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "让我们为您找一把武器。",
+					Text = "我们得给你找把武器。",
 					function getResult()
 					{
 						return 0;
@@ -549,14 +549,14 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到了%townname%并与%employer%交谈，你的旅程经历很简单：你消灭了土匪。他点点头，面带微笑地交付了你支付的费用。%SPEECH_ON%干得好，夥计们。那些土匪给我们带来了很多麻烦。%SPEECH_OFF% | %employer%为你打开门，他手里拎着一个小包。%SPEECH_ON%你回来了，我就知道那些土匪死了。%SPEECH_OFF%你点点头。%employer%耸了耸肩。%SPEECH_ON%可能是吧，不过那些伤口不会骗人。好工作,自由雇佣军。当然，如果你在撒谎，我就找到你。%SPEECH_OFF% | 当你把一袋头颅放在桌子上时，%employer%笑了起来。%SPEECH_ON%为了证明你的任务已经完成，不必弄得满手血腥。我已经得到你成功的消息了–这片土地上的鸟传播得很快，是不是？你的酬劳在角落里。%SPEECH_OFF% | 你报告完成后，%employer%用手帕擦了擦额头。%SPEECH_ON%他们全部死了？你不知道你给我减轻了多少负担，自由雇佣兵。你的克朗，一如既往地承诺。%SPEECH_OFF%他在桌子上放了一个小包，你很快地接过来。 | %employer%喝了一口酒，点头赞许。%SPEECH_ON%你知道吗，我不喜欢你们这种人，但你们做得非常好，雇佣兵。在你来之前，%randomname%就告诉我所有的土匪都已经被杀了。他描述的方式非常出色。好的，克朗已经准备好了。%SPEECH_OFF%他拍了一下桌子上的一个小包。%SPEECH_ON%这是你应得的回报。%SPEECH_OFF% | %employer%向后靠在椅子上，双手交叉放在膝盖上。%SPEECH_ON%很多人不喜欢雇佣兵，也许是因为你们会毁掉整个村庄，只为赚更多的钱。但我承认你们做得很好。%SPEECH_OFF%他指了一下房间的一个角落，那里有一个木箱还没有打开。%SPEECH_ON%一切都在那里，如果你需要，我不会介意你去数数。%SPEECH_OFF%你数，发现的确没问题。 | %employer%的桌子上满是脏兮兮和展开的卷轴，他露出温柔的笑容，好像他正在对着一堆宝藏诉说。%SPEECH_ON%贸易协议！贸易协议到处都是！快乐的农民！快乐的家庭！每个人都很开心！啊，太棒了。当然，对于你来说也是好事，自由佣兵，因为你的口袋变得更重了！%SPEECH_OFF%这个人把一个小钱包扔给你，然后又扔了一个，再扔一个。%SPEECH_ON%我本来想用一个更大的小包付钱的，但是这样也挺有意思。%SPEECH_OFF%他调皮地扔了一个小钱袋，而你则轻松自如地抓住了它，如同一个拥有新鲜血液的男人一样毫不在乎。}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到了%townname%并与%employer%交谈，你的旅程经历很简单：你消灭了土匪。他点点头，面带微笑地交付了你支付的费用。%SPEECH_ON%干得好，伙计们。那些土匪给我们带来了很多麻烦。%SPEECH_OFF% | %employer%为你打开门，他手里拎着一个小包。%SPEECH_ON%你回来了，我就知道那些土匪死了。%SPEECH_OFF%你点点头。%employer%耸了耸肩。%SPEECH_ON%可能是吧，不过那些伤口不会骗人。好工作,自由雇佣军。当然，如果你在撒谎，我就找到你。%SPEECH_OFF% | 当你把一袋头颅放在桌子上时，%employer%笑了起来。%SPEECH_ON%为了证明你的任务已经完成，不必弄得满手血腥。我已经得到你成功的消息了–这片土地上的鸟传播得很快，是不是？你的酬劳在角落里。%SPEECH_OFF% | 你报告完成后，%employer%用手帕擦了擦额头。%SPEECH_ON%他们全部死了？你不知道你给我减轻了多少负担，自由雇佣兵。你的克朗，一如既往地承诺。%SPEECH_OFF%他在桌子上放了一个小包，你很快地接过来。 | %employer%喝了一口酒，点头赞许。%SPEECH_ON%你知道吗，我不喜欢你们这种人，但你们做得非常好，雇佣兵。在你来之前，%randomname%就告诉我所有的土匪都已经被杀了。他描述的方式非常出色。好的，克朗已经准备好了。%SPEECH_OFF%他拍了一下桌子上的一个小包。%SPEECH_ON%这是你应得的回报。%SPEECH_OFF% | %employer%向后靠在椅子上，双手交叉放在膝盖上。%SPEECH_ON%很多人不喜欢雇佣兵，也许是因为你们会毁掉整个村庄，只为赚更多的钱。但我承认你们做得很好。%SPEECH_OFF%他指了一下房间的一个角落，那里有一个木箱还没有打开。%SPEECH_ON%一切都在那里，如果你需要，我不会介意你去数数。%SPEECH_OFF%你数，发现的确没问题。 | %employer%的桌子上满是脏兮兮和展开的卷轴，他露出温柔的笑容，好像他正在对着一堆宝藏诉说。%SPEECH_ON%贸易协议！贸易协议到处都是！快乐的农民！快乐的家庭！每个人都很开心！啊，太棒了。当然，对于你来说也是好事，自由佣兵，因为你的口袋变得更重了！%SPEECH_OFF%这个人把一个小钱包扔给你，然后又扔了一个，再扔一个。%SPEECH_ON%我本来想用一个更大的小包付钱的，但是这样也挺有意思。%SPEECH_OFF%他调皮地扔了一个小钱袋，而你则轻松自如地抓住了它，如同一个拥有新鲜血液的男人一样毫不在乎。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "当之无愧的克朗。",
+					Text = "受之无愧。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
@@ -589,7 +589,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "当之无愧的克朗。",
+					Text = "受之无愧。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);

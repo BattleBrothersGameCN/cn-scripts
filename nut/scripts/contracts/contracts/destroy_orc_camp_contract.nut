@@ -432,7 +432,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "当之无愧的克朗。",
+					Text = "受之无愧。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);

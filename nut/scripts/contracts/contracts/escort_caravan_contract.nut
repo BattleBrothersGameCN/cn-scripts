@@ -952,7 +952,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "当之无愧的克朗。",
+					Text = "受之无愧。",
 					function getResult()
 					{
 						local money = this.Contract.m.Payment.getOnCompletion() + this.Contract.m.Payment.getPerCount() * this.Flags.get("HeadsCollected");

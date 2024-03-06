@@ -7,7 +7,7 @@ this.miner_background <- this.inherit("scripts/skills/backgrounds/character_back
 		this.m.Name = "矿工";
 		this.m.Icon = "ui/backgrounds/background_45.png";
 		this.m.BackgroundDescription = "矿工习惯于体力劳动，但多年来呼吸矿井里的带尘空气可能已经对他的健康造成了损害。";
-		this.m.GoodEnding = "矿工%name%从此再也没有回到矿井里，谢天谢地。如果有一种生活比为生存而战斗更糟糕，那很可能就是为生存而挖山！据说，这位矿工在海边盖起了一座房子，余生平静地从事捕鱼工作，享受着日出等这些伤感的破玩意。";
+		this.m.GoodEnding = "谢天谢地，矿工%name%从此再也没有回到矿井里。如果有一种生活比为生存而战斗更糟糕，那很可能就是为生存而挖山！据说，这位矿工在海边盖起了一座房子，余生平静地从事捕鱼工作，享受着日出等这些伤感的破玩意。";
 		this.m.BadEnding = "如果说有一种生活比当佣兵更加艰苦，那便是当矿工。可悲的是，%name%又回到了那种生活，回到矿井里去开采金属和矿石来填满一些富人的口袋。最近的一次地震导致了许多类似的矿井坍塌。你不知道这位老兄弟是否安然无恙，但情况看起来非常严峻。";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
@@ -28,7 +28,7 @@ this.miner_background <- this.inherit("scripts/skills/backgrounds/character_back
 		this.m.Titles = [
 			"矿工(the Miner)",
 			"爬行者(the Crawler)",
-			"地面方(Earthside)"
+			"地底人(Earthside)"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;
