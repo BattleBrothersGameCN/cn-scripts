@@ -30,7 +30,7 @@ this.lumberjack_background <- this.inherit("scripts/skills/backgrounds/character
 		this.m.Titles = [
 			"结实者(the Sturdy)",
 			"砍斧(the Axe)",
-			"伐木工(the Woodsman)"
+			"林中人(the Woodsman)"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.CommonMale;
