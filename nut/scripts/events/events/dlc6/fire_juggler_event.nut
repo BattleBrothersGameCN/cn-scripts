@@ -180,7 +180,7 @@ this.fire_juggler_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"juggler_southern_background"
 				]);
-				_event.m.Dude.setTitle("火焰玩偶师(the Fire Juggler)");
+				_event.m.Dude.setTitle("耍火者(the Fire Juggler)");
 				_event.m.Dude.getBackground().m.RawDescription = "你在街头发现了%name%" + _event.m.Town.getName() + "，准备进行一场激烈的火焰杂耍表演，打破纪录，甚至可能冒着失去生命的风险。幸运的是，" + _event.m.Juggler.getName() + "之后，队长跳进去和他一起完成任务，可能救了他的命。后来，%name%终于厌倦了这种生活，主动加入了你的战团。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				local trait = this.new("scripts/skills/traits/fearless_trait");

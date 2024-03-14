@@ -4,7 +4,7 @@ this.adrenaline_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.adrenaline";
 		this.m.Name = "肾上腺素";
-		this.m.Description = "当你抓住机会以比对手更快的速度行动时，感觉肾上腺素在你的血管里快速流动。";
+		this.m.Description = "感受血管里奔涌的肾上腺素，抓住机会抢先对手行动。";
 		this.m.Icon = "ui/perks/perk_37_active.png";
 		this.m.IconDisabled = "ui/perks/perk_37_active_sw.png";
 		this.m.Overlay = "perk_37_active";
@@ -47,7 +47,7 @@ this.adrenaline_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "将此角色置于下一轮的第一行动位置"
+				text = "让这个角色在下一轮中第一个行动"
 			}
 		];
 		return ret;

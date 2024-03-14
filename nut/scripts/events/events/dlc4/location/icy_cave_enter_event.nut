@@ -48,7 +48,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				{
 					local bro = roster[i];
 					this.Options.push({
-						Text = "我需要你前去侦察，" + bro.getName() + ".",
+						Text = "前头探路，" + bro.getName() + ".",
 						function getResult( _event )
 						{
 							_event.m.Champion = bro;
@@ -105,7 +105,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				{
 					local bro = roster[i];
 					this.Options.push({
-						Text = "我需要你前去侦察，" + bro.getName() + ".",
+						Text = "前头探路，" + bro.getName() + ".",
 						function getResult( _event )
 						{
 							_event.m.Champion = bro;

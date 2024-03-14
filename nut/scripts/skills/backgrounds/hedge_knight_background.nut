@@ -41,7 +41,7 @@ this.hedge_knight_background <- this.inherit("scripts/skills/backgrounds/charact
 			"独狼(the Lone Wolf)",
 			"狼(the Wolf)",
 			"猎犬(the Hound)",
-			"钢铁挥舞者(Steelwielder)",
+			"执钢者(Steelwielder)",
 			"杀手(the Slayer)",
 			"比武骑士(the Jouster)",
 			"巨人(the Giant)",
