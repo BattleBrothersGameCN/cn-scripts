@@ -24,7 +24,7 @@ this.perk_fast_adaption <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色正在快速适应对手的动作，并获得额外的 [color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Stacks * 10 + "%[/color]命中率(对所有类型的攻击均生效)";
+		return "该角色快速适应了对手的动作，下一次攻击额外提高[color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Stacks * 10 + "%[/color]的命中率。";
 	}
 
 	function onUpdate( _properties )
