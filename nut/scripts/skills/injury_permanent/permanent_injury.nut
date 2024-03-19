@@ -33,7 +33,7 @@ this.permanent_injury <- this.inherit("scripts/skills/skill", {
 			id = 6,
 			type = "hint",
 			icon = "ui/icons/days_wounded.png",
-			text = "永久的"
+			text = "永久"
 		});
 	}
 

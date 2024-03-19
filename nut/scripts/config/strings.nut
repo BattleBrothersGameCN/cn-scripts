@@ -1346,7 +1346,7 @@ gt.Const.Strings.PerkDescription <- {
 	Nimble = "轻甲专精! 通过灵活地躲避或偏转打击来回避所有攻击。所受的伤害最多可以减少[color=" + this.Const.UI.Color.PositiveValue + "]60%[/color]，但在盔甲和头盔的最大疲劳值超过[color=" + this.Const.UI.Color.PositiveValue + "] 15 [/color]时会技能效果会大幅下降。你的盔甲和头盔越轻，你就越受益。\n\n\'强壮\'不影响该特性。\n\n不影响精神攻击和状态效果的伤害, 但是可以帮助避免受到它们",
 	BattleForged = "重甲专精! 受到的护甲伤害会减少，减少的百分比等于盔甲和头盔当前总护甲值之和的[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]。你的盔甲和头盔越重，你的好处就越多。\n\n不影响精神攻击或状态效果的伤害，但可以帮助避免收到它们。",
 	Duelist = "与你的武器融为一体，去攻击弱点! 如果副手未持有武器或者携带着可投掷的工具(如投掷网), 则可额外造成 [color=" + this.Const.UI.Color.PositiveValue + "]+25%[/color] 忽略护甲的伤害。不适用于双手武器。",
-	CripplingStrikes = "致残敌人！你近战攻击和远程攻击的致残阈值降低[color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]。",
+	CripplingStrikes = "致残你的敌人！近战、远程攻击的致残阈值降低[color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]。",
 	QuickHands = "在找这个吗？在战斗中每回合第一次交换除盾牌以外的任何物品成为一个免费动作，不需要行动点数。",
 	Bullseye = "射得好! 当瞄准的目标没有被清空的弹道路线（即目标被遮挡）时，受到的命中惩罚从[color=" + this.Const.UI.Color.NegativeValue + "]75%[/color]减少到[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]。",
 	Ballistics = "命中率的距离惩罚每格减少[color=" + this.Const.UI.Color.NegativeValue + "]-1[/color]",
