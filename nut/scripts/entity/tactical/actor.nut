@@ -1551,7 +1551,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 					this.getSkills().removeByType(this.Const.SkillType.DamageOverTime);
 					this.m.Hitpoints = this.Math.rand(11, 15);
 					nineLivesSkill.setSpent(true);
-					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + " 有九命！");
+					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "有九条命？");
 				}
 			}
 		}
@@ -2710,7 +2710,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			{
 				if (this.Const.Movement.AnnounceDiscoveredEntities)
 				{
-					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this) + " 被发现！");
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this) + "出现了！");
 				}
 			}
 

@@ -5,7 +5,7 @@ this.recruiter_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.recruiter";
 		this.m.Name = "招募者";
-		this.m.Description = "招募者是个花言巧语的大忽悠，他会欺骗那些绝望的人加入佣兵公司来脱离贫困的生活，结果只能步入死亡。对于任何经营佣兵团的人来说都是非常有用的。";
+		this.m.Description = "招募者是个花言巧语的大忽悠，他会向那些绝望的人许诺，当上雇佣兵就能脱离贫困生活，从而把他们骗进佣兵团，但通常等待他们的只有死亡。经营佣兵团的人用得上他。";
 		this.m.Image = "ui/campfire/recruiter_01";
 		this.m.Cost = 3000;
 		this.m.Effects = [

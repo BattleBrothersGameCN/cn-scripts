@@ -6,9 +6,9 @@ this.eunuch_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.ID = "background.eunuch";
 		this.m.Name = "阉人";
 		this.m.Icon = "ui/backgrounds/background_52.png";
-		this.m.BackgroundDescription = "阉人不能有孩子这件事可能不是佣兵战团首要考虑的。";
-		this.m.GoodEnding = "对于%name%来说，有些事情总是有点短缺。但这并没有阻止这个阉人享受生活。他带着一大堆克朗从%companyname%退休，且完全没有被女性吸引，这个人过上了美好而极其专注的生活。";
-		this.m.BadEnding = "据说阉人%name%在你离开战团不久后也离开了，他流浪四方，一贫如洗，将仅剩的克朗用于酒和妓女。由于被妓女侮辱老二的缺失，这个醉酒又暴怒的太监用山羊角刺进那女人的眼睛。这个困惑和惊骇的太监在治安官发现他时仍然醉着，最终被当地人剥光、绞死并肢解喂猪。";
+		this.m.BackgroundDescription = "阉人能不能有孩子不在战团的优先考虑之列。";
+		this.m.GoodEnding = "%name%总觉得短点儿什么。但这并不影响这个阉人享受生活。他带着一大堆克朗从%companyname%退休，不受女色吸引，过上了美好而极其专注的生活。";
+		this.m.BadEnding = "据说，在你离开战团不久后，阉人%name%也离开了，他流浪四方，一贫如洗，将仅剩的钱花在酒和妓女身上。妓女笑他没有老二，被激怒的阉人借着酒劲，用一只山羊角刺穿了她的眼。治安官找到他时，他还没醒酒。最终，在惊骇和困惑当中，他被当地人扒光、绞死、肢解喂猪。";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [
