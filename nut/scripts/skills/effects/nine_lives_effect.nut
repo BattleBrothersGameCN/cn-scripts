@@ -3,8 +3,8 @@ this.nine_lives_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.nine_lives";
-		this.m.Name = "猫有九命";
-		this.m.Description = "这个角色死里逃生！刚刚与死亡擦肩而过，他们的求生意志在下回合到来之前都特别强烈。";
+		this.m.Name = "九命猫";
+		this.m.Description = "该角色仿佛有九条命！刚与死神擦肩而过，直到他的下个回合，他会处于一种高度警觉的生存状态。";
 		this.m.Icon = "ui/perks/perk_07.png";
 		this.m.IconMini = "perk_07_mini";
 		this.m.Overlay = "perk_07";
@@ -30,25 +30,25 @@ this.nine_lives_effect <- this.inherit("scripts/skills/skill", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/melee_defense.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color] 近战防御"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color]近战防御"
 			},
 			{
 				id = 11,
 				type = "text",
 				icon = "ui/icons/ranged_defense.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color] 远程防御"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color]远程防御"
 			},
 			{
 				id = 11,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color] 决心"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color]决心"
 			},
 			{
 				id = 11,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color]主动"
 			}
 		];
 	}

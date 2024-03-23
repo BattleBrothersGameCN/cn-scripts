@@ -10,7 +10,7 @@ this.impatient_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Titles = [
 			"快人(the Quick)",
 			"渴望者(the Eager)",
-			"急迫者(the Anxious)"
+			"急性子"
 		];
 		this.m.Excluded = [
 			"trait.hesitant",
