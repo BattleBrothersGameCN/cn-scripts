@@ -754,7 +754,7 @@ gt.Const.Strings.BastardTitles <- [
 	"错误",
 	"绿帽子",
 	"秘密之子",
-	"妓女",
+	"野种",
 	"玷污之人"
 ];
 gt.Const.Strings.PilgrimTitles <- [
