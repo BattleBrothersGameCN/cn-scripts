@@ -69,7 +69,7 @@ this.crusader_background <- this.inherit("scripts/skills/backgrounds/character_b
 
 	function onBuildDescription()
 	{
-		return "%name% 在亡灵天灾期间加入了你的团队。人们对他知之甚少，除了偶尔挥动剑时发出的咕哝声外，他几乎从不说话。他的语言似乎被编纂成一个简单的结构：杀死邪恶的造物。";
+		return "%name%在亡灵天灾期间加入了你的团队。人们对他知之甚少，除了挥剑时偶尔会发出哼声以外，他可谓一言不发。他的语言似乎被编纂成一个简单的结构：杀死邪恶造物。";
 	}
 
 	function onSetAppearance()

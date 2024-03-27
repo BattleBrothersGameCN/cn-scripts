@@ -38,7 +38,7 @@ this.converted_cultist_background <- this.inherit("scripts/skills/backgrounds/ch
 
 	function onBuildDescription()
 	{
-		return "这个人曾经是谁已经不重要了。现在他的额头上有达库尔的印记，虽然他的嘴唇尚未掌握新发现宗教的言语，但是却用熟悉的语调谈论邪教的魅力。黑暗，他说，即将降临。";
+		return "这个人的过去已经不重要了，他的额头已经刻上了达库尔的印记。他的喉舌尚未掌握新宗教的言语，却用熟悉的声音述说着邪教的魅力。黑暗，他说，即将降临。";
 	}
 
 	function onSetAppearance()
