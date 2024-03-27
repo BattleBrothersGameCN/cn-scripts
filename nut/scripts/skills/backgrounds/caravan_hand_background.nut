@@ -7,8 +7,8 @@ this.caravan_hand_background <- this.inherit("scripts/skills/backgrounds/charact
 		this.m.Name = "商队队员";
 		this.m.Icon = "ui/backgrounds/background_12.png";
 		this.m.BackgroundDescription = "商队队员已经习惯了漫长而疲惫的旅行。";
-		this.m.GoodEnding = "曾经是商队队员的%name%从战斗生涯中退役了。他用自己当佣兵赚来的钱做起了贸易护卫的业务，专门运送货物通过危险的地区。";
-		this.m.BadEnding = "商队队员%name%退役后回去做起了商队的护卫。他在抵御强盗伏击时牺牲了。他们夺走了他的衣服并将他的尸体抛弃在沟渠中。";
+		this.m.GoodEnding = "曾经的商队队员，%name%，从战斗生涯中退役了。他用自己当佣兵赚来的钱做起了押镖的生意，专门运送货物通过危险的地区。";
+		this.m.BadEnding = "商队队员%name%退役后做回了护卫商队的工作。他在抵御强盗伏击时牺牲了。他们夺走了他的衣服，把他的尸体丢进了沟里。";
 		this.m.HiringCost = 75;
 		this.m.DailyCost = 8;
 		this.m.Excluded = [
