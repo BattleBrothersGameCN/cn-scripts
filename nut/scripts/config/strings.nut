@@ -1361,7 +1361,7 @@ gt.Const.Strings.PerkDescription <- {
 	Taunt = "解锁“嘲讽”技能，使目标对手采取进攻行动而不是防御行动，并攻击嘲讽角色而不是另一个可能更脆弱的角色。",
 	Colossus = "放马过来！生命值增加[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]，因此降低了被击中时遭受严重创伤的几率。",
 	ShieldExpert = "学会更好地将攻击偏向一边而不是正面阻挡。\n\n盾牌防御增加 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color], 这也适用于盾墙技能的额外防御加成。\n\n盾牌受到的伤害减少 [color=" + this.Const.UI.Color.NegativeValue + "]50%[/color], 但至少为 1。\n\n “撞退”技能命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]+15%[/color]。",
-	NineLives = "每场战斗限一次。受到致命攻击时，你会以少量生命值存活，并治愈所有的持续伤害效果（例如流血、中毒）。当然，下一击很可能置你于死地，但直到你的下个回合，提升的防御属性会助你撑过难关。",
+	NineLives = "每场战斗限一次，受到致命伤害时，你会以少量的生命值存活下来，并治愈所有的持续伤害效果（例如流血、中毒）。当然，下一击很可能置你于死地，但直到你的下个回合，提升的防御属性会助你撑过难关。",
 	BatteringRam = "免疫昏迷。",
 	BagsAndBelts = "解锁两个额外的包槽以携带所有您喜爱的物品。放在袋子里的物品不再对最大疲劳值造成惩罚，除了双手武器。",
 	Student = "只要你下定决心，一切都可以学到。 从战斗中获得额外的 [color=" + this.Const.UI.Color.PositiveValue + "]20%[/color] 经验。 在第 11 个角色级别，您获得额外的特权点，并且此特权变得无效。\n\n在游玩 “猎奴者” 起源时，您的奴隶在第 7 个角色级别获得返还的特权点。",
