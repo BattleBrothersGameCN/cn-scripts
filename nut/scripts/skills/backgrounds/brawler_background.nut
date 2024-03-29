@@ -59,7 +59,7 @@ this.brawler_background <- this.inherit("scripts/skills/backgrounds/character_ba
 				id = 12,
 				type = "text",
 				icon = "ui/icons/regular_damage.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+100%[/color] 徒手时的伤害"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+100%[/color] 徒手伤害"
 			}
 		];
 	}

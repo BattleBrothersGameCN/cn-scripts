@@ -30,7 +30,7 @@ this.anatomist_helps_blighted_guy_2_event <- this.inherit("scripts/events/event"
 				bg.m.IsNew = false;
 				_event.m.MilitiaCaptain.getSkills().removeByID("background.vagabond");
 				_event.m.MilitiaCaptain.getSkills().add(bg);
-				_event.m.MilitiaCaptain.getBackground().m.RawDescription = "你发现%name%因携带某种未知疫病而被活埋。解剖学家对他产生兴趣并将其解救，将其护理至康复。现在，他为你而战，运用曾使他成为前世的队长所拥有的技能。";
+				_event.m.MilitiaCaptain.getBackground().m.RawDescription = "因为得了怪病，%name%被人活埋。解剖学家对他产生了兴趣，救了他，让他恢复了健康。他的本事不小，当上了卫兵队长，现在他用那些本领为你而战。";
 				_event.m.MilitiaCaptain.getBackground().buildDescription(true);
 				_event.m.MilitiaCaptain.improveMood(1.000000, "从影响他的瘟疫中恢复过来。");
 

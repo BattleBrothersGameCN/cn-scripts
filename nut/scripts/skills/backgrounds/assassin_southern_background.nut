@@ -7,8 +7,8 @@ this.assassin_southern_background <- this.inherit("scripts/skills/backgrounds/ch
 		this.m.Name = "刺客";
 		this.m.Icon = "ui/backgrounds/background_53.png";
 		this.m.BackgroundDescription = "一个刺客必须腿脚利索且精于武器使用。";
-		this.m.GoodEnding = "%name%这位刺客带着一大箱子的黄金离开了%companyname%远走他乡。 根据你听到的传言，他在南方王国的东部山脉中建造了一座城堡。你不确定此事的真假，但最近维齐尔和领主的死亡率有了稳定的增长。";
-		this.m.BadEnding = "%name%在你从%companyname%退休后不久就消失了。这个刺客很可能不想被找到，而他的位置也无法预料。你老实告诉别人你其实希望从未雇用过他。或许他追踪和猎杀的对象就是你 —— 你就是无法摆脱这一恐惧，你在很多夜里睁着一只眼，寻找那个黑衣人和那把歪曲的匕首。";
+		this.m.GoodEnding = "刺客%name%带着一大箱子的黄金离开了%companyname%远走他乡。 你听说，他在南方王国的东部山脉中建造了一座城堡。你不确定此事的真假，但维齐尔和领主的死亡率开始稳步上升。";
+		this.m.BadEnding = "你从%companyname%退休后不久，%name%就消失了。这名刺客也许不想被人找到，他的位置也实在无法预料。说实话，你希望自己从没雇佣过他。说不定他要杀的就是你，这个恐怖的想法在你的脑海中挥之不去，你常常睡不合眼，寻找带着弯刃匕首的黑衣人。";
 		this.m.HiringCost = 800;
 		this.m.DailyCost = 25;
 		this.m.Excluded = [

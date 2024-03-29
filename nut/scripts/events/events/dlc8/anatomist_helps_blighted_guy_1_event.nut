@@ -75,7 +75,7 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 				], false);
 				_event.m.Dude.setTitle("");
 				_event.m.Dude.getFlags().set("IsSpecial", true);
-				_event.m.Dude.getBackground().m.RawDescription = "" + _event.m.Anatomist.getNameOnly() + "解剖学家从被活埋的命运中拯救了%name%，因为他带着一些奇怪的疾病。现在他既被瘟疫困扰，又成为一些研究的实验品。请呆在那边。";
+				_event.m.Dude.getBackground().m.RawDescription = "" + _event.m.Anatomist.getNameOnly() + "救下了他。因为得了怪病，%name%差点被活埋。现在他可以一边享受他的怪病，一边给解剖学家当小白鼠了。离我远点，谢谢。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.m.Talents = [];
 				local talents = _event.m.Dude.getTalents();

@@ -7,8 +7,8 @@ this.assassin_background <- this.inherit("scripts/skills/backgrounds/character_b
 		this.m.Name = "刺客";
 		this.m.Icon = "ui/backgrounds/background_53.png";
 		this.m.BackgroundDescription = "";
-		this.m.GoodEnding = "%name%加入了战团，接替了他原本要杀死的贵族私生子的位置。这样的协议如此奇怪，以至于你在很多天里一直关注着这名刺客。但他所做的一切就是为%companyname%而战，并且表现得非常出色。据你最后所知，这名刺客已经离开了战团，从此没有音讯。你检查了那个贵族私生子本人，想知道刺客是否完成了任务，但发现他还活得好好的。最后，这是一次奇特的邂逅。";
-		this.m.BadEnding = "%name%加入了战团，接替了他原本要杀死的贵族私生子的位置。这样的协议如此奇怪，以至于你在很多天里一直关注着这名刺客。但他所做的一切就是为%companyname%而战，并且表现得非常出色。据你最后所知，刺客在你匆忙退休后很快就离开了战团。你决定去查看作为他目标的贵族私生子，只发现他被一个没有遭到目击的刺客杀死了。看来%name%最终还是完成了任务。";
+		this.m.GoodEnding = "%name%加入了战团，接替了他原本要杀死的贵族私生子。这样的协议有些荒诞，以至于你关注了这名刺客很久。但他就是单纯地为%companyname%而战，还表现得非常出色。最近你听到，这名刺客已经离开了战团，从此断绝了音讯。你亲自去看那私生子本人，想知道刺客是否完成了任务，却发现他还活得好好的。真是一次独特的邂逅。";
+		this.m.BadEnding = "%name%加入了战团，接替了他原本要杀死的贵族私生子。这样的协议有些荒诞，以至于你关注了这名刺客很久。但他就是单纯地为%companyname%而战，还表现得非常出色。最近你听说，刺客在你草草退休后很快就离开了战团。你决定亲自看看作为他目标的贵族私生子，却只得知，他死于一名来去无踪的刺客之手。看来%name%最终还是完成了任务。";
 		this.m.HiringCost = 800;
 		this.m.DailyCost = 25;
 		this.m.Excluded = [
