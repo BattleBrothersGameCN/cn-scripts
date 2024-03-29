@@ -341,7 +341,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 				{
 					local bro = roster[i];
 					this.Options.push({
-						Text = roster[i].getName() + "将派出我们的冠军与你战斗！",
+						Text = roster[i].getName() + "会打败你们的冠军！",
 						function getResult()
 						{
 							this.Flags.set("ChampionBrotherName", bro.getName());

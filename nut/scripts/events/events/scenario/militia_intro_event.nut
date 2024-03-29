@@ -13,7 +13,7 @@ this.militia_intro_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "我们会是自己的领主。",
+					Text = "我们当家作主了。",
 					function getResult( _event )
 					{
 						return 0;

@@ -55,7 +55,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"squire_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "你遇见了 %name% 在" + _event.m.Town.getName() + " 他自愿成为你的侍从。 他可能不知道他当时在干什么。";
+				_event.m.Dude.getBackground().m.RawDescription = "你遇见%name%是在" + _event.m.Town.getName() + "，在那里他自愿成为你的侍从。那时候他可能根本没有想过接下来会发生的事情。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));

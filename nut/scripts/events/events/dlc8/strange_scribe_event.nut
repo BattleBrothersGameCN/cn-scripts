@@ -166,7 +166,7 @@ this.strange_scribe_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"minstrel_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "{[队长]%name%[/队长]被发现以他的吟游诗人天赋在街头欺诈活动中进行部署。在另一位吟游诗人的担保下，他加入了%companyname%寻求在路上的生活。希望这个从骗子变成佣兵的人能够像他经常所说的那样“假装做到直到成功”。}";
+				_event.m.Dude.getBackground().m.RawDescription = "{%name%用他的吟游诗人天赋在街头行骗。在另一位吟游诗人的担保下，他加入了%companyname%，和战团一起游历谋生。希望这名骗子佣兵能像他常说的那样，“演着演着就入戏了”。}";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Minstrel.getImagePath());
 				this.Characters.push(_event.m.Dude.getImagePath());

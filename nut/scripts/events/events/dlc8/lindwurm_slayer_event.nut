@@ -39,7 +39,7 @@ this.lindwurm_slayer_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"lindwurm_slayer_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "{%name%是一位据说很有名的怪物猎人，擅长杀死林德蠕龙。他说自己是杀死最后一只活着的龙的屠龙者迪克的儿子。}";
+				_event.m.Dude.getBackground().m.RawDescription = "{据说%name%是一位有名的怪物猎人，擅长杀死林德蠕龙。他说，屠龙者迪尔克杀死了最后一条龙，而他是他的儿子。}";
 				_event.m.Dude.getBackground().buildDescription(true);
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
@@ -101,7 +101,7 @@ this.lindwurm_slayer_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"lindwurm_slayer_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "{%name%是一位据说很有名的怪物猎人，擅长杀死林德蠕龙。他说自己是杀死最后一只活着的龙的屠龙者迪克的儿子。}";
+				_event.m.Dude.getBackground().m.RawDescription = "{据说%name%是一位有名的怪物猎人，擅长杀死林德蠕龙。他说，屠龙者迪尔克杀死了最后一条龙，而他是他的儿子。}";
 				_event.m.Dude.getBackground().buildDescription(true);
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)

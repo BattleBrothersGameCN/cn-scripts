@@ -244,7 +244,7 @@ this.pimp_vs_harlot_event <- this.inherit("scripts/events/event", {
 					"pimp_background"
 				]);
 				_event.m.Dude.setTitle("皮普(The Pimp)");
-				_event.m.Dude.getBackground().m.RawDescription = "访问期间 (While visiting)" + _event.m.Town.getName() + "，你发现 %name% 正在和他唯一的妓女争吵。" + _event.m.Monk.getName() + "说服他加入了战团，你同意带他一起走。希望他在盾墙里战斗比和妓女吵架更好。";
+				_event.m.Dude.getBackground().m.RawDescription = "在你访问" + _event.m.Town.getName() + "期间，你发现 %name% 正在和他唯一的妓女争吵。" + _event.m.Monk.getName() + "说服他加入了战团，你同意带他一起走。希望他在盾墙里战斗比和妓女吵架更好。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}

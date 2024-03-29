@@ -7,7 +7,7 @@ this.beast_hunter_background <- this.inherit("scripts/skills/backgrounds/charact
 		this.m.Name = "野兽杀手";
 		this.m.Icon = "ui/backgrounds/background_57.png";
 		this.m.BackgroundDescription = "野兽杀手一向猎杀各种尺寸的骇人野兽。";
-		this.m.GoodEnding = "%name%从战团退休，买了一座废弃城堡的地契。在那里，他指挥着一群野兽杀手，他们在这片土地上旅行，保护它免受怪物的侵害。上次你跟他说话，他的一位黑发女性朋友对你以及其他同行的出现都不太友好。你确定他很幸福。";
+		this.m.GoodEnding = "%name%从战团退休，买下了一座废弃城堡。在那里，他带领着一群野兽杀手，穿行于大地，保护它免受怪物的侵害。上次你上门找他时，见到了他的一位黑发女性朋友，她不太欢迎你和同行们。他一定过得很幸福。";
 		this.m.BadEnding = "在离开%companyname%之后，%name%彻底放弃了猎杀野兽的工作，你最后听说他成为了一个白化病女儿的父亲。不幸的是，关于这个女孩有超自然能力的谣言很快就传开了，她的母亲被火刑处死。父亲和孩子则没有被抓住，从此杳无音信。";
 		this.m.HiringCost = 150;
 		this.m.DailyCost = 15;
