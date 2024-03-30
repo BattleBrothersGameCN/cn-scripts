@@ -105,7 +105,7 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"belly_dancer_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "你找到 %name% 在" + _event.m.Town.getName() + "，他以绿色丝绸遮面，以有节奏的舞蹈和惊人精准的水果切割技巧吸引了大批人群。后一项技能对于任何雇佣军公司都是一大福利，因此你毫不犹豫地招募了他。";
+				_event.m.Dude.getBackground().m.RawDescription = "你遇到%name%，是在" + _event.m.Town.getName() + "，他以绿色丝绸遮面，凭借有节奏的舞姿和极其精准的切水果表演吸引了大量人来围观。后一项技能在佣兵团大有用处，你毫不犹豫地雇佣了他。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				local trait = this.new("scripts/skills/traits/dexterous_trait");
 				_event.m.Dude.getSkills().add(trait);

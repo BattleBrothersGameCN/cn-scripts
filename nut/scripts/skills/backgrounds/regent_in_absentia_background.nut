@@ -41,7 +41,7 @@ this.regent_in_absentia_background <- this.inherit("scripts/skills/backgrounds/c
 
 	function onBuildDescription()
 	{
-		return "{%name%不再被皇室断绝关系，但他现在效忠于%companyname%战团。尽管他没有回到自己的家族，但你知道他内心深处因为回归了自己的血脉而变得更加勇敢。}";
+		return "{%name%不再被皇室断绝关系，但他现在效忠于%companyname%。尽管他没有回到自己的家族，但你知道在他内心深处，回归了血脉使他更加勇敢。}";
 	}
 
 	function onAddEquipment()

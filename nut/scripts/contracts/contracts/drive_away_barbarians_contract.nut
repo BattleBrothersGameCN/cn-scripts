@@ -49,7 +49,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"击退野蛮人于" + this.Flags.get("DestinationName") + "(%origin% %direction%)"
+					"把野蛮人逐出" + this.Flags.get("DestinationName") + "(%origin% %direction%)"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
