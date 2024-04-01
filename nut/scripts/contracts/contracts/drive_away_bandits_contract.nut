@@ -61,7 +61,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"击退强盗于" + this.Flags.get("DestinationName") + "(%origin%%direction%方)"
+					"把强盗逐出" + this.Flags.get("DestinationName") + "(%origin%%direction%方)"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)

@@ -6,7 +6,7 @@ this.hunter_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		this.m.ID = "background.hunter";
 		this.m.Name = "猎人";
 		this.m.Icon = "ui/backgrounds/background_22.png";
-		this.m.BackgroundDescription = "猎人们惯于独自一人穿越树林，凭借高超的射箭技巧猎杀动物。";
+		this.m.BackgroundDescription = "猎人们惯于独自一人穿越树林，凭借高超的箭术猎杀动物。";
 		this.m.GoodEnding = "尽管%companyname%持续取得巨大成功，猎人%name%还是决定把这一切都抛在身后。他回到树林和田野，狩猎鹿和小型动物。他很少展现出狩猎人类的残酷真相，你只能往好了想，他已经不再那么做了。 据你所知，他现在生活还不错。他买了一块地，并帮忙指导贵族进行昂贵的狩猎之旅。";
 		this.m.BadEnding = "%companyname%的衰落显而易见，猎人%name%离开了战团，重返捕猎。不幸的是，与一位贵族的狩猎旅行出了差错，贵族被一只野猪顶穿了双颊。猎人意识到他会被责备，在贵族和侍卫的追射下，独自穿过森林逃跑了。那之后再也没人见过他。";
 		this.m.HiringCost = 120;

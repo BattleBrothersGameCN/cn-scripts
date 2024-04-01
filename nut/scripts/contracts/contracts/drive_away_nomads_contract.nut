@@ -44,7 +44,7 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"驱逐游牧民族于" + this.Flags.get("DestinationName") + "(%origin% %direction%)"
+					"把游牧民逐出" + this.Flags.get("DestinationName") + "(%origin% %direction%)"
 				];
 				this.Contract.setScreen("Task");
 			}
