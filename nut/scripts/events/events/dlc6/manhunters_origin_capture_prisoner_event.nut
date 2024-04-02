@@ -47,7 +47,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 				_event.m.Dude.setStartValuesEx([
 					"slave_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "以前是一个忠于贵族的士兵，他的战团被你们的人屠杀了，而 %name% 成为了负债者。 没花多少时间他就精神崩溃了，强迫他为你而战。";
+				_event.m.Dude.getBackground().m.RawDescription = "随着他的战团被屠杀殆尽，忠于贵族的士兵%name%成为了负债者。不久他就精神崩溃，被迫为你而战。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
@@ -92,7 +92,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 				_event.m.Dude.setStartValuesEx([
 					"slave_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 在和你的人的战斗中勉强幸存下来后成为了负债者。 他的精神崩溃了，他被迫为你而战，这样做他就可以偿还镀金者的债务了。";
+				_event.m.Dude.getBackground().m.RawDescription = "在和你的人的战斗中，%name%勉强幸存了下来，成为了负债者。他的精神崩溃，被迫为你而战，以此偿还欠镀金者的债务。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
@@ -137,7 +137,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 				_event.m.Dude.setStartValuesEx([
 					"slave_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 在和你的人的战斗中勉强幸存下来后成为了负债者。 他的精神崩溃了，他被迫为你而战，这样做他就可以偿还镀金者的债务了。";
+				_event.m.Dude.getBackground().m.RawDescription = "在和你的人的战斗中，%name%勉强幸存了下来，成为了负债者。他的精神崩溃，被迫为你而战，以此偿还欠镀金者的债务。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
@@ -182,7 +182,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 				_event.m.Dude.setStartValuesEx([
 					"slave_southern_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 在和你的人的战斗中勉强幸存下来后成为了负债者。 他的精神崩溃了，他被迫为你而战，这样做他就可以偿还镀金者的债务了。";
+				_event.m.Dude.getBackground().m.RawDescription = "在和你的人的战斗中，%name%勉强幸存了下来，成为了负债者。他的精神崩溃，被迫为你而战，以此偿还欠镀金者的债务。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
@@ -227,7 +227,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 				_event.m.Dude.setStartValuesEx([
 					"slave_southern_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 在和你的人的战斗中勉强幸存下来后成为了负债者。 他的精神崩溃了，他被迫为你而战，这样做他就可以偿还镀金者的债务了。";
+				_event.m.Dude.getBackground().m.RawDescription = "在和你的人的战斗中，%name%勉强幸存了下来，成为了负债者。他的精神崩溃，被迫为你而战，以此偿还欠镀金者的债务。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
@@ -272,7 +272,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 				_event.m.Dude.setStartValuesEx([
 					"slave_barbarian_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 在和你的人的战斗中勉强幸存下来后成为了负债者。 他的精神崩溃了，他被迫为你而战，这样做他就可以偿还镀金者的债务了。";
+				_event.m.Dude.getBackground().m.RawDescription = "在和你的人的战斗中，%name%勉强幸存了下来，成为了负债者。他的精神崩溃，被迫为你而战，以此偿还欠镀金者的债务。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}

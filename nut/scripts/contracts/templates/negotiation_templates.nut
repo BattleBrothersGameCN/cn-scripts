@@ -190,7 +190,7 @@ gt.Const.Contracts.NegotiationDefault <- [
 
 			if (!this.Contract.m.Payment.IsNegotiating)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他直起身来。%SPEECH_ON%那么，关于报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意慷慨解囊。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他直起身来。%SPEECH_ON%那么，关于报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意多给你点。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
 				this.Contract.m.Payment.IsNegotiating = true;
 			}
 			else if (this.Contract.m.Payment.IsFinal)
@@ -457,7 +457,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 			if (!this.Contract.m.Payment.IsNegotiating)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意慷慨解囊。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意多给你点。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
 				this.Contract.m.Payment.IsNegotiating = true;
 			}
 			else if (this.Contract.m.Payment.IsFinal)
@@ -740,7 +740,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 			if (!this.Contract.m.Payment.IsNegotiating)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意慷慨解囊。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意多给你点。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
 				this.Contract.m.Payment.IsNegotiating = true;
 			}
 			else if (this.Contract.m.Payment.IsFinal)

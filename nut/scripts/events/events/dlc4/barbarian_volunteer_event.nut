@@ -44,7 +44,7 @@ this.barbarian_volunteer_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"barbarian_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 加入了你，他从北方的部落中被驱逐出来，因为拒绝杀死他的兄弟。 他会为你和任何人战斗。";
+				_event.m.Dude.getBackground().m.RawDescription = "%name%因为不愿杀死自己的兄弟而被逐出了北方的部落，在此之后他加入了你。他会为你，也会为任何人而战。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().equip(this.new("scripts/items/accessory/warhound_item"));
 				this.Characters.push(_event.m.Dude.getImagePath());

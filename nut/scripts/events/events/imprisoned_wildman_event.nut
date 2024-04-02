@@ -296,7 +296,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 					"wildman_background"
 				]);
 				_event.m.Dude.setTitle("动物(the Animal)");
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 是在一次与驯兽者变成奴役者的对抗中被你“拯救”的。 一种感激和人情债的感觉克服了任何语言障碍：这个曾经被囚禁的野人为战团服务，忠诚于帮助他的人。";
+				_event.m.Dude.getBackground().m.RawDescription = "在你和驯兽师，或者说奴隶主的斗争中，%name%被你“救”了出来。知恩图报之情突破了语言的障碍：曾经被奴役的野人现在为战团服务，忠于解救了他的人。";
 				_event.m.Dude.getBackground().buildDescription(true);
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)

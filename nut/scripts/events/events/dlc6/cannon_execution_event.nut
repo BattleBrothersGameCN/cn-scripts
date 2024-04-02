@@ -123,7 +123,7 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"thief_southern_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "你恰到好处的干预，从 %name% 被巨大的臼炮射出去的命运中救下了他。 一个古怪的小偷，他最近一次在维齐尔宫殿里企图行窃的失败让他成了一个非常适合用来杀鸡儆猴的选项。";
+				_event.m.Dude.getBackground().m.RawDescription = "%name%险些被从巨大的巨炮中射出，你及时介入救下了他。 他是个胆敢在维齐尔的宫殿里行窃的古怪小偷，因此被用来杀鸡儆猴。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));

@@ -30,7 +30,7 @@ this.kings_guard_2_event <- this.inherit("scripts/events/event", {
 				bg.m.IsNew = false;
 				_event.m.Dude.getSkills().removeByID("background.cripple");
 				_event.m.Dude.getSkills().add(bg);
-				_event.m.Dude.getBackground().m.RawDescription = "他发现 %name% 在北方冻得半死。 在你的帮助下，前国王的护卫恢复了力量，现在为你而战。";
+				_event.m.Dude.getBackground().m.RawDescription = "你在北方发现了冻得半死的%name%。在你的帮助下，前国王护卫恢复了力量，为你而战。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.improveMood(1.000000, "重新成为昔日的自己");
 

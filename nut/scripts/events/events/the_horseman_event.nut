@@ -135,7 +135,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 					"vagabond_background"
 				]);
 				_event.m.Dude.setTitle("小马拉琴手(the Filly Fiddler)");
-				_event.m.Dude.getBackground().m.RawDescription = "你发现 %name% 因为“涉及”一匹死马而被鞭打。 希望过去，呃，现在已经过去了。";
+				_event.m.Dude.getBackground().m.RawDescription = "你发现%name%时，他正因“投身”一匹死马而被鞭打。希望这件旧事，呃，已经过去了对吧。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.setHitpoints(30);
 				_event.m.Dude.improveMood(1.000000, "用一匹死马来满足他的需要");

@@ -400,7 +400,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 					this.Contract.m.Dude.getSkills().add(this.new("scripts/skills/traits/fear_beasts_trait"));
 				}
 
-				this.Contract.m.Dude.getBackground().m.RawDescription = "你发现 %name% 挂在一棵树上，这个佣兵是一个被派去杀蜘蛛的雇佣兵团的最后幸存者。 你救了他之后，他加入了战团。";
+				this.Contract.m.Dude.getBackground().m.RawDescription = "你在树上发现了挂着的%name%，他是一名佣兵，他所在的佣兵团被派去对付蛛魔，只有他活了下来。你救了他，他就加入了你的战团。";
 				this.Contract.m.Dude.getBackground().buildDescription(true);
 				this.Contract.m.Dude.worsenMood(0.500000, "他以前的战团被蛛魔干掉了");
 				this.Contract.m.Dude.worsenMood(0.500000, "几乎被蛛魔活活吃掉");

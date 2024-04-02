@@ -84,7 +84,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"crucified_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "你发现 %name%，一个来自北方的前十字军战士，背弃旧神，在沙漠中被钉在十字架上。 放他下来之后，他保证会为你效劳。 尽管他试图隐瞒，但他的精神状态似乎并不稳定。";
+				_event.m.Dude.getBackground().m.RawDescription = "%name%来自北方，曾是一名的十字军战士，因背弃了旧神而被钉在了十字架上，就在这时你发现了他。放他下来之后，他保证会为你效劳。 尽管他试图隐瞒，你还是看得出，他的精神状态不太稳定。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				local trait = this.new("scripts/skills/traits/deathwish_trait");
 

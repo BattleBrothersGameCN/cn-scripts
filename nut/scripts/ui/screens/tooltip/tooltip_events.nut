@@ -1150,7 +1150,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你的雇佣兵战团拥有的硬币数量。 用于每天支付每个人的工资，还可以雇新人和购买装备。\n\n你支付 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyMoney + "[/color] 克朗每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你没有更多的克朗来支付给你的人！ 快赚些克朗，或者让一些人在他们一个一个地抛弃你之前让他离开。[/color]"
+							text = "你的雇佣兵战团拥有的硬币数量。 用于每天支付每个人的工资，还可以雇新人和购买装备。\n\n你支付 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyMoney + "[/color] 克朗每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你没有足够的克朗付给你的人了！ 要么赶快赚钱，要么在他们一个个抛弃你之前开掉一些。[/color]"
 						}
 					];
 				}

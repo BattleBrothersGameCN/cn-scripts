@@ -125,7 +125,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"将货物走大路于%days%内，向%direction%运往%objective%，交付给%recipient%"
+					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%天"
 				];
 				local isSouthern = this.World.FactionManager.getFaction(this.Contract.getFaction()).getType() == this.Const.FactionType.OrientalCityState;
 
@@ -185,7 +185,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"将货物走大路于%days%内，向%direction%运往%objective%，交付给%recipient%"
+					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%天"
 				];
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())
@@ -334,7 +334,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 
 				this.Contract.m.BulletpointsObjectives = [
 					"跟踪盗贼的踪迹并找回你的货物",
-					"将货物走大路于%days%内，向%direction%运往%objective%，交付给%recipient%"
+					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%天"
 				];
 			}
 

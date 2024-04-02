@@ -24,7 +24,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 							"deserter_background"
 						]);
 						_event.m.Dude.setTitle("尊者(the Honorable)");
-						_event.m.Dude.getBackground().m.RawDescription = "曾经是一支贵族军队的士兵，%name% 的人几乎因为拒绝命令而被绞死，直到被营救到你的 %companyname%。";
+						_event.m.Dude.getBackground().m.RawDescription = "%name%曾是贵族军队里的一名士兵，他违抗了命令，险些被绞死，直到你和%companyname%救下了他。";
 						_event.m.Dude.getBackground().buildDescription(true);
 
 						if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
