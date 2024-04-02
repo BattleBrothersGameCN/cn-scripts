@@ -43,13 +43,13 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude1.setStartValuesEx([
 					"deserter_background"
 				]);
-				_event.m.Dude1.getBackground().m.RawDescription = "一段时间以来，为了躲避赏金猎人和行刑者，%name% 在路上撞到了你的战团，并立即自愿加入。";
+				_event.m.Dude1.getBackground().m.RawDescription = "在摆脱赏金猎人和刽子手的追捕的路上，%name%撞到了你的战团，他立刻就提出要加入。";
 				_event.m.Dude1.getBackground().buildDescription(true);
 				_event.m.Dude2 = roster.create("scripts/entity/tactical/player");
 				_event.m.Dude2.setStartValuesEx([
 					"deserter_background"
 				]);
-				_event.m.Dude2.getBackground().m.RawDescription = "%name% 和一个军团一起背叛了该团" + _event.m.Dude1.getNameOnly() + "在他志愿加入你的战团之前。";
+				_event.m.Dude2.getBackground().m.RawDescription = "%name%伙同" + _event.m.Dude1.getNameOnly() + "一起，逃离了军团，自愿加入了你的战团。";
 				_event.m.Dude2.getBackground().buildDescription(true);
 				this.Characters.push(_event.m.Dude1.getImagePath());
 				this.Characters.push(_event.m.Dude2.getImagePath());

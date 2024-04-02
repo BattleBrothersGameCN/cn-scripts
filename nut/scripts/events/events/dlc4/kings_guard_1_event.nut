@@ -39,7 +39,7 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 					"cripple_background"
 				], false);
 				_event.m.Dude.setTitle("");
-				_event.m.Dude.getBackground().m.RawDescription = "他发现 %name% 在北方冻得半死。 他声称他曾经是国王的护卫，但现在你看到他只是一个瘸子。";
+				_event.m.Dude.getBackground().m.RawDescription = "你在北方发现了冻得半死的%name%。 他声称他曾是国王的护卫，但现在看来，他只是个瘸子。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getFlags().set("IsSpecial", true);
 				_event.m.Dude.getBaseProperties().Bravery += 15;

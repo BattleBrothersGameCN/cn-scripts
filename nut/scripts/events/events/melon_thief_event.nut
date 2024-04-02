@@ -169,7 +169,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 				]);
 				_event.m.Dude.setTitle("西瓜小偷(the Melon Mugger)");
 				_event.m.Dude.getSprite("head").setBrush("bust_head_03");
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 只不过是一个普通的偷瓜贼－你就是这么告诉别人的。";
+				_event.m.Dude.getBackground().m.RawDescription = "%name%只不过是个普通的偷瓜贼 —— 别人问起来你总是这么说。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.improveMood(1.000000, "用甜瓜满足他的需要");
 				_event.m.Dude.worsenMood(0.500000, "差点被涂上沥青和羽毛");

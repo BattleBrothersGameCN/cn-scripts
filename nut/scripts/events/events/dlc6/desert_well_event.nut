@@ -140,7 +140,7 @@ this.desert_well_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"peddler_southern_background"
 				]);
-				_event.m.Dude.getBackground().m.RawDescription = "一连串的不幸事件导致前军火贩子%name%试图以炸毁自己的方式结束生命，但是" + _event.m.Monk.getName() + "干预并说服他加入你的战团，为自己开始新的生活。";
+				_event.m.Dude.getBackground().m.RawDescription = "倒霉事接二连三，前军火贩子%name%试图炸死自己，一了百了，幸亏" + _event.m.Monk.getName() + "上前干预，说服他放弃投胎，加入了你的战团。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				local trait = this.new("scripts/skills/traits/deathwish_trait");
 

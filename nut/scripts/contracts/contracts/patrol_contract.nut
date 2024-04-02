@@ -560,7 +560,7 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 				local roster = this.World.getTemporaryRoster();
 				this.Contract.m.Dude = roster.create("scripts/entity/tactical/player");
 				this.Contract.m.Dude.setStartValuesEx(this.Const.CharacterVillageBackgrounds);
-				this.Contract.m.Dude.getBackground().m.RawDescription = "你把被钉在十字架上的 %name% 从行刑中拉了下来 他发誓效忠你，直到他生命的终结或你最后的胜利。";
+				this.Contract.m.Dude.getBackground().m.RawDescription = "你及时把十字架上的%name%拉了下来。他发誓效忠于你，直到他的生命到达尽头，或是你取得最终的胜利。";
 				this.Contract.m.Dude.getBackground().buildDescription(true);
 				this.Contract.m.Dude.getSkills().removeByID("trait.disloyal");
 				this.Contract.m.Dude.getSkills().add(this.new("scripts/skills/traits/loyal_trait"));
@@ -690,7 +690,7 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 				local roster = this.World.getTemporaryRoster();
 				this.Contract.m.Dude = roster.create("scripts/entity/tactical/player");
 				this.Contract.m.Dude.setStartValuesEx(this.Const.CharacterVillageBackgrounds);
-				this.Contract.m.Dude.getBackground().m.RawDescription = "你把被钉在十字架上的 %name% 从行刑中拉了下来 他发誓效忠你，直到他生命的终结或你最后的胜利。";
+				this.Contract.m.Dude.getBackground().m.RawDescription = "你及时把十字架上的%name%拉了下来。他发誓效忠于你，直到他的生命到达尽头，或是你取得最终的胜利。";
 				this.Contract.m.Dude.getBackground().buildDescription(true);
 				this.Contract.m.Dude.getSkills().removeByID("trait.disloyal");
 				this.Contract.m.Dude.getSkills().add(this.new("scripts/skills/traits/loyal_trait"));

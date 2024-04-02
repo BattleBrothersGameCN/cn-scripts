@@ -100,7 +100,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 					"fisherman_background"
 				]);
 				_event.m.Dude.setTitle("船员(the Sailor)");
-				_event.m.Dude.getBackground().m.RawDescription = "在 %name% 被在城邦外活动的海盗劫持后，你把他从奴隶生活中解救了出来。";
+				_event.m.Dude.getBackground().m.RawDescription = "城邦周围活动的海盗劫持了%name%，你把他从奴隶生活中救了出来。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
@@ -155,12 +155,12 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 					"fisherman_background"
 				]);
 				_event.m.Dude.setTitle("船员(the Sailor)");
-				_event.m.Dude.getBackground().m.RawDescription = "在 %name% 被在城邦外活动的海盗劫持后，你把他从奴隶生活中解救了出来。";
+				_event.m.Dude.getBackground().m.RawDescription = "城邦周围活动的海盗劫持了%name%，你把他从奴隶生活中救了出来。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
 				_event.m.Dude.worsenMood(2.000000, "被猎奴者俘虏了");
-				_event.m.Dude.improveMood(0.500000, "从奴隶的生活中获救被 " + _event.m.Fisherman.getName());
+				_event.m.Dude.improveMood(0.500000, "被救出了奴隶生活，多亏了" + _event.m.Fisherman.getName());
 				_event.m.Fisherman.improveMood(2.000000, "已保存 (Saved)" + _event.m.Dude.getName() + "从奴隶生活中解放");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				local cityStates = this.World.FactionManager.getFactionsOfType(this.Const.FactionType.OrientalCityState);
@@ -203,7 +203,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 					"slave_background"
 				]);
 				_event.m.Dude.setTitle("船员(the Sailor)");
-				_event.m.Dude.getBackground().m.RawDescription = "%name% 在海上当水手时，城邦的海盗登上了他的船，把他和他的船员一起抓作俘虏。 由于一些偶然事件，他进入你的势力中来还清他欠镀金者的债。";
+				_event.m.Dude.getBackground().m.RawDescription = "%name%曾是海上的水手，城邦的海盗登上了他的船，把他和他的船员一起抓作俘虏。由于一些偶然事件，他进入了你的队伍，并在此偿还欠镀金者的债。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
@@ -214,7 +214,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 					"slave_background"
 				]);
 				_event.m.Fisherman.setTitle("航海家(the Mariner)");
-				_event.m.Fisherman.getBackground().m.RawDescription = "%name% 在海上当水手时，城邦的海盗登上了他的船，把他和他的船员一起抓作俘虏。 由于一些偶然事件，他进入你的势力中来还清他欠镀金者的债。";
+				_event.m.Fisherman.getBackground().m.RawDescription = "%name%曾是海上的水手，城邦的海盗登上了他的船，把他和他的船员一起抓作俘虏。由于一些偶然事件，他进入了你的队伍，并在此偿还欠镀金者的债。";
 				_event.m.Fisherman.getBackground().buildDescription(true);
 				_event.m.Fisherman.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Fisherman.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
