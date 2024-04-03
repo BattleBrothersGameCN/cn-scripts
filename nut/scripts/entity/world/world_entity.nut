@@ -452,7 +452,7 @@ this.world_entity <- {
 
 		if (s >= 0.850000 && s <= 1.150000)
 		{
-			return "伊文";
+			return "势均力敌";
 		}
 		else if (s >= 0.700000 && s < 0.850000)
 		{
@@ -468,7 +468,7 @@ this.world_entity <- {
 		}
 		else if (s >= 1.150000 && s <= 1.300000)
 		{
-			return "稍微弱一点";
+			return "稍弱";
 		}
 		else if (s >= 1.300000 && s <= 1.500000)
 		{
