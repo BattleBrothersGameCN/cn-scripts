@@ -229,7 +229,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 				{
 					id = 1,
 					type = "title",
-					text = "废墟的" + this.getName()
+					text = "毁坏的" + this.getName()
 				}
 			];
 
@@ -238,7 +238,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 				ret.push({
 					id = 2,
 					type = "description",
-					text = "这座曾经令人生畏的城堡只剩下废墟。"
+					text = "曾经令人生畏的城堡只剩一片废墟。"
 				});
 			}
 			else
@@ -246,7 +246,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 				ret.push({
 					id = 2,
 					type = "description",
-					text = "这个曾经繁荣的城市只剩下一片废墟。"
+					text = "曾经繁荣的城市只剩一片废墟。"
 				});
 			}
 

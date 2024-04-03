@@ -75,7 +75,7 @@ this.attached_location <- this.inherit("scripts/entity/world/location", {
 		}
 		else
 		{
-			return "曾经是附近定居点的一部分，现在已被烧毁，成为被抛弃的废墟。";
+			return "附近定居点的一部分，已经烧成废墟，遭人弃用。";
 		}
 	}
 
