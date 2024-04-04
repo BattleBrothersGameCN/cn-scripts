@@ -997,7 +997,7 @@ this.tooltip_events <- {
 						id = 3,
 						type = "hint",
 						icon = "ui/icons/icon_locked.png",
-						text = "特技被锁定，直到再花费" + (perk.Unlocks - player.getPerkPointsSpent()) + "更多的特技点已经使用。"
+						text = "特技被锁定，花费" + (perk.Unlocks - player.getPerkPointsSpent()) + "更多的特技点已经使用。"
 					});
 				}
 				else
@@ -1006,7 +1006,7 @@ this.tooltip_events <- {
 						id = 3,
 						type = "hint",
 						icon = "ui/icons/icon_locked.png",
-						text = "特技被锁定，直到再花费" + (perk.Unlocks - player.getPerkPointsSpent()) + "个特技点"
+						text = "特技被锁定，花费" + (perk.Unlocks - player.getPerkPointsSpent()) + "个特技点后解锁"
 					});
 				}
 			}
