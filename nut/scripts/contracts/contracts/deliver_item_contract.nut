@@ -125,7 +125,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%天"
+					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%"
 				];
 				local isSouthern = this.World.FactionManager.getFaction(this.Contract.getFaction()).getType() == this.Const.FactionType.OrientalCityState;
 
@@ -185,7 +185,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%天"
+					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%"
 				];
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())
@@ -334,7 +334,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 
 				this.Contract.m.BulletpointsObjectives = [
 					"跟踪盗贼的踪迹并找回你的货物",
-					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%天"
+					"把货运到%direction%方的%objective%，交给收件人%recipient%。走大路需要约%days%"
 				];
 			}
 
@@ -389,7 +389,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "TaskSouthern",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_112.png[/img]{一位维齐尔的市政大臣带着一队仆人走近，他们正朝着你的方向扛着一个适中大小的箱子。%SPEECH_ON%克朗王子，维齐尔需要你的帮助。请让这些仆人将箱子交给你，并将其运送到%objective%的%recipient%那里，这是一条往%direction%的路程，大约需要%days%。%SPEECH_OFF%市政大臣鞠了一躬。%SPEECH_ON%虽然这是一个简单的任务，但维齐尔愿意为完成任务支付丰厚的报酬。%SPEECH_OFF% | 你发现%employer%正在门厅等待。他在听着一排商人，每个商人都有自己的请求或提议，而手边的一位书记则在账簿上做着记录，账簿在大理石地板上一层接一层地展开。看到你，维齐尔响了响手指，一名离他不远处的人走了过来。%SPEECH_ON%克朗王子，陛下需要你的服务。将标有这个标签的货物交给%objective%的%recipient%，在道路上需要行进%days%。货物送到后，你会得到相应的报酬。%SPEECH_OFF% | 一个戴着孔雀羽毛帽的人向你靠近，似乎出现在你没注意的地方。他手里拿着账簿，但账簿上带有%townname%维齐尔及其护卫的徽章。%SPEECH_ON%%employer%想要雇用你的服务，克朗王子。你需要处理一种优质材料，当然必须将它装在箱子中并妥善封好，然后将其运往%objective%的%recipient%，这是在往%direction%的路上行进%days%。当货物被送达后，你将在现场得到报酬。%SPEECH_OFF%那人把羽毛拨开，短暂地摇了摇头。%SPEECH_ON%你认为这份工作符合你当前的金融愿望吗？%SPEECH_OFF% | 你首先被一只鸽子的便条所招呼，便条指向一个年轻的男孩，然后男孩带你去找一名仆人，仆人引你穿过一间充满裸女的后宫，最终带你进入一个富裕商人的房间。%SPEECH_ON%啊，你终于来了。我向我的债务人提出了一个简单的任务，居然要这么长时间才能完成？我得研究一下这个问题。%SPEECH_OFF%商人抛给你一个账簿，同时跌倒在一堆垫子中。%SPEECH_ON%请你将一箱货物交给%objective%的%recipient%，这是一条往%direction%的路程，需要行进%days%。你不需要打开货物，只需将其交付。如果你打开了货物，维齐尔会知道的。请相信我，克朗王子，维齐尔只喜欢听到好消息。这就是为什么我在这里，而不是在陛下那里。%SPEECH_OFF%这真是太客气了。}",
+			Text = "[img]gfx/ui/events/event_112.png[/img]{一位维齐尔的市政大臣带着一队仆人走近，他们正朝着你的方向扛着一个适中大小的箱子。%SPEECH_ON%逐币者，维齐尔需要你的帮助。请让这些仆人将箱子交给你，并将其运送到%objective%的%recipient%那里，这是一条往%direction%的路程，大约需要%days%。%SPEECH_OFF%市政大臣鞠了一躬。%SPEECH_ON%虽然这是一个简单的任务，但维齐尔愿意为完成任务支付丰厚的报酬。%SPEECH_OFF% | 你发现%employer%正在门厅等待。他在听着一排商人，每个商人都有自己的请求或提议，而手边的一位书记则在账簿上做着记录，账簿在大理石地板上一层接一层地展开。看到你，维齐尔响了响手指，一名离他不远处的人走了过来。%SPEECH_ON%逐币者，陛下需要你的服务。将标有这个标签的货物交给%objective%的%recipient%，在道路上需要行进%days%。货物送到后，你会得到相应的报酬。%SPEECH_OFF% | 一个戴着孔雀羽毛帽的人向你靠近，似乎出现在你没注意的地方。他手里拿着账簿，但账簿上带有%townname%维齐尔及其护卫的徽章。%SPEECH_ON%%employer%想要雇用你的服务，逐币者。你需要处理一种优质材料，当然必须将它装在箱子中并妥善封好，然后将其运往%objective%的%recipient%，这是在往%direction%的路上行进%days%。当货物被送达后，你将在现场得到报酬。%SPEECH_OFF%那人把羽毛拨开，短暂地摇了摇头。%SPEECH_ON%你认为这份工作符合你当前的金融愿望吗？%SPEECH_OFF% | 你首先被一只鸽子的便条所招呼，便条指向一个年轻的男孩，然后男孩带你去找一名仆人，仆人引你穿过一间充满裸女的后宫，最终带你进入一个富裕商人的房间。%SPEECH_ON%啊，你终于来了。我向我的债务人提出了一个简单的任务，居然要这么长时间才能完成？我得研究一下这个问题。%SPEECH_OFF%商人抛给你一个账簿，同时跌倒在一堆垫子中。%SPEECH_ON%请你将一箱货物交给%objective%的%recipient%，这是一条往%direction%的路程，需要行进%days%。你不需要打开货物，只需将其交付。如果你打开了货物，维齐尔会知道的。请相信我，逐币者，维齐尔只喜欢听到好消息。这就是为什么我在这里，而不是在陛下那里。%SPEECH_OFF%这真是太客气了。}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,

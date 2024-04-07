@@ -10,7 +10,7 @@ this.large_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"老镇",
 			"仓促边城",
 			"新边疆",
-			"开阔地镇",
+			"阔地镇",
 			"白镇",
 			"磨盘镇",
 			"绿色边城",

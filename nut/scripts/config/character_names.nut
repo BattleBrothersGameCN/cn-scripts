@@ -495,12 +495,12 @@ gt.Const.Strings.NomadChampionTitles <- [
 	"·沙蝰蛇",
 	"·朝圣者",
 	"流放者",
-	"秃鹫(the Curious)",
-	"·活幻影",
+	"·秃鹫",
+	"·活蜃景",
 	"·自由王子",
 	"·沙之王子",
 	"·尘埃舞者",
-	"·金秃鹫"
+	"·金雕"
 ];
 gt.Const.Strings.NomadChampionStandalone <- [
 	"毒蝎",
@@ -527,11 +527,11 @@ gt.Const.Strings.NomadChampionStandalone <- [
 	"红色",
 	"流放者",
 	"秃鹫",
-	"活幻影",
+	"活蜃景",
 	"自由王子",
 	"沙之王子",
 	"尘埃舞者",
-	"金秃鹫"
+	"金雕"
 ];
 gt.Const.Strings.DesertDevilChampionTitles <- [
 	"毒蝎",
@@ -594,7 +594,7 @@ gt.Const.Strings.DesertStalkerChampionTitles <- [
 	"·光线",
 	"·镀金者之手",
 	"鹰眼",
-	"秃鹫(the Curious)",
+	"·秃鹫",
 	"·大蛇",
 	"·毒刺",
 	"·寻心者"
@@ -903,7 +903,7 @@ gt.Const.Strings.BanditLeaderNames <- [
 	"强盗%randomname%",
 	"天灾%randomname%",
 	"掠夺之王",
-	"猎奴者(The Manhunter)",
+	"猎奴者",
 	"大个儿%randomname%",
 	"野蛮人%randomname%",
 	"%randomname%·恶名昭彰",

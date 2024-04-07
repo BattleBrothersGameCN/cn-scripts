@@ -40,7 +40,7 @@ this.anatomist_background <- this.inherit("scripts/skills/backgrounds/character_
 			"trait.superstitious"
 		];
 		this.m.Titles = [
-			"秃鹫(the Curious)",
+			"秃鹫",
 			"乌鸦(The Crow)",
 			"判官(the Magistrate)",
 			"殡葬业者(the Mortician)",

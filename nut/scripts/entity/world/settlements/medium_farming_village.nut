@@ -11,7 +11,7 @@ this.medium_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"老院镇",
 			"雪镇",
 			"新镇",
-			"阔地镇",
+			"阔地乡",
 			"硬河湾",
 			"白乡",
 			"碾磨乡",

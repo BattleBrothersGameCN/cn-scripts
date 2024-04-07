@@ -12,7 +12,7 @@ this.small_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"河草滩",
 			"斯涅伦",
 			"诺多夫",
-			"阔地镇",
+			"阔地乡",
 			"魏森豪斯",
 			"姆伦海姆",
 			"绿地镇",
