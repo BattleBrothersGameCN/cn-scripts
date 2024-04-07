@@ -1227,7 +1227,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人民在你饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天. 你的 [color=" + this.Const.UI.Color.PositiveValue + "]" + food + "[/color]口粮能够供应您[color=" + this.Const.UI.Color.PositiveValue + "]" + time + "[/color] 天最多。记住，某些食物最终会变质！"
+							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天. 你的 [color=" + this.Const.UI.Color.PositiveValue + "]" + food + "[/color]口粮能够供应您[color=" + this.Const.UI.Color.PositiveValue + "]" + time + "[/color] 天最多。记住，某些食物最终会变质！"
 						}
 					];
 				}
@@ -1242,7 +1242,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人民在你饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你快要没有足够的食物养活你的人了！ 尽快购买新的食物，否则你的人会在饿死之前一个接一个地抛弃你！[/color]"
+							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你快要没有足够的食物养活你的人了！ 尽快购买新的食物，否则你的人会在饿死之前一个接一个地抛弃你！[/color]"
 						}
 					];
 				}
@@ -1257,7 +1257,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人民在你饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你没有足够的食物来养活你的人！ 尽快购买新的食物，否则你的人会在饿死之前一个接一个地抛弃你！[/color]"
+							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你没有足够的食物来养活你的人！ 尽快购买新的食物，否则你的人会在饿死之前一个接一个地抛弃你！[/color]"
 						}
 					];
 				}

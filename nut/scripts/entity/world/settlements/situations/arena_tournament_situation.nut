@@ -4,7 +4,7 @@ this.arena_tournament_situation <- this.inherit("scripts/entity/world/settlement
 	{
 		this.situation.create();
 		this.m.ID = "situation.arena_tournament";
-		this.m.Name = "骑士比武";
+		this.m.Name = "锦标赛";
 		this.m.Description = "一场大型比赛将在竞技场举行。进入它赢得非凡的奖品！";
 		this.m.Icon = "ui/settlement_status/settlement_effect_45.png";
 		this.m.Rumors = [
