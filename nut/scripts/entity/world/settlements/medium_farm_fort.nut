@@ -26,7 +26,7 @@ this.medium_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"夏堡",
 			"悦堡",
 			"旷野堡",
-			"长伸堡",
+			"长延堡",
 			"干草堡",
 			"磨盘堡",
 			"展堡",

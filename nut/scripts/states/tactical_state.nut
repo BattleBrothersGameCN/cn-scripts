@@ -2428,22 +2428,22 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 		{
 		case this.Const.Tactical.CombatResult.EnemyDestroyed:
 			result.title = "胜利";
-			result.subTitle = "敌人被消灭了, 战斗历时" + rounds + "回合后" + (rounds > 1 ? "s" : "");
+			result.subTitle = "敌人被消灭了, 战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.EnemyRetreated:
 			result.title = "胜利";
-			result.subTitle = "敌人撤退了, 战斗历时" + rounds + "回合后" + (rounds > 1 ? "s" : "");
+			result.subTitle = "敌人撤退了, 战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.PlayerDestroyed:
 			result.title = "失败";
-			result.subTitle = "你战败了, 战斗历时" + rounds + "回合后" + (rounds > 1 ? "s" : "");
+			result.subTitle = "你战败了, 战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.PlayerRetreated:
 			result.title = "撤退";
-			result.subTitle = "你撤退了, 战斗历时" + rounds + "回合后" + (rounds > 1 ? "s" : "");
+			result.subTitle = "你撤退了, 战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
 
 			if (!this.isScenarioMode())
 			{
