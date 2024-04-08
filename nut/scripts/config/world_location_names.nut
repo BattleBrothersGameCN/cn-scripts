@@ -28,7 +28,7 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"伯格海姆",
 	"阳光丘",
 	"罗斯多弗",
-	"兰根塔尔",
+	"长延原",
 	"图尔古",
 	"巴登",
 	"托儿多弗",

@@ -25,7 +25,7 @@ this.small_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"德巴赫",
 			"三地镇",
 			"角岬",
-			"胡夫斯拉格",
+			"蹄耕地",
 			"哈格",
 			"瓦根海姆",
 			"毛絮镇",
