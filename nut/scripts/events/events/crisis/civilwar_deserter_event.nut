@@ -23,7 +23,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 						_event.m.Dude.setStartValuesEx([
 							"deserter_background"
 						]);
-						_event.m.Dude.setTitle("尊者(the Honorable)");
+						_event.m.Dude.setTitle("高尚者");
 						_event.m.Dude.getBackground().m.RawDescription = "%name%曾是贵族军队里的一名士兵，他违抗了命令，险些被绞死，直到你和%companyname%救下了他。";
 						_event.m.Dude.getBackground().buildDescription(true);
 
