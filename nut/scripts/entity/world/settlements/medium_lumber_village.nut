@@ -27,7 +27,7 @@ this.medium_lumber_village <- this.inherit("scripts/entity/world/settlement", {
 			"橡树镇",
 			"林耕地",
 			"马鹿溪",
-			"平和林",
+			"宁安林",
 			"溪谷镇",
 			"幽林乡",
 			"杉林乡",

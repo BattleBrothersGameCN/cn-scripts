@@ -18,7 +18,7 @@ this.medium_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"草场堡",
 			"洪原堡",
 			"亲卫堡",
-			"平和之地",
+			"宁安坪",
 			"皇冠堡",
 			"草堡",
 			"树海堡",

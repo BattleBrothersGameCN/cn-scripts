@@ -24,7 +24,7 @@ this.small_snow_village <- this.inherit("scripts/entity/world/settlement", {
 			"维斯塔特",
 			"奥尔宾",
 			"格林斯塔德",
-			"比尔克兰",
+			"桦木坪",
 			"雷神镇",
 			"唐瓦尔",
 			"海尔维克",

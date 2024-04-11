@@ -22,9 +22,9 @@ this.large_steppe_village <- this.inherit("scripts/entity/world/settlement", {
 			"擢爵地",
 			"光亮之城",
 			"光明边城",
-			"荆棘之地",
+			"荆棘坪",
 			"红染边城",
-			"打井之地"
+			"打井坪"
 		]);
 		this.m.DraftList = [
 			"apprentice_background",
