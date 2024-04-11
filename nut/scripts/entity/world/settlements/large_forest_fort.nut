@@ -31,7 +31,7 @@ this.large_forest_fort <- this.inherit("scripts/entity/world/settlement", {
 			"兽角要塞",
 			"秀溪要塞",
 			"冰溪要塞",
-			"云杉墙垒"
+			"云杉垒"
 		]);
 		this.m.DraftList = [
 			"apprentice_background",

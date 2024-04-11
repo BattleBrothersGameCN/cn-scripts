@@ -44,7 +44,7 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"美丽之丘",
 	"铁石",
 	"塔德恩",
-	"海默尔顿",
+	"矿锤坪",
 	"赛格兰",
 	"奥哈特",
 	"费摩恩",
