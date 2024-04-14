@@ -4,7 +4,7 @@ this.lightbringer_sword <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.lightbringer_sword";
-		this.m.Name = "古神之耻";
+		this.m.Name = "旧神之叱";
 		this.m.Description = "这把泛着紫黄微光的剑就如黄昏的晚霞。轻轻一碰，冰凉之中还带着灼热的触感。无论它是魔法淬炼还是精心打造的，随意间的挥舞都能感觉到其蕴含的无尽力量与强大电流。";
 		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/sword_legendary_01.png";

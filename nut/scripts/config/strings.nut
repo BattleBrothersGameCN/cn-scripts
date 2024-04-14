@@ -1338,7 +1338,7 @@ gt.Const.Strings.PerkDescription <- {
 	SunderingStrikes = "无论使用任何使用的武器，对盔甲的伤害均会增加[color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color]。",
 	FastAdaption = "适应对手的动作！每次攻击未命中对手后，额外提高[color=" + this.Const.UI.Color.PositiveValue + "]10%[/color]的命中率。该增益可叠加，命中后重置。",
 	Weaponmaster = "所有攻击的疲劳值消耗减少[color=" + this.Const.UI.Color.NegativeValue + "]-20%[/color]，并且武器损坏速度减半。用你的武器优雅地跳舞，让每一击都算数。",
-	CoupDeGrace = "对受到任何伤残目标(如断臂)造成额外的[color=" + this.Const.UI.Color.PositiveValue + "]20%[/color]伤害。",
+	CoupDeGrace = "对已遭受创伤效果（例如手臂骨折）的目标额外造成[color=" + this.Const.UI.Color.PositiveValue + "]20%[/color]的伤害。",
 	SteelBrow = "击中头部不再对该角色造成严重伤害，这也显着降低了头部遭受严重伤害的风险。",
 	Anticipation = "当被远程武器攻击时，攻击者每远离一格, 则获得[color=" + this.Const.UI.Color.PositiveValue + "] 1+ 10% 基础远程防御[/color]作为额外的远程防御，并且至少获得 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color]点远程防御加成。",
 	HoldOut = "挺住! 任何具有有限持续时间的负面状态效果（例如流血、魅惑）的持续时间都会减少到[color=" + this.Const.UI.Color.NegativeValue + "]1[/color]回合。那些效果在几个回合内逐渐减弱的状态效果（例如地精毒药）从一开始就处于最弱的状态。",

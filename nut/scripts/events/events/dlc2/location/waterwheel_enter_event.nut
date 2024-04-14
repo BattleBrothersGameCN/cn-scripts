@@ -198,7 +198,7 @@ this.waterwheel_enter_event <- this.inherit("scripts/events/event", {
 	{
 		_vars.push([
 			"weapon",
-			"古神之耻"
+			"旧神之叱"
 		]);
 	}
 
