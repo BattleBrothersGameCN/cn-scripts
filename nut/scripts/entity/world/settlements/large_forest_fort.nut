@@ -21,7 +21,7 @@ this.large_forest_fort <- this.inherit("scripts/entity/world/settlement", {
 			"暗林要塞",
 			"荆棘要塞",
 			"林绿要塞",
-			"猎鹰要塞",
+			"栖鹰要塞",
 			"蝾螈要塞",
 			"云雀要塞",
 			"树叶要塞",

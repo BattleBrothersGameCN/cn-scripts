@@ -29,7 +29,7 @@ this.small_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"表土岬",
 			"哥特蒙德",
 			"安格尔恩",
-			"桑德霍尔姆",
+			"沙漫",
 			"贾登湖",
 			"埃格恩桑德",
 			"尼贝尔海姆",

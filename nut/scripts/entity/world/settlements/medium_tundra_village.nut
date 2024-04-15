@@ -5,22 +5,22 @@ this.medium_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
 			"通德尔",
-			"吕德尔斯霍尔姆",
-			"克拉夫伦德",
+			"庇雪漫",
+			"衣食地",
 			"波拉",
-			"拉韦斯塔德",
-			"奥斯利夫",
-			"赫勒瓦德",
+			"狂澜镇",
+			"雪封地",
+			"平岩渡",
 			"海姆斯塔德",
-			"荷恩海姆",
+			"角鸣乡",
 			"杰斯塔尔",
 			"海萨格",
-			"卡尔克",
+			"石灰地",
 			"索默斯塔德",
-			"霍恩",
-			"布拉明",
+			"角鸣地",
+			"踏雪地",
 			"岩镇",
-			"诺尔",
+			"硬土地",
 			"维斯塔特",
 			"奥尔宾",
 			"格林斯塔德",
@@ -38,7 +38,7 @@ this.medium_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"格海姆",
 			"阿森斯塔德",
 			"冈海姆",
-			"哈玛"
+			"锤头地"
 		]);
 		this.m.DraftList = [
 			"beggar_background",

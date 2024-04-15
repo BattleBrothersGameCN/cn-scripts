@@ -4,7 +4,7 @@ this.nine_lives_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.nine_lives";
 		this.m.Name = "九命猫";
-		this.m.Description = "该角色仿佛有九条命！刚与死神擦肩而过，直到他的下个回合，他会处于一种高度警觉的生存状态。";
+		this.m.Description = "该角色仿佛是九命猫！刚与死神擦肩而过，直到他的下个回合，他会处于一种高度警觉的生存状态。";
 		this.m.Icon = "ui/perks/perk_07.png";
 		this.m.IconMini = "perk_07_mini";
 		this.m.Overlay = "perk_07";

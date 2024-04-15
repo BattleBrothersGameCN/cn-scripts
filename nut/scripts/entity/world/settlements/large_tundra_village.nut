@@ -22,7 +22,7 @@ this.large_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"霜城",
 			"诸神城",
 			"战士城",
-			"锤城",
+			"锤头城",
 			"勇士城",
 			"颅骨城",
 			"先王城",
