@@ -16,7 +16,7 @@ this.small_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"瓦尔海姆",
 			"萌绿垒",
 			"树海岗",
-			"尚茨丘",
+			"裂口丘",
 			"温德沃赫特",
 			"塔楼哨兵",
 			"坚岩岗",
@@ -28,7 +28,7 @@ this.small_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"伯格瓦尔",
 			"芬肯瓦赫特",
 			"格雷芬沃尔",
-			"天空卫所"
+			"天空岗"
 		]);
 		this.m.DraftList = [
 			"apprentice_background",

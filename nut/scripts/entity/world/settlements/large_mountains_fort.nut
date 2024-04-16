@@ -25,7 +25,7 @@ this.large_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"剑山要塞",
 			"枪刺要塞",
 			"栖鹰石",
-			"高架石寨",
+			"高石寨",
 			"天空要塞",
 			"石塔",
 			"顶峰要塞",

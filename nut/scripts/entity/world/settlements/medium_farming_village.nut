@@ -8,7 +8,7 @@ this.medium_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"空镇",
 			"宝剑镇",
 			"沸水镇",
-			"老院镇",
+			"老围子",
 			"雪镇",
 			"新镇",
 			"阔地乡",

@@ -12,7 +12,7 @@ this.medium_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"岛涉",
 			"新渡",
 			"树桩港",
-			"滨渡",
+			"滨海渡",
 			"战涉",
 			"桦木港",
 			"新港峡",
