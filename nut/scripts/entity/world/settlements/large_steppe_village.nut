@@ -18,7 +18,7 @@ this.large_steppe_village <- this.inherit("scripts/entity/world/settlement", {
 			"此如城",
 			"秸秆边城",
 			"沙之边城",
-			"阳光边城",
+			"照日边城",
 			"擢爵地",
 			"光亮之城",
 			"光明边城",

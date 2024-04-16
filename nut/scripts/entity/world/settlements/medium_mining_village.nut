@@ -9,7 +9,7 @@ this.medium_mining_village <- this.inherit("scripts/entity/world/settlement", {
 			"井矿乡",
 			"铁矿乡",
 			"珐琅乡",
-			"铁石村",
+			"铁石镇",
 			"铁矿岩",
 			"宝井镇",
 			"盐矿城",

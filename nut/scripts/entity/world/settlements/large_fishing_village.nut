@@ -15,7 +15,7 @@ this.large_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"沧海镇",
 			"耙犁镇",
 			"洼镇",
-			"白镇",
+			"白城",
 			"治安官港",
 			"大港",
 			"国王之水",

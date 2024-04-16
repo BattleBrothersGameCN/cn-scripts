@@ -17,7 +17,7 @@ this.large_snow_village <- this.inherit("scripts/entity/world/settlement", {
 			"岩城",
 			"硬地城",
 			"阴云城",
-			"烤炉城",
+			"火炉城",
 			"峡城",
 			"霜城",
 			"诸神城",

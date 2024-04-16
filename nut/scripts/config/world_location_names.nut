@@ -13,27 +13,27 @@ if (!("Location" in gt.Const.World))
 gt.Const.World.LocationNames.VillageWestern <- [
 	"维森多夫",
 	"麋鹿岬",
-	"登科瓦尔德",
+	"阴翳林",
 	"奥特多弗",
 	"瓦伦多弗",
-	"奥恩",
+	"大洪原",
 	"凯尔西姆",
-	"温杜",
+	"过风滩",
 	"米纳肯",
 	"德巴赫",
 	"奥摩尔",
-	"维洛",
+	"小村滩",
 	"文德马克",
 	"海德马克",
 	"伯格海姆",
-	"阳光丘",
+	"照日丘",
 	"罗斯多弗",
 	"长延原",
 	"图尔古",
 	"巴登",
 	"托儿多弗",
 	"瓦尔多德",
-	"劳瑟尔",
+	"参差原",
 	"埃辛哈根",
 	"哈根",
 	"玛默克格",
@@ -52,7 +52,7 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"芦苇丘",
 	"奥坦道夫",
 	"塞尔海姆",
-	"多恩海姆"
+	"荆棘地"
 ];
 gt.Const.World.LocationNames.CityWestern <- [
 	"奥尔施塔特",
@@ -60,7 +60,7 @@ gt.Const.World.LocationNames.CityWestern <- [
 	"迪尔门",
 	"马尔伯格",
 	"奥门",
-	"多尔宁",
+	"荆生地",
 	"卡恩斯坦",
 	"沃尔斯塔特"
 ];
@@ -92,7 +92,7 @@ gt.Const.World.LocationNames.Castle <- [
 	"瑞科马克堡垒",
 	"斯塔克兰堡垒",
 	"沃尔斯汀堡垒",
-	"黎明守卫堡垒",
+	"荆棘守卫堡垒",
 	"克格伯堡垒"
 ];
 gt.Const.World.LocationNames.BanditCamp <- [

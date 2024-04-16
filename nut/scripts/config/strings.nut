@@ -509,7 +509,7 @@ gt.Const.Strings.MercenaryCompanyNames <- [
 ];
 gt.Const.Strings.NobleHouseNames <- [
 	"格林蒙德",
-	"威尔堡",
+	"小村堡",
 	"阿姆斯丘",
 	"哥达",
 	"铁石",
@@ -534,7 +534,7 @@ gt.Const.Strings.NobleHouseNames <- [
 	"尼德加德",
 	"罗森文",
 	"图拉",
-	"卡尔滕伯恩",
+	"冽水井",
 	"克里格",
 	"石壁山",
 	"哈康",
@@ -825,7 +825,7 @@ gt.Const.Strings.TerrainRegionNames <- [
 		"折叠式",
 		"金东",
 		"格林米尔",
-		"穆斯里奇",
+		"覆苔角",
 		"阿尔特马克",
 		"纽马克",
 		"公平范围",

@@ -18,7 +18,7 @@ this.medium_lumber_village <- this.inherit("scripts/entity/world/settlement", {
 			"林坝镇",
 			"杉林乡",
 			"毛苔镇",
-			"林翳之森",
+			"阴翳林",
 			"沙洲苔",
 			"新蕨镇",
 			"空苔镇",
