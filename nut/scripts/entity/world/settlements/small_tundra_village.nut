@@ -4,7 +4,7 @@ this.small_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 	{
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
-			"通德尔",
+			"火种乡",
 			"庇雪漫",
 			"衣食地",
 			"筑巢地",
@@ -16,22 +16,22 @@ this.small_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"钢铁乡",
 			"呼矛乡",
 			"石灰地",
-			"索默斯塔德",
+			"如夏镇",
 			"角鸣地",
 			"踏雪地",
 			"岩镇",
 			"硬土地",
 			"智识乡",
 			"蜜酒乡",
-			"格林斯塔德",
+			"草芜镇",
 			"桦木坪",
 			"雷神镇",
-			"唐瓦尔",
+			"雪藻坪",
 			"湾没地",
 			"火炉乡",
-			"诺海姆",
+			"北地乡",
 			"洼地乡",
-			"托尔瓦斯塔德",
+			"泥炭镇",
 			"盾橹地",
 			"峡湾乡",
 			"战獒乡",
@@ -39,9 +39,9 @@ this.small_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"诸神镇",
 			"战士乡",
 			"锤头地",
-			"布拉斯比",
-			"隆内丘",
-			"凯尔西姆"
+			"鼎沸湾",
+			"富饶丘",
+			"颅骨乡"
 		]);
 		this.m.DraftList = [
 			"brawler_background",

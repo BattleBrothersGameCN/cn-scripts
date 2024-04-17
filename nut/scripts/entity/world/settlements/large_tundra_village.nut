@@ -16,7 +16,7 @@ this.large_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"踏雪城",
 			"岩城",
 			"硬地城",
-			"阴云城",
+			"草芜城",
 			"火炉城",
 			"峡城",
 			"霜城",

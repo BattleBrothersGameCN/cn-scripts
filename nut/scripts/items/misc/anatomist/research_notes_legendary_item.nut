@@ -59,7 +59,7 @@ this.research_notes_legendary_item <- this.inherit("scripts/items/item", {
 		local buffAcquisitions = [
 			{
 				flag = "isKrakenPotionDiscovered",
-				creatureName = "克拉肯(Kraken)",
+				creatureName = "克拉肯",
 				potionName = "沼地霸主灵药"
 			},
 			{

@@ -34,10 +34,10 @@ this.named_lindwurm_shield <- this.inherit("scripts/items/shields/named/named_sh
 			"林德蠕龙的",
 			"蜥蜴的",
 			"龙鳞甲",
-			"沼泽",
+			"蠕龙鳞",
 			"鳞片覆盖的",
 			"蛇皮",
-			"糠皮",
+			"蠕龙皮",
 			"有鳞的"
 		];
 		return prefixes[this.Math.rand(0, prefixes.len() - 1)] + " ";

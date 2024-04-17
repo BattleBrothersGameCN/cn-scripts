@@ -39,7 +39,7 @@ this.world_active_contract_panel_module <- this.inherit("scripts/ui/screens/ui_m
 
 	function onShowContractDetails()
 	{
-		this.World.State.showDialogPopup("取消合同", "取消一份生效中的合同将会影响你为别人卖命积累的可靠声誉，当然还有和当前雇主的关系，尤其是你收了预付款的情况下。\n\n你确定要取消吗？", this.onContractCancelled.bindenv(this), null);
+		this.World.State.showDialogPopup("取消合同", "取消一份生效中，尤其是收了预付款的合同，将会影响你靠卖命攒下的可靠声誉，以及和当前雇主的关系。\n\n你确定要取消吗？", this.onContractCancelled.bindenv(this), null);
 	}
 
 	function onContractCancelled()

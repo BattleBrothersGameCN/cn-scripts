@@ -10,7 +10,7 @@ this.lindwurm_helmet <- this.inherit("scripts/items/helmets/named/named_helmet",
 			"蜥蜴头饰",
 			"龙穹",
 			"林德蠕龙监护",
-			"沼泽头盔",
+			"蠕龙鳞盔",
 			"林德蠕龙面罩"
 		];
 		this.m.ShowOnCharacter = true;
