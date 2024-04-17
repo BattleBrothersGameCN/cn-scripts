@@ -5,7 +5,7 @@ this.large_swamp_village <- this.inherit("scripts/entity/world/settlement", {
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
 			"撑船坪",
-			"贵胄之城",
+			"泥涉城",
 			"黑坪",
 			"渔人城",
 			"桨过坪",

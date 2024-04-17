@@ -10,8 +10,8 @@ this.large_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"擢爵港",
 			"冻鱼坪",
 			"新地坪",
-			"战争镇",
-			"克拉肯之地",
+			"营垒镇",
+			"海妖坪",
 			"沧海镇",
 			"耙犁镇",
 			"洼镇",
@@ -20,7 +20,7 @@ this.large_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"大港",
 			"国王之水",
 			"国王之口",
-			"乌鸦坝",
+			"乌鸦圩",
 			"石头港",
 			"堤坝镇"
 		]);

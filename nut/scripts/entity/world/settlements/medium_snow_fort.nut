@@ -6,7 +6,7 @@ this.medium_snow_fort <- this.inherit("scripts/entity/world/settlement", {
 		this.m.Name = this.getRandomName([
 			"火种营",
 			"兽角卫",
-			"陋丘",
+			"草芜台",
 			"平岩营",
 			"石灰营",
 			"庇雪卫",
@@ -17,7 +17,7 @@ this.medium_snow_fort <- this.inherit("scripts/entity/world/settlement", {
 			"硬地漫",
 			"桦木营",
 			"雷鸣卫",
-			"钳子丘",
+			"雪藻台",
 			"湾没漫",
 			"泥炭漫",
 			"盾橹卫",

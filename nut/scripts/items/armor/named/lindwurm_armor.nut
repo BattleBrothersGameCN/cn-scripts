@@ -11,7 +11,7 @@ this.lindwurm_armor <- this.inherit("scripts/items/armor/named/named_armor", {
 			"蜥蜴大衣",
 			"林德蠕龙胄",
 			"林德蠕龙大衣",
-			"沼泽",
+			"蠕龙鳞片",
 			"林德蠕龙外套"
 		];
 		this.m.Variant = 113;

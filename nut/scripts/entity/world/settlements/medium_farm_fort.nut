@@ -5,7 +5,7 @@ this.medium_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
 			"榛子堡",
-			"园堡",
+			"圃园堡",
 			"疆堡",
 			"戍卫堡",
 			"空堡",

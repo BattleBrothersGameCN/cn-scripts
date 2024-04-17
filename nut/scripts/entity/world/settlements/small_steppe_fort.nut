@@ -10,7 +10,7 @@ this.small_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"猎场岗",
 			"穿行垒",
 			"红染垒",
-			"沙兵",
+			"沙地岗",
 			"照日卫",
 			"胜利岗",
 			"裂口原",
@@ -24,12 +24,12 @@ this.small_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"荆棘卫",
 			"荆棘岗",
 			"白溪岗",
-			"黄金之墙",
-			"蠕虫哨兵",
+			"金石垒",
+			"蠕龙岗",
 			"井垒",
-			"安特沃尔",
+			"低地垒",
 			"犬吠岗",
-			"斯特普沃尔"
+			"草原垒"
 		]);
 		this.m.DraftList = [
 			"caravan_hand_background",

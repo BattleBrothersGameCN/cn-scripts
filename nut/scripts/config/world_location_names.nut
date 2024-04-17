@@ -11,7 +11,7 @@ if (!("Location" in gt.Const.World))
 }
 
 gt.Const.World.LocationNames.VillageWestern <- [
-	"维森多夫",
+	"大草地",
 	"麋鹿岬",
 	"阴翳林",
 	"奥特多弗",
@@ -20,7 +20,7 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"凯尔西姆",
 	"过风滩",
 	"米纳肯",
-	"德巴赫",
+	"硬河湾",
 	"奥摩尔",
 	"小村滩",
 	"文德马克",
@@ -32,10 +32,10 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"图尔古",
 	"巴登",
 	"托儿多弗",
-	"瓦尔多德",
+	"垦耕林",
 	"参差原",
 	"埃辛哈根",
-	"哈根",
+	"大圃地",
 	"玛默克格",
 	"弗尔兰根",
 	"拉德恩",
@@ -51,7 +51,7 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"河草滩",
 	"芦苇丘",
 	"奥坦道夫",
-	"塞尔海姆",
+	"小树海",
 	"荆棘地"
 ];
 gt.Const.World.LocationNames.CityWestern <- [

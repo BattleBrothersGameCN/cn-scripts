@@ -6,7 +6,7 @@ this.large_snow_fort <- this.inherit("scripts/entity/world/settlement", {
 		this.m.Name = this.getRandomName([
 			"火种堡",
 			"兽角堡",
-			"芜堡",
+			"草芜堡",
 			"平岩堡",
 			"石灰堡",
 			"庇雪堡",
