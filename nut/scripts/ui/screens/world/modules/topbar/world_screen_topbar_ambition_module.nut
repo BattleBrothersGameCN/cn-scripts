@@ -33,7 +33,7 @@ this.world_screen_topbar_ambition_module <- this.inherit("scripts/ui/screens/ui_
 			return;
 		}
 
-		this.World.State.showDialogPopup("取消野心", "取消一个野心可以让你选择一个新的，但也会让你的手下对你的领导感到失望。\n\n你确定要取消吗？", this.onCancelAmbition.bindenv(this), null);
+		this.World.State.showDialogPopup("取消野心", "取消野心可以重新选择，但会让手下对你的领导失望。\n\n你确定要取消吗？", this.onCancelAmbition.bindenv(this), null);
 	}
 
 	function onCancelAmbition()

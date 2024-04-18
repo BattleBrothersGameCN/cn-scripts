@@ -5,7 +5,7 @@ this.oath_of_honor_warning <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "光荣的决斗!";
 		this.m.Icon = "skills/status_effect_160.png";
 		this.m.IconMini = "status_effect_160_mini";
-		this.m.Description = "这个角色已经立下荣誉誓言，拒绝使用当前装备的远程武器或工具！";
+		this.m.Description = "该角色立下了荣誉誓言，拒绝使用当前装备的远程武器或工具！";
 		this.m.Type = this.Const.SkillType.Special | this.Const.SkillType.StatusEffect | this.Const.SkillType.Alert;
 		this.m.Order = this.Const.SkillOrder.Last;
 		this.m.IsActive = false;

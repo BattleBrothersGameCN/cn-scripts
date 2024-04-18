@@ -6,7 +6,7 @@ this.oath_of_fortification_warning <- this.inherit("scripts/skills/skill", {
 		this.m.Icon = "skills/status_effect_159.png";
 		this.m.IconMini = "status_effect_159_mini";
 		this.m.Overlay = "status_effect_159";
-		this.m.Description = "这个角色已经立下壁垒誓言，因此在准备应战的过程中无法移动！";
+		this.m.Description = "该角色立下了壁垒誓言，因此在准备应战的过程中无法移动！";
 		this.m.Type = this.Const.SkillType.Special | this.Const.SkillType.StatusEffect | this.Const.SkillType.Alert;
 		this.m.Order = this.Const.SkillOrder.Last;
 		this.m.IsActive = false;

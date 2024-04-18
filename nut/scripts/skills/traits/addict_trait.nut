@@ -4,7 +4,7 @@ this.addict_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.addict";
-		this.m.Name = "上瘾";
+		this.m.Name = "药物成瘾";
 		this.m.Icon = "ui/traits/trait_icon_62.png";
 		this.m.Description = "这个角色染上了毒瘾。如果不定期提供，他可能会出现戒断症状。";
 		this.m.Excluded = [];

@@ -10,7 +10,7 @@ this.craven_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Titles = [
 			"胆小鬼(the Coward)",
 			"懦夫(the Craven)",
-			"变节者(Turncoat)",
+			"墙头草",
 			"没骨气(the Spineless)"
 		];
 		this.m.Excluded = [

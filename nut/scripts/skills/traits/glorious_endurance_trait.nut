@@ -6,7 +6,7 @@ this.glorious_endurance_trait <- this.inherit("scripts/skills/traits/character_t
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.glorious";
-		this.m.Name = "荣耀耐力";
+		this.m.Name = "忍耐之誉";
 		this.m.Icon = "ui/traits/trait_icon_70.png";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}

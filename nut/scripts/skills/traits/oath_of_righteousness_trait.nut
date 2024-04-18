@@ -8,7 +8,7 @@ this.oath_of_righteousness_trait <- this.inherit("scripts/skills/traits/characte
 		this.m.ID = "trait.oath_of_righteousness";
 		this.m.Name = "正义誓言";
 		this.m.Icon = "ui/traits/trait_icon_78.png";
-		this.m.Description = "该角色已经立下正义誓言，发誓要将亡灵赶尽杀绝。";
+		this.m.Description = "该角色立下了正义誓言，发誓要将亡灵赶尽杀绝。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

@@ -13,7 +13,7 @@ this.large_forest_fort <- this.inherit("scripts/entity/world/settlement", {
 			"橡树要塞",
 			"紫衫要塞",
 			"菘蓝要塞",
-			"鸮鹰要塞",
+			"枭鹰要塞",
 			"雄猪要塞",
 			"车运要塞",
 			"覆苔要塞",

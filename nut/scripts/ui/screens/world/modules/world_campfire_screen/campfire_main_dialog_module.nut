@@ -61,7 +61,7 @@ this.campfire_main_dialog_module <- this.inherit("scripts/ui/screens/ui_module",
 		{
 			if (this.World.Assets.getMoney() >= this.Const.World.InventoryUpgradeCosts[this.World.Retinue.getInventoryUpgrades()])
 			{
-				this.showDialogPopup(this.Const.Strings.InventoryUpgradeHeader[this.World.Retinue.getInventoryUpgrades()], "你可以选择" + this.Const.Strings.InventoryUpgradeText[this.World.Retinue.getInventoryUpgrades()] + "以获得 27 个额外的仓库空间, 这需要花费" + this.Const.Strings.InventoryUpgradeCosts[this.World.Retinue.getInventoryUpgrades()] + "克朗，你想这样做吗？", this.onUpgradeInventorySpace.bindenv(this), null);
+				this.showDialogPopup(this.Const.Strings.InventoryUpgradeHeader[this.World.Retinue.getInventoryUpgrades()], "你可以选择" + this.Const.Strings.InventoryUpgradeText[this.World.Retinue.getInventoryUpgrades()] + "以获得 27 个额外的仓库空间, 这需要花费" + this.Const.Strings.InventoryUpgradeCosts[this.World.Retinue.getInventoryUpgrades()] + "克朗，你确定要这样做吗？", this.onUpgradeInventorySpace.bindenv(this), null);
 			}
 			else
 			{

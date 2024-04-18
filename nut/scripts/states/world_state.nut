@@ -2313,7 +2313,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			}
 			else
 			{
-				text = "你不知道你将面对谁。攻击风险自担，必要时随时准备撤退！";
+				text = "敌人尚且未知，如要以身犯险，做好撤退准备！";
 			}
 		}
 
@@ -2332,7 +2332,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 		this.m.EngageByPlayer = _isPlayerInitiated;
 		this.Tooltip.hide();
 		this.m.WorldScreen.hide();
-		this.m.CombatDialog.show(entities, allyBanners, enemyBanners, _isPlayerInitiated || this.m.EscortedEntity != null, _allowFormationPicking, text, image, this.m.EscortedEntity != null ? "逃走！" : "撤退！");
+		this.m.CombatDialog.show(entities, allyBanners, enemyBanners, _isPlayerInitiated || this.m.EscortedEntity != null, _allowFormationPicking, text, image, this.m.EscortedEntity != null ? "快逃！" : "撤退！");
 		this.m.MenuStack.push(function ()
 		{
 			this.m.EngageCombatPos = null;
@@ -3091,7 +3091,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 
 			if (this.m.Player.isAttackable())
 			{
-				this.logDebug("现在可以攻击玩家。");
+				this.logDebug("现在玩家可被攻击。");
 			}
 			else
 			{
@@ -3202,7 +3202,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 				local faction = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs);
 				local party = faction.spawnEntity(this.m.LastTileHovered, "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, 200);
 				party.getSprite("banner").setBrush("banner_orcs_04");
-				party.setDescription("一群凶残的兽人，绿皮肤，比任何人都高。");
+				party.setDescription("一群凶狠的兽人，绿皮肤，远比人高。");
 				local c = party.getController();
 				local ambush = this.new("scripts/ai/world/orders/ambush_order");
 				c.addOrder(ambush);
@@ -3656,7 +3656,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 		this.World.Statistics.clear();
 		this.World.Assets.clear();
 		this.setEscortedEntity(null);
-		this.logInfo("保存版本：" + _in.getMetaData().getVersion());
+		this.logInfo("存档版本：" + _in.getMetaData().getVersion());
 	}
 
 	function onSerialize( _out )
@@ -3755,7 +3755,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			this.World.Flags.set("IsUnholdCampaign", true);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 6000, function ( _tag )
 			{
-				this.showDialogPopup("老战役已加载", "此战役是在激活“野兽与探险”DLC之前创建的。 请注意，即使你可以继续玩此战役，除非你开始新的战役，否则你将无法访问所有新内容。", null, null, true);
+				this.showDialogPopup("已加载旧版战役", "此战役是在激活“野兽与探险”DLC之前创建的。 请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
 			}.bindenv(this), null);
 		}
 		else if (this.Const.DLC.Wildmen && !this.World.Flags.get("IsWildmenCampaign"))
@@ -3763,7 +3763,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			this.World.Flags.set("IsWildmenCampaign", true);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 6000, function ( _tag )
 			{
-				this.showDialogPopup("老战役已加载", "此战役是在激活“北方的勇士”DLC之前创建的。 请注意，即使你可以继续玩此战役，除非你开始新的战役，否则你将无法访问所有新内容。", null, null, true);
+				this.showDialogPopup("已加载旧版战役", "此战役是在激活“北方勇士”DLC之前创建的。 请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
 			}.bindenv(this), null);
 		}
 		else if (this.Const.DLC.Desert && !this.World.Flags.get("IsDesertCampaign"))
@@ -3771,7 +3771,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			this.World.Flags.set("IsDesertCampaign", true);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 6000, function ( _tag )
 			{
-				this.showDialogPopup("老战役已加载", "此战役是在激活“炽热沙漠”DLC之前创建的。 请注意，即使你可以继续玩此战役，除非你开始新的战役，否则你将无法访问所有新内容。", null, null, true);
+				this.showDialogPopup("已加载旧版战役", "此战役是在激活“炽热沙漠”DLC之前创建的。 请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
 			}.bindenv(this), null);
 		}
 

@@ -4,7 +4,7 @@ this.hidden_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "terrain.hidden";
 		this.m.Name = "隐藏";
-		this.m.Description = "此角色隐藏在地物中，除非直接接邻或出手攻击对手，才会被对手看到。";
+		this.m.Description = "该角色隐藏在地物中，只有直接接邻或出手攻击才会被对手看到。";
 		this.m.Icon = "skills/status_effect_08.png";
 		this.m.IconMini = "status_effect_08_mini";
 		this.m.Type = this.Const.SkillType.Terrain | this.Const.SkillType.StatusEffect;
