@@ -4,7 +4,7 @@ this.steppe_helmet_with_mail <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.steppe_helmet_with_mail";
-		this.m.Name = "盔甲蒙古头盔(Steppe Helmet with Mail)";
+		this.m.Name = "衬链草原盔";
 		this.m.Description = "一个带有附着的邮件颈甲的鼻子盔，以草原民族的方式制作。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;

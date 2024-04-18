@@ -12,7 +12,7 @@ this.small_lumber_village <- this.inherit("scripts/entity/world/settlement", {
 			"麋鹿岬",
 			"林翳谷",
 			"橡树乡",
-			"鸮鹰驿",
+			"枭鹰驿",
 			"北林镇",
 			"幽林森",
 			"林坝镇",

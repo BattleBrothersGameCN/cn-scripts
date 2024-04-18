@@ -8,7 +8,7 @@ this.oath_of_dominion_trait <- this.inherit("scripts/skills/traits/character_tra
 		this.m.ID = "trait.oath_of_dominion";
 		this.m.Name = "统御誓言";
 		this.m.Icon = "ui/traits/trait_icon_79.png";
-		this.m.Description = "该角色已经立下了统御誓言, 发誓将保卫人类免受野兽的残忍侵袭。";
+		this.m.Description = "该角色立下了统御誓言, 发誓将保卫人类免受野兽的残忍侵袭。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

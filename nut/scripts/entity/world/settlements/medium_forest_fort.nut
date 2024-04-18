@@ -15,7 +15,7 @@ this.medium_forest_fort <- this.inherit("scripts/entity/world/settlement", {
 			"车运堡",
 			"覆苔堡",
 			"林区堡",
-			"鸮鹰堡",
+			"枭鹰堡",
 			"狐堡",
 			"暗林堡",
 			"荆棘堡",

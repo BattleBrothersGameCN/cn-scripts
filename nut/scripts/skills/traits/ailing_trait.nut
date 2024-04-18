@@ -4,7 +4,7 @@ this.ailing_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.ailing";
-		this.m.Name = "体弱";
+		this.m.Name = "虚弱";
 		this.m.Icon = "ui/traits/trait_icon_59.png";
 		this.m.Description = "这个人总是面色苍白，处于病态，这使他特别容易受毒物的影响。";
 		this.m.Titles = [
@@ -41,7 +41,7 @@ this.ailing_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "中毒效果持续时间额外延长 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 回合"
+				text = "中毒效果额外持续 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 回合"
 			}
 		];
 	}

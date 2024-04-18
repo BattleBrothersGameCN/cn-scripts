@@ -6,7 +6,7 @@ this.oath_of_sacrifice_trait <- this.inherit("scripts/skills/traits/character_tr
 		this.m.ID = "trait.oath_of_sacrifice";
 		this.m.Name = "牺牲誓言";
 		this.m.Icon = "ui/traits/trait_icon_87.png";
-		this.m.Description = "该角色已经立下牺牲誓言，发誓为战团的胜利放弃自我保护。然而很明显这样不怎么有利于身体健康。";
+		this.m.Description = "该角色立下了牺牲誓言，发誓为战团的胜利放弃自我保护。然而很明显这样不怎么有利于身体健康。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

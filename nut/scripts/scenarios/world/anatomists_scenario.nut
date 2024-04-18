@@ -4,7 +4,7 @@ this.anatomists_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 	{
 		this.m.ID = "scenario.anatomists";
 		this.m.Name = "解剖学家";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_181.png[/img][/p][p]在他们无法抑制的求知欲驱动下，解剖学家们已经花费了数年时间用于剖析大陆上的各种邪崇异兽。然而，随着社会大众对他们的研究手段愈发排斥，他们最终找上了你，希望能够成立一家佣兵战团，以便为他们提供源源不断的新鲜样本。\n\n[color=#bcad8c]解剖学家：[/color] 以三名解剖学家开始游戏，启动资金相当充裕。\n[color=#bcad8c]研究者：[/color] 研究你所击倒的敌人的遗骸，并从中提取出用于强化你战团成员的宝贵知识和特殊药剂。\n[color=#bcad8c]并非战士：[/color] 你的所有战团成员将永远无法达到自信士气。[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_181.png[/img][/p][p]在他们无法抑制的求知欲驱动下，解剖学家们已经花费了数年时间，剖析大陆上的各种邪崇异兽。然而，随着社会大众对他们的研究手段愈发排斥，他们最终找上了你，希望能够成立一家佣兵战团，以便为他们提供源源不断的新鲜样本。\n\n[color=#bcad8c]解剖学家：[/color] 以三名解剖学家开始游戏，启动资金相当充裕。\n[color=#bcad8c]研究者：[/color] 研究你所击倒的敌人的遗骸，并从中提取出用于强化你战团成员的宝贵知识和特殊药剂。\n[color=#bcad8c]并非战士：[/color] 你的所有战团成员将永远无法达到自信士气。[/p]";
 		this.m.Difficulty = 2;
 		this.m.Order = 70;
 		this.m.IsFixedLook = true;

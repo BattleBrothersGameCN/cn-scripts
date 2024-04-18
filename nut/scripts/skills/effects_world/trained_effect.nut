@@ -6,7 +6,7 @@ this.trained_effect <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "effects.trained";
-		this.m.Name = "训练经验(Training Experience)";
+		this.m.Name = "训练经历";
 		this.m.Description = "这个角色最近有幸与经验丰富的战士一起训练和学习，他已经浸透了知识，现在需要学以致用。";
 		this.m.Icon = "skills/status_effect_62.png";
 		this.m.Type = this.m.Type | this.Const.SkillType.StatusEffect;

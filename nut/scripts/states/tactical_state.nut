@@ -236,7 +236,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 		}
 		else
 		{
-			this.showDialogPopup("退出并退休", "你确定你想退出这场战斗，并因此失去你的铁人模式游戏并从战团退休吗？\n\n你的存档将被删除，你将无法继续。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
+			this.showDialogPopup("退出并退休", "你确定你想退出这场战斗，并因此输掉你的铁人模式游戏，从战团退休吗？\n\n你的存档将被删除，你将无法继续。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
 		}
 
 		this.Cursor.setCursor(this.Const.UI.Cursor.Hand);
@@ -1906,7 +1906,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 						if (this.m.StrategicProperties.IsArenaMode)
 						{
-							bro.improveMood(this.Const.MoodChange.BattleWon, "在竞技场赢了一场");
+							bro.improveMood(this.Const.MoodChange.BattleWon, "赢了一场竞技场战斗");
 						}
 						else
 						{
@@ -1926,7 +1926,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 							if (bro.getLifetimeStats().BattlesWithoutMe > this.Math.max(2, 6 - bro.getLevel()))
 							{
-								bro.worsenMood(this.Const.MoodChange.BattleWithoutMe, "觉得是无用的后备");
+								bro.worsenMood(this.Const.MoodChange.BattleWithoutMe, "在后备中派不上用场");
 							}
 						}
 					}
@@ -1978,7 +1978,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 						if (bro.getLifetimeStats().BattlesWithoutMe > this.Math.max(2, 6 - bro.getLevel()))
 						{
-							bro.worsenMood(this.Const.MoodChange.BattleWithoutMe, "觉得是无用的后备");
+							bro.worsenMood(this.Const.MoodChange.BattleWithoutMe, "在后备中派不上用场");
 						}
 					}
 				}

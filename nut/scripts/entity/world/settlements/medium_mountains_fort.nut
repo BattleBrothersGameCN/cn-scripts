@@ -30,7 +30,7 @@ this.medium_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"落风堡",
 			"原石堡",
 			"石山卫",
-			"奥伯堡"
+			"高堡"
 		]);
 		this.m.DraftList = [
 			"apprentice_background",

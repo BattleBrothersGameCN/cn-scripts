@@ -5,7 +5,7 @@ this.ancient_amber_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.ancient_amber";
 		this.m.Name = "古琥珀";
-		this.m.Description = "特别是老树人，它们的树皮上会长出非常纯净的琥珀碎片。 这些东西对一个交易者来说价格很高。";
+		this.m.Description = "越老的树人，越可能长着琥珀碎片。这些碎片极其纯净，能在商人那儿买上个好价。";
 		this.m.Icon = "loot/southern_09.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

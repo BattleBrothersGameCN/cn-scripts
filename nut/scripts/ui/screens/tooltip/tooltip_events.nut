@@ -111,7 +111,7 @@ this.tooltip_events <- {
 				{
 					id = 4,
 					type = "description",
-					text = "你的战团在这儿有空闲的席位，可以提供给其他的非战斗追随者。"
+					text = "一个空闲席位，用于招募其他非战斗追随者。"
 				},
 				{
 					id = 1,
@@ -184,7 +184,7 @@ this.tooltip_events <- {
 						tooltipContent.push({
 							id = 90,
 							type = "text",
-							text = "消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "+" + actor.getLevelActionPointCost() + "[/color][/b] AP 和 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "+" + actor.getLevelFatigueCost() + "[/color][/b] 疲劳值以移动(由于处于不同的高度)"
+							text = "消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "+" + actor.getLevelActionPointCost() + "[/color][/b] AP和 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "+" + actor.getLevelFatigueCost() + "[/color][/b] 疲劳值以移动(由于处于不同的高度)"
 						});
 					}
 					else
@@ -192,7 +192,7 @@ this.tooltip_events <- {
 						tooltipContent.push({
 							id = 90,
 							type = "text",
-							text = "消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "[/color][/b] AP 和 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "[/color][/b] 疲劳值以移动"
+							text = "消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "[/color][/b] AP和 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "[/color][/b] 疲劳值以移动"
 						});
 					}
 				}
@@ -1150,7 +1150,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你的雇佣兵战团拥有的硬币数量。 用于每天支付每个人的工资，还可以雇新人和购买装备。\n\n你支付 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyMoney + "[/color] 克朗每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你没有足够的克朗付给你的人了！ 要么赶快赚钱，要么在他们一个个抛弃你之前开掉一些。[/color]"
+							text = "你的佣兵战团拥有的钱币数量。用于支付日薪，或是雇佣新人、购买装备。\n\n日薪支出为 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyMoney + "[/color] 克朗。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你没有足够的克朗付给你的人了！ 要么赶快赚钱，要么在他们陆续抛弃你之前开掉一些。[/color]"
 						}
 					];
 				}
@@ -1286,7 +1286,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "整理好的各种箭矢、弩矢、投掷武器，用来在战斗后自动重新装填弹药袋。补充一支箭矢或弩矢消耗一点弹药，补充一发火铳弹消耗两点弹药，补充一个投掷武器或重装填火矛消耗三点弹药。弹药耗尽会使你的箭袋空空荡荡，你的人将无法射击。你可以总共携带不超过" + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].Ammo + this.World.Assets.m.AmmoMaxAdditional) + "单位。"
+						text = "整理好的各种箭矢、弩矢、投掷武器，用于在战后自动重装弹药。补充一支箭矢或弩矢消耗一点弹药，补充一发火铳弹消耗两点弹药，补充一支/把投掷武器或是替换火矛上的药包消耗三点弹药。弹药耗尽会使你的箭袋空空荡荡，你的人将无法射击。你最多能携带" + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].Ammo + this.World.Assets.m.AmmoMaxAdditional) + "个单位。"
 					}
 				];
 
@@ -1636,7 +1636,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "更高的远程防御降低了被远程攻击击中的概率，例如躲开从远处飞来的一支箭。 它可以随着角色获得经验和装备好盾牌而增加。"
+						text = "更高的远程防御能降低被远程攻击，如飞来的箭矢击中的概率。此数值可以通过获得经验或装备盾牌提升。"
 					}
 				];
 
@@ -2466,7 +2466,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "相机居中 (Shift)"
+						text = "居中相机 (Shift)"
 					},
 					{
 						id = 2,
@@ -2680,7 +2680,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "轻微的瘀伤、皮肉伤、失血以及类似的情况，导致这个角色失去生命值而不影响他们的能力。"
+						text = "轻微的瘀伤、皮肉伤、失血等使这个角色损失了生命值，尚不影响战斗能力。"
 					}
 				];
 
@@ -3986,12 +3986,12 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "炽热的沙漠"
+						text = "炽热沙漠"
 					},
 					{
 						id = 2,
 						type = "description",
-						text = "炽热的沙漠DLC为南方增添了一个新的沙漠地区，灵感来自中世纪的阿拉伯和波斯文化，一场新的涉及圣战的游戏后期危机，非战斗追随者随从可以改制你的战团，炼金术装置和原始火器，新的人类和野兽对手，新的合同和事件，等等。"
+						text = "炽热沙漠DLC为南方增添了一个新的沙漠地区，灵感来自中世纪的阿拉伯和波斯文化，一场新的涉及圣战的游戏后期危机，非战斗追随者随从可以改制你的战团，炼金术装置和原始火器，新的人类和野兽对手，新的合同和事件，等等。"
 					}
 				];
 

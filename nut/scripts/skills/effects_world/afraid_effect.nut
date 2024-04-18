@@ -4,7 +4,7 @@ this.afraid_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.afraid";
 		this.m.Name = "害怕";
-		this.m.Description = "最近的事件使这个角色担心自己会有性命之忧。他的担忧要么是对的，他真的就要死了，要么就会被时间冲淡。";
+		this.m.Description = "最近的事件使这个角色担心自己的小命。要么他的担忧是对的，他真的就要死了，要么就会被时间冲淡。";
 		this.m.Icon = "skills/status_effect_52.png";
 		this.m.IconMini = "status_effect_52_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect;

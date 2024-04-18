@@ -6,7 +6,7 @@ this.bright_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.bright";
 		this.m.Name = "聪明";
 		this.m.Icon = "ui/traits/trait_icon_11.png";
-		this.m.Description = "这个角色比大多数人更容易掌握新概念并适应形势。";
+		this.m.Description = "这个角色比大多数人更善于掌握新概念和适应形势。";
 		this.m.Titles = [
 			"快人(the Quick)",
 			"狐狸(the Fox)",

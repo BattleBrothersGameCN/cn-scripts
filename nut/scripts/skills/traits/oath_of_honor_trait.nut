@@ -6,7 +6,7 @@ this.oath_of_honor_trait <- this.inherit("scripts/skills/traits/character_trait"
 		this.m.ID = "trait.oath_of_honor";
 		this.m.Name = "荣耀誓言";
 		this.m.Icon = "ui/traits/trait_icon_82.png";
-		this.m.Description = "该角色已经立下了荣誉誓言，发誓将用近身战斗夺取胜利。";
+		this.m.Description = "该角色立下了荣誉誓言，发誓将用近身战斗夺取胜利。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

@@ -6,7 +6,7 @@ this.oath_of_humility_trait <- this.inherit("scripts/skills/traits/character_tra
 		this.m.ID = "trait.oath_of_humility";
 		this.m.Name = "谦逊誓言";
 		this.m.Icon = "ui/traits/trait_icon_81.png";
-		this.m.Description = "该角色已经立下了谦逊誓言，发誓要自我反思和自我提高。";
+		this.m.Description = "该角色立下了谦逊誓言，发誓要自我反思和自我提高。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

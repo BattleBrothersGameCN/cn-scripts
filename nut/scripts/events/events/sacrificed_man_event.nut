@@ -83,7 +83,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"cultist_background"
 				]);
-				_event.m.Dude.setTitle("献祭(the Sacrifice)");
+				_event.m.Dude.setTitle("活祭品");
 				_event.m.Dude.getBackground().m.RawDescription = "这人被当作祭品献祭，却在命运的安排下复活了，成了达库尔的仆人。他提出为你而战，而你竟然真的同意了。";
 				_event.m.Dude.getBackground().buildDescription(true);
 

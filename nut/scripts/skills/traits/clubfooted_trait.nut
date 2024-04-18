@@ -6,7 +6,7 @@ this.clubfooted_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.clubfooted";
 		this.m.Name = "畸形足";
 		this.m.Icon = "ui/traits/trait_icon_23.png";
-		this.m.Description = "这个角色在童年时期就患有畸形足，现在依然走路比大多数人都要困难。";
+		this.m.Description = "从小患有畸形足，这名角色走路难过他人。";
 		this.m.Titles = [];
 		this.m.Excluded = [
 			"trait.weasel",

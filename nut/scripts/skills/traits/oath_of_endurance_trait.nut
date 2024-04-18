@@ -6,7 +6,7 @@ this.oath_of_endurance_trait <- this.inherit("scripts/skills/traits/character_tr
 		this.m.ID = "trait.oath_of_endurance";
 		this.m.Name = "忍耐誓言";
 		this.m.Icon = "ui/traits/trait_icon_84.png";
-		this.m.Description = "该角色已经立下了忍耐誓言，发誓在战斗中比任何敌人都更加坚韧持久。";
+		this.m.Description = "该角色立下了忍耐誓言，发誓在战斗中比任何敌人都更加坚韧持久。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}
