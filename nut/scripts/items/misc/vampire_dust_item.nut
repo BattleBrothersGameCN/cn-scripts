@@ -4,8 +4,8 @@ this.vampire_dust_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.vampire_dust";
-		this.m.Name = "微光闪闪的灰烬";
-		this.m.Description = "一小堆闪烁蓝色微光的灰烬。据称这是一种强大亡灵生物的残骸，但只有部分人相信这种传言。";
+		this.m.Name = "闪光灰烬";
+		this.m.Description = "一小堆闪烁蓝色微光的灰烬。据称是一种强大不死生物的残骸，但罕有人相信这种说法。";
 		this.m.Icon = "misc/inventory_vampire_dust_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

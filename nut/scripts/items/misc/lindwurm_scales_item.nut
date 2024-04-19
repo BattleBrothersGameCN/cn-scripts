@@ -5,7 +5,7 @@ this.lindwurm_scales_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.lindwurm_scales";
 		this.m.Name = "林德蠕龙鳞片";
-		this.m.Description = "林德蠕龙身上闪闪发光的绿色鳞片是猎人从历险中带回的最著名的战利品之一。";
+		this.m.Description = "林德蠕龙的闪光绿鳞最能为野兽猎人打响名气。";
 		this.m.Icon = "misc/inventory_lindwurm_scales.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

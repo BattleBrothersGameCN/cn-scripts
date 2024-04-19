@@ -5,7 +5,7 @@ this.silverware_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.silverware";
 		this.m.Name = "银器";
-		this.m.Description = "一堆银餐具。在下一个城市应该能卖个好价钱。";
+		this.m.Description = "一堆银餐具。能在城里卖个好价钱。";
 		this.m.Icon = "loot/inventory_loot_06.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

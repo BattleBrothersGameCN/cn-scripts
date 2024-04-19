@@ -373,7 +373,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 					id = 10,
 					type = "text",
 					icon = "ui/tooltips/warning.png",
-					text = "[color=" + this.Const.UI.Color.NegativeValue + "]已用尽，无用的[/color]"
+					text = "[color=" + this.Const.UI.Color.NegativeValue + "]空空如也，毫无用处[/color]"
 				});
 			}
 		}

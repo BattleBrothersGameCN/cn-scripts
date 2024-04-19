@@ -4,7 +4,7 @@ this.armored_warhound_item <- this.inherit("scripts/items/accessory/warhound_ite
 	{
 		this.warhound_item.create();
 		this.m.ID = "accessory.armored_warhound";
-		this.m.Description = "一只来自北方的强壮且忠诚的战争猎犬。可在战斗中释放来侦查、追踪或者猎杀逃跑的敌人。这只狗穿着一件皮革护甲，能有效防止割伤。";
+		this.m.Description = "一条为战争而生，强壮而忠诚的北方战獒。可在战斗中释放，用以侦查、追踪或猎杀逃跑的敌人。穿有一件防护割伤的皮革护甲。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = false;

@@ -4,8 +4,8 @@ this.looted_valuables_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.looted_valuables";
-		this.m.Name = "贵重战利品";
-		this.m.Description = "多年来被野蛮人抢劫的一堆贵重物品。 许多部件都是破碎和弯曲的，但材料相当精致。";
+		this.m.Name = "抢来的财宝";
+		this.m.Description = "野蛮人数年间抢来的财宝被堆在一起。大多都损坏扭曲了，但用料相当精致。";
 		this.m.Icon = "loot/wildmen_04.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

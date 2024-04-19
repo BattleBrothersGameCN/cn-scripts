@@ -5,7 +5,7 @@ this.valuable_furs_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.valuable_furs";
 		this.m.Name = "贵重毛皮";
-		this.m.Description = "一堆珍贵的各种小动物的毛皮。 一种非常抢手的商品，尤其是在较大的定居点。";
+		this.m.Description = "各种小动物的珍贵毛皮。在大城市里尤为抢手。";
 		this.m.Icon = "loot/wildmen_03.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

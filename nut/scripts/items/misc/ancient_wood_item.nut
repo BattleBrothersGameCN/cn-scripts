@@ -4,8 +4,8 @@ this.ancient_wood_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.ancient_wood";
-		this.m.Name = "古木";
-		this.m.Description = "从一棵活树的残骸上雕刻而成的古代木片。";
+		this.m.Name = "陈年古木";
+		this.m.Description = "活树残骸上剥下的陈年古木。";
 		this.m.Icon = "misc/inventory_schrat_wood.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

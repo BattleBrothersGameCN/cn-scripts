@@ -5,7 +5,7 @@ this.gemstones_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.gemstones";
 		this.m.Name = "宝石";
-		this.m.Description = "切割成各种大小的宝石。 如果你能找到买家的话，应该很值钱。";
+		this.m.Description = "切削成不同大小的宝石。找对了买家能卖不少钱。";
 		this.m.Icon = "loot/inventory_loot_05.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

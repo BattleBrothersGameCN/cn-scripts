@@ -4,8 +4,8 @@ this.lindwurm_bones_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.lindwurm_bones";
-		this.m.Name = "林德蠕龙骨骼";
-		this.m.Description = "林德蠕龙骨骼的内部大部分是中空的，因此尽管体型庞大，但还是很容易携带。";
+		this.m.Name = "林德蠕龙遗骨";
+		this.m.Description = "林德蠕龙的骨骼大部中空，要不是占地太大还算容易携带。";
 		this.m.Icon = "misc/inventory_lindwurm_bones.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

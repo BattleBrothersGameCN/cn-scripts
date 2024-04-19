@@ -174,7 +174,7 @@ this.armor <- this.inherit("scripts/items/item", {
 				id = 5,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "最大疲劳值 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.StaminaModifier + "[/color]"
+				text = "最大疲劳值[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.StaminaModifier + "[/color]"
 			});
 		}
 
@@ -322,7 +322,7 @@ this.armor <- this.inherit("scripts/items/item", {
 
 		if (this.m.Condition == 0 && !this.m.IsIndestructible)
 		{
-			this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "的" + this.getName() + "被击中，受到 [b]" + this.Math.floor(_damage) + "[/b] 伤害并被摧毁了！");
+			this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "的" + this.getName() + "被击中，受到[b]" + this.Math.floor(_damage) + "[/b]点伤害并被摧毁！");
 
 			if (_attacker != null && _attacker.isPlayerControlled() && !this.getContainer().getActor().isAlliedWithPlayer())
 			{
@@ -331,7 +331,7 @@ this.armor <- this.inherit("scripts/items/item", {
 		}
 		else
 		{
-			this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "的" + this.getName() + "被击中，受到 [b]" + this.Math.floor(_damage) + "[/b] 伤害");
+			this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "的" + this.getName() + "被击中，受到[b]" + this.Math.floor(_damage) + "[/b]点伤害");
 		}
 
 		if (this.m.Upgrade != null)

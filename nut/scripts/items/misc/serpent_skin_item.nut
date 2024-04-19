@@ -5,7 +5,7 @@ this.serpent_skin_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.serpent_skin";
 		this.m.Name = "大蛇皮";
-		this.m.Description = "大蛇带有鳞片的皮，一个熟练的工匠可以把它变成有用的东西。";
+		this.m.Description = "带有鳞片的大蛇皮，熟练的工匠能把它制成有用的东西。";
 		this.m.Icon = "loot/southern_13.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

@@ -3,7 +3,7 @@ this.recovery_potion_item <- this.inherit("scripts/items/item", {
 	function create()
 	{
 		this.m.ID = "accessory.recovery_potion";
-		this.m.Name = "第二呼吸药水";
+		this.m.Name = "第二呼吸药剂";
 		this.m.Description = "疲劳的战士跟死了没什么区别。 这种肾上腺素和植物性兴奋剂的混合物可以让你做更多的事情。 持续到下一场战斗。";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;

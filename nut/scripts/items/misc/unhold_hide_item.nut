@@ -5,7 +5,7 @@ this.unhold_hide_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.unhold_hide";
 		this.m.Name = "巨魔皮";
-		this.m.Description = "兽皮是大部分护甲的基本组成，这个巨魔身上取来的厚厚的皮更是特别结实。";
+		this.m.Description = "兽皮是大部分护甲的基底，这些巨魔身上取来的厚皮更是特别结实。";
 		this.m.Icon = "misc/inventory_unhold_hide.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

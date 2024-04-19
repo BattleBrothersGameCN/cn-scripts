@@ -4,8 +4,8 @@ this.potion_of_knowledge_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.potion_of_knowledge";
-		this.m.Name = "知识药水";
-		this.m.Description = "据说这药水是由世界的神秘的和世俗知识练成的。喝了它能更容易得到经验。";
+		this.m.Name = "知识药剂";
+		this.m.Description = "据说，无论神秘还是凡俗，世间的知识都被炼在了这瓶药里。喝了它能更容易得到经验。";
 		this.m.Icon = "consumables/potion_05.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -57,7 +57,7 @@ this.potion_of_knowledge_item <- this.inherit("scripts/items/item", {
 			id = 13,
 			type = "text",
 			icon = "ui/icons/xp_received.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+100%[/color] 经验获取"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+100%[/color]经验获取"
 		});
 		result.push({
 			id = 65,

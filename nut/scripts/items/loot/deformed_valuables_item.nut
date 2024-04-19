@@ -4,8 +4,8 @@ this.deformed_valuables_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.deformed_valuables";
-		this.m.Name = "变形的贵重物品";
-		this.m.Description = "巨魔是笨重但强壮的生物，它们倾向于将找到的贵重物品挤压并捣烂成一个方便、扭曲的球。";
+		this.m.Name = "变形的财宝";
+		this.m.Description = "巨魔虽笨但体格强壮，他们喜欢把值钱的东西揉捏变形成方便携带的球。";
 		this.m.Icon = "loot/southern_05.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

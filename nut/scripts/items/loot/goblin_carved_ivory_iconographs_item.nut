@@ -4,8 +4,8 @@ this.goblin_carved_ivory_iconographs_item <- this.inherit("scripts/items/item", 
 	{
 		this.item.create();
 		this.m.ID = "misc.goblin_carved_ivory_iconographs";
-		this.m.Name = "象牙雕刻肖像画";
-		this.m.Description = "雕刻精美的象牙肖像画描绘了地精社会中受人尊敬的成员。";
+		this.m.Name = "牙雕肖像";
+		this.m.Description = "雕刻精美的象牙肖像描绘出地精社会中的大人物。";
 		this.m.Icon = "loot/inventory_goblins_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

@@ -5,7 +5,7 @@ this.jeweled_crown_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.jeweled_crown";
 		this.m.Name = "宝石王冠";
-		this.m.Description = "一顶镶着宝石的黄金精致王冠。 如果你能找到买主的话，应该值一大笔钱。";
+		this.m.Description = "镶有宝石的精致金冠。 找对了买家能卖不少钱。";
 		this.m.Icon = "loot/inventory_loot_02.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

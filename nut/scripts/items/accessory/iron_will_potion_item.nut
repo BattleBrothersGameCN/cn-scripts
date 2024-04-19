@@ -3,7 +3,7 @@ this.iron_will_potion_item <- this.inherit("scripts/items/item", {
 	function create()
 	{
 		this.m.ID = "accessory.iron_will_potion";
-		this.m.Name = "钢铁意志药水";
+		this.m.Name = "钢铁意志药剂";
 		this.m.Description = "除了喉咙有烧灼感之外，能让人感受不到痛苦并充满力量的饮料。 可信赖的饮品。 持续到下一场战斗。";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;

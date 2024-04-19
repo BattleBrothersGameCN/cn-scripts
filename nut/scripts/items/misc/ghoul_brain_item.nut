@@ -5,7 +5,7 @@ this.ghoul_brain_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.ghoul_brain";
 		this.m.Name = "食尸鬼大脑";
-		this.m.Description = "被杀死的食尸鬼的油腻大脑。你想要用它做点什么呢？";
+		this.m.Description = "死去食尸鬼的滑腻大脑。你要这个做什么？";
 		this.m.Icon = "misc/inventory_ghoul_brain.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

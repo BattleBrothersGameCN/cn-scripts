@@ -4,8 +4,8 @@ this.growth_pearls_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.growth_pearls";
-		this.m.Name = "大珍珠";
-		this.m.Description = "食尸鬼组织在快速生长时有时候会吞噬小颗粒或碎屑，并在体内形成闪闪发光的珍珠。在下一个城市应该能卖个好价钱。";
+		this.m.Name = "异体珍珠";
+		this.m.Description = "在食尸鬼组织快速生长期间，颗粒或碎屑偶尔会侵入，在体内长成闪亮的珍珠。能在城里卖个好价钱。";
 		this.m.Icon = "loot/southern_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

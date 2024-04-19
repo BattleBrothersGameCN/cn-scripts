@@ -5,7 +5,7 @@ this.third_eye_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.third_eye";
 		this.m.Name = "第三只眼";
-		this.m.Description = "梦魇没有眼睛，但这个类似眼睛的器官可以从它们的颅骨内取出。";
+		this.m.Description = "梦魇没有眼睛，这个类似眼睛的器官取自它们的颅骨。";
 		this.m.Icon = "misc/inventory_alp_eye.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;
