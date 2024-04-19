@@ -3,7 +3,7 @@ this.lionheart_potion_item <- this.inherit("scripts/items/item", {
 	function create()
 	{
 		this.m.ID = "accessory.lionheart_potion";
-		this.m.Name = "狮心药水";
+		this.m.Name = "狮心药剂";
 		this.m.Description = "像狮子一样勇敢！ 这种药水抑制恐惧，促进勇气，甚至包括对自己能力的严重高估。 可信赖的饮品。 持续到下一场战斗。";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;

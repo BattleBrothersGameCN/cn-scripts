@@ -63,7 +63,7 @@ this.large_coast_fort <- this.inherit("scripts/entity/world/settlement", {
 			"eunuch_background",
 			"paladin_background"
 		];
-		this.m.UIDescription = "这个巨大的城堡守卫着一个军港和周围的贸易路线";
+		this.m.UIDescription = "这座巨大的城堡守卫着一个军港和周围的贸易路线";
 		this.m.Description = "这个巨大的城堡守卫着一个军港和周围的贸易路线。它是贵族权力的所在地，也是大批驻军的家园。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";
 		this.m.UIBackgroundLeft = "ui/settlements/water_01";

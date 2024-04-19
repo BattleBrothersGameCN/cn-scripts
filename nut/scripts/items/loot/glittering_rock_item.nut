@@ -4,8 +4,8 @@ this.glittering_rock_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.glittering_rock";
-		this.m.Name = "闪闪发光的岩石";
-		this.m.Description = "在一个被击败的伊夫利特遗留下来的零星岩石中，有时可以找到一块闪着金光的岩石。 它是一个珍贵的战利品。";
+		this.m.Name = "闪光岩石";
+		this.m.Description = "闪着金光的石头偶尔也会散落在被击败的伊夫利特周围。 值钱的战利品。";
 		this.m.Icon = "loot/southern_04.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

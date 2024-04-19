@@ -4,8 +4,8 @@ this.lindwurm_hoard_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.lindwurm_hoard";
-		this.m.Name = "林德蠕龙的宝藏";
-		this.m.Description = "一组闪闪发光的贵重物品，收藏在林德蠕龙的体内。";
+		this.m.Name = "蠕龙珍宝";
+		this.m.Description = "林德蠕龙体内藏着的闪亮财宝。";
 		this.m.Icon = "loot/inventory_loot_10.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

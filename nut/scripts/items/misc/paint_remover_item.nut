@@ -4,8 +4,8 @@ this.paint_remover_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.paint_remover";
-		this.m.Name = "脱漆剂";
-		this.m.Description = "一桶脱漆剂。 可以用来去除许多普通头盔上的油漆。";
+		this.m.Name = "脱色剂";
+		this.m.Description = "一桶脱色剂。 用于去除常见头盔上的涂料。";
 		this.m.Icon = "consumables/paint_remover.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -56,7 +56,7 @@ this.paint_remover_item <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前所选角色携带的头盔上，对其进行喷涂。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前所选角色携带的头盔上，以为其去色。 此物品会在使用过程中消耗掉。"
 		});
 		return result;
 	}

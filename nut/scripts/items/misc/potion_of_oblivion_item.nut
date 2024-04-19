@@ -4,8 +4,8 @@ this.potion_of_oblivion_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.potion_of_oblivion";
-		this.m.Name = "遗忘药水";
-		this.m.Description = "最好不要问这种由最稀有、最奇异的原料混合而成的混合物味道如何！据说，任何喝了这东西的人都能重新体验他的生活，改变他在人生道路上所做过的决定。";
+		this.m.Name = "遗忘药剂";
+		this.m.Description = "最好不要问这种由最稀有、最奇异的原料混合制成的合剂味道如何！据说，喝下它的人都能重温自己的一生，改变人生路上做过的决定。";
 		this.m.Icon = "consumables/potion_08.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;

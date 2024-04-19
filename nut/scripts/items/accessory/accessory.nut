@@ -85,7 +85,7 @@ this.accessory <- this.inherit("scripts/items/item", {
 				id = 8,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "最大疲劳值 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.StaminaModifier + "[/color]"
+				text = "最大疲劳值[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.StaminaModifier + "[/color]"
 			});
 		}
 

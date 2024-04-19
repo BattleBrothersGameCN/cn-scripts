@@ -5,7 +5,7 @@ this.goblin_minted_coins_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.goblin_minted_coins";
 		this.m.Name = "铸造银币";
-		this.m.Description = "地精用作货币的铸造银币。";
+		this.m.Description = "地精中流通的铸造银币。";
 		this.m.Icon = "loot/inventory_goblins_02.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

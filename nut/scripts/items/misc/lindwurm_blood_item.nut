@@ -4,8 +4,8 @@ this.lindwurm_blood_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.lindwurm_blood";
-		this.m.Name = "林德蠕龙血液";
-		this.m.Description = "这种林德蠕龙血液能瞬间腐蚀金属。幸运的是能装在玻璃瓶里安全运输。";
+		this.m.Name = "林德蠕龙之血";
+		this.m.Description = "林德蠕龙血液能瞬间腐蚀金属。幸好能在玻璃瓶里安全转运。";
 		this.m.Icon = "misc/inventory_lindwurm_blood.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

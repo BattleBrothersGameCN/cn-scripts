@@ -5,7 +5,7 @@ this.ancient_gold_coins_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.ancient_gold_coins";
 		this.m.Name = "古代金币";
-		this.m.Description = "有着各种古代痕迹的厚金币。 如果你能找到买家的话，应该很值钱。";
+		this.m.Description = "带着各种古代印记的厚实金币。 找对了买家能卖不少钱。";
 		this.m.Icon = "loot/inventory_loot_04.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

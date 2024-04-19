@@ -5,7 +5,7 @@ this.happy_powder_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.happy_powder";
 		this.m.Name = "快乐粉";
-		this.m.Description = "这种神奇的粉末能立即把一个脾气暴躁的雇佣兵变成一个快乐而精力充沛的人。 不需要复杂的操作就能深陷其中。";
+		this.m.Description = "这种神奇的粉末能立即把一个脾气暴躁的佣兵变得快乐而振奋。使用后不宜操作重型器械。";
 		this.m.Icon = "consumables/powder_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -56,7 +56,7 @@ this.happy_powder_item <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前选定的角色上进行鼻吸。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前选定的角色上进行鼻吸。此物品会在使用过程中消耗掉。"
 		});
 		result.push({
 			id = 65,
@@ -75,7 +75,7 @@ this.happy_powder_item <- this.inherit("scripts/items/item", {
 	function onUse( _actor, _item = null )
 	{
 		this.Sound.play("sounds/combat/taunt_03.wav", this.Const.Sound.Volume.Inventory);
-		_actor.improveMood(10.000000, "路上的恐惧和厌恶");
+		_actor.improveMood(10.000000, "沿途的恐惧和厌恶");
 		this.Const.Tactical.Common.checkDrugEffect(_actor);
 		return true;
 	}

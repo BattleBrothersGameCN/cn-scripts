@@ -5,7 +5,7 @@ this.witch_hair_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.witch_hair";
 		this.m.Name = "女巫头发";
-		this.m.Description = "来自女巫身上的长而易碎的灰白头发。 据说她们的头发在制造药剂和炼金方面有强大的功能。 话说回来，也有人说女巫喜欢收集受害者的生殖器来把玩，所以说从农夫那里得到的消息不太靠谱。";
+		this.m.Description = "女巫身上长而易碎的灰白头发。 据说能做出功效强大的灵丹妙药。 不过话说回来，也有人说女巫会把受害者的生殖器养作宠物，所以农夫说的话也不能尽信。";
 		this.m.Icon = "misc/inventory_hexe_hair.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

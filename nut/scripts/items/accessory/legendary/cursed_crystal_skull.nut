@@ -4,8 +4,8 @@ this.cursed_crystal_skull <- this.inherit("scripts/items/accessory/accessory", {
 	{
 		this.accessory.create();
 		this.m.ID = "accessory.cursed_crystal_skull";
-		this.m.Name = "被诅咒的水晶颅骨";
-		this.m.Description = "用一整块大型水晶雕刻出的可怖头骨。它的表面没有哪怕一丝划痕。仅仅是靠近它，决心就会被熄灭，而犹疑则会涌现，冲散一切希望。";
+		this.m.Name = "诅咒水晶颅骨";
+		this.m.Description = "一整块大型水晶雕刻出的可怖头骨。表面没有一丝划痕。仅仅是靠近它，决心就会熄灭，犹疑则会涌现，冲散一切希望。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
@@ -57,7 +57,7 @@ this.cursed_crystal_skull <- this.inherit("scripts/items/accessory/accessory", {
 			id = 15,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "减少任何近战对手的决心 [color=" + this.Const.UI.Color.NegativeValue + "]-10[/color]"
+			text = "将所有近战对手的决心减少[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color]"
 		});
 		result.push({
 			id = 11,

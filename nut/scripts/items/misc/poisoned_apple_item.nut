@@ -5,7 +5,7 @@ this.poisoned_apple_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.poisoned_apple";
 		this.m.Name = "毒苹果";
-		this.m.Description = "看起来很好吃！";
+		this.m.Description = "看着就很好吃！";
 		this.m.Icon = "misc/inventory_hexe_apple.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

@@ -5,7 +5,7 @@ this.bead_necklace_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.bead_necklace";
 		this.m.Name = "珠子项链";
-		this.m.Description = "一条由北方野蛮部落特有的各种珠子制成的项链。";
+		this.m.Description = "一条珠子项链，选用的珠子是典型的北方蛮族部落风格。";
 		this.m.Icon = "loot/wildmen_02.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

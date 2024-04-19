@@ -5,7 +5,7 @@ this.jade_broche_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.jade_broche";
 		this.m.Name = "玉质胸针";
-		this.m.Description = "一枚做工精细的玉质胸针，出售时一定能给你一两枚硬币。";
+		this.m.Description = "一枚做工精细的玉质胸针，肯定能卖上几个子儿。";
 		this.m.Icon = "loot/southern_07.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

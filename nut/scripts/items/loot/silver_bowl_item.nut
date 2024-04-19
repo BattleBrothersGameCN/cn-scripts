@@ -5,7 +5,7 @@ this.silver_bowl_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.silver_bowl";
 		this.m.Name = "银碗";
-		this.m.Description = "一只巨大的银碗。在下一个城市应该能卖个好价钱。";
+		this.m.Description = "一只很有分量的大银碗。能在城里卖个好价钱。";
 		this.m.Icon = "loot/inventory_loot_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

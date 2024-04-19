@@ -5,7 +5,7 @@ this.glowing_resin_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.glowing_resin";
 		this.m.Name = "荧光树脂";
-		this.m.Description = "这是些浅黄色的琥珀树脂碎片。如果熔化，这种材料就会形成一种强力粘合剂。";
+		this.m.Description = "这些树脂碎片呈淡橙色，熔化后能作为一种强力粘合剂。";
 		this.m.Icon = "misc/inventory_schrat_resin.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

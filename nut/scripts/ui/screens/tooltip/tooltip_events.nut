@@ -1687,7 +1687,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "击中头部的机率"
+						text = "爆头率"
 					},
 					{
 						id = 2,
@@ -1701,7 +1701,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "主动性"
+						text = "主动值"
 					},
 					{
 						id = 2,

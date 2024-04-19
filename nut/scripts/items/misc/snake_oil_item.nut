@@ -5,7 +5,7 @@ this.snake_oil_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.snake_oil";
 		this.m.Name = "蛇油";
-		this.m.Description = "这是一种神秘的混合物，据说可以治疗脱发、梅毒、耳聋、阳痿、皮疹、水痘和写作障碍。 一种真正的神奇药剂，只要你相信它。 哪里都能卖个好价钱。";
+		this.m.Description = "据说可以治疗脱发、梅毒、耳聋、阳痿、皮疹、水痘和写作障碍的神秘合剂。只要你相信它，它就是真正的神药。 哪里都能卖个好价钱。";
 		this.m.Icon = "misc/inventory_snake_oil.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

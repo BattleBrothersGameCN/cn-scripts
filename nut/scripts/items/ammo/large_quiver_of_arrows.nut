@@ -4,7 +4,7 @@ this.large_quiver_of_arrows <- this.inherit("scripts/items/ammo/ammo", {
 	{
 		this.m.ID = "ammo.arrows";
 		this.m.Name = "大弓箭袋";
-		this.m.Description = "一大袋箭支，适用于各种各样的弓。如果你有足够的弹药，在每场战斗后自动重新填充。";
+		this.m.Description = "一大袋箭支，适用于各式弓。弹药充足时，会在战斗后自动补充。";
 		this.m.Icon = "ammo/quiver_03.png";
 		this.m.IconEmpty = "ammo/quiver_03_empty.png";
 		this.m.SlotType = this.Const.ItemSlot.Ammo;
@@ -64,7 +64,7 @@ this.large_quiver_of_arrows <- this.inherit("scripts/items/ammo/ammo", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/ammo.png",
-				text = "含有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Ammo + "[/color] 支箭"
+				text = "装有[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Ammo + "[/color]支箭"
 			});
 		}
 		else
@@ -73,7 +73,7 @@ this.large_quiver_of_arrows <- this.inherit("scripts/items/ammo/ammo", {
 				id = 6,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]已用尽，无用的[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]空空如也，毫无用处[/color]"
 			});
 		}
 

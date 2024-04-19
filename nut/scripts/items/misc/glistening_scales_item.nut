@@ -4,8 +4,8 @@ this.glistening_scales_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.glistening_scales";
-		this.m.Name = "闪亮的鳞片";
-		this.m.Description = "当你把这些鳞片朝向太阳时，闪耀着各种颜色的光。";
+		this.m.Name = "闪亮鳞片";
+		this.m.Description = "这些鳞片在太阳的照射下闪耀着各种颜色的光。";
 		this.m.Icon = "loot/southern_14.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

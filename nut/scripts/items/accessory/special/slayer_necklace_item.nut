@@ -5,7 +5,7 @@ this.slayer_necklace_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.accessory.create();
 		this.m.ID = "accessory.slayer_necklace";
 		this.m.Name = "";
-		this.m.Description = "一条项链似乎是用兽人的骨头做成的。";
+		this.m.Description = "一条用兽人骨头制成的项链。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

@@ -5,7 +5,7 @@ this.sabertooth_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.sabertooth";
 		this.m.Name = "剑齿";
-		this.m.Description = "一颗非常大的牙齿，可能会卖给那些想假装猎杀可怖野兽的人。";
+		this.m.Description = "一颗相当大的牙齿，也许能卖给那些假装猎杀过可怖野兽的人。";
 		this.m.Icon = "loot/southern_02.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

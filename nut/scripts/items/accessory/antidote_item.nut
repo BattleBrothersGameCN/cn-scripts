@@ -5,7 +5,7 @@ this.antidote_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.accessory.create();
 		this.m.ID = "accessory.antidote";
 		this.m.Name = "解毒剂";
-		this.m.Description = "一瓶对多种毒素有效的解毒剂，尝起来很苦。";
+		this.m.Description = "一瓶广谱解毒剂，味道很苦。";
 		this.m.SlotType = this.Const.ItemSlot.Bag;
 		this.m.IsAllowedInBag = true;
 		this.m.IsDroppedAsLoot = true;
