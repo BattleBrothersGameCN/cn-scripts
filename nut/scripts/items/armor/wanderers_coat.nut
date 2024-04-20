@@ -5,7 +5,7 @@ this.wanderers_coat <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.wanderers_coat";
 		this.m.Name = "流浪者外套";
-		this.m.Description = "一种粗犷的旅行服装，由一件分层的束腰外衣和一件耐用的皮夹克组成。";
+		this.m.Description = "一种粗犷的旅行服装，由一件多层束腰外衣和一件耐用的皮夹克组成。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 111;

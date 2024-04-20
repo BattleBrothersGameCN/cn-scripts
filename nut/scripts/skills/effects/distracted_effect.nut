@@ -43,7 +43,7 @@ this.distracted_effect <- this.inherit("scripts/skills/skill", {
 				id = 12,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-35%[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-35%[/color]主动值"
 			}
 		];
 	}

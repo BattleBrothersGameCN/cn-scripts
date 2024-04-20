@@ -5,7 +5,7 @@ this.decayed_coat_of_plates <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.decaying_coat_of_plates";
 		this.m.Name = "腐朽的板甲衣";
-		this.m.Description = "一件有着生锈金属和易碎皮革部件的有点腐烂的板甲。它可能已经在户外凉了一段时间了。";
+		this.m.Description = "一件腐朽的板甲衣，其金属部件生锈，皮革部分也变脆开裂了。肯定没少受风吹日晒。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

@@ -53,7 +53,7 @@ this.orc_berserker_potion_item <- this.inherit("scripts/items/misc/anatomist/ana
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "每当承受生命值伤害时获得可堆叠的“愤怒”效果，增加决心、主动性、伤害输出并减少所受的伤害"
+			text = "每当承受生命值伤害时获得可堆叠的“愤怒”效果，增加决心、主动值、伤害输出并减少所受的伤害"
 		});
 		result.push({
 			id = 65,

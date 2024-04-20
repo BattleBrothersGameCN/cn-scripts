@@ -47,7 +47,7 @@ this.nightmare_effect <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-300[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-300[/color]主动值"
 			}
 		];
 	}

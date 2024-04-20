@@ -5,7 +5,7 @@ this.blotched_gambeson <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.blotched_gambeson";
 		this.m.Name = "补丁软甲";
-		this.m.Description = "一件有衬垫的软甲，经历了多次修理和补缀。";
+		this.m.Description = "一件经历了多次修补的填充软甲。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 21;

@@ -56,7 +56,7 @@ this.fractured_skull_injury <- this.inherit("scripts/skills/injury/injury", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-50%[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-50%[/color]主动值"
 			},
 			{
 				id = 7,

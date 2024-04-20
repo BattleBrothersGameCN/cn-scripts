@@ -173,7 +173,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Other.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] 主动性"
+					text = _event.m.Other.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color]主动值"
 				});
 				this.List.push({
 					id = 17,

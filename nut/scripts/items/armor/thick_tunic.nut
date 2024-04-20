@@ -5,7 +5,7 @@ this.thick_tunic <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.thick_tunic";
 		this.m.Name = "厚束腰外衣";
-		this.m.Description = "一件由多层组成的厚布束腰外衣，用于抵御天气和刮伤。";
+		this.m.Description = "一件多层厚束腰外衣，能抵御天气和擦伤。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 19;

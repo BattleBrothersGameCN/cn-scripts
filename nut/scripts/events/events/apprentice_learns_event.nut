@@ -34,18 +34,18 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().MeleeDefense += meleeDefense;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.000000, "学习 " + _event.m.Teacher.getName());
+				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
 				_event.m.Teacher.improveMood(0.500000, "教授了" + _event.m.Apprentice.getName() + "某些东西");
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/melee_skill.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] 近战技能"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color]点近战技能"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/melee_defense.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeDefense + "[/color] 近战防御"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeDefense + "[/color]点近战防御"
 					}
 				];
 
@@ -86,18 +86,18 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Bravery += resolve;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.000000, "学习 " + _event.m.Teacher.getName());
+				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
 				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "某些东西");
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/melee_skill.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] 近战技能"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color]点近战技能"
 					},
 					{
 						id = 16,
 						icon = "ui/icons/bravery.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] 决心"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color]点决心"
 					}
 				];
 
@@ -140,23 +140,23 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Stamina += stamina;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.000000, "学习 " + _event.m.Teacher.getName());
+				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
 				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "某些东西");
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/melee_skill.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] 近战技能"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color]点近战技能"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/initiative.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color] 主动性"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color]主动值"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/fatigue.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] 最大疲劳值"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color]点最大疲劳值"
 					}
 				];
 
@@ -199,23 +199,23 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Stamina += stamina;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.000000, "学习 " + _event.m.Teacher.getName());
+				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
 				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "某些东西");
 				this.List = [
 					{
 						id = 16,
 						icon = "ui/icons/melee_skill.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] 近战技能"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color]点近战技能"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/health.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + hitpoints + "[/color] 生命值"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + hitpoints + "[/color]点生命值"
 					},
 					{
 						id = 17,
 						icon = "ui/icons/fatigue.png",
-						text = _event.m.Apprentice.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] 最大疲劳值"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color]点最大疲劳值"
 					}
 				];
 

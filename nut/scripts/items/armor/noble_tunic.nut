@@ -5,7 +5,7 @@ this.noble_tunic <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.noble_tunic";
 		this.m.Name = "贵族束腰外衣";
-		this.m.Description = "绣有悦目花纹的上等亚麻束腰外衣。时尚但几乎没有提供保护。";
+		this.m.Description = "绣有悦目花纹的上等亚麻束腰外衣。时尚但几乎没有防护能力。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 8;

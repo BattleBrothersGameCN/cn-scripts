@@ -5,7 +5,7 @@ this.inadvertently_save_merchant_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.inadvertently_save_merchant";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 130.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

@@ -5,7 +5,7 @@ this.leather_scale_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.leather_scale";
 		this.m.Name = "皮革鳞甲";
-		this.m.Description = "一件拥有厚实皮革鳞片提供额外防护的盔甲。";
+		this.m.Description = "为了提升防护性能，厚重的皮制鳞甲下还套了一件链甲衫。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 83;

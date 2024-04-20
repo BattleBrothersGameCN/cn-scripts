@@ -15,7 +15,7 @@ this.aging_swordmaster_paycut_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "他是一个值得尊敬的人，一如既往。",
+					Text = "他是个值得尊敬的人，一如既往。",
 					function getResult( _event )
 					{
 						return 0;

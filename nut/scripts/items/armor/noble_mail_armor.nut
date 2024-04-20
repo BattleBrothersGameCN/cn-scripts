@@ -5,7 +5,7 @@ this.noble_mail_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.noble_mail";
 		this.m.Name = "贵族链甲";
-		this.m.Description = "一件真正大师制作的链甲。非常轻和灵活以减少负重，同时仍提供良好的保护。";
+		this.m.Description = "一件独具匠心的链甲。轻便灵活不累人的同时保证了良好的防御力。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 87;

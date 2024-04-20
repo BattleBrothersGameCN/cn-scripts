@@ -57,7 +57,7 @@ this.cat_potion_item <- this.inherit("scripts/items/item", {
 			id = 11,
 			type = "text",
 			icon = "ui/icons/initiative.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+20[/color] 主动性"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+20[/color]主动值"
 		});
 		result.push({
 			id = 65,

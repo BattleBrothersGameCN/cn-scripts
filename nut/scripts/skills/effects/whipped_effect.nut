@@ -57,7 +57,7 @@ this.whipped_effect <- this.inherit("scripts/skills/skill", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + (9 + this.m.Level) + "[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + (9 + this.m.Level) + "[/color]主动值"
 			},
 			{
 				id = 10,

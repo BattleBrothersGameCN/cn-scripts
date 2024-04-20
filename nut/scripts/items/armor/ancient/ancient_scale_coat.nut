@@ -4,8 +4,8 @@ this.ancient_scale_coat <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.ancient_scale_coat";
-		this.m.Name = "古代鳞甲";
-		this.m.Description = "一件沉重而锈迹斑斑的古老鳞甲，适合收藏，而非用于战场。";
+		this.m.Name = "古代鳞甲衣";
+		this.m.Description = "一件沉重而黯淡的古代鳞甲衣，适合收藏，而非用于战场。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

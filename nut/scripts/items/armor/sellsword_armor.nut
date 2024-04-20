@@ -4,8 +4,8 @@ this.sellsword_armor <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.sellsword_armor";
-		this.m.Name = "佣兵铠甲";
-		this.m.Description = "一种用金属板加固的长皮大衣，套在结实的锁子甲上。";
+		this.m.Name = "佣兵甲";
+		this.m.Description = "一件套在结实链甲上，加强有金属甲片的长身皮革大衣。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 86;

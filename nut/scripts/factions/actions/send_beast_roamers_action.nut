@@ -100,9 +100,9 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 			}
 
 			local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-			local party = _action.getFaction().spawnEntity(tile, "冰原狼", false, this.Const.World.Spawn.Direwolves, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+			local party = _action.getFaction().spawnEntity(tile, "恐狼", false, this.Const.World.Spawn.Direwolves, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
 			party.getSprite("banner").setBrush("banner_beasts_01");
-			party.setDescription("一群凶猛的冰原狼正在寻找猎物。");
+			party.setDescription("一群寻找猎物的凶猛恐狼。");
 			party.setFootprintType(this.Const.World.FootprintsType.Direwolves);
 			party.setSlowerAtNight(false);
 			party.setUsingGlobalVision(false);

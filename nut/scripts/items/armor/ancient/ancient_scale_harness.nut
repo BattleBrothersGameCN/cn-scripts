@@ -4,8 +4,8 @@ this.ancient_scale_harness <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.ancient_scale_harness";
-		this.m.Name = "古代胄鳞甲";
-		this.m.Description = "一件坚固而又沉重的胄鳞甲，有一些部分已经腐朽了。";
+		this.m.Name = "古代鳞甲";
+		this.m.Description = "一件坚固但沉重、腐朽的古代鳞甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

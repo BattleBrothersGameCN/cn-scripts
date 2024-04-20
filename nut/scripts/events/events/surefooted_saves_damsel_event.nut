@@ -6,7 +6,7 @@ this.surefooted_saves_damsel_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.surefooted_saves_damsel";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

@@ -719,7 +719,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Quartermaster",
-			Title = "在 %townname%",
+			Title = "在%townname%",
 			Text = "[img]gfx/ui/events/event_158.png[/img]{当你离开%townname%时，有个人驾着一辆马车向你飞奔而来，他挂着%employerfaction%的旗帜。他自称是雇主的军需官，并表示他有一些物资可以提供。 %SPEECH_ON%我这里有几只战犬、渔网和投掷长矛。你可以选择其中之一，但不能全部拿走，因为周围还有很多需要武器的士兵。 %SPEECH_OFF%}",
 			Image = "",
 			Banner = "",

@@ -4,7 +4,7 @@ this.heavy_iron_armor <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.heavy_iron_armor";
-		this.m.Name = "重型铁护甲";
+		this.m.Name = "重型铁甲";
 		this.m.Description = "用重型金属板，鳞片和锁链做成的盔甲。 真正的北方勇士铠甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;

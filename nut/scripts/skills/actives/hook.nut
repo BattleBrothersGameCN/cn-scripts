@@ -4,7 +4,7 @@ this.hook <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.hook";
 		this.m.Name = "钩拽";
-		this.m.Description = "如果有空间的话，距离2格的目标会被钩住并拉近。被击中的目标会趔趄并降低主动性，目标不能被拉高一个高度，但如果一次被拉低多个高度还会受到伤害。成功的钩拽将取消目标的盾墙，矛墙，还击技能，定身的目标不能被钩拽。";
+		this.m.Description = "如果有空间的话，距离2格的目标会被钩住并拉近。被击中的目标会趔趄并降低主动值，目标不能被拉高一个高度，但如果一次被拉低多个高度还会受到伤害。成功的钩拽将取消目标的盾墙，矛墙，还击技能，定身的目标不能被钩拽。";
 		this.m.Icon = "skills/active_31.png";
 		this.m.IconDisabled = "skills/active_31_sw.png";
 		this.m.Overlay = "active_31";

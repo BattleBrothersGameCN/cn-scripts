@@ -8,7 +8,7 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.collector_wants_trophy";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

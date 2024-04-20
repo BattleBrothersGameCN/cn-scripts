@@ -4,9 +4,9 @@ this.direwolf_pelt_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.direwolf_pelt";
-		this.m.Name = "冰原野狼皮斗篷";
-		this.m.Description = "由凶猛的恶狼皮毛制成，经过处理和缝合，可佩戴在猎兽人的脖子上作为战利品。穿戴像这样的野兽皮毛可以使一个人变成一个令人敬畏的形象。";
-		this.m.ArmorDescription = "冰原狼皮披风附在盔甲上，可以将穿戴者变成一个威风凛凛的人物。";
+		this.m.Name = "恐狼皮斗篷";
+		this.m.Description = "由凶猛的恐狼皮毛制成，经过处理和缝合，可佩戴在猎兽人的脖子上作为战利品。穿戴像这样的野兽皮毛可以使一个人变成一个令人敬畏的形象。";
+		this.m.ArmorDescription = "恐狼狼皮披风附在盔甲上，可以将穿戴者变成一个威风凛凛的人物。";
 		this.m.Icon = "armor_upgrades/upgrade_01.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_01.png";

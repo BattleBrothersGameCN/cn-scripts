@@ -7,7 +7,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.troublemakers_bully_peasants";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

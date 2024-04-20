@@ -39,7 +39,7 @@ this.hesitant_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color]主动值"
 			}
 		];
 	}

@@ -730,7 +730,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Alchemist1",
-			Title = "在 %townname%",
+			Title = "在%townname%",
 			Text = "[img]gfx/ui/events/event_163.png[/img]{在 %townname% 的大门处，一个男人走进你。根据他胸前挂着的乱七八糟颜色的条纹和护符带来判断，他是一个炼金术士。 他声称他是维齐尔派来的。%SPEECH_ON%我的材料有点短缺，但我有足够的材料来制作非常具体的东西，如果是你说出来的，当然可以。%SPEECH_OFF%他描述他的方案如：火焰罐，闪光罐或者烟雾罐。}",
 			Image = "",
 			Banner = "",
@@ -781,7 +781,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Alchemist2",
-			Title = "在 %townname%",
+			Title = "在%townname%",
 			Text = "[img]gfx/ui/events/event_163.png[/img]{炼金术士迅速开工，他将一大堆原材料粉末泼进碗中，然后将少量你无法认出的材料捣入。 这只花费了令人惊奇的极短时间，你不确定他是天赋异禀还是这整件事只是闹剧。 不管怎样，他如约交付了罐子。%SPEECH_ON%愿镀金者照亮你的道路，愿你的剑将和平带到 %holysite%。%SPEECH_OFF%}",
 			Image = "",
 			Banner = "",

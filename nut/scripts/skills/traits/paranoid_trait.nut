@@ -50,7 +50,7 @@ this.paranoid_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]-30[/color] 主动性"
+				text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]-30[/color]主动值"
 			}
 		];
 	}

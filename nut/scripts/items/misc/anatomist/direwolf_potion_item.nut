@@ -5,7 +5,7 @@ this.direwolf_potion_item <- this.inherit("scripts/items/misc/anatomist/anatomis
 		this.anatomist_potion_item.create();
 		this.m.ID = "misc.direwolf_potion";
 		this.m.Name = "刀锋舞者药剂";
-		this.m.Description = "这种略显喜感的混合物来源于对可怕的冰原野狼的研究，即使是最笨拙的白痴在喝下它之后也会变成动作如舞蹈般轻盈的战士，就算在那些足以把弱者累趴下的持久战中，他们也能在战场中翩翩起舞！服用后出现轻度的多动症状属于正常现象。";
+		this.m.Description = "这种略显喜感的混合物来源于对可怕的恐狼的研究，即使是最笨拙的白痴在喝下它之后也会变成动作如舞蹈般轻盈的战士，就算在那些足以把弱者累趴下的持久战中，他们也能在战场中翩翩起舞！服用后出现轻度的多动症状属于正常现象。";
 		this.m.IconLarge = "";
 		this.m.Icon = "consumables/potion_26.png";
 		this.m.Value = 0;

@@ -4,8 +4,8 @@ this.ancient_plated_mail_hauberk <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.ancient_plated_mail_hauberk";
-		this.m.Name = "古代链锁子甲";
-		this.m.Description = "一件带有护臂的古代链锁子甲。非常沉重严重限制了穿戴者的机动性";
+		this.m.Name = "古代板链甲";
+		this.m.Description = "一件带有板甲护臂的古代链甲。非常沉重，严重限制了穿戴者的机动性。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

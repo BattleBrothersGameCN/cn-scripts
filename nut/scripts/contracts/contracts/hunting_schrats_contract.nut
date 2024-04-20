@@ -301,7 +301,7 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Direwolves",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_118.png[/img]{你在远处发现几双绿色荧光的眼睛。 无疑是树人本体，于是你命令你的人趴下悄悄靠近。\n\n到一个坡顶时你发现一颗树的树干周围围着一圈冰原狼。 它们蹲在它身下如同骑士宣誓效忠一般。 你的到来并非没有被察觉，树人发出远古的低咛倾身向前。 它脚跟的生物咆哮着转过身来，仿佛受到命令一般。 你不确定该怎么理解这种动植物间的所属关系，但是 %companyname% 一样会击溃它们。}",
+			Text = "[img]gfx/ui/events/event_118.png[/img]{你在远处发现几双绿色荧光的眼睛。 无疑是树人本体，于是你命令你的人趴下悄悄靠近。\n\n到一个坡顶时你发现一颗树的树干周围围着一圈恐狼。 它们蹲在它身下如同骑士宣誓效忠一般。 你的到来并非没有被察觉，树人发出远古的低咛倾身向前。 它脚跟的生物咆哮着转过身来，仿佛受到命令一般。 你不确定该怎么理解这种动植物间的所属关系，但是 %companyname% 一样会击溃它们。}",
 			Image = "",
 			List = [],
 			Options = [

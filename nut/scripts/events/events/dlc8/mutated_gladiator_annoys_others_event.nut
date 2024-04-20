@@ -50,7 +50,7 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Gladiator.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 主动性"
+					text = _event.m.Gladiator.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color]主动值"
 				});
 				_event.m.Gladiator.improveMood(0.500000, "感觉比以往任何时候都好。");
 

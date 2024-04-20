@@ -4,7 +4,7 @@ this.smite_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.smite";
 		this.m.Name = "猛砸";
-		this.m.Description = "一种缓慢的过顶击，用全部力量把目标砸成碎片。任何被击中的目标都会趔趄并降低主动性。";
+		this.m.Description = "一种缓慢的过顶击，用全部力量把目标砸成碎片。任何被击中的目标都会趔趄并降低主动值。";
 		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_89.png";
 		this.m.IconDisabled = "skills/active_89_sw.png";

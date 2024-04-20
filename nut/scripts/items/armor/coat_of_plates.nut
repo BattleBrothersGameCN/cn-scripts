@@ -5,7 +5,7 @@ this.coat_of_plates <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.coat_of_plates";
 		this.m.Name = "板甲衣";
-		this.m.Description = "由一层衬垫，一层牢固的链甲和沉重金属板在上面铆接而成。能提供很强防护的沉重盔甲。";
+		this.m.Description = "一层衬垫，一层结实的链甲，一层铆接在最外的重型金属甲片，构成了一套防御力极强的沉重护甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

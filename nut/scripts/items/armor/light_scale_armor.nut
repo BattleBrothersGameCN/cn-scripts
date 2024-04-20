@@ -5,7 +5,7 @@ this.light_scale_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.light_scale_armor";
 		this.m.Name = "轻型鳞甲";
-		this.m.Description = "一件由细小金属鳞片层层覆盖而成的结实但轻柔的盔甲。";
+		this.m.Description = "一件结实又灵活的铠甲，由小型金属鳞状甲片层叠而成。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

@@ -9,7 +9,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.missing_kids";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -192,7 +192,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Cultist.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color] 主动性"
+					text = _event.m.Cultist.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiativeBoost + "[/color]主动值"
 				});
 				this.World.Assets.addMoney(75);
 				this.List.push({
