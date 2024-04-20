@@ -4,8 +4,8 @@ this.ragged_dark_surcoat <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.rugged_dark_surcoat";
-		this.m.Name = "黑暗的外衣";
-		this.m.Description = "一件黑色的皮革外套，外面罩了一件毛皮大衣。";
+		this.m.Name = "耐用黑外套";
+		this.m.Description = "一件深色皮革斗篷，罩在毛皮大衣上增加防护。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 61;

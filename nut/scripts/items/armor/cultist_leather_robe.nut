@@ -5,7 +5,7 @@ this.cultist_leather_robe <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.cultist_leather_robe";
 		this.m.Name = "邪教徒皮袍";
-		this.m.Description = "一件厚厚的皮甲，覆盖着额外的皮片和神秘的徽章。";
+		this.m.Description = "一件覆盖着强化皮革甲片和神秘纹饰的厚皮甲。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 106;

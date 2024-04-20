@@ -49,7 +49,7 @@ this.cripple_pep_talk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 17,
 						icon = "ui/icons/initiative.png",
-						text = _event.m.Cripple.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color] 主动性"
+						text = _event.m.Cripple.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color]主动值"
 					}
 				];
 				_event.m.Cripple.improveMood(2.000000, "受到激励，来自 " + _event.m.Veteran.getName());

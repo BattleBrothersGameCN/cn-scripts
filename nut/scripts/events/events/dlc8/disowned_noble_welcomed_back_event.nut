@@ -6,7 +6,7 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 	function create()
 	{
 		this.m.ID = "event.disowned_noble_welcomed_back";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -116,7 +116,7 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Disowned.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color] 主动性"
+					text = _event.m.Disowned.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color]主动值"
 				});
 				this.List.push({
 					id = 16,

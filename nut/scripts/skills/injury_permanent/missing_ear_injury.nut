@@ -26,7 +26,7 @@ this.missing_ear_injury <- this.inherit("scripts/skills/injury_permanent/permane
 				id = 7,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10%[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10%[/color]主动值"
 			}
 		];
 		this.addTooltipHint(ret);

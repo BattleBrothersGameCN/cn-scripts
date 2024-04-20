@@ -4,7 +4,7 @@ this.padded_surcoat <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.padded_surcoat";
-		this.m.Name = "加厚外套";
+		this.m.Name = "填充外套";
 		this.m.Description = "一件用羊毛填充的布衣。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;

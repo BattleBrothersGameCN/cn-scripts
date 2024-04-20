@@ -44,7 +44,7 @@ this.sickness_injury <- this.inherit("scripts/skills/injury/injury", {
 				id = 12,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-25%[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-25%[/color]主动值"
 			},
 			{
 				id = 13,

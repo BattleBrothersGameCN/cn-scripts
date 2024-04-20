@@ -74,7 +74,7 @@ this.orc_berserker_potion_effect <- this.inherit("scripts/skills/skill", {
 					id = 12,
 					type = "text",
 					icon = "ui/icons/initiative.png",
-					text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.RageStacks + "[/color] 主动性"
+					text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + 1 * this.m.RageStacks + "[/color]主动值"
 				}
 			]);
 		}

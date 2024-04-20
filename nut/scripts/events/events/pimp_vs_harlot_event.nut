@@ -9,7 +9,7 @@ this.pimp_vs_harlot_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.pimp_vs_harlot";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -178,7 +178,7 @@ this.pimp_vs_harlot_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Tailor.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] 主动性"
+					text = _event.m.Tailor.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color]主动值"
 				});
 				this.Characters.push(_event.m.Tailor.getImagePath());
 				_event.m.Tailor.improveMood(1.000000, "把一个皮条客剪成合适的尺寸");

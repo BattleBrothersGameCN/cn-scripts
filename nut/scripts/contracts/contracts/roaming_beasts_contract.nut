@@ -184,8 +184,8 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (this.Flags.get("IsHumans"))
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "冰原狼", false, this.Const.World.Spawn.BanditsDisguisedAsDirewolves, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
-					party.setDescription("一群凶猛的冰原狼正在寻找猎物。");
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "恐狼", false, this.Const.World.Spawn.BanditsDisguisedAsDirewolves, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+					party.setDescription("一群寻找猎物的凶猛恐狼。");
 					party.setFootprintType(this.Const.World.FootprintsType.Direwolves);
 					this.Const.World.Common.addFootprintsFromTo(this.Contract.m.Home.getTile(), party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Direwolves, 0.750000);
 				}
@@ -205,8 +205,8 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 				}
 				else
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "冰原狼", false, this.Const.World.Spawn.Direwolves, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
-					party.setDescription("一群凶猛的冰原狼正在寻找猎物。");
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "恐狼", false, this.Const.World.Spawn.Direwolves, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+					party.setDescription("一群寻找猎物的凶猛恐狼。");
 					party.setFootprintType(this.Const.World.FootprintsType.Direwolves);
 					this.Const.World.Common.addFootprintsFromTo(this.Contract.m.Home.getTile(), party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Direwolves, 0.750000);
 				}
@@ -493,7 +493,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上的冰原狼");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上的恐狼");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -525,7 +525,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上伪装成冰原狼的强盗");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上伪装成恐狼的强盗");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}

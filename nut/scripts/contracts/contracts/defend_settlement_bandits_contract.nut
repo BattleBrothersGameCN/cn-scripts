@@ -540,7 +540,7 @@ this.defend_settlement_bandits_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Militia1",
-			Title = "在 %townname%",
+			Title = "在%townname%",
 			Text = "[img]gfx/ui/events/event_80.png[/img]{在准备保卫%townname%的过程中，当地的民兵已经归附于你的一方。他们会遵从你的命令，并询问你将他们派往最需要的地方。 | 看起来当地的民兵已经加入了战斗！虽然这是一支杂乱无章的农民队伍，但是他们仍然会有所作为。现在的问题是，要将他们派往哪里？ | %townname% 的民兵已经加入了战斗！虽然是一支装备简陋、武器不好的部队，但是他们非常渴望保护家园。他们会遵从你的命令，并信任你将他们派往最需要的地方。 | 你并不是孤军奋战！%townname%的民兵已经加入了你们。他们热切希望参战，并询问你将他们派往哪里他们可以发挥最大的作用。}",
 			Image = "",
 			List = [],
@@ -618,7 +618,7 @@ this.defend_settlement_bandits_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Militia2",
-			Title = "在 %townname%",
+			Title = "在%townname%",
 			Text = "[img]gfx/ui/events/event_80.png[/img]现在你决定要指挥当地人，他们问你如何为即将到来的战斗武装自己。",
 			Image = "",
 			List = [],

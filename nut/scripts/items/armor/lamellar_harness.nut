@@ -5,7 +5,7 @@ this.lamellar_harness <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.lamellar_harness";
 		this.m.Name = "札甲";
-		this.m.Description = "一件由厚重的重叠金属板制成的盔甲，覆盖了上半身的大部分。";
+		this.m.Description = "一件厚重层叠金属甲片制成的身甲，能护住上身大部。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

@@ -4,8 +4,8 @@ this.werewolf_mail_armor <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.werewolf_mail";
-		this.m.Name = "冰原狼链甲";
-		this.m.Description = "一件精巧的锁子甲衬衫，上面覆盖了巨狼的毛皮。 穿上这样的兽皮可以使人看起来威风凛凛。";
+		this.m.Name = "恐狼链甲";
+		this.m.Description = "一件覆有巨狼毛皮的精巧链甲衫。这种兽皮加身，可谓威风凛凛。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
@@ -26,7 +26,7 @@ this.werewolf_mail_armor <- this.inherit("scripts/items/armor/armor", {
 			id = 15,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "减少任何近战对手的决心 [color=" + this.Const.UI.Color.NegativeValue + "]-5[/color]"
+			text = "将所有近战对手的决心减少[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color]"
 		});
 		return result;
 	}

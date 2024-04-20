@@ -60,7 +60,7 @@ this.sleeping_effect <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-100[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-100[/color]主动值"
 			},
 			{
 				id = 9,

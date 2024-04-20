@@ -59,7 +59,7 @@ this.research_notes_beasts_item <- this.inherit("scripts/items/item", {
 		local buffAcquisitions = [
 			{
 				flag = "isDirewolfPotionDiscovered",
-				creatureName = "冰原狼",
+				creatureName = "恐狼",
 				potionName = "刀锋舞者药剂"
 			},
 			{

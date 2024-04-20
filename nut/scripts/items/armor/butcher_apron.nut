@@ -4,8 +4,8 @@ this.butcher_apron <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.butcher_apron";
-		this.m.Name = "屠夫的围裙";
-		this.m.Description = "一件屠夫穿戴的防止意外割伤的粗糙围裙。";
+		this.m.Name = "屠宰围裙";
+		this.m.Description = "屠夫穿戴的结实围裙，用于防止意外割伤。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 9;

@@ -35,7 +35,7 @@ this.hyena_fur_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgra
 			id = 15,
 			type = "text",
 			icon = "ui/icons/initiative.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color] 主动性"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color]主动值"
 		});
 		return result;
 	}
@@ -46,7 +46,7 @@ this.hyena_fur_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgra
 			id = 15,
 			type = "text",
 			icon = "ui/icons/initiative.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color] 主动性"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color]主动值"
 		});
 	}
 

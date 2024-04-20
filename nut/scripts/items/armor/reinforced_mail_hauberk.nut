@@ -4,8 +4,8 @@ this.reinforced_mail_hauberk <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.reinforced_mail_hauberk";
-		this.m.Name = "强化链锁子甲";
-		this.m.Description = "一种在护肩上铆钉皮甲片加固的锁子甲，用以加强保护。";
+		this.m.Name = "加固链铠";
+		this.m.Description = "一种为了提升防护，加强了铁护肩和铆接皮甲的链甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

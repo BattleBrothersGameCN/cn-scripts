@@ -5,7 +5,7 @@ this.linen_tunic <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.linen_tunic";
 		this.m.Name = "亚麻束腰外衣";
-		this.m.Description = "一件简单的布束腰外衣。时尚，但提供的保护很少。";
+		this.m.Description = "一件简朴的束腰布衣。时尚但几乎没有防护能力。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = this.Math.rand(3, 7);

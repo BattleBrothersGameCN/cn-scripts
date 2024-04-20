@@ -5,7 +5,7 @@ this.lone_wolf_origin_depressing_lady_event <- this.inherit("scripts/events/even
 	function create()
 	{
 		this.m.ID = "event.lone_wolf_origin_depressing_lady";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

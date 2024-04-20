@@ -7,7 +7,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.black_market";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -166,7 +166,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Gland",
-			Text = "[img]gfx/ui/events/event_14.png[/img]{在你看来，这个器官就像是灰色荚草翻腾交织而成。灰色的块状物一遍又一遍地穿梭过这个器官，并且在肌肉因运动而弯曲和扭动的同时也在持续地收缩和扩张。在这些波动的末端，是一个肥状的组织。%anatomist%解释道。%SPEECH_ON% 大家相信, 这是赐予魔狼如此多能量的器官。甚至它的形状都带有一种凶猛的结构，好像器官本身就意味着要复制它的作用一样。%SPEECH_OFF% 他切开组织并将其拉回，显露出一个肉质隧道和通道的网状结构，最终到达一个奇怪的多个空腔的组合体。无法确认一个人可以利用这个部分做什么，但当%anatomist%开始在洞口摸索，你很快离开了，只是警告他不要在公开场合这样做，以免引起平民们的愤怒。}",
+			Text = "[img]gfx/ui/events/event_14.png[/img]{在你看来，这个器官就像是灰色荚草翻腾交织而成。灰色的块状物一遍又一遍地穿梭过这个器官，并且在肌肉因运动而弯曲和扭动的同时也在持续地收缩和扩张。在这些波动的末端，是一个肥状的组织。%anatomist%解释道。%SPEECH_ON% 大家相信, 这是赐予恐狼如此多能量的器官。甚至它的形状都带有一种凶猛的结构，好像器官本身就意味着要复制它的作用一样。%SPEECH_OFF% 他切开组织并将其拉回，显露出一个肉质隧道和通道的网状结构，最终到达一个奇怪的多个空腔的组合体。无法确认一个人可以利用这个部分做什么，但当%anatomist%开始在洞口摸索，你很快离开了，只是警告他不要在公开场合这样做，以免引起平民们的愤怒。}",
 			Image = "",
 			List = [],
 			Characters = [],

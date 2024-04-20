@@ -201,11 +201,11 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (this.Const.DLC.Desert)
 					{
-						this.Contract.m.BulletpointsObjectives.push("猎杀冰原狼、蛛魔、食尸鬼、鬣狗和大蛇");
+						this.Contract.m.BulletpointsObjectives.push("猎杀恐狼、蛛魔、食尸鬼、鬣狗和大蛇");
 					}
 					else
 					{
-						this.Contract.m.BulletpointsObjectives.push("猎杀冰原狼、蛛魔和食尸鬼");
+						this.Contract.m.BulletpointsObjectives.push("猎杀恐狼、蛛魔和食尸鬼");
 					}
 				}
 				else if (this.Contract.m.Size == 1)
@@ -289,11 +289,11 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (this.Const.DLC.Desert)
 					{
-						this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype% 区域猎杀冰原狼、蛛魔和食尸鬼(%killcount%/%maxcount%)");
+						this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype% 区域猎杀恐狼、蛛魔和食尸鬼(%killcount%/%maxcount%)");
 					}
 					else
 					{
-						this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype% 区域猎杀冰原狼、蛛魔、食尸鬼、鬣狗和大蛇(%killcount%/%maxcount%)");
+						this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype% 区域猎杀恐狼、蛛魔、食尸鬼、鬣狗和大蛇(%killcount%/%maxcount%)");
 					}
 				}
 				else if (this.Contract.m.Size == 1)

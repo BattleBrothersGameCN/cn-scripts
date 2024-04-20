@@ -4,8 +4,8 @@ this.ancient_plated_scale_hauberk <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.ancient_plated_scale_hauberk";
-		this.m.Name = "古代镀鳞锁子甲";
-		this.m.Description = "一件在金属板镀上鳞的沉重盔甲。这件巨大的古代盔甲年代十分久远。";
+		this.m.Name = "古代板鳞甲";
+		this.m.Description = "一件部分加固有金属板的重型鳞甲衣。这件巨大的古代盔甲年代十分久远。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

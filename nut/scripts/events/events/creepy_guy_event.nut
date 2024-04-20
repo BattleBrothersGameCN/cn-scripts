@@ -9,7 +9,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.creepy_guy";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -175,7 +175,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Thief.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color] 主动性"
+					text = _event.m.Thief.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color]主动值"
 				});
 				_event.m.Thief.improveMood(1.000000, "用他独特的才能取得了巨大的成功");
 
@@ -226,7 +226,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Minstrel.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color] 主动性"
+					text = _event.m.Minstrel.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color]主动值"
 				});
 				_event.m.Minstrel.improveMood(1.000000, "用他独特的才能取得了巨大的成功");
 

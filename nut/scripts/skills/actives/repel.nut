@@ -4,7 +4,7 @@ this.repel <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.repel";
 		this.m.Name = "逼退";
-		this.m.Description = "戳推一个目标，以迫使它后退一格。被击中的目标会趔趄并降低主动性，如果被从多层高度推下还会受到伤害。成功的逼退将取消目标的盾墙，矛墙，还击技能，定身的目标不能被逼退。";
+		this.m.Description = "戳推一个目标，以迫使它后退一格。被击中的目标会趔趄并降低主动值，如果被从多层高度推下还会受到伤害。成功的逼退将取消目标的盾墙，矛墙，还击技能，定身的目标不能被逼退。";
 		this.m.Icon = "skills/active_55.png";
 		this.m.IconDisabled = "skills/active_55_sw.png";
 		this.m.Overlay = "active_55";

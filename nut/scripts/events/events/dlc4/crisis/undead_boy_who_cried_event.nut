@@ -6,7 +6,7 @@ this.undead_boy_who_cried_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.undead_boy_who_cried";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 140.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

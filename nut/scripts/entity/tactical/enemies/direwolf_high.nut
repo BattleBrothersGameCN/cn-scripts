@@ -2,7 +2,7 @@ this.direwolf_high <- this.inherit("scripts/entity/tactical/enemies/direwolf", {
 	m = {},
 	function getName()
 	{
-		return "狂怒冰原狼";
+		return "狂怒恐狼";
 	}
 
 	function create()

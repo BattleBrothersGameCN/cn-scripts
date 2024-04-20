@@ -5,7 +5,7 @@ this.leather_lamellar <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.leather_lamellar";
 		this.m.Name = "皮革札甲";
-		this.m.Description = "许多重叠的皮革板为大部分上半身提供了体面的保护。";
+		this.m.Description = "众多层叠的皮革甲片为上身大部提供了良好防护。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

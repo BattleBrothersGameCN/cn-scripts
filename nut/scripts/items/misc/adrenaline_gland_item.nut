@@ -5,7 +5,7 @@ this.adrenaline_gland_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.adrenaline_gland";
 		this.m.Name = "肾上腺";
-		this.m.Description = "冰原狼的疯狂和嗜血可以归因于这个腺体产生的物质。某个地方的某个人可能会用得上它。";
+		this.m.Description = "恐狼的疯狂和嗜血可以归因于这个腺体产生的物质。某个地方的某个人可能会用得上它。";
 		this.m.Icon = "misc/inventory_wolf_adrenaline.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

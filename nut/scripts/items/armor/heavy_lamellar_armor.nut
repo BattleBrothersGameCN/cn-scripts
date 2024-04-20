@@ -5,7 +5,7 @@ this.heavy_lamellar_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.heavy_lamellar_armor";
 		this.m.Name = "重型札甲";
-		this.m.Description = "一件覆盖了厚厚的重叠金属板的板甲，可以从最大限度上保护绝大部分的身体。";
+		this.m.Description = "一件护住了身体大部的重型札甲，层叠的厚重金属甲片最大化了防护能力。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

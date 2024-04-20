@@ -4,8 +4,8 @@ this.adorned_mail_shirt <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.adorned_mail_shirt";
-		this.m.Name = "装饰链甲衬衫";
-		this.m.Description = "一种厚重的链甲，上面盖着一件棉质外衣。 这是一件令人印象深刻、维护良好的作品，装饰着战利品和神圣的符号。";
+		this.m.Name = "装饰链甲衫";
+		this.m.Description = "棉质罩衣下的重型链甲衫。这件护甲保养得很好，装饰着圣徽和战利品，好不威风。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

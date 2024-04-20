@@ -4,7 +4,7 @@ this.dodge_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.dodge";
 		this.m.Name = "闪避";
-		this.m.Description = "快速的反应使得这个角色可以将其当前主动性的一部分作为近战和远程防御加成。";
+		this.m.Description = "快速的反应使得这个角色可以将其当前主动值的一部分作为近战和远程防御加成。";
 		this.m.Icon = "ui/perks/perk_01.png";
 		this.m.IconMini = "perk_01_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect;

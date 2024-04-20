@@ -6,7 +6,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.brawler_throw_fight";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -173,7 +173,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Brawler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color] 主动性"
+					text = _event.m.Brawler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color]主动值"
 				});
 				this.List.push({
 					id = 16,
@@ -244,7 +244,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Brawler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color] 主动性"
+					text = _event.m.Brawler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative_boost + "[/color]主动值"
 				});
 				this.List.push({
 					id = 16,

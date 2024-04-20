@@ -7,7 +7,7 @@ this.cat_on_tree_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cat_on_tree";
-		this.m.Title = "在 %townname%";
+		this.m.Title = "在%townname%";
 		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -146,7 +146,7 @@ this.cat_on_tree_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/initiative.png",
-					text = _event.m.Ratcatcher.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color] 主动性"
+					text = _event.m.Ratcatcher.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color]主动值"
 				});
 				_event.m.Ratcatcher.improveMood(1.000000, "他的敏捷给大家留下了深刻印象");
 

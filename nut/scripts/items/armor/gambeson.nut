@@ -5,7 +5,7 @@ this.gambeson <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.gambeson";
 		this.m.Name = "软甲";
-		this.m.Description = "一件能提供适当保护的衬垫束腰外衣，结实而厚重。";
+		this.m.Description = "一件填充束腰外衣，结实而厚重，能提供良好保护。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

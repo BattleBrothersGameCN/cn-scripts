@@ -5,7 +5,7 @@ this.undertaker_apron <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.undertaker_apron";
 		this.m.Name = "送葬者围裙";
-		this.m.Description = "一种厚皮围裙，可以防止轻微的割伤和划伤。";
+		this.m.Description = "一种厚皮围裙，可以防止轻度割伤和擦伤。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 110;

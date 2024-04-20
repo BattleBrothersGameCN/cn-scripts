@@ -4,8 +4,8 @@ this.ancient_plate_harness <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.ancient_plate_harness";
-		this.m.Name = "古代胄板甲";
-		this.m.Description = "这件沉重的古代盔甲用厚金属板和链甲制成，历经无数年仍能提供巨大的保护。然而它部分已经腐烂得很粗糙了，这严重限制了穿戴者的机动性。";
+		this.m.Name = "古代板甲";
+		this.m.Description = "这件厚金属板和链环制成的沉重古代盔甲，历经岁月洗礼，仍能提供强大的保护。但一些部件已经锈蚀硬结，严重限制了穿戴者的机动性。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

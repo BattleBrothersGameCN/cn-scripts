@@ -5,7 +5,7 @@ this.coat_of_scales <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.coat_of_scales";
 		this.m.Name = "鳞甲衣";
-		this.m.Description = "一件用重叠金属鳞片制成的厚重盔甲，可以覆盖住绝大部分的身体。";
+		this.m.Description = "一件厚重层叠鳞状甲片制成的沉重铠甲，能护住身体大部。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

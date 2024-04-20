@@ -5,7 +5,7 @@ this.leather_tunic <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.leather_tunic";
 		this.m.Name = "皮革束腰外衣";
-		this.m.Description = "一件穿在布束腰外衣外的皮背心，以加强保护作用。";
+		this.m.Description = "一件穿在布束腰外衣外，增强防护能力的皮背心。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 13;

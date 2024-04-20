@@ -5,7 +5,7 @@ this.ancient_mail <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.ancient_mail";
 		this.m.Name = "古代链甲";
-		this.m.Description = "古老而又粗糙的沉重链甲。一些部件不见了，但仍然提供了良好的保护。";
+		this.m.Description = "一件年久硬结的古代风格重型链甲。缺少部分零件，但仍能提供良好保护";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

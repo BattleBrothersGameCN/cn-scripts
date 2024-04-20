@@ -4,8 +4,8 @@ this.mail_hauberk <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.mail_hauberk";
-		this.m.Name = "链锁子甲";
-		this.m.Description = "长而重的锁子甲，提供了良好的保护，但穿上非常容易疲劳。";
+		this.m.Name = "全身链铠";
+		this.m.Description = "又长又重的锁子甲，提供了良好的防护，但容易使人疲劳。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

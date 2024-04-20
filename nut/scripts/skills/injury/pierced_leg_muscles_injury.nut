@@ -38,7 +38,7 @@ this.pierced_leg_muscles_injury <- this.inherit("scripts/skills/injury/injury", 
 				id = 7,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-30%[/color] 主动性"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-30%[/color]主动值"
 			}
 		];
 		this.addTooltipHint(ret);

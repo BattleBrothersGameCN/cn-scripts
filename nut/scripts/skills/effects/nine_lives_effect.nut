@@ -48,7 +48,7 @@ this.nine_lives_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color]主动"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color]主动值"
 			}
 		];
 	}
