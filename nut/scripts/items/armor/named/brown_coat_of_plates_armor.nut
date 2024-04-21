@@ -7,7 +7,7 @@ this.brown_coat_of_plates_armor <- this.inherit("scripts/items/armor/named/named
 		this.m.Description = "一种用结实金属板组成的厚链锁子甲。即使是最激烈的战斗也能保护其穿戴者。";
 		this.m.NameList = [
 			"甲胄",
-			"监狱",
+			"守护",
 			"防卫",
 			"阻截者",
 			"板甲",

@@ -13,7 +13,7 @@ this.green_coat_of_plates_armor <- this.inherit("scripts/items/armor/named/named
 			"胸板甲",
 			"厚板外衣",
 			"甲胄",
-			"监狱"
+			"守护"
 		];
 		this.m.Variant = 43;
 		this.updateVariant();
