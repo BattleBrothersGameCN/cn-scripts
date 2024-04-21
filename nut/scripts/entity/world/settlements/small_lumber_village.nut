@@ -34,7 +34,7 @@ this.small_lumber_village <- this.inherit("scripts/entity/world/settlement", {
 			"小村乡",
 			"绿林镇",
 			"洼林镇",
-			"埃施巴赫",
+			"白蜡溪",
 			"林绿溪",
 			"荨麻林",
 			"小乡",

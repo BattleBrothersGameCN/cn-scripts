@@ -997,7 +997,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "好, 就这样！",
+					Text = "哦，对哦！",
 					function getResult()
 					{
 						return 0;

@@ -8,7 +8,7 @@ this.nasal_feather_helmet <- this.inherit("scripts/items/helmets/named/named_hel
 		this.m.NameList = [
 			"带羽毛的鼻甲",
 			"加强头盔",
-			"监狱",
+			"守护",
 			"护头板",
 			"保护者"
 		];

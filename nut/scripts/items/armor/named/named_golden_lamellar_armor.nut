@@ -7,7 +7,7 @@ this.named_golden_lamellar_armor <- this.inherit("scripts/items/armor/named/name
 		this.m.Description = "精心制作的薄片状盔甲。 它上面覆盖着金箔，这使它真正与众不同。";
 		this.m.NameList = [
 			"甲胄",
-			"监狱",
+			"守护",
 			"防卫",
 			"辉煌",
 			"金札甲"
