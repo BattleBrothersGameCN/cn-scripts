@@ -25,7 +25,7 @@ this.medium_mining_village <- this.inherit("scripts/entity/world/settlement", {
 			"云岩镇",
 			"金石镇",
 			"宝石镇",
-			"擢爵井",
+			"晋爵井",
 			"秃矿镇",
 			"长井镇",
 			"鹰巢井",

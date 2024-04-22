@@ -5,7 +5,7 @@ this.large_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
 			"火种城",
-			"北地领主城",
+			"雅尔城",
 			"庇雪城",
 			"巢城",
 			"狂澜城",

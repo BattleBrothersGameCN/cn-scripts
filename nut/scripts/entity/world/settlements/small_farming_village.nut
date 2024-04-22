@@ -17,7 +17,7 @@ this.small_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"碾磨乡",
 			"绿地镇",
 			"神恩乡",
-			"擢爵原",
+			"晋爵原",
 			"战士镇",
 			"围场乡",
 			"女工乡",
@@ -31,7 +31,7 @@ this.small_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"毛絮乡",
 			"青草地",
 			"草地乡",
-			"疆乡",
+			"陲边镇",
 			"干草乡",
 			"苦酒地",
 			"新淀",
@@ -41,7 +41,7 @@ this.small_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"打井乡",
 			"苦功庄",
 			"美酒园",
-			"国王地",
+			"君王原",
 			"蔷薇乡",
 			"草场溪"
 		]);

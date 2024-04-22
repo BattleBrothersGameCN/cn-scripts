@@ -33,7 +33,7 @@ this.small_snow_fort <- this.inherit("scripts/entity/world/settlement", {
 			"雪光坞",
 			"战士卫",
 			"诸神塔",
-			"国王坞",
+			"君王坞",
 			"弯钩坞",
 			"蛇盘卫",
 			"雌鹿坞",
