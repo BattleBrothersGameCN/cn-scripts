@@ -18,7 +18,7 @@ this.medium_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"绿地镇",
 			"神恩镇",
 			"河草滩",
-			"擢爵原",
+			"晋爵原",
 			"战士镇",
 			"围场镇",
 			"女工镇",
@@ -31,7 +31,7 @@ this.medium_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"毛絮镇",
 			"草地镇",
 			"草地镇",
-			"疆镇",
+			"陲边镇",
 			"干草乡",
 			"苦酒地"
 		]);

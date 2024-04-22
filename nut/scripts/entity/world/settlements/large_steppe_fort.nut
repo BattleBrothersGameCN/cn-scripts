@@ -23,7 +23,7 @@ this.large_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"平岩要塞",
 			"流光要塞",
 			"缕光要塞",
-			"国王要塞",
+			"君王塞",
 			"骨头要塞",
 			"干燥要塞",
 			"沙暴要塞",

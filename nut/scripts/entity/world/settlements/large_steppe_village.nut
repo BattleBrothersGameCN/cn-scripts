@@ -4,7 +4,7 @@ this.large_steppe_village <- this.inherit("scripts/entity/world/settlement", {
 	{
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
-			"惊艳之城",
+			"惊艳城",
 			"安乐城",
 			"井之城",
 			"伯爵城",
@@ -12,18 +12,18 @@ this.large_steppe_village <- this.inherit("scripts/entity/world/settlement", {
 			"沙之城",
 			"棘城",
 			"红城",
-			"黄色之城",
-			"甘蓝边城",
-			"丰裕之城",
+			"黄城",
+			"甘蓝庭",
+			"丰裕城",
 			"此如城",
-			"秸秆边城",
-			"沙之边城",
-			"照日边城",
-			"擢爵地",
-			"光亮之城",
-			"光明边城",
+			"秸秆庭",
+			"沙之庭",
+			"照日庭",
+			"晋爵地",
+			"光亮城",
+			"明光庭",
 			"荆棘坪",
-			"红染边城",
+			"红染庭",
 			"打井坪"
 		]);
 		this.m.DraftList = [

@@ -4,25 +4,25 @@ this.large_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 	{
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
-			"海镇",
-			"维京镇",
-			"国王之港",
-			"擢爵港",
+			"海城",
+			"维京城",
+			"君王港",
+			"晋爵港",
 			"冻鱼坪",
 			"新地坪",
-			"营垒镇",
+			"营垒城",
 			"海妖坪",
-			"沧海镇",
-			"耙犁镇",
-			"洼镇",
+			"沧海城",
+			"耙犁城",
+			"洼地城",
 			"白城",
 			"治安官港",
 			"大港",
-			"国王之水",
-			"国王之口",
+			"君王瀛",
+			"君王口",
 			"乌鸦圩",
 			"石头港",
-			"堤坝镇"
+			"堤坝城"
 		]);
 		this.m.DraftList = [
 			"apprentice_background",
