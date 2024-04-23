@@ -29,7 +29,7 @@ this.cook_follower <- this.inherit("scripts/retinue/follower", {
 	function onEvaluate()
 	{
 		local uniqueProvisions = this.getAmountOfUniqueProvisions();
-		this.m.Requirements[0].Text = "有" + this.Math.min(8, uniqueProvisions) + "/8 种不同类型的口粮";
+		this.m.Requirements[0].Text = "有" + this.Math.min(8, uniqueProvisions) + "/8种不同类型的口粮";
 
 		if (uniqueProvisions >= 8)
 		{

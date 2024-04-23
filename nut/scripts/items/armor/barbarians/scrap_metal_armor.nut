@@ -4,8 +4,8 @@ this.scrap_metal_armor <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.scrap_metal_armor";
-		this.m.Name = "废金属护甲";
-		this.m.Description = "这件护甲由废弃金属拼接到粗糙的皮长袍上而制成。";
+		this.m.Name = "废金属甲";
+		this.m.Description = "这件护甲由固定在结实皮外套上的回收金属件拼接而成。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

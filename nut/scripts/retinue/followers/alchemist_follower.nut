@@ -31,7 +31,7 @@ this.alchemist_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "在剥制屋里制造 " + this.Math.min(15, this.World.Statistics.getFlags().getAsInt("ItemsCrafted")) + "/15 件物品";
+		this.m.Requirements[0].Text = "在剥制屋里制作" + this.Math.min(15, this.World.Statistics.getFlags().getAsInt("ItemsCrafted")) + "/15件物品";
 
 		if (this.World.Statistics.getFlags().getAsInt("ItemsCrafted") >= 15)
 		{

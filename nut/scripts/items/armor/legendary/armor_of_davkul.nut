@@ -32,7 +32,7 @@ this.armor_of_davkul <- this.inherit("scripts/items/armor/armor", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "每回合回复自身 [color=" + this.Const.UI.Color.PositiveValue + "]90[/color] 点耐久。"
+			text = "每回合回复自身[color=" + this.Const.UI.Color.PositiveValue + "]90[/color]点耐久。"
 		});
 		return result;
 	}

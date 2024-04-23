@@ -11,8 +11,8 @@ this.black_leather_armor <- this.inherit("scripts/items/armor/named/named_armor"
 			"皮甲",
 			"皮肤",
 			"外皮",
-			"警卫",
-			"外套",
+			"守卫",
+			"外衣",
 			"夜斗篷",
 			"黑色",
 			"黑暗预兆"

@@ -6,7 +6,7 @@ this.goblin_skirmisher_armor <- this.inherit("scripts/items/armor/armor", {
 		this.m.Variant = this.Math.rand(1, 3);
 		this.updateVariant();
 		this.m.ID = "armor.body.goblin_skirmisher_armor";
-		this.m.Name = "散兵护甲";
+		this.m.Name = "散兵甲";
 		this.m.Description = "";
 		this.m.IconLarge = "";
 		this.m.Icon = "";

@@ -5,7 +5,7 @@ this.assassin_robe <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.assassin_robe";
 		this.m.Name = "刺客长袍";
-		this.m.Description = "一位刺客的黑色长袍。 细链甲被紧紧地编织在织物上。";
+		this.m.Description = "一位刺客的黑色长袍。细密的链甲紧紧缝在织物上。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

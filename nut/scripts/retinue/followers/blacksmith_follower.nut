@@ -28,7 +28,7 @@ this.blacksmith_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "有" + this.Math.min(5, this.World.Statistics.getFlags().getAsInt("ItemsRepaired")) + "/5件物品 在城镇的铁匠处修复了。";
+		this.m.Requirements[0].Text = "在城镇的铁匠处修复" + this.Math.min(5, this.World.Statistics.getFlags().getAsInt("ItemsRepaired")) + "/5件物品。";
 
 		if (this.World.Statistics.getFlags().getAsInt("ItemsRepaired") >= 5)
 		{

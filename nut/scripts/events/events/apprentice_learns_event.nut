@@ -35,7 +35,7 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
 				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.500000, "教授了" + _event.m.Apprentice.getName() + "某些东西");
+				_event.m.Teacher.improveMood(0.500000, "教授了" + _event.m.Apprentice.getName() + "一些东西");
 				this.List = [
 					{
 						id = 16,
@@ -87,7 +87,7 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
 				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "某些东西");
+				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "一些东西");
 				this.List = [
 					{
 						id = 16,
@@ -141,7 +141,7 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
 				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "某些东西");
+				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "一些东西");
 				this.List = [
 					{
 						id = 16,
@@ -200,7 +200,7 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
 				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "某些东西");
+				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "一些东西");
 				this.List = [
 					{
 						id = 16,

@@ -12,7 +12,7 @@ this.heraldic_mail_armor <- this.inherit("scripts/items/armor/named/named_armor"
 			"盛典",
 			"优雅",
 			"完整裹体",
-			"链锁子甲",
+			"全身链铠",
 			"锁甲",
 			"荣誉",
 			"荣誉",

@@ -25,7 +25,7 @@ this.trader_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "售出" + this.Math.min(25, this.World.Statistics.getFlags().getAsInt("TradeGoodsSold")) + "/25 件贸易商品";
+		this.m.Requirements[0].Text = "售出" + this.Math.min(25, this.World.Statistics.getFlags().getAsInt("TradeGoodsSold")) + "/25件商品";
 
 		if (this.World.Statistics.getFlags().getAsInt("TradeGoodsSold") >= 25)
 		{

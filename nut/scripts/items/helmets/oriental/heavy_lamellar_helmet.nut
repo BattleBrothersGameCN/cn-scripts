@@ -4,7 +4,7 @@ this.heavy_lamellar_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.heavy_lamellar_helmet";
-		this.m.Name = "重型层状头盔";
+		this.m.Name = "重型札甲盔";
 		this.m.Description = "由重叠的金属板制成的沉重的头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;

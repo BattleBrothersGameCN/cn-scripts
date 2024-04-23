@@ -5,7 +5,7 @@ this.orc_berserker_light_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.updateVariant();
 		this.m.ID = "armor.body.orc_berserker_light_armor";
-		this.m.Name = "骨质战利品";
+		this.m.Name = "战利品骨甲";
 		this.m.Description = "";
 		this.m.IconLarge = "";
 		this.m.Icon = "";

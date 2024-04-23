@@ -4,7 +4,7 @@ this.padded_mail_and_lamellar_hauberk <- this.inherit("scripts/items/armor/armor
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.padded_mail_and_lamellar_hauberk";
-		this.m.Name = "内衬片状链甲";
+		this.m.Name = "衬垫札链甲";
 		this.m.Description = "一种由甲衣、衬垫和层状元素组成的重型复合装甲。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
