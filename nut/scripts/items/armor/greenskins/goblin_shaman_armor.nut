@@ -5,7 +5,7 @@ this.goblin_shaman_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.updateVariant();
 		this.m.ID = "armor.body.goblin_shaman_armor";
-		this.m.Name = "仪式盔甲";
+		this.m.Name = "仪式甲";
 		this.m.Description = "";
 		this.m.IconLarge = "";
 		this.m.Icon = "";

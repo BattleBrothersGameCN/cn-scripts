@@ -4,7 +4,7 @@ this.unhold_helmet_light <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.unhold_helmet_light";
-		this.m.Name = "盔甲";
+		this.m.Name = "头甲";
 		this.m.Description = "";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = false;

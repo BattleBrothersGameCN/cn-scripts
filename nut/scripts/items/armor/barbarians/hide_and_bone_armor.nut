@@ -5,7 +5,7 @@ this.hide_and_bone_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.hide_and_bone_armor";
 		this.m.Name = "兽皮骨甲";
-		this.m.Description = "兽皮与骨头在北方是常见的材料。 这件盔甲是用这两者做成且提供了合适的防护。";
+		this.m.Description = "兽皮和骨头是北方的常见材料。 这件盔甲靠这两者提供了良好的防护。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

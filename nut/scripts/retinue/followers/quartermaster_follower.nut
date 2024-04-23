@@ -29,7 +29,7 @@ this.quartermaster_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "完成" + this.Math.min(5, this.World.Statistics.getFlags().getAsInt("EscortCaravanContractsDone")) + "/5 次护送商队合同";
+		this.m.Requirements[0].Text = "完成护送商队合同" + this.Math.min(5, this.World.Statistics.getFlags().getAsInt("EscortCaravanContractsDone")) + "/5次";
 
 		if (this.World.Statistics.getFlags().getAsInt("EscortCaravanContractsDone") >= 5)
 		{

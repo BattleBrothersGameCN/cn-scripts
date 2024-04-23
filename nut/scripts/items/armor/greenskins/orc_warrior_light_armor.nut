@@ -5,7 +5,7 @@ this.orc_warrior_light_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.updateVariant();
 		this.m.ID = "armor.body.orc_warrior_light_armor";
-		this.m.Name = "掠夺者鳞甲";
+		this.m.Name = "掳获鳞甲";
 		this.m.Description = "";
 		this.m.IconLarge = "";
 		this.m.Icon = "";

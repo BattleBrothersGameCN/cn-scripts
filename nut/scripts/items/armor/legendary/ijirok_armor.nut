@@ -5,7 +5,7 @@ this.ijirok_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.ijirok_armor";
 		this.m.Name = "伊吉罗克铠甲";
-		this.m.Description = "曾经有一件野蛮人的盔甲在战斗中破损，盔甲的碎片沐浴在传说中的伊吉罗克的鲜血里。 超越你理解的力量再次修复了它，同样也会修复穿戴者的任何创伤。";
+		this.m.Description = "曾在战斗中破损的野蛮人铠甲，在传说中伊吉罗克的鲜血里浴血重生。 超越你理解的力量再次修复了它，也将修复穿戴者的任何创伤。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
@@ -28,7 +28,7 @@ this.ijirok_armor <- this.inherit("scripts/items/armor/armor", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/health.png",
-			text = "穿戴者每回合恢复[color=" + this.Const.UI.Color.PositiveValue + "]10[/color] 点生命值"
+			text = "每回合回复穿戴者[color=" + this.Const.UI.Color.PositiveValue + "]10[/color]点生命值"
 		});
 		return result;
 	}
@@ -62,7 +62,7 @@ this.ijirok_armor <- this.inherit("scripts/items/armor/armor", {
 		{
 			this.Tactical.spawnIconEffect("status_effect_79", actor.getTile(), this.Const.Tactical.Settings.SkillIconOffsetX, this.Const.Tactical.Settings.SkillIconOffsetY, this.Const.Tactical.Settings.SkillIconScale, this.Const.Tactical.Settings.SkillIconFadeInDuration, this.Const.Tactical.Settings.SkillIconStayDuration, this.Const.Tactical.Settings.SkillIconFadeOutDuration, this.Const.Tactical.Settings.SkillIconMovement);
 			this.Sound.play("sounds/enemies/unhold_regenerate_01.wav", this.Const.Sound.Volume.RacialEffect * 1.250000, actor.getPos());
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "恢复了 " + healthAdded + " 点生命值");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "恢复了" + healthAdded + "点生命值");
 		}
 	}
 

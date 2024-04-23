@@ -11,7 +11,7 @@ this.orc_warrior_heavy_armor <- this.inherit("scripts/items/armor/armor", {
 		this.m.Variant = variants[this.Math.rand(0, variants.len() - 1)];
 		this.updateVariant();
 		this.m.ID = "armor.body.orc_warrior_heavy_armor";
-		this.m.Name = "掠夺者板甲";
+		this.m.Name = "掳获板甲";
 		this.m.Description = "";
 		this.m.IconLarge = "";
 		this.m.Icon = "";

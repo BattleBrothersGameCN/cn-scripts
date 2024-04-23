@@ -5,7 +5,7 @@ this.emperors_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.emperors_armor";
 		this.m.Name = "帝王铠甲";
-		this.m.Description = "一件历史久远的帝王穿戴的闪亮铠甲，由许多珍奇的材料打造而成，充满了神秘的力量。 打磨过的盔甲能很容易反射光线，使得穿戴者在白天闪闪发光。";
+		this.m.Description = "远古皇帝所穿的闪亮铠甲，用最珍奇的材料打造而成，充满了神秘力量。白天，抛光的盔甲极易反光，使得穿戴者熠熠生辉。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
@@ -28,7 +28,7 @@ this.emperors_armor <- this.inherit("scripts/items/armor/armor", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "反射[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color] 的肉搏伤害将反弹给攻击者"
+			text = "反弹所受近战伤害的[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]给攻击者"
 		});
 		return result;
 	}

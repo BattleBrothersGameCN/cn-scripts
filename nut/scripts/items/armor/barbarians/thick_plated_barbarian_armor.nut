@@ -4,8 +4,8 @@ this.thick_plated_barbarian_armor <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.thick_plated_barbarian_armor";
-		this.m.Name = "厚实野蛮人镀金甲";
-		this.m.Description = "一件几乎由全金属制成的重型铠甲。 只有通过祖先选中的人才有资格拥有。";
+		this.m.Name = "厚实蛮人板甲";
+		this.m.Description = "一件几乎完全由金属制成的重型铠甲。 只有被祖先选中的人才有资格拥有。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

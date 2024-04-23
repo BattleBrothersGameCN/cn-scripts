@@ -15,7 +15,7 @@ this.drill_sergeant_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Requirements = [
 			{
 				IsSatisfied = false,
-				Text = "让一个受了永久性损伤不是负债者的人退休"
+				Text = "退役一位带着永久损伤的非负债者队员"
 			}
 		];
 	}

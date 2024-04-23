@@ -26,7 +26,7 @@ this.brigand_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "袭击" + this.Math.min(4, this.World.Statistics.getFlags().getAsInt("CaravansRaided")) + "/4 贸易队";
+		this.m.Requirements[0].Text = "袭击" + this.Math.min(4, this.World.Statistics.getFlags().getAsInt("CaravansRaided")) + "/4队车队";
 
 		if (this.World.Statistics.getFlags().getAsInt("CaravansRaided") >= 4)
 		{
