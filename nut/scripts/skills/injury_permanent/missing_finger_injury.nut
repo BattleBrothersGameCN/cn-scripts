@@ -5,7 +5,7 @@ this.missing_finger_injury <- this.inherit("scripts/skills/injury_permanent/perm
 		this.permanent_injury.create();
 		this.m.ID = "injury.missing_finger";
 		this.m.Name = "手指缺失";
-		this.m.Description = "一根手指的缺失使牢牢地抓住武器或盾牌变得很难，但这也不失为一段美谈。";
+		this.m.Description = "一根手指的缺失使牢牢地抓住武器或盾牌变得很难，但也成了很好的谈资。";
 		this.m.Icon = "ui/injury/injury_permanent_icon_02.png";
 	}
 

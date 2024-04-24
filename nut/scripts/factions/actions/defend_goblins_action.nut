@@ -80,7 +80,7 @@ this.defend_goblins_action <- this.inherit("scripts/factions/faction_action", {
 		for( local i = 0; i != spawnpoints.len(); i = ++i )
 		{
 			local party = this.getFaction().spawnEntity(spawnpoints[i], "地精", false, this.Const.World.Spawn.GoblinDefenders, this.m.Settlement.getResources() * 0.660000);
-			party.setDescription("一群淘气的地精，小而狡猾，不可低估。");
+			party.setDescription("一群捣蛋的地精，小而狡猾，不可低估。");
 			party.getSprite("banner").setBrush(this.m.Settlement.getBanner());
 			party.setFootprintType(this.Const.World.FootprintsType.Goblins);
 			party.getFlags().set("IsRandomlySpawned", true);

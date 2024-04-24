@@ -303,7 +303,7 @@ this.contract <- {
 			}
 		}
 
-		this.logError("Screen \"" + _id + "合同没有找到" + this.m.Type + "\".");
+		this.logError("Screen \"" + _id + "\"合同状态\"" + this.m.Type + "\".");
 		return null;
 	}
 
@@ -322,7 +322,7 @@ this.contract <- {
 			}
 		}
 
-		this.logError("国家\"" + _id + "合同没有找到" + this.m.Type + "\".");
+		this.logError("未找到\"" + _id + "\"合同状态\"" + this.m.Type + "\".");
 		return null;
 	}
 
@@ -1421,7 +1421,7 @@ this.contract <- {
 		if (_factionType == this.Const.FactionType.Bandits)
 		{
 			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(enemyBase.getTile(), "强盗", false, this.Const.World.Spawn.BanditRaiders, _resources);
-			party.setDescription("一伙为了食物外出狩猎的强壮强盗。");
+			party.setDescription("一伙外出觅食的粗野强盗。");
 			party.setFootprintType(this.Const.World.FootprintsType.Brigands);
 			party.getLoot().Money = this.Math.rand(50, 100);
 			party.getLoot().ArmorParts = this.Math.rand(0, 10);
@@ -1453,7 +1453,7 @@ this.contract <- {
 		else if (_factionType == this.Const.FactionType.Goblins)
 		{
 			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(enemyBase.getTile(), "地精掠袭者", false, this.Const.World.Spawn.GoblinRaiders, _resources);
-			party.setDescription("一群淘气的地精，小而狡猾，不可低估。");
+			party.setDescription("一群捣蛋的地精，小而狡猾，不可低估。");
 			party.setFootprintType(this.Const.World.FootprintsType.Goblins);
 			party.getLoot().ArmorParts = this.Math.rand(0, 10);
 			party.getLoot().Medicine = this.Math.rand(0, 2);
@@ -1482,7 +1482,7 @@ this.contract <- {
 		else if (_factionType == this.Const.FactionType.Orcs)
 		{
 			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(enemyBase.getTile(), "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, _resources);
-			party.setDescription("一群凶残的兽人，绿皮肤，比任何人都高。");
+			party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
 			party.setFootprintType(this.Const.World.FootprintsType.Orcs);
 			party.getLoot().ArmorParts = this.Math.rand(0, 25);
 			party.getLoot().Ammo = this.Math.rand(0, 10);

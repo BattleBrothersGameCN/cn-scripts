@@ -82,7 +82,7 @@ this.send_barbarian_roamers_action <- this.inherit("scripts/factions/faction_act
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "野蛮人", false, this.Const.World.Spawn.BarbarianHunters, this.Math.min(settlement.getResources(), this.Math.rand(60, 110)));
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一群野蛮人外出狩猎。");
+		party.setDescription("一群外出打猎的野蛮人。");
 		party.setFootprintType(this.Const.World.FootprintsType.Barbarians);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().ArmorParts = this.Math.rand(0, 5);

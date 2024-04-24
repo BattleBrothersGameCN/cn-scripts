@@ -81,7 +81,7 @@ this.send_goblin_ambushers_action <- this.inherit("scripts/factions/faction_acti
 		local mult = this.World.FactionManager.isGreenskinInvasion() ? 1.100000 : 1.000000;
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "地精掠袭者", false, this.Const.World.Spawn.GoblinRaiders, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一群淘气的地精，小而狡猾，不可低估。");
+		party.setDescription("一群捣蛋的地精，小而狡猾，不可低估。");
 		party.setFootprintType(this.Const.World.FootprintsType.Goblins);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().ArmorParts = this.Math.rand(0, 10);
