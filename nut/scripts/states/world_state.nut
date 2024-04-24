@@ -3202,7 +3202,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 				local faction = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs);
 				local party = faction.spawnEntity(this.m.LastTileHovered, "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, 200);
 				party.getSprite("banner").setBrush("banner_orcs_04");
-				party.setDescription("一群凶狠的兽人，绿皮肤，远比人高。");
+				party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
 				local c = party.getController();
 				local ambush = this.new("scripts/ai/world/orders/ambush_order");
 				c.addOrder(ambush);

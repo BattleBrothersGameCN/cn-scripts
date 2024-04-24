@@ -77,7 +77,7 @@ this.move_goblins_action <- this.inherit("scripts/factions/faction_action", {
 		{
 			local party = this.getFaction().spawnEntity(this.m.Start.getTile(), "地精", false, this.Const.World.Spawn.GoblinRaiders, this.Math.rand(70, 130) * this.getScaledDifficultyMult());
 			party.getSprite("banner").setBrush(this.m.Start.getBanner());
-			party.setDescription("一群淘气的地精，小而狡猾，不可低估。");
+			party.setDescription("一群捣蛋的地精，小而狡猾，不可低估。");
 			party.setFootprintType(this.Const.World.FootprintsType.Goblins);
 			party.getFlags().set("IsRandomlySpawned", true);
 			party.getLoot().ArmorParts = this.Math.rand(0, 10);

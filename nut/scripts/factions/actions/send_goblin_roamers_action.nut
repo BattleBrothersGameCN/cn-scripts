@@ -85,7 +85,7 @@ this.send_goblin_roamers_action <- this.inherit("scripts/factions/faction_action
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "地精猎人", false, this.Const.World.Spawn.GoblinRoamers, this.Math.min(settlement.getResources(), this.Math.rand(50, 100)) * this.getReputationToDifficultyLightMult());
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一群淘气的地精，小而狡猾，不可低估。");
+		party.setDescription("一群捣蛋的地精，小而狡猾，不可低估。");
 		party.setFootprintType(this.Const.World.FootprintsType.Goblins);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().ArmorParts = this.Math.rand(0, 5);

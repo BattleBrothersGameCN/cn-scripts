@@ -415,7 +415,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "{%companyname% 获胜了！ | 胜利！}",
+					Text = "{%companyname%的胜利！ | 胜利！}",
 					function getResult()
 					{
 						return 0;
@@ -631,7 +631,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "解决了一个自称是野蛮人国王的威胁");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "解除了自封为野蛮人国王的威胁");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}

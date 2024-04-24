@@ -85,7 +85,7 @@ this.send_orc_roamers_action <- this.inherit("scripts/factions/faction_action", 
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "兽人猎人", false, this.Const.World.Spawn.OrcRoamers, this.Math.min(settlement.getResources(), this.Math.rand(50, 100)) * this.getReputationToDifficultyLightMult());
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一群凶残的兽人，绿皮肤，比任何人都高。");
+		party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
 		party.setFootprintType(this.Const.World.FootprintsType.Orcs);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().ArmorParts = this.Math.rand(0, 25);

@@ -80,7 +80,7 @@ this.defend_orcs_action <- this.inherit("scripts/factions/faction_action", {
 		for( local i = 0; i != spawnpoints.len(); i = ++i )
 		{
 			local party = this.getFaction().spawnEntity(spawnpoints[i], "兽人", false, this.Const.World.Spawn.OrcDefenders, this.m.Settlement.getResources() * 0.660000);
-			party.setDescription("一群凶残的兽人，绿皮肤，比任何人都高。");
+			party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
 			party.setFootprintType(this.Const.World.FootprintsType.Orcs);
 			party.getSprite("banner").setBrush(this.m.Settlement.getBanner());
 			party.getFlags().set("IsRandomlySpawned", true);
