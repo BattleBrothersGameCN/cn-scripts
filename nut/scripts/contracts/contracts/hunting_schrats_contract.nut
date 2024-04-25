@@ -41,7 +41,7 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"追捕树林中杀人的东西，大约在 " + this.Contract.m.Home.getName()
+					"猎杀树林中杀人的东西，大概在 " + this.Contract.m.Home.getName()
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)

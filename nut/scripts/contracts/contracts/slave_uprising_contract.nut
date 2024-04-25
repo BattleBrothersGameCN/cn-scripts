@@ -150,7 +150,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"追捕那些现在进行土匪行为的负债者，大约在 %townname%"
+					"猎杀那些现在进行土匪行为的负债者，大约在%townname%"
 				];
 				this.Contract.m.Destination.getSprite("selection").Visible = false;
 				this.Contract.m.Destination.setOnEnterCallback(null);
@@ -185,7 +185,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"追捕那些逃跑的负债者，离 %townname%"
+					"猎杀逃离%townname%的负债者"
 				];
 				this.Contract.m.Destination.getSprite("selection").Visible = false;
 				this.Contract.m.Destination.setOnEnterCallback(null);

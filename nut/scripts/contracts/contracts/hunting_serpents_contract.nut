@@ -41,7 +41,7 @@ this.hunting_serpents_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"追捕在大蛇，大约在 " + this.Contract.m.Home.getName()
+					"猎杀大蛇，大概在 " + this.Contract.m.Home.getName()
 				];
 				this.Contract.setScreen("Task");
 			}
@@ -110,7 +110,7 @@ this.hunting_serpents_contract <- this.inherit("scripts/contracts/contract", {
 				}
 
 				this.Contract.m.BulletpointsObjectives = [
-					"追捕湿地里的大蛇在 %direction% 离 " + this.Contract.m.Home.getName()
+					"猎杀湿地里的大蛇在%direction%离 " + this.Contract.m.Home.getName()
 				];
 			}
 
