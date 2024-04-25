@@ -41,7 +41,7 @@ this.hunting_sand_golems_contract <- this.inherit("scripts/contracts/contract", 
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"追捕沙漠中杀人的东西，大约在 " + this.Contract.m.Home.getName()
+					"猎杀沙漠中杀人的东西，大概在 " + this.Contract.m.Home.getName()
 				];
 				this.Contract.setScreen("Task");
 			}

@@ -42,7 +42,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.BulletpointsObjectives = [
 					function ()
 					{
-						return this.RenderTemplate("追捕威胁%s的事物", this.Contract.m.Home.getName());
+						return this.RenderTemplate("猎杀威胁%s的事物", this.Contract.m.Home.getName());
 					}()
 				];
 

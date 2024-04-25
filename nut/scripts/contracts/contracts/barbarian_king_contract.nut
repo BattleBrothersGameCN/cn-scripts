@@ -55,8 +55,8 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"追捕野蛮人国王和他的战团",
-					"据最新报告，他最后一次出没在%region%地区，在你的%direction%边"
+					"猎杀野蛮人国王和他的战团",
+					"据最新报告，他最后一次出没在%region%地区，在你%direction%边"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -75,7 +75,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				local f = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Barbarians);
 				local nearest_base = f.getNearestSettlement(this.World.State.getPlayer().getTile());
 				local party = f.spawnEntity(nearest_base.getTile(), "蛮王", false, this.Const.World.Spawn.Barbarians, 125 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
-				party.setDescription("一个强大的野蛮部落的战斗部，由自称为野蛮人国王的人联合起来。");
+				party.setDescription("一个强大的野蛮部落战团，集结在野蛮人国王旗下。");
 				party.getSprite("body").setBrush("figure_wildman_04");
 				party.setVisibilityMult(2.000000);
 				this.Contract.addUnitsToEntity(party, this.Const.World.Spawn.BarbarianKing, 100);
@@ -115,8 +115,8 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				this.Contract.m.BulletpointsObjectives.clear();
 				this.Contract.m.BulletpointsObjectives = [
-					"追捕野蛮人国王和他的战团",
-					"他的战团最后在%region%附近被发现，在你%direction%边的%terrain%，靠近%nearest_town%"
+					"猎杀野蛮人国王和他的战团",
+					"他的战团最后现身在%region%附近，位于你%direction%边的%terrain%上，靠近%nearest_town%"
 				];
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())
@@ -313,7 +313,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈多少克朗？ | 这可不是一件小事。 | 我需要更合适的价格。 | 像这样的工作需要更高的报酬。}",
+					Text = "{我们谈的是多大的生意？ | 这可不是件小事。 | 只要价格合适。 | 这恐怕要多花点。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -321,7 +321,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{我们不打算受聘于军队。 | 那不是我们要找的工作。 | 我不会让战团冒险对付这样的敌人。}",
+					Text = "{我们不打算对付一整支军队。 | 那不是我们要找的工作。 | 我不会冒险让战团对付这样的敌人。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -343,7 +343,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "我们在追踪他。",
+					Text = "我们跟上。",
 					function getResult()
 					{
 						this.Flags.increment("HelpReceived", 1);
@@ -362,7 +362,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "GiveUp",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{现在毫无疑问。 你所遇到的种种迹象，以及人们给你的所有消息，你终于确切地知道了野蛮人国王和他的作战人员的去向。 唯一剩下的就是和他对质。}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{毫无疑问，有了你所遇到的种种迹象，以及人们给你的那些消息，你终于确切地掌握了野蛮人国王和他战团的动向。只差和他当面对质。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -388,7 +388,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Approach",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_135.png[/img]{野蛮人国王带着他的作战人员来到战场，一群体型硕大的恶棍、咆哮的战士、窘迫的奴隶和嚎叫的女人。 这是一支由一个人组织起来的军队，他从这片土地上收集了每一点资源，每一寸优势，并且还汇集了文明社会的东西，就像一个简单的雪球可能变成雪崩一样。 你让士兵们准备战斗。 | 野蛮人国王的战团在陆地上穿梭，丝毫没有训练的痕迹，甚至连队形都没有。 但你知道，只要野人挥挥手，他就可以向他的敌人发动杀人犯式的群攻，他们有足够的屠杀来克服任何缺乏凝聚力的情况。 你让士兵们准备战斗。 | 野蛮人的军队就像是狂热的精神恍惚的那样，在地平线上成形，就像来自大陆角落的旅行者，不穿任何制服或盔甲，而嘲笑他们征服的那些人。 战士们的胳膊上裹着婚纱，没有地位的人身上装饰着皇家色彩的长外套，有些人穿着肋骨，骨头咔嚓咔嚓作响，好像是再一次的抢劫。 他们不过是恐怖的农夫，村庄是他们的庄稼，战争是他们收获的季节。\n\n你一看见就摇了摇头，让士兵们准备战斗。}",
+			Text = "[img]gfx/ui/events/event_135.png[/img]{野蛮人国王带着他的战团来到战场，这支队伍由一群体型硕大的恶棍、咆哮的战士、怯懦的奴隶和嚎叫的女人组成。这支军队从这片土地上攫取了一切资源，一切可以利用的东西，像雪球会演变成雪崩一样，也必将攫取文明本身。你让士兵们做好战斗准备。 | 野蛮人国王的战团在陆地上涌动，丝毫没有受训的影子，甚至没有像样的队形。但你知道，只消那野人一挥手，他就可以向他的敌人派出一群杀手，一群杀戮能力足以弥补缺乏的凝聚力的杀手。 你让士兵们做好战斗准备。 | 野蛮人的战团像是高烧时的梦境里会出现的东西，来自大陆各个角落的旅行者在地平线上现身，他们不穿任何制服或盔甲，而是穿着征服的那些人的衣服。 战士们的胳膊上裹着婚纱，没有地位的人身上披着皇家色彩的长衣，有些人穿着肋骨，走起来喀哒作响，看来是最后一批抢掠的人。 他们不过是恐怖的农夫，村庄是他们的庄稼，战争不过是不分季节的收获。\n\n看到这一幕，你摇了摇头，让士兵们做好战斗准备。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -410,7 +410,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Victory",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_145.png[/img]{野蛮人国王死了。 虽然他把自己装扮成皇室那样，但他和他的任何一个子民一样躺在死者中间。 野蛮的。原始的。 他的身体适应力很强，装备着一些交战、掠夺和破坏的装备。 他没有什么特别之处。 你用剑砍向他的脖子，用靴子把他的头踢了下来。%randombrother% 将沉重的头部放入小背包。 你命令这些人尽他们所能地清理干净，然后准备回去找 %employer%。}",
+			Text = "[img]gfx/ui/events/event_145.png[/img]{野蛮人国王死了。虽然他给自己安上了贵族的头衔，他还是和他的同胞死在了一起。野蛮。原始。除了身体更壮实，和一些靠战争、掠夺和暴力得来的装备以外，他也没有什么特别之处。你用剑砍向他的脖子，用靴子把他的头踢了下来。%randombrother%将沉重的头装进小包里。你命令你的人好好打扫战场，准备向%employer%复命。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -432,12 +432,12 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AGreaterThreat1",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_136.png[/img]{你发现了野蛮人国王，但却是赌出来的。 野蛮人国王和一位长者跨过田野亲自迎接你。 你出去看他们，进行交涉。 野蛮人国王说话，长老翻译。%SPEECH_ON%我们来这里不是为了征服，而是为了打败数量巨大的亡者。%SPEECH_OFF%你怀疑翻译有误，请他们解释。 国王和长老继续道。%SPEECH_ON%死亡离开了这片土地，如果没有死亡，一个被杀的人将迷失在世界之间，并将再次崛起。 一大群亡者，这些亡灵正在行军。 我们不是为你或你的贵族而来。 你若帮助我们除灭他们，我们就离开此地，不再搅扰你的百姓。只是这些亡者。%SPEECH_OFF%%randombrother% 倾身低语。%SPEECH_ON%我们当然可以加入他们，但我们也可以现在就攻击他们。 他们显然没有全力以赴，不管他们在这里说什么，事实是他们一直在蹂躏土地，因为他们是原始的野蛮人，先生，强暴和掠夺正是他们的血液。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_136.png[/img]{你找到了野蛮人国王，却开始了交涉。野蛮人国王和一位长者亲自跨过田野来见你。虽然有悖常识，你还是走出去见他们。野蛮人国王说话，长老翻译。%SPEECH_ON%我们来这里不是为了征服，而是为了打败数量巨大的“不往生者”。%SPEECH_OFF%你怀疑翻译有误，请他们解释。国王和长老继续道。%SPEECH_ON%死神离开了这片土地，没有了他的引导，被杀的人将迷失在此界和彼界之间，再次复活。一大群不往生者，不死者，正在行军。我们并非是为你或你的贵族而来。你若帮助我们除灭他们，我们就离开此地，不再搅扰你的百姓。只是对付这些不往生者。%SPEECH_OFF%%randombrother%倾身低语。%SPEECH_ON%我们当然可以加入他们，但我们也可以现在就攻击他们。他们显然疏于应战，不管说了什么，他们肯定是想在这片土地上作乱，因为他们是原始的野蛮人，长官，奸淫掳掠是他们的天性。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们会攻击他们并消灭这个所谓的北方国王。",
+					Text = "我们会正面进攻，消灭这个所谓的北方国王。",
 					function getResult()
 					{
 						return "AGreaterThreat2";
@@ -445,7 +445,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "我们会和他们一起向亡者进军。",
+					Text = "我们和他们一起向“不往生者”进军。",
 					function getResult()
 					{
 						return "AGreaterThreat3";
@@ -461,7 +461,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AGreaterThreat2",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_136.png[/img]{你朝长老点头吐口水。%SPEECH_ON%我们走过被烧的房子，强奸的女人，和被杀的男人，只是为了找到你的遗憾，现在你想联合起来吗？ 我们不是盟友。我们不是朋友。 告诉你所谓的“国王”向你的诸神祈祷…%SPEECH_OFF%长老举起手来，用他们的方言与王说话。 两个人点头，转身离开。%randombrother% 笑了笑。%SPEECH_ON%简洁是轻蔑的灵魂，队长。%SPEECH_OFF%你告诉那个人回到战场上，为预先的战斗做准备。}",
+			Text = "[img]gfx/ui/events/event_136.png[/img]{你朝长老吐了口口水，点了点头。%SPEECH_ON%我们走过被烧的房子，被强奸的妇女，和被杀害的男人，只为了找到你们这些可怜虫，现在你想联合起来？我们不是盟友。我们不是朋友。告诉你所谓的“国王”，向你的破神祈祷去吧…%SPEECH_OFF%长老举起手来，用他们的语言与王对话。 两个人点头，转身离开。%randombrother%笑了笑。%SPEECH_ON%队长，简短有力才是骂人的精髓。%SPEECH_OFF%你让他回到战线里，为接下来的战斗做好准备。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -484,7 +484,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AGreaterThreat3",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_136.png[/img]{你向长老点头。%SPEECH_ON%好吧，我们会和你一起努力对付这个更大的威胁。%SPEECH_OFF%长老微笑着，搓着大拇指，用母语说了几句话。 野蛮人国王用拳头猛击他的胸部，然后用拳头猛击你的肩膀，然后用手划过天空。 长老笑着解释道。%SPEECH_ON%所以我们一起战斗，但如果我们倒下，他就不会像亡灵一样与你战斗。 如果被杀，国王会发现自己已经死了，把镰刀放在自己的脖子上。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_136.png[/img]{你向长老点头。%SPEECH_ON%好吧，我们会和你一起对付这个更大的威胁。%SPEECH_OFF%长老微笑着，拇指搓在一起，说了几句他们的话。 野蛮人国王用拳头拍了拍自己的胸部，又敲了敲你的肩膀，用手划过天空。长老笑着解释道。%SPEECH_ON%那我们就一起战斗，如果我们倒下，不必担心他变成不死者对付你。被杀了的话，国王会自己找到死神，把他的镰刀放在自己的脖子上。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -502,7 +502,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				local playerTile = this.World.State.getPlayer().getTile();
 				local nearest_undead = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).getNearestSettlement(playerTile);
 				local tile = this.Contract.getTileToSpawnLocation(playerTile, 9, 15);
-				local party = this.World.FactionManager.getFaction(nearest_undead.getFaction()).spawnEntity(tile, "亡者", false, this.Const.World.Spawn.UndeadArmy, 260 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				local party = this.World.FactionManager.getFaction(nearest_undead.getFaction()).spawnEntity(tile, "不往生者", false, this.Const.World.Spawn.UndeadArmy, 260 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				party.getSprite("banner").setBrush(nearest_undead.getBanner());
 				party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");
 				party.setSlowerAtNight(false);
@@ -531,7 +531,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AGreaterThreat4",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_73.png[/img]{野蛮人没有说谎：长老已经派出了一支军队。 它是一支由腐烂的面孔和生锈的盔甲组成的军队，是一大群叹息着、呻吟的怪物，光落在它们身上，立刻就消失了。 这无疑是一支黑暗的军队。 如果你或是野蛮人单独战斗，你肯定会输，但在一起你可能还有机会！}",
+			Text = "[img]gfx/ui/events/event_73.png[/img]{野蛮人没有说谎：一支古代军队已经被派来了。 他们有着腐朽的面孔和生锈的盔甲，是一大群叹息着、呻吟的怪物，光落在它们身上，也会立即消失。这无疑是一支黑暗的军队。如果是你或野蛮人单独应战，都必败无疑，但团结起来，你们还有一线生机！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -553,7 +553,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AGreaterThreat5",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_136.png[/img]{古代的死者最终被杀。 当你的人和原始人在田野里挑选时，野蛮人国王和长老来到你身边。 这位大块头勇士点头咕哝，长老翻译。%SPEECH_ON%他说你做得很好，非常好，他希望像你自己和你的战团这样的人能和他并肩作战，但他明白这是不可能的。 我们生活在一个由许多世界组成的迷宫里，在这个迷宫里，我们都会留下来，迷失，有时会听到彼此的喊叫，永远没有足够的时间互相了解。 他说谢谢。他祝你好运。%SPEECH_OFF%你问向长老，问他是不是从一个简单的咕噜声中得到了这些。长老笑了。%SPEECH_ON%咕噜声，是的，还有一生的友谊。 祝你好运，持剑的人。%SPEECH_OFF%长老递给你一顶角盔，就是你见过野蛮人国王自己有时戴的那顶。 他什么也没说，只拍了拍胸口，指着天空，就这样。}",
+			Text = "[img]gfx/ui/events/event_136.png[/img]{古代的死者最终被打败。你的人和野蛮人打扫战场的时候，野蛮人国王和长老来到你身边。这位大块头勇士点头咕哝，长老翻译。%SPEECH_ON%他说你做得很好，非常好，他希望像你和你的战团这样的人能和他并肩作战，但他明白这是不可能的。我们生活在一个由许多世界组成的迷宫里，在这个迷宫里，我们都会驻足，迷失，有时会听到彼此的喊叫，却永远没有足够的时间互相了解。他说谢谢。他祝你好运。%SPEECH_OFF%你问长老，一声咕哝就能表达这么多意思吗。长老笑了。%SPEECH_ON%一声咕哝，没错，还有一生的友谊。 祝你好运，剑客。%SPEECH_OFF%长老递给你一顶角盔，正是野蛮人国王戴着的那顶。他什么也没说，只是拍了拍胸口，把手指指着天空。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -599,7 +599,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "杀了一个自称的野蛮人国王");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "杀死自封的野蛮人国王");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -612,7 +612,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 				});
 			}
 
@@ -620,7 +620,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success2",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_31.png[/img]{%employer% 不情愿地欢迎你。%SPEECH_ON%你知道我到处都有侦察员和密探，不是吗？%SPEECH_OFF%好的。 “野蛮人国王”不会再打扰土地了。 你的雇主用手指敲了几下然后点头。%SPEECH_ON%你的诚实令人耳目一新，尽管我不得不说那人和他的战团还活着是很不幸的。 也就是说，所有的汇报都表明他们要离开了，所以我想你的工作还是一样的，不管你是不是一个肥胖的无信仰之人。这是你约定的报酬。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_31.png[/img]{%employer%不情愿地欢迎你。%SPEECH_ON%你知道我的眼线遍布各地，对吧？%SPEECH_OFF%你举起你的手，告诉他你无意撒谎。所谓的“野蛮人国王”不会再袭扰这片土地了。你的雇主用手指轻敲了几下桌子，点了下头。%SPEECH_ON%你的诚实令人耳目一新，但我不得不说，如果他和他的战团还活着，那可算不得什么好事。不过，所有的线报都表明，他们走了，所以我想你的工作还是完成了，不管你是不是脑满肠肥的异教徒。给你报酬，和约好的一样。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
@@ -644,7 +644,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 				});
 			}
 
