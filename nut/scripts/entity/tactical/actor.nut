@@ -1587,7 +1587,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			{
 				overflowDamage = overflowDamage - this.m.BaseProperties.Armor[_hitInfo.BodyPart] * this.m.BaseProperties.ArmorMult[_hitInfo.BodyPart];
 				this.m.BaseProperties.Armor[_hitInfo.BodyPart] = this.Math.max(0, this.m.BaseProperties.Armor[_hitInfo.BodyPart] * this.m.BaseProperties.ArmorMult[_hitInfo.BodyPart] - _hitInfo.DamageArmor);
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的盔甲被击中，受到 [b]" + this.Math.floor(_hitInfo.DamageArmor) + "[/b] 伤害");
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的盔甲被击中，受到 [b]" + this.Math.floor(_hitInfo.DamageArmor) + "[/b]点伤害");
 			}
 
 			if (overflowDamage > 0)
@@ -1687,7 +1687,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 						if (this.isPlayerControlled() || !this.isHiddenToPlayer())
 						{
-							this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b] 伤害并遭受" + injury.getNameOnly() + "!");
+							this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b]点伤害并遭受" + injury.getNameOnly() + "!");
 						}
 
 						appliedInjury = true;
@@ -1703,13 +1703,13 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 				{
 					if (damage > 0 && !this.isHiddenToPlayer())
 					{
-						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b] 伤害");
+						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b]点伤害");
 					}
 				}
 			}
 			else if (damage > 0 && !this.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b] 伤害");
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b]点伤害");
 			}
 
 			if (this.m.MoraleState != this.Const.MoraleState.Ignore && damage >= this.Const.Morale.OnHitMinDamage && this.getCurrentProperties().IsAffectedByLosingHitpoints)

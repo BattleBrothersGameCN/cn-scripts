@@ -286,7 +286,7 @@ gt.Const.Strings.DaggerNames <- [
 gt.Const.Strings.CrossbowNames <- [
 	"爆矢弩",
 	"穿刺者",
-	"吐痰器",
+	"喷吐者",
 	"钉刺者",
 	"投手",
 	"射手",

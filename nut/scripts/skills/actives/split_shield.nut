@@ -154,7 +154,7 @@ this.split_shield <- this.inherit("scripts/skills/skill", {
 
 				if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
 				{
-					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "使用“裂盾”并命中了" + this.Const.UI.getColorizedEntityName(_targetTile.getEntity()) + "的盾牌[b]，造成" + (conditionBefore - shield.getCondition()) + "[/b] 伤害");
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "使用“裂盾”并命中了" + this.Const.UI.getColorizedEntityName(_targetTile.getEntity()) + "的盾牌[b]，造成" + (conditionBefore - shield.getCondition()) + "[/b]点伤害");
 				}
 			}
 
