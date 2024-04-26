@@ -196,7 +196,7 @@ this.throw_spear_skill <- this.inherit("scripts/skills/skill", {
 		{
 			if (!_tag.User.isHiddenToPlayer() && _tag.TargetTile.IsVisibleForPlayer)
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_tag.TargetTile.getEntity()) + "的盾牌被击中，造成 [b]" + (conditionBefore - _tag.Shield.getCondition()) + "[/b] 伤害");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_tag.TargetTile.getEntity()) + "的盾牌被击中，受到[b]" + (conditionBefore - _tag.Shield.getCondition()) + "[/b]点伤害");
 			}
 
 			if (_tag.Skill.m.SoundOnHitShield.len() != 0)

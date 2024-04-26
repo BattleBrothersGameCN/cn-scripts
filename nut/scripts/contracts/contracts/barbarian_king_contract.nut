@@ -181,7 +181,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				this.Contract.m.BulletpointsObjectives.clear();
 				this.Contract.m.BulletpointsObjectives = [
-					"和野蛮人国王一起旅行，共同面对更大的威胁"
+					"和野蛮人国王同行，共同面对更大的威胁"
 				];
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())
@@ -338,7 +338,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Directions",
 			Title = "在途中……",
-			Text = "{[img]gfx/ui/events/event_59.png[/img]一群难民经过战团。 有传言说野蛮人国王在 %distance% %direction%。路上的许多人都来自 %nearest_town%，他们似乎对等待野蛮人的到来毫无兴趣。 | [img]gfx/ui/events/event_41.png[/img]一个商人驾驶者一辆空的商队货车与战团交叉而过。 尽管他没什么可兜售的，但他确实说道路上传递着野人自称国王的谣言。 他说野蛮人就在你所处位置的 %direction%，%region% 周围。他点头示意你走这条路。%SPEECH_ON%如果你想走那条路，那就把他们应得的一切都给他们。%SPEECH_OFF% | [img]gfx/ui/events/event_94.png[/img]发现一个半裸的男人盘腿坐在路边。 他说，一个有军队的原始人烧了他的农场，侮辱了妇女，把所有带把儿的人都杀了。%SPEECH_ON%我躲在灌木丛里，双手捂着嘴活了下来。%SPEECH_OFF%那人擦了擦他的鼻子。%SPEECH_ON%我看见你拿着武器。 如果你找这个野蛮人，我可以告诉你，他们好像是在这里的 %direction%，在 %terrain% %distance% 那里就是 %region%。%SPEECH_OFF% | [img]gfx/ui/events/event_94.png[/img]你发现了一个小村庄被烧毁的遗迹。 它的一些幸存者留下来，他们的形状就像从被毁的房子里飘出的烟一样。 一种说法是，一个装作国王姿态的人来了，在前往 %direction% 之前杀死了所有他们抓到的人。 | [img]gfx/ui/events/event_60.png[/img]你遇到过很多翻了的货车或燃烧的载重货车。 他们都被抢劫一空，所有的货物都不见了，只有货主的尸体还在。 有几个孩子在这样的废墟上捡东西。 当你问他们是谁干的时，一个厚脸皮的男孩大声说。%SPEECH_ON%从北方来的野蛮人，但他们现在正在 %direction%。 我看见他们了。我敢打赌，那里是 %terrain%，%distance%。 %SPEECH_OFF%他抠了抠他的鼻子。%SPEECH_ON%顺便说一句，他们是杀手。 有点像你的那种，但更大。可能更强。%SPEECH_OFF% | [img]gfx/ui/events/event_76.png[/img]%employer% 的侦查员在路上遇见你。 他报告说野蛮人国王被发现在 %region% %direction% 方向的 %terrain%。他是 %distance%。你问侦查员愿不愿意和你一起战斗，那人笑了。%SPEECH_ON%不，先生，我这样很好。 我来回跑，侦查，然后报告。 就像是我在两个妓女之间那样的奔波。 这是一个美好的生活，我不需要为了你的佣兵工作毁了它！%SPEECH_OFF%足够好了。 | [img]gfx/ui/events/event_132.png[/img]%randombrother% 首先发现它们。 有小规模冲突的迹象，烧焦的尸体，褪色的脚印和载重货车的痕迹，很明显有一支军队经过这里。%SPEECH_ON%看来他们在战斗结束后已经向 %direction% 前进了，队长。%SPEECH_OFF%}",
+			Text = "{[img]gfx/ui/events/event_59.png[/img]一大群难民从战团边经过。有传言说野蛮人国王在%direction%方%distance%。路上的许多人都来自%nearest_town%，他们可不会坐以待毙，等着一群野蛮人淹没他们。 | [img]gfx/ui/events/event_41.png[/img]一个商人驾着一辆空货车经过。他没什么可兜售的，但他确实听到了自称为国王的野蛮人的传言。他说野蛮人就在%direction%的%region%附近。他扬起头示意你要走的路。%SPEECH_ON%如果你确实要往那儿去，就好好教训一下这帮原始人混蛋。%SPEECH_OFF% | [img]gfx/ui/events/event_94.png[/img]一个半裸的男人盘腿坐在路边。他说，野蛮人带着一支军队烧了他的农场，侮辱了妇女，杀了所有带把儿的人。%SPEECH_ON%我躲在灌木丛里，捂着嘴活了下来。%SPEECH_OFF%那人擦了擦他的鼻子。%SPEECH_ON%我看见你们带着武器。如果你是来找这野蛮人的，我可以告诉你，他们沿着%direction%方的%terrain%往%distance%的%region%去了。%SPEECH_OFF% | [img]gfx/ui/events/event_94.png[/img]你发现了一个小村庄被烧毁的遗迹。一些幸存者留了下来，他们形容枯槁，就像烧毁房子里冒出来的烟。其中一个人说，一个国王样子的人杀了所有人，抢走了不少东西，往%direction%去了。 | [img]gfx/ui/events/event_60.png[/img]在路上，你碰到了翻倒和烧着的马车。车上的东西被抢掠一空，只剩下原主人的尸体。有几个孩子在这片的废墟上翻找着。你问他们是谁干，一个厚脸皮的男孩大声说。%SPEECH_ON%从北方来的野蛮人，往%direction%去了。我亲眼所见。我敢打赌，那里是%terrain%，离这儿%distance%。%SPEECH_OFF%他抠了抠他的鼻子。%SPEECH_ON%顺便说一句，他们是杀手。跟你有点像，但更大。说不定更强壮。%SPEECH_OFF% | [img]gfx/ui/events/event_76.png[/img]路上，你碰到了%employer%的侦察员。他报告在%direction%方%terrain%的%region%附近目击到了野蛮人国王。距离%distance%。你问他愿不愿意和你一起战斗，他笑了。%SPEECH_ON%不，先生，我这样很好。我到处跑跑，侦察，看到什么就报告什么。任务间隙去找一两个妓女。多美好的生活啊，你们佣兵的活法会毁了它！%SPEECH_OFF%好吧。 | [img]gfx/ui/events/event_132.png[/img]是%randombrother%先发现了它们。遭遇战的痕迹，烧焦的尸体，变浅的脚印和车辙印，显然有军队从这里经过经过。%SPEECH_ON%看来战斗结束后他们往%direction%去了，队长。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
