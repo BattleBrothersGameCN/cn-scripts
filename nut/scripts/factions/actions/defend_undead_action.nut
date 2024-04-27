@@ -91,7 +91,7 @@ this.defend_undead_action <- this.inherit("scripts/factions/faction_action", {
 		{
 			local party = this.getFaction().spawnEntity(spawnpoints[i], "亡灵", false, this.m.Settlement.getRoamerSpawnList(), this.m.Settlement.getResources() * 0.660000);
 			party.getSprite("banner").setBrush(this.m.Settlement.getBanner());
-			party.setDescription("好像有点不对劲。");
+			party.setDescription("一些邪性东西。");
 			party.setFootprintType(this.Const.World.FootprintsType.Undead);
 			party.setSlowerAtNight(false);
 			party.setUsingGlobalVision(false);
