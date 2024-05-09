@@ -446,7 +446,7 @@ gt.Const.Strings.GladiatorTitles <- [
 	"斗士",
 	"·竞技场之王",
 	"无情的",
-	"·领头羊",
+	"·猎头者",
 	"·无双",
 	"不败者",
 	"·残暴者",
@@ -734,7 +734,7 @@ gt.Const.Strings.PeddlerTitles <- [
 gt.Const.Strings.WitchhunterTitles <- [
 	"夜猎者",
 	"·女巫猎人",
-	"驱魔者",
+	"驱魔师",
 	"·折磨者"
 ];
 gt.Const.Strings.GravediggerTitles <- [
@@ -753,7 +753,7 @@ gt.Const.Strings.BastardTitles <- [
 	"私生子",
 	"过错",
 	"绿帽子",
-	"秘密之子",
+	"隐子",
 	"野种",
 	"玷污之人"
 ];
@@ -925,7 +925,7 @@ gt.Const.Strings.BanditLeaderNames <- [
 	"%randomname%·凄荒",
 	"刀锋英格拉姆",
 	"扒手%randomname%",
-	"米克尔科珀哈特",
+	"铁石心肠米克尔",
 	"卡斯珀·掏包儿",
 	"水獭",
 	"乔斯特皇冠继承人",
@@ -1057,7 +1057,7 @@ gt.Const.Strings.GoblinTitles <- [
 	"·背刺者",
 	"钩刃",
 	"腹刺",
-	"耳环人",
+	"割耳者",
 	"扭颈者",
 	"·耍刀者"
 ];

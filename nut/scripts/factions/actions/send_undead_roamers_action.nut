@@ -83,7 +83,7 @@ this.send_undead_roamers_action <- this.inherit("scripts/factions/faction_action
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "亡灵", false, settlement.getRoamerSpawnList(), this.Math.max(settlement.getResources() * 0.750000, this.Math.rand(60, 100) * this.getReputationToDifficultyLightMult()));
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一些邪性东西。");
+		party.setDescription("一些邪秽之物。");
 		party.setFootprintType(this.Const.World.FootprintsType.Undead);
 		party.setSlowerAtNight(false);
 		party.setUsingGlobalVision(false);

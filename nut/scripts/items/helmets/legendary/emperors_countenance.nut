@@ -4,8 +4,8 @@ this.emperors_countenance <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.emperors_countenance";
-		this.m.Name = "帝王尊容";
-		this.m.Description = "一个展露帝王容貌的具有神秘能力的金色头盔。 当你把它放在阳光下时，面具感觉就像是在移动，似乎还会露出鄙夷之情。";
+		this.m.Name = "帝王威仪";
+		this.m.Description = "金制的头盔和面具，展示着远古皇帝的容貌，充满了神秘力量。放到光下仔细打量，那面部似乎会动，还会露出鄙夷之情。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;
@@ -31,7 +31,7 @@ this.emperors_countenance <- this.inherit("scripts/items/helmets/helmet", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "反弹[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color] 近战伤害反弹给攻击者"
+			text = "将所受近战伤害的[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]反弹给攻击者"
 		});
 		return result;
 	}
