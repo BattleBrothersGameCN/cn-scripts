@@ -28,7 +28,7 @@ this.emperors_armor <- this.inherit("scripts/items/armor/armor", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "反弹所受近战伤害的[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]给攻击者"
+			text = "将所受近战伤害的[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]反弹给攻击者"
 		});
 		return result;
 	}

@@ -1499,7 +1499,7 @@ this.contract <- {
 		else if (_factionType == this.Const.FactionType.Zombies)
 		{
 			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).spawnEntity(enemyBase.getTile(), "亡灵", false, this.Const.World.Spawn.Necromancer, _resources);
-			party.setDescription("一些邪性东西。");
+			party.setDescription("一些邪秽之物。");
 			party.setFootprintType(this.Const.World.FootprintsType.Undead);
 			party.getLoot().ArmorParts = this.Math.rand(0, 10);
 			party.getLoot().Ammo = this.Math.rand(0, 5);
