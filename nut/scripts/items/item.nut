@@ -8,8 +8,8 @@ this.item <- {
 		Categories = "",
 		MagicNumber = 0,
 		Variant = 0,
-		Condition = 1.000000,
-		ConditionMax = 1.000000,
+		Condition = 1.0,
+		ConditionMax = 1.0,
 		SlotType = this.Const.ItemSlot.Bag,
 		CurrentSlotType = this.Const.ItemSlot.None,
 		BlockedSlotType = null,
@@ -19,7 +19,7 @@ this.item <- {
 		SkillPtrs = [],
 		Tile = null,
 		Value = 0,
-		PriceMult = 1.000000,
+		PriceMult = 1.0,
 		LastEquippedByFaction = 0,
 		IsGarbage = false,
 		IsDroppedAsLoot = false,
@@ -356,12 +356,12 @@ this.item <- {
 
 	function getSellPriceMult()
 	{
-		return 1.000000;
+		return 1.0;
 	}
 
 	function getBuyPriceMult()
 	{
-		return 1.000000;
+		return 1.0;
 	}
 
 	function getTooltip()

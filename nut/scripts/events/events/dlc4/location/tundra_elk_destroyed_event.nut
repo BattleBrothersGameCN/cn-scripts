@@ -4,7 +4,7 @@ this.tundra_elk_destroyed_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.location.tundra_elk_destroyed";
 		this.m.Title = "战斗之后……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",

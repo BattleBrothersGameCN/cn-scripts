@@ -3,7 +3,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		Objective = null,
 		Target = null,
 		IsPlayerAttacking = true,
-		LastRandomEventShown = 0.000000
+		LastRandomEventShown = 0.0
 	},
 	function setObjective( _h )
 	{
@@ -27,7 +27,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.contract.create();
 		this.m.Type = "contract.marauding_greenskins";
 		this.m.Name = "绿皮劫掠";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -83,7 +83,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		if (best != null)
 		{
 			local distance = this.getDistanceOnRoads(best.getTile(), this.m.Origin.getTile());
-			this.m.Flags.set("MerchantReward", this.Math.max(150, distance * 5.000000 * this.getPaymentMult()));
+			this.m.Flags.set("MerchantReward", this.Math.max(150, distance * 5.0 * this.getPaymentMult()));
 			this.setObjective(best);
 			this.m.Flags.set("MerchantID", best.getFactionOfType(this.Const.FactionType.Settlement).getRandomCharacter().getID());
 		}
@@ -92,12 +92,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -240,7 +240,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 						this.Contract.setState("Return");
 					}
 				}
-				else if (playerTile.getDistanceTo(this.Contract.m.Target.getTile()) <= 10 && this.Contract.m.Target.isHiddenToPlayer() && this.Time.getVirtualTimeF() - this.Contract.m.LastRandomEventShown >= 30.000000 && this.Math.rand(1, 1000) <= 1)
+				else if (playerTile.getDistanceTo(this.Contract.m.Target.getTile()) <= 10 && this.Contract.m.Target.isHiddenToPlayer() && this.Time.getVirtualTimeF() - this.Contract.m.LastRandomEventShown >= 30.0 && this.Math.rand(1, 1000) <= 1)
 				{
 					this.Contract.m.LastRandomEventShown = this.Time.getVirtualTimeF();
 

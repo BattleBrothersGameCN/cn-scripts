@@ -50,7 +50,7 @@ this.wiederganger_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.ThresholdToReceiveInjuryMult *= 1.330000;
+		_properties.ThresholdToReceiveInjuryMult *= 1.33;
 	}
 
 	function onDeath( _fatalityType )

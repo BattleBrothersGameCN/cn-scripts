@@ -6,7 +6,7 @@ this.greenskins_outro_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.greenskins_outro";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 1.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
@@ -130,13 +130,13 @@ this.greenskins_outro_event <- this.inherit("scripts/events/event", {
 				return;
 			}
 
-			if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.150000)
+			if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.15)
 			{
 				return;
 			}
 
 			local brothers = this.World.getPlayerRoster().getAll();
-			local most_days_with_company = -9000.000000;
+			local most_days_with_company = -9000.0;
 			local most_days_with_company_bro;
 
 			foreach( bro in brothers )

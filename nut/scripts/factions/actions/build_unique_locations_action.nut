@@ -403,7 +403,7 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 				}
 			}
 
-			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 25, 60, 1001, distanceToOthers, distanceToOthers, null, this.Const.DLC.Desert ? 0.150000 : 0.000000);
+			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 25, 60, 1001, distanceToOthers, distanceToOthers, null, this.Const.DLC.Desert ? 0.15 : 0.0);
 
 			if (tile != null)
 			{
@@ -511,7 +511,7 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 				}
 			}
 
-			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 8, 25, 1001, 8, 8, null, 0.100000, 0.350000);
+			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 8, 25, 1001, 8, 8, null, 0.1, 0.35);
 
 			if (tile != null)
 			{
@@ -565,7 +565,7 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 				}
 			}
 
-			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 8, 25, 1001, 8, 8, null, 0.100000);
+			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 8, 25, 1001, 8, 8, null, 0.1);
 
 			if (tile != null)
 			{
@@ -580,7 +580,7 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 		else
 		{
 			this.logInfo("已经放置了所有唯一位置。");
-			this.m.CooldownUntil = 1000000000.000000;
+			this.m.CooldownUntil = 1000000000.0;
 			this.m.IsRunOnNewCampaign = false;
 		}
 	}

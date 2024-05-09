@@ -4,13 +4,13 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 		PerkPoints = 0,
 		PerkPointsSpent = 0,
 		LevelUps = 0,
-		Mood = 3.000000,
+		Mood = 3.0,
 		MoodChanges = [],
 		LastDrinkTime = 0,
 		PlaceInFormation = 255,
 		Background = null,
 		HiringCost = 0,
-		HireTime = 0.000000,
+		HireTime = 0.0,
 		IsTryoutDone = false,
 		IsGuest = false,
 		Attributes = [],
@@ -127,17 +127,17 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 	function getTryoutCost()
 	{
-		return this.Math.ceil(this.Math.max(10, this.Math.min(this.m.HiringCost - 25, 25 + this.m.HiringCost * 0.100000) * this.World.Assets.m.TryoutPriceMult));
+		return this.Math.ceil(this.Math.max(10, this.Math.min(this.m.HiringCost - 25, 25 + this.m.HiringCost * 0.1) * this.World.Assets.m.TryoutPriceMult));
 	}
 
 	function getDailyCost()
 	{
-		return this.Math.max(0, this.m.CurrentProperties.DailyWage * this.m.CurrentProperties.DailyWageMult * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.DailyWageMult : 1.000000));
+		return this.Math.max(0, this.m.CurrentProperties.DailyWage * this.m.CurrentProperties.DailyWageMult * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.DailyWageMult : 1.0));
 	}
 
 	function getDailyFood()
 	{
-		return this.Math.maxf(0.000000, this.m.CurrentProperties.DailyFood);
+		return this.Math.maxf(0.0, this.m.CurrentProperties.DailyFood);
 	}
 
 	function getBackground()
@@ -200,13 +200,13 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 		return this.m.MoodChanges;
 	}
 
-	function improveMood( _a = 1.000000, _reason = "" )
+	function improveMood( _a = 1.0, _reason = "" )
 	{
-		this.m.Mood = this.Math.minf(this.m.Mood + _a, this.Const.MoodState.len() - 0.050000);
+		this.m.Mood = this.Math.minf(this.m.Mood + _a, this.Const.MoodState.len() - 0.05);
 
 		if (_reason != "")
 		{
-			local time = 0.000000;
+			local time = 0.0;
 
 			if (("State" in this.World) && this.World.State != null && this.World.State.getCombatStartTime() != 0)
 			{
@@ -239,13 +239,13 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 		this.getSkills().update();
 	}
 
-	function worsenMood( _a = 1.000000, _reason = "" )
+	function worsenMood( _a = 1.0, _reason = "" )
 	{
-		this.m.Mood = this.Math.maxf(this.m.Mood - _a, 0.000000);
+		this.m.Mood = this.Math.maxf(this.m.Mood - _a, 0.0);
 
 		if (_reason != "")
 		{
-			local time = 0.000000;
+			local time = 0.0;
 
 			if (("State" in this.World) && this.World.State != null && this.World.State.getCombatStartTime() != 0)
 			{
@@ -285,18 +285,18 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 			this.m.MoodChanges.remove(this.m.MoodChanges.len() - 1);
 		}
 
-		if (this.m.Mood < 3.150000)
+		if (this.m.Mood < 3.1500001)
 		{
-			local mult = this.getSkills().hasSkill("trait.optimist") ? this.Const.MoodChange.OptimistMult : 1.000000;
-			local diff = this.Math.maxf(this.Const.MoodChange.RecoveryPerHour, (3.150000 - this.m.Mood) * this.Const.MoodChange.RelativeRecoveryPerHour);
-			this.m.Mood = this.Math.minf(3.150000, this.m.Mood + diff * mult * this.Const.MoodChange.CheckIntervalHours);
+			local mult = this.getSkills().hasSkill("trait.optimist") ? this.Const.MoodChange.OptimistMult : 1.0;
+			local diff = this.Math.maxf(this.Const.MoodChange.RecoveryPerHour, (3.1500001 - this.m.Mood) * this.Const.MoodChange.RelativeRecoveryPerHour);
+			this.m.Mood = this.Math.minf(3.1500001, this.m.Mood + diff * mult * this.Const.MoodChange.CheckIntervalHours);
 			this.getSkills().update();
 		}
-		else if (this.m.Mood > 3.150000)
+		else if (this.m.Mood > 3.1500001)
 		{
-			local mult = this.getSkills().hasSkill("trait.pessimist") ? this.Const.MoodChange.PessimistMult : 1.000000;
-			local diff = this.Math.maxf(this.Const.MoodChange.RecoveryPerHour, (this.m.Mood - 3.150000) * this.Const.MoodChange.RelativeRecoveryPerHour);
-			this.m.Mood = this.Math.maxf(3.150000, this.m.Mood - diff * mult * this.Const.MoodChange.CheckIntervalHours);
+			local mult = this.getSkills().hasSkill("trait.pessimist") ? this.Const.MoodChange.PessimistMult : 1.0;
+			local diff = this.Math.maxf(this.Const.MoodChange.RecoveryPerHour, (this.m.Mood - 3.1500001) * this.Const.MoodChange.RelativeRecoveryPerHour);
+			this.m.Mood = this.Math.maxf(3.1500001, this.m.Mood - diff * mult * this.Const.MoodChange.CheckIntervalHours);
 			this.getSkills().update();
 		}
 	}
@@ -597,7 +597,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 		if (this.getHitpoints() < this.getHitpointsMax())
 		{
-			local ht = this.Math.ceil((this.getHitpointsMax() - this.getHitpoints()) / (this.Const.World.Assets.HitpointsPerHour * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.HitpointsPerHourMult : 1.000000)) / 24.000000);
+			local ht = this.Math.ceil((this.getHitpointsMax() - this.getHitpoints()) / (this.Const.World.Assets.HitpointsPerHour * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.HitpointsPerHourMult : 1.0)) / 24.0);
 
 			if (ht > 1)
 			{
@@ -651,7 +651,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 	{
 		if (this.getHitpoints() < this.getHitpointsMax())
 		{
-			return this.Math.ceil((this.getHitpointsMax() - this.getHitpoints()) / (this.Const.World.Assets.HitpointsPerHour * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.HitpointsPerHourMult : 1.000000)) / 24.000000);
+			return this.Math.ceil((this.getHitpointsMax() - this.getHitpoints()) / (this.Const.World.Assets.HitpointsPerHour * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.HitpointsPerHourMult : 1.0)) / 24.0);
 		}
 		else
 		{
@@ -670,7 +670,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 		local injury_body = this.getSprite("injury_body");
 		local p = this.m.Hitpoints / this.getHitpointsMax();
 
-		if (p > 0.670000)
+		if (p > 0.67)
 		{
 			this.setDirty(this.m.IsDirty || injury.Visible || injury_body.Visible);
 			injury.Visible = false;
@@ -682,7 +682,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 			injury.Visible = true;
 			injury_body.Visible = true;
 
-			if (p > 0.330000)
+			if (p > 0.33)
 			{
 				injury.setBrush("bust_head_injured_01");
 			}
@@ -691,7 +691,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 				injury.setBrush("bust_head_injured_02");
 			}
 
-			if (p > 0.400000)
+			if (p > 0.4)
 			{
 				injury_body.Visible = false;
 			}
@@ -711,7 +711,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 		this.m.BloodType = this.Const.BloodType.Red;
 		this.human.create();
 		this.getFlags().add("human");
-		this.getFlags().set("PotionLastUsed", 0.000000);
+		this.getFlags().set("PotionLastUsed", 0.0);
 		this.getFlags().set("PotionsUsed", 0);
 		this.m.AIAgent = this.new("scripts/ai/tactical/player_agent");
 		this.m.AIAgent.setActor(this);
@@ -723,7 +723,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 		if (this.getBackground().getID() != "background.slave")
 		{
-			this.improveMood(1.500000, "加入了一个雇佣兵战团");
+			this.improveMood(1.5, "加入了一个雇佣兵战团");
 		}
 
 		if (("State" in this.World) && this.World.State != null && this.World.Assets.getOrigin() != null)
@@ -759,14 +759,14 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Skills.onCombatStarted();
 		this.m.Items.onCombatStarted();
 		this.m.Skills.update();
-		this.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.000000;
+		this.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.0;
 	}
 
 	function onBeforeCombatResult()
 	{
 		this.onCombatFinished();
 		this.m.LifetimeStats.Battles += 1;
-		this.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.000000;
+		this.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.0;
 		this.getAIAgent().setUseHeat(false);
 	}
 
@@ -1077,7 +1077,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 			this.human.onDeath(_killer, _skill, _tile, _fatalityType);
 			local corpse = _tile.Properties.get("Corpse");
 			corpse.IsPlayer = true;
-			corpse.Value = 10.000000;
+			corpse.Value = 10.0;
 		}
 
 		if (!this.m.IsGuest && !this.Tactical.State.isScenarioMode())
@@ -1172,7 +1172,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 	{
 		this.actor.onActorKilled(_actor, _tile, _skill);
 		local XPkiller = this.Math.floor(_actor.getXPValue() * this.Const.XP.XPForKillerPct);
-		local XPgroup = _actor.getXPValue() * (1.000000 - this.Const.XP.XPForKillerPct);
+		local XPgroup = _actor.getXPValue() * (1.0 - this.Const.XP.XPForKillerPct);
 		this.addXP(XPkiller);
 		local brothers = this.Tactical.Entities.getInstancesOfFaction(this.Const.Faction.Player);
 
@@ -1320,13 +1320,13 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 				if (this.World.Retinue.hasFollower("follower.drill_sergeant"))
 				{
-					_xp = _xp * this.Math.maxf(1.000000, 1.200000 - 0.020000 * (this.m.Level - 1));
+					_xp = _xp * this.Math.maxf(1.0, 1.2 - 0.02 * (this.m.Level - 1));
 				}
 			}
 
 			if (this.World.getPlayerRoster().getSize() < 3)
 			{
-				_xp = _xp * (1.000000 - (3 - this.World.getPlayerRoster().getSize()) * 0.150000);
+				_xp = _xp * (1.0 - (3 - this.World.getPlayerRoster().getSize()) * 0.15);
 			}
 		}
 
@@ -2147,7 +2147,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 		}
 	}
 
-	function addInjury( _injuries, _maxThreshold = 1.000000, _isOutOfCombat = true )
+	function addInjury( _injuries, _maxThreshold = 1.0, _isOutOfCombat = true )
 	{
 		if (_injuries.len() == 0)
 		{

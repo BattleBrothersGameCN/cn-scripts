@@ -40,7 +40,7 @@ this.possessed_undead_effect <- this.inherit("scripts/skills/skill", {
 		_properties.MeleeSkill += 15;
 		_properties.MeleeDefense += 10;
 		_properties.RangedDefense += 10;
-		_properties.DamageReceivedTotalMult *= 0.750000;
+		_properties.DamageReceivedTotalMult *= 0.75;
 	}
 
 	function onAdded()

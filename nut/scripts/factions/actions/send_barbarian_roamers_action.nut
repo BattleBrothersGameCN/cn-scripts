@@ -3,7 +3,7 @@ this.send_barbarian_roamers_action <- this.inherit("scripts/factions/faction_act
 	function create()
 	{
 		this.m.ID = "send_barbarian_roamers_action";
-		this.m.Cooldown = 45.000000;
+		this.m.Cooldown = 45.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -40,7 +40,7 @@ this.send_barbarian_roamers_action <- this.inherit("scripts/factions/faction_act
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -67,7 +67,7 @@ this.send_barbarian_roamers_action <- this.inherit("scripts/factions/faction_act
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}

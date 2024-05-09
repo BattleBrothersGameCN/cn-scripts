@@ -20,13 +20,13 @@ this.goedendag <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_goedendag_01";
 		this.m.Value = 600;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.StaminaModifier = -14;
 		this.m.RegularDamage = 45;
 		this.m.RegularDamageMax = 75;
-		this.m.ArmorDamageMult = 1.100000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.1;
+		this.m.DirectDamageMult = 0.25;
 		this.m.ChanceToHitHead = 0;
 	}
 

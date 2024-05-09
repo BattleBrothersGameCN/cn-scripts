@@ -4,7 +4,7 @@ this.defeat_kraken_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_kraken";
-		this.m.Duration = 35.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "有传言说沼泽地里潜伏着一只巨大的野兽。\n如果我们找到并杀死它，无上的荣誉将属于我们！";
 		this.m.UIText = "击败克拉肯";
 		this.m.TooltipText = "在战斗中击败克拉肯。 你能在野外的某个地方找到它。";

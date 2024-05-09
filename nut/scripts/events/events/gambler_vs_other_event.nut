@@ -7,7 +7,7 @@ this.gambler_vs_other_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.gambler_vs_other";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_06.png[/img]{%gambler% 和 %nongambler% 浑身是伤地走过来。 看起来他们打了一架。 不过既然俩人都还好好地喘着气儿，你并不想知道出了什么事，但他们还是告诉你了。\n\n很显然，这个赌徒为了赢钱耍了些不那么光明正大的小伎俩。 你问他们这事儿有没有涉及到战团的资金。他们说没有。 你问他们还来找你干嘛。 | 一场牌局竟是如此收场，%nongambler% 从凳子上跳起来掀了桌子，指着 %gambler% 一通大骂。这个以前的职业赌棍却顾左右而言它。 这怎么可能，谁能一下赢走那么多钱，但是当他的手举起来假装困惑时，几张“多余的”纸牌却从他袖子里溜了出来。 The ensuing battle is amusing, but you put a stop to it before anyone gets seriously hurt.}",

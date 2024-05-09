@@ -13,7 +13,7 @@ if (!("Spawn" in gt.Const.World))
 gt.Const.World.Spawn.Unit <- {
 	ID = 0,
 	Variant = 0,
-	Strength = 0.000000,
+	Strength = 0.0,
 	Row = 0,
 	Party = null,
 	Faction = null,
@@ -1072,9 +1072,9 @@ gt.Const.World.Spawn.Troops <- {
 gt.Const.World.Spawn.Caravan <- [
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1089,9 +1089,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1106,9 +1106,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1127,9 +1127,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1148,9 +1148,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1169,9 +1169,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1186,9 +1186,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1207,9 +1207,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1228,9 +1228,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1249,9 +1249,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1270,9 +1270,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1291,9 +1291,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1312,9 +1312,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1333,9 +1333,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1354,9 +1354,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1375,9 +1375,9 @@ gt.Const.World.Spawn.Caravan <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1398,9 +1398,9 @@ gt.Const.World.Spawn.Caravan <- [
 gt.Const.World.Spawn.CaravanEscort <- [
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1415,9 +1415,9 @@ gt.Const.World.Spawn.CaravanEscort <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1432,9 +1432,9 @@ gt.Const.World.Spawn.CaravanEscort <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1449,9 +1449,9 @@ gt.Const.World.Spawn.CaravanEscort <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1466,9 +1466,9 @@ gt.Const.World.Spawn.CaravanEscort <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1483,9 +1483,9 @@ gt.Const.World.Spawn.CaravanEscort <- [
 	},
 	{
 		Cost = 0,
-		MovementSpeedMult = 0.500000,
-		VisibilityMult = 1.000000,
-		VisionMult = 0.250000,
+		MovementSpeedMult = 0.5,
+		VisibilityMult = 1.0,
+		VisionMult = 0.25,
 		Body = "cart_02",
 		Troops = [
 			{
@@ -1526,7 +1526,7 @@ function calculateCosts( _p )
 
 		if (!("MovementSpeedMult" in p))
 		{
-			p.MovementSpeedMult <- 1.000000;
+			p.MovementSpeedMult <- 1.0;
 		}
 	}
 

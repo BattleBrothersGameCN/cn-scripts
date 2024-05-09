@@ -4,7 +4,7 @@ this.desert_feet_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.desert_feet";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 80.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_161.png[/img]{在沙丘间行军数日让手下们的靴子里钻进了不少砂砾。 几个人停下，清理他们的靴子，其他人显示出他们已经被磨得像地面一样粗糙的脚。 这看来可真是个地狱般的地形，不论是上面的太阳还是下面的沙地，都在给你带来麻烦。}",
@@ -34,7 +34,7 @@ this.desert_feet_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.750000, "他的脚被沙漠的沙子磨了");
+						bro.worsenMood(0.75, "他的脚被沙漠的沙子磨了");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

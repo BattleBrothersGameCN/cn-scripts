@@ -41,7 +41,7 @@ this.ignite_firelance_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.BurningBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BurningHead;
 		this.m.HitChanceBonus = 40;
-		this.m.DirectDamageMult = 0.150000;
+		this.m.DirectDamageMult = 0.15;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 5;
 		this.m.MinRange = 1;
@@ -135,7 +135,7 @@ this.ignite_firelance_skill <- this.inherit("scripts/skills/skill", {
 				for( local i = 0; i < this.Const.Tactical.BurnParticles.len() - 1; i = ++i )
 				{
 					local effect = this.Const.Tactical.BurnParticles[i];
-					this.Tactical.spawnParticleEffect(false, effect.Brushes, t.getTile(), effect.Delay, effect.Quantity * 0.100000, effect.LifeTimeQuantity * 0.100000, effect.SpawnRate * 0.100000, effect.Stages, this.createVec(0, 0));
+					this.Tactical.spawnParticleEffect(false, effect.Brushes, t.getTile(), effect.Delay, effect.Quantity * 0.1, effect.LifeTimeQuantity * 0.1, effect.SpawnRate * 0.1, effect.Stages, this.createVec(0, 0));
 				}
 			}
 		}
@@ -148,7 +148,7 @@ this.ignite_firelance_skill <- this.inherit("scripts/skills/skill", {
 			_properties.RangedSkill += 40;
 			_properties.DamageRegularMin = 40;
 			_properties.DamageRegularMax = 60;
-			_properties.DamageArmorMult = 0.900000;
+			_properties.DamageArmorMult = 0.9;
 		}
 	}
 
@@ -171,7 +171,7 @@ this.ignite_firelance_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInCrossbows ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInCrossbows ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -229,7 +229,7 @@ this.ignite_firelance_skill <- this.inherit("scripts/skills/skill", {
 			}
 		}
 
-		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.000000, user.getPos());
+		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, user.getPos());
 		local tag = {
 			User = user,
 			Targets = targets

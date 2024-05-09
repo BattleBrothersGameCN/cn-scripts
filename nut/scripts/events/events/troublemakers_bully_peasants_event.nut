@@ -8,7 +8,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 	{
 		this.m.ID = "event.troublemakers_bully_peasants";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%townImage%在进入 %townname% 后不久，%troublemaker% 就开始骚扰当地人了。 他用手把他们手上的篮子打掉，把女人踹到泥地里去。 当一个老人反抗他的时候，佣兵拔出了他的武器。 其他农民请求你快点制止这一切。",
@@ -84,7 +84,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 				this.World.Assets.addMoralReputation(-3);
 				local f = _event.m.Town.getFactionOfType(this.Const.FactionType.Settlement);
 				f.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "你的一个手下在城里造成了祸患");
-				_event.m.Troublemaker.improveMood(1.000000, "欺负屁民");
+				_event.m.Troublemaker.improveMood(1.0, "欺负屁民");
 
 				if (_event.m.Troublemaker.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -116,7 +116,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Troublemaker.getImagePath());
-				_event.m.Troublemaker.worsenMood(2.000000, "在战团面前丢脸");
+				_event.m.Troublemaker.worsenMood(2.0, "在战团面前丢脸");
 
 				if (_event.m.Troublemaker.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -164,7 +164,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 				{
 					if (bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getBackground().isCombatBackground())
 					{
-						bro.improveMood(1.000000, "喜欢掠夺和抢劫");
+						bro.improveMood(1.0, "喜欢掠夺和抢劫");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -177,7 +177,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 					}
 					else if (bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(1.000000, "对战团的行为感到震惊");
+						bro.worsenMood(1.0, "对战团的行为感到震惊");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -241,7 +241,7 @@ this.troublemakers_bully_peasants_event <- this.inherit("scripts/events/event", 
 					icon = injury.getIcon(),
 					text = _event.m.Peacekeeper.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Peacekeeper.worsenMood(2.000000, "在战团面前丢脸");
+				_event.m.Peacekeeper.worsenMood(2.0, "在战团面前丢脸");
 
 				if (_event.m.Peacekeeper.getMoodState() < this.Const.MoodState.Neutral)
 				{

@@ -4,7 +4,7 @@ this.traveler_south_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.traveler_south";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_171.png[/img]{你遇到一个带着家里年轻男孩的男人在沙漠里游荡。 他欢迎你坐在篝火边并问你是否想听听沙漠和南方的故事。}",
@@ -69,7 +69,7 @@ this.traveler_south_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (currentTile.SquareCoords.Y >= this.World.getMapSize().Y * 0.200000)
+		if (currentTile.SquareCoords.Y >= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

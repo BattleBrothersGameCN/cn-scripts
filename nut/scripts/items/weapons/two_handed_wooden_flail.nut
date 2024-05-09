@@ -20,13 +20,13 @@ this.two_handed_wooden_flail <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_flail_two_handed_01";
 		this.m.Value = 500;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 56.000000;
-		this.m.ConditionMax = 56.000000;
+		this.m.Condition = 56.0;
+		this.m.ConditionMax = 56.0;
 		this.m.StaminaModifier = -14;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 60;
-		this.m.ArmorDamageMult = 0.800000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 0.8;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 15;
 	}
 

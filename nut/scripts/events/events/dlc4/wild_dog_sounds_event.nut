@@ -8,7 +8,7 @@ this.wild_dog_sounds_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.wild_dog_sounds";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 90.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_33.png[/img]{营地里 %randombrother% 停下了手里的活并仔细聆听着什么。%SPEECH_ON%都听到那东西了吗？%SPEECH_OFF%是的。野狗在歇斯底里的狂吠。 你耸耸肩说没什么，但接下来那叫声变成了咆哮声你能感觉出这是只有战斗才能发出歇斯底里般的声音。 咆哮声逐渐变成了呜咽声。 一定有什么东西输了这场战斗。%randombrother% 转向你。%SPEECH_ON%声音听起来很近，我们应该检查一下吗？ 我可不想在这儿睡觉。%SPEECH_OFF%}",
@@ -99,7 +99,7 @@ this.wild_dog_sounds_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.worsenMood(0.500000, "没有睡好觉");
+						bro.worsenMood(0.5, "没有睡好觉");
 						local effect = this.new("scripts/skills/effects_world/exhausted_effect");
 						bro.getSkills().add(effect);
 						this.List.push({
@@ -189,7 +189,7 @@ this.wild_dog_sounds_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 15)
 					{
-						bro.worsenMood(0.500000, "担心外面有大事");
+						bro.worsenMood(0.5, "担心外面有大事");
 					}
 				}
 			}
@@ -214,7 +214,7 @@ this.wild_dog_sounds_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Wildman.getImagePath());
-				_event.m.Wildman.improveMood(1.000000, "睡个好觉");
+				_event.m.Wildman.improveMood(1.0, "睡个好觉");
 
 				if (_event.m.Wildman.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -294,7 +294,7 @@ this.wild_dog_sounds_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/xp_received.png",
 					text = _event.m.Expendable.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] 经验值"
 				});
-				_event.m.Expendable.improveMood(3.000000, "经历了一次极好的冒险");
+				_event.m.Expendable.improveMood(3.0, "经历了一次极好的冒险");
 
 				if (_event.m.Expendable.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -319,12 +319,12 @@ this.wild_dog_sounds_event <- this.inherit("scripts/events/event", {
 
 				if (items.getItemAtSlot(this.Const.ItemSlot.Head) != null)
 				{
-					items.getItemAtSlot(this.Const.ItemSlot.Head).setCondition(this.Math.max(1, items.getItemAtSlot(this.Const.ItemSlot.Head).getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+					items.getItemAtSlot(this.Const.ItemSlot.Head).setCondition(this.Math.max(1, items.getItemAtSlot(this.Const.ItemSlot.Head).getConditionMax() * this.Math.rand(10, 40) * 0.01));
 				}
 
 				if (items.getItemAtSlot(this.Const.ItemSlot.Body) != null)
 				{
-					items.getItemAtSlot(this.Const.ItemSlot.Body).setCondition(this.Math.max(1, items.getItemAtSlot(this.Const.ItemSlot.Body).getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+					items.getItemAtSlot(this.Const.ItemSlot.Body).setCondition(this.Math.max(1, items.getItemAtSlot(this.Const.ItemSlot.Body).getConditionMax() * this.Math.rand(10, 40) * 0.01));
 				}
 			}
 

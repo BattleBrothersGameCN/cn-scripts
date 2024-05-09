@@ -8,7 +8,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.tutorial";
 		this.m.Name = "%companyname%战团";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + 9000.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + 9000.0;
 	}
 
 	function start()
@@ -61,7 +61,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.setOrigin(best_start);
 		this.m.Home.setVisited(true);
 		this.m.Home.setDiscovered(true);
-		this.World.uncoverFogOfWar(this.m.Home.getTile().Pos, 500.000000);
+		this.World.uncoverFogOfWar(this.m.Home.getTile().Pos, 500.0);
 		this.m.Faction = best_start.getFactions()[0];
 		this.m.EmployerID = this.World.FactionManager.getFaction(this.m.Faction).getRandomCharacter().getID();
 		this.m.BigCity = this.WeakTableRef(best_big);
@@ -241,28 +241,28 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 				e.getBaseProperties().MeleeSkill = -200;
 				e.getBaseProperties().RangedSkill = 0;
 				e.getBaseProperties().MeleeDefense = -200;
-				e.getBaseProperties().DamageTotalMult = 0.100000;
+				e.getBaseProperties().DamageTotalMult = 0.1;
 				e.getBaseProperties().Initiative = 250;
 				e.getSkills().update();
 				e.setHitpoints(5);
 				e = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/bandit_thug", 18, 17 - 18 / 2);
 				e.setFaction(this.Const.Faction.Enemy);
-				e.getAIAgent().getProperties().OverallDefensivenessMult = 0.000000;
-				e.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.000000;
+				e.getAIAgent().getProperties().OverallDefensivenessMult = 0.0;
+				e.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.0;
 				e.assignRandomEquipment();
 				e.getBaseProperties().Initiative = 300;
 				e.getSkills().update();
 				e = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/bandit_thug", 17, 18 - 17 / 2);
 				e.setFaction(this.Const.Faction.Enemy);
-				e.getAIAgent().getProperties().OverallDefensivenessMult = 0.000000;
-				e.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.000000;
+				e.getAIAgent().getProperties().OverallDefensivenessMult = 0.0;
+				e.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.0;
 				e.assignRandomEquipment();
 				e.getBaseProperties().Initiative = 200;
 				e.getSkills().update();
 				e = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/bandit_raider_low", 19, 17 - 19 / 2);
 				e.setFaction(this.Const.Faction.Enemy);
 				e.setName(this.Flags.get("BossName"));
-				e.getAIAgent().getProperties().OverallDefensivenessMult = 0.000000;
+				e.getAIAgent().getProperties().OverallDefensivenessMult = 0.0;
 				e.getAIAgent().addBehavior(this.new("scripts/ai/tactical/behaviors/ai_retreat_always"));
 				local items = e.getItems();
 				items.equip(this.new("scripts/items/armor/patched_mail_shirt"));
@@ -331,7 +331,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.BulletpointsObjectives.push("给你的人买武器和盔甲");
 				this.World.State.getPlayer().setAttackable(false);
 				this.Contract.m.BigCity.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.BigCity.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.BigCity.getTile().Pos, 500.0);
 			}
 
 			function update()
@@ -397,7 +397,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 					this.Contract.m.Location.setName(this.Flags.get("LocationName"));
 					this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).addSettlement(this.Contract.m.Location.get(), false);
 					this.Contract.m.Location.setDiscovered(true);
-					this.World.uncoverFogOfWar(this.Contract.m.Location.getTile().Pos, 400.000000);
+					this.World.uncoverFogOfWar(this.Contract.m.Location.getTile().Pos, 400.0);
 					this.Contract.m.Location.clearTroops();
 					this.Const.World.Common.addTroop(this.Contract.m.Location, {
 						Type = this.Const.World.Spawn.Troops.BanditMarksmanLOW
@@ -496,7 +496,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 				e.setFaction(this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).getID());
 				e.setName(this.Flags.get("BossName"));
 				e.m.IsGeneratingKillName = false;
-				e.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.000000;
+				e.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.0;
 				e.getFlags().add("IsFinalBoss", true);
 				local items = e.getItems();
 				items.equip(this.new("scripts/items/armor/patched_mail_shirt"));
@@ -544,7 +544,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 					this.Contract.setScreen("Success");
 					this.World.Contracts.showActiveContract();
 				}
-				else if (!this.Flags.get("IsCampingTipShown") && this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() >= 10.000000)
+				else if (!this.Flags.get("IsCampingTipShown") && this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() >= 10.0)
 				{
 					this.Flags.set("IsCampingTipShown", true);
 					this.Contract.setScreen("CampingTip");
@@ -812,11 +812,11 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (bro.getBackground().getID() == "background.companion")
 					{
-						bro.improveMood(1.000000, "为战团报仇");
+						bro.improveMood(1.0, "为战团报仇");
 					}
 					else
 					{
-						bro.improveMood(0.250000, "对你的领导能力有了信心");
+						bro.improveMood(0.25, "对你的领导能力有了信心");
 					}
 				}
 
@@ -848,26 +848,26 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		local armorSprite = armors[this.Math.rand(0, armors.len() - 1)];
 		local flip = this.Math.rand(0, 1) == 1;
 		local decal = tile.spawnDetail(armorSprite, this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-		decal.Scale = 0.900000;
-		decal.setBrightness(0.900000);
+		decal.Scale = 0.9;
+		decal.setBrightness(0.9);
 		decal = tile.spawnDetail("bust_naked_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-		decal.Scale = 0.900000;
-		decal.setBrightness(0.900000);
+		decal.Scale = 0.9;
+		decal.setBrightness(0.9);
 
 		if (this.Math.rand(1, 100) <= 25)
 		{
 			decal = tile.spawnDetail("bust_body_guts_0" + this.Math.rand(1, 3), this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-			decal.Scale = 0.900000;
+			decal.Scale = 0.9;
 		}
 		else if (this.Math.rand(1, 100) <= 25)
 		{
 			decal = tile.spawnDetail("bust_head_smashed_01", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-			decal.Scale = 0.900000;
+			decal.Scale = 0.9;
 		}
 		else
 		{
 			decal = tile.spawnDetail(armorSprite + "_arrows", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-			decal.Scale = 0.900000;
+			decal.Scale = 0.9;
 		}
 
 		local color = this.Const.HairColors.All[this.Math.rand(0, this.Const.HairColors.All.len() - 1)];
@@ -875,28 +875,28 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		local beardSprite = "beard_" + color + "_" + this.Const.Beards.All[this.Math.rand(0, this.Const.Beards.All.len() - 1)];
 		local headSprite = this.Const.Faces.AllMale[this.Math.rand(0, this.Const.Faces.AllMale.len() - 1)];
 		local decal = tile.spawnDetail(headSprite + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-		decal.Scale = 0.900000;
-		decal.setBrightness(0.900000);
+		decal.Scale = 0.9;
+		decal.setBrightness(0.9);
 
 		if (this.Math.rand(1, 100) <= 50)
 		{
 			local decal = tile.spawnDetail(beardSprite + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-			decal.Scale = 0.900000;
-			decal.setBrightness(0.900000);
+			decal.Scale = 0.9;
+			decal.setBrightness(0.9);
 		}
 
 		if (this.Math.rand(1, 100) <= 90)
 		{
 			local decal = tile.spawnDetail(hairSprite + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-			decal.Scale = 0.900000;
-			decal.setBrightness(0.900000);
+			decal.Scale = 0.9;
+			decal.setBrightness(0.9);
 		}
 
 		local pools = this.Math.rand(this.Const.Combat.BloodPoolsAtDeathMin, this.Const.Combat.BloodPoolsAtDeathMax);
 
 		for( local i = 0; i < pools; i = ++i )
 		{
-			this.Tactical.spawnPoolEffect(this.Const.BloodPoolDecals[this.Const.BloodType.Red][this.Math.rand(0, this.Const.BloodPoolDecals[this.Const.BloodType.Red].len() - 1)], tile, this.Const.BloodPoolTerrainAlpha[tile.Type], 1.000000, this.Const.Tactical.DetailFlag.Corpse);
+			this.Tactical.spawnPoolEffect(this.Const.BloodPoolDecals[this.Const.BloodType.Red][this.Math.rand(0, this.Const.BloodPoolDecals[this.Const.BloodType.Red].len() - 1)], tile, this.Const.BloodPoolTerrainAlpha[tile.Type], 1.0, this.Const.Tactical.DetailFlag.Corpse);
 		}
 
 		local corpse = clone this.Const.Corpse;

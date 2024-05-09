@@ -7,7 +7,7 @@ this.ailing_recovers_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.ailing_recovers";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 75.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 75.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]{%ailing%双手张开，像在绷紧的绳索上保持平衡一样在营地周围走着。他转身时点头，一步步地走回来。%SPEECH_ON%这是很长时间以来我第一次感觉好起来。谢谢你，%healer%！%SPEECH_OFF%看来%healer%知道几种方法来治好%ailing%的问题。}",
@@ -28,7 +28,7 @@ this.ailing_recovers_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Ailing.getImagePath());
 				this.Characters.push(_event.m.Healer.getImagePath());
-				_event.m.Ailing.improveMood(1.500000, "感觉他在很长一段时间内做得最好");
+				_event.m.Ailing.improveMood(1.5, "感觉他在很长一段时间内做得最好");
 
 				if (_event.m.Ailing.getMoodState() >= this.Const.MoodState.Neutral)
 				{

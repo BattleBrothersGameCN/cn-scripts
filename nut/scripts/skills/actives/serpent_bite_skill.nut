@@ -30,7 +30,7 @@ this.serpent_bite_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 5;
 		this.m.MinRange = 1;
@@ -44,7 +44,7 @@ this.serpent_bite_skill <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.DamageRegularMin += 50;
 		_properties.DamageRegularMax += 70;
-		_properties.DamageArmorMult *= 0.750000;
+		_properties.DamageArmorMult *= 0.75;
 	}
 
 	function onUse( _user, _targetTile )

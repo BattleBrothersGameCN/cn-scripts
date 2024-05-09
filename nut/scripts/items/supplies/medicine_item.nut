@@ -36,7 +36,7 @@ this.medicine_item <- this.inherit("scripts/items/item", {
 
 	function getValue()
 	{
-		return this.Math.floor(this.m.Amount / 20.000000 * this.m.Value);
+		return this.Math.floor(this.m.Amount / 20.0 * this.m.Value);
 	}
 
 	function getBuyPrice()
@@ -44,7 +44,7 @@ this.medicine_item <- this.inherit("scripts/items/item", {
 		if (("State" in this.World) && this.World.State != null && this.World.State.getCurrentTown() != null)
 		{
 			local isBuildingPresent = this.World.State.getCurrentTown().hasAttachedLocation("attached_location.herbalists_grove") || this.World.State.getCurrentTown().hasAttachedLocation("attached_location.mushroom_grove") || this.World.State.getCurrentTown().hasAttachedLocation("attached_location.gatherers_hut");
-			return this.Math.max(this.getSellPrice(), this.Math.ceil(this.getValue() * this.getPriceMult() * this.Const.Difficulty.BuyPriceMult[this.World.Assets.getEconomicDifficulty()] * this.World.State.getCurrentTown().getBuyPriceMult() * this.World.State.getCurrentTown().getModifiers().MedicalPriceMult * (isBuildingPresent ? 1.000000 : 1.500000)));
+			return this.Math.max(this.getSellPrice(), this.Math.ceil(this.getValue() * this.getPriceMult() * this.Const.Difficulty.BuyPriceMult[this.World.Assets.getEconomicDifficulty()] * this.World.State.getCurrentTown().getBuyPriceMult() * this.World.State.getCurrentTown().getModifiers().MedicalPriceMult * (isBuildingPresent ? 1.0 : 1.5)));
 		}
 
 		return this.item.getBuyPrice();

@@ -31,7 +31,7 @@ this.cascade_skill <- this.inherit("scripts/skills/skill", {
 		this.m.Delay = 250;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 13;
 		this.m.MinRange = 1;
@@ -63,7 +63,7 @@ this.cascade_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInFlails ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInFlails ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -115,8 +115,8 @@ this.cascade_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.DamageTotalMult *= 0.333333;
-			_properties.DamageTooltipMaxMult *= 3.000000;
+			_properties.DamageTotalMult *= 0.33333334;
+			_properties.DamageTooltipMaxMult *= 3.0;
 		}
 	}
 

@@ -125,7 +125,7 @@ this.footwork <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsFleetfooted ? 0.500000 : 1.000000;
+		this.m.FatigueCostMult = _properties.IsFleetfooted ? 0.5 : 1.0;
 
 		if (this.getContainer().getActor().getSkills().hasSkill("effects.goblin_grunt_potion"))
 		{

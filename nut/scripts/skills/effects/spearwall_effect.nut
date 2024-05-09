@@ -62,7 +62,7 @@ this.spearwall_effect <- this.inherit("scripts/skills/skill", {
 	{
 		if (this.Tactical.TurnSequenceBar.getActiveEntity() == null || this.Tactical.TurnSequenceBar.getActiveEntity().getID() != this.getContainer().getActor().getID())
 		{
-			_properties.DamageTotalMult *= 0.500000;
+			_properties.DamageTotalMult *= 0.5;
 		}
 	}
 

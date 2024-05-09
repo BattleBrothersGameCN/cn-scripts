@@ -33,22 +33,22 @@ this.fishing_huts_location <- this.inherit("scripts/entity/world/attached_locati
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/dried_fish_item"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/militia_spear"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "tools/throwing_net"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "tools/throwing_net"
 			});
 		}
@@ -57,7 +57,7 @@ this.fishing_huts_location <- this.inherit("scripts/entity/world/attached_locati
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 	}
 
 });

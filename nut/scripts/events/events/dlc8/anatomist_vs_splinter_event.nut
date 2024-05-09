@@ -7,7 +7,7 @@ this.anatomist_vs_splinter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_vs_splinter";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 110.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 110.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_184.png[/img]{你看到%anatomist%拿着%splinterbro%的赤裸裸的脚。当然，你问了他们在干什么。解剖学家拿着镊子，夹着一个巨大的木屑，站了起来。 %splinterbro%扭动着脚趾，然后站了起来。他在房间里走来走去，然后迅速地把脚落在地上并向前和向后走动。%SPEECH_ON%该死，我以为我的脚或者其他什么地方出了毛病，结果原来我带着一个巨大的垃圾碎片走了好多年！感觉太棒了！%SPEECH_OFF% %anatomist%没有扔掉木片，而是将其放在一个木盒子里，那里还有其他的医疗奇异物品。}",

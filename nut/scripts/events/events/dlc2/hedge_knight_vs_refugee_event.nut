@@ -8,7 +8,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.hedge_knight_vs_refugee";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_52.png[/img]%hedgeknight%这个寒鸦骑士走到一位正在吃饭的%refugee%身边。那名前难民看到他耸立的身影，缓缓地转过身来。%SPEECH_ON%干嘛？%SPEECH_OFF%寒鸦骑士哼了一声，吐出一团巨大的痰。他再次哼了一声。%SPEECH_ON%你从家里逃了出来。你看着它被火焰吞噬，却选择了背对火源逃走。这个战团现在是你的家，那么现在是什么使你停止逃离火焰？%SPEECH_OFF%",
@@ -80,7 +80,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Refugee.getName() + "失去[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + bravery + "[/color] 决心"
 				});
-				_event.m.Refugee.worsenMood(1.000000, "在战团面前受到羞辱");
+				_event.m.Refugee.worsenMood(1.0, "在战团面前受到羞辱");
 
 				if (_event.m.Refugee.getMoodState() <= this.Const.MoodState.Neutral)
 				{
@@ -121,7 +121,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Refugee.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + bravery + "[/color] 决心"
 				});
-				_event.m.Refugee.improveMood(1.000000, "得到了一些认可 " + _event.m.HedgeKnight.getName());
+				_event.m.Refugee.improveMood(1.0, "得到了一些认可 " + _event.m.HedgeKnight.getName());
 
 				if (_event.m.Refugee.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -132,7 +132,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.HedgeKnight.improveMood(0.500000, "喜欢上了" + _event.m.Refugee.getName() + "一些");
+				_event.m.HedgeKnight.improveMood(0.5, "喜欢上了" + _event.m.Refugee.getName() + "一些");
 
 				if (_event.m.HedgeKnight.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -176,7 +176,7 @@ this.hedge_knight_vs_refugee_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

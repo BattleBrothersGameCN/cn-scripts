@@ -10,7 +10,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.creepy_guy";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_43.png[/img]当你走在 %townname% 的街道上时，你看到一群人围着一个被绞死的人。 他一定是出了什么名：人们互相推搡，试图轮流把一个脚趾或手指割下来，作为一种值得悬挂的传家之宝。 一个老人很快被挤出了人群。 他转向你，声音沙哑，瘦骨嶙峋的手指像烂排骨一样耷拉着。%SPEECH_ON%啊，你们是佣兵？ 当然，我能嗅出你的斤两，你的生意来了。 喂，你能帮我做点事么？ 我需要那个死人的一些手指和脚趾。 这是我给你的工作，你应该明白。 我会给你五百克朗作为报酬。%SPEECH_OFF%你问他为什么需要那个特殊男人的附属肢体。 这个语调低沉，肩膀蜷缩着的男人笑了，发出一阵前所未闻的诘问。%SPEECH_ON%问得好。这个人赢得了走向刽子手绞索的机会，因为他有暴力倾向和一种能看穿自己欲望的强大能力。 一个傻瓜的脚趾和手指是不行的。我需要一个不受约束的残忍之人，而我现在看到的唯一的人正被那根绳子吊着。 所以，你们有啥要说的？ 五百克朗，记得么？%SPEECH_OFF%",
@@ -177,7 +177,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/initiative.png",
 					text = _event.m.Thief.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color]主动值"
 				});
-				_event.m.Thief.improveMood(1.000000, "用他独特的才能取得了巨大的成功");
+				_event.m.Thief.improveMood(1.0, "用他独特的才能取得了巨大的成功");
 
 				if (_event.m.Thief.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -228,7 +228,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/initiative.png",
 					text = _event.m.Minstrel.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + initiative + "[/color]主动值"
 				});
-				_event.m.Minstrel.improveMood(1.000000, "用他独特的才能取得了巨大的成功");
+				_event.m.Minstrel.improveMood(1.0, "用他独特的才能取得了巨大的成功");
 
 				if (_event.m.Minstrel.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -266,7 +266,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/asset_money.png",
 					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]250[/color] 克朗"
 				});
-				_event.m.Butcher.improveMood(1.000000, "卖了他的一根手指赚了一大笔钱");
+				_event.m.Butcher.improveMood(1.0, "卖了他的一根手指赚了一大笔钱");
 
 				if (_event.m.Butcher.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -280,7 +280,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Butcher.addInjury([
 					{
 						ID = "injury.missing_finger",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury_permanent/missing_finger_injury"
 					}
 				]);

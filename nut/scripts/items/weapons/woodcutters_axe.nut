@@ -20,13 +20,13 @@ this.woodcutters_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_axe_two_handed_02";
 		this.m.Value = 400;
 		this.m.ShieldDamage = 30;
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.StaminaModifier = -14;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 1.250000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 1.25;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ChanceToHitHead = 0;
 	}
 

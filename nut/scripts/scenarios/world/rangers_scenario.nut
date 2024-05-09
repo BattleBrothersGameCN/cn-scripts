@@ -152,7 +152,7 @@ this.rangers_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 		this.World.Assets.updateLook(10);
 		this.World.getCamera().setPos(this.World.State.m.Player.getPos());
 		local f = nearestVillage.getFactionOfType(this.Const.FactionType.NobleHouse);
-		f.addPlayerRelation(-20.000000, "听说你在他们的树林里偷猎");
+		f.addPlayerRelation(-20.0, "听说你在他们的树林里偷猎");
 		this.Time.scheduleEvent(this.TimeUnit.Real, 1000, function ( _tag )
 		{
 			this.Music.setTrackList(this.Const.Music.IntroTracks, this.Const.Music.CrossFadeTime);

@@ -7,7 +7,7 @@ this.alp_nightmare1_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.alp_nightmare1";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 300.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 300.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]{围着营火的士兵们正在交谈，%spiderbro%突然跳起来尖叫着。他向后弹开，被火光照亮，你可以看到一只像头盔一样大的蜘蛛附在他的靴子上！}",

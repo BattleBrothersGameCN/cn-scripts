@@ -8,7 +8,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_wants_skull";
 		this.m.Title = "在路上...";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_16.png[/img]{你来到一个偏远的村庄，发现一些村民蹲在一个装饰在讲台上的巨大漂白头骨前。路过的农民停下来信仰它。当你走近时，你意识到这颗头骨本身是非同寻常的: 一个长长的，厚厚的额头从上面伸出来，它的眉骨非常突出，有嵴状，而它的下颚在尚未破裂的情况下，拥有巨大而锋利的牙齿，其中大部分处于杂乱状态，就好像在任何普通的头部中，这样的嘴巴都会对它本身构成威胁。它很可能是一个Nachzehrer的头骨。当然，有了这个奇怪的骷髅前景，你希望能把队伍撤回去。-%SPEECH_ON%我们应该把它拿去研究一下。%SPEECH_OFF%你叹了口气，转身看见%anatomist%站在那里，盯着那颗头骨。你纠正他，说他真正想做的是偷它。解剖学家盯着你看。-%SPEECH_ON%词汇并不重要，当研究完毕，它们在我们手中的用处要比他们手中的好得多，这很清楚。%SPEECH_OFF%}",
@@ -81,7 +81,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.000000, "获得了一颗不寻常的颅骨进行研究。");
+				_event.m.Anatomist.improveMood(1.0, "获得了一颗不寻常的颅骨进行研究。");
 				_event.m.Anatomist.addLightInjury();
 				this.List.push({
 					id = 10,
@@ -153,8 +153,8 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.000000, "获得了一颗不寻常的颅骨进行研究。");
-				_event.m.Thief.improveMood(1.000000, "成功从农民那里盗取了物品。");
+				_event.m.Anatomist.improveMood(1.0, "获得了一颗不寻常的颅骨进行研究。");
+				_event.m.Thief.improveMood(1.0, "成功从农民那里盗取了物品。");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -255,8 +255,8 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.000000, "获得了一颗不寻常的颅骨进行研究。");
-				_event.m.Wildman.improveMood(1.000000, "帮助了 (Helped)" + _event.m.Anatomist.getName() + "获得一颗不寻常的头骨");
+				_event.m.Anatomist.improveMood(1.0, "获得了一颗不寻常的颅骨进行研究。");
+				_event.m.Wildman.improveMood(1.0, "帮助了 (Helped)" + _event.m.Anatomist.getName() + "获得一颗不寻常的头骨");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{

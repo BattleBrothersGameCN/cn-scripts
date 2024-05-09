@@ -67,8 +67,8 @@ this.ifrit_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.Armor[this.Const.BodyPart.Head] += this.Math.max(0.000000, this.m.HeadArmorBoost - this.m.HeadDamageTaken);
-		_properties.Armor[this.Const.BodyPart.Body] += this.Math.max(0.000000, this.m.BodyArmorBoost - this.m.BodyDamageTaken);
+		_properties.Armor[this.Const.BodyPart.Head] += this.Math.max(0.0, this.m.HeadArmorBoost - this.m.HeadDamageTaken);
+		_properties.Armor[this.Const.BodyPart.Body] += this.Math.max(0.0, this.m.BodyArmorBoost - this.m.BodyDamageTaken);
 		_properties.ArmorMax[this.Const.BodyPart.Head] += this.m.HeadArmorBoost;
 		_properties.ArmorMax[this.Const.BodyPart.Body] += this.m.BodyArmorBoost;
 	}

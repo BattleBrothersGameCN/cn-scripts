@@ -8,7 +8,7 @@ this.situation <- {
 		Rumors = [],
 		IsStacking = true,
 		ValidDays = 0,
-		ValidUntil = 0.000000
+		ValidUntil = 0.0
 	},
 	function getID()
 	{

@@ -6,7 +6,7 @@ this.fulfill_x_southern_contracts_ambition <- this.inherit("scripts/ambitions/am
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.fulfill_x_southern_contracts";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "南方的城邦拥有很多的克朗。\n我们会在炽热的沙漠阳光下发财！";
 		this.m.UIText = "履行城邦的合同";
 		this.m.TooltipText = "向南旅行，访问南方的城邦并在那里找到工作。 接受并完成上层统治者的合同。";

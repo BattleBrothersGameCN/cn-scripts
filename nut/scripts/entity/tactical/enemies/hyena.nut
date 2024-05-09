@@ -14,7 +14,7 @@ this.hyena <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.XP = this.Const.Tactical.Actor.Hyena.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(-10, -25);
-		this.m.DecapitateBloodAmount = 1.000000;
+		this.m.DecapitateBloodAmount = 1.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.m.ExcludedInjuries = [
 			"injury.fractured_hand",
@@ -91,9 +91,9 @@ this.hyena <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/werewolf_fatigue_06.wav",
 			"sounds/enemies/werewolf_fatigue_07.wav"
 		];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Attack] = 0.600000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.600000;
-		this.m.SoundPitch = this.Math.rand(95, 110) * 0.010000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Attack] = 0.6;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.6;
+		this.m.SoundPitch = this.Math.rand(95, 110) * 0.01;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/hyena_agent");
 		this.m.AIAgent.setActor(this);
 	}
@@ -102,11 +102,11 @@ this.hyena <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		if (this.Math.rand(1, 100) <= 50)
 		{
-			this.playSound(this.Const.Sound.ActorEvent.Attack, this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Attack] * (this.Math.rand(75, 100) * 0.010000), this.m.SoundPitch * 1.150000);
+			this.playSound(this.Const.Sound.ActorEvent.Attack, this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Attack] * (this.Math.rand(75, 100) * 0.01), this.m.SoundPitch * 1.15);
 		}
 	}
 
-	function playSound( _type, _volume, _pitch = 1.000000 )
+	function playSound( _type, _volume, _pitch = 1.0 )
 	{
 		this.actor.playSound(_type, _volume, _pitch);
 	}
@@ -123,35 +123,35 @@ this.hyena <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail("bust_hyena_01_body_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
-			decal.Scale = 0.950000;
+			decal.Scale = 0.95;
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
 			{
 				decal = _tile.spawnDetail(head.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Color = head.Color;
 				decal.Saturation = head.Saturation;
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
 			{
 				local layers = [
 					head.getBrush().Name + "_dead"
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), 0.000000, "bust_hyena_head_bloodpool");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), 0.0, "bust_hyena_head_bloodpool");
 				decap[0].Color = head.Color;
 				decap[0].Saturation = head.Saturation;
-				decap[0].Scale = 0.950000;
+				decap[0].Scale = 0.95;
 			}
 
 			if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
 				decal = _tile.spawnDetail("bust_hyena_01_body_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
 				decal = _tile.spawnDetail("bust_hyena_01_body_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -220,12 +220,12 @@ this.hyena <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varySaturation(0.200000);
+			body.varySaturation(0.2);
 		}
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varyColor(0.050000, 0.050000, 0.050000);
+			body.varyColor(0.05, 0.05, 0.05);
 		}
 
 		local head = this.addSprite("head");
@@ -238,7 +238,7 @@ this.hyena <- this.inherit("scripts/entity/tactical/actor", {
 		local body_blood = this.addSprite("body_blood");
 		body_blood.Visible = false;
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.540000;
+		this.getSprite("status_rooted").Scale = 0.54;
 		this.setSpriteOffset("status_rooted", this.createVec(0, 0));
 		this.m.Skills.add(this.new("scripts/skills/actives/hyena_bite_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_coup_de_grace"));

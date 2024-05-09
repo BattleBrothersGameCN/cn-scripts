@@ -15,13 +15,13 @@ this.named_dagger <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.m.AddGenericSkill = true;
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
-		this.m.Condition = 50.000000;
-		this.m.ConditionMax = 50.000000;
+		this.m.Condition = 50.0;
+		this.m.ConditionMax = 50.0;
 		this.m.Value = 1500;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 0.700000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.7;
+		this.m.DirectDamageMult = 0.2;
 		this.randomizeValues();
 	}
 

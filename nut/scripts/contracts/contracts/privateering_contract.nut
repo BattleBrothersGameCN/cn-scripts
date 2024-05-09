@@ -3,7 +3,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		Item = null,
 		CurrentObjective = null,
 		Objectives = [],
-		LastOrderUpdateTime = 0.000000
+		LastOrderUpdateTime = 0.0
 	},
 	function create()
 	{
@@ -12,16 +12,16 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r <= 70)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
 		this.m.Type = "contract.privateering";
 		this.m.Name = "私掠";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 	}
 
@@ -53,12 +53,12 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("Score", 0);
@@ -110,7 +110,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
 				local f = this.World.FactionManager.getFaction(this.Flags.get("FeudingHouseID"));
-				f.addPlayerRelation(-99.000000, "在战争选择了阵营");
+				f.addPlayerRelation(-99.0, "在战争选择了阵营");
 				this.Flags.set("StartDay", this.World.getTime().Days);
 				local nonIsolatedSettlements = [];
 
@@ -216,7 +216,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 
 				local c = party.getController();
 				local wait = this.new("scripts/ai/world/orders/wait_order");
-				wait.setTime(9000.000000);
+				wait.setTime(9000.0);
 				c.addOrder(wait);
 				local r = this.Math.rand(1, 100);
 
@@ -352,7 +352,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 					}
 				}
 
-				if (this.Contract.m.UnitsSpawned.len() != 0 && this.Time.getVirtualTimeF() - this.Contract.m.LastOrderUpdateTime > 2.000000)
+				if (this.Contract.m.UnitsSpawned.len() != 0 && this.Time.getVirtualTimeF() - this.Contract.m.LastOrderUpdateTime > 2.0)
 				{
 					this.Contract.m.LastOrderUpdateTime = this.Time.getVirtualTimeF();
 					local party = this.World.getEntityByID(this.Contract.m.UnitsSpawned[0]);
@@ -383,7 +383,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 							wait.setTime(this.World.getTime().SecondsPerDay * 1);
 							c.addOrder(wait);
 
-							if (party.getTile().getDistanceTo(playerTile) <= 8 && this.Time.getVirtualTimeF() - this.Flags.get("SearchPartyLastNotificationTime") >= 300.000000)
+							if (party.getTile().getDistanceTo(playerTile) <= 8 && this.Time.getVirtualTimeF() - this.Flags.get("SearchPartyLastNotificationTime") >= 300.0)
 							{
 								this.Flags.set("SearchPartyLastNotificationTime", this.Time.getVirtualTimeF());
 								this.Contract.setScreen("SearchParty");
@@ -665,7 +665,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 						f.addPlayerRelation(-f.getPlayerRelation(), "在战争中改变了立场");
 						f.getFlags().set("Betrayed", true);
 						local a = this.World.FactionManager.getFaction(this.Flags.get("RivalHouseID"));
-						a.addPlayerRelationEx(50.000000 - a.getPlayerRelation(), "在战争中改变了立场");
+						a.addPlayerRelationEx(50.0 - a.getPlayerRelation(), "在战争中改变了立场");
 						a.makeSettlementsFriendlyToPlayer();
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractBetrayal);
 						this.World.Contracts.finishActiveContract(true);

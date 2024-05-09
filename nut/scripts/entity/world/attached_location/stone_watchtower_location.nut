@@ -21,38 +21,38 @@ this.stone_watchtower_location <- this.inherit("scripts/entity/world/attached_lo
 			r = [
 				{
 					File = "ambience/settlement/settlement_dog_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_dog_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_dog_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_03.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				}
 			];
 			return r;
@@ -79,87 +79,87 @@ this.stone_watchtower_location <- this.inherit("scripts/entity/world/attached_lo
 		{
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/wardog_item"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/leather_tunic"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_surcoat"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_leather"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/gambeson"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/basic_mail_shirt"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/aketon_cap"
 			});
 			_list.push({
 				R = 15,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/full_aketon_cap"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/nasal_helmet"
 			});
 			_list.push({
 				R = 65,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/kettle_hat"
 			});
 			_list.push({
 				R = 65,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/flat_top_helmet"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "shields/wooden_shield"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/billhook"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/military_cleaver"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/boar_spear"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/crossbow"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "ammo/quiver_of_bolts"
 			});
 
@@ -168,12 +168,12 @@ this.stone_watchtower_location <- this.inherit("scripts/entity/world/attached_lo
 				_list.extend([
 					{
 						R = 80,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/two_handed_wooden_flail"
 					},
 					{
 						R = 80,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/throwing_spear"
 					}
 				]);

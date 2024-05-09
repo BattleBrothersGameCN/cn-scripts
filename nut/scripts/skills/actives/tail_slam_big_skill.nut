@@ -37,7 +37,7 @@ this.tail_slam_big_skill <- this.inherit("scripts/skills/skill", {
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 1;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.DirectDamageMult = 0.35;
 		this.m.ChanceDecapitate = 0;
 		this.m.ChanceDisembowel = 0;
 		this.m.ChanceSmash = 66;
@@ -143,10 +143,10 @@ this.tail_slam_big_skill <- this.inherit("scripts/skills/skill", {
 					HitInfo = clone this.Const.Tactical.HitInfo
 				};
 				tag.HitInfo.DamageRegular = damage;
-				tag.HitInfo.DamageDirect = 1.000000;
+				tag.HitInfo.DamageDirect = 1.0;
 				tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-				tag.HitInfo.BodyDamageMult = 1.000000;
-				tag.HitInfo.FatalityChanceMult = 1.000000;
+				tag.HitInfo.BodyDamageMult = 1.0;
+				tag.HitInfo.FatalityChanceMult = 1.0;
 				this.Tactical.getNavigator().teleport(_target, knockToTile, this.onKnockedDown, tag, true);
 			}
 		}
@@ -180,7 +180,7 @@ this.tail_slam_big_skill <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.DamageRegularMin += 60;
 			_properties.DamageRegularMax += 120;
-			_properties.DamageArmorMult *= 1.500000;
+			_properties.DamageArmorMult *= 1.5;
 		}
 	}
 

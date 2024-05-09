@@ -7,7 +7,7 @@ this.undead_zombie_in_granary_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.undead_zombie_in_granary";
 		this.m.Title = "在 %town%…";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_79.png[/img]你偶然碰到一个正大声呼救的人，歇斯底里叫着，似乎完全不在意会引起全副武装的佣兵的注意，明明佣兵不效忠于任何贵族家族或者他们制定的法律。%SPEECH_ON%拜托！帮助我！有一个…一具尸体！在谷仓里！%SPEECH_OFF%他抬起拇指朝身后一个巨大的木质建筑指了指。 建筑的前门好像回应似的刚刚好嘎吱响了起了。 那个人吓坏了。%SPEECH_ON%就是那个东西！那个怪物！ 拜托了，请去杀掉他！ 我们不能失去里面的所有食物！%SPEECH_OFF%",
@@ -83,7 +83,7 @@ this.undead_zombie_in_granary_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.500000, "你让一个男孩被意外的烧死了");
+						bro.worsenMood(0.5, "你让一个男孩被意外的烧死了");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -147,7 +147,7 @@ this.undead_zombie_in_granary_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Dude.worsenMood(2.000000, "意外杀了一个小男孩");
+				_event.m.Dude.worsenMood(2.0, "意外杀了一个小男孩");
 
 				if (_event.m.Dude.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -187,7 +187,7 @@ this.undead_zombie_in_granary_event <- this.inherit("scripts/events/event", {
 						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]50[/color] 克朗"
 					}
 				];
-				_event.m.Dude.improveMood(0.250000, "救了一个农民");
+				_event.m.Dude.improveMood(0.25, "救了一个农民");
 
 				if (_event.m.Dude.getMoodState() >= this.Const.MoodState.Neutral)
 				{

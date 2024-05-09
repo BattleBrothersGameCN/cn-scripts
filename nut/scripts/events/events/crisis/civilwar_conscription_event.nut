@@ -7,7 +7,7 @@ this.civilwar_conscription_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_conscription";
 		this.m.Title = "在%town%";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_43.png[/img]{%noblehouse% 的士兵正试图征召当地老百姓。 可以理解的是，百姓们不想参与战争，也不情愿去参军。 贵族的军官显然没有带够人手，他向你求助。 | 你遇到一群农民，他们大声喊叫，打倒了 %noblehouse% 的几个士兵。他们声明他们绝不会参加贵族家族之间的战争。%SPEECH_ON%领主为我们做了什么？！%SPEECH_OFF%一个人的质问得到了许多人的欢呼。 一名军官吼叫着回复他。%SPEECH_ON%他将他的地赐给你，使你和你的家族兴旺！%SPEECH_OFF%一位老人吐了一口唾沫。%SPEECH_ON%这不是那个老婊子的地盘。 在那个混蛋这么说之前，这不是任何人的土地。 为什么？就因为他愚弄了一些士兵，让他们认为他是对的？%SPEECH_OFF%人群的欢呼声越来越大。%SPEECH_ON%你已经夺走了我们很多人的生命，所以滚吧！ 如果他们的生命不能解决你们高贵的争吵，那么我们最后一个人还能做什么呢？%SPEECH_OFF%军官转向你，请求帮助，好像你特别有说服力，能让人们为他们不关心的事情去死。 | 一大群农民挤在穿过 %town% 的道路上。当你走近时，你意识到一群来自 %noblehouse% 的士兵正试图征召当地人，显然，这不是那些人想要参与的战斗。 因为没有足够的人手独自处理这一情况，士兵们的军官看向你。%SPEECH_ON%唉，雇佣兵。你能帮我说服这些小矮子参军吗？ 贵族老爷会知道你的行为的…%SPEECH_OFF% | Seemingly every villager is standing out in the road that snakes through %town%. Pushing your way through the crowd, you come to a small group of bewildered and scared soldiers of %noblehouse%. Their lieutenant has his hands up, a scroll dangling from one.%SPEECH_ON%这些不是我的命令，但我必须执行它们！%SPEECH_OFF%一个农民吐了一口唾沫。%SPEECH_ON%是的，带它们到坟墓里去吧！%SPEECH_OFF%军官见了，请你帮忙。%SPEECH_ON%佣兵！我们需要士兵参加贵族家族之间的伟大战争… 这些…白痴刁民，不服从命令。 领主的命令！ 帮助我们，我会亲自确保贵族们听到你在这里的工作。%SPEECH_OFF%}",

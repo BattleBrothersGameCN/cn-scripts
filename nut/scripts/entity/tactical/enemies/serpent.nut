@@ -9,7 +9,7 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.XP = this.Const.Tactical.Actor.Serpent.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 5);
 		this.m.DecapitateSplatterOffset = this.createVec(15, -26);
-		this.m.DecapitateBloodAmount = 1.000000;
+		this.m.DecapitateBloodAmount = 1.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.m.ExcludedInjuries = [
 			"injury.fractured_hand",
@@ -60,14 +60,14 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/dlc6/snake_idle_13.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Move] = this.m.Sound[this.Const.Sound.ActorEvent.Idle];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.700000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.000000;
-		this.m.SoundPitch = this.Math.rand(95, 105) * 0.010000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.7;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.0;
+		this.m.SoundPitch = this.Math.rand(95, 105) * 0.01;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/serpent_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
-	function playSound( _type, _volume, _pitch = 1.000000 )
+	function playSound( _type, _volume, _pitch = 1.0 )
 	{
 		if (_type == this.Const.Sound.ActorEvent.Move && this.Math.rand(1, 100) <= 33)
 		{
@@ -96,7 +96,7 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail("bust_snake_body_0" + this.m.Variant + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
-			decal.Scale = 0.900000;
+			decal.Scale = 0.9;
 			body_decal = decal;
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
@@ -104,7 +104,7 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 				decal = _tile.spawnDetail("bust_snake_body_0" + this.m.Variant + "_head_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Color = body.Color;
 				decal.Saturation = body.Saturation;
-				decal.Scale = 0.900000;
+				decal.Scale = 0.9;
 				head_decal = decal;
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
@@ -112,10 +112,10 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 				local layers = [
 					"bust_snake_body_0" + this.m.Variant + "_head_dead"
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, 20), 0.000000, "bust_snake_body_head_dead_bloodpool");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, 20), 0.0, "bust_snake_body_head_dead_bloodpool");
 				decap[0].Color = body.Color;
 				decap[0].Saturation = body.Saturation;
-				decap[0].Scale = 0.900000;
+				decap[0].Scale = 0.9;
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -175,7 +175,7 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 
 			if (this.World.getTime().Days >= 50)
 			{
-				b.DamageDirectMult += 0.150000;
+				b.DamageDirectMult += 0.15;
 			}
 		}
 
@@ -191,24 +191,24 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (this.m.Variant == 2 && this.Math.rand(0, 100) < 90)
 		{
-			body.varySaturation(0.100000);
+			body.varySaturation(0.1);
 		}
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varyColor(0.100000, 0.100000, 0.100000);
+			body.varyColor(0.1, 0.1, 0.1);
 		}
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varyBrightness(0.100000);
+			body.varyBrightness(0.1);
 		}
 
 		local injury = this.addSprite("injury");
 		injury.Visible = false;
 		injury.setBrush("bust_snake_injury");
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.650000;
+		this.getSprite("status_rooted").Scale = 0.65;
 		this.setSpriteOffset("status_rooted", this.createVec(-10, 20));
 		this.setSpriteOffset("status_stunned", this.createVec(-35, 20));
 		this.setSpriteOffset("arrow", this.createVec(0, 20));

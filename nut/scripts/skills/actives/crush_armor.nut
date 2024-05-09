@@ -27,7 +27,7 @@ this.crush_armor <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsWeaponSkill = true;
-		this.m.DirectDamageMult = 0.000000;
+		this.m.DirectDamageMult = 0.0;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -40,7 +40,7 @@ this.crush_armor <- this.inherit("scripts/skills/skill", {
 	function getTooltip()
 	{
 		local p = this.getContainer().getActor().getCurrentProperties();
-		local f = p.IsSpecializedInHammers ? 2.000000 : 1.500000;
+		local f = p.IsSpecializedInHammers ? 2.0 : 1.5;
 		local damage_armor_min = this.Math.floor(p.DamageRegularMin * p.DamageArmorMult * f * p.DamageTotalMult * p.MeleeDamageMult);
 		local damage_armor_max = this.Math.floor(p.DamageRegularMax * p.DamageArmorMult * f * p.DamageTotalMult * p.MeleeDamageMult);
 		local ret = this.getDefaultUtilityTooltip();
@@ -74,7 +74,7 @@ this.crush_armor <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInHammers ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInHammers ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -88,8 +88,8 @@ this.crush_armor <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.DamageArmorMult *= this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers ? 2.000000 : 1.500000;
-			_properties.DamageRegularMult *= 0.000000;
+			_properties.DamageArmorMult *= this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers ? 2.0 : 1.5;
+			_properties.DamageRegularMult *= 0.0;
 			_properties.DamageMinimum = this.Math.max(_properties.DamageMinimum, 10);
 		}
 	}

@@ -28,7 +28,7 @@ this.hyena_bite_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingAndPiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingAndPiercingHead;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.DirectDamageMult = 0.35;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 6;
 		this.m.MinRange = 1;
@@ -42,7 +42,7 @@ this.hyena_bite_skill <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.DamageRegularMin += 20;
 		_properties.DamageRegularMax += 35;
-		_properties.DamageArmorMult *= 1.000000;
+		_properties.DamageArmorMult *= 1.0;
 	}
 
 	function onUse( _user, _targetTile )

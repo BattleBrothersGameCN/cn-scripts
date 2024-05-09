@@ -71,8 +71,8 @@ this.smoke_effect <- this.inherit("scripts/skills/skill", {
 		}
 		else
 		{
-			_properties.RangedSkillMult *= 0.500000;
-			_properties.RangedDefenseMult *= 2.000000;
+			_properties.RangedSkillMult *= 0.5;
+			_properties.RangedDefenseMult *= 2.0;
 		}
 	}
 

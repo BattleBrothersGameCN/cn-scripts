@@ -45,7 +45,7 @@ this.iron_jaw_trait <- this.inherit("scripts/skills/traits/character_trait", {
 
 	function onUpdate( _properties )
 	{
-		_properties.ThresholdToReceiveInjuryMult *= 1.250000;
+		_properties.ThresholdToReceiveInjuryMult *= 1.25;
 	}
 
 });

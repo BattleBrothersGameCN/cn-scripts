@@ -8,7 +8,7 @@ this.sled_race_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.sled_race";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 90.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_143.png[/img]{当凌冽的寒风夹裹着雪花拍打在你脸上时，似乎有人在山上向你招手示意，这简直难以置信。 但就在那，手里拿着雪橇留着胡子的家伙。 他大声问你是否对比赛感兴趣。%SPEECH_ON%谁先到那个鸡头型断崖的石头那谁就赢！%SPEECH_OFF%你问玩这危险游戏干嘛。 他像说错话的狗一样看着你，随后你问他赌什么。他笑着说。%SPEECH_ON%不赌什么！只是为了好玩！%SPEECH_OFF%足够好了。也许 %companyname% 想试试？}",
@@ -94,7 +94,7 @@ this.sled_race_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -145,7 +145,7 @@ this.sled_race_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -196,7 +196,7 @@ this.sled_race_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

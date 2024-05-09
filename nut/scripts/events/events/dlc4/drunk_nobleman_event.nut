@@ -9,7 +9,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.drunk_nobleman";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 80.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{当在行军的时候，你发现一个喝醉了的贵族在路上摇摇晃晃。 他的头发乱糟糟的，叶子和草还有看起来像鸟粪的东西卷在里面，就好像有人故意搅动这些材料来做恶作剧。 但是他的衣服是用上好的丝绸做的，他手指上的宝石在闪闪发光。 他的两手各拿一个瓶子，他一边把它们摆来摆去，一边唱着令人费解的酒吧歌曲。\n\n他像一块你从未见过的巨大的磁石一样吸引着所有人的注意来抢劫他。%randombrother% 撅了撅他的嘴，他看起来就像是一头盯着肥羊的狼一样。%SPEECH_ON%我啥也没说，先生，我只是。 我只是看看。 那有很多好处。 有很多好处就在路上慢慢行走着。 但是，再强调一遍，我什么也没有说。%SPEECH_OFF%你知道他在说什么。}",
@@ -84,7 +84,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.World.Assets.addMoralReputation(-1);
 				local f = this.World.FactionManager.getFactionsOfType(this.Const.FactionType.NobleHouse);
 				f = f[this.Math.rand(0, f.len() - 1)];
-				f.addPlayerRelation(-15.000000, "传闻在路上抢劫了一个家族的成员");
+				f.addPlayerRelation(-15.0, "传闻在路上抢劫了一个家族的成员");
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/special.png",
@@ -269,7 +269,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Servant.getImagePath());
 				_event.m.Servant.getBaseProperties().Bravery += 2;
 				_event.m.Servant.getSkills().update();
-				_event.m.Servant.improveMood(1.000000, "回来的时候终于有了工作的报酬");
+				_event.m.Servant.improveMood(1.0, "回来的时候终于有了工作的报酬");
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/bravery.png",
@@ -345,7 +345,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

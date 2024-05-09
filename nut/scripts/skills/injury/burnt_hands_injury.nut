@@ -53,8 +53,8 @@ this.burnt_hands_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.MeleeSkillMult *= 0.750000;
-		_properties.RangedSkillMult *= 0.750000;
+		_properties.MeleeSkillMult *= 0.75;
+		_properties.RangedSkillMult *= 0.75;
 	}
 
 });

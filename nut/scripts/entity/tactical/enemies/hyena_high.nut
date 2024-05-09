@@ -18,7 +18,7 @@ this.hyena_high <- this.inherit("scripts/entity/tactical/enemies/hyena", {
 		b.setValues(this.Const.Tactical.Actor.FrenziedHyena);
 		b.IsAffectedByNight = false;
 		b.IsImmuneToDisarm = true;
-		b.DamageTotalMult = 1.250000;
+		b.DamageTotalMult = 1.25;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;

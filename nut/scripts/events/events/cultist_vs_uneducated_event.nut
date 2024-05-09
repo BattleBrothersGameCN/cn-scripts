@@ -7,7 +7,7 @@ this.cultist_vs_uneducated_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cultist_vs_uneducated";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]有几个兄弟来找你，看上去很着急。 他们说 %cultist% 和 %uneducated% 坐在一起已经几个小时了。 当你问他们担心什么时，他们会提醒你，那个额头有伤疤的邪教徒，说着令人难以置信的怪事。 Ah, right.\n\n你去看看那两个人。%uneducated% 抬头看着你，微笑着，说这个邪教徒有很多东西要教他。 做了个鬼脸，你不知道你是否应该停止这些…课程。",
@@ -101,7 +101,7 @@ this.cultist_vs_uneducated_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Cultist.getImagePath());
 				this.Characters.push(_event.m.Uneducated.getImagePath());
-				_event.m.Cultist.worsenMood(2.000000, "被剥夺了转化的机会，准备转化的是 " + _event.m.Uneducated.getName());
+				_event.m.Cultist.worsenMood(2.0, "被剥夺了转化的机会，准备转化的是 " + _event.m.Uneducated.getName());
 
 				if (_event.m.Cultist.getMoodState() < this.Const.MoodState.Neutral)
 				{

@@ -7,7 +7,7 @@ this.noble_vs_lowborn_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.noble_vs_lowborn";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 35.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_64.png[/img] 你发现贵族 %nobleman_short% 和另外一个衣衫褴褛的 %lowborn% 为最后一块食物在争吵。 很明显，这个出身卑微的人先用叉子拿到了这最后一块美味，但是这个贵族声称他良好的出身赋予了他获得这块烤肉的权力。",
@@ -102,7 +102,7 @@ this.noble_vs_lowborn_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Noble.getImagePath());
 				this.Characters.push(_event.m.Lowborn.getImagePath());
-				_event.m.Noble.worsenMood(2.000000, "在战团面前丢脸");
+				_event.m.Noble.worsenMood(2.0, "在战团面前丢脸");
 
 				if (_event.m.Noble.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -135,7 +135,7 @@ this.noble_vs_lowborn_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Noble.getImagePath());
 				this.Characters.push(_event.m.Lowborn.getImagePath());
-				_event.m.Lowborn.worsenMood(2.000000, "在战团面前丢脸");
+				_event.m.Lowborn.worsenMood(2.0, "在战团面前丢脸");
 
 				if (_event.m.Lowborn.getMoodState() < this.Const.MoodState.Neutral)
 				{

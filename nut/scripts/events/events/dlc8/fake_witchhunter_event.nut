@@ -6,7 +6,7 @@ this.fake_witchhunter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.fake_witchhunter";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_43.png[/img]{你看到一批怒气冲冲的农民围在一个黑色帽子男子周围，他手中拿着一张十字弩指向一名被缚住的人。不远处有一个柱子和柴火，场面骚乱。通过咳出的话语，你了解到了发生的事情：城里聘请的巫师猎人来了，经过调查驳回了这个女巫的指控，准备释放她。这引起了农民们的强烈不满。%SPEECH_ON%太不公了！是的，实在太不公了，我们付出那么多努力，准备一个完美的柴火，终于等到她了，却...却要放了她？！太不公了！但我们一定会让她付出代价，一定会！%SPEECH_OFF%众人咆哮着。看起来这名自称巫师猎人所犯的罪行，恐怕无法得到教会的宽恕。}",

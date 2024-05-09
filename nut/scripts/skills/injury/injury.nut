@@ -2,10 +2,10 @@ this.injury <- this.inherit("scripts/skills/skill", {
 	m = {
 		HealingTimeMin = 1,
 		HealingTimeMax = 1,
-		TreatmentPriceMult = 1.000000,
-		TimeApplied = 0.000000,
+		TreatmentPriceMult = 1.0,
+		TimeApplied = 0.0,
 		DropIcon = "",
-		InfectionChance = 0.000000,
+		InfectionChance = 0.0,
 		IsFresh = true,
 		IsTreated = false,
 		IsTreatable = true,
@@ -62,17 +62,17 @@ this.injury <- this.inherit("scripts/skills/skill", {
 		local mult = this.World.State.getCurrentTown().getBuyPriceMult() * this.Const.Difficulty.BuyPriceMult[this.World.Assets.getEconomicDifficulty()] * this.m.TreatmentPriceMult;
 		local time = this.getTime();
 		local maxt = this.Math.max(1, this.m.HealingTimeMax - this.Math.floor((time - this.m.TimeApplied) / this.World.getTime().SecondsPerDay));
-		mult = mult * (1.000000 + (this.getContainer().getActor().getLevel() - 1) * 0.200000);
+		mult = mult * (1.0 + (this.getContainer().getActor().getLevel() - 1) * 0.2);
 		local p = maxt * mult * this.Const.World.Assets.BaseWoundTreatmentPrice;
-		p = this.Math.round(p * 0.100000) * 10;
+		p = this.Math.round(p * 0.1) * 10;
 		return p;
 	}
 
 	function getHealingTime()
 	{
 		local time = this.getTime();
-		local mint = this.Math.max(1, (this.m.IsTreated ? this.m.HealingTimeMin * 0.500000 : this.m.HealingTimeMin) - this.Math.ceil((time - this.m.TimeApplied) / this.World.getTime().SecondsPerDay));
-		local maxt = this.Math.max(1, (this.m.IsTreated ? this.m.HealingTimeMax * 0.500000 : this.m.HealingTimeMax) - this.Math.floor((time - this.m.TimeApplied) / this.World.getTime().SecondsPerDay));
+		local mint = this.Math.max(1, (this.m.IsTreated ? this.m.HealingTimeMin * 0.5 : this.m.HealingTimeMin) - this.Math.ceil((time - this.m.TimeApplied) / this.World.getTime().SecondsPerDay));
+		local maxt = this.Math.max(1, (this.m.IsTreated ? this.m.HealingTimeMax * 0.5 : this.m.HealingTimeMax) - this.Math.floor((time - this.m.TimeApplied) / this.World.getTime().SecondsPerDay));
 
 		if (("State" in this.World) && this.World.State != null && this.World.Retinue.hasFollower("follower.surgeon"))
 		{
@@ -285,8 +285,8 @@ this.injury <- this.inherit("scripts/skills/skill", {
 
 			local time = this.getTime();
 			local daysPassed = this.Math.ceil((time - this.m.TimeApplied) / this.World.getTime().SecondsPerDay);
-			local minTime = this.m.HealingTimeMin * (this.m.IsTreated ? 0.500000 : 1.000000);
-			local maxTime = this.m.HealingTimeMax * (this.m.IsTreated ? 0.500000 : 1.000000);
+			local minTime = this.m.HealingTimeMin * (this.m.IsTreated ? 0.5 : 1.0);
+			local maxTime = this.m.HealingTimeMax * (this.m.IsTreated ? 0.5 : 1.0);
 
 			if (this.World.Retinue.hasFollower("follower.surgeon"))
 			{
@@ -305,7 +305,7 @@ this.injury <- this.inherit("scripts/skills/skill", {
 				return;
 			}
 
-			local chance = daysPassed / (maxTime * 1.000000) * 100.000000;
+			local chance = daysPassed / (maxTime * 1.0) * 100.0;
 
 			if (this.Math.rand(1, 100) <= chance)
 			{

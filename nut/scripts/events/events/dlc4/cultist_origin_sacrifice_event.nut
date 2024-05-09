@@ -9,7 +9,7 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cultist_origin_sacrifice";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_140.png[/img]{大多数人会认为这个梦是一场噩梦：黑暗包围着你，一片漆黑，你伸手就能摸到它。 那个声音说的是一种你以前从未听过的语言，但你至少能听懂。 在无尽的阴影中出现了两个面孔：%sac1% 和 %sac2%。那些人似乎离你很近，但当你伸出手去时，他们却退缩了，仿佛你的手指无限地伸入虚空。\n\n 一醒来，你就知道该做什么了。 但你在此时获得一种信任，达库尔的信任。 但是这种信任不是一般人能承受得起的：做出一个选择。 | 达库尔的出现是在一场营火中。 其余的人都消失在无尽的黑暗之中，取而代之的是一个奇怪的实体。 一个你看不见的实体，但它的存在只是一团混沌的阴影。 它要求一次献祭，不是通过对你说话，而是通过展示：%sac1% 和 %sac2%。第一个人的幻象不见了，然后另一个重复这个过程，直到两人都伸出手闭上眼睛。 这很清楚了，达库尔相信你的选择。 \n\n 当影子啪的一声消失时，营火变得很刺眼。%sac1% 和 %sac2% 正盯着你。%SPEECH_ON%准备好了么，先生？%SPEECH_OFF% | 你去了那个地方。 你知道你在睡觉，但你知道得很清楚，你还是去了那里，超越了你的思想，超越了你的身体，越过了大地，越过了河流，越过了干涸的大地，越过了即将崩塌的群山。 在那里你找到了达库尔。永恒的黑暗，迷人的暗影。\n\n %sac1% 和 %sac2% 已经在那里了，站在离你最近的地方，达库尔的身影在他们的影子后面快速地变换着。 一只黑色的雾手把一个人往前推了推，又把他拉了回来，然后又对另一个人重复了一遍。 你点头表示理解。献祭是必须的，你必须做出选择。}",
@@ -96,7 +96,7 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist")
 					{
-						bro.improveMood(2.000000, "安抚了达库尔");
+						bro.improveMood(2.0, "安抚了达库尔");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -174,7 +174,7 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 					}
 					else if (!bro.getSkills().hasSkill("trait.mad"))
 					{
-						bro.worsenMood(4.000000, "被献祭吓坏了，献祭的是 " + _event.m.Sacrifice.getName());
+						bro.worsenMood(4.0, "被献祭吓坏了，献祭的是 " + _event.m.Sacrifice.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

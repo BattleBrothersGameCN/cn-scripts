@@ -42,7 +42,7 @@ this.exhausted_effect <- this.inherit("scripts/skills/injury/injury", {
 	function onUpdate( _properties )
 	{
 		this.injury.onUpdate(_properties);
-		_properties.StaminaMult *= 0.600000;
+		_properties.StaminaMult *= 0.6;
 	}
 
 });

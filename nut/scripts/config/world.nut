@@ -62,88 +62,88 @@ gt.Const.World.TerrainScript <- [
 	"world.tile.oasis"
 ];
 gt.Const.World.TerrainTypeSpeedMult <- [
-	0.000000,
-	0.000000,
-	1.000000,
-	0.500000,
-	0.650000,
-	0.650000,
-	0.650000,
-	0.650000,
-	0.650000,
-	0.250000,
-	0.500000,
-	1.000000,
-	0.750000,
-	0.900000,
-	0.900000,
-	1.000000,
-	0.500000,
-	0.750000,
-	0.900000
+	0.0,
+	0.0,
+	1.0,
+	0.5,
+	0.65,
+	0.65,
+	0.65,
+	0.65,
+	0.65,
+	0.25,
+	0.5,
+	1.0,
+	0.75,
+	0.9,
+	0.9,
+	1.0,
+	0.5,
+	0.75,
+	0.9
 ];
 gt.Const.World.TerrainTypeVisibilityMult <- [
-	1.000000,
-	1.000000,
-	1.000000,
-	0.900000,
-	0.900000,
-	0.500000,
-	0.500000,
-	0.500000,
-	0.500000,
-	0.500000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	0.900000
+	1.0,
+	1.0,
+	1.0,
+	0.9,
+	0.9,
+	0.5,
+	0.5,
+	0.5,
+	0.5,
+	0.5,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	0.9
 ];
 gt.Const.World.TerrainTypeVisionRadiusMult <- [
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.250000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	2.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.25,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	2.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0
 ];
 gt.Const.World.TerrainFoodConsumption <- [
-	0.000000,
-	1.000000,
-	1.000000,
-	1.100000,
-	1.100000,
-	1.000000,
-	1.100000,
-	1.000000,
-	1.000000,
-	2.000000,
-	1.000000,
-	1.000000,
-	1.100000,
-	1.250000,
-	1.000000,
-	1.100000,
-	1.000000,
-	1.500000,
-	1.000000
+	0.0,
+	1.0,
+	1.0,
+	1.1,
+	1.1,
+	1.0,
+	1.1,
+	1.0,
+	1.0,
+	2.0,
+	1.0,
+	1.0,
+	1.1,
+	1.25,
+	1.0,
+	1.1,
+	1.0,
+	1.5,
+	1.0
 ];
 gt.Const.World.TerrainTypeLineBattle <- [
 	false,
@@ -353,25 +353,25 @@ gt.Const.World.ZLevel <- {
 	Particles = -30
 };
 gt.Const.World.MovementSettings <- {
-	GlobalMult = 0.750000,
-	NighttimeMult = 0.750000,
-	NotPlayerMult = 0.950000,
-	RoadMult = 1.500000,
-	RiverMult = 0.750000,
-	Speed = 100.000000,
-	SlowDownPartyPerTroop = 0.015000,
-	PlayerDirectMoveRadius = 400.000000
+	GlobalMult = 0.75,
+	NighttimeMult = 0.75,
+	NotPlayerMult = 0.95,
+	RoadMult = 1.5,
+	RiverMult = 0.75,
+	Speed = 100.0,
+	SlowDownPartyPerTroop = 0.015,
+	PlayerDirectMoveRadius = 400.0
 };
 gt.Const.World.SpeedSettings <- {
-	FastMult = 2.000000,
-	EscortMult = 3.750000,
-	CampMult = 3.000000
+	FastMult = 2.0,
+	EscortMult = 3.75,
+	CampMult = 3.0
 };
 gt.Const.World.CombatSettings <- {
 	CombatDistance = 100,
 	CombatPlayerDistance = 100,
-	CombatTickTime = 3.000000,
-	CombatStrengthMult = 0.400000
+	CombatTickTime = 3.0,
+	CombatStrengthMult = 0.4
 };
 gt.Const.World.GreaterEvilType <- {
 	Random = 0,
@@ -426,12 +426,12 @@ gt.Const.World.FootprintsType <- {
 gt.Const.World.Settings <- {
 	SizeX = 140,
 	SizeY = 140,
-	LandMassMult = 1.500000,
+	LandMassMult = 1.5,
 	WaterConnectivity = 38,
-	MinLandToWaterRatio = 1.700000,
+	MinLandToWaterRatio = 1.7,
 	MinDesertTiles = 2400,
-	Snowline = 0.900000,
-	Vision = 500.000000
+	Snowline = 0.9,
+	Vision = 500.0
 };
 gt.Const.World.TerrainTypeNavCost <- [
 	0
@@ -439,7 +439,7 @@ gt.Const.World.TerrainTypeNavCost <- [
 
 for( local i = 1; i < this.Const.World.TerrainTypeSpeedMult.len(); i = ++i )
 {
-	gt.Const.World.TerrainTypeNavCost.push(10 * (1.000000 / this.Const.World.TerrainTypeSpeedMult[i]));
+	gt.Const.World.TerrainTypeNavCost.push(10 * (1.0 / this.Const.World.TerrainTypeSpeedMult[i]));
 }
 
 gt.Const.World.TerrainTypeNavCost_Sneak <- [
@@ -448,7 +448,7 @@ gt.Const.World.TerrainTypeNavCost_Sneak <- [
 
 for( local i = 1; i < this.Const.World.TerrainTypeSpeedMult.len(); i = ++i )
 {
-	gt.Const.World.TerrainTypeNavCost_Sneak.push(10 * (1.000000 / this.Const.World.TerrainTypeSpeedMult[i]) * this.Const.World.TerrainTypeVisibilityMult[i]);
+	gt.Const.World.TerrainTypeNavCost_Sneak.push(10 * (1.0 / this.Const.World.TerrainTypeSpeedMult[i]) * this.Const.World.TerrainTypeVisibilityMult[i]);
 }
 
 gt.Const.World.TerrainTypeNavCost_Ship <- [

@@ -6,7 +6,7 @@ this.defeat_orc_location_ambition <- this.inherit("scripts/ambitions/ambition", 
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_orc_location";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "在战斗中击败兽人和烧毁它们的营地\n能让人们认识到战团的能力。 就这么干吧。";
 		this.m.RewardTooltip = "你将获得一件特殊的配饰，使佩戴者免疫昏迷。";
 		this.m.UIText = "摧毁兽人营地";

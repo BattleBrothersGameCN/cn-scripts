@@ -6,7 +6,7 @@ this.teamplayer_is_bro_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.teamplayer_is_bro";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "\"[img]gfx/ui/events/event_65.png[/img]{%teamplayer%，总是以团队利益为重，似乎已经单枪匹马地帮助了士气的提升。一个雇佣兵解释道%SPEECH_ON%我不知道该怎么解释。%SPEECH_OFF%另一位表达能力更强的雇佣兵则说道。%SPEECH_ON%他似乎不仅仅是个佣兵，你明白吗？他是我们可以依靠的人。就像一个兄弟一样。当然不是亲兄弟，更像是个义兄。一个好兄弟，如果你愿意这么说的话。%SPEECH_OFF%}",
@@ -47,7 +47,7 @@ this.teamplayer_is_bro_event <- this.inherit("scripts/events/event", {
 						});
 					}
 
-					bro.improveMood(0.500000, "很高兴有个兄弟 " + _event.m.Teamplayer.getName());
+					bro.improveMood(0.5, "很高兴有个兄弟 " + _event.m.Teamplayer.getName());
 
 					if (bro.getMoodState() > this.Const.MoodState.Neutral)
 					{

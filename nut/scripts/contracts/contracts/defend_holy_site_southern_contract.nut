@@ -9,7 +9,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		this.contract.create();
 		this.m.Type = "contract.defend_holy_site_southern";
 		this.m.Name = "保卫圣地";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -60,12 +60,12 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		local nobles = this.World.FactionManager.getFactionsOfType(this.Const.FactionType.NobleHouse);
@@ -125,15 +125,15 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 				{
 					if (n.getFlags().get("IsHolyWarParticipant"))
 					{
-						n.addPlayerRelation(-99.000000, "在战争选择了阵营");
+						n.addPlayerRelation(-99.0, "在战争选择了阵营");
 						houses.push(n);
 					}
 				}
 
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 
-				if (this.Contract.getDifficultyMult() >= 0.950000)
+				if (this.Contract.getDifficultyMult() >= 0.95)
 				{
 					local f = houses[this.Math.rand(0, houses.len() - 1)];
 					local candidates = [];
@@ -181,10 +181,10 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 					roam.setPivot(this.Contract.m.Destination);
 					roam.setMinRange(4);
 					roam.setMaxRange(8);
-					roam.setTime(300.000000);
+					roam.setTime(300.0);
 				}
 
-				local entities = this.World.getAllEntitiesAtPos(this.Contract.m.Destination.getPos(), 1.000000);
+				local entities = this.World.getAllEntitiesAtPos(this.Contract.m.Destination.getPos(), 1.0);
 
 				foreach( e in entities )
 				{
@@ -259,7 +259,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 				}
 				else if (this.Flags.get("IsVictory"))
 				{
-					if (!this.Contract.isEnemyPartyNear(this.Contract.m.Destination, 400.000000))
+					if (!this.Contract.isEnemyPartyNear(this.Contract.m.Destination, 400.0))
 					{
 						this.Contract.setScreen("Victory");
 						this.World.Contracts.showActiveContract();
@@ -285,7 +285,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 					}
 					else
 					{
-						this.Flags.set("AttackTime", 0.000000);
+						this.Flags.set("AttackTime", 0.0);
 						local party = this.Contract.spawnEnemy();
 						party.setOnCombatWithPlayerCallback(this.Contract.getActiveState().onDestinationAttacked.bindenv(this));
 						this.Contract.m.Target = this.WeakTableRef(party);
@@ -671,7 +671,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 
 					if (item.getConditionMax() > 1)
 					{
-						item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 50) * 0.010000));
+						item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 50) * 0.01));
 					}
 
 					this.World.Assets.getStash().add(item);
@@ -935,7 +935,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 					function getResult()
 					{
 						this.Flags.set("IsSallyForth", false);
-						this.Flags.set("AttackTime", 1.000000);
+						this.Flags.set("AttackTime", 1.0);
 						return 0;
 					}
 
@@ -1230,7 +1230,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		c.addOrder(move);
 		local guard = this.new("scripts/ai/world/orders/guard_order");
 		guard.setTarget(this.m.Destination.getTile());
-		guard.setTime(240.000000);
+		guard.setTime(240.0);
 		c.addOrder(guard);
 		return party;
 	}
@@ -1344,12 +1344,12 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		c.addOrder(attack);
 		local occupy = this.new("scripts/ai/world/orders/occupy_order");
 		occupy.setTarget(this.m.Destination);
-		occupy.setTime(10.000000);
+		occupy.setTime(10.0);
 		occupy.setSafetyOverride(true);
 		c.addOrder(occupy);
 		local guard = this.new("scripts/ai/world/orders/guard_order");
 		guard.setTarget(this.m.Destination.getTile());
-		guard.setTime(999.000000);
+		guard.setTime(999.0);
 		c.addOrder(guard);
 		return party;
 	}

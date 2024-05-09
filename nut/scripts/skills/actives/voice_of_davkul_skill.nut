@@ -14,7 +14,7 @@ this.voice_of_davkul_skill <- this.inherit("scripts/skills/skill", {
 			"sounds/combat/dlc4/prophet_chant_03.wav",
 			"sounds/combat/dlc4/prophet_chant_04.wav"
 		];
-		this.m.SoundVolume = 1.100000;
+		this.m.SoundVolume = 1.1;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.Any;
 		this.m.IsSerialized = true;

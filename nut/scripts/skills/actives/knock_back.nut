@@ -128,7 +128,7 @@ this.knock_back <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsProficientWithShieldSkills ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsProficientWithShieldSkills ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onVerifyTarget( _originTile, _targetTile )
@@ -219,21 +219,21 @@ this.knock_back <- this.inherit("scripts/skills/skill", {
 			};
 			tag.HitInfo.DamageRegular = damage;
 			tag.HitInfo.DamageFatigue = this.Const.Combat.FatigueReceivedPerHit;
-			tag.HitInfo.DamageDirect = 1.000000;
+			tag.HitInfo.DamageDirect = 1.0;
 			tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-			tag.HitInfo.BodyDamageMult = 1.000000;
-			tag.HitInfo.FatalityChanceMult = 1.000000;
+			tag.HitInfo.BodyDamageMult = 1.0;
+			tag.HitInfo.FatalityChanceMult = 1.0;
 
 			if (hasShieldBash)
 			{
 				damage = damage + this.Math.rand(10, 25) * p.DamageTotalMult;
 				tag.HitInfoBash = clone this.Const.Tactical.HitInfo;
 				tag.HitInfoBash.DamageRegular = damage * p.DamageRegularMult;
-				tag.HitInfoBash.DamageArmor = this.Math.floor(damage * 0.500000);
+				tag.HitInfoBash.DamageArmor = this.Math.floor(damage * 0.5);
 				tag.HitInfoBash.DamageFatigue = 10;
 				tag.HitInfoBash.BodyPart = this.Const.BodyPart.Body;
-				tag.HitInfoBash.BodyDamageMult = 1.000000;
-				tag.HitInfoBash.FatalityChanceMult = 0.000000;
+				tag.HitInfoBash.BodyDamageMult = 1.0;
+				tag.HitInfoBash.FatalityChanceMult = 0.0;
 			}
 
 			this.Tactical.getNavigator().teleport(target, knockToTile, this.onKnockedDown, tag, true);

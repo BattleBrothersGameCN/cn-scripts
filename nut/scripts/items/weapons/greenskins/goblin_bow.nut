@@ -18,16 +18,16 @@ this.goblin_bow <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_goblin_bow_01";
 		this.m.Value = 250;
-		this.m.Condition = 52.000000;
-		this.m.ConditionMax = 52.000000;
+		this.m.Condition = 52.0;
+		this.m.ConditionMax = 52.0;
 		this.m.StaminaModifier = -3;
 		this.m.RangeMin = 2;
 		this.m.RangeMax = 6;
 		this.m.RangeIdeal = 6;
 		this.m.RegularDamage = 25;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 0.550000;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.ArmorDamageMult = 0.55;
+		this.m.DirectDamageMult = 0.35;
 	}
 
 	function getAmmoID()

@@ -17,13 +17,13 @@ this.named_warhammer <- this.inherit("scripts/items/weapons/named/named_weapon",
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 4200;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 100.000000;
-		this.m.ConditionMax = 100.000000;
+		this.m.Condition = 100.0;
+		this.m.ConditionMax = 100.0;
 		this.m.StaminaModifier = -8;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 2.250000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 2.25;
+		this.m.DirectDamageMult = 0.5;
 		this.randomizeValues();
 	}
 

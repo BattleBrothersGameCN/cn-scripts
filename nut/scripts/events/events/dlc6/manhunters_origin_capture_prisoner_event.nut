@@ -23,7 +23,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 						this.World.getTemporaryRoster().clear();
 						_event.m.Dude.onHired();
 						_event.m.Dude.m.MoodChanges = [];
-						_event.m.Dude.worsenMood(2.000000, "战败被俘");
+						_event.m.Dude.worsenMood(2.0, "战败被俘");
 						_event.m.Dude = null;
 						return 0;
 					}
@@ -68,7 +68,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 						this.World.getTemporaryRoster().clear();
 						_event.m.Dude.onHired();
 						_event.m.Dude.m.MoodChanges = [];
-						_event.m.Dude.worsenMood(2.000000, "战败被俘");
+						_event.m.Dude.worsenMood(2.0, "战败被俘");
 						_event.m.Dude = null;
 						return 0;
 					}
@@ -113,7 +113,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 						this.World.getTemporaryRoster().clear();
 						_event.m.Dude.onHired();
 						_event.m.Dude.m.MoodChanges = [];
-						_event.m.Dude.worsenMood(2.000000, "战败被俘");
+						_event.m.Dude.worsenMood(2.0, "战败被俘");
 						_event.m.Dude = null;
 						return 0;
 					}
@@ -158,7 +158,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 						this.World.getTemporaryRoster().clear();
 						_event.m.Dude.onHired();
 						_event.m.Dude.m.MoodChanges = [];
-						_event.m.Dude.worsenMood(2.000000, "战败被俘");
+						_event.m.Dude.worsenMood(2.0, "战败被俘");
 						_event.m.Dude = null;
 						return 0;
 					}
@@ -203,7 +203,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 						this.World.getTemporaryRoster().clear();
 						_event.m.Dude.onHired();
 						_event.m.Dude.m.MoodChanges = [];
-						_event.m.Dude.worsenMood(2.000000, "战败被俘");
+						_event.m.Dude.worsenMood(2.0, "战败被俘");
 						_event.m.Dude = null;
 						return 0;
 					}
@@ -248,7 +248,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 						this.World.getTemporaryRoster().clear();
 						_event.m.Dude.onHired();
 						_event.m.Dude.m.MoodChanges = [];
-						_event.m.Dude.worsenMood(2.000000, "战败被俘");
+						_event.m.Dude.worsenMood(2.0, "战败被俘");
 						_event.m.Dude = null;
 						return 0;
 					}
@@ -297,7 +297,7 @@ this.manhunters_origin_capture_prisoner_event <- this.inherit("scripts/events/ev
 			return;
 		}
 
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 5.000000 || this.World.Statistics.getFlags().getAsInt("LastCombatResult") != 1)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 5.0 || this.World.Statistics.getFlags().getAsInt("LastCombatResult") != 1)
 		{
 			return false;
 		}

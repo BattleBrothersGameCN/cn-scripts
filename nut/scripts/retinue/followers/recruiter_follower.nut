@@ -24,8 +24,8 @@ this.recruiter_follower <- this.inherit("scripts/retinue/follower", {
 	{
 		this.World.Assets.m.RosterSizeAdditionalMin += 2;
 		this.World.Assets.m.RosterSizeAdditionalMax += 4;
-		this.World.Assets.m.HiringCostMult *= 0.900000;
-		this.World.Assets.m.TryoutPriceMult *= 0.500000;
+		this.World.Assets.m.HiringCostMult *= 0.9;
+		this.World.Assets.m.TryoutPriceMult *= 0.5;
 	}
 
 	function onEvaluate()

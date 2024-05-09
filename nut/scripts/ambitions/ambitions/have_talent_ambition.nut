@@ -4,7 +4,7 @@ this.have_talent_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.have_talent";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们需要真正的人才来进一步加强我们的队伍。\n我们会招募我们能找到的最有才华的人，把他塑造成战神！";
 		this.m.UIText = "拥有一个同时具有三个三星的天才角色";
 		this.m.TooltipText = "在你的花名册中有一个拥有三个不同属性的三星天赋的角色。 走遍天下，寻找精英中的精英。 考虑雇佣非战斗追随者的“招募者”。";

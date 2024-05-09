@@ -26,7 +26,7 @@ this.ghoul_claws <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.100000;
+		this.m.DirectDamageMult = 0.1;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 6;
 		this.m.MinRange = 1;
@@ -68,7 +68,7 @@ this.ghoul_claws <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.DamageRegularMin += 25;
 		_properties.DamageRegularMax += 40;
-		_properties.DamageArmorMult *= 0.750000;
+		_properties.DamageArmorMult *= 0.75;
 		local size = this.getContainer().getActor().getSize();
 		this.m.ChanceDecapitate = 25 * size;
 		this.m.ChanceDisembowel = 25 * size;

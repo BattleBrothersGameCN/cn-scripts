@@ -19,14 +19,14 @@ this.claw_club <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_wildmen_02";
 		this.m.Value = 100;
-		this.m.Condition = 76.000000;
-		this.m.ConditionMax = 76.000000;
+		this.m.Condition = 76.0;
+		this.m.ConditionMax = 76.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 30;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.400000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.4;
+		this.m.DirectDamageAdd = 0.1;
 	}
 
 	function onEquip()

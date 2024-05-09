@@ -53,9 +53,9 @@ this.broken_knee_injury <- this.inherit("scripts/skills/injury_permanent/permane
 
 	function onUpdate( _properties )
 	{
-		_properties.MeleeDefenseMult *= 0.600000;
-		_properties.RangedDefenseMult *= 0.600000;
-		_properties.InitiativeMult *= 0.600000;
+		_properties.MeleeDefenseMult *= 0.6;
+		_properties.RangedDefenseMult *= 0.6;
+		_properties.InitiativeMult *= 0.6;
 		_properties.IsContentWithBeingInReserve = true;
 	}
 

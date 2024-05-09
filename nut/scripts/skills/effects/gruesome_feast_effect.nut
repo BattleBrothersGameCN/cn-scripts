@@ -43,7 +43,7 @@ this.gruesome_feast_effect <- this.inherit("scripts/skills/skill", {
 			_properties.DamageRegularMin += 30;
 			_properties.DamageRegularMax += 40;
 			_properties.Initiative -= 30;
-			this.getContainer().getActor().getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.000000;
+			this.getContainer().getActor().getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.0;
 		}
 	}
 

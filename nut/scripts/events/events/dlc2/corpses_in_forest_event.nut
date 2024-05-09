@@ -7,7 +7,7 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.corpses_in_forest";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_132.png[/img]{在穿越森林时，你碰到了一堆黑烬尸体，他们将自己搂在一起做最后的火葬。这是一堆黑色脚和偶尔露出天空的脸，隐约有烤猪的味道，但周围没有猪。%randombrother%看着这一幕点头。 %SPEECH_ON% 这可真是一堆糟糕的东西。%SPEECH_OFF% 你点点头，的确是这样。}",
@@ -110,7 +110,7 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(0.750000, "被可怕的场景惊到");
+					bro.worsenMood(0.75, "被可怕的场景惊到");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{
@@ -173,7 +173,7 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Killer.getImagePath());
 				local item = this.new("scripts/items/weapons/morning_star");
-				item.setCondition(this.Math.rand(5, 30) * 1.000000);
+				item.setCondition(this.Math.rand(5, 30) * 1.0);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -181,7 +181,7 @@ this.corpses_in_forest_event <- this.inherit("scripts/events/event", {
 					text = "你获得了" + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				item = this.new("scripts/items/armor/basic_mail_shirt");
-				item.setCondition(this.Math.rand(25, 60) * 1.000000);
+				item.setCondition(this.Math.rand(25, 60) * 1.0);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,

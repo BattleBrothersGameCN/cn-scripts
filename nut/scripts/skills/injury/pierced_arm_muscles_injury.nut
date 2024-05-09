@@ -13,7 +13,7 @@ this.pierced_arm_muscles_injury <- this.inherit("scripts/skills/injury/injury", 
 		this.m.HealingTimeMin = 3;
 		this.m.HealingTimeMax = 4;
 		this.m.IsShownOnArm = true;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -55,8 +55,8 @@ this.pierced_arm_muscles_injury <- this.inherit("scripts/skills/injury/injury", 
 			return;
 		}
 
-		_properties.MeleeSkillMult *= 0.750000;
-		_properties.RangedSkillMult *= 0.750000;
+		_properties.MeleeSkillMult *= 0.75;
+		_properties.RangedSkillMult *= 0.75;
 	}
 
 });

@@ -6,7 +6,7 @@ this.butcher_vs_wardog_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.butcher_vs_wardog";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_27.png[/img]你听到一声尖叫，迅速冲到噪音的方向。 当你到达那里时，你不确定是人还是狗制造了噪音。%butcher% 这个屠夫手里拿着一把菜刀，一条战犬在他身前直立着，双方都准备扑上去。 屠夫看见你，迅速地把武器藏在背后。 这条猎犬蹲了下来，可爱地看着你。 扬起眉毛，你试着不去思考这个场景。%SPEECH_ON%你们玩的挺好啊。%SPEECH_OFF%屠夫嘲笑道。%SPEECH_ON%噢，我就和那个贱人唠唠嗑，就是这样。%SPEECH_OFF%",
@@ -26,7 +26,7 @@ this.butcher_vs_wardog_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Butcher.getImagePath());
-				_event.m.Butcher.worsenMood(0.500000, "与战团的战犬相处的不好");
+				_event.m.Butcher.worsenMood(0.5, "与战团的战犬相处的不好");
 
 				if (_event.m.Butcher.getMoodState() >= this.Const.MoodState.Neutral)
 				{

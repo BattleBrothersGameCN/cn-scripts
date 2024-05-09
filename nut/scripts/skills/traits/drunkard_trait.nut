@@ -58,7 +58,7 @@ this.drunkard_trait <- this.inherit("scripts/skills/traits/character_trait", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageTotalMult *= 1.100000;
+		_properties.DamageTotalMult *= 1.1;
 		_properties.Bravery += 5;
 		_properties.MeleeSkill += -5;
 		_properties.RangedSkill += -10;

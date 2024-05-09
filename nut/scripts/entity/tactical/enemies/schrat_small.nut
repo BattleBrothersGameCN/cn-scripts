@@ -7,8 +7,8 @@ this.schrat_small <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.XP = this.Const.Tactical.Actor.SchratSmall.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, -20);
 		this.m.DecapitateSplatterOffset = this.createVec(-10, -25);
-		this.m.DecapitateBloodAmount = 1.000000;
-		this.m.DeathBloodAmount = 0.350000;
+		this.m.DecapitateBloodAmount = 1.0;
+		this.m.DeathBloodAmount = 0.35;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.actor.create();
 		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
@@ -50,12 +50,12 @@ this.schrat_small <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/ambience/terrain/forest_branch_crack_05.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Move] = this.m.Sound[this.Const.Sound.ActorEvent.Idle];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 4.000000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Resurrect] = 4.000000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 4.000000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 1.500000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 1.500000;
-		this.m.SoundPitch = this.Math.rand(101, 110) * 0.010000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 4.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Resurrect] = 4.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 4.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 1.5;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 1.5;
+		this.m.SoundPitch = this.Math.rand(101, 110) * 0.01;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/direwolf_agent");
 		this.m.AIAgent.setActor(this);
 	}
@@ -71,7 +71,7 @@ this.schrat_small <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail("bust_schrat_body_small_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
-			decal.Scale = 0.950000;
+			decal.Scale = 0.95;
 			this.spawnTerrainDropdownEffect(_tile);
 			local corpse = clone this.Const.Corpse;
 			corpse.CorpseName = "一个" + this.getName();
@@ -105,11 +105,11 @@ this.schrat_small <- this.inherit("scripts/entity/tactical/actor", {
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local body = this.addSprite("body");
 		body.setBrush("bust_schrat_body_small_01");
-		body.varySaturation(0.200000);
-		body.varyColor(0.050000, 0.050000, 0.050000);
+		body.varySaturation(0.2);
+		body.varyColor(0.05, 0.05, 0.05);
 		this.m.BloodColor = body.Color;
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.540000;
+		this.getSprite("status_rooted").Scale = 0.54;
 		this.setSpriteOffset("status_rooted", this.createVec(0, 0));
 		this.setSpriteOffset("status_stunned", this.createVec(-10, -10));
 		this.setSpriteOffset("arrow", this.createVec(-10, -10));
@@ -131,7 +131,7 @@ this.schrat_small <- this.inherit("scripts/entity/tactical/actor", {
 		local body = this.getSprite("body");
 		local p = this.m.Hitpoints / this.getHitpointsMax();
 
-		if (p >= 0.500000)
+		if (p >= 0.5)
 		{
 			body.setBrush("bust_schrat_body_small_01");
 		}

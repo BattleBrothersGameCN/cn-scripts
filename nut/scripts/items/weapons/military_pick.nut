@@ -18,13 +18,13 @@ this.military_pick <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_pick_01";
 		this.m.Value = 900;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 80.000000;
-		this.m.ConditionMax = 80.000000;
+		this.m.Condition = 80.0;
+		this.m.ConditionMax = 80.0;
 		this.m.StaminaModifier = -8;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 2.000000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 2.0;
+		this.m.DirectDamageMult = 0.5;
 	}
 
 	function onEquip()

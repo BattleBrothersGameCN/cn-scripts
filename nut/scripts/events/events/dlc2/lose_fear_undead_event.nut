@@ -7,7 +7,7 @@ this.lose_fear_undead_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.lose_fear_undead";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]{%fearful%在休息时突然发表演讲。%SPEECH_ON%我杀了和埋葬了这么多人，你知道吗？如果他们值得一试，那么他们就不会有回来成为不死族的机会！如果他们是从古代回来的，那我该死，因为他们非常顽强！但他们不是我。我还活着，我还在呼吸。我希望保持这样的状态。当我的时间到了，我打算变成死人，因为我有勇气知道我已经给这个世界带来了足够的麻烦。%SPEECH_OFF%%otherbrother%鼓掌并递上一盘食物。%SPEECH_ON%好吧，现在别再打扰我们了！%SPEECH_OFF%男人们笑了起来，%fearful%也跟着笑了。}",
@@ -51,7 +51,7 @@ this.lose_fear_undead_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > this.World.getTime().SecondsPerDay * 1.000000)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > this.World.getTime().SecondsPerDay * 1.0)
 		{
 			return;
 		}

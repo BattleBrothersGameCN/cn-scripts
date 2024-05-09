@@ -7,7 +7,7 @@ this.civilwar_ambush_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_ambush";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]森林隐藏着许多东西，它是掠食者和野蛮人的天然胜地。 但是你很清楚这一点，你知道如何在这种气候下发现最不自然的阴影。 你很快就意识到这里不仅仅是树，只要在灌木丛中猛击一下，你就能用弓把一个小男孩拉出来。 他大声呼救，增援部队随着最美妙的旋律如歌鸟般到来：十几个人从暗处冒了出来，但连队已经做好了准备，拔出武器，一字排开。\n\n 一位老人走上前来，举起双手。%SPEECH_ON%等等，这里没有暴力的必要。%SPEECH_OFF%他亲自来找你，用一种沉默的、学者般的语气解释发生的事情。 一小群农民正准备伏击随时会来的 %noblehouse% 的士兵。 他说，如果你帮忙，你会得到一份奖励。 如果不来帮忙，请让开。",

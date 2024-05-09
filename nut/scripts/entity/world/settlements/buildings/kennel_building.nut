@@ -22,165 +22,165 @@ this.kennel_building <- this.inherit("scripts/entity/world/settlements/buildings
 		this.m.Sounds = [
 			{
 				File = "ambience/buildings/kennel_cage_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_cage_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_cage_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_04.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_05.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_06.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_07.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_08.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_09.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_10.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_11.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_12.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			}
 		];
 		this.m.SoundsAtNight = [
 			{
 				File = "ambience/buildings/kennel_cage_00.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_cage_01.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_cage_02.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_00.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_01.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_02.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_03.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_04.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_05.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_06.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_07.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_08.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_09.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_10.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_11.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/kennel_dog_12.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			}
 		];
 	}
@@ -208,12 +208,12 @@ this.kennel_building <- this.inherit("scripts/entity/world/settlements/buildings
 		local list = [
 			{
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/wardog_item"
 			},
 			{
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/armored_wardog_item"
 			}
 		];
@@ -223,22 +223,22 @@ this.kennel_building <- this.inherit("scripts/entity/world/settlements/buildings
 			list.extend([
 				{
 					R = 40,
-					P = 1.000000,
+					P = 1.0,
 					S = "misc/wardog_armor_upgrade_item"
 				}
 			]);
 		}
 
-		if (this.Const.DLC.Wildmen && this.m.Settlement.getTile().SquareCoords.Y > this.World.getMapSize().Y * 0.700000)
+		if (this.Const.DLC.Wildmen && this.m.Settlement.getTile().SquareCoords.Y > this.World.getMapSize().Y * 0.7)
 		{
 			list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/warhound_item"
 			});
 			list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/armored_warhound_item"
 			});
 		}
@@ -246,13 +246,13 @@ this.kennel_building <- this.inherit("scripts/entity/world/settlements/buildings
 		{
 			list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/wardog_item"
 			});
 		}
 
 		this.m.Settlement.onUpdateShopList(this.m.ID, list);
-		this.fillStash(list, this.m.Stash, 0.750000, false);
+		this.fillStash(list, this.m.Stash, 0.75, false);
 	}
 
 	function onUpdateDraftList( _list )

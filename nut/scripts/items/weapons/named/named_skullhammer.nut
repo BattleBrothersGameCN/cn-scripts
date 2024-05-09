@@ -22,14 +22,14 @@ this.named_skullhammer <- this.inherit("scripts/items/weapons/named/named_weapon
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3200;
 		this.m.ShieldDamage = 26;
-		this.m.Condition = 120.000000;
-		this.m.ConditionMax = 120.000000;
+		this.m.Condition = 120.0;
+		this.m.ConditionMax = 120.0;
 		this.m.StaminaModifier = -16;
 		this.m.RegularDamage = 45;
 		this.m.RegularDamageMax = 65;
-		this.m.ArmorDamageMult = 1.800000;
-		this.m.DirectDamageMult = 0.500000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 1.8;
+		this.m.DirectDamageMult = 0.5;
+		this.m.DirectDamageAdd = 0.1;
 		this.m.ChanceToHitHead = 0;
 		this.randomizeValues();
 	}

@@ -68,7 +68,7 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 
 		if (this.m.SoundOnUse.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.250000, this.getContainer().getActor().getPos());
+			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.25, this.getContainer().getActor().getPos());
 		}
 	}
 
@@ -86,12 +86,12 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 			if (head_affected)
 			{
 				local hitInfo = clone this.Const.Tactical.HitInfo;
-				hitInfo.DamageRegular = 0.000000;
-				hitInfo.DamageArmor = actor.getArmor(this.Const.BodyPart.Head) * 0.100000;
-				hitInfo.DamageDirect = 0.000000;
+				hitInfo.DamageRegular = 0.0;
+				hitInfo.DamageArmor = actor.getArmor(this.Const.BodyPart.Head) * 0.1;
+				hitInfo.DamageDirect = 0.0;
 				hitInfo.BodyPart = this.Const.BodyPart.Head;
-				hitInfo.BodyDamageMult = 1.000000;
-				hitInfo.FatalityChanceMult = 0.000000;
+				hitInfo.BodyDamageMult = 1.0;
+				hitInfo.FatalityChanceMult = 0.0;
 
 				if (hitInfo.DamageArmor > 0)
 				{
@@ -104,12 +104,12 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 			if (body_affected)
 			{
 				local hitInfo = clone this.Const.Tactical.HitInfo;
-				hitInfo.DamageRegular = 0.000000;
-				hitInfo.DamageArmor = actor.getArmor(this.Const.BodyPart.Body) * 0.100000;
-				hitInfo.DamageDirect = 0.000000;
+				hitInfo.DamageRegular = 0.0;
+				hitInfo.DamageArmor = actor.getArmor(this.Const.BodyPart.Body) * 0.1;
+				hitInfo.DamageDirect = 0.0;
 				hitInfo.BodyPart = this.Const.BodyPart.Body;
-				hitInfo.BodyDamageMult = 1.000000;
-				hitInfo.FatalityChanceMult = 0.000000;
+				hitInfo.BodyDamageMult = 1.0;
+				hitInfo.FatalityChanceMult = 0.0;
 
 				if (hitInfo.DamageArmor > 0)
 				{
@@ -123,7 +123,7 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 			{
 				if (this.m.SoundOnUse.len() != 0)
 				{
-					this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.200000, actor.getPos());
+					this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.2, actor.getPos());
 				}
 
 				for( local i = 0; i < this.Const.Tactical.AcidParticles.len(); i = ++i )
@@ -156,7 +156,7 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 
 			if (this.m.SoundOnUse.len() != 0)
 			{
-				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.250000, this.getContainer().getActor().getPos());
+				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.25, this.getContainer().getActor().getPos());
 			}
 
 			for( local i = 0; i < this.Const.Tactical.AcidParticles.len(); i = ++i )

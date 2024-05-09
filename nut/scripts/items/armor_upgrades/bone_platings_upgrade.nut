@@ -58,10 +58,10 @@ this.bone_platings_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 			return;
 		}
 
-		if (_hitInfo.BodyPart == this.Const.BodyPart.Body && _hitInfo.DamageDirect < 1.000000)
+		if (_hitInfo.BodyPart == this.Const.BodyPart.Body && _hitInfo.DamageDirect < 1.0)
 		{
 			this.m.IsUsed = true;
-			_properties.DamageReceivedTotalMult = 0.000000;
+			_properties.DamageReceivedTotalMult = 0.0;
 		}
 	}
 

@@ -7,7 +7,7 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.disowned_noble_vs_deserter";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 70.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]{叛逃者 %deserter%和%disowned%被剥夺的贵族在篝火边相互凝视。由于营地缺乏罗曼蒂克，这种情况通常会引发一场恶战，但两个人却突然开始微笑。%deserter%伸出一根手指。%SPEECH_ON%你是在西部指挥%randomname%的征召兵，对吧？%SPEECH_OFF%被剥夺的贵族大笑着拍了拍自己的膝盖。%SPEECH_ON%混账。我知道你很眼熟！你这个小叛逃者，你知道我们找了你多久吗？整整一周！我们抓到了其他人，但你却逃脱了。%SPEECH_OFF%叛逃者笑了。%SPEECH_ON%看看我们现在，竟在为同一家雇佣兵战团而战！这有什么可能性呢？顺便问一下，你抓到的那些家伙怎么处理的？%SPEECH_OFF%%disowned%耸了耸肩。%SPEECH_ON%哦，当然是吊死了。事实上，这让我想起了一个老把戏......好吧，就说，那些都是老黄历！%SPEECH_OFF%%deserter%看着篝火发呆了一会儿，然后抬起头。%SPEECH_ON%哈哈，是啊。%SPEECH_OFF%}",
@@ -30,7 +30,7 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Disowned.getImagePath());
 				_event.m.Deserter.getFlags().add("reminiscedWithDisowned");
 				_event.m.Disowned.getFlags().add("reminiscedWithDeserter");
-				_event.m.Disowned.improveMood(1.000000, "缅怀往事");
+				_event.m.Disowned.improveMood(1.0, "缅怀往事");
 
 				if (_event.m.Disowned.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -49,7 +49,7 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/melee_skill.png",
 					text = _event.m.Disowned.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + attack_boost + "[/color] 近战技能"
 				});
-				_event.m.Deserter.improveMood(1.000000, "缅怀往事");
+				_event.m.Deserter.improveMood(1.0, "缅怀往事");
 
 				if (_event.m.Deserter.getMoodState() >= this.Const.MoodState.Neutral)
 				{

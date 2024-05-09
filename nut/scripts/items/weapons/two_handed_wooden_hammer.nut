@@ -20,13 +20,13 @@ this.two_handed_wooden_hammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_hammer_02";
 		this.m.Value = 500;
 		this.m.ShieldDamage = 20;
-		this.m.Condition = 50.000000;
-		this.m.ConditionMax = 50.000000;
+		this.m.Condition = 50.0;
+		this.m.ConditionMax = 50.0;
 		this.m.StaminaModifier = -14;
 		this.m.RegularDamage = 40;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 1.500000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 1.5;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ChanceToHitHead = 0;
 	}
 

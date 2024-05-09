@@ -6,7 +6,7 @@ this.historian_records_adventures_event <- this.inherit("scripts/events/event", 
 	{
 		this.m.ID = "event.historian_records_adventures";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_15.png[/img]手里拿着一本皮革封面的大部头著作，%historian% 步伐沉重地走进了你的帐篷。 没有说一句话，他把书放在桌上，然后后退了一步。 你把你手里的羽毛笔放下，问道，这是什么。 他说，打开它。 叹了一口气，你翻开书的封面，发现里面杂乱地写着一些你熟知的名字和事迹。 这是你战团的历史和曾经经历的冒险。 你轻轻敲着书页，看着那些温暖心灵的、让人心碎的曾今。 合上书籍，你把它推回桌上。 历史学家问，还有什么需要修改的吗，你摇了摇头。 你对历史学家说，把它给营地里的伙计们都读一读，它一定会鼓舞他们的精神。",
@@ -35,7 +35,7 @@ this.historian_records_adventures_event <- this.inherit("scripts/events/event", 
 						continue;
 					}
 
-					bro.improveMood(1.000000, "为战团的成就感到骄傲");
+					bro.improveMood(1.0, "为战团的成就感到骄傲");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

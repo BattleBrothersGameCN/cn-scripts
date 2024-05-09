@@ -14,7 +14,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.shadow_dissection";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]{战团已在一座废弃的祈祷堂旁扎营，士兵们围着篝火，将影兽投射在石墙上。先是兔子，然后是喘息的狗，当然还有鸟、蛇头以及小老鼠。一位雇佣兵思考着，这些影子在没有人看的时候在干什么。他举起手来，黑色的影子映在石墙上。%SPEECH_ON%我的意思是无论我们去哪里，这些东西都跟着我们，我们戏弄它们，但我们真的没有想太多。看看这个，这是什么？%SPEECH_OFF%他张开双手，在墙上投出十个黑影。士兵们若有所思……}",
@@ -133,7 +133,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() == _event.m.Anatomist.getID())
 					{
-						bro.improveMood(0.750000, "感觉智商高于其他人");
+						bro.improveMood(0.75, "感觉智商高于其他人");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -146,7 +146,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -185,7 +185,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist")
 					{
-						bro.improveMood(1.500000, "达库尔在等待着。");
+						bro.improveMood(1.5, "达库尔在等待着。");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -198,7 +198,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 20)
 					{
-						bro.worsenMood(1.000000, "感到不安" + _event.m.Cultist.getName());
+						bro.worsenMood(1.0, "感到不安" + _event.m.Cultist.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -242,7 +242,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.000000, "受...启发" + _event.m.Monk.getName());
+						bro.improveMood(1.0, "受...启发" + _event.m.Monk.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -296,7 +296,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.750000, "很高兴他能并肩作战。" + _event.m.Mercenary.getName());
+						bro.improveMood(0.75, "很高兴他能并肩作战。" + _event.m.Mercenary.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -309,7 +309,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(0.500000, "害怕 (Afraid of)" + _event.m.Mercenary.getName());
+						bro.worsenMood(0.5, "害怕 (Afraid of)" + _event.m.Mercenary.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -353,7 +353,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.000000, "他很高兴和[caption]一起战斗。" + _event.m.Swordmaster.getName());
+						bro.improveMood(1.0, "他很高兴和[caption]一起战斗。" + _event.m.Swordmaster.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -397,7 +397,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

@@ -8,7 +8,7 @@ this.volunteers_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.volunteers";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "long-text-warning\n[img]gfx/ui/events/event_80.png[/img]{你正坐在帐篷中，手指捻弄着羽毛笔。有一段时间以前，你看到一个抄写员这样做，但你就是弄不明白他是怎么那么快捻动而不掉笔的。即使微风吹过，也能听到你在指尖打弄时发出的声音。%randombrother%摇了摇头。%SPEECH_ON%我们会从这里面经济上恢复过来吗？%SPEECH_OFF%叹了口气，你抬起头。你曾希望士兵们能够保持镇静，不为损失而担忧，但鉴于最近一系列事件，该公司似乎几乎处于不可逆转的损失边缘。士气低落，库房空虚，但即使你有钱，许多人也可能不愿意加入该公司，因为它的业绩很糟糕。就在这时，一个雇佣兵带着三个人进入了你们的营地。前面的人介绍了自己，然后陈述了他的观点。%SPEECH_ON%我们知道%companyname%的声誉，为此我们走了很远的路来见证它。现在，如果我可以坦诚地说，你们看起来很累，一点都不像传说中的那样，但是，该死，我们知道这个世界很难对付人类，唯一能做的就是克服困难。我们不是走了这么远才因小事而心烦吧？%SPEECH_OFF%这些人提供了不需要预付雇佣费的服务，而且公司的其他成员也因为这个世界仍然高度评价他们和他们的努力而感到振奋。所有那些用来充实%companyname%声誉的时间终于得到了回报。}",

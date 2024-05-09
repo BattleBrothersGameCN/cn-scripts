@@ -4,7 +4,7 @@ this.find_and_destroy_location_ambition <- this.inherit("scripts/ambitions/ambit
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.find_and_destroy_location";
-		this.m.Duration = 7.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 7.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "让我们踏上荒野，去探索未知的世界，去掠夺它。\n无论是巫师的坟墓，地精营地，或者我们能找到的任何东西。";
 		this.m.UIText = "发现一个废墟或敌对营地，并摧毁它";
 		this.m.TooltipText = "通过自己探索这片土地，发现一处废墟、营地或其他敌对地点，摧毁它，并夺取战利品。";

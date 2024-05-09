@@ -130,7 +130,7 @@ this.necrosavant_potion_effect <- this.inherit("scripts/skills/skill", {
 	{
 		local actor = this.m.Container.getActor();
 		this.spawnIcon("status_effect_09", actor.getTile());
-		local hitpointsHealed = this.Math.round(_damageInflictedHitpoints * 0.250000);
+		local hitpointsHealed = this.Math.round(_damageInflictedHitpoints * 0.25);
 
 		if (!actor.isHiddenToPlayer())
 		{

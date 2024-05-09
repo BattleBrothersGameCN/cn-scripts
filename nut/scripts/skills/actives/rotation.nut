@@ -28,7 +28,7 @@ this.rotation <- this.inherit("scripts/skills/skill", {
 
 	function getTooltip()
 	{
-		local value = this.Math.round(this.Math.minf(0.500000, this.getContainer().getActor().getCurrentProperties().Bravery * 0.005000) * 100);
+		local value = this.Math.round(this.Math.minf(0.5, this.getContainer().getActor().getCurrentProperties().Bravery * 0.005) * 100);
 		local ret = [
 			{
 				id = 1,
@@ -67,7 +67,7 @@ this.rotation <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsFleetfooted ? 0.500000 : 1.000000;
+		this.m.FatigueCostMult = _properties.IsFleetfooted ? 0.5 : 1.0;
 
 		if (this.getContainer().getActor().getSkills().hasSkill("effects.goblin_grunt_potion"))
 		{
@@ -100,7 +100,7 @@ this.rotation <- this.inherit("scripts/skills/skill", {
 	function onUse( _user, _targetTile )
 	{
 		local target = _targetTile.getEntity();
-		this.Tactical.getNavigator().switchEntities(_user, target, null, null, 1.000000);
+		this.Tactical.getNavigator().switchEntities(_user, target, null, null, 1.0);
 		return true;
 	}
 

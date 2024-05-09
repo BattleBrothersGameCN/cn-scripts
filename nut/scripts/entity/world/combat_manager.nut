@@ -1,13 +1,13 @@
 this.combat_manager <- {
 	m = {
 		Combats = [],
-		LastCombatTick = 0.000000,
+		LastCombatTick = 0.0,
 		NextCombatID = 1
 	},
 	function clear()
 	{
 		this.m.Combats = [];
-		this.m.LastCombatTick = 0.000000;
+		this.m.LastCombatTick = 0.0;
 		this.m.NextCombatID = 1;
 	}
 
@@ -109,7 +109,7 @@ this.combat_manager <- {
 
 	function update()
 	{
-		if (this.World.getSpeedMult() == 0.000000)
+		if (this.World.getSpeedMult() == 0.0)
 		{
 			return;
 		}

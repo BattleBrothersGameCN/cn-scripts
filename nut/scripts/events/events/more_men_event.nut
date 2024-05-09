@@ -4,7 +4,7 @@ this.more_men_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.more_men";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]这一整个战团的人－但其实不过是一个零零散散的小团队－全部都进入你的帐篷里面。 一群佣兵以这样的方式出现在眼前并不是最友好的景象所以在看见他们的一瞬间你的手就向剑伸去。 但是很快你就注意到他们并没有携带武器也没有带着一副想要杀人的表情。 尽管他们并没有想要发动叛乱来砍掉你的头，尽管如此你还是把这个可能性暗暗记在心里。\n\n 他们没有立刻说话而是等待你先发出问题，对此你感到些许欣慰。 这代表了他们对你的尊重，所以你也把手伸了回来不再去想它。 你交叉双臂撑在桌子上，然年询问他们的想法。\n\n 他们解释说现在团队实在是太过单薄。 现在他们去的每一个地方都充满着危险并且也在担心他们现在参加的每场新的战斗都有可能成为他们最后一场。 最后，他们坦率地表达了他们的愿望：如果团队想要生存下去，那名这里需要更多的成员。",
@@ -274,7 +274,7 @@ this.more_men_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 20)
 					{
-						bro.improveMood(1.000000, "对你的领导能力有了信心");
+						bro.improveMood(1.0, "对你的领导能力有了信心");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

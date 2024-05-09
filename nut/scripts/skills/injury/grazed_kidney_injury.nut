@@ -10,7 +10,7 @@ this.grazed_kidney_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.DropIcon = "injury_icon_37";
 		this.m.Icon = "ui/injury/injury_icon_37.png";
 		this.m.IconMini = "injury_icon_37_mini";
-		this.m.InfectionChance = 3.000000;
+		this.m.InfectionChance = 3.0;
 		this.m.HealingTimeMin = 3;
 		this.m.HealingTimeMax = 6;
 		this.m.IsShownOnBody = true;
@@ -56,9 +56,9 @@ this.grazed_kidney_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		if (this.getContainer().getActor().getHitpointsPct() > 0.400000)
+		if (this.getContainer().getActor().getHitpointsPct() > 0.4)
 		{
-			this.getContainer().getActor().setHitpoints(this.getContainer().getActor().getHitpointsMax() * 0.400000);
+			this.getContainer().getActor().setHitpoints(this.getContainer().getActor().getHitpointsMax() * 0.4);
 		}
 	}
 
@@ -68,7 +68,7 @@ this.grazed_kidney_injury <- this.inherit("scripts/skills/injury/injury", {
 
 		if (this.m.IsShownOutOfCombat)
 		{
-			_properties.HitpointsMult *= 0.400000;
+			_properties.HitpointsMult *= 0.4;
 		}
 	}
 

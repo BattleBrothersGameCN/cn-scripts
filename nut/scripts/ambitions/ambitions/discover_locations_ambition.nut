@@ -6,7 +6,7 @@ this.discover_locations_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.discover_locations";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "伟大的探险家会成为传奇人物。进入荒野是一项危险的事业，\n但我们随后将讲述的故事肯定会增加我们的名望。";
 		this.m.UIText = "探索世界发现隐藏的地点";
 		this.m.TooltipText = "通过自己探索世界，发现8个隐藏的地点，如废墟或敌对营地。 出发前一定要储备好食物！";

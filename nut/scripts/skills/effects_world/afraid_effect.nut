@@ -55,7 +55,7 @@ this.afraid_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.BraveryMult *= 0.500000;
+		_properties.BraveryMult *= 0.5;
 		_properties.IsContentWithBeingInReserve = true;
 	}
 

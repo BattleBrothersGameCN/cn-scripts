@@ -54,7 +54,7 @@ this.inhaled_flames_injury <- this.inherit("scripts/skills/injury/injury", {
 		}
 
 		_properties.ActionPoints -= 2;
-		_properties.StaminaMult *= 0.600000;
+		_properties.StaminaMult *= 0.6;
 	}
 
 });

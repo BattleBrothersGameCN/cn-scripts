@@ -6,7 +6,7 @@ this.win_against_y_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.win_against_y";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们获得了一些名望，但现在你可以看到真正的名声即将到来。\n让我们在战斗中击败两打强大的对手！";
 		this.m.UIText = "一战战胜至少24名敌人";
 		this.m.TooltipText = "一战战胜至少24名敌人，无论杀死打跑，也无论是否在合同之内。";

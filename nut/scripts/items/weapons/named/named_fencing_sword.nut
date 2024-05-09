@@ -15,14 +15,14 @@ this.named_fencing_sword <- this.inherit("scripts/items/weapons/named/named_weap
 		this.m.AddGenericSkill = true;
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.StaminaModifier = -4;
 		this.m.Value = 4000;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.2;
 		this.randomizeValues();
 	}
 

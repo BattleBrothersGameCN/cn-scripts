@@ -7,7 +7,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_vs_asthmatic";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]{你走近了解剖学家%anatomist%与患有呼吸困难的人 %asthmatic%面对面的交谈。这个人极其不擅长简单的呼吸，几乎是按部就班的频率，这个人来向你请求。他说解剖学家有可能治愈他的肺部。%anatomist%点点头。%SPEECH_ON%这只是一个小手术，虽然会痛，但这个勇敢的主体——抱歉，这个勇敢的动物——天哪，对不起，这个勇敢的病人已经准备好充分接受挑战了。只要你说好，我就可以开始，并在短时间内完成。%SPEECH_OFF%你不确定这件事情是否可行，但如果 %asthmatic% 能像某只被榨干生命的兔子一样，在夜间止住喘息，那就太好了。}",
@@ -77,7 +77,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/days_wounded.png",
 					text = _event.m.Asthmatic.getName() + "遭受重伤"
 				});
-				_event.m.Asthmatic.improveMood(1.000000, "不再有哮喘。");
+				_event.m.Asthmatic.improveMood(1.0, "不再有哮喘。");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -114,7 +114,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Asthmatic.addInjury([
 					{
 						ID = "injury.pierced_lung",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury/pierced_lung_injury"
 					}
 				]);
@@ -123,7 +123,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Asthmatic.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Asthmatic.worsenMood(0.500000, "被疯子攻击受伤了。");
+				_event.m.Asthmatic.worsenMood(0.5, "被疯子攻击受伤了。");
 
 				if (_event.m.Asthmatic.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -134,7 +134,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Anatomist.worsenMood(1.000000, "被剥夺了研究机会");
+				_event.m.Anatomist.worsenMood(1.0, "被剥夺了研究机会");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -235,7 +235,7 @@ this.anatomist_vs_asthmatic_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.000000, "被剥夺了研究机会");
+				_event.m.Anatomist.worsenMood(1.0, "被剥夺了研究机会");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

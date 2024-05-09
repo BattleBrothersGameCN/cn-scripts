@@ -7,7 +7,7 @@ this.education_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.education";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_15.png[/img]旅途之中，%scholar% 对 %dumbguy%的弱智现象产生了某种兴趣。%scholar_short% 说，给他一些时间，他可以教那个蠢货多学点东西。对 %dumbguy_short% 是否能够长点能耐这件事－某人时常会自信满满－但作为指挥官的你认为某人在所有事情上都会高估自己的能耐。 不仅如此，%scholar_short% 以往的表现显示其性格属于不太禁得起挫折的类型。 因此他这种好为人师的表现也许只是为了填补内心的脆弱和空虚。",
@@ -59,7 +59,7 @@ this.education_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Scholar.getImagePath());
 				this.Characters.push(_event.m.DumbGuy.getImagePath());
-				_event.m.Scholar.worsenMood(2.000000, "未能教导。" + _event.m.DumbGuy.getName() + "任何事情");
+				_event.m.Scholar.worsenMood(2.0, "未能教导。" + _event.m.DumbGuy.getName() + "任何事情");
 
 				if (_event.m.Scholar.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -94,7 +94,7 @@ this.education_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Scholar.getImagePath());
 				this.Characters.push(_event.m.DumbGuy.getImagePath());
-				_event.m.Scholar.improveMood(2.000000, "教导了" + _event.m.DumbGuy.getName() + "某些东西");
+				_event.m.Scholar.improveMood(2.0, "教导了" + _event.m.DumbGuy.getName() + "某些东西");
 				_event.m.DumbGuy.getSkills().removeByID("trait.dumb");
 				this.List.push({
 					id = 10,

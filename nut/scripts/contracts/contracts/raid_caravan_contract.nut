@@ -1,7 +1,7 @@
 this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 	m = {
 		Target = null,
-		LastCombatTime = 0.000000
+		LastCombatTime = 0.0
 	},
 	function setEnemyNobleHouse( _h )
 	{
@@ -13,7 +13,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.raid_caravan";
 		this.m.Name = "掠夺商队";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -27,12 +27,12 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		local myTile = this.World.State.getPlayer().getTile();
@@ -100,19 +100,19 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 				if (r <= 10)
 				{
 					this.Flags.set("IsBribe", true);
-					this.Flags.set("Bribe1", this.Contract.beautifyNumber(this.Contract.m.Payment.Pool * (this.Math.rand(70, 150) * 0.010000)));
-					this.Flags.set("Bribe2", this.Contract.beautifyNumber(this.Contract.m.Payment.Pool * (this.Math.rand(70, 150) * 0.010000)));
+					this.Flags.set("Bribe1", this.Contract.beautifyNumber(this.Contract.m.Payment.Pool * (this.Math.rand(70, 150) * 0.01)));
+					this.Flags.set("Bribe2", this.Contract.beautifyNumber(this.Contract.m.Payment.Pool * (this.Math.rand(70, 150) * 0.01)));
 				}
 				else if (r <= 15)
 				{
-					if (this.Contract.getDifficultyMult() >= 1.000000)
+					if (this.Contract.getDifficultyMult() >= 1.0)
 					{
 						this.Flags.set("IsSwordmaster", true);
 					}
 				}
 				else if (r <= 20)
 				{
-					if (this.Contract.getDifficultyMult() >= 1.000000)
+					if (this.Contract.getDifficultyMult() >= 1.0)
 					{
 						this.Flags.set("IsUndeadSurprise", true);
 					}
@@ -252,7 +252,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 						this.onTargetAttacked(_dest, true);
 					}
 				}
-				else if (this.Time.getVirtualTimeF() >= this.Contract.m.LastCombatTime + 5.000000)
+				else if (this.Time.getVirtualTimeF() >= this.Contract.m.LastCombatTime + 5.0)
 				{
 					local enemyFaction = this.World.FactionManager.getFaction(this.Flags.get("EnemyNobleHouse"));
 					enemyFaction.setIsTemporaryEnemy(true);
@@ -483,7 +483,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 					{
 						this.Const.World.Common.addTroop(this.Contract.m.Target, {
 							Type = this.Const.World.Spawn.Troops.Swordmaster
-						}, true, this.Contract.getDifficultyMult() >= 1.100000 ? 5 : 0);
+						}, true, this.Contract.getDifficultyMult() >= 1.1 ? 5 : 0);
 						this.Contract.getActiveState().onTargetAttacked(this.Contract.m.Target, true);
 						return 0;
 					}

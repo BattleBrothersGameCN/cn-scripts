@@ -7,7 +7,7 @@ this.noble_more_pay_lowborn_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.noble_more_pay_lowborn";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_64.png[/img] %noble% 突然进入你的帐篷。 他穿着盔甲佩戴着武器。 他看起来是精心打扮过之后来的似乎很重视这次会面的而且他确实站得很端正。 你问他想要什么，他昂着头眼睛直视前方。%SPEECH_ON%我注意到 %lowborn% 得到的报酬比我多。 尽管我对他个人没有什么意见，但是我想要指出他除了行走的双脚以外没有任何与生俱来的东西。 一个出身卑贱的人不可能比一个出身高贵的人挣得多。 我们贵族应该得到更多。%SPEECH_OFF%",
@@ -73,7 +73,7 @@ this.noble_more_pay_lowborn_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/asset_daily_money.png",
 					text = _event.m.Noble.getName() + "现在被支付" + _event.m.Noble.getDailyCost() + "克朗每天"
 				});
-				_event.m.Noble.improveMood(1.000000, "得到加薪");
+				_event.m.Noble.improveMood(1.0, "得到加薪");
 
 				if (_event.m.Noble.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -105,7 +105,7 @@ this.noble_more_pay_lowborn_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Noble.getImagePath());
-				_event.m.Noble.worsenMood(2.000000, "不满意一个出身低贱的人");
+				_event.m.Noble.worsenMood(2.0, "不满意一个出身低贱的人");
 
 				if (_event.m.Noble.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -144,9 +144,9 @@ this.noble_more_pay_lowborn_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/asset_daily_money.png",
 					text = _event.m.Noble.getName() + "现在被支付" + _event.m.Noble.getDailyCost() + "克朗每天"
 				});
-				_event.m.Noble.worsenMood(2.000000, "被队长羞辱了");
-				_event.m.Noble.worsenMood(2.000000, "不满意一个出身低贱的人");
-				_event.m.Noble.worsenMood(2.000000, "减薪了");
+				_event.m.Noble.worsenMood(2.0, "被队长羞辱了");
+				_event.m.Noble.worsenMood(2.0, "不满意一个出身低贱的人");
+				_event.m.Noble.worsenMood(2.0, "减薪了");
 
 				if (_event.m.Noble.getMoodState() < this.Const.MoodState.Neutral)
 				{

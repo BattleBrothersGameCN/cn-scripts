@@ -63,15 +63,15 @@ this.hex_slave_effect <- this.inherit("scripts/skills/skill", {
 	{
 		if (this.m.SoundOnUse.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.250000, this.getContainer().getActor().getPos());
+			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.25, this.getContainer().getActor().getPos());
 		}
 
 		local hitInfo = clone this.Const.Tactical.HitInfo;
 		hitInfo.DamageRegular = _damage;
-		hitInfo.DamageDirect = 1.000000;
+		hitInfo.DamageDirect = 1.0;
 		hitInfo.BodyPart = this.Const.BodyPart.Body;
-		hitInfo.BodyDamageMult = 1.000000;
-		hitInfo.FatalityChanceMult = 0.000000;
+		hitInfo.BodyDamageMult = 1.0;
+		hitInfo.FatalityChanceMult = 0.0;
 		this.getContainer().getActor().onDamageReceived(this.getContainer().getActor(), this, hitInfo);
 	}
 

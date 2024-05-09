@@ -33,9 +33,9 @@ this.sickness_situation <- this.inherit("scripts/entity/world/settlements/situat
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.FoodPriceMult *= 2.000000;
-		_modifiers.MedicalPriceMult *= 3.000000;
-		_modifiers.RecruitsMult *= 0.250000;
+		_modifiers.FoodPriceMult *= 2.0;
+		_modifiers.MedicalPriceMult *= 3.0;
+		_modifiers.RecruitsMult *= 0.25;
 	}
 
 });

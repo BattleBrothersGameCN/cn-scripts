@@ -47,7 +47,7 @@ this.ripped_ear_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.InitiativeMult *= 0.850000;
+		_properties.InitiativeMult *= 0.85;
 	}
 
 });

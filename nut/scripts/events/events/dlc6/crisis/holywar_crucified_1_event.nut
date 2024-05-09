@@ -6,7 +6,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.holywar_crucified_1";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "{[img]gfx/ui/events/event_161.png[/img]{在荒芜的沙漠中，人必须要对任何他们经过的东西保持怀疑，特别是十字架上钉了一个人的时候。 被钉在上面的人看起来死透了，秃鹫像牧师似的啄过了两肩，但随着你靠近把鸟赶走时这个人抬起了头。 尽管手脚严重受伤，他还算是活着并且请求给点水。 比起给他水，你选择先问问为什么他在这里。他叹了叹气。%SPEECH_ON%我曾经是个十字军战士。为了旧神的荣誉随军来到这里。 只是当我到了这里，与当地人和牧师们交谈过了之后，我的想法改变了。%SPEECH_OFF%}",
@@ -94,9 +94,9 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 				}
 
 				_event.m.Dude.getSkills().add(trait);
-				_event.m.Dude.setHitpointsPct(0.330000);
-				_event.m.Dude.improveMood(3.000000, "看到了光明，接受了镀金者的庄严");
-				_event.m.Dude.worsenMood(3.000000, "被钉在十字架上");
+				_event.m.Dude.setHitpointsPct(0.33);
+				_event.m.Dude.improveMood(3.0, "看到了光明，接受了镀金者的庄严");
+				_event.m.Dude.worsenMood(3.0, "被钉在十字架上");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -104,7 +104,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.worsenMood(1.000000, "不喜欢你阻止了应该因为背叛旧神而受到的惩罚");
+						bro.worsenMood(1.0, "不喜欢你阻止了应该因为背叛旧神而受到的惩罚");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -143,7 +143,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.250000, "对你的领导能力有了信心");
+						bro.improveMood(0.25, "对你的领导能力有了信心");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

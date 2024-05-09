@@ -10,7 +10,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 		this.contract.create();
 		this.m.Type = "contract.drive_away_barbarians";
 		this.m.Name = "击退野蛮人";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -31,12 +31,12 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -68,7 +68,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 				this.Contract.m.Destination.setLastSpawnTimeToNow();
 				this.Contract.m.Destination.clearTroops();
 
-				if (this.Contract.getDifficultyMult() <= 1.150000 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
+				if (this.Contract.getDifficultyMult() <= 1.15 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
 				{
 					this.Contract.m.Destination.getLoot().clear();
 				}
@@ -77,7 +77,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 				this.Contract.m.Destination.setLootScaleBasedOnResources(110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				this.Contract.m.Destination.setResources(this.Math.min(this.Contract.m.Destination.getResources(), 70 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult()));
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 				local r = this.Math.rand(1, 100);
 
 				if (r <= 20)
@@ -89,7 +89,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 				}
 				else if (r <= 40)
 				{
-					if (this.World.Assets.getBusinessReputation() >= 500 && this.Contract.getDifficultyMult() >= 1.000000)
+					if (this.World.Assets.getBusinessReputation() >= 500 && this.Contract.getDifficultyMult() >= 1.0)
 					{
 						this.Flags.set("IsRevenge", true);
 					}
@@ -353,7 +353,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 							properties.Entities.push({
 								ID = this.Const.EntityType.BarbarianChampion,
 								Name = name,
-								Variant = difficulty >= 1.150000 ? 1 : 0,
+								Variant = difficulty >= 1.15 ? 1 : 0,
 								Row = 0,
 								Script = "scripts/entity/tactical/humans/barbarian_champion",
 								Faction = this.Contract.m.Destination.getFaction(),
@@ -540,7 +540,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 					{
 						this.World.getPlayerRoster().add(this.Contract.m.Dude);
 						this.World.getTemporaryRoster().clear();
-						this.Contract.m.Dude.worsenMood(1.000000, "看到他的村庄被屠。");
+						this.Contract.m.Dude.worsenMood(1.0, "看到他的村庄被屠。");
 						this.Contract.m.Dude.onHired();
 						this.Contract.m.Dude = null;
 						return 0;

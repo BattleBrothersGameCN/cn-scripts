@@ -116,10 +116,10 @@ this.whip_slave_skill <- this.inherit("scripts/skills/skill", {
 		local t = _targetTile.getEntity();
 		local hitInfo = clone this.Const.Tactical.HitInfo;
 		hitInfo.DamageRegular = this.Math.rand(1, 3);
-		hitInfo.DamageDirect = 1.000000;
+		hitInfo.DamageDirect = 1.0;
 		hitInfo.BodyPart = this.Const.BodyPart.Body;
-		hitInfo.BodyDamageMult = 1.000000;
-		hitInfo.FatalityChanceMult = 0.000000;
+		hitInfo.BodyDamageMult = 1.0;
+		hitInfo.FatalityChanceMult = 0.0;
 		t.onDamageReceived(_user, this, hitInfo);
 
 		if (t.isAlive() && !t.isDying())

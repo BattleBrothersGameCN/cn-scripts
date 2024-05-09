@@ -18,8 +18,8 @@ this.ijirok_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		this.m.ImpactSound = this.Const.Sound.ArmorHalfplateImpact;
 		this.m.InventorySound = this.Const.Sound.ArmorHalfplateImpact;
 		this.m.Value = 13000;
-		this.m.Condition = 310.000000;
-		this.m.ConditionMax = 310.000000;
+		this.m.Condition = 310.0;
+		this.m.ConditionMax = 310.0;
 		this.m.StaminaModifier = -20;
 		this.m.ItemType = this.m.ItemType | this.Const.Items.ItemType.Legendary;
 	}
@@ -64,7 +64,7 @@ this.ijirok_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		if (!actor.isHiddenToPlayer())
 		{
 			this.Tactical.spawnIconEffect("status_effect_79", actor.getTile(), this.Const.Tactical.Settings.SkillIconOffsetX, this.Const.Tactical.Settings.SkillIconOffsetY, this.Const.Tactical.Settings.SkillIconScale, this.Const.Tactical.Settings.SkillIconFadeInDuration, this.Const.Tactical.Settings.SkillIconStayDuration, this.Const.Tactical.Settings.SkillIconFadeOutDuration, this.Const.Tactical.Settings.SkillIconMovement);
-			this.Sound.play("sounds/enemies/unhold_regenerate_02.wav", this.Const.Sound.Volume.RacialEffect * 1.250000, actor.getPos());
+			this.Sound.play("sounds/enemies/unhold_regenerate_02.wav", this.Const.Sound.Volume.RacialEffect * 1.25, actor.getPos());
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "恢复了 " + healthAdded + " 点生命值");
 		}
 	}

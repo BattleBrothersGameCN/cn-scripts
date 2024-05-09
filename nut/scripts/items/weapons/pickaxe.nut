@@ -18,13 +18,13 @@ this.pickaxe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_pickaxe_01";
 		this.m.Value = 120;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 56.000000;
-		this.m.ConditionMax = 56.000000;
+		this.m.Condition = 56.0;
+		this.m.ConditionMax = 56.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 15;
 		this.m.RegularDamageMax = 30;
-		this.m.ArmorDamageMult = 1.500000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 1.5;
+		this.m.DirectDamageMult = 0.5;
 	}
 
 	function onEquip()

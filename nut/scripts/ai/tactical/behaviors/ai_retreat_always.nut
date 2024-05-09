@@ -55,7 +55,7 @@ this.ai_retreat_always <- this.inherit("scripts/ai/tactical/behavior", {
 				local settings = navigator.createSettings();
 				settings.ActionPointCosts = _entity.getActionPointCosts();
 				settings.FatigueCosts = _entity.getFatigueCosts();
-				settings.FatigueCostFactor = 0.000000;
+				settings.FatigueCostFactor = 0.0;
 				settings.ActionPointCostPerLevel = _entity.getLevelActionPointCost();
 				settings.FatigueCostPerLevel = _entity.getLevelFatigueCost();
 				settings.AllowZoneOfControlPassing = false;
@@ -201,7 +201,7 @@ this.ai_retreat_always <- this.inherit("scripts/ai/tactical/behavior", {
 		local settings = navigator.createSettings();
 		settings.ActionPointCosts = _entity.getActionPointCosts();
 		settings.FatigueCosts = _entity.getFatigueCosts();
-		settings.FatigueCostFactor = 0.000000;
+		settings.FatigueCostFactor = 0.0;
 		settings.ActionPointCostPerLevel = _entity.getLevelActionPointCost();
 		settings.FatigueCostPerLevel = _entity.getLevelFatigueCost();
 		settings.AllowZoneOfControlPassing = false;

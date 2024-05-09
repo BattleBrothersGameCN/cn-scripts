@@ -80,7 +80,7 @@ this.paladins_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 		shield.onPaintInCompanyColors();
 		items.equip(shield);
 		this.World.Assets.getStash().add(this.new("scripts/items/supplies/ground_grains_item"));
-		this.World.Assets.addMoralReputation(10.000000);
+		this.World.Assets.addMoralReputation(10.0);
 
 		if (!this.Const.DLC.Desert)
 		{

@@ -7,7 +7,7 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.adopt_wardog";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 120.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_27.png[/img]之前你就看到了这条狗，一连走了几里地，它还跟在后边晃来晃去。\n\n这样的杂狗不会无缘无故地跟着一群危险人物 —— 它是不是被人养过？",

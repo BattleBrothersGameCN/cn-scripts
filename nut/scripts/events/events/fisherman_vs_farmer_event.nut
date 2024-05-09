@@ -7,7 +7,7 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.fisherman_vs_farmer";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]%farmhand% 和 %fisherman% 正在进行一场扳手腕比赛。 这一切都是很有趣的，显然是由一场关于渔夫和农夫谁更重要，谁的食物最好，谁在陆地上行走，谁在海洋里游泳的争论产生的。 渔夫打了一个带咸味的长嗝，并为一些失踪已久的鲸唱起了赞歌，他用尽最后一点力气，压倒了 %farmhand%的手臂。 两个人都站起来，拍拍彼此的肩膀。",
@@ -30,13 +30,13 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Farmer.getImagePath());
 				_event.m.Fisherman.getFlags().increment("ParticipatedInStrengthContests", 1);
 				_event.m.Farmer.getFlags().increment("ParticipatedInStrengthContests", 1);
-				_event.m.Fisherman.improveMood(1.000000, "建立友谊与 " + _event.m.Farmer.getName());
+				_event.m.Fisherman.improveMood(1.0, "建立友谊与 " + _event.m.Farmer.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Fisherman.getMoodState()],
 					text = _event.m.Fisherman.getName() + this.Const.MoodStateEvent[_event.m.Fisherman.getMoodState()]
 				});
-				_event.m.Farmer.improveMood(1.000000, "建立友谊与 " + _event.m.Fisherman.getName());
+				_event.m.Farmer.improveMood(1.0, "建立友谊与 " + _event.m.Fisherman.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Farmer.getMoodState()],
@@ -84,13 +84,13 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Fisherman.getImagePath());
 				_event.m.Fisherman.getFlags().increment("ParticipatedInStrengthContests", 1);
 				_event.m.Farmer.getFlags().increment("ParticipatedInStrengthContests", 1);
-				_event.m.Fisherman.improveMood(1.000000, "建立友谊与 " + _event.m.Farmer.getName());
+				_event.m.Fisherman.improveMood(1.0, "建立友谊与 " + _event.m.Farmer.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Fisherman.getMoodState()],
 					text = _event.m.Fisherman.getName() + this.Const.MoodStateEvent[_event.m.Fisherman.getMoodState()]
 				});
-				_event.m.Farmer.improveMood(1.000000, "建立友谊与 " + _event.m.Fisherman.getName());
+				_event.m.Farmer.improveMood(1.0, "建立友谊与 " + _event.m.Fisherman.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Farmer.getMoodState()],

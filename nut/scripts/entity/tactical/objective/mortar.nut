@@ -43,8 +43,8 @@ this.mortar <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsAffectedByInjuries = false;
 		b.IsAffectedByNight = false;
 		b.IsMovable = false;
-		b.TargetAttractionMult = 2.000000;
-		b.DamageReceivedTotalMult = 0.000000;
+		b.TargetAttractionMult = 2.0;
+		b.DamageReceivedTotalMult = 0.0;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;

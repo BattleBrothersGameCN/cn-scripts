@@ -13,7 +13,7 @@ this.witch_hut_location <- this.inherit("scripts/entity/world/location", {
 		this.m.IsShowingDefenders = true;
 		this.m.IsShowingBanner = false;
 		this.m.IsAttackable = true;
-		this.m.VisibilityMult = 0.900000;
+		this.m.VisibilityMult = 0.9;
 		this.m.Resources = 500;
 		this.m.OnEnter = "event.location.witchhut_enter";
 		this.m.OnDestroyed = "event.location.witchhut_destroyed";

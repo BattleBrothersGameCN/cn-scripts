@@ -6,7 +6,7 @@ this.send_peasants_action <- this.inherit("scripts/factions/faction_action", {
 	function create()
 	{
 		this.m.ID = "send_peasants_action";
-		this.m.Cooldown = 300.000000;
+		this.m.Cooldown = 300.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}

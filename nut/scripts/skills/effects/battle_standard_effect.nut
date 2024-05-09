@@ -79,7 +79,7 @@ this.battle_standard_effect <- this.inherit("scripts/skills/skill", {
 
 		if (bestBravery != 0)
 		{
-			bestBravery = this.Math.min(bestBravery * 0.100000, bestBravery - _properties.Bravery * _properties.BraveryMult);
+			bestBravery = this.Math.min(bestBravery * 0.1, bestBravery - _properties.Bravery * _properties.BraveryMult);
 		}
 
 		return bestBravery;

@@ -4,7 +4,7 @@ this.weapon_mastery_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.weapon_mastery";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "想象一下，如果你的技能与你的勇敢相当，我们会留下怎样的恐怖痕迹。\n我们要训练五个人掌握他们的武器，以便他们可以充当先锋！";
 		this.m.UIText = "每个人都有一个武器精通特技";
 		this.m.TooltipText = "让你的5个人每人拥有一个武器精通特技，不管是哪一种武器。";

@@ -17,13 +17,13 @@ this.scramasax <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_sax_01";
 		this.m.Value = 700;
-		this.m.Condition = 56.000000;
-		this.m.ConditionMax = 56.000000;
+		this.m.Condition = 56.0;
+		this.m.ConditionMax = 56.0;
 		this.m.StaminaModifier = -8;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 45;
-		this.m.ArmorDamageMult = 0.800000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 0.8;
+		this.m.DirectDamageMult = 0.25;
 	}
 
 	function onEquip()

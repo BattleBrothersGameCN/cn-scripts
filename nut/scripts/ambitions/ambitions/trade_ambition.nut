@@ -7,7 +7,7 @@ this.trade_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.trade";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "城镇之间的贸易可以赚很多克朗。\n让我们赚一大笔钱吧！";
 		this.m.UIText = "购买和销售贸易商品";
 		this.m.TooltipText = "买卖25种贸易商品，如毛皮、盐或香料。在生产它们的小村庄购买它们，然后在大城市出售它们，你会赚到最多的硬币。\n有些商品是特定地区的特产，比如南部沙漠，在世界其他地方销售它们可以进一步提高利润率。";

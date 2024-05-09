@@ -4,7 +4,7 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.come_across_burial";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 130.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 130.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_28.png[/img]在路上，你遇到一群人围着一堆土。 走近一点，你发现这是一场葬礼。 一位与会者转向你。%SPEECH_ON%你认识他吗？ 你在他身边打过仗吗？%SPEECH_OFF%你摇摇头，开始挤进人群中去看那个人。 你发现这个人的尸体像僵尸一样陈旧。 他的胸前有一把非常锋利闪闪发光的剑，脏兮兮的被虫蛀手指抓着剑柄。%randombrother% 来到你的身边耳语道。%SPEECH_ON%那是，呃，一个看起来很不错的武器，我就是说说。%SPEECH_OFF%",
@@ -53,7 +53,7 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				local item = this.new("scripts/items/weapons/longsword");
-				item.setCondition(27.000000);
+				item.setCondition(27.0);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -113,7 +113,7 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 			{
 				this.World.Assets.addMoralReputation(-3);
 				local item = this.new("scripts/items/weapons/longsword");
-				item.setCondition(27.000000);
+				item.setCondition(27.0);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,

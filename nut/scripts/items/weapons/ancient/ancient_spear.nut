@@ -17,13 +17,13 @@ this.ancient_spear <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_ancient_spear_01";
 		this.m.Value = 150;
-		this.m.Condition = 36.000000;
-		this.m.ConditionMax = 36.000000;
+		this.m.Condition = 36.0;
+		this.m.ConditionMax = 36.0;
 		this.m.StaminaModifier = -6;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 1.000000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.0;
+		this.m.DirectDamageMult = 0.25;
 	}
 
 	function onEquip()

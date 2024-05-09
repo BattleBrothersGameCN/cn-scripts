@@ -7,7 +7,7 @@ this.civilwar_trapped_soldiers_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_trapped_soldiers";
 		this.m.Title = "在%town%";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_43.png[/img]你遇到一大群吵吵闹闹的农民。 你仔细一看，这些农民包围了一队举着 %noblehouse% 旗帜的士兵，这个村庄就是属于他们的。 每个士兵都拔出了自己的剑，但是他们被逼到了角落里，寡不敌众。 村民们大喊大叫，指指点点。%SPEECH_ON%杀人犯！强奸犯！纵火犯！%SPEECH_OFF%口水和烂西红柿跟雨点一样飞向那些士兵。%randombrother% 来问你，是该介入此事还是置身事外。",

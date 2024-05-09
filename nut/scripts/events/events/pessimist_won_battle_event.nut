@@ -6,7 +6,7 @@ this.pessimist_won_battle_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.pessimist_won_battle";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 35.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_64.png[/img]令人沮丧的是，%pessimist% 没精打采地闲逛着，就像所有令人讨厌的悲观者一样破坏我们胜利的喜悦。 他轻蔑地举起一只手。%SPEECH_ON%我们在享受着胜利，但那又怎样呢？ 我们的胜利就意味着他们的失败，所以没准有一天会有人将他们的胜利建立在我们的失败的基础上，你们不这样认为吗？ 所以我们不要本末倒置，以免将来的阴影在我们享受着现在着荣耀的阳光时偷偷笼罩我们。%SPEECH_OFF%一些佣兵呵斥他不要这么沮丧，但是他那冲击性的事实还是影响到了其他人的热情。",
@@ -26,7 +26,7 @@ this.pessimist_won_battle_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Pessimist.getImagePath());
-				_event.m.Pessimist.worsenMood(0.500000, "尽管最近取得了胜利，但还是很悲观");
+				_event.m.Pessimist.worsenMood(0.5, "尽管最近取得了胜利，但还是很悲观");
 
 				if (_event.m.Pessimist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -48,7 +48,7 @@ this.pessimist_won_battle_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50 && !bro.getSkills().hasSkill("trait.optimist"))
 					{
-						bro.worsenMood(0.400000, "经过淬炼的(Tempered by)" + _event.m.Pessimist.getName() + "的悲观情绪");
+						bro.worsenMood(0.4, "经过淬炼的(Tempered by)" + _event.m.Pessimist.getName() + "的悲观情绪");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -72,7 +72,7 @@ this.pessimist_won_battle_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 20.000000)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 20.0)
 		{
 			return;
 		}

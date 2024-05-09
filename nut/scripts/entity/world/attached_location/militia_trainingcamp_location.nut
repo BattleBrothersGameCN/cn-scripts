@@ -23,38 +23,38 @@ this.militia_trainingcamp_location <- this.inherit("scripts/entity/world/attache
 			r = [
 				{
 					File = "ambience/settlement/settlement_dog_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_dog_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_dog_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_03.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				}
 			];
 			return r;
@@ -66,9 +66,9 @@ this.militia_trainingcamp_location <- this.inherit("scripts/entity/world/attache
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 		this.getSprite("lighting").setBrush("world_militia_trainingcamp_01_light");
-		this.getSprite("lighting").Scale = 0.900000;
+		this.getSprite("lighting").Scale = 0.9;
 		this.registerThinker();
 	}
 
@@ -87,7 +87,7 @@ this.militia_trainingcamp_location <- this.inherit("scripts/entity/world/attache
 
 		this.updateLighting();
 
-		if (this.World.getTime().TimeOfDay >= 4 && this.World.getTime().TimeOfDay <= 7 && this.Time.getRealTimeF() - this.m.LastFireTime >= 10.000000)
+		if (this.World.getTime().TimeOfDay >= 4 && this.World.getTime().TimeOfDay <= 7 && this.Time.getRealTimeF() - this.m.LastFireTime >= 10.0)
 		{
 			this.spawnFire();
 			this.m.LastFireTime = this.Time.getRealTimeF();
@@ -129,67 +129,67 @@ this.militia_trainingcamp_location <- this.inherit("scripts/entity/world/attache
 		{
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/leather_tunic"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_surcoat"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_leather"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/gambeson"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/aketon_cap"
 			});
 			_list.push({
 				R = 15,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/full_aketon_cap"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/nasal_helmet"
 			});
 			_list.push({
 				R = 65,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/kettle_hat"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "shields/wooden_shield"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hooked_blade"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/scramasax"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/boar_spear"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/dagger"
 			});
 
@@ -198,17 +198,17 @@ this.militia_trainingcamp_location <- this.inherit("scripts/entity/world/attache
 				_list.extend([
 					{
 						R = 70,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/two_handed_wooden_hammer"
 					},
 					{
 						R = 40,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/goedendag"
 					},
 					{
 						R = 20,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/throwing_spear"
 					}
 				]);

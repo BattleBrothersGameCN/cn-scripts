@@ -7,7 +7,7 @@ this.minstrel_regals_refugee_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.minstrel_regals_refugee";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img] 当 %minstrel% 这个吟游诗人注意到难民时团队的人正围绕在火边，%refugee%，一个人严肃地坐着。 不一会儿，这位吟游诗人就站起来，站在树桩上，张开双臂。%SPEECH_ON%吼，%refugee% 的镇子很小，地方风俗也很奇怪，并且那里的食物，好吧，也有一点嗯重口。 但是我们必须承认！那里全部都是伟大的人！ 因为现在就有他们的亲人和我们一起并肩作战，世间渴求他的灵魂，死神在他身后虎视眈眈，但是他还是在这里和我们一起，并且我们只能祝贺－并且将他的回报！－交给他！ 这是团队给他的报酬，也是我们对兄弟最好的认可。%SPEECH_OFF%这位吟游诗人坐下来向难民道谢。 %companyname% 的人都站了起来并且欢呼，给 %refugee%的脸上带来了难得的微笑。",
@@ -28,7 +28,7 @@ this.minstrel_regals_refugee_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Minstrel.getImagePath());
 				this.Characters.push(_event.m.Refugee.getImagePath());
-				_event.m.Refugee.improveMood(1.000000, "被授予 " + _event.m.Minstrel.getName());
+				_event.m.Refugee.improveMood(1.0, "被授予 " + _event.m.Minstrel.getName());
 
 				if (_event.m.Refugee.getMoodState() >= this.Const.MoodState.Neutral)
 				{

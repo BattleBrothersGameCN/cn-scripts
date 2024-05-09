@@ -7,7 +7,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.sword_eater";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_163.png[/img]{一个食剑者在 %townname% 的广场边跳着舞。他拿起一把差不多有你小拇指厚的利刃。%SPEECH_ON%在镀金者的注视下，我将会吃下这些钢铁！%SPEECH_OFF%那人声明了他的目的，并接着迅速行动了起来：他弓起腰，拧着刀，并把它滑入了他的嘴，越来越深，他的围绕着铁褶皱着就好像他在吸面条。 群众一开始深吸一口气，但是吞咽者举起两个大拇指，旁观者欢呼了起来。}",
@@ -75,7 +75,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 						text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color] 克朗"
 					}
 				];
-				_event.m.Town.getOwner().addPlayerRelation(5.000000, "当地的演艺人员将你的名字传遍了。");
+				_event.m.Town.getOwner().addPlayerRelation(5.0, "当地的演艺人员将你的名字传遍了。");
 				this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 			}
 
@@ -108,14 +108,14 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 					}
 				];
 				local item = this.new("scripts/items/weapons/fencing_sword");
-				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.01));
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Town.getOwner().addPlayerRelation(-10.000000, "有传言说当地一个艺人被你的人杀了");
+				_event.m.Town.getOwner().addPlayerRelation(-10.0, "有传言说当地一个艺人被你的人杀了");
 				this.World.Flags.set("IsSwordEaterWildmanDone", true);
 			}
 

@@ -4,7 +4,7 @@ this.monolith_enter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.location.monolith_enter";
 		this.m.Title = "当你接近时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",

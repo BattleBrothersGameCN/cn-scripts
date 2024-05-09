@@ -23,8 +23,8 @@ this.drum_item <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.StaminaModifier = 0;
 		this.m.RegularDamage = 5;
 		this.m.RegularDamageMax = 5;
-		this.m.ArmorDamageMult = 0.000000;
-		this.m.DirectDamageMult = 0.000000;
+		this.m.ArmorDamageMult = 0.0;
+		this.m.DirectDamageMult = 0.0;
 	}
 
 	function onEquip()

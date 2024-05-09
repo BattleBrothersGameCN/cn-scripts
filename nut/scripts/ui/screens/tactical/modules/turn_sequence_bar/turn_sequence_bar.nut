@@ -137,7 +137,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 
 	function isRemovingEntity()
 	{
-		return this.m.LastRemoveTime + 2.000000 >= this.Time.getRealTimeF();
+		return this.m.LastRemoveTime + 2.0 >= this.Time.getRealTimeF();
 	}
 
 	function getTurnPosition()
@@ -1136,7 +1136,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 				{
 					if (this.Tactical.CameraDirector.isIdle())
 					{
-						camera.moveTo(_entity, 200.000000);
+						camera.moveTo(_entity, 200.0);
 					}
 					else
 					{

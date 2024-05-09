@@ -6,7 +6,7 @@ this.caravan_hand_cart_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.caravan_hand_cart";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_55.png[/img]你偶然发现曾经的商队成员，%caravanhand%，正在摆弄战团的载重货车。 他把一块木板固定住，用大头钉把它钉在滚轴上。 然后，只要轻轻一拉，木板就可以落在载重货车的腹部。 相当巧妙。这样你就可以在载重货车上装更多东西了。",
@@ -32,7 +32,7 @@ this.caravan_hand_cart_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/special.png",
 					text = "你的仓库空间增加了"
 				});
-				_event.m.CaravanHand.improveMood(1.000000, "改进了战团的货车");
+				_event.m.CaravanHand.improveMood(1.0, "改进了战团的货车");
 
 				if (_event.m.CaravanHand.getMoodState() >= this.Const.MoodState.Neutral)
 				{

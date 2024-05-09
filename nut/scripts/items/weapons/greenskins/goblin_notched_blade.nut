@@ -17,13 +17,13 @@ this.goblin_notched_blade <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_goblin_weapon_01";
 		this.m.Value = 350;
-		this.m.Condition = 44.000000;
-		this.m.ConditionMax = 44.000000;
+		this.m.Condition = 44.0;
+		this.m.ConditionMax = 44.0;
 		this.m.StaminaModifier = -3;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 30;
-		this.m.ArmorDamageMult = 0.600000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.6;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function onEquip()

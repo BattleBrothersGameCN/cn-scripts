@@ -53,10 +53,10 @@ this.indomitable_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageReceivedTotalMult *= 0.500000;
+		_properties.DamageReceivedTotalMult *= 0.5;
 		_properties.IsImmuneToStun = true;
 		_properties.IsImmuneToKnockBackAndGrab = true;
-		_properties.TargetAttractionMult *= 0.500000;
+		_properties.TargetAttractionMult *= 0.5;
 	}
 
 	function onTurnStart()

@@ -24,7 +24,7 @@ this.scout_follower <- this.inherit("scripts/retinue/follower", {
 	{
 		for( local i = 0; i < this.World.Assets.m.TerrainTypeSpeedMult.len(); i = ++i )
 		{
-			this.World.Assets.m.TerrainTypeSpeedMult[i] *= 1.150000;
+			this.World.Assets.m.TerrainTypeSpeedMult[i] *= 1.15;
 		}
 	}
 

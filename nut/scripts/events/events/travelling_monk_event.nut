@@ -4,7 +4,7 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.travelling_monk";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A1",
 			Text = "[img]gfx/ui/events/event_40.png[/img]你在路上遇到了一个僧侣，和他在一起的是一辆驴拉的车，这可怜的驮畜无精打采地低着头。刚割完的金雀花杆和碧绿的苔藓挂在车的一侧，两者都在在吹干它们的风中急切地扭动着，一些锅碗瓢盆像乡村的风铃一样发出咔哒声，随着这辆简陋的货车慢悠悠地停下来。一个桶子在车板的边缘摇摇晃晃，一对蜜蜂摇摇摆摆地想跟上来，因极大的好奇心在桶的裂缝里戳来戳去。\n\n那僧侣把一顶羊毛帽从他的脸上抬起，但帽檐又垂落到他的眼睛上。他马上完全摘下帽子，然后用袖子擦了擦他的眉毛。带着惬意的微笑，似乎一点也不为眼前真正的人形军械库所困扰。%SPEECH_ON%晚上好先生们。我猜你们不是那种会在领主的旗帜下行军的人。对我来说你们看起来像是雇佣兵。%SPEECH_OFF%",
@@ -164,7 +164,7 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 		{
 			if (this.Math.rand(1, 100) <= _chance)
 			{
-				bro.improveMood(1.000000, "与战团一起庆祝了");
+				bro.improveMood(1.0, "与战团一起庆祝了");
 
 				if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 				{

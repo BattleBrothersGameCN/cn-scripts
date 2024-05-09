@@ -7,7 +7,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_vs_ironlungs";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]{在雇佣文化的世界里，拥有强大的耐力非常重要，但显然有些人比其他人更能够抵抗疲劳。%ironlungs%就是这样的人，他是一个以在激烈战斗中能保持稳定呼吸而著称的战士。对你来说，这只是一个好奇心，就像一个人有奇怪的脖子、大手或者大锤子一样。但对%anatomist%来说，这完全是另外一回事了。他想知道为什么一个人在日常生活中和他周围的人没有什么差别，却拥有如此强健和有力的肺部。%SPEECH_ON%我们都是战士，所以这个人如何能够和我们其他人相比呼吸如此稳定？他肯定拥有我们所没有的元素，我想我可以找到这个元素。%SPEECH_OFF%等等，“我们”都是战士？你并不完全同意解剖学家的说法。你问他如何研究这个问题。%SPEECH_ON%考虑到种种原因，简单的解剖不太可能，但我相信%ironlungs%会拒绝我的要求。那么就只有一个选项了，就是通过骨骼操作和小心的切口来密切研究他，看看是否能够复制他的力量。%SPEECH_OFF%}",
@@ -67,7 +67,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Anatomist.addInjury([
 					{
 						ID = "injury.pierced_lung",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury/pierced_lung_injury"
 					}
 				]);
@@ -102,7 +102,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Anatomist.addInjury([
 					{
 						ID = "injury.pierced_lung",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury/pierced_lung_injury"
 					}
 				]);
@@ -111,7 +111,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Anatomist.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Anatomist.worsenMood(0.500000, "他的实验性手术没有成功。");
+				_event.m.Anatomist.worsenMood(0.5, "他的实验性手术没有成功。");
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.IronLungs.getImagePath());
 			}
@@ -135,7 +135,7 @@ this.anatomist_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.000000, "被剥夺了研究机会");
+				_event.m.Anatomist.worsenMood(1.0, "被剥夺了研究机会");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

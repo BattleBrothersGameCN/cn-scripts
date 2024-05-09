@@ -19,13 +19,13 @@ this.named_two_handed_mace <- this.inherit("scripts/items/weapons/named/named_we
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3600;
 		this.m.ShieldDamage = 26;
-		this.m.Condition = 120.000000;
-		this.m.ConditionMax = 120.000000;
+		this.m.Condition = 120.0;
+		this.m.ConditionMax = 120.0;
 		this.m.StaminaModifier = -16;
 		this.m.RegularDamage = 75;
 		this.m.RegularDamageMax = 95;
-		this.m.ArmorDamageMult = 1.250000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 1.25;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ChanceToHitHead = 0;
 		this.randomizeValues();
 	}

@@ -8,7 +8,7 @@ this.jousting_tournament_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.jousting_tournament";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%jouster% 手里拿着一张纸走过来。 他砰地一声把它摔到你的桌子上，说他想要参加。 你拿起卷轴，展开它，看到当地一个小镇正在举办一场马术比赛。 那人抱着肩，等待你的回答。",
@@ -147,7 +147,7 @@ this.jousting_tournament_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Jouster.getImagePath());
-				_event.m.Jouster.improveMood(2.000000, "赢得了一场比赛");
+				_event.m.Jouster.improveMood(2.0, "赢得了一场比赛");
 
 				if (_event.m.Jouster.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -185,7 +185,7 @@ this.jousting_tournament_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/asset_money.png",
 					text = "你赢了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + _event.m.Bet + "[/color] 克朗"
 				});
-				_event.m.Jouster.improveMood(2.000000, "赢得了一场比赛");
+				_event.m.Jouster.improveMood(2.0, "赢得了一场比赛");
 
 				if (_event.m.Jouster.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -366,7 +366,7 @@ this.jousting_tournament_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Jouster.getImagePath());
-				_event.m.Jouster.worsenMood(2.000000, "被拒绝参加比赛");
+				_event.m.Jouster.worsenMood(2.0, "被拒绝参加比赛");
 
 				if (_event.m.Jouster.getMoodState() < this.Const.MoodState.Neutral)
 				{

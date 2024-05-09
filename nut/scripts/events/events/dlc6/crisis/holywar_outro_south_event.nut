@@ -4,7 +4,7 @@ this.holywar_outro_south_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.holywar_outro_south";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 1.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
@@ -119,7 +119,7 @@ this.holywar_outro_south_event <- this.inherit("scripts/events/event", {
 
 		local currentTile = this.World.State.getPlayer().getTile();
 
-		if (currentTile.SquareCoords.Y > this.World.getMapSize().Y * 0.180000)
+		if (currentTile.SquareCoords.Y > this.World.getMapSize().Y * 0.18)
 		{
 			return;
 		}

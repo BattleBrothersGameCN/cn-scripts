@@ -418,12 +418,12 @@ this.skill_container <- {
 		}
 
 		this.collectGarbage(false);
-		local hp = 1.000000;
+		local hp = 1.0;
 		local updateHitpoints = this.m.Actor.getHitpointsMax() > 0;
 
 		if (updateHitpoints)
 		{
-			hp = this.Math.minf(1.000000, this.m.Actor.getHitpointsPct());
+			hp = this.Math.minf(1.0, this.m.Actor.getHitpointsPct());
 		}
 
 		this.m.IsUpdating = true;

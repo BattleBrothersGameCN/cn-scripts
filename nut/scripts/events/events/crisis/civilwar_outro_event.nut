@@ -6,7 +6,7 @@ this.civilwar_outro_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_outro";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 1.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
@@ -71,7 +71,7 @@ this.civilwar_outro_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}
@@ -79,7 +79,7 @@ this.civilwar_outro_event <- this.inherit("scripts/events/event", {
 		if (this.World.Statistics.hasNews("crisis_civilwar_end"))
 		{
 			local brothers = this.World.getPlayerRoster().getAll();
-			local most_days_with_company = -9000.000000;
+			local most_days_with_company = -9000.0;
 			local most_days_with_company_bro;
 
 			foreach( bro in brothers )

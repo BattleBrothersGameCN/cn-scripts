@@ -1,15 +1,15 @@
 this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 	m = {
 		Location = null,
-		LastHelpTime = 0.000000
+		LastHelpTime = 0.0
 	},
 	function create()
 	{
 		this.contract.create();
-		this.m.DifficultyMult = this.Math.rand(75, 105) * 0.010000;
+		this.m.DifficultyMult = this.Math.rand(75, 105) * 0.01;
 		this.m.Type = "contract.discover_location";
 		this.m.Name = "寻找位置";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -54,12 +54,12 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 				continue;
 			}
 
-			if (region.Discovered < 0.250000)
+			if (region.Discovered < 0.25)
 			{
 				this.World.State.updateRegionDiscovery(region);
 			}
 
-			if (region.Discovered < 0.250000)
+			if (region.Discovered < 0.25)
 			{
 				continue;
 			}
@@ -87,21 +87,21 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Location = this.WeakTableRef(best);
 		this.m.Flags.set("Region", this.World.State.getTileRegion(this.m.Location.getTile()).Name);
 		this.m.Flags.set("Location", this.m.Location.getName());
-		this.m.DifficultyMult = this.Math.rand(70, 85) * 0.010000;
-		this.m.Payment.Pool = this.Math.max(300, 100 + (this.World.Assets.isExplorationMode() ? 100 : 0) + lowestDistance * 15.000000 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentLightMult());
+		this.m.DifficultyMult = this.Math.rand(70, 85) * 0.01;
+		this.m.Payment.Pool = this.Math.max(300, 100 + (this.World.Assets.isExplorationMode() ? 100 : 0) + lowestDistance * 15.0 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentLightMult());
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
-		this.m.Flags.set("Bribe", this.beautifyNumber(this.m.Payment.Pool * (this.Math.rand(110, 150) * 0.010000)));
-		this.m.Flags.set("HintBribe", this.beautifyNumber(this.m.Payment.Pool * 0.100000));
+		this.m.Flags.set("Bribe", this.beautifyNumber(this.m.Payment.Pool * (this.Math.rand(110, 150) * 0.01)));
+		this.m.Flags.set("HintBribe", this.beautifyNumber(this.m.Payment.Pool * 0.1));
 	}
 
 	function createStates()
@@ -185,7 +185,7 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 				}
 				else
 				{
-					local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+					local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 
 					foreach( party in parties )
 					{
@@ -195,7 +195,7 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 						}
 					}
 
-					if (this.Time.getVirtualTimeF() >= this.Contract.m.LastHelpTime + 70.000000)
+					if (this.Time.getVirtualTimeF() >= this.Contract.m.LastHelpTime + 70.0)
 					{
 						this.Contract.m.LastHelpTime = this.Time.getVirtualTimeF() + this.Math.rand(0, 30);
 						local r = this.Math.rand(1, 100);
@@ -359,7 +359,7 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 					Text = "非常感谢。",
 					function getResult()
 					{
-						if (this.Math.rand(1, 100) <= 20 && this.Contract.getDifficultyMult() > 0.950000)
+						if (this.Math.rand(1, 100) <= 20 && this.Contract.getDifficultyMult() > 0.95)
 						{
 							this.Flags.set("IsTrap", true);
 						}
@@ -533,7 +533,7 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
 						this.World.Assets.addMoney(this.Flags.get("Bribe"));
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail * 2);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 1.500000, "向竞争对手提供了信息");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 1.5, "向竞争对手提供了信息");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -592,7 +592,7 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 	function onPrepareVariables( _vars )
 	{
 		local distance = this.m.Location != null && !this.m.Location.isNull() ? this.World.State.getPlayer().getTile().getDistanceTo(this.m.Location.getTile()) : 0;
-		distance = this.Const.Strings.Distance[this.Math.min(this.Const.Strings.Distance.len() - 1, distance / 30.000000 * (this.Const.Strings.Distance.len() - 1))];
+		distance = this.Const.Strings.Distance[this.Math.min(this.Const.Strings.Distance.len() - 1, distance / 30.0 * (this.Const.Strings.Distance.len() - 1))];
 		_vars.push([
 			"region",
 			this.m.Flags.get("Region")

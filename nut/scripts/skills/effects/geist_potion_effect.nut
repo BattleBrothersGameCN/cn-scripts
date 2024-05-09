@@ -50,7 +50,7 @@ this.geist_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageDirectMeleeAdd += 0.050000;
+		_properties.DamageDirectMeleeAdd += 0.05;
 	}
 
 	function onDeath( _fatalityType )

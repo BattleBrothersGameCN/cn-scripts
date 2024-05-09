@@ -16,14 +16,14 @@ this.lightbringer_sword <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_sword_legendary_01";
-		this.m.Condition = 90.000000;
-		this.m.ConditionMax = 90.000000;
+		this.m.Condition = 90.0;
+		this.m.ConditionMax = 90.0;
 		this.m.StaminaModifier = -8;
 		this.m.Value = 20000;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 55;
-		this.m.ArmorDamageMult = 0.900000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.9;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function getTooltip()

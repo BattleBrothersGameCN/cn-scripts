@@ -54,7 +54,7 @@ this.nightmare_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDamage()
 	{
-		return this.Math.max(10, 30 - this.Math.floor(this.getContainer().getActor().getCurrentProperties().getBravery() * 0.250000));
+		return this.Math.max(10, 30 - this.Math.floor(this.getContainer().getActor().getCurrentProperties().getBravery() * 0.25));
 	}
 
 	function applyDamage()
@@ -65,10 +65,10 @@ this.nightmare_effect <- this.inherit("scripts/skills/skill", {
 			this.spawnIcon("status_effect_81", this.getContainer().getActor().getTile());
 			local hitInfo = clone this.Const.Tactical.HitInfo;
 			hitInfo.DamageRegular = this.getDamage();
-			hitInfo.DamageDirect = 1.000000;
+			hitInfo.DamageDirect = 1.0;
 			hitInfo.BodyPart = this.Const.BodyPart.Body;
-			hitInfo.BodyDamageMult = 1.000000;
-			hitInfo.FatalityChanceMult = 0.000000;
+			hitInfo.BodyDamageMult = 1.0;
+			hitInfo.FatalityChanceMult = 0.0;
 			this.getContainer().getActor().onDamageReceived(this.getContainer().getActor(), this, hitInfo);
 		}
 	}
@@ -84,7 +84,7 @@ this.nightmare_effect <- this.inherit("scripts/skills/skill", {
 
 		if (this.m.SoundOnUse.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.000000, this.getContainer().getActor().getPos());
+			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.0, this.getContainer().getActor().getPos());
 		}
 	}
 
@@ -95,7 +95,7 @@ this.nightmare_effect <- this.inherit("scripts/skills/skill", {
 
 		if (this.m.SoundOnUse.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.000000, this.getContainer().getActor().getPos());
+			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.0, this.getContainer().getActor().getPos());
 		}
 	}
 

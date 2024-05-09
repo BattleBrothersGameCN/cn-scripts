@@ -8,7 +8,7 @@ this.companion_ranged_background <- this.inherit("scripts/skills/backgrounds/cha
 		this.m.Icon = "ui/traits/trait_icon_32.png";
 		this.m.HiringCost = 0;
 		this.m.DailyCost = 14;
-		this.m.DailyCostMult = 1.000000;
+		this.m.DailyCostMult = 1.0;
 		this.m.Excluded = [
 			"trait.hate_undead",
 			"trait.hate_beasts",

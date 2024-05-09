@@ -6,7 +6,7 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.butcher_wardogs";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_27.png[/img]你打开一箱食物来寻找你最后的储备。 一个苹果滚过底部，听起来和摇摇晃晃的空腹咕噜声没什么两样。 几条面包给了它一些陪伴，还有一块用厚叶子包着的肉。就这样了。\n\n当你关上盖子转过身来时，%butcher% 就站在那里。%SPEECH_ON%嘿，老板。我知道我们有麻烦了。 所以我…摆平它？%SPEECH_OFF%就在这时，他用拇指搭在肩膀上，朝着拴在木桩上的两只战犬的方向。",
@@ -140,7 +140,7 @@ this.butcher_wardogs_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Butcher.getImagePath());
-				_event.m.Butcher.worsenMood(1.000000, "请求被拒绝");
+				_event.m.Butcher.worsenMood(1.0, "请求被拒绝");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Butcher.getMoodState()],

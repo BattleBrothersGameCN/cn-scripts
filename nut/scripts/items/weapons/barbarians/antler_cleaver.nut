@@ -17,15 +17,15 @@ this.antler_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_wildmen_01";
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.StaminaModifier = -8;
 		this.m.Value = 120;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 30;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.250000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.25;
+		this.m.DirectDamageAdd = 0.1;
 	}
 
 	function onEquip()

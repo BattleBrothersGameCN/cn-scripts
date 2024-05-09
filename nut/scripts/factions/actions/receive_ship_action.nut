@@ -99,7 +99,7 @@ this.receive_ship_action <- this.inherit("scripts/factions/faction_action", {
 		party.setSlowerAtNight(false);
 		party.setAttackable(false);
 		party.setLeaveFootprints(false);
-		party.setVisibilityMult(2.000000);
+		party.setVisibilityMult(2.0);
 		party.setDescription("运送货物和乘客的船。");
 		local c = party.getController();
 		c.getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);

@@ -1,7 +1,7 @@
 this.event_manager <- {
 	m = {
-		LastEventTime = 0.000000,
-		LastCheckTime = 0.000000,
+		LastEventTime = 0.0,
+		LastCheckTime = 0.0,
 		LastEventID = "",
 		Events = [],
 		SpecialEvents = [],
@@ -36,8 +36,8 @@ this.event_manager <- {
 
 	function resetLastEventTime()
 	{
-		this.m.LastEventTime = -9000.000000;
-		this.m.LastCheckTime = -9000.000000;
+		this.m.LastEventTime = -9000.0;
+		this.m.LastCheckTime = -9000.0;
 	}
 
 	function addSpecialEvent( _e )
@@ -136,12 +136,12 @@ this.event_manager <- {
 			return false;
 		}
 
-		if (!_ignorePreviousBattle && this.Time.getVirtualTimeF() - this.m.LastBattleTime < 2.000000)
+		if (!_ignorePreviousBattle && this.Time.getVirtualTimeF() - this.m.LastBattleTime < 2.0)
 		{
 			return false;
 		}
 
-		local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+		local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 
 		foreach( party in parties )
 		{
@@ -201,7 +201,7 @@ this.event_manager <- {
 			{
 				if (!this.m.ActiveEvent.isSpecial() && this.m.ActiveEvent.getScore() < 500)
 				{
-					local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+					local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 
 					foreach( party in parties )
 					{
@@ -239,7 +239,7 @@ this.event_manager <- {
 			return;
 		}
 
-		if (this.Time.getVirtualTimeF() - this.m.LastBattleTime < 2.000000)
+		if (this.Time.getVirtualTimeF() - this.m.LastBattleTime < 2.0)
 		{
 			return;
 		}
@@ -258,12 +258,12 @@ this.event_manager <- {
 		local timeSinceLastEvent = this.Time.getVirtualTimeF() - this.m.LastEventTime - this.Const.Events.GlobalMinDelay;
 		local chanceToFireEvent = this.Const.Events.GlobalBaseChance + timeSinceLastEvent * this.Const.Events.GlobalChancePerSecond;
 
-		if (this.Time.getVirtualTimeF() - this.m.LastBattleTime >= 5.000000 && this.Math.rand(1, 100) > chanceToFireEvent)
+		if (this.Time.getVirtualTimeF() - this.m.LastBattleTime >= 5.0 && this.Math.rand(1, 100) > chanceToFireEvent)
 		{
 			return;
 		}
 
-		local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+		local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 
 		foreach( party in parties )
 		{
@@ -304,7 +304,7 @@ this.event_manager <- {
 				yield false;
 			}
 
-			if (this.m.Events[i].getScore() <= 0 || isNewsReady && this.m.Events[i].getScore() < 2000 || this.Time.getVirtualTimeF() - this.m.LastBattleTime < 5.000000 && this.m.Events[i].getScore() < 500)
+			if (this.m.Events[i].getScore() <= 0 || isNewsReady && this.m.Events[i].getScore() < 2000 || this.Time.getVirtualTimeF() - this.m.LastBattleTime < 5.0 && this.m.Events[i].getScore() < 500)
 			{
 			}
 			else
@@ -318,7 +318,7 @@ this.event_manager <- {
 
 		for( local i = 0; i < this.m.Events.len(); i = ++i )
 		{
-			if (this.m.Events[i].getScore() <= 0 || isNewsReady && this.m.Events[i].getScore() < 2000 || this.Time.getVirtualTimeF() - this.m.LastBattleTime < 5.000000 && this.m.Events[i].getScore() < 500)
+			if (this.m.Events[i].getScore() <= 0 || isNewsReady && this.m.Events[i].getScore() < 2000 || this.Time.getVirtualTimeF() - this.m.LastBattleTime < 5.0 && this.m.Events[i].getScore() < 500)
 			{
 			}
 			else
@@ -353,7 +353,7 @@ this.event_manager <- {
 
 		if (this.m.ActiveEvent.getScore() < 500)
 		{
-			local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+			local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 
 			foreach( party in parties )
 			{

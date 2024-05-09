@@ -9,7 +9,7 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.wardogs_fight_each_other";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_37.png[/img]一连串的狗吠声，接着是压抑的低吼，打断了你的工作。 你离开帐篷看见两条战犬，%randomwardog1% 和 %randomwardog2%在打架。 他们咬在一起争锋相对谁也不让谁。 几个队友试图劝架，但每次当他们出手干预时，战犬就会短暂分开同时向劝架的人咆哮，好像在说这是它们之间的战斗，谁也不许插手。",

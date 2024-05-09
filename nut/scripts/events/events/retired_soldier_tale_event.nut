@@ -6,7 +6,7 @@ this.retired_soldier_tale_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.retired_soldier_tale";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]%retiredsoldier% 坐在篝火旁讲述着他的战争故事。 就算他说了谎话，那也一定只是一种修辞，因为遍布他全身的每处伤疤都无声地诉说着真相。 每当听完一个故事后，人们都变得更加专注、信心百倍，准备着回到战场上去书写他们自己的故事。",
@@ -26,7 +26,7 @@ this.retired_soldier_tale_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Soldier.getImagePath());
-				_event.m.Soldier.improveMood(0.250000, "讲述了他的一个战争故事");
+				_event.m.Soldier.improveMood(0.25, "讲述了他的一个战争故事");
 
 				if (_event.m.Soldier.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -48,7 +48,7 @@ this.retired_soldier_tale_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.000000, "感到振奋。" + _event.m.Soldier.getName() + "的战争故事");
+						bro.improveMood(1.0, "感到振奋。" + _event.m.Soldier.getName() + "的战争故事");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

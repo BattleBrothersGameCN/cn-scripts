@@ -10,7 +10,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		Title = "",
 		WorldTroop = null,
 		BloodType = this.Const.BloodType.None,
-		BloodSaturation = 1.000000,
+		BloodSaturation = 1.0,
 		BloodColor = this.createColor("#ffffff"),
 		ExcludedInjuries = [],
 		MoraleState = this.Const.MoraleState.Steady,
@@ -37,20 +37,20 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		MaxTraversibleLevels = 1,
 		Sound = [],
 		SoundVolume = [],
-		SoundPitch = 1.000000,
-		SoundVolumeOverall = 1.000000,
+		SoundPitch = 1.0,
+		SoundVolumeOverall = 1.0,
 		LastSound = "",
 		BloodSplatterOffset = this.createVec(0, 0),
 		DecapitateSplatterOffset = this.createVec(-4, -31),
 		SmashSplatterOffset = this.createVec(-15, -45),
 		ShakeLayers = this.Const.ShakeCharacterLayers,
-		DecapitateBloodAmount = 1.000000,
-		DeathBloodAmount = 1.000000,
-		BloodPoolScale = 1.000000,
-		RenderAnimationStartTime = 0.000000,
+		DecapitateBloodAmount = 1.0,
+		DeathBloodAmount = 1.0,
+		BloodPoolScale = 1.0,
+		RenderAnimationStartTime = 0.0,
 		RenderAnimationOffset = this.createVec(0, 0),
-		RenderAnimationSpeed = 1.000000,
-		RenderAnimationDistanceMult = 1.000000,
+		RenderAnimationSpeed = 1.0,
+		RenderAnimationDistanceMult = 1.0,
 		OnMovementFinishCallback = null,
 		IsControlledByPlayer = false,
 		IsTurnStarted = false,
@@ -145,12 +145,12 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getHitpointsMax()
 	{
-		return this.Math.floor(this.m.CurrentProperties.Hitpoints * (this.m.CurrentProperties.HitpointsMult >= 0 ? this.m.CurrentProperties.HitpointsMult : 1.000000 / this.m.CurrentProperties.HitpointsMult));
+		return this.Math.floor(this.m.CurrentProperties.Hitpoints * (this.m.CurrentProperties.HitpointsMult >= 0 ? this.m.CurrentProperties.HitpointsMult : 1.0 / this.m.CurrentProperties.HitpointsMult));
 	}
 
 	function getHitpointsPct()
 	{
-		return this.Math.minf(1.000000, this.getHitpoints() / this.Math.maxf(1.000000, this.getHitpointsMax()));
+		return this.Math.minf(1.0, this.getHitpoints() / this.Math.maxf(1.0, this.getHitpointsMax()));
 	}
 
 	function setHitpoints( _h )
@@ -203,12 +203,12 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getFatigueMax()
 	{
-		return this.Math.floor(this.m.CurrentProperties.Stamina * (this.m.CurrentProperties.StaminaMult >= 0 ? this.m.CurrentProperties.StaminaMult : 1.000000 / this.m.CurrentProperties.StaminaMult));
+		return this.Math.floor(this.m.CurrentProperties.Stamina * (this.m.CurrentProperties.StaminaMult >= 0 ? this.m.CurrentProperties.StaminaMult : 1.0 / this.m.CurrentProperties.StaminaMult));
 	}
 
 	function getFatiguePct()
 	{
-		return this.Math.minf(1.000000, this.m.Fatigue / this.Math.maxf(1.000000, this.getFatigueMax()));
+		return this.Math.minf(1.0, this.m.Fatigue / this.Math.maxf(1.0, this.getFatigueMax()));
 	}
 
 	function setFatigue( _f )
@@ -219,7 +219,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getInitiative()
 	{
-		return this.Math.round(this.m.CurrentProperties.Initiative * (this.m.CurrentProperties.InitiativeMult >= 0 ? this.m.CurrentProperties.InitiativeMult : 1.000000 / this.m.CurrentProperties.InitiativeMult) - this.m.Fatigue * this.m.CurrentProperties.FatigueToInitiativeRate - this.Math.max(0, this.m.BaseProperties.Stamina - this.m.CurrentProperties.Stamina));
+		return this.Math.round(this.m.CurrentProperties.Initiative * (this.m.CurrentProperties.InitiativeMult >= 0 ? this.m.CurrentProperties.InitiativeMult : 1.0 / this.m.CurrentProperties.InitiativeMult) - this.m.Fatigue * this.m.CurrentProperties.FatigueToInitiativeRate - this.Math.max(0, this.m.BaseProperties.Stamina - this.m.CurrentProperties.Stamina));
 	}
 
 	function getXPValue()
@@ -239,19 +239,19 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getHitpointsState()
 	{
-		return this.Math.min(this.Const.HitpointsStateName.len() - 1, this.Math.max(0, this.Math.floor(this.m.Hitpoints / (this.getHitpointsMax() * 1.000000) * (this.Const.HitpointsStateName.len() - 1))));
+		return this.Math.min(this.Const.HitpointsStateName.len() - 1, this.Math.max(0, this.Math.floor(this.m.Hitpoints / (this.getHitpointsMax() * 1.0) * (this.Const.HitpointsStateName.len() - 1))));
 	}
 
 	function getFatigueState()
 	{
-		return this.Math.min(this.Const.FatigueStateName.len() - 1, this.Math.max(0, this.Math.floor(this.m.Fatigue / (this.getFatigueMax() * 1.000000) * (this.Const.FatigueStateName.len() - 1))));
+		return this.Math.min(this.Const.FatigueStateName.len() - 1, this.Math.max(0, this.Math.floor(this.m.Fatigue / (this.getFatigueMax() * 1.0) * (this.Const.FatigueStateName.len() - 1))));
 	}
 
 	function getArmorState( _bodyPart )
 	{
 		if (this.getArmor(_bodyPart) != 0)
 		{
-			return this.Math.min(this.Const.ArmorStateName.len() - 1, this.Math.max(0, 1 + this.Math.floor(this.getArmor(_bodyPart) / this.Math.maxf(1.000000, this.getArmorMax(_bodyPart) * 1.000000) * (this.Const.ArmorStateName.len() - 2))));
+			return this.Math.min(this.Const.ArmorStateName.len() - 1, this.Math.max(0, 1 + this.Math.floor(this.getArmor(_bodyPart) / this.Math.maxf(1.0, this.getArmorMax(_bodyPart) * 1.0) * (this.Const.ArmorStateName.len() - 2))));
 		}
 		else
 		{
@@ -652,7 +652,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 		if (this.isWaitActionSpent())
 		{
-			ret = ret * (ret >= 0 ? this.getCurrentProperties().InitiativeAfterWaitMult : 1.000000 / this.getCurrentProperties().InitiativeAfterWaitMult);
+			ret = ret * (ret >= 0 ? this.getCurrentProperties().InitiativeAfterWaitMult : 1.0 / this.getCurrentProperties().InitiativeAfterWaitMult);
 		}
 
 		return this.Math.floor(ret);
@@ -691,7 +691,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		}
 	}
 
-	function riseFromGround( _speedMult = 1.000000 )
+	function riseFromGround( _speedMult = 1.0 )
 	{
 		if (!this.isHiddenToPlayer() || this.Math.rand(0, 1) == 1)
 		{
@@ -739,7 +739,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		}
 	}
 
-	function sinkIntoGround( _speedMult = 1.000000 )
+	function sinkIntoGround( _speedMult = 1.0 )
 	{
 		if (!this.isHiddenToPlayer() || this.Math.rand(0, 1) == 1)
 		{
@@ -822,8 +822,8 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			return;
 		}
 
-		local headArmor = 0.000000;
-		local bodyArmor = 0.000000;
+		local headArmor = 0.0;
+		local bodyArmor = 0.0;
 
 		if (this.getArmorMax(this.Const.BodyPart.Head) > 0)
 		{
@@ -835,7 +835,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			bodyArmor = this.getArmor(this.Const.BodyPart.Body) / this.getArmorMax(this.Const.BodyPart.Body);
 		}
 
-		this.setOverlayValues(headArmor, bodyArmor, this.Math.minf(1.000000, this.getHitpoints() / this.getHitpointsMax()));
+		this.setOverlayValues(headArmor, bodyArmor, this.Math.minf(1.0, this.getHitpoints() / this.getHitpointsMax()));
 		local status = this.getSkills().query(this.Const.SkillType.StatusEffect | this.Const.SkillType.Terrain);
 		local icons = [];
 
@@ -928,7 +928,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		if (d > 50)
 		{
 			local e = d - 50;
-			d = 50 + e * 0.500000;
+			d = 50 + e * 0.5;
 		}
 
 		if (!_skill.isRanged())
@@ -1103,14 +1103,14 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 	function playIdleSound()
 	{
-		this.playSound(this.Const.Sound.ActorEvent.Idle, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] * this.m.SoundVolumeOverall * (this.Math.rand(60, 100) * 0.010000) * (this.isHiddenToPlayer ? 0.330000 : 1.000000), this.m.SoundPitch * (this.Math.rand(85, 115) * 0.010000));
+		this.playSound(this.Const.Sound.ActorEvent.Idle, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] * this.m.SoundVolumeOverall * (this.Math.rand(60, 100) * 0.01) * (this.isHiddenToPlayer ? 0.33 : 1.0), this.m.SoundPitch * (this.Math.rand(85, 115) * 0.01));
 	}
 
 	function playAttackSound()
 	{
 		if (this.Math.rand(1, 100) <= 50)
 		{
-			this.playSound(this.Const.Sound.ActorEvent.Attack, this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Attack] * (this.Math.rand(75, 100) * 0.010000), this.m.SoundPitch);
+			this.playSound(this.Const.Sound.ActorEvent.Attack, this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Attack] * (this.Math.rand(75, 100) * 0.01), this.m.SoundPitch);
 		}
 	}
 
@@ -1168,7 +1168,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		for( local i = 0; i < this.Const.Sound.ActorEvent.COUNT; i = ++i )
 		{
 			this.m.Sound[i] = [];
-			this.m.SoundVolume[i] = 1.000000;
+			this.m.SoundVolume[i] = 1.0;
 		}
 
 		this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
@@ -1462,7 +1462,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 		if (this.m.Skills.hasSkill("perk.steel_brow"))
 		{
-			_hitInfo.BodyDamageMult = 1.000000;
+			_hitInfo.BodyDamageMult = 1.0;
 		}
 
 		local p = this.m.Skills.buildPropertiesForBeingHit(_attacker, _skill, _hitInfo);
@@ -1481,7 +1481,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		local armor = 0;
 		local armorDamage = 0;
 
-		if (_hitInfo.DamageDirect < 1.000000)
+		if (_hitInfo.DamageDirect < 1.0)
 		{
 			armor = p.Armor[_hitInfo.BodyPart] * p.ArmorMult[_hitInfo.BodyPart];
 			armorDamage = this.Math.min(armor, _hitInfo.DamageArmor);
@@ -1492,11 +1492,11 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		_hitInfo.DamageFatigue *= p.FatigueEffectMult;
 		this.m.Fatigue = this.Math.min(this.getFatigueMax(), this.Math.round(this.m.Fatigue + _hitInfo.DamageFatigue * p.FatigueReceivedPerHitMult * this.m.CurrentProperties.FatigueLossOnAnyAttackMult));
 		local damage = 0;
-		damage = damage + this.Math.maxf(0.000000, _hitInfo.DamageRegular * _hitInfo.DamageDirect * p.DamageReceivedDirectMult - armor * this.Const.Combat.ArmorDirectDamageMitigationMult);
+		damage = damage + this.Math.maxf(0.0, _hitInfo.DamageRegular * _hitInfo.DamageDirect * p.DamageReceivedDirectMult - armor * this.Const.Combat.ArmorDirectDamageMitigationMult);
 
-		if (armor <= 0 || _hitInfo.DamageDirect >= 1.000000)
+		if (armor <= 0 || _hitInfo.DamageDirect >= 1.0)
 		{
-			damage = damage + this.Math.max(0, _hitInfo.DamageRegular * this.Math.maxf(0.000000, 1.000000 - _hitInfo.DamageDirect * p.DamageReceivedDirectMult) - armorDamage);
+			damage = damage + this.Math.max(0, _hitInfo.DamageRegular * this.Math.maxf(0.0, 1.0 - _hitInfo.DamageDirect * p.DamageReceivedDirectMult) - armorDamage);
 		}
 
 		damage = damage * _hitInfo.BodyDamageMult;
@@ -1579,7 +1579,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			}
 		}
 
-		if (_hitInfo.DamageDirect < 1.000000)
+		if (_hitInfo.DamageDirect < 1.0)
 		{
 			local overflowDamage = _hitInfo.DamageArmor;
 
@@ -1598,7 +1598,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 		if (this.getFaction() == this.Const.Faction.Player && _attacker != null && _attacker.isAlive())
 		{
-			this.Tactical.getCamera().quake(_attacker, this, 5.000000, 0.160000, 0.300000);
+			this.Tactical.getCamera().quake(_attacker, this, 5.0, 0.16, 0.3);
 		}
 
 		if (damage <= 0 && armorDamage >= 0)
@@ -1606,7 +1606,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			if ((this.m.IsFlashingOnHit || this.getCurrentProperties().IsStunned || this.getCurrentProperties().IsRooted) && !this.isHiddenToPlayer() && _attacker != null && _attacker.isAlive())
 			{
 				local layers = this.m.ShakeLayers[_hitInfo.BodyPart];
-				local recoverMult = 1.000000;
+				local recoverMult = 1.0;
 				this.Tactical.getShaker().cancel(this);
 				this.Tactical.getShaker().shake(this, _attacker.getTile(), this.m.IsShakingOnHit ? 2 : 3, this.Const.Combat.ShakeEffectArmorHitColor, this.Const.Combat.ShakeEffectArmorHitHighlight, this.Const.Combat.ShakeEffectArmorHitFactor, this.Const.Combat.ShakeEffectArmorSaturation, layers, recoverMult);
 			}
@@ -1630,7 +1630,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		{
 			if (damage >= this.Const.Combat.SpawnBloodEffectMinDamage)
 			{
-				local mult = this.Math.maxf(0.750000, this.Math.minf(2.000000, damage / this.getHitpointsMax() * 3.000000));
+				local mult = this.Math.maxf(0.75, this.Math.minf(2.0, damage / this.getHitpointsMax() * 3.0));
 				this.spawnBloodEffect(this.getTile(), mult);
 			}
 
@@ -1638,11 +1638,11 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			{
 				local mult = damage / this.getHitpointsMax();
 
-				if (mult >= 0.750000)
+				if (mult >= 0.75)
 				{
 					this.Sound.play(this.Const.Sound.ArenaBigHit[this.Math.rand(0, this.Const.Sound.ArenaBigHit.len() - 1)], this.Const.Sound.Volume.Tactical * this.Const.Sound.Volume.Arena);
 				}
-				else if (mult >= 0.250000 || this.Math.rand(1, 100) <= 20)
+				else if (mult >= 0.25 || this.Math.rand(1, 100) <= 20)
 				{
 					this.Sound.play(this.Const.Sound.ArenaHit[this.Math.rand(0, this.Const.Sound.ArenaHit.len() - 1)], this.Const.Sound.Volume.Tactical * this.Const.Sound.Volume.Arena);
 				}
@@ -1651,11 +1651,11 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			if (this.m.CurrentProperties.IsAffectedByInjuries && this.m.IsAbleToDie && damage >= this.Const.Combat.InjuryMinDamage && this.m.CurrentProperties.ThresholdToReceiveInjuryMult != 0 && _hitInfo.InjuryThresholdMult != 0 && _hitInfo.Injuries != null)
 			{
 				local potentialInjuries = [];
-				local bonus = _hitInfo.BodyPart == this.Const.BodyPart.Head ? 1.250000 : 1.000000;
+				local bonus = _hitInfo.BodyPart == this.Const.BodyPart.Head ? 1.25 : 1.0;
 
 				foreach( inj in _hitInfo.Injuries )
 				{
-					if (inj.Threshold * _hitInfo.InjuryThresholdMult * this.Const.Combat.InjuryThresholdMult * this.m.CurrentProperties.ThresholdToReceiveInjuryMult * bonus <= damage / (this.getHitpointsMax() * 1.000000))
+					if (inj.Threshold * _hitInfo.InjuryThresholdMult * this.Const.Combat.InjuryThresholdMult * this.m.CurrentProperties.ThresholdToReceiveInjuryMult * bonus <= damage / (this.getHitpointsMax() * 1.0))
 					{
 						if (!this.m.Skills.hasSkill(inj.ID) && this.m.ExcludedInjuries.find(inj.ID) == null)
 						{
@@ -1716,7 +1716,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			{
 				if (!this.isPlayerControlled() || !this.m.Skills.hasSkill("effects.berserker_mushrooms"))
 				{
-					this.checkMorale(-1, this.Const.Morale.OnHitBaseDifficulty * (1.000000 - this.getHitpoints() / this.getHitpointsMax()) - (_attacker != null && _attacker.getID() != this.getID() ? _attacker.getCurrentProperties().ThreatOnHit : 0), this.Const.MoraleCheckType.Default, "", true);
+					this.checkMorale(-1, this.Const.Morale.OnHitBaseDifficulty * (1.0 - this.getHitpoints() / this.getHitpointsMax()) - (_attacker != null && _attacker.getID() != this.getID() ? _attacker.getCurrentProperties().ThreatOnHit : 0), this.Const.MoraleCheckType.Default, "", true);
 				}
 			}
 
@@ -1724,7 +1724,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 			if (damage >= this.Const.Combat.PlayPainSoundMinDamage && this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived].len() > 0)
 			{
-				local volume = 1.000000;
+				local volume = 1.0;
 
 				if (damage < this.Const.Combat.PlayPainVolumeMaxDamage)
 				{
@@ -1740,7 +1740,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			if ((this.m.IsFlashingOnHit || this.getCurrentProperties().IsStunned || this.getCurrentProperties().IsRooted) && !this.isHiddenToPlayer() && _attacker != null && _attacker.isAlive())
 			{
 				local layers = this.m.ShakeLayers[_hitInfo.BodyPart];
-				local recoverMult = this.Math.minf(1.500000, this.Math.maxf(1.000000, damage * 2.000000 / this.getHitpointsMax()));
+				local recoverMult = this.Math.minf(1.5, this.Math.maxf(1.0, damage * 2.0 / this.getHitpointsMax()));
 				this.Tactical.getShaker().cancel(this);
 				this.Tactical.getShaker().shake(this, _attacker.getTile(), this.m.IsShakingOnHit ? 2 : 3, this.Const.Combat.ShakeEffectHitpointsHitColor, this.Const.Combat.ShakeEffectHitpointsHitHighlight, this.Const.Combat.ShakeEffectHitpointsHitFactor, this.Const.Combat.ShakeEffectHitpointsSaturation, layers, recoverMult);
 			}
@@ -1751,7 +1751,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		return damage;
 	}
 
-	function playSound( _type, _volume, _pitch = 1.000000 )
+	function playSound( _type, _volume, _pitch = 1.0 )
 	{
 		if (this.m.Sound[_type].len() == 0)
 		{
@@ -1796,7 +1796,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			return;
 		}
 
-		if (_victim.getFaction() == this.getFaction() && _victim.getCurrentProperties().TargetAttractionMult >= 0.500000 && this.getCurrentProperties().IsAffectedByDyingAllies)
+		if (_victim.getFaction() == this.getFaction() && _victim.getCurrentProperties().TargetAttractionMult >= 0.5 && this.getCurrentProperties().IsAffectedByDyingAllies)
 		{
 			local difficulty = this.Const.Morale.AllyKilledBaseDifficulty - _victim.getXPValue() * this.Const.Morale.AllyKilledXPMult + this.Math.pow(_victim.getTile().getDistanceTo(this.getTile()), this.Const.Morale.AllyKilledDistancePow);
 			this.checkMorale(-1, difficulty, this.Const.MoraleCheckType.Default, "", true);
@@ -2143,7 +2143,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		this.setSpriteColorization("arrow", false);
 		local rooted = this.addSprite("status_rooted_back");
 		rooted.Visible = false;
-		rooted.Scale = 0.550000;
+		rooted.Scale = 0.55;
 	}
 
 	function onAfterInit()
@@ -2314,14 +2314,14 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 			if (this.m.Items.getAppearance().TwoHanded)
 			{
-				this.getSprite("arms_icon").Rotation = this.Math.minf(1.000000, p) * -70.000000;
+				this.getSprite("arms_icon").Rotation = this.Math.minf(1.0, p) * -70.0;
 			}
 			else
 			{
-				this.getSprite("arms_icon").Rotation = this.Math.minf(1.000000, p) * -33.000000;
+				this.getSprite("arms_icon").Rotation = this.Math.minf(1.0, p) * -33.0;
 			}
 
-			if (p >= 1.000000)
+			if (p >= 1.0)
 			{
 				this.m.IsLoweringWeapon = false;
 
@@ -2337,14 +2337,14 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 			if (this.m.Items.getAppearance().TwoHanded)
 			{
-				this.getSprite("arms_icon").Rotation = (1.000000 - this.Math.minf(1.000000, p)) * -70.000000;
+				this.getSprite("arms_icon").Rotation = (1.0 - this.Math.minf(1.0, p)) * -70.0;
 			}
 			else
 			{
-				this.getSprite("arms_icon").Rotation = (1.000000 - this.Math.minf(1.000000, p)) * -33.000000;
+				this.getSprite("arms_icon").Rotation = (1.0 - this.Math.minf(1.0, p)) * -33.0;
 			}
 
-			if (p >= 1.000000)
+			if (p >= 1.0)
 			{
 				this.m.IsRaisingWeapon = false;
 
@@ -2359,7 +2359,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		{
 			local p = (this.Time.getVirtualTimeF() - this.m.RenderAnimationStartTime) / (this.Const.Combat.ResurrectAnimationTime * this.m.RenderAnimationSpeed);
 
-			if (p >= 1.000000)
+			if (p >= 1.0)
 			{
 				this.setPos(this.createVec(0, 0));
 				this.setAlpha(255);
@@ -2373,14 +2373,14 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			}
 			else
 			{
-				this.setPos(this.createVec(0, this.Const.Combat.ResurrectAnimationDistance * this.m.RenderAnimationDistanceMult * (1.000000 - p)));
+				this.setPos(this.createVec(0, this.Const.Combat.ResurrectAnimationDistance * this.m.RenderAnimationDistanceMult * (1.0 - p)));
 			}
 		}
 		else if (this.m.IsSinking)
 		{
 			local p = (this.Time.getVirtualTimeF() - this.m.RenderAnimationStartTime) / (this.Const.Combat.ResurrectAnimationTime * this.m.RenderAnimationSpeed);
 
-			if (p >= 1.000000)
+			if (p >= 1.0)
 			{
 				this.setPos(this.createVec(0, this.Const.Combat.ResurrectAnimationDistance * this.m.RenderAnimationDistanceMult));
 				this.m.IsSinking = false;
@@ -2518,7 +2518,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 		if (_numTiles > 1)
 		{
-			this.playSound(this.Const.Sound.ActorEvent.Move, this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] * this.m.SoundVolumeOverall * (this.Math.rand(50, 100) * 0.010000) * (_tile.IsVisibleForPlayer ? 1.000000 : 0.500000));
+			this.playSound(this.Const.Sound.ActorEvent.Move, this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] * this.m.SoundVolumeOverall * (this.Math.rand(50, 100) * 0.01) * (_tile.IsVisibleForPlayer ? 1.0 : 0.5));
 		}
 
 		this.m.IsMoving = false;
@@ -2577,7 +2577,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 							if (otherActor.m.MaxEnemiesThisTurn < numEnemies && !otherActor.isAlliedWith(this))
 							{
-								local difficulty = this.Math.maxf(10.000000, 50.000000 - this.getXPValue() * 0.100000);
+								local difficulty = this.Math.maxf(10.0, 50.0 - this.getXPValue() * 0.1);
 								otherActor.checkMorale(-1, difficulty);
 								otherActor.m.MaxEnemiesThisTurn = numEnemies;
 							}
@@ -2590,7 +2590,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		{
 			if (this.m.MaxEnemiesThisTurn < numOfEnemiesAdjacentToMe)
 			{
-				local difficulty = 40.000000;
+				local difficulty = 40.0;
 				this.checkMorale(-1, difficulty);
 			}
 		}
@@ -2607,7 +2607,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		if (this.m.IsEmittingMovementSounds && this.Const.Tactical.TerrainMovementSound[_tile.Subtype].len() != 0)
 		{
 			local sound = this.Const.Tactical.TerrainMovementSound[_tile.Subtype][this.Math.rand(0, this.Const.Tactical.TerrainMovementSound[_tile.Subtype].len() - 1)];
-			this.Sound.play("sounds/" + sound.File, sound.Volume * this.Const.Sound.Volume.TacticalMovement * this.Math.rand(90, 100) * 0.010000, this.getPos(), sound.Pitch * this.Math.rand(95, 105) * 0.010000);
+			this.Sound.play("sounds/" + sound.File, sound.Volume * this.Const.Sound.Volume.TacticalMovement * this.Math.rand(90, 100) * 0.01, this.getPos(), sound.Pitch * this.Math.rand(95, 105) * 0.01);
 		}
 
 		this.spawnTerrainDropdownEffect(_tile);
@@ -2743,7 +2743,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		local injury = this.getSprite("injury");
 		local p = this.getHitpointsPct();
 
-		if (p > 0.500000)
+		if (p > 0.5)
 		{
 			if (injury.Visible)
 			{
@@ -3049,7 +3049,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		return true;
 	}
 
-	function spawnBloodEffect( _tile, _mult = 1.000000 )
+	function spawnBloodEffect( _tile, _mult = 1.0 )
 	{
 		local n = this.m.BloodType;
 
@@ -3396,11 +3396,11 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			{
 				if (_fatalityType == this.Const.FatalityType.Decapitated)
 				{
-					this.spawnDecapitateSplatters(tile, 1.000000 * this.m.DecapitateBloodAmount);
+					this.spawnDecapitateSplatters(tile, 1.0 * this.m.DecapitateBloodAmount);
 				}
 				else if (_fatalityType == this.Const.FatalityType.Smashed && (this.getFlags().has("human") || this.getFlags().has("zombie_minion")))
 				{
-					this.spawnSmashSplatters(tile, 1.000000);
+					this.spawnSmashSplatters(tile, 1.0);
 				}
 				else
 				{
@@ -3718,7 +3718,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			return false;
 		}
 
-		this.m.XP *= 1.500000;
+		this.m.XP *= 1.5;
 		this.m.Skills.add(this.new("scripts/skills/racial/champion_racial"));
 		this.m.IsMiniboss = true;
 		this.m.IsGeneratingKillName = false;
@@ -3872,26 +3872,26 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			Decals = _decals,
 			Offset = _offset,
 			Start = this.Time.getRealTimeF(),
-			Vector = this.createVec(0.000000, -1.000000),
+			Vector = this.createVec(0.0, -1.0),
 			Iterations = 0,
 			function onCorpseEffect( _data )
 			{
-				if (this.Time.getRealTimeF() - _data.Start > 0.200000)
+				if (this.Time.getRealTimeF() - _data.Start > 0.2)
 				{
 					if (++_data.Iterations > 5)
 					{
 						return;
 					}
 
-					_data.Vector = this.createVec(this.Math.rand(-100, 100) * 0.010000, this.Math.rand(-100, 100) * 0.010000);
+					_data.Vector = this.createVec(this.Math.rand(-100, 100) * 0.01, this.Math.rand(-100, 100) * 0.01);
 					_data.Start = this.Time.getRealTimeF();
 				}
 
-				local f = (this.Time.getRealTimeF() - _data.Start) / 0.200000;
+				local f = (this.Time.getRealTimeF() - _data.Start) / 0.2;
 
 				for( local i = 0; i < _data.Decals.len(); i = ++i )
 				{
-					_data.Decals[i].setOffset(this.createVec(_offset.X + 0.250000 * _data.Vector.X * f, _offset.Y + 0.500000 * _data.Vector.Y * f));
+					_data.Decals[i].setOffset(this.createVec(_offset.X + 0.25 * _data.Vector.X * f, _offset.Y + 0.5 * _data.Vector.Y * f));
 				}
 
 				this.Time.scheduleEvent(this.TimeUnit.Real, 10, _data.onCorpseEffect, _data);
@@ -3921,7 +3921,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		this.m.Skills.onDeserialize(_in);
 		this.m.Name = _in.readString();
 		this.m.Title = _in.readString();
-		this.setHitpointsPct(this.Math.maxf(0.000000, _in.readF32()));
+		this.setHitpointsPct(this.Math.maxf(0.0, _in.readF32()));
 		this.m.XP = _in.readI32();
 	}
 

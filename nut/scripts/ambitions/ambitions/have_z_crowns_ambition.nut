@@ -4,7 +4,7 @@ this.have_z_crowns_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.have_z_crowns";
-		this.m.Duration = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "克朗意味着权力和影响力，这两者我们永远都不会满足。\n让我们收集50000克朗，赢得我们在贵族和国王中的席位！";
 		this.m.UIText = "拥有至少50000克朗。";
 		this.m.TooltipText = "拥有至少50000克来充当富人。 你可以通过完成合同、掠夺营地和废墟或贸易来赚钱。";

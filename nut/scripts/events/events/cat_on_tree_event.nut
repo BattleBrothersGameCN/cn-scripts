@@ -8,7 +8,7 @@ this.cat_on_tree_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cat_on_tree";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_97.png[/img]你发现一个男孩和一个女孩在向一棵树上看。 女孩举起双手。%SPEECH_ON%好吧，在那里待到死吧！ 我才不在乎呢！%SPEECH_OFF%那个男孩发现了你，询问你是否可以帮他们把猫从树上弄下来。 抬头一看，你确实发现一只猫趴在树枝上，正在晒太阳。",
@@ -108,7 +108,7 @@ this.cat_on_tree_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Archer.getImagePath());
-				_event.m.Archer.worsenMood(1.000000, "不小心射中了一只小女孩的宠物猫");
+				_event.m.Archer.worsenMood(1.0, "不小心射中了一只小女孩的宠物猫");
 
 				if (_event.m.Archer.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -148,7 +148,7 @@ this.cat_on_tree_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/initiative.png",
 					text = _event.m.Ratcatcher.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color]主动值"
 				});
-				_event.m.Ratcatcher.improveMood(1.000000, "他的敏捷给大家留下了深刻印象");
+				_event.m.Ratcatcher.improveMood(1.0, "他的敏捷给大家留下了深刻印象");
 
 				if (_event.m.Ratcatcher.getMoodState() >= this.Const.MoodState.Neutral)
 				{

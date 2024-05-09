@@ -33,8 +33,8 @@ this.full_nets_situation <- this.inherit("scripts/entity/world/settlements/situa
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.FoodRarityMult *= 2.000000;
-		_modifiers.FoodPriceMult *= 0.500000;
+		_modifiers.FoodRarityMult *= 2.0;
+		_modifiers.FoodPriceMult *= 0.5;
 	}
 
 });

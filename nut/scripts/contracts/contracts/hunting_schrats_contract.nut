@@ -9,7 +9,7 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.hunting_schrats";
 		this.m.Name = "闹鬼的森林";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -23,12 +23,12 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -117,7 +117,7 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 				party.setDescription("一种树皮和木头的生物，混迹于树间，缓慢地蹒跚而行，它的根在土壤中挖掘。");
 				party.setFootprintType(this.Const.World.FootprintsType.Schrats);
 				party.setAttackableByAI(false);
-				party.setFootprintSizeOverride(0.750000);
+				party.setFootprintSizeOverride(0.75);
 
 				for( local i = 0; i < 2; i = ++i )
 				{
@@ -125,7 +125,7 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 
 					if (nearTile != null)
 					{
-						this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Schrats, 0.750000);
+						this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Schrats, 0.75);
 					}
 				}
 
@@ -168,7 +168,7 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 					this.World.Contracts.showActiveContract();
 					this.Contract.setState("Return");
 				}
-				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 10.000000 <= this.Time.getVirtualTimeF())
+				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 10.0 <= this.Time.getVirtualTimeF())
 				{
 					local tileType = this.World.State.getPlayer().getTile().Type;
 

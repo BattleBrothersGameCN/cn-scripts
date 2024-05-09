@@ -18,16 +18,16 @@ this.polemace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_polemace_01";
 		this.m.Value = 1400;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.StaminaModifier = -14;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 60;
 		this.m.RegularDamageMax = 75;
-		this.m.ArmorDamageMult = 1.200000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 1.2;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ChanceToHitHead = 5;
 	}
 

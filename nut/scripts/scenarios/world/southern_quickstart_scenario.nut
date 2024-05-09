@@ -24,7 +24,7 @@ this.southern_quickstart_scenario <- this.inherit("scripts/scenarios/world/start
 			local bro;
 			bro = roster.create("scripts/entity/tactical/player");
 			bro.m.HireTime = this.Time.getVirtualTimeF();
-			bro.improveMood(1.500000, "加入了一个雇佣兵战团");
+			bro.improveMood(1.5, "加入了一个雇佣兵战团");
 
 			while (names.find(bro.getNameOnly()) != null)
 			{

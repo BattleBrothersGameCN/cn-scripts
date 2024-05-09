@@ -20,14 +20,14 @@ this.named_two_handed_spiked_mace <- this.inherit("scripts/items/weapons/named/n
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3000;
 		this.m.ShieldDamage = 20;
-		this.m.Condition = 72.000000;
-		this.m.ConditionMax = 72.000000;
+		this.m.Condition = 72.0;
+		this.m.ConditionMax = 72.0;
 		this.m.StaminaModifier = -14;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 1.150000;
-		this.m.DirectDamageMult = 0.500000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 1.15;
+		this.m.DirectDamageMult = 0.5;
+		this.m.DirectDamageAdd = 0.1;
 		this.m.ChanceToHitHead = 0;
 		this.randomizeValues();
 	}

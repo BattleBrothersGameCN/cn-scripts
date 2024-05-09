@@ -7,7 +7,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.brawler_throw_fight";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_51.png[/img]{没有提前通知你，斗士%brawler%自作主张地参加了一场武斗比赛，并已经进入了决赛。他在第一轮比赛中轻易地击败了所有对手，成为夺冠的热门人选。 \n\n然而，一些非常强大的博彩经纪人对%brawler%已经让他们损失了大量的资金感到不满。知道他与你在一起，他们请求你告诉%brawler%放弃比赛并故意输掉比赛。作为回报，你将获得他们的获胜份额，这无疑会相当可观...}",
@@ -84,8 +84,8 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/asset_money.png",
 					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]400[/color] 克朗"
 				});
-				_event.m.Brawler.worsenMood(0.500000, "被告知放水");
-				_event.m.Brawler.worsenMood(2.000000, "输掉了一场战斗比赛。");
+				_event.m.Brawler.worsenMood(0.5, "被告知放水");
+				_event.m.Brawler.worsenMood(2.0, "输掉了一场战斗比赛。");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -123,8 +123,8 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/days_wounded.png",
 					text = _event.m.Brawler.getName() + "遭受重伤"
 				});
-				_event.m.Brawler.worsenMood(0.500000, "被告知放水");
-				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛");
+				_event.m.Brawler.worsenMood(0.5, "被告知放水");
+				_event.m.Brawler.improveMood(2.0, "轻松赢得搏斗锦标赛");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -185,8 +185,8 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/melee_defense.png",
 					text = _event.m.Brawler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_defense_boost + "[/color] 近战防御"
 				});
-				_event.m.Brawler.improveMood(0.500000, "被允许以自己的方式战斗。");
-				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛");
+				_event.m.Brawler.improveMood(0.5, "被允许以自己的方式战斗。");
+				_event.m.Brawler.improveMood(2.0, "轻松赢得搏斗锦标赛");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -227,7 +227,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 				injury = _event.m.Brawler.addInjury([
 					{
 						ID = "injury.broken_knee",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury_permanent/broken_knee_injury"
 					}
 				]);
@@ -251,8 +251,8 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/melee_skill.png",
 					text = _event.m.Brawler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + melee_skill_boost + "[/color] 近战技能"
 				});
-				_event.m.Brawler.improveMood(0.500000, "被允许以自己的方式战斗。");
-				_event.m.Brawler.improveMood(2.000000, "轻松赢得搏斗锦标赛");
+				_event.m.Brawler.improveMood(0.5, "被允许以自己的方式战斗。");
+				_event.m.Brawler.improveMood(2.0, "轻松赢得搏斗锦标赛");
 
 				if (_event.m.Brawler.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -290,8 +290,8 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Brawler.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Brawler.improveMood(0.500000, "被允许以自己的方式战斗。");
-				_event.m.Brawler.worsenMood(2.000000, "在搏斗锦标赛中遭到重创");
+				_event.m.Brawler.improveMood(0.5, "被允许以自己的方式战斗。");
+				_event.m.Brawler.worsenMood(2.0, "在搏斗锦标赛中遭到重创");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -323,7 +323,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Brawler.getImagePath());
-				_event.m.Brawler.worsenMood(2.000000, "被拒绝参加战斗比赛");
+				_event.m.Brawler.worsenMood(2.0, "被拒绝参加战斗比赛");
 
 				if (_event.m.Brawler.getMoodState() < this.Const.MoodState.Neutral)
 				{

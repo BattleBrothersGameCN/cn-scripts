@@ -10,7 +10,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.missing_kids";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_31.png[/img]{当你在%townname%的街上漫步时，一群瘦弱的守卫突然像一群老鼠一样从小巷子里冒了出来，它们数量众多且危险。当你低下头时，解剖学家%anatomist%却忍不住瞪着他们，引起了他们的注意。守卫们与他们对视后走了过来，如预料的那样，他们开始透露他们的要求。%SPEECH_ON%嘿，旅行家，城里流传着有人在杀孩子的消息。现在我们有理由相信是你们身边这个奇怪的家伙在干这件可怕的事情。%SPEECH_OFF%解剖学家试图为自己辩护，但你知道理性在这里并没有用。你问守卫们需要多少赔偿，他们说道。%SPEECH_ON%如何支付%blackmail%克朗，我们就不再追究这件可怕的事情了。否则，我们就要打得你们俩遍体鳞伤。%SPEECH_OFF%}",
@@ -127,7 +127,7 @@ this.missing_kids_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Anatomist.addInjury([
 					{
 						ID = "injury.broken_nose",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury/broken_nose_injury"
 					}
 				]);

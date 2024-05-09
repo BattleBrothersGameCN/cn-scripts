@@ -9,7 +9,7 @@ this.retired_gladiator_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.retired_gladiator";
 		this.m.Title = "在%townname%…";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_163.png[/img]{你在街上碰到一位老人。 他并不突出，除开他拥有一副非常不错的装备。 有点破旧了，但还不错。 当然，他作为一个老人还有这些东西不是他偷来的还能意味着别的什么。%SPEECH_ON%逐币者盯着，逐币者寻思着。%SPEECH_OFF%他一边说一边啃了一口面包。他抬头看着你。%SPEECH_ON%我的名字是 %retired%。我曾经在竞技场战斗，但是五年前退休了。 不是我选的，注意。 我拿到一个故意输掉的任务，但与之相对的我斩首了我的对手。 这个对手是维齐尔的一个儿子。 这个信息并没有被分享给我。 我刚才说的这五年？ 花在了地牢里。%SPEECH_OFF%}",
@@ -206,7 +206,7 @@ this.retired_gladiator_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.500000, "对一个退休的角斗士笑得很开心");
+						bro.improveMood(0.5, "对一个退休的角斗士笑得很开心");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{

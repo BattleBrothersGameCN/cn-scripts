@@ -9,7 +9,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 		this.contract.create();
 		this.m.Type = "contract.free_greenskin_prisoners";
 		this.m.Name = "释放囚犯";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -34,12 +34,12 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -84,7 +84,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 				this.Contract.m.Destination.onSpawned();
 				this.Contract.m.Destination.setFaction(this.Const.Faction.PlayerAnimals);
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
 				local r = this.Math.rand(1, 100);
 
@@ -102,7 +102,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 				}
 				else if (r <= 35)
 				{
-					if (this.Contract.getDifficultyMult() > 0.850000)
+					if (this.Contract.getDifficultyMult() > 0.85)
 					{
 						this.Flags.set("IsScouts", true);
 					}
@@ -114,7 +114,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 				{
 					this.Flags.set("IsEnemyCamp", true);
 
-					if (this.Math.rand(1, 100) <= 20 && this.Contract.getDifficultyMult() < 1.150000)
+					if (this.Math.rand(1, 100) <= 20 && this.Contract.getDifficultyMult() < 1.15)
 					{
 						this.Flags.set("IsEmptyCamp", true);
 					}
@@ -383,11 +383,11 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 							party.addToInventory("supplies/strange_meat_item");
 							this.Contract.m.Destination = this.WeakTableRef(party);
 							party.setAttackableByAI(false);
-							party.setFootprintSizeOverride(0.750000);
+							party.setFootprintSizeOverride(0.75);
 							local c = party.getController();
 							c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(false);
 							local wait = this.new("scripts/ai/world/orders/wait_order");
-							wait.setTime(15.000000);
+							wait.setTime(15.0);
 							c.addOrder(wait);
 							local roam = this.new("scripts/ai/world/orders/roam_order");
 							roam.setPivot(camp);
@@ -413,7 +413,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 							{
 								this.Contract.m.Destination.setLootScaleBasedOnResources(120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 
-								if (this.Contract.getDifficultyMult() <= 1.150000 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
+								if (this.Contract.getDifficultyMult() <= 1.15 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
 								{
 									this.Contract.m.Destination.getLoot().clear();
 								}
@@ -423,7 +423,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 							}
 						}
 
-						this.Const.World.Common.addFootprintsFromTo(playerTile, this.Contract.m.Destination.getTile(), this.Const.OrcFootprints, this.Const.World.FootprintsType.Orcs, 0.750000, 10.000000);
+						this.Const.World.Common.addFootprintsFromTo(playerTile, this.Contract.m.Destination.getTile(), this.Const.OrcFootprints, this.Const.World.FootprintsType.Orcs, 0.75, 10.0);
 						this.Contract.setState("Pursuit");
 						return 0;
 					}
@@ -527,7 +527,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 				local roster = this.World.getTemporaryRoster();
 				this.Contract.m.Dude = roster.create("scripts/entity/tactical/player");
 				this.Contract.m.Dude.setStartValuesEx(this.Const.CharacterVeteranBackgrounds);
-				this.Contract.m.Dude.setHitpointsPct(0.600000);
+				this.Contract.m.Dude.setHitpointsPct(0.6);
 
 				if (this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
 				{
@@ -546,7 +546,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 
 				if (this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body) != null)
 				{
-					this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).setArmor(this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).getArmor() * 0.330000);
+					this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).setArmor(this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).getArmor() * 0.33);
 				}
 
 				if (this.Contract.m.Dude.getTitle() == "")

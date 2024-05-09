@@ -73,7 +73,7 @@ this.staggered_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.InitiativeMult *= 0.500000;
+		_properties.InitiativeMult *= 0.5;
 	}
 
 	function onTurnEnd()

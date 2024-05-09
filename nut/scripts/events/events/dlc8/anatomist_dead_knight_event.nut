@@ -7,7 +7,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_dead_knight";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_75.png[/img]{%anatomist% 解剖学家发现主路旁边有一些闪闪发光的东西。你走过去看了看。有个黑色的金属物体在远处。也许是个骑士的尸体？尽管这会让你想知道他是如何独自到达那里的。%anatomist% 暗想这个显然有伟大的武艺的尸体上或许可以发现点什么。你摇了摇头。%SPEECH_ON%骑士很少独自死去，如果他们这样做了，他们肯定不会将盔甲带在身边。整件事就闻起来像是一个陷阱。%SPEECH_OFF%}",
@@ -92,7 +92,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Anatomist.improveMood(0.750000, "得检查一下一位英勇骑士的尸体。");
+				_event.m.Anatomist.improveMood(0.75, "得检查一下一位英勇骑士的尸体。");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -137,7 +137,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Anatomist.worsenMood(1.000000, "被拒绝了检查一具有潜力的尸体的机会。");
+				_event.m.Anatomist.worsenMood(1.0, "被拒绝了检查一具有潜力的尸体的机会。");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -148,7 +148,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Noble.worsenMood(2.000000, "看到了一位老朋友腐烂的遗骸。");
+				_event.m.Noble.worsenMood(2.0, "看到了一位老朋友腐烂的遗骸。");
 
 				if (_event.m.Noble.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -186,7 +186,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Anatomist.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Anatomist.improveMood(1.000000, "得近距离观察一个有趣的伤口");
+				_event.m.Anatomist.improveMood(1.0, "得近距离观察一个有趣的伤口");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -266,7 +266,7 @@ this.anatomist_dead_knight_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

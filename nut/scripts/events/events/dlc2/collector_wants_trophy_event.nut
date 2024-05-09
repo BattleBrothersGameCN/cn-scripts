@@ -9,7 +9,7 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.collector_wants_trophy";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_01.png[/img]{逛城镇市场时，一位身穿丝绸的男子走到了你身边。他脸上挂着比镶钻更闪的笑容，每个手指上都戴着闪光的戒指。 | 当你观察当地市场的商品时，一个陌生人走了过来。他腰间挂着各种奇怪的液体，牙齿中大多是奇怪的木材。 | 没有一次到市场不被奇怪的家伙引起骚扰的行程。这次是一个脸很大的男人，他的嘴巴像熊捕鼠器一样带着锯齿，他的脸颊高高挺起，像是要做成货架一样。除了他的容貌之外，他挥舞着自己的体重，像他是一个有权有势的人物。}%SPEECH_ON%{啊，佣兵，我发现你有一些有趣的战利品。你把那个%trophy%卖给我吧，我给你%reward%克朗。 | 你有一个有趣的战利品，%trophy%。我会给你%reward%克朗，轻松的赚钱！ | 嗯，我发现你是那种冒险类型。你不可能得到%trophy%，除非你很有诡计。我有一些金子，我会给你%reward%克朗，换取那个小玩意儿。}%SPEECH_OFF%你正在考虑那个男人的offer。",
@@ -103,7 +103,7 @@ this.collector_wants_trophy_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Peddler.getImagePath());
-				_event.m.Reward = this.Math.floor(_event.m.Reward * 1.330000);
+				_event.m.Reward = this.Math.floor(_event.m.Reward * 1.33);
 			}
 
 		});

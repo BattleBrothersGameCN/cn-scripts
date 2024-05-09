@@ -9,7 +9,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.hunting_webknechts";
 		this.m.Name = "狩猎蛛魔";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -23,12 +23,12 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -61,7 +61,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (r <= 10)
 				{
-					if (this.Contract.getDifficultyMult() >= 0.900000)
+					if (this.Contract.getDifficultyMult() >= 0.9)
 					{
 						this.Flags.set("IsOldArmor", true);
 					}
@@ -116,7 +116,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 				party.setDescription("一群蜘蛛在游荡。");
 				party.setFootprintType(this.Const.World.FootprintsType.Spiders);
 				party.setAttackableByAI(false);
-				party.setFootprintSizeOverride(0.750000);
+				party.setFootprintSizeOverride(0.75);
 
 				for( local i = 0; i < 2; i = ++i )
 				{
@@ -124,7 +124,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 
 					if (nearTile != null)
 					{
-						this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Spiders, 0.750000);
+						this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Spiders, 0.75);
 					}
 				}
 
@@ -178,7 +178,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 					this.World.Contracts.showActiveContract();
 					this.Contract.setState("Return");
 				}
-				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 10.000000 <= this.Time.getVirtualTimeF())
+				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 10.0 <= this.Time.getVirtualTimeF())
 				{
 					local tileType = this.World.State.getPlayer().getTile().Type;
 
@@ -402,8 +402,8 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 
 				this.Contract.m.Dude.getBackground().m.RawDescription = "你在树上发现了挂着的%name%，他是一名佣兵，他所在的佣兵团被派去对付蛛魔，只有他活了下来。你救了他，他就加入了你的战团。";
 				this.Contract.m.Dude.getBackground().buildDescription(true);
-				this.Contract.m.Dude.worsenMood(0.500000, "他以前的战团被蛛魔干掉了");
-				this.Contract.m.Dude.worsenMood(0.500000, "几乎被蛛魔活活吃掉");
+				this.Contract.m.Dude.worsenMood(0.5, "他以前的战团被蛛魔干掉了");
+				this.Contract.m.Dude.worsenMood(0.5, "几乎被蛛魔活活吃掉");
 
 				if (this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
 				{
@@ -417,12 +417,12 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head) != null)
 				{
-					this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head).setArmor(this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head).getArmor() * 0.330000);
+					this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head).setArmor(this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head).getArmor() * 0.33);
 				}
 
 				if (this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body) != null)
 				{
-					this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).setArmor(this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).getArmor() * 0.330000);
+					this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).setArmor(this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).getArmor() * 0.33);
 				}
 
 				this.Characters.push(this.Contract.m.Dude.getImagePath());

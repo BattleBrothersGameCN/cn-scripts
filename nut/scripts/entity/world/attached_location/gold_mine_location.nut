@@ -19,33 +19,33 @@ this.gold_mine_location <- this.inherit("scripts/entity/world/attached_location"
 			r = [
 				{
 					File = "ambience/settlement/mines_00.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_01.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_00.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_01.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_02.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_03.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				}
 			];
 
@@ -79,12 +79,12 @@ this.gold_mine_location <- this.inherit("scripts/entity/world/attached_location"
 		{
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/pickaxe"
 			});
 			_list.push({
 				R = 90,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/military_pick"
 			});
 		}

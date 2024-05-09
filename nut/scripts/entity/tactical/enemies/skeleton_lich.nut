@@ -4,7 +4,7 @@ this.skeleton_lich <- this.inherit("scripts/entity/tactical/skeleton", {
 	{
 		this.m.Type = this.Const.EntityType.SkeletonLich;
 		this.m.XP = this.Const.Tactical.Actor.SkeletonLich.XP;
-		this.m.ResurrectionValue = 99.000000;
+		this.m.ResurrectionValue = 99.0;
 		this.m.ResurrectWithScript = "scripts/entity/tactical/enemies/skeleton_lich";
 		this.m.IsGeneratingKillName = false;
 		this.m.IsResurrectable = false;
@@ -160,16 +160,16 @@ this.skeleton_lich <- this.inherit("scripts/entity/tactical/skeleton", {
 		local body = this.addSprite("body");
 		body.setBrush("bust_skeleton_body_02");
 		body.setHorizontalFlipping(true);
-		body.Saturation = 0.800000;
+		body.Saturation = 0.8;
 
 		if (this.Math.rand(0, 100) < 75)
 		{
-			body.varySaturation(0.200000);
+			body.varySaturation(0.2);
 		}
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varyColor(0.025000, 0.025000, 0.025000);
+			body.varyColor(0.025, 0.025, 0.025);
 		}
 
 		this.m.BloodColor = body.Color;
@@ -201,17 +201,17 @@ this.skeleton_lich <- this.inherit("scripts/entity/tactical/skeleton", {
 		book.setBrush("icon_necronomicon");
 		book.setHorizontalFlipping(true);
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.550000;
+		this.getSprite("status_rooted").Scale = 0.55;
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.SkeletonLich);
-		b.TargetAttractionMult = 3.000000;
+		b.TargetAttractionMult = 3.0;
 		b.IsAffectedByNight = false;
 		b.IsAffectedByInjuries = false;
 		b.IsImmuneToBleeding = true;
 		b.IsImmuneToPoison = true;
 		b.IsImmuneToStun = true;
 		b.IsImmuneToDisarm = true;
-		b.DamageReceivedTotalMult *= 0.500000;
+		b.DamageReceivedTotalMult *= 0.5;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;

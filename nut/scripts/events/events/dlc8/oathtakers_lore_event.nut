@@ -10,7 +10,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.oathtakers_lore";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Texts.resize(4);
 		this.m.Texts[0] = "谈论誓言。";
 		this.m.Texts[1] = "谈谈年轻的安瑟姆(Young Anselm)。";

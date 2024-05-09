@@ -8,7 +8,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.greenskins_investigation";
 		this.m.Title = "在 %town%…";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_31.png[/img]当你补充你的货物并让队员们休息的时候，城堡的领主 %nobleman% 来找你。 他说城堡里有个地精逃跑了，他想让你去追踪它。%SPEECH_ON%我问过我的人了，但是他们蠢的连自己的屁股都找不到，真该挖出他们的眼睛吃了。%SPEECH_OFF%",
@@ -64,7 +64,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 					Text = "我们没时间帮忙。",
 					function getResult( _event )
 					{
-						_event.m.NobleHouse.addPlayerRelation(-5.000000, "拒绝 (Denied)" + _event.m.Noble.getName() + "一个恳求/请求");
+						_event.m.NobleHouse.addPlayerRelation(-5.0, "拒绝 (Denied)" + _event.m.Noble.getName() + "一个恳求/请求");
 						return 0;
 					}
 

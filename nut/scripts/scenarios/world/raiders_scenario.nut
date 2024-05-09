@@ -30,7 +30,7 @@ this.raiders_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 			"barbarian_background"
 		]);
 		bros[0].getBackground().m.RawDescription = "一个强壮的战士，%name% 经历过多次的掠夺和抢劫。 虽然一个寡言的人，掠夺者在战斗中绝对是一个邪恶的样本。 即使对一个掠袭者来说，他对被击败的村民所做的事也让很多人恼火。 很可能他跟你来是为了满足他的虐待欲。";
-		bros[0].improveMood(1.000000, "一次成功的掠夺");
+		bros[0].improveMood(1.0, "一次成功的掠夺");
 		bros[0].setPlaceInFormation(3);
 		bros[0].m.PerkPoints = 2;
 		bros[0].m.LevelUps = 2;
@@ -53,7 +53,7 @@ this.raiders_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 			"barbarian_background"
 		]);
 		bros[1].getBackground().m.RawDescription = "%name% 是一个男孩，从南方的一个村庄被带走，在荒野的野蛮人中长大。 虽然他学习了当地的语言和文化，但他始终无法融入当地，经常成为残酷玩笑和游戏的受害者。 你不确定他着你是为了回家还是为了离开他在北方的“家人”。";
-		bros[1].improveMood(1.000000, "一次成功的掠夺");
+		bros[1].improveMood(1.0, "一次成功的掠夺");
 		bros[1].setPlaceInFormation(4);
 		bros[1].m.PerkPoints = 2;
 		bros[1].m.LevelUps = 2;
@@ -73,7 +73,7 @@ this.raiders_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 			"barbarian_background"
 		]);
 		bros[2].getBackground().m.RawDescription = "野蛮人的掠袭者经常从他们陌生的土地上掠夺。 大多数人把他们的掠袭看作是物质和女人的问题，但有时他们会奴役有巨大潜力的难对付的男孩。%name%，一个北方人，就是这样一个孩子，他被培养成一个他们自己的掠袭者。 他的一半生活在原始氏族里，另一半生活在带走他的人那里。 这使他成为一个勇猛而野蛮的战士。";
-		bros[2].improveMood(1.000000, "一次成功的掠夺");
+		bros[2].improveMood(1.0, "一次成功的掠夺");
 		bros[2].setPlaceInFormation(5);
 		bros[2].m.PerkPoints = 2;
 		bros[2].m.LevelUps = 2;
@@ -93,14 +93,14 @@ this.raiders_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 			"monk_background"
 		]);
 		bros[3].getBackground().m.RawDescription = "把你推上这条路的人，你相信 %name% 可能会为你获得巨大的财富发挥更大的作用。 你见过北方的混混和独臂战士，他们会在战斗中胜过他，但他的知识和智慧在适当的时候可能是更锋利的刀刃。";
-		bros[3].improveMood(2.000000, "他还以为他说服你放弃了掠夺和抢劫");
+		bros[3].improveMood(2.0, "他还以为他说服你放弃了掠夺和抢劫");
 		bros[3].setPlaceInFormation(13);
 		bros[3].m.Talents = [];
 		local talents = bros[3].getTalents();
 		talents.resize(this.Const.Attributes.COUNT, 0);
 		talents[this.Const.Attributes.Bravery] = 3;
 		this.World.Assets.m.BusinessReputation = -50;
-		this.World.Assets.addMoralReputation(-30.000000);
+		this.World.Assets.addMoralReputation(-30.0);
 		this.World.Assets.getStash().add(this.new("scripts/items/supplies/goat_cheese_item"));
 		this.World.Assets.getStash().add(this.new("scripts/items/supplies/smoked_ham_item"));
 		this.World.Assets.getStash().add(this.new("scripts/items/loot/silverware_item"));
@@ -225,10 +225,10 @@ this.raiders_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 
 		for( local i = 0; i < 2; i = ++i )
 		{
-			houses[i].Faction.addPlayerRelation(-100.000000, "你被认为是不法之徒和野蛮人");
+			houses[i].Faction.addPlayerRelation(-100.0, "你被认为是不法之徒和野蛮人");
 		}
 
-		houses[1].Faction.addPlayerRelation(18.000000);
+		houses[1].Faction.addPlayerRelation(18.0);
 		this.World.State.m.Player = this.World.spawnEntity("scripts/entity/world/player_party", randomVillageTile.Coords.X, randomVillageTile.Coords.Y);
 		this.World.Assets.updateLook(5);
 		this.World.getCamera().setPos(this.World.State.m.Player.getPos());

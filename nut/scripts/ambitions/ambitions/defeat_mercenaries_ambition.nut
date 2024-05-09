@@ -7,7 +7,7 @@ this.defeat_mercenaries_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_mercenaries";
-		this.m.Duration = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "证明我们是最强战团的最佳方法就是在战斗中击败另一支雇佣兵团！";
 		this.m.UIText = "击败另一支雇佣兵战团";
 		this.m.TooltipText = "击败另一支在路上游荡的雇佣兵战团。 如果你没有敌对的另一支雇佣兵战团，你可以随时按CTRL加左键单击来攻击任何人－前提是你当前没被雇佣。";

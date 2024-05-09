@@ -41,7 +41,7 @@ this.weakened_heart_injury <- this.inherit("scripts/skills/injury_permanent/perm
 
 	function onUpdate( _properties )
 	{
-		_properties.HitpointsMult *= 0.700000;
+		_properties.HitpointsMult *= 0.7;
 		_properties.IsContentWithBeingInReserve = true;
 	}
 

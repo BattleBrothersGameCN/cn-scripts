@@ -7,7 +7,7 @@ this.disowned_noble_welcomed_back_event <- this.inherit("scripts/events/event", 
 	{
 		this.m.ID = "event.disowned_noble_welcomed_back";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_20.png[/img]{在%townname%期间，你收到了一封信。信差告诉你不要阅读，但当他转角处离开时，你还是打破了一个蜡封皇家印章。信上写着，%disowned%这位被废黜的贵族不再流亡。相反，在他的已经重病的父亲去世后，他将有机会坐上家族的王位。\n\n你拿着这封信，不确定该怎么处理。%disowned%一直是%companyname%的成员。对于一些人来说，曾经在世界各地的皇家房间里生活过的人，现在却降为雇佣军战团的人，具有一种奇特的吸引力。但是，虽然血脉可能干涸，但血统永远不会真正消亡...}",

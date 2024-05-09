@@ -103,7 +103,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 		local ocean = this.World.getNumOfTilesWithType([
 			this.Const.World.TerrainType.Ocean
 		]);
-		return (_rect.W * _rect.H - ocean * 1.000000) / (ocean * 1.000000) >= this.Const.World.Settings.MinLandToWaterRatio;
+		return (_rect.W * _rect.H - ocean * 1.0) / (ocean * 1.0) >= this.Const.World.Settings.MinLandToWaterRatio;
 	}
 
 	function isDesertAcceptable( _rect )
@@ -143,27 +143,27 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			for( local y = _rect.Y; y < _rect.Y + _rect.H; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
-				local landChance = x < _rect.W * 0.500000 ? x : _rect.W - x;
-				landChance = landChance + (y < _rect.H * 0.500000 ? y : _rect.H - y);
+				local landChance = x < _rect.W * 0.5 ? x : _rect.W - x;
+				landChance = landChance + (y < _rect.H * 0.5 ? y : _rect.H - y);
 
 				if (l)
 				{
-					landChance = landChance + (x < _rect.W * 0.500000 ? x * 0.650000 : 0);
+					landChance = landChance + (x < _rect.W * 0.5 ? x * 0.65 : 0);
 				}
 
 				if (r)
 				{
-					landChance = landChance + (x > _rect.W * 0.500000 ? (x - _rect.W * 0.500000) * 0.650000 : 0);
+					landChance = landChance + (x > _rect.W * 0.5 ? (x - _rect.W * 0.5) * 0.65 : 0);
 				}
 
 				if (b)
 				{
-					landChance = landChance + (y < _rect.H * 0.500000 ? y * 0.650000 : 0);
+					landChance = landChance + (y < _rect.H * 0.5 ? y * 0.65 : 0);
 				}
 
 				if (t)
 				{
-					landChance = landChance + (y > _rect.H * 0.500000 ? (y - _rect.H * 0.500000) * 0.650000 : 0);
+					landChance = landChance + (y > _rect.H * 0.5 ? (y - _rect.H * 0.5) * 0.65 : 0);
 				}
 
 				landChance = landChance * this.Const.World.Settings.LandMassMult;
@@ -299,7 +299,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				if (tile.Type == this.Const.World.TerrainType.Ocean)
 				{
 				}
-				else if (this.Const.DLC.Desert && y <= _rect.H * 0.170000)
+				else if (this.Const.DLC.Desert && y <= _rect.H * 0.17)
 				{
 				}
 				else
@@ -443,7 +443,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 	{
 		local isAutumnLeft = this.Math.rand(0, 1) == 1;
 
-		for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.200000; y = ++y )
+		for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.2; y = ++y )
 		{
 			for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 			{
@@ -459,11 +459,11 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 					if (tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Swamp) == 0)
 					{
 						chance = 50;
-						chance = chance + y * -0.800000;
+						chance = chance + y * -0.8;
 
-						if (y > _rect.Y + _rect.H * 0.190000)
+						if (y > _rect.Y + _rect.H * 0.19)
 						{
-							chance = chance * 0.250000;
+							chance = chance * 0.25;
 						}
 
 						chance = chance + 50 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Desert);
@@ -485,7 +485,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 		}
 
-		for( local y = _rect.Y + _rect.H * 0.150000; y < _rect.Y + _rect.H * 0.600000; y = ++y )
+		for( local y = _rect.Y + _rect.H * 0.15; y < _rect.Y + _rect.H * 0.6; y = ++y )
 		{
 			for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 			{
@@ -501,7 +501,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 					if (tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Swamp) == 0)
 					{
 						chance = 16;
-						chance = chance + y * -0.400000;
+						chance = chance + y * -0.4;
 						chance = chance + 50 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Steppe);
 						chance = chance + 25 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Desert);
 						chance = chance + 5 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Ocean);
@@ -524,7 +524,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.Y + _rect.H * 0.300000; y < _rect.Y + _rect.H * 0.800000; y = ++y )
+			for( local y = _rect.Y + _rect.H * 0.3; y < _rect.Y + _rect.H * 0.8; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -537,8 +537,8 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 					if (tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Steppe) == 0)
 					{
-						chance = y < _rect.H * 0.500000 ? y : _rect.H - y;
-						chance = chance * 0.025000;
+						chance = y < _rect.H * 0.5 ? y : _rect.H - y;
+						chance = chance * 0.025;
 						chance = chance + 30 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Swamp);
 						chance = chance + 10 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Ocean);
 					}
@@ -558,9 +558,9 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 		}
 
-		for( local x = _rect.X + (isAutumnLeft ? _rect.W * 0.500000 : 0); x < _rect.X + _rect.W * (isAutumnLeft ? 1.000000 : 0.500000); x = ++x )
+		for( local x = _rect.X + (isAutumnLeft ? _rect.W * 0.5 : 0); x < _rect.X + _rect.W * (isAutumnLeft ? 1.0 : 0.5); x = ++x )
 		{
-			for( local y = _rect.Y + _rect.H * 0.200000; y < _rect.Y + _rect.H * 0.700000; y = ++y )
+			for( local y = _rect.Y + _rect.H * 0.2; y < _rect.Y + _rect.H * 0.7; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -570,7 +570,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				else
 				{
 					local chance = !isAutumnLeft ? _rect.W - x : x;
-					chance = chance * 0.025000;
+					chance = chance * 0.025;
 					chance = chance + 30 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.LeaveForest);
 					chance = chance - 10 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Ocean);
 
@@ -589,9 +589,9 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 		}
 
-		for( local x = _rect.X + (isAutumnLeft ? 0 : _rect.W * 0.500000); x < _rect.X + _rect.W * (isAutumnLeft ? 0.500000 : 1.000000); x = ++x )
+		for( local x = _rect.X + (isAutumnLeft ? 0 : _rect.W * 0.5); x < _rect.X + _rect.W * (isAutumnLeft ? 0.5 : 1.0); x = ++x )
 		{
-			for( local y = _rect.Y + _rect.H * 0.200000; y < _rect.Y + _rect.H * 0.750000; y = ++y )
+			for( local y = _rect.Y + _rect.H * 0.2; y < _rect.Y + _rect.H * 0.75; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -601,7 +601,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				else
 				{
 					local chance = isAutumnLeft ? _rect.W - x : x;
-					chance = chance * 0.025000;
+					chance = chance * 0.025;
 
 					for( local i = 0; i < this.Const.Direction.COUNT; i = ++i )
 					{
@@ -647,7 +647,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.Y + _rect.H * 0.430000; y < _rect.Y + _rect.H; y = ++y )
+			for( local y = _rect.Y + _rect.H * 0.43; y < _rect.Y + _rect.H; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -656,12 +656,12 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				}
 				else
 				{
-					local chance = y < _rect.H * 0.750000 ? y : _rect.H - y;
-					chance = chance * 0.070000;
+					local chance = y < _rect.H * 0.75 ? y : _rect.H - y;
+					chance = chance * 0.07;
 
 					if (y > _rect.H * this.Const.World.Settings.Snowline)
 					{
-						chance = chance * 5.000000;
+						chance = chance * 5.0;
 					}
 
 					for( local i = 0; i < this.Const.Direction.COUNT; i = ++i )
@@ -736,7 +736,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.H * 0.700000; y < _rect.Y + _rect.H; y = ++y )
+			for( local y = _rect.H * 0.7; y < _rect.Y + _rect.H; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -746,7 +746,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				else
 				{
 					local chance = y;
-					chance = chance * 0.200000;
+					chance = chance * 0.2;
 					chance = chance - 200 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Swamp);
 					chance = chance + 100 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Tundra);
 
@@ -767,7 +767,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.650000; y = ++y )
+			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.65; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -809,7 +809,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.650000; y = ++y )
+			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.65; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -851,7 +851,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.150000; y = ++y )
+			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.15; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -878,7 +878,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 		this.logInfo("Building terrain...");
 		local isAutumnLeft = this.Math.rand(0, 1) == 1;
 
-		for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.650000; y = ++y )
+		for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.65; y = ++y )
 		{
 			for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 			{
@@ -894,7 +894,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 					if (tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Swamp) == 0)
 					{
 						chance = 12;
-						chance = chance + y * -0.500000;
+						chance = chance + y * -0.5;
 						chance = chance + 50 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Steppe);
 						chance = chance + 5 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Ocean);
 					}
@@ -916,7 +916,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.Y + _rect.H * 0.200000; y < _rect.Y + _rect.H * 0.800000; y = ++y )
+			for( local y = _rect.Y + _rect.H * 0.2; y < _rect.Y + _rect.H * 0.8; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -929,8 +929,8 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 					if (tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Steppe) == 0)
 					{
-						chance = y < _rect.H * 0.500000 ? y : _rect.H - y;
-						chance = chance * 0.025000;
+						chance = y < _rect.H * 0.5 ? y : _rect.H - y;
+						chance = chance * 0.025;
 						chance = chance + 30 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Swamp);
 						chance = chance + 10 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Ocean);
 					}
@@ -950,9 +950,9 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 		}
 
-		for( local x = _rect.X + (isAutumnLeft ? _rect.W * 0.500000 : 0); x < _rect.X + _rect.W * (isAutumnLeft ? 1.000000 : 0.500000); x = ++x )
+		for( local x = _rect.X + (isAutumnLeft ? _rect.W * 0.5 : 0); x < _rect.X + _rect.W * (isAutumnLeft ? 1.0 : 0.5); x = ++x )
 		{
-			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.700000; y = ++y )
+			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.7; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -962,7 +962,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				else
 				{
 					local chance = !isAutumnLeft ? _rect.W - x : x;
-					chance = chance * 0.025000;
+					chance = chance * 0.025;
 					chance = chance + 30 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.LeaveForest);
 					chance = chance - 10 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Ocean);
 
@@ -981,9 +981,9 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 		}
 
-		for( local x = _rect.X + (isAutumnLeft ? 0 : _rect.W * 0.500000); x < _rect.X + _rect.W * (isAutumnLeft ? 0.500000 : 1.000000); x = ++x )
+		for( local x = _rect.X + (isAutumnLeft ? 0 : _rect.W * 0.5); x < _rect.X + _rect.W * (isAutumnLeft ? 0.5 : 1.0); x = ++x )
 		{
-			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.750000; y = ++y )
+			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.75; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -993,7 +993,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				else
 				{
 					local chance = isAutumnLeft ? _rect.W - x : x;
-					chance = chance * 0.025000;
+					chance = chance * 0.025;
 
 					for( local i = 0; i < this.Const.Direction.COUNT; i = ++i )
 					{
@@ -1039,7 +1039,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.Y + _rect.H * 0.400000; y < _rect.Y + _rect.H; y = ++y )
+			for( local y = _rect.Y + _rect.H * 0.4; y < _rect.Y + _rect.H; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -1048,12 +1048,12 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				}
 				else
 				{
-					local chance = y < _rect.H * 0.750000 ? y : _rect.H - y;
-					chance = chance * 0.070000;
+					local chance = y < _rect.H * 0.75 ? y : _rect.H - y;
+					chance = chance * 0.07;
 
 					if (y > _rect.H * this.Const.World.Settings.Snowline)
 					{
-						chance = chance * 5.000000;
+						chance = chance * 5.0;
 					}
 
 					for( local i = 0; i < this.Const.Direction.COUNT; i = ++i )
@@ -1128,7 +1128,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.H * 0.700000; y < _rect.Y + _rect.H; y = ++y )
+			for( local y = _rect.H * 0.7; y < _rect.Y + _rect.H; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -1138,7 +1138,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				else
 				{
 					local chance = y;
-					chance = chance * 0.200000;
+					chance = chance * 0.2;
 					chance = chance - 200 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Swamp);
 					chance = chance + 100 * tile.getSurroundingTilesOfType(this.Const.World.TerrainType.Tundra);
 
@@ -1159,7 +1159,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
-			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.650000; y = ++y )
+			for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.65; y = ++y )
 			{
 				local tile = this.m.WorldTiles[x][y];
 
@@ -1643,8 +1643,8 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				continue;
 			}
 
-			local x = 0.000000;
-			local y = 0.000000;
+			local x = 0.0;
+			local y = 0.0;
 
 			foreach( t in region.Tiles )
 			{
@@ -1667,10 +1667,10 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				continue;
 			}
 
-			local leftY = 0.000000;
-			local leftX = 0.000000;
-			local rightY = 0.000000;
-			local rightX = 0.000000;
+			local leftY = 0.0;
+			local leftX = 0.0;
+			local rightY = 0.0;
+			local rightX = 0.0;
 			local left = 0;
 			local right = 0;
 
@@ -1694,7 +1694,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			leftY = leftY / left;
 			rightX = rightX / right;
 			rightY = rightY / right;
-			local rotation = this.Math.getAngleTo(this.createVec(leftX, leftY), this.createVec(rightX, rightY)) + 90.000000;
+			local rotation = this.Math.getAngleTo(this.createVec(leftX, leftY), this.createVec(rightX, rightY)) + 90.0;
 			local name = "";
 			local tries = 0;
 
@@ -1711,15 +1711,15 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 
 			usedNames.push(name);
-			local scale = 1.000000;
+			local scale = 1.0;
 
 			if (region.Tiles.len() <= 130)
 			{
-				scale = 0.500000;
+				scale = 0.5;
 			}
 			else if (region.Tiles.len() <= 170)
 			{
-				scale = 0.750000;
+				scale = 0.75;
 			}
 
 			this.World.spawnRegionText(name, scale, rotation, tile.Pos);
@@ -1728,7 +1728,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				Type = region.Type,
 				Size = region.Tiles.len(),
 				Center = tile,
-				Discovered = 0.000000,
+				Discovered = 0.0,
 				Tiles = region.Tiles
 			});
 
@@ -1781,11 +1781,11 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 				{
 					if (isLeft)
 					{
-						x = this.Math.rand(5, _rect.W * 0.600000);
+						x = this.Math.rand(5, _rect.W * 0.6);
 					}
 					else
 					{
-						x = this.Math.rand(_rect.W * 0.400000, _rect.W - 6);
+						x = this.Math.rand(_rect.W * 0.4, _rect.W - 6);
 					}
 				}
 				else
@@ -1793,7 +1793,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 					x = this.Math.rand(5, _rect.W - 6);
 				}
 
-				y = this.Math.rand(5, _rect.H * 0.950000);
+				y = this.Math.rand(5, _rect.H * 0.95);
 				local tile = this.m.WorldTiles[x][y];
 
 				if (used.find(tile.ID) != null)
@@ -2096,7 +2096,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 		];
 		local navSettings = this.World.getNavigator().createSettings();
 		navSettings.ActionPointCosts = roadCost;
-		navSettings.RoadMult = 0.150000;
+		navSettings.RoadMult = 0.15;
 		navSettings.StopAtRoad = false;
 
 		for( local i = 0; i != settlements.len(); i = ++i )
@@ -2200,7 +2200,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 		];
 		local navSettings = this.World.getNavigator().createSettings();
 		navSettings.ActionPointCosts = roadCost;
-		navSettings.RoadMult = 0.250000;
+		navSettings.RoadMult = 0.25;
 		navSettings.StopAtRoad = false;
 
 		for( local i = 0; i != settlements.len(); i = ++i )
@@ -2568,7 +2568,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 					foreach( s in settlements )
 					{
-						if (s.isIsolated() || s.getTile().SquareCoords.Y > this.World.getMapSize().Y * 0.500000)
+						if (s.isIsolated() || s.getTile().SquareCoords.Y > this.World.getMapSize().Y * 0.5)
 						{
 							continue;
 						}
@@ -2612,7 +2612,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 		};
 	}
 
-	function fillWithTile( _x, _y, _type, _template, _baseChance, _vicinityChance, _xChance = 0.000000, _yChance = 0.000000, _inVicinityOnly = false )
+	function fillWithTile( _x, _y, _type, _template, _baseChance, _vicinityChance, _xChance = 0.0, _yChance = 0.0, _inVicinityOnly = false )
 	{
 		local tile = this.m.WorldTiles[_x][_y];
 		local n = tile.getSurroundingTilesOfType(_type);

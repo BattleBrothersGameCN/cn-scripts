@@ -34,7 +34,7 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.IsActingImmediately = true;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(-4, -25);
-		this.m.DecapitateBloodAmount = 0.500000;
+		this.m.DecapitateBloodAmount = 0.5;
 		this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
 			"sounds/enemies/wolf_death_00.wav",
 			"sounds/enemies/wolf_death_01.wav",
@@ -66,7 +66,7 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/wolf_idle_09.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Move] = this.m.Sound[this.Const.Sound.ActorEvent.Idle];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 0.700000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 0.7;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/wardog_agent");
 		this.m.AIAgent.setActor(this);
 	}
@@ -80,40 +80,40 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 			local decal;
 			this.m.IsCorpseFlipped = flip;
 			decal = _tile.spawnDetail(this.getSprite("body").getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-			decal.setBrightness(0.900000);
-			decal.Scale = 0.950000;
+			decal.setBrightness(0.9);
+			decal.Scale = 0.95;
 
 			if (appearance.CorpseArmor != "")
 			{
 				decal = _tile.spawnDetail(appearance.CorpseArmor, this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.setBrightness(0.900000);
-				decal.Scale = 0.950000;
+				decal.setBrightness(0.9);
+				decal.Scale = 0.95;
 			}
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
 			{
 				decal = _tile.spawnDetail(this.getSprite("head").getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.setBrightness(0.900000);
-				decal.Scale = 0.950000;
+				decal.setBrightness(0.9);
+				decal.Scale = 0.95;
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
 			{
 				local layers = [
 					this.getSprite("head").getBrush().Name + "_dead"
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-20, 15), 0.000000, "bust_wolf_head_bloodpool");
-				decap[0].setBrightness(0.900000);
-				decap[0].Scale = 0.950000;
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-20, 15), 0.0, "bust_wolf_head_bloodpool");
+				decap[0].setBrightness(0.9);
+				decap[0].Scale = 0.95;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
 				decal = _tile.spawnDetail(this.getSprite("body").getBrush().Name + "_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
 				decal = _tile.spawnDetail(this.getSprite("body").getBrush().Name + "_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -197,7 +197,7 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.WarWolf);
-		b.TargetAttractionMult = 0.100000;
+		b.TargetAttractionMult = 0.1;
 		b.IsAffectedByInjuries = false;
 		b.IsImmuneToDisarm = true;
 		this.m.ActionPoints = b.ActionPoints;
@@ -210,8 +210,8 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 		this.addSprite("socket").setBrush("bust_base_player");
 		local body = this.addSprite("body");
 		body.setBrush("bust_wolf_0" + variant + "_body");
-		body.varySaturation(0.150000);
-		body.varyColor(0.070000, 0.070000, 0.070000);
+		body.varySaturation(0.15);
+		body.varyColor(0.07, 0.07, 0.07);
 		local head = this.addSprite("head");
 		head.setBrush("bust_wolf_0" + variant + "_head");
 		head.Color = body.Color;
@@ -229,7 +229,7 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("injury", offset);
 		this.setSpriteOffset("armor", offset);
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.580000;
+		this.getSprite("status_rooted").Scale = 0.58;
 		this.setSpriteOffset("status_rooted", this.createVec(-6, -29));
 		this.m.Skills.add(this.new("scripts/skills/actives/wolf_bite"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));

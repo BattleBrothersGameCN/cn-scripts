@@ -4,7 +4,7 @@ this.scientist_in_the_mountains_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.scientist_in_the_mountains";
 		this.m.Title = "在山上…";
-		this.m.Cooldown = 150.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 150.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_42.png[/img]在你路过山顶的时候看到了一番奇特的景象：一个人坐在一个奇怪的木制装置里，把它倾斜到一个足以致命的悬崖边。 他的眼睛上方有一条围巾，他拉下了围巾。%SPEECH_ON%喂,陌生人。看来你要记录历史了！ 因为人类支配着这匹普通的马，让它跑得比自己所知道的还要快，所以我要支配鸟类…好吧，我们不能骑鸟，但我可以，正如你从这台机器上看到的，模拟它们。 时间和空间的枷锁将被解除，就像这些木翼将我升入空中！%SPEECH_OFF%这个“奇妙装置”配有踏板、木辐条和薄薄的匆忙缝制的防水油布。",
@@ -100,7 +100,7 @@ this.scientist_in_the_mountains_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

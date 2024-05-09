@@ -6,7 +6,7 @@ this.come_across_ritual_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.come_across_ritual";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_33.png[/img]在你的旅途中发现一具尸体并不罕见。 然而，这一次却不同寻常。%randombrother% 看了很久。%SPEECH_ON%他胸前的是什么？%SPEECH_OFF%你蹲下来，把尸体的衬衫扔回去。 他全身的伤疤都是纵向的，排列的形状很熟悉：森林，河流，山脉。%randombrother% 走上前。%SPEECH_ON%这不是一道风景么。 是狼干的还是其他什么东西？%SPEECH_OFF%你站起来。%SPEECH_ON%我想是他自己干的。%SPEECH_OFF%血淋淋的脚印致使我离开现场…",

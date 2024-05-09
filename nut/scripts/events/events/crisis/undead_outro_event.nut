@@ -6,7 +6,7 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.undead_outro";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 1.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
@@ -165,7 +165,7 @@ this.undead_outro_event <- this.inherit("scripts/events/event", {
 		if (this.World.Statistics.hasNews("crisis_undead_end"))
 		{
 			local brothers = this.World.getPlayerRoster().getAll();
-			local most_days_with_company = -9000.000000;
+			local most_days_with_company = -9000.0;
 			local most_days_with_company_bro;
 
 			foreach( bro in brothers )

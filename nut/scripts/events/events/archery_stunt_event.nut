@@ -8,7 +8,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.archery_stunt";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 90.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]一阵骚动把你从帐篷里吸引出来。 人们坐在几根树桩上或地上，急切地望着远处的什么东西。 眯着眼睛，你看到 %clown% 和 %archer% 正在做一些奇怪的事情。 一个苹果放在一个人的头上，另一个人拿着弓走开了。\n\n你问 %otherguy% 这是怎么回事，他解释说，这两个人要尝试一些高端或奇葩的玩法，包括从一个人的头上射下一只水果。 震惊之余，你惊呼这根本不安全，那个队员笑着解释说，这才是重点。",
@@ -96,7 +96,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Clown.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Archer.worsenMood(2.000000, "严重受伤" + _event.m.Clown.getName() + "意外地");
+				_event.m.Archer.worsenMood(2.0, "严重受伤" + _event.m.Clown.getName() + "意外地");
 
 				if (_event.m.Archer.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -118,7 +118,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkill("trait.bright") || bro.getSkills().hasSkill("trait.fainthearted"))
 					{
-						bro.worsenMood(1.000000, "感到 " + _event.m.Clown.getName());
+						bro.worsenMood(1.0, "感到 " + _event.m.Clown.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -167,7 +167,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/ranged_skill.png",
 					text = _event.m.Archer.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 远程技能"
 				});
-				_event.m.Clown.improveMood(1.000000, "参加了一场表演");
+				_event.m.Clown.improveMood(1.0, "参加了一场表演");
 
 				if (_event.m.Clown.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -200,7 +200,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral && this.Math.rand(1, 100) <= 10 && !bro.getSkills().hasSkill("trait.bright"))
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -235,7 +235,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Clown.getImagePath());
 				this.Characters.push(_event.m.Archer.getImagePath());
-				_event.m.Clown.worsenMood(1.000000, "请求被拒绝");
+				_event.m.Clown.worsenMood(1.0, "请求被拒绝");
 
 				if (_event.m.Clown.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -257,7 +257,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral && this.Math.rand(1, 100) <= 10 && !bro.getSkills().hasSkill("trait.bright") && !bro.getSkills().hasSkill("trait.fainthearted"))
 					{
-						bro.worsenMood(1.000000, "没有得到他所希望的娱乐");
+						bro.worsenMood(1.0, "没有得到他所希望的娱乐");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

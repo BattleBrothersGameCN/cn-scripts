@@ -8,7 +8,7 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.wildman_testing_money";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 90.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_04.png[/img]你发现野人 %wildman% 把他的克朗堆成塔。 他嘴角微微向后一咧，突然间向前冲去，撞倒了塔就像一个小孩一样。 硬币散去的同时，发出大笑声。 一个大人像小孩一样玩钱真是太怪了。 也许那个野人不知道克朗的可爱之处？ 如果是这样，也许…也许你可以把它们拿回来？",
@@ -97,7 +97,7 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Wildman.getImagePath());
-				_event.m.Wildman.worsenMood(1.000000, "做了一笔差劲的生意");
+				_event.m.Wildman.worsenMood(1.0, "做了一笔差劲的生意");
 
 				if (_event.m.Wildman.getMoodState() < this.Const.MoodState.Neutral)
 				{

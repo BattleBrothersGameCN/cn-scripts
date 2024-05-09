@@ -7,7 +7,7 @@ this.caravan_guard_vs_raider_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.caravan_guard_vs_raider";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_06.png[/img]虽然你期望你雇佣的人会抛弃过去的生活，但有时情况并非如此。 似乎 %caravanhand% 和 %raider%彼此非常熟悉：商队成员在曾经在某种没有胜利者的战斗中亲自对付过掠夺者。 现在，他们试图完成他们很久以前就开始的事情，他们在地上打作一团，挥拳和肘击着对方，向对方的眼睛和脸颊吐口水。 你亲自把他们分开，把他们推到两边并让他们清楚他们现在是佣兵，不是敌人。 你强迫他们握手，他们听从了。 商队成员点头。%SPEECH_ON%身手不错，%raider%。%SPEECH_OFF%掠夺者也点头，擦去一点从鼻子里流出的血。%SPEECH_ON%你比我想象中的要强壮。%SPEECH_OFF%两个人一起去接受治疗，像个男人一样，他们的过节很容易抛之脑后。",

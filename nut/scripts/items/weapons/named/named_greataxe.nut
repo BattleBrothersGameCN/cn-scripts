@@ -19,13 +19,13 @@ this.named_greataxe <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 4600;
 		this.m.ShieldDamage = 36;
-		this.m.Condition = 72.000000;
-		this.m.ConditionMax = 72.000000;
+		this.m.Condition = 72.0;
+		this.m.ConditionMax = 72.0;
 		this.m.StaminaModifier = -16;
 		this.m.RegularDamage = 80;
 		this.m.RegularDamageMax = 100;
-		this.m.ArmorDamageMult = 1.500000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 1.5;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ChanceToHitHead = 0;
 		this.randomizeValues();
 	}

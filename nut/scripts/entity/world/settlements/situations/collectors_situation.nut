@@ -34,8 +34,8 @@ this.collectors_situation <- this.inherit("scripts/entity/world/settlements/situ
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.BeastPartsPriceMult *= 2.000000;
-		_modifiers.RecruitsMult *= 1.250000;
+		_modifiers.BeastPartsPriceMult *= 2.0;
+		_modifiers.RecruitsMult *= 1.25;
 	}
 
 	function onUpdateDraftList( _draftList )

@@ -28,7 +28,7 @@ this.paymaster_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onUpdate()
 	{
-		this.World.Assets.m.DailyWageMult *= 0.850000;
+		this.World.Assets.m.DailyWageMult *= 0.85;
 	}
 
 	function onEvaluate()

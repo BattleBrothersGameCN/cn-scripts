@@ -17,13 +17,13 @@ this.named_qatal_dagger <- this.inherit("scripts/items/weapons/named/named_weapo
 		this.m.AddGenericSkill = true;
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
-		this.m.Condition = 60.000000;
-		this.m.ConditionMax = 60.000000;
+		this.m.Condition = 60.0;
+		this.m.ConditionMax = 60.0;
 		this.m.Value = 3000;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 45;
-		this.m.ArmorDamageMult = 0.700000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.7;
+		this.m.DirectDamageMult = 0.2;
 		this.randomizeValues();
 	}
 

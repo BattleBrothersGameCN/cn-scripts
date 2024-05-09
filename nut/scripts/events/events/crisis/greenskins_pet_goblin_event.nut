@@ -6,7 +6,7 @@ this.greenskins_pet_goblin_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.greenskins_pet_goblin";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 80.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]当你穿过森林时，你来到一片空地上，那里有一间小茅屋。 墙上挂着捕熊器，屋檐上挂着松鼠皮，窗户的角落里挂满了湿漉漉的树叶。 一位老人坐在门廊上的椅子上摇来摇去。 他拿着一把弩瞄准你。%SPEECH_ON%这是我的财产。%SPEECH_OFF%有一条链子从他的椅子扶手一直延伸到地窖的门口。 它随着那个人的谈话轻微地移动了一下，那个人转过身，用那把弩顶着门。%SPEECH_ON%嘘,你！现在你，拿着剑的人，和你所有的朋友，走吧。 如果再走错一步，在我的地盘，我就把你的屁股拴起来。%SPEECH_OFF%%randombrother% 悄悄来到你身边。%SPEECH_ON%我们该怎么办，先生？%SPEECH_OFF%",

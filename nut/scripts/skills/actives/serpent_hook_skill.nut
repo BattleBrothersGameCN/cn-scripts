@@ -141,13 +141,13 @@ this.serpent_hook_skill <- this.inherit("scripts/skills/skill", {
 			local scaleBackup = target.getSprite("status_rooted").Scale;
 			_user.fadeOut(50);
 			local rooted_front = target.getSprite("status_rooted");
-			rooted_front.Scale = 1.000000;
+			rooted_front.Scale = 1.0;
 			rooted_front.setBrush("snake_ensnare_front_0" + variant);
 			rooted_front.Visible = true;
 			rooted_front.Alpha = 0;
 			rooted_front.fadeIn(50);
 			local rooted_back = target.getSprite("status_rooted_back");
-			rooted_back.Scale = 1.000000;
+			rooted_back.Scale = 1.0;
 			rooted_back.setBrush("snake_ensnare_back_0" + variant);
 			rooted_back.Visible = true;
 			rooted_back.Alpha = 0;
@@ -180,7 +180,7 @@ this.serpent_hook_skill <- this.inherit("scripts/skills/skill", {
 			};
 			tag.HitInfo.DamageRegular = damage;
 			tag.HitInfo.DamageFatigue = this.Const.Combat.FatigueReceivedPerHit;
-			tag.HitInfo.DamageDirect = 1.000000;
+			tag.HitInfo.DamageDirect = 1.0;
 			tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
 			this.Tactical.getNavigator().teleport(_targetTile.getEntity(), pullToTile, this.onPulledDown, tag, true);
 		}

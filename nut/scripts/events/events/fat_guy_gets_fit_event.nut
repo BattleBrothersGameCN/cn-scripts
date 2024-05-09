@@ -6,7 +6,7 @@ this.fat_guy_gets_fit_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.fat_guy_gets_fit";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_75.png[/img]%fatguy%，曾经是双腿鼓鼓的大肚男人，自从在战团工作以来，他的体重已经减轻了不少。 不在是仅仅一场拳击比赛的强度就让他喘不过气来。 事实上，他的步伐更灵敏了，表现出一种你以前从未见过的敏捷。 看起来这一切是个奇迹。",

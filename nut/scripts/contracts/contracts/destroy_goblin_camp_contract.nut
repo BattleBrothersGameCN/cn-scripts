@@ -7,7 +7,7 @@ this.destroy_goblin_camp_contract <- this.inherit("scripts/contracts/contract", 
 		this.contract.create();
 		this.m.Type = "contract.destroy_goblin_camp";
 		this.m.Name = "摧毁地精营地";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -25,12 +25,12 @@ this.destroy_goblin_camp_contract <- this.inherit("scripts/contracts/contract", 
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -62,7 +62,7 @@ this.destroy_goblin_camp_contract <- this.inherit("scripts/contracts/contract", 
 				this.Contract.m.Destination.clearTroops();
 				this.Contract.m.Destination.setLastSpawnTimeToNow();
 
-				if (this.Contract.getDifficultyMult() < 1.150000 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
+				if (this.Contract.getDifficultyMult() < 1.15 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
 				{
 					this.Contract.m.Destination.getLoot().clear();
 				}
@@ -71,7 +71,7 @@ this.destroy_goblin_camp_contract <- this.inherit("scripts/contracts/contract", 
 				this.Contract.m.Destination.setLootScaleBasedOnResources(110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				this.Contract.m.Destination.setResources(this.Math.min(this.Contract.m.Destination.getResources(), 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult()));
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 
 				if (this.World.FactionManager.getFaction(this.Contract.getFaction()).getFlags().get("Betrayed") && this.Math.rand(1, 100) <= 75)
 				{
@@ -83,7 +83,7 @@ this.destroy_goblin_camp_contract <- this.inherit("scripts/contracts/contract", 
 
 					if (r <= 20 && this.World.Assets.getBusinessReputation() > 1000)
 					{
-						if (this.Contract.getDifficultyMult() >= 0.950000)
+						if (this.Contract.getDifficultyMult() >= 0.95)
 						{
 							this.Flags.set("IsAmbush", true);
 						}

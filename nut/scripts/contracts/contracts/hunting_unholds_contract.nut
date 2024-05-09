@@ -14,7 +14,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.hunting_unholds";
 		this.m.Name = "狩猎巨人";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -28,12 +28,12 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -97,9 +97,9 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 				party.setDescription("一个或多个笨拙的巨人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Unholds);
 				party.setAttackableByAI(false);
-				party.setFootprintSizeOverride(0.750000);
+				party.setFootprintSizeOverride(0.75);
 				party.getFlags().set("IsUnholds", true);
-				this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Unholds, 0.750000);
+				this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Unholds, 0.75);
 				this.Contract.m.Target = this.WeakTableRef(party);
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				local c = party.getController();
@@ -147,7 +147,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 					this.World.Contracts.showActiveContract();
 					this.Contract.setState("Return");
 				}
-				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 10.000000 <= this.Time.getVirtualTimeF())
+				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 10.0 <= this.Time.getVirtualTimeF())
 				{
 					this.Flags.set("IsBanterShown", true);
 					this.Contract.setScreen("Banter");
@@ -358,7 +358,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Characters.push(this.Contract.m.Dude.getImagePath());
-				this.Contract.m.Dude.improveMood(3.000000, "他一个人设法赶走了那些巨魔");
+				this.Contract.m.Dude.improveMood(3.0, "他一个人设法赶走了那些巨魔");
 
 				if (this.Contract.m.Dude.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -408,7 +408,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 					icon = injury.getIcon(),
 					text = this.Contract.m.Dude.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				this.Contract.m.Dude.worsenMood(1.000000, "他一个人没能赶走那些巨魔");
+				this.Contract.m.Dude.worsenMood(1.0, "他一个人没能赶走那些巨魔");
 
 				if (this.Contract.m.Dude.getMoodState() <= this.Const.MoodState.Neutral)
 				{

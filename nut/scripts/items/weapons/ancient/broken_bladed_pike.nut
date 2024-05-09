@@ -18,16 +18,16 @@ this.broken_bladed_pike <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_bladed_pike_02";
 		this.m.Value = 350;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 26.000000;
-		this.m.ConditionMax = 26.000000;
+		this.m.Condition = 26.0;
+		this.m.ConditionMax = 26.0;
 		this.m.StaminaModifier = -12;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 55;
-		this.m.ArmorDamageMult = 0.800000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 0.8;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 5;
 	}
 

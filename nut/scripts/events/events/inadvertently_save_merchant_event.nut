@@ -6,7 +6,7 @@ this.inadvertently_save_merchant_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.inadvertently_save_merchant";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 130.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 130.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%townImage%你带着几个佣兵在 %townname% 四处游荡，你转过一个街角，就会发现一个富商被盗贼和土匪包围着。 他们环顾四周，怒目圆睁。 其中一个在击打商人的面部。%SPEECH_ON%好吧，下次我们会抓到你的，你这个混蛋！%SPEECH_OFF%歹徒们很快离开了。 过了一会儿，商人的重装护卫出现了。 在包扎伤口时，商人大声训斥他们。%SPEECH_ON%我不是给过你们这些欠骂的混蛋很多钱了么？ 我第二次遇到麻烦了，你们哪儿去了？ 看看这个人，这才是我应该付钱的人！ 嘿，给你添麻烦了，陌生人。%SPEECH_OFF%商人丢给你一袋克朗，作为“麻烦”你的报酬，尽管你所做的一切只是拐了个弯，然后碰巧赶上了。",

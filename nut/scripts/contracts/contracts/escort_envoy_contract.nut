@@ -7,7 +7,7 @@ this.escort_envoy_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.escort_envoy";
 		this.m.Name = "护送特使";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -52,16 +52,16 @@ this.escort_envoy_contract <- this.inherit("scripts/contracts/contract", {
 
 		this.m.Destination = this.WeakTableRef(candidates[this.Math.rand(0, candidates.len() - 1)]);
 		local distance = this.getDistanceOnRoads(this.m.Home.getTile(), this.m.Destination.getTile());
-		this.m.Payment.Pool = this.Math.max(250, distance * 7.000000 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentMult());
+		this.m.Payment.Pool = this.Math.max(250, distance * 7.0 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentMult());
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		local titles = [
@@ -71,7 +71,7 @@ this.escort_envoy_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Flags.set("EnvoyName", this.Const.Strings.CharacterNames[this.Math.rand(0, this.Const.Strings.CharacterNames.len() - 1)]);
 		this.m.Flags.set("EnvoyTitle", titles[this.Math.rand(0, titles.len() - 1)]);
 		this.m.Flags.set("DestinationName", this.m.Destination.getName());
-		this.m.Flags.set("Bribe", this.beautifyNumber(this.m.Payment.Pool * this.Math.rand(75, 150) * 0.010000));
+		this.m.Flags.set("Bribe", this.beautifyNumber(this.m.Payment.Pool * this.Math.rand(75, 150) * 0.01));
 		this.m.Flags.set("EnemyName", this.m.Destination.getOwner().getName());
 		this.contract.start();
 	}
@@ -103,7 +103,7 @@ this.escort_envoy_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (r <= 10)
 				{
-					if (this.Contract.getDifficultyMult() >= 1.000000)
+					if (this.Contract.getDifficultyMult() >= 1.0)
 					{
 						this.Flags.set("IsShadyDeal", true);
 					}
@@ -149,7 +149,7 @@ this.escort_envoy_contract <- this.inherit("scripts/contracts/contract", {
 					else if (this.World.State.getPlayer().getTile().HasRoad && this.Math.rand(1, 1000) <= 1)
 					{
 						local enemiesNearby = false;
-						local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+						local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 
 						foreach( party in parties )
 						{
@@ -295,7 +295,7 @@ this.escort_envoy_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Characters.push(this.World.getGuestRoster().get(0).getImagePath());
-				this.Flags.set("WaitUntil", this.Time.getVirtualTimeF() + this.Math.rand(20, 60) * 1.000000);
+				this.Flags.set("WaitUntil", this.Time.getVirtualTimeF() + this.Math.rand(20, 60) * 1.0);
 				this.Contract.setState("Waiting");
 			}
 

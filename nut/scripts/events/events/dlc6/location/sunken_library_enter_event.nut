@@ -4,7 +4,7 @@ this.sunken_library_enter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.location.sunken_library_enter";
 		this.m.Title = "当你接近时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
@@ -251,7 +251,7 @@ this.sunken_library_enter_event <- this.inherit("scripts/events/event", {
 						p.AfterDeploymentCallback = function ()
 						{
 							this.Tactical.getWeather().setAmbientLightingPreset(5);
-							this.Tactical.getWeather().setAmbientLightingSaturation(0.900000);
+							this.Tactical.getWeather().setAmbientLightingSaturation(0.9);
 						};
 						_event.registerToShowAfterCombat("Victory", "Defeat");
 						this.World.State.startScriptedCombat(p, false, false, false);

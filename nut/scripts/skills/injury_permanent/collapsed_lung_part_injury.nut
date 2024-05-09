@@ -41,7 +41,7 @@ this.collapsed_lung_part_injury <- this.inherit("scripts/skills/injury_permanent
 
 	function onUpdate( _properties )
 	{
-		_properties.StaminaMult *= 0.600000;
+		_properties.StaminaMult *= 0.6;
 		_properties.IsContentWithBeingInReserve = true;
 	}
 

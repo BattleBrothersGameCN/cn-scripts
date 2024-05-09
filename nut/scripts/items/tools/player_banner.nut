@@ -26,8 +26,8 @@ this.player_banner <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 1.000000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.0;
+		this.m.DirectDamageMult = 0.3;
 		this.m.Variant = 5;
 		this.updateVariant();
 	}

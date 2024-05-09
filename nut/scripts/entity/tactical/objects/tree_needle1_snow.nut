@@ -12,7 +12,7 @@ this.tree_needle1_snow <- this.inherit("scripts/entity/tactical/entity", {
 
 	function onInit()
 	{
-		local scale = 1.000000;
+		local scale = 1.0;
 		local flip = this.Math.rand(0, 1) == 1;
 		local v = this.Math.rand(1, 2);
 		local rotation = this.Math.rand(-3, 3);

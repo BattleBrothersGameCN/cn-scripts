@@ -22,13 +22,13 @@ this.three_headed_flail <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_flail_three_headed_01";
 		this.m.Value = 1500;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 60.000000;
-		this.m.ConditionMax = 60.000000;
+		this.m.Condition = 60.0;
+		this.m.ConditionMax = 60.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 75;
-		this.m.ArmorDamageMult = 1.000000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.0;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 10;
 	}
 
@@ -53,7 +53,7 @@ this.three_headed_flail <- this.inherit("scripts/items/weapons/weapon", {
 			return;
 		}
 
-		if (actor.isPlayerControlled() && _skill.getDirectDamage() < 1.000000 && !_skill.isRanged() && this.m.ConditionMax > 1)
+		if (actor.isPlayerControlled() && _skill.getDirectDamage() < 1.0 && !_skill.isRanged() && this.m.ConditionMax > 1)
 		{
 			this.m.LastSkillUse = this.Const.SkillCounter;
 

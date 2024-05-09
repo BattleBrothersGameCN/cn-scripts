@@ -4,7 +4,7 @@ this.have_y_renown_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.have_y_renown";
-		this.m.Duration = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们已经在这片土地的一些地方为人所知，但距离成为一个传奇战团还很远。 \n我们将进一步提高我们的名望！";
 		this.m.UIText = "名望达到“丰功伟绩”";
 		this.m.TooltipText = "以“丰功伟绩”（2750名望）闻名于各地。你可以通过完成合同和赢得战斗来提高自己的名望。";

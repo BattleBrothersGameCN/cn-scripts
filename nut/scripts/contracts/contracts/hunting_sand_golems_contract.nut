@@ -9,7 +9,7 @@ this.hunting_sand_golems_contract <- this.inherit("scripts/contracts/contract", 
 		this.contract.create();
 		this.m.Type = "contract.hunting_sandgolems";
 		this.m.Name = "流沙";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -23,12 +23,12 @@ this.hunting_sand_golems_contract <- this.inherit("scripts/contracts/contract", 
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -51,7 +51,7 @@ this.hunting_sand_golems_contract <- this.inherit("scripts/contracts/contract", 
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
 				local r = this.Math.rand(1, 100);
 
-				if (r <= 10 && this.Contract.getDifficultyMult() >= 1.150000)
+				if (r <= 10 && this.Contract.getDifficultyMult() >= 1.15)
 				{
 					this.Flags.set("IsEarthquake", true);
 				}
@@ -78,7 +78,7 @@ this.hunting_sand_golems_contract <- this.inherit("scripts/contracts/contract", 
 				party.setDescription("活生生的石头制成的生物，由南方烈日的酷热和烈火塑造而成。");
 				party.setFootprintType(this.Const.World.FootprintsType.SandGolems);
 				party.setAttackableByAI(false);
-				party.setFootprintSizeOverride(0.750000);
+				party.setFootprintSizeOverride(0.75);
 
 				for( local i = 0; i < 1; i = ++i )
 				{
@@ -86,7 +86,7 @@ this.hunting_sand_golems_contract <- this.inherit("scripts/contracts/contract", 
 
 					if (nearTile != null)
 					{
-						this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.SandGolems, 0.750000);
+						this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.SandGolems, 0.75);
 					}
 				}
 
@@ -126,7 +126,7 @@ this.hunting_sand_golems_contract <- this.inherit("scripts/contracts/contract", 
 					this.World.Contracts.showActiveContract();
 					this.Contract.setState("Return");
 				}
-				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 10.000000 <= this.Time.getVirtualTimeF())
+				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 10.0 <= this.Time.getVirtualTimeF())
 				{
 					local tileType = this.World.State.getPlayer().getTile().Type;
 

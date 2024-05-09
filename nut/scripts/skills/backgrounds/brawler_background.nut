@@ -143,7 +143,7 @@ this.brawler_background <- this.inherit("scripts/skills/backgrounds/character_ba
 	{
 		if (_skill.getID() == "actives.hand_to_hand")
 		{
-			_properties.DamageTotalMult *= 2.000000;
+			_properties.DamageTotalMult *= 2.0;
 		}
 	}
 

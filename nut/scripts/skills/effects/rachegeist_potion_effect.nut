@@ -60,8 +60,8 @@ this.rachegeist_potion_effect <- this.inherit("scripts/skills/skill", {
 
 		if (actor.getHitpoints() < actor.getHitpointsMax() / 2)
 		{
-			_properties.DamageTotalMult *= 1.250000;
-			_properties.DamageReceivedTotalMult *= 0.750000;
+			_properties.DamageTotalMult *= 1.25;
+			_properties.DamageReceivedTotalMult *= 0.75;
 		}
 	}
 

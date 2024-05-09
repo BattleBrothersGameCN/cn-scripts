@@ -39,52 +39,52 @@ this.phylactery <- this.inherit("scripts/entity/tactical/actor", {
 				],
 				Stages = [
 					{
-						LifeTimeMin = 1.000000,
-						LifeTimeMax = 1.000000,
+						LifeTimeMin = 1.0,
+						LifeTimeMax = 1.0,
 						ColorMin = this.createColor("ffffff2f"),
 						ColorMax = this.createColor("ffffff2f"),
-						ScaleMin = 1.000000,
-						ScaleMax = 1.000000,
+						ScaleMin = 1.0,
+						ScaleMax = 1.0,
 						RotationMin = 0,
 						RotationMax = 0,
 						VelocityMin = 80,
 						VelocityMax = 100,
-						DirectionMin = this.createVec(-1.000000, -0.500000),
-						DirectionMax = this.createVec(1.000000, 1.000000),
+						DirectionMin = this.createVec(-1.0, -0.5),
+						DirectionMax = this.createVec(1.0, 1.0),
 						SpawnOffsetMin = this.createVec(-10, -10),
 						SpawnOffsetMax = this.createVec(10, 10),
 						ForceMin = this.createVec(0, 0),
 						ForceMax = this.createVec(0, 0)
 					},
 					{
-						LifeTimeMin = 1.000000,
-						LifeTimeMax = 1.000000,
+						LifeTimeMin = 1.0,
+						LifeTimeMax = 1.0,
 						ColorMin = this.createColor("ffffff1f"),
 						ColorMax = this.createColor("ffffff1f"),
-						ScaleMin = 0.900000,
-						ScaleMax = 0.900000,
+						ScaleMin = 0.9,
+						ScaleMax = 0.9,
 						RotationMin = 0,
 						RotationMax = 0,
 						VelocityMin = 80,
 						VelocityMax = 100,
-						DirectionMin = this.createVec(-1.000000, -0.500000),
-						DirectionMax = this.createVec(1.000000, 1.000000),
+						DirectionMin = this.createVec(-1.0, -0.5),
+						DirectionMax = this.createVec(1.0, 1.0),
 						ForceMin = this.createVec(0, 0),
 						ForceMax = this.createVec(0, 0)
 					},
 					{
-						LifeTimeMin = 0.100000,
-						LifeTimeMax = 0.100000,
+						LifeTimeMin = 0.1,
+						LifeTimeMax = 0.1,
 						ColorMin = this.createColor("ffffff00"),
 						ColorMax = this.createColor("ffffff00"),
-						ScaleMin = 0.100000,
-						ScaleMax = 0.100000,
+						ScaleMin = 0.1,
+						ScaleMax = 0.1,
 						RotationMin = 0,
 						RotationMax = 0,
 						VelocityMin = 80,
 						VelocityMax = 100,
-						DirectionMin = this.createVec(-1.000000, -0.500000),
-						DirectionMax = this.createVec(1.000000, 1.000000),
+						DirectionMin = this.createVec(-1.0, -0.5),
+						DirectionMax = this.createVec(1.0, 1.0),
 						ForceMin = this.createVec(0, 0),
 						ForceMax = this.createVec(0, 0)
 					}
@@ -123,7 +123,7 @@ this.phylactery <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsMovable = false;
 		b.IsAffectedByInjuries = false;
 		b.IsImmuneToDisarm = true;
-		b.TargetAttractionMult = 1.000000;
+		b.TargetAttractionMult = 1.0;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;

@@ -7,7 +7,7 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.shooting_contest";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img] 一阵低语声越来越嘈杂，直到你无法集中注意力。 你放下你的羽毛笔，带着墨水瓶所能承受的不会被打破的能量走出你的帐篷。%archer1% 和 %archer2% 站在那里争吵谁射的更准。 他们就迫不及待地询问是否可以举办一场射击比赛来决定谁是正确的。",
@@ -153,7 +153,7 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Archer1.getImagePath());
 				this.Characters.push(_event.m.Archer2.getImagePath());
-				_event.m.Archer1.worsenMood(1.000000, "请求被拒绝");
+				_event.m.Archer1.worsenMood(1.0, "请求被拒绝");
 
 				if (_event.m.Archer1.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -164,7 +164,7 @@ this.shooting_contest_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Archer2.worsenMood(1.000000, "请求被拒绝");
+				_event.m.Archer2.worsenMood(1.0, "请求被拒绝");
 
 				if (_event.m.Archer2.getMoodState() < this.Const.MoodState.Neutral)
 				{

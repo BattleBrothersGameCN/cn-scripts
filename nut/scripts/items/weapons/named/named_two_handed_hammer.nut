@@ -19,13 +19,13 @@ this.named_two_handed_hammer <- this.inherit("scripts/items/weapons/named/named_
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 4000;
 		this.m.ShieldDamage = 26;
-		this.m.Condition = 120.000000;
-		this.m.ConditionMax = 120.000000;
+		this.m.Condition = 120.0;
+		this.m.ConditionMax = 120.0;
 		this.m.StaminaModifier = -18;
 		this.m.RegularDamage = 60;
 		this.m.RegularDamageMax = 90;
-		this.m.ArmorDamageMult = 2.000000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 2.0;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ChanceToHitHead = 0;
 		this.randomizeValues();
 	}

@@ -20,13 +20,13 @@ this.orc_axe_2h <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_orc_weapon_01";
 		this.m.Value = 1500;
 		this.m.ShieldDamage = 42;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.StaminaModifier = -34;
 		this.m.RegularDamage = 90;
 		this.m.RegularDamageMax = 120;
-		this.m.ArmorDamageMult = 1.600000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 1.6;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ChanceToHitHead = 0;
 		this.m.FatigueOnSkillUse = 5;
 	}

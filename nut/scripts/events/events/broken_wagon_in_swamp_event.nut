@@ -6,7 +6,7 @@ this.broken_wagon_in_swamp_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.broken_wagon_in_swamp";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_09.png[/img]沼泽对于旅行者来说不是安全的地方。 从没完没了的雾霾和树木弯曲的方式来判断，毫无疑问，这里是恶魔出没的地方。 至少这一带的德鲁伊们好像是这么说的。 你所能找到的只是几匹淹死在泥里的马和一辆撞坏的载重货车，车轮和车座上沾满了泥浆。%randombrother% 仔细地检查残害，并努力尝试找到一些物品。%SPEECH_ON%好吧，有一些东西。不知道是谁不久前把它扔在这。 可能是被每天在这里出没的什么恐怖生物吓到了。%SPEECH_OFF%",

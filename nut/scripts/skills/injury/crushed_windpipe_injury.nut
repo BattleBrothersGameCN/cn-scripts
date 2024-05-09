@@ -54,7 +54,7 @@ this.crushed_windpipe_injury <- this.inherit("scripts/skills/injury/injury", {
 		}
 
 		_properties.FatigueRecoveryRate -= 10;
-		_properties.StaminaMult *= 0.500000;
+		_properties.StaminaMult *= 0.5;
 	}
 
 });

@@ -19,33 +19,33 @@ this.surface_copper_vein_location <- this.inherit("scripts/entity/world/attached
 			r = [
 				{
 					File = "ambience/settlement/mines_00.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_01.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_00.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_01.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_02.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_03.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				}
 			];
 
@@ -82,17 +82,17 @@ this.surface_copper_vein_location <- this.inherit("scripts/entity/world/attached
 		{
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/pickaxe"
 			});
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "trade/copper_ingots_item"
 			});
 			_list.push({
 				R = 25,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/armor_parts_item"
 			});
 		}

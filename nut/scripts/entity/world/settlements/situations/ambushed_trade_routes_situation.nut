@@ -32,9 +32,9 @@ this.ambushed_trade_routes_situation <- this.inherit("scripts/entity/world/settl
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.BuyPriceMult *= 1.200000;
-		_modifiers.SellPriceMult *= 1.100000;
-		_modifiers.RarityMult *= 0.750000;
+		_modifiers.BuyPriceMult *= 1.2;
+		_modifiers.SellPriceMult *= 1.1;
+		_modifiers.RarityMult *= 0.75;
 	}
 
 });

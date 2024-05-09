@@ -6,7 +6,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.lend_men_to_build";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_79.png[/img]当你们接近 %townname% 时，一个当地人朝你们挥手。 他站在一座磨坊的骨架旁。 他看起来非常生气，他解释说他的工人今天没有来但是他需要在当地一位男爵到来之前把磨坊完工。 如果他不能完成的话男爵可能就不会再给他一份合同了。 你的战团里面有些成员以前是工人。 也许可以叫他们来帮助这个人？",
@@ -84,7 +84,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 						if (this.Math.rand(1, 100) <= 50)
 						{
-							bro.improveMood(0.500000, "帮助建了一个磨坊");
+							bro.improveMood(0.5, "帮助建了一个磨坊");
 
 							if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 							{
@@ -177,7 +177,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 						if (this.Math.rand(1, 100) <= 50)
 						{
-							bro.improveMood(0.500000, "帮助建了一个磨坊");
+							bro.improveMood(0.5, "帮助建了一个磨坊");
 
 							if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 							{
@@ -233,7 +233,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 						if (this.Math.rand(1, 100) <= 33)
 						{
-							bro.worsenMood(1.000000, "帮助建了一个磨坊却没有得到报酬");
+							bro.worsenMood(1.0, "帮助建了一个磨坊却没有得到报酬");
 
 							if (bro.getMoodState() < this.Const.MoodState.Neutral)
 							{

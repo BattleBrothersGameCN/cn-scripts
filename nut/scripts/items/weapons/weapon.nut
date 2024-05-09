@@ -17,9 +17,9 @@ this.weapon <- this.inherit("scripts/items/item", {
 		ShieldDamage = 0,
 		RegularDamage = 0,
 		RegularDamageMax = 0,
-		ArmorDamageMult = 1.000000,
-		DirectDamageMult = 0.000000,
-		DirectDamageAdd = 0.000000,
+		ArmorDamageMult = 1.0,
+		DirectDamageMult = 0.0,
+		DirectDamageAdd = 0.0,
 		ChanceToHitHead = 0,
 		AdditionalAccuracy = 0,
 		FatigueOnSkillUse = 0,
@@ -132,12 +132,12 @@ this.weapon <- this.inherit("scripts/items/item", {
 
 	function getAmountString()
 	{
-		return "" + this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.000000) * 100) + "%";
+		return "" + this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.0) * 100) + "%";
 	}
 
 	function getAmountColor()
 	{
-		return this.Const.Items.ConditionColor[this.Math.min(this.Math.max(0, this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.000000) * (this.Const.Items.ConditionColor.len() - 1))), this.Const.Items.ConditionColor.len() - 1)];
+		return this.Const.Items.ConditionColor[this.Math.min(this.Math.max(0, this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.0) * (this.Const.Items.ConditionColor.len() - 1))), this.Const.Items.ConditionColor.len() - 1)];
 	}
 
 	function getStaminaModifier()
@@ -147,7 +147,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 
 	function getValue()
 	{
-		return this.Math.floor(this.m.Value * (this.m.Condition / (this.m.ConditionMax * 1.000000)));
+		return this.Math.floor(this.m.Value * (this.m.Condition / (this.m.ConditionMax * 1.0)));
 	}
 
 	function setBloodied( _isBloodied )
@@ -479,7 +479,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 
 		if (this.m.Condition == this.m.ConditionMax && !this.isKindOf(this.getContainer().getActor().get(), "player"))
 		{
-			this.m.Condition = this.Math.rand(1, this.Math.max(1, this.m.ConditionMax - 2)) * 1.000000;
+			this.m.Condition = this.Math.rand(1, this.Math.max(1, this.m.ConditionMax - 2)) * 1.0;
 		}
 	}
 
@@ -523,7 +523,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 			return;
 		}
 
-		if (actor.isPlayerControlled() && _skill.getDirectDamage() < 1.000000 && !_skill.isRanged() && this.m.ConditionMax > 1)
+		if (actor.isPlayerControlled() && _skill.getDirectDamage() < 1.0 && !_skill.isRanged() && this.m.ConditionMax > 1)
 		{
 			if (_target.getArmorMax(_hitInfo.BodyPart) >= 50 && _hitInfo.DamageInflictedArmor >= 5 || this.m.ConditionMax == 2)
 			{
@@ -554,13 +554,13 @@ this.weapon <- this.inherit("scripts/items/item", {
 	function lowerCondition( _value = this.Const.Combat.WeaponDurabilityLossOnHit )
 	{
 		local actor = this.getContainer().getActor();
-		this.m.Condition = this.Math.maxf(0.000000, this.m.Condition - _value);
+		this.m.Condition = this.Math.maxf(0.0, this.m.Condition - _value);
 
 		if (this.m.Condition == 0 && !actor.isHiddenToPlayer())
 		{
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "的" + this.getName() + "已经损坏！");
 			this.Tactical.spawnIconEffect("status_effect_36", actor.getTile(), this.Const.Tactical.Settings.SkillIconOffsetX, this.Const.Tactical.Settings.SkillIconOffsetY, this.Const.Tactical.Settings.SkillIconScale, this.Const.Tactical.Settings.SkillIconFadeInDuration, this.Const.Tactical.Settings.SkillIconStayDuration, this.Const.Tactical.Settings.SkillIconFadeOutDuration, this.Const.Tactical.Settings.SkillIconMovement);
-			this.Sound.play(this.m.BreakingSound, 1.000000, actor.getPos());
+			this.Sound.play(this.m.BreakingSound, 1.0, actor.getPos());
 			this.Time.scheduleEvent(this.TimeUnit.Virtual, 300, this.onDelayedRemoveSelf, null);
 		}
 	}

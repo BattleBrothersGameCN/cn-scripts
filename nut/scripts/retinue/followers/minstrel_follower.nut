@@ -22,7 +22,7 @@ this.minstrel_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onUpdate()
 	{
-		this.World.Assets.m.BusinessReputationRate *= 1.150000;
+		this.World.Assets.m.BusinessReputationRate *= 1.15;
 		this.World.Assets.m.IsNonFlavorRumorsOnly = true;
 	}
 

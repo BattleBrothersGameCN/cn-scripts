@@ -3,7 +3,7 @@ this.patrol_area_action <- this.inherit("scripts/factions/faction_action", {
 	function create()
 	{
 		this.m.ID = "patrol_area_action";
-		this.m.Cooldown = 400.000000;
+		this.m.Cooldown = 400.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -63,14 +63,14 @@ this.patrol_area_action <- this.inherit("scripts/factions/faction_action", {
 		roam.setPivot(settlements[0]);
 		roam.setMinRange(1);
 		roam.setMaxRange(10);
-		roam.setTime(200.000000);
+		roam.setTime(200.0);
 		local move = this.new("scripts/ai/world/orders/move_order");
 		move.setDestination(settlements[0].getTile());
 		local despawn = this.new("scripts/ai/world/orders/despawn_order");
 		c.addOrder(roam);
 		c.addOrder(move);
 		c.addOrder(despawn);
-		this.m.Cooldown = this.World.FactionManager.isGreaterEvil() ? 200.000000 : 400.000000;
+		this.m.Cooldown = this.World.FactionManager.isGreaterEvil() ? 200.0 : 400.0;
 		return true;
 	}
 

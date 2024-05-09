@@ -6,7 +6,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.rookie_gets_hurt";
 		this.m.Title = "战后…";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_22.png[/img]战斗结束后，你发现 %noncombat% 跪在地上，身体随着他护理自己的伤口而来回颤抖。 你听见一阵介于低沉抽泣与放声大哭之间的哭声。 你走近他，问他他还好吗。 他摇摇头，解释说这是他第一次经历真正的血腥搏杀。 这种事不是他所期望的，而他也不确定他能否继续坚持下去。",
@@ -56,7 +56,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Rookie.getImagePath());
-				_event.m.Rookie.improveMood(1.000000, "听取了一场激励人心的谈话");
+				_event.m.Rookie.improveMood(1.0, "听取了一场激励人心的谈话");
 				_event.m.Rookie.getBaseProperties().Bravery += 3;
 				_event.m.Rookie.getSkills().update();
 				this.List = [
@@ -106,7 +106,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 						text = _event.m.Rookie.getName() + "失去 [color=" + this.Const.UI.Color.NegativeEventValue + "]-3[/color] 决心"
 					}
 				];
-				_event.m.Rookie.worsenMood(1.000000, "对自己失去信心");
+				_event.m.Rookie.worsenMood(1.0, "对自己失去信心");
 
 				if (_event.m.Rookie.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -138,7 +138,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Rookie.getImagePath());
-				_event.m.Rookie.improveMood(1.000000, "听取了一场激励人心的谈话");
+				_event.m.Rookie.improveMood(1.0, "听取了一场激励人心的谈话");
 				_event.m.Rookie.getBaseProperties().Bravery += 2;
 				_event.m.Rookie.getSkills().update();
 				this.List = [
@@ -179,7 +179,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Rookie.getImagePath());
-				_event.m.Rookie.worsenMood(1.000000, "认识到了成为一名雇佣兵意味着什么");
+				_event.m.Rookie.worsenMood(1.0, "认识到了成为一名雇佣兵意味着什么");
 
 				if (_event.m.Rookie.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -196,7 +196,7 @@ this.rookie_gets_hurt_event <- this.inherit("scripts/events/event", {
 
 	function onUpdateScore()
 	{
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.000000)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.0)
 		{
 			return;
 		}

@@ -20,13 +20,13 @@ this.orc_wooden_club <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_orc_weapon_06";
 		this.m.Value = 150;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 44.000000;
-		this.m.ConditionMax = 44.000000;
+		this.m.Condition = 44.0;
+		this.m.ConditionMax = 44.0;
 		this.m.StaminaModifier = -20;
 		this.m.RegularDamage = 25;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.4;
 		this.m.FatigueOnSkillUse = 5;
 	}
 

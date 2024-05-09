@@ -9,7 +9,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.march_wear_and_tear";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{周游世界对士兵们造成了一定的磨损。每当雇佣兵脱下靴子时，你都能看到血液透过他的袜子渗出来。他们积累了疮痛和疖子。一名士兵剥下他的脚趾肉，表示他后悔这样做，你点了点头。总的来说，这是长期在路上付出的代价。}",
@@ -133,7 +133,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Tailor.getImagePath());
-				_event.m.Tailor.improveMood(1.000000, "用布屑给自己做点好东西");
+				_event.m.Tailor.improveMood(1.0, "用布屑给自己做点好东西");
 
 				if (_event.m.Tailor.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -174,7 +174,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Vagabond.getImagePath());
-				_event.m.Vagabond.improveMood(1.000000, "在路上享受生活");
+				_event.m.Vagabond.improveMood(1.0, "在路上享受生活");
 
 				if (_event.m.Vagabond.getMoodState() >= this.Const.MoodState.Neutral)
 				{

@@ -18,13 +18,13 @@ this.named_orc_cleaver <- this.inherit("scripts/items/weapons/named/named_weapon
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 2400;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 52.000000;
-		this.m.ConditionMax = 52.000000;
+		this.m.Condition = 52.0;
+		this.m.ConditionMax = 52.0;
 		this.m.StaminaModifier = -18;
 		this.m.RegularDamage = 40;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 1.100000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.1;
+		this.m.DirectDamageMult = 0.25;
 		this.m.FatigueOnSkillUse = 5;
 		this.randomizeValues();
 	}

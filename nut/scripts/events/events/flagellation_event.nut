@@ -7,7 +7,7 @@ this.flagellation_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.flagellation";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%otherguy% 带着痛苦的表情走过来。 他手里拿着头盔，另一只手擦着额头。%SPEECH_ON%先生，呃，你应该过来看看这个。%SPEECH_OFF%你打听你要去看什么。%SPEECH_ON%我没有合适的词来形容它。 你最好亲眼来看看。%SPEECH_OFF%你低头看着你的工作－计划着未来几天的行程－但是，从这个队员脸上的表情来判断，这事可以缓一缓。",

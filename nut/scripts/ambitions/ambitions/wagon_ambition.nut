@@ -4,7 +4,7 @@ this.wagon_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.wagon";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = " 一辆小货车来搬运我们的东西很好，但是还不够好。\n让我们存够15000克朗来买一辆真正的载重货车！";
 		this.m.RewardTooltip = "你将解锁仓库中额外的27个空位。";
 		this.m.UIText = "拥有至少15000克朗";

@@ -4,7 +4,7 @@ this.desert_sand_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.desert_sand";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_161.png[/img]{沙漠对于入侵者可不友好。 就连你的装备都承受了这种自然的敌视：一些装备被沙子本身给侵蚀了。 要维护 %companyname%的装备会需要好好的清理和打磨一番。}",
@@ -31,28 +31,28 @@ this.desert_sand_event <- this.inherit("scripts/events/event", {
 
 					if (item != null && item.getCondition() > 1 && this.Math.rand(1, 100) <= 15)
 					{
-						item.setCondition(this.Math.max(1, item.getCondition() - item.getConditionMax() * this.Math.rand(10, 25) * 0.010000));
+						item.setCondition(this.Math.max(1, item.getCondition() - item.getConditionMax() * this.Math.rand(10, 25) * 0.01));
 					}
 
 					item = bro.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
 
 					if (item != null && item.getCondition() > 1 && this.Math.rand(1, 100) <= 15)
 					{
-						item.setCondition(this.Math.max(1, item.getCondition() - item.getConditionMax() * this.Math.rand(10, 25) * 0.010000));
+						item.setCondition(this.Math.max(1, item.getCondition() - item.getConditionMax() * this.Math.rand(10, 25) * 0.01));
 					}
 
 					item = bro.getItems().getItemAtSlot(this.Const.ItemSlot.Head);
 
 					if (item != null && item.getCondition() > 1 && this.Math.rand(1, 100) <= 15)
 					{
-						item.setCondition(this.Math.max(1, item.getCondition() - item.getConditionMax() * this.Math.rand(10, 25) * 0.010000));
+						item.setCondition(this.Math.max(1, item.getCondition() - item.getConditionMax() * this.Math.rand(10, 25) * 0.01));
 					}
 
 					item = bro.getItems().getItemAtSlot(this.Const.ItemSlot.Body);
 
 					if (item != null && item.getCondition() > 1 && this.Math.rand(1, 100) <= 15)
 					{
-						item.setCondition(this.Math.max(1, item.getCondition() - item.getConditionMax() * this.Math.rand(10, 25) * 0.010000));
+						item.setCondition(this.Math.max(1, item.getCondition() - item.getConditionMax() * this.Math.rand(10, 25) * 0.01));
 					}
 				}
 			}

@@ -49,9 +49,9 @@ this.swamp_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.MeleeDefenseMult *= 0.750000;
-		_properties.RangedDefenseMult *= 0.750000;
-		_properties.MeleeSkillMult *= 0.750000;
+		_properties.MeleeDefenseMult *= 0.75;
+		_properties.RangedDefenseMult *= 0.75;
+		_properties.MeleeSkillMult *= 0.75;
 	}
 
 });

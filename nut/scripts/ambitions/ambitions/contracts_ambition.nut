@@ -6,7 +6,7 @@ this.contracts_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.contracts";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们需要把自己打造成可信赖的雇佣兵团。\n让我们一次又一次地接受考验，毫无疑问地证明这一点！";
 		this.m.UIText = "完成更多合同";
 		this.m.TooltipText = "完成8份任何形式的合同，证明自己的可靠毋庸置疑。";

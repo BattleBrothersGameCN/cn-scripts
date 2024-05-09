@@ -14,7 +14,7 @@ this.meteorite_location <- this.inherit("scripts/entity/world/location", {
 		this.m.IsShowingBanner = true;
 		this.m.IsAttackable = false;
 		this.m.IsDestructible = false;
-		this.m.VisibilityMult = 0.800000;
+		this.m.VisibilityMult = 0.8;
 		this.m.Resources = 0;
 		this.m.OnEnter = "event.location.meteorite_enter";
 	}

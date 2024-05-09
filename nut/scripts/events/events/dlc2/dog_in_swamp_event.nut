@@ -8,7 +8,7 @@ this.dog_in_swamp_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.dog_in_swamp";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 90.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_09.png[/img]一声刺耳的尖叫声打破了沼泽地的寂静。你匆忙前去，发现一名男子在水中挣扎，他的手臂缠绕着葛藤。水中泡沫和气泡不断涌起，一只狗的口鼻短暂地出现，它在那一秒中尖叫着求救，而不是为任何稍纵即逝的生命延续而呼吸。看到你，那只狗的主人喊道。%SPEECH_ON%救救我的狗！有东西抓住了它！%SPEECH_OFF%",

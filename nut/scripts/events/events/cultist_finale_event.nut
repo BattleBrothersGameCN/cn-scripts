@@ -7,7 +7,7 @@ this.cultist_finale_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cultist_finale";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_33.png[/img]%cultist% 进入你帐篷，一阵强劲、凛冽的风紧随其后，刮起你的卷轴和其他文件。 他走上前，双手交叉在胸前，看起来相当虔诚地走近。%SPEECH_ON%先生，我被喻示了，而且是件我被赋予责任的大事。%SPEECH_OFF%你问他到底在说谁。 邪教徒虔诚的向前鞠躬只敢低声下气的说话。%SPEECH_ON%达库尔，先生。%SPEECH_OFF%唉，当然，还有谁？ 你让他解释一下他到底需要什么。这个人回答道。%SPEECH_ON%不，不是我，是达库尔。 达库尔是救世主-他需要鲜血和祭品。%SPEECH_OFF%你告诉那个人，如果事情如此重要，战团可以在下一个城镇停一下，买些鸡、羊或者他需要的任何东西。%cultist% 摇了摇头。%SPEECH_ON%某个淘气野兽的血？ 不，他要的是勇士的血。 他有真正的战斗精神，他相信我能找到一个如此重要的人－而我确实找到了。%SPEECH_OFF%邪教徒直起身子，帐篷里的烛光突然变幻无常。%SPEECH_ON%达库尔需要鲜血，需要牺牲 %sacrifice%。%SPEECH_OFF%",
@@ -113,7 +113,7 @@ this.cultist_finale_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist")
 					{
-						bro.improveMood(2.000000, "安抚了达库尔");
+						bro.improveMood(2.0, "安抚了达库尔");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -126,7 +126,7 @@ this.cultist_finale_event <- this.inherit("scripts/events/event", {
 					}
 					else
 					{
-						bro.worsenMood(3.000000, "被死亡吓坏了，死的是 " + _event.m.Sacrifice.getName());
+						bro.worsenMood(3.0, "被死亡吓坏了，死的是 " + _event.m.Sacrifice.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -166,7 +166,7 @@ this.cultist_finale_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist")
 					{
-						bro.worsenMood(2.000000, "被剥夺了安抚达库尔的机会");
+						bro.worsenMood(2.0, "被剥夺了安抚达库尔的机会");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

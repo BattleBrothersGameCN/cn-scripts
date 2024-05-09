@@ -6,7 +6,7 @@ this.defeat_beasts_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_beasts";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "野兽困扰着处于文明边缘的村庄。\n猎杀这些野兽赚钱正是我们该做的！";
 		this.m.UIText = "击败流浪兽群";
 		this.m.TooltipText = "在战斗中击败5群流浪野兽，如恐狼或食尸鬼，无论是作为合同的一部分，还是通过自己寻找。";

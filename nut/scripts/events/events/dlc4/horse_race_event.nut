@@ -10,7 +10,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.horse_race";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{你遇到了一个牵着一匹高瘦的马的缰绳的男人，那匹马的鬃毛污秽不堪，已经光彩不再。 那马有着灰白色的胡子，它干裂，布满了白色钙质层的嘴唇使劲抽动着想要喝点水。 看见了你，它的主人招了招手。%SPEECH_ON%来，来！我有个为那些足够勇敢、足够快，认为自己能够获胜的人的赌要打！%SPEECH_OFF%对此感到好奇，你问了他那个赌是什么。 男人轻轻拍了拍那匹马，一片尘土因为这一拍飞了起来，并且你能够看到，他留下了一个掌印在马的肩膀上。%SPEECH_ON%和我的马赛跑！不是用别的马，忘了它吧，是用你人类的腿！ 如果你输了，你就给我 %reward% 克朗。 如果你赢了，我给你双倍。 你准备好了吗？%SPEECH_OFF%}",
@@ -112,7 +112,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 40)
 					{
-						bro.improveMood(1.000000, "感到愉快来自 " + _event.m.Other.getName() + "骑马比赛");
+						bro.improveMood(1.0, "感到愉快来自 " + _event.m.Other.getName() + "骑马比赛");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -170,7 +170,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(1.000000, "感到愉快来自 " + _event.m.Athletic.getName() + "骑马比赛");
+						bro.improveMood(1.0, "感到愉快来自 " + _event.m.Athletic.getName() + "骑马比赛");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -228,7 +228,7 @@ this.horse_race_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(1.000000, "感到愉快来自 " + _event.m.Fat.getName() + "骑马比赛");
+						bro.improveMood(1.0, "感到愉快来自 " + _event.m.Fat.getName() + "骑马比赛");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

@@ -7,7 +7,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_deserter";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_02.png[/img]{你在路上遇到两个 %noblehouse%的士兵，他们正在架设什么，那个东西似乎是他们自己的。 那人的头被套在绞索里，但一看见你，他就大声喊叫。%SPEECH_ON%他们想让我杀孩子！ 这就是我不服从命令的下场？%SPEECH_OFF%%randombrother% 带着也许我们能做点什么的表情看着你。 | 你发现两个 %noblehouse%的人把一个蒙着眼睛的人绑起来。 出于好奇，你问他犯了什么罪。 其中一个行刑者笑了。%SPEECH_ON%他被命令烧毁一个小村庄，但他拒绝了。 你不能拒绝贵族，不然就得被处死。%SPEECH_OFF%被蒙住眼睛的人吐了口唾沫。%SPEECH_ON%你们见鬼去吧。 至少我会一直保持我的尊严与荣誉。%SPEECH_OFF% | 在小路的一边，你看到一个男人把一根绳子吊在一根树枝上。 第二个人把一个被蒙住眼睛的囚犯往前推，把绞索套在他的脖子上。 行刑者看到你，举起手来。%SPEECH_ON%退后，佣兵们。 这个人将在 %noblehouse% 的命令下被处死。如果你干涉，你也会被以同样的方式对待。%SPEECH_OFF%囚犯大叫起来。%SPEECH_ON%他们想让我谋杀妇女和儿童。 这是我无视这些命令所付出的代价，但至少我会带着完整的荣誉离开这个可怕的世界。%SPEECH_OFF% | 小路通向一个戴着镣铐的男人，他坐在草地上，两个男人愤怒地在树枝上系着绳子。 他们试了几次，然后点了点头，放了一个桶在下面，大概是让囚犯站在上面。 囚犯看到你后喊道。%SPEECH_ON%佣兵们，救救我！我所做的一切就是拒绝把一座神殿夷为平地！%SPEECH_OFF%一个行刑者踢了他一脚。%SPEECH_ON%那神殿是叛军的住所，叛军杀死了我们的军官，你这个傻瓜！ 你比任何人都更应该被这样处死。 如果 %noblehouse% 想要赢得这场战争，我们就不能有你们这样的老鼠在我们中间。%SPEECH_OFF%}",
@@ -165,7 +165,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.deserter")
 					{
-						bro.worsenMood(0.750000, "你没有帮助一个逃跑的军官");
+						bro.worsenMood(0.75, "你没有帮助一个逃跑的军官");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -196,7 +196,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

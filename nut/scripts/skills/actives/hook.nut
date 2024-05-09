@@ -107,7 +107,7 @@ this.hook <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInPolearms ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInPolearms ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 		this.m.ActionPointCost = _properties.IsSpecializedInPolearms ? 5 : 6;
 	}
 
@@ -206,7 +206,7 @@ this.hook <- this.inherit("scripts/skills/skill", {
 		{
 			tag.HitInfo.DamageRegular = damage;
 			tag.HitInfo.DamageFatigue = this.Const.Combat.FatigueReceivedPerHit;
-			tag.HitInfo.DamageDirect = 1.000000;
+			tag.HitInfo.DamageDirect = 1.0;
 			tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
 			this.Tactical.getNavigator().teleport(_targetTile.getEntity(), pullToTile, this.onPulledDown, tag, true);
 		}

@@ -4,7 +4,7 @@ this.traveler_north_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.traveler_north";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{你在冰窟旁边遇见一个人。 他身旁有一根钓竿，尽管环境恶劣，他对你还是很热情。%SPEECH_ON%想聊聊吗，旅行者？ 你看起来不像本地人。%SPEECH_OFF% | 一个披着熊皮的人正在凿冰。 他凿的冰块掉恶狠狠地掉在水面上，就像他看你的眼神一样。%SPEECH_ON%来吧，别紧张聊一会。我没恶意。%SPEECH_OFF%}",
@@ -69,7 +69,7 @@ this.traveler_north_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.800000)
+		if (currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.8)
 		{
 			return;
 		}

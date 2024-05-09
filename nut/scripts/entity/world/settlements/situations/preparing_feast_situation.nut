@@ -32,8 +32,8 @@ this.preparing_feast_situation <- this.inherit("scripts/entity/world/settlements
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.FoodRarityMult *= 0.250000;
-		_modifiers.FoodPriceMult *= 2.000000;
+		_modifiers.FoodRarityMult *= 0.25;
+		_modifiers.FoodPriceMult *= 2.0;
 	}
 
 });

@@ -93,7 +93,7 @@ this.hex_master_effect <- this.inherit("scripts/skills/skill", {
 		}
 		else
 		{
-			_properties.TargetAttractionMult *= 0.500000;
+			_properties.TargetAttractionMult *= 0.5;
 			local actor = this.getContainer().getActor();
 			actor.getSprite("status_hex").setBrush("bust_hex_sw");
 			actor.getSprite("status_hex").Color = this.m.Color;

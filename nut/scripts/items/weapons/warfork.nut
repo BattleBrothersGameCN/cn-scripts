@@ -18,16 +18,16 @@ this.warfork <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_warfork_01";
 		this.m.Value = 400;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 50.000000;
-		this.m.ConditionMax = 50.000000;
+		this.m.Condition = 50.0;
+		this.m.ConditionMax = 50.0;
 		this.m.StaminaModifier = -10;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 40;
 		this.m.RegularDamageMax = 60;
-		this.m.ArmorDamageMult = 1.000000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.0;
+		this.m.DirectDamageMult = 0.25;
 		this.m.ChanceToHitHead = 5;
 	}
 

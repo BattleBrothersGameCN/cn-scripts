@@ -89,11 +89,11 @@ this.lone_wolf_effect <- this.inherit("scripts/skills/skill", {
 		if (isAlone)
 		{
 			this.m.IsHidden = false;
-			_properties.MeleeSkillMult *= 1.150000;
-			_properties.RangedSkillMult *= 1.150000;
-			_properties.MeleeDefenseMult *= 1.150000;
-			_properties.RangedDefenseMult *= 1.150000;
-			_properties.BraveryMult *= 1.150000;
+			_properties.MeleeSkillMult *= 1.15;
+			_properties.RangedSkillMult *= 1.15;
+			_properties.MeleeDefenseMult *= 1.15;
+			_properties.RangedDefenseMult *= 1.15;
+			_properties.BraveryMult *= 1.15;
 		}
 		else
 		{

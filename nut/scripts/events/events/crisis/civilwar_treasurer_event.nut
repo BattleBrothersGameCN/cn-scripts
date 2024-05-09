@@ -6,7 +6,7 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_treasurer";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_72.png[/img]当你在行军时，你发现一个农夫正被一个看上去很富裕的人搭讪。 看到你，农夫很快叫了起来。%SPEECH_ON%先生，帮帮我！这位司库要拿走我的庄稼！%SPEECH_OFF%司库理所当然的点了点头。%SPEECH_ON%没错。我是 %noblehouse% 派来为军队收集粮食的。 这是我们的土地，也是我们的庄稼。%SPEECH_OFF%战争的折磨越来越严重... %randombrother% 问你想做什么。",
@@ -79,7 +79,7 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.farmhand" && this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.250000, "你帮助了一个处境危险的农夫");
+						bro.improveMood(0.25, "你帮助了一个处境危险的农夫");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -170,7 +170,7 @@ this.civilwar_treasurer_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

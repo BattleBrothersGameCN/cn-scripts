@@ -33,7 +33,7 @@ this.uproot_small_zoc_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsTargetingActor = false;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -62,7 +62,7 @@ this.uproot_small_zoc_skill <- this.inherit("scripts/skills/skill", {
 
 		for( local i = 0; i < this.Const.Tactical.DustParticles.len(); i = ++i )
 		{
-			this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, _targetTile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.500000, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.500000, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages, this.createVec(0, -30));
+			this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, _targetTile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.5, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.5, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages, this.createVec(0, -30));
 		}
 
 		if (_targetTile.IsOccupiedByActor && _targetTile.getEntity().isAttackable() && !(_targetTile.getEntity().getType() == this.Const.EntityType.Schrat || _targetTile.getEntity().getType() == this.Const.EntityType.SchratSmall))
@@ -70,7 +70,7 @@ this.uproot_small_zoc_skill <- this.inherit("scripts/skills/skill", {
 			if (_targetTile.getEntity().m.IsShakingOnHit)
 			{
 				this.Tactical.getShaker().shake(_targetTile.getEntity(), _targetTile, 7);
-				_user.playSound(this.Const.Sound.ActorEvent.Move, 2.000000);
+				_user.playSound(this.Const.Sound.ActorEvent.Move, 2.0);
 			}
 
 			ret = this.attackEntity(_user, _targetTile.getEntity());

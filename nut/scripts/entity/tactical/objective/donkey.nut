@@ -31,7 +31,7 @@ this.donkey <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/misc/donkey_idle_07.wav",
 			"sounds/misc/donkey_idle_08.wav"
 		];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 0.350000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 0.35;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/donkey_agent");
 		this.m.AIAgent.setActor(this);
 	}
@@ -61,7 +61,7 @@ this.donkey <- this.inherit("scripts/entity/tactical/actor", {
 			local corpse = clone this.Const.Corpse;
 			corpse.CorpseName = "一头驴子";
 			corpse.Tile = _tile;
-			corpse.Value = 1.000000;
+			corpse.Value = 1.0;
 			corpse.IsResurrectable = false;
 			corpse.IsConsumable = true;
 			corpse.IsHeadAttached = true;
@@ -104,7 +104,7 @@ this.donkey <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsAffectedByInjuries = false;
 		b.IsAffectedByNight = false;
 		b.IsMovable = false;
-		b.TargetAttractionMult = 1.100000;
+		b.TargetAttractionMult = 1.1;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;
@@ -112,8 +112,8 @@ this.donkey <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
 		local body = this.addSprite("body");
 		body.setBrush("donkey_tactical");
-		body.varySaturation(0.400000);
-		body.varyColor(0.035000, 0.035000, 0.035000);
+		body.varySaturation(0.4);
+		body.varyColor(0.035, 0.035, 0.035);
 		local injury = this.addSprite("injury");
 		injury.Visible = false;
 		injury.setBrush("donkey_tactical_injured");

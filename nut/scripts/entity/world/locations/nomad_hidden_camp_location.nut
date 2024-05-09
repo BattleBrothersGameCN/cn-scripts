@@ -18,7 +18,7 @@ this.nomad_hidden_camp_location <- this.inherit("scripts/entity/world/location",
 		this.m.IsDespawningDefenders = false;
 		this.setDefenderSpawnList(this.Const.World.Spawn.NomadDefenders);
 		this.m.Resources = 180;
-		this.m.VisibilityMult = 0.800000;
+		this.m.VisibilityMult = 0.8;
 		this.m.NamedShieldsList = this.Const.Items.NamedSouthernShields;
 	}
 

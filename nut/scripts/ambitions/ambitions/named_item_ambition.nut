@@ -4,7 +4,7 @@ this.named_item_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.named_item";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "一家受人尊敬的战团会因其装备而得到认可。 我们应该出发去\n获取一件著名的武器、盾牌、盔甲或头盔，以提高我们的名望。";
 		this.m.RewardTooltip = "为你的胜利获得额外的150名望。";
 		this.m.UIText = "拥有至少 1 件著名的装备";

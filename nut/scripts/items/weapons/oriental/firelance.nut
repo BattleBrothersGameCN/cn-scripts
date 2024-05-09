@@ -24,13 +24,13 @@ this.firelance <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.RangeMax = 1;
 		this.m.RangeIdeal = 1;
 		this.m.RangeMaxBonus = 0;
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.StaminaModifier = -12;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 1.100000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.1;
+		this.m.DirectDamageMult = 0.25;
 		this.m.ShieldDamage = 0;
 		this.m.ChanceToHitHead = 0;
 	}

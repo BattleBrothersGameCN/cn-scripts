@@ -18,10 +18,10 @@ this.raze_attached_location_contract <- this.inherit("scripts/contracts/contract
 	function create()
 	{
 		this.contract.create();
-		this.m.DifficultyMult = 0.850000;
+		this.m.DifficultyMult = 0.85;
 		this.m.Type = "contract.raze_attached_location";
 		this.m.Name = "夷平地点";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		local s = this.World.EntityManager.getSettlements()[this.Math.rand(0, this.World.EntityManager.getSettlements().len() - 1)];
 		this.m.Destination = this.WeakTableRef(s.getAttachedLocations()[this.Math.rand(0, s.getAttachedLocations().len() - 1)]);
 		this.m.Flags.set("PeasantsEscaped", 0);
@@ -39,12 +39,12 @@ this.raze_attached_location_contract <- this.inherit("scripts/contracts/contract
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -74,7 +74,7 @@ this.raze_attached_location_contract <- this.inherit("scripts/contracts/contract
 			{
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 
 				if (this.World.FactionManager.getFaction(this.Contract.getFaction()).getFlags().get("Betrayed") && this.Math.rand(1, 100) <= 75)
 				{

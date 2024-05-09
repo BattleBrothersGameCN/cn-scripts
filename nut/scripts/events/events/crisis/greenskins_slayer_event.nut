@@ -6,7 +6,7 @@ this.greenskins_slayer_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.greenskins_slayer";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_35.png[/img]在行军途中，%companyname% 偶遇一个人。他全副武装，看上去相当有骑士风范，除了一个特征：脖子上挂着一条骨头项链。 每走一步，它就以病态又空虚地弄响着他的盔甲。 你小心地对待这个陌生人和他的骨骼装饰，以免他用你的鸡鸡做皮带，用你的胸脯做盘子…%SPEECH_ON%晚上好，佣兵。%SPEECH_OFF%这个战士挥挥手。对这个人来说，有一种看不见的重量，就好像被死亡之气或者受害者的灵魂包围着。 他点头，继续说。%SPEECH_ON%你似乎是那种细皮嫩肉的人，我最愿意加入这种人。%SPEECH_OFF%%randombrother% 与你交换了一个眼神，耸耸肩。 他低声说他漠不关心。%SPEECH_ON%如果他有问题，我们可以对付他。%SPEECH_OFF%The man shakes his head.%SPEECH_ON%噢，我没有问题。 我只想杀死兽人和地精。 你还需要知道什么？ 一旦这些绿皮被处理好了，我就离开你了。%SPEECH_OFF%",

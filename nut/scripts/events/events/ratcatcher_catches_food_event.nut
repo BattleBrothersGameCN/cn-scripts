@@ -6,7 +6,7 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.ratcatcher_catches_food";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img] 随着口粮消耗殆尽，%ratcatcher% 小心地走进了你的帐篷，几声饥饿的人们发出的呻吟在帐篷的屏风关上前传进屋里。 他说他有个解决当前食物不足问题的办法。 你都不想去问那办法是什么，但现在你别无选择。 捕鼠者把一个麻袋甩到桌子上。 袋子的有些地方还在来回颤动，里头传出尖锐的叫声。 他狠狠地往袋子上砸了几拳，然后陪着笑看向你。%SPEECH_ON%不好意思，里头还有个活的！%SPEECH_OFF%老鼠肉在动物肉里算不上有营养，而且也不健康，但至少它们能让战团的人在抵达下一个城镇或农庄前不至于饿死。 你不情不愿的接受了这个让你的手下免于挨饿的提案。",
@@ -47,8 +47,8 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getBackground().isNoble())
 					{
-						bro.worsenMood(1.000000, "对你的领导能力失去了信心");
-						bro.worsenMood(2.000000, "拿老鼠肉当饭吃");
+						bro.worsenMood(1.0, "对你的领导能力失去了信心");
+						bro.worsenMood(2.0, "拿老鼠肉当饭吃");
 						this.List.push({
 							id = 10,
 							icon = this.Const.MoodStateIcon[bro.getMoodState()],
@@ -61,7 +61,7 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 
 						if (r == 1 && !bro.getBackground().isLowborn())
 						{
-							bro.worsenMood(1.000000, "拿老鼠肉当饭吃");
+							bro.worsenMood(1.0, "拿老鼠肉当饭吃");
 
 							if (bro.getMoodState() < this.Const.MoodState.Neutral)
 							{

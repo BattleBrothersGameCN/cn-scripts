@@ -20,13 +20,13 @@ this.nomad_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_nomad_mace_01";
 		this.m.Value = 100;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.StaminaModifier = -8;
 		this.m.RegularDamage = 25;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 0.900000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 0.9;
+		this.m.DirectDamageMult = 0.4;
 	}
 
 	function onEquip()

@@ -39,12 +39,12 @@ this.plantation_location <- this.inherit("scripts/entity/world/attached_location
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "trade/spices_item"
 			});
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/dates_item"
 			});
 		}

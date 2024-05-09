@@ -26,10 +26,10 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 		HousesMax = 0,
 		HousesType = 1,
 		HousesTiles = [],
-		LastPreload = 0.000000,
+		LastPreload = 0.0,
 		PreloadState = 0,
-		LastShopUpdate = 0.000000,
-		LastRosterUpdate = 0.000000,
+		LastShopUpdate = 0.0,
+		LastRosterUpdate = 0.0,
 		ShopSeed = 0,
 		RosterSeed = 0,
 		Owner = null,
@@ -666,15 +666,15 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 
 		if (this.m.Size <= 1)
 		{
-			p = 0.950000 + this.getActiveAttachedLocations().len() * 0.030000;
+			p = 0.95 + this.getActiveAttachedLocations().len() * 0.03;
 		}
 		else if (this.m.Size == 2)
 		{
-			p = 1.020000 + this.getActiveAttachedLocations().len() * 0.030000;
+			p = 1.02 + this.getActiveAttachedLocations().len() * 0.03;
 		}
 		else if (this.m.Size == 3)
 		{
-			p = 1.100000 + this.getActiveAttachedLocations().len() * 0.030000;
+			p = 1.1 + this.getActiveAttachedLocations().len() * 0.03;
 		}
 
 		return p * this.m.Modifiers.PriceMult;
@@ -687,11 +687,11 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 
 		if (r < 50)
 		{
-			p = p + (50.000000 - r) * 0.006000;
+			p = p + (50.0 - r) * 0.006;
 		}
 		else if (r > 50)
 		{
-			p = p - (r - 50.000000) * 0.003000;
+			p = p - (r - 50.0) * 0.003;
 		}
 
 		p = p * this.m.Modifiers.BuyPriceMult;
@@ -705,11 +705,11 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 
 		if (r < 50)
 		{
-			p = p - (50.000000 - r) * 0.006000;
+			p = p - (50.0 - r) * 0.006;
 		}
 		else if (r > 50)
 		{
-			p = p + (r - 50.000000) * 0.003000;
+			p = p + (r - 50.0) * 0.003;
 		}
 
 		p = p * this.m.Modifiers.SellPriceMult;
@@ -744,7 +744,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 		this.m.IsShowingStrength = false;
 		this.m.IsScalingDefenders = false;
 		this.m.IsShowingLabel = true;
-		this.m.VisibilityMult = 2.000000;
+		this.m.VisibilityMult = 2.0;
 		this.m.Buildings.resize(6, null);
 	}
 
@@ -1270,7 +1270,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 				c[i].clear();
 				c[i].IsOccupied = true;
 				local d = c[i].spawnDetail("world_houses_0" + this.m.HousesType + "_0" + v, this.Const.World.ZLevel.Object - 3, this.Const.World.DetailType.Houses);
-				d.Scale = 0.850000;
+				d.Scale = 0.85;
 				c.remove(i);
 			}
 		}
@@ -1336,11 +1336,11 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 	{
 		if (_soft)
 		{
-			this.m.LastRosterUpdate = this.Time.getVirtualTimeF() - 10.000000 * this.World.getTime().SecondsPerDay;
+			this.m.LastRosterUpdate = this.Time.getVirtualTimeF() - 10.0 * this.World.getTime().SecondsPerDay;
 		}
 		else
 		{
-			this.m.LastRosterUpdate = -9000.000000;
+			this.m.LastRosterUpdate = -9000.0;
 		}
 	}
 
@@ -1384,8 +1384,8 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 
 		if (this.World.FactionManager.getFaction(this.m.Factions[0]).getPlayerRelation() < 50)
 		{
-			rosterMin = rosterMin * (this.World.FactionManager.getFaction(this.m.Factions[0]).getPlayerRelation() / 50.000000);
-			rosterMax = rosterMax * (this.World.FactionManager.getFaction(this.m.Factions[0]).getPlayerRelation() / 50.000000);
+			rosterMin = rosterMin * (this.World.FactionManager.getFaction(this.m.Factions[0]).getPlayerRelation() / 50.0);
+			rosterMax = rosterMax * (this.World.FactionManager.getFaction(this.m.Factions[0]).getPlayerRelation() / 50.0);
 		}
 
 		rosterMin = rosterMin * this.m.Modifiers.RecruitsMult;
@@ -1480,7 +1480,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 
 	function resetShop()
 	{
-		this.m.LastShopUpdate = -9000.000000;
+		this.m.LastShopUpdate = -9000.0;
 	}
 
 	function updateShop( _force = false )
@@ -1713,7 +1713,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 				local tile = this.World.getTileSquare(h.X, h.Y);
 				tile.clear(this.Const.World.DetailType.Houses);
 				local d = tile.spawnDetail("world_houses_0" + this.m.HousesType + "_0" + h.V, this.Const.World.ZLevel.Object - 3, this.Const.World.DetailType.Houses);
-				d.Scale = 0.850000;
+				d.Scale = 0.85;
 			}
 		}
 		else
@@ -1734,7 +1734,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 				local tile = this.World.getTileSquare(h.X, h.Y);
 				tile.clear(this.Const.World.DetailType.Houses | this.Const.World.DetailType.Lighting);
 				local d = tile.spawnDetail("world_houses_0" + this.m.HousesType + "_0" + h.V + "_ruins", this.Const.World.ZLevel.Object - 3, this.Const.World.DetailType.Houses);
-				d.Scale = 0.850000;
+				d.Scale = 0.85;
 				this.spawnFireAndSmoke(tile.Pos);
 			}
 
@@ -1787,7 +1787,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 					local tile = this.World.getTileSquare(h.X, h.Y);
 					local d = tile.spawnDetail("world_houses_0" + this.m.HousesType + "_0" + h.V + "_light", this.Const.World.ZLevel.Object - 4, this.Const.World.DetailType.Lighting, false, insideScreen);
 					d.IgnoreAmbientColor = true;
-					d.Scale = 0.850000;
+					d.Scale = 0.85;
 				}
 			}
 			else if (lighting.Alpha != 0 && this.World.getTime().TimeOfDay >= 0 && this.World.getTime().TimeOfDay <= 3)
@@ -1866,7 +1866,7 @@ this.settlement <- this.inherit("scripts/entity/world/location", {
 
 	function onRaided()
 	{
-		if (this.m.LastSmokeSpawned + 90.000000 < this.Time.getVirtualTimeF())
+		if (this.m.LastSmokeSpawned + 90.0 < this.Time.getVirtualTimeF())
 		{
 			this.m.LastSmokeSpawned = this.Time.getVirtualTimeF();
 

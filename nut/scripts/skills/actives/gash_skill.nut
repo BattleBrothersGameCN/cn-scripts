@@ -37,7 +37,7 @@ this.gash_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
 		this.m.HitChanceBonus = 10;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.DirectDamageMult = 0.2;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 20;
 		this.m.MinRange = 1;
@@ -91,7 +91,7 @@ this.gash_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInSwords ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInSwords ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -106,11 +106,11 @@ this.gash_skill <- this.inherit("scripts/skills/skill", {
 		{
 			if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInSwords)
 			{
-				_hitInfo.InjuryThresholdMult *= 0.500000;
+				_hitInfo.InjuryThresholdMult *= 0.5;
 			}
 			else
 			{
-				_hitInfo.InjuryThresholdMult *= 0.660000;
+				_hitInfo.InjuryThresholdMult *= 0.66;
 			}
 
 			if (_targetEntity.isAlive() && !_targetEntity.getCurrentProperties().IsImmuneToBleeding)

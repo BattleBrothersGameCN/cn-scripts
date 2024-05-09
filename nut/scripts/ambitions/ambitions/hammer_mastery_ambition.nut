@@ -4,7 +4,7 @@ this.hammer_mastery_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.hammer_mastery";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们战团没有做好与装甲对手作战的准备。\n我们得训练俩人精通战锤来战斗，没有骑士能逃出我们的魔掌。";
 		this.m.UIText = "培训掌握锤精通特技的成员";
 		this.m.TooltipText = "拥有 2 个掌握锤精通特技的人。";

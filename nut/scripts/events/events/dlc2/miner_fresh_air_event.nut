@@ -6,7 +6,7 @@ this.miner_fresh_air_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.miner_fresh_air";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{%miner%矿工深吸口气，然后长长地呼出，虽然有些喘气。他满意地点点头，好像满足了一些每个人都做的事情。看来有些人很容易满足。但他解释了一下。%SPEECH_ON%你知道我在矿井里度过了几年，呼吸着尘土和金属。我认为待在表面这么久已经是一种幸运，一种我不知道存在的宝藏。谢谢，队长，因为如果不是你，我现在不会在这里。%SPEECH_OFF%你点了点头，感谢他的好话。}",
@@ -26,7 +26,7 @@ this.miner_fresh_air_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Miner.getImagePath());
-				_event.m.Miner.improveMood(1.000000, "很高兴有新的生活");
+				_event.m.Miner.improveMood(1.0, "很高兴有新的生活");
 
 				if (_event.m.Miner.getMoodState() >= this.Const.MoodState.Neutral)
 				{

@@ -16,13 +16,13 @@ this.rondel_dagger <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_dagger_02";
-		this.m.Condition = 50.000000;
-		this.m.ConditionMax = 50.000000;
+		this.m.Condition = 50.0;
+		this.m.ConditionMax = 50.0;
 		this.m.Value = 400;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 0.700000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.7;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function onEquip()

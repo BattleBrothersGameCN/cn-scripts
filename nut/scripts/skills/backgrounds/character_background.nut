@@ -2,7 +2,7 @@ this.character_background <- this.inherit("scripts/skills/skill", {
 	m = {
 		HiringCost = 0,
 		DailyCost = 0,
-		DailyCostMult = 1.000000,
+		DailyCostMult = 1.0,
 		Excluded = [],
 		ExcludedTalents = [],
 		Faces = null,
@@ -87,7 +87,7 @@ this.character_background <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.Type = this.Const.SkillType.Background | this.Const.SkillType.Trait;
 		this.m.Order = this.Const.SkillOrder.Background;
-		this.m.DailyCostMult = this.Math.rand(90, 110) * 0.010000;
+		this.m.DailyCostMult = this.Math.rand(90, 110) * 0.01;
 	}
 
 	function isHidden()
@@ -298,25 +298,25 @@ this.character_background <- this.inherit("scripts/skills/skill", {
 		{
 			local level = this.getContainer().getActor().getLevel();
 			local wage = this.Math.round(this.m.DailyCost * this.m.DailyCostMult);
-			_properties.DailyWage += wage * this.Math.pow(1.100000, this.Math.min(10, level - 1));
+			_properties.DailyWage += wage * this.Math.pow(1.1, this.Math.min(10, level - 1));
 
 			if (level > 11)
 			{
-				local previous = wage * this.Math.pow(1.100000, 10);
-				_properties.DailyWage += previous * this.Math.pow(1.030000, level - 1 - 10) - previous;
+				local previous = wage * this.Math.pow(1.1, 10);
+				_properties.DailyWage += previous * this.Math.pow(1.03, level - 1 - 10) - previous;
 			}
 		}
 
 		if (("State" in this.World) && this.World.State != null && this.World.Assets.getOrigin() != null && this.World.Assets.getOrigin().getID() == "scenario.manhunters" && this.getID() != "background.slave")
 		{
-			_properties.XPGainMult *= 0.900000;
+			_properties.XPGainMult *= 0.9;
 		}
 	}
 
 	function adjustHiringCostBasedOnEquipment()
 	{
 		local actor = this.getContainer().getActor();
-		actor.m.HiringCost = this.Math.floor(this.m.HiringCost + 500 * this.Math.pow(this.m.Level - 1, 1.500000));
+		actor.m.HiringCost = this.Math.floor(this.m.HiringCost + 500 * this.Math.pow(this.m.Level - 1, 1.5));
 		local items = actor.getItems().getAllItems();
 		local cost = 0;
 
@@ -325,9 +325,9 @@ this.character_background <- this.inherit("scripts/skills/skill", {
 			cost = cost + i.getValue();
 		}
 
-		cost = cost * 1.250000;
+		cost = cost * 1.25;
 		actor.m.HiringCost = actor.m.HiringCost + cost;
-		actor.m.HiringCost *= 0.100000;
+		actor.m.HiringCost *= 0.1;
 		actor.m.HiringCost = this.Math.ceil(actor.m.HiringCost);
 		actor.m.HiringCost *= 10;
 	}
@@ -347,8 +347,8 @@ this.character_background <- this.inherit("scripts/skills/skill", {
 			local sprite = actor.getSprite("head");
 			sprite.setBrush(this.m.Faces[this.Math.rand(0, this.m.Faces.len() - 1)]);
 			sprite.Color = this.createColor("#fbffff");
-			sprite.varyColor(0.050000, 0.050000, 0.050000);
-			sprite.varySaturation(0.100000);
+			sprite.varyColor(0.05, 0.05, 0.05);
+			sprite.varySaturation(0.1);
 			local body = actor.getSprite("body");
 			body.Color = sprite.Color;
 			body.Saturation = sprite.Saturation;
@@ -361,11 +361,11 @@ this.character_background <- this.inherit("scripts/skills/skill", {
 
 			if (hairColor != "grey")
 			{
-				sprite.varyColor(0.100000, 0.100000, 0.100000);
+				sprite.varyColor(0.1, 0.1, 0.1);
 			}
 			else
 			{
-				sprite.varyBrightness(0.100000);
+				sprite.varyBrightness(0.1);
 			}
 		}
 
@@ -386,8 +386,8 @@ this.character_background <- this.inherit("scripts/skills/skill", {
 		if (this.m.Ethnicity == 1 && hairColor != "grey")
 		{
 			local hair = actor.getSprite("hair");
-			hair.Saturation = 0.800000;
-			hair.setBrightness(0.400000);
+			hair.Saturation = 0.8;
+			hair.setBrightness(0.4);
 			local beard = actor.getSprite("beard");
 			beard.Color = hair.Color;
 			beard.Saturation = hair.Saturation;
@@ -516,7 +516,7 @@ this.character_background <- this.inherit("scripts/skills/skill", {
 		}
 		else
 		{
-			this.m.DailyCostMult = 1.000000;
+			this.m.DailyCostMult = 1.0;
 		}
 	}
 

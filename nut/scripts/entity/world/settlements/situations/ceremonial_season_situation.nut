@@ -31,7 +31,7 @@ this.ceremonial_season_situation <- this.inherit("scripts/entity/world/settlemen
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.IncensePriceMult *= 1.500000;
+		_modifiers.IncensePriceMult *= 1.5;
 	}
 
 });

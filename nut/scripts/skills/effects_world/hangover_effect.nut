@@ -77,12 +77,12 @@ this.hangover_effect <- this.inherit("scripts/skills/injury/injury", {
 	function onUpdate( _properties )
 	{
 		this.injury.onUpdate(_properties);
-		_properties.BraveryMult *= 0.900000;
-		_properties.MeleeSkillMult *= 0.900000;
-		_properties.RangedSkillMult *= 0.900000;
-		_properties.MeleeDefenseMult *= 0.900000;
-		_properties.RangedDefenseMult *= 0.900000;
-		_properties.InitiativeMult *= 0.900000;
+		_properties.BraveryMult *= 0.9;
+		_properties.MeleeSkillMult *= 0.9;
+		_properties.RangedSkillMult *= 0.9;
+		_properties.MeleeDefenseMult *= 0.9;
+		_properties.RangedDefenseMult *= 0.9;
+		_properties.InitiativeMult *= 0.9;
 	}
 
 });

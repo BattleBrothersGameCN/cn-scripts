@@ -6,7 +6,7 @@ this.ratcatcher_spreads_disease_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.ratcatcher_spreads_disease";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 90.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_18.png[/img]%ratcatcher% 证明了他和他以前的职业名副其实：很显然他在跟着你的战团东奔西走的时候也在一直围捕老鼠。 而今晚，它们全都逃走了。 有些食物在事后不得不被扔掉，还有一些人生病了。",

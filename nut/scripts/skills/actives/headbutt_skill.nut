@@ -45,7 +45,7 @@ this.headbutt_skill <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		this.m.DirectDamageMult = 0.500000;
+		this.m.DirectDamageMult = 0.5;
 	}
 
 	function onUse( _user, _targetTile )

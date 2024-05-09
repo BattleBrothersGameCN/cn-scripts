@@ -4,7 +4,7 @@ this.ancient_watchtower_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.location.ancient_watchtower";
 		this.m.Title = "当你接近时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
@@ -17,7 +17,7 @@ this.ancient_watchtower_event <- this.inherit("scripts/events/event", {
 					Text = "好吧, 至少我们有一块土地。",
 					function getResult( _event )
 					{
-						this.World.uncoverFogOfWar(this.World.State.getPlayer().getPos(), 1900.000000);
+						this.World.uncoverFogOfWar(this.World.State.getPlayer().getPos(), 1900.0);
 						return 0;
 					}
 

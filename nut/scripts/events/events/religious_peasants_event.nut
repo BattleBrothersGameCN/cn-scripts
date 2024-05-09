@@ -6,7 +6,7 @@ this.religious_peasants_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.religious_peasants";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 200.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_59.png[/img]森林一直以来都是人类的天然避难所－生于荒野之人，亦渴望还于荒野。 就像这会儿你们发现的一大堆人，一个失魂者组成的部落，对与他们渐行渐远的文明毫不关心，打起宗教的旗号，胸怀崇高的信仰，手执真理的圣典。 他们看上去穷得几乎到了行为艺术的境界，活像一群打算融入底层平民的伟大国王。 你就坐在那看着他们失魂落魄，摇摇晃晃，沙沙作响地走过，中空的木珠发出咔嚓咔嚓的声音，他们低声呢喃，声音沙哑而刺耳。 他们就这么继续走下去，都懒得抬眼看你们一眼。",
@@ -123,7 +123,7 @@ this.religious_peasants_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getSkills().hasSkill("trait.superstitious") || this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(0.500000, "目睹了可怕的诅咒");
+						bro.worsenMood(0.5, "目睹了可怕的诅咒");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -164,7 +164,7 @@ this.religious_peasants_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/special.png",
 					text = "战团获得了名望"
 				});
-				_event.m.Monk.improveMood(1.000000, "帮助宣传了战团");
+				_event.m.Monk.improveMood(1.0, "帮助宣传了战团");
 
 				if (_event.m.Monk.getMoodState() >= this.Const.MoodState.Neutral)
 				{

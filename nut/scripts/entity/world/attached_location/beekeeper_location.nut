@@ -19,8 +19,8 @@ this.beekeeper_location <- this.inherit("scripts/entity/world/attached_location"
 			r = [
 				{
 					File = "ambience/settlement/bee_keeper_00.wav",
-					Volume = 1.100000,
-					Pitch = 1.000000
+					Volume = 1.1,
+					Pitch = 1.0
 				}
 			];
 
@@ -55,17 +55,17 @@ this.beekeeper_location <- this.inherit("scripts/entity/world/attached_location"
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/mead_item"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/cultist_hood"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/apron"
 			});
 		}
@@ -74,7 +74,7 @@ this.beekeeper_location <- this.inherit("scripts/entity/world/attached_location"
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 	}
 
 });

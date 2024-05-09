@@ -20,13 +20,13 @@ this.goblin_staff <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_goblin_weapon_06";
 		this.m.Value = 1000;
-		this.m.Condition = 56.000000;
-		this.m.ConditionMax = 56.000000;
+		this.m.Condition = 56.0;
+		this.m.ConditionMax = 56.0;
 		this.m.StaminaModifier = -4;
 		this.m.RegularDamage = 25;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 0.700000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 0.7;
+		this.m.DirectDamageMult = 0.4;
 	}
 
 	function onEquip()

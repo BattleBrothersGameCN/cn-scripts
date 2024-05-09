@@ -7,7 +7,7 @@ this.flagellant_vs_monk_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.flagellant_vs_monk";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]营火闪耀着耀眼的光芒，将人们的面庞扭曲成橙色，仿佛他们自己就是燃烧着的木头。\n\n 在这里，你发现 %monk% 和 %flagellant% 在谈着什么。起初，他们的讨论并不复杂。 僧侣恳求自笞者不再挥鞭。 虽然你没必要介入，但你不得不承认，用一种被美化的仪式摧残自己的身体并不是最好的活法。 但紧接着自笞者反驳的话，让你们两个人停了下来。 这段话语经过精心设计，如果你不把它忘掉，恐怕就会越来越认同自笞者的想法。 更让人不安的是，这家伙说地如此的轻描淡写。 一具伤痕累累的躯壳里竟然能温暖地编织出这么抚慰人心的声音。 是什么造就了它？\n\n 这个僧侣结结巴巴地说了一会儿，然后把手放到了自笞者的肩膀上，按着他，让他们互相对视。 他轻声细语，这些话会让你耳朵发痒，但你并不能听清其中的意思。 你只能假设，它们的目的是，再次说服苦修者过上更好，不那么暴力的生活。\n\n 但是，再一次的，苦修者开始回应，然后他们继续你来我往地辩论起来。",

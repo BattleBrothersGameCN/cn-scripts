@@ -4,7 +4,7 @@ this.battle_standard_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.battle_standard";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们需要一柄战旗，以便从远处认出我们！\n做一柄要花不少钱，我们要为此凑齐2000克朗。";
 		this.m.RewardTooltip = "你将获得一件独特物品，授予佩戴者附近所有人额外决心。";
 		this.m.UIText = "拥有至少2000克朗";

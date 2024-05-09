@@ -23,38 +23,38 @@ this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildin
 		this.m.Sounds = [
 			{
 				File = "ambience/settlement/settlement_saw_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/settlement/settlement_saw_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/settlement/settlement_building_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/settlement/settlement_building_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/settlement/settlement_building_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/settlement/settlement_building_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/settlement/settlement_building_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			}
 		];
 		this.m.SoundsAtNight = [];
@@ -83,87 +83,87 @@ this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildin
 		local list = [
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/short_bow"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/short_bow"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hunting_bow"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hunting_bow"
 			},
 			{
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/war_bow"
 			},
 			{
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/war_bow"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/light_crossbow"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/light_crossbow"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/crossbow"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/crossbow"
 			},
 			{
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/heavy_crossbow"
 			},
 			{
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/heavy_crossbow"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/javelin"
 			},
 			{
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/throwing_axe"
 			},
 			{
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "ammo/quiver_of_arrows"
 			},
 			{
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "ammo/quiver_of_bolts"
 			},
 			{
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/ammo_item"
 			}
 		];
@@ -173,7 +173,7 @@ this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildin
 			list.extend([
 				{
 					R = 90,
-					P = 1.000000,
+					P = 1.0,
 					S = "weapons/throwing_spear"
 				}
 			]);
@@ -185,14 +185,14 @@ this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildin
 			{
 				list.push({
 					R = 99,
-					P = 2.000000,
+					P = 2.0,
 					S = i
 				});
 			}
 		}
 
 		this.m.Settlement.onUpdateShopList(this.m.ID, list);
-		this.fillStash(list, this.m.Stash, 1.250000, false);
+		this.fillStash(list, this.m.Stash, 1.25, false);
 	}
 
 	function onUpdateDraftList( _list )

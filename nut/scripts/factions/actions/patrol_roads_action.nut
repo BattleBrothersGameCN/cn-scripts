@@ -5,7 +5,7 @@ this.patrol_roads_action <- this.inherit("scripts/factions/faction_action", {
 	function create()
 	{
 		this.m.ID = "patrol_roads_action";
-		this.m.Cooldown = 400.000000;
+		this.m.Cooldown = 400.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -90,12 +90,12 @@ this.patrol_roads_action <- this.inherit("scripts/factions/faction_action", {
 		move1.setRoadsOnly(true);
 		move1.setDestination(waypoints[1].getTile());
 		local wait1 = this.new("scripts/ai/world/orders/wait_order");
-		wait1.setTime(20.000000);
+		wait1.setTime(20.0);
 		local move2 = this.new("scripts/ai/world/orders/move_order");
 		move2.setRoadsOnly(true);
 		move2.setDestination(waypoints[2].getTile());
 		local wait2 = this.new("scripts/ai/world/orders/wait_order");
-		wait2.setTime(20.000000);
+		wait2.setTime(20.0);
 		local move3 = this.new("scripts/ai/world/orders/move_order");
 		move3.setRoadsOnly(true);
 		move3.setDestination(waypoints[0].getTile());
@@ -106,7 +106,7 @@ this.patrol_roads_action <- this.inherit("scripts/factions/faction_action", {
 		c.addOrder(wait2);
 		c.addOrder(move3);
 		c.addOrder(despawn);
-		this.m.Cooldown = this.World.FactionManager.isGreaterEvil() ? 200.000000 : 400.000000;
+		this.m.Cooldown = this.World.FactionManager.isGreaterEvil() ? 200.0 : 400.0;
 		return true;
 	}
 

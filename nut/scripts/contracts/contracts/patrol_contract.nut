@@ -10,10 +10,10 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.patrol";
 		this.m.Name = "巡逻";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.0;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 		this.m.MakeAllSpawnsResetOrdersOnceDiscovered = true;
-		this.m.DifficultyMult = 1.000000;
+		this.m.DifficultyMult = 1.0;
 	}
 
 	function onImportIntro()
@@ -51,17 +51,17 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Count = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Count = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Count = 0.750000;
-			this.m.Payment.Completion = 0.250000;
+			this.m.Payment.Count = 0.75;
+			this.m.Payment.Completion = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Count = 1.000000;
+			this.m.Payment.Count = 1.0;
 		}
 
 		local maximumHeads = [
@@ -765,7 +765,7 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (bro.getBackground().isOffendedByViolence() && !bro.getBackground().isCombatBackground())
 					{
-						bro.worsenMood(0.500000, "你让一个被钉在十字架上的人慢慢死去");
+						bro.worsenMood(0.5, "你让一个被钉在十字架上的人慢慢死去");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

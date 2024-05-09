@@ -92,12 +92,12 @@ this.drunk_effect <- this.inherit("scripts/skills/injury/injury", {
 	function onUpdate( _properties )
 	{
 		this.injury.onUpdate(_properties);
-		_properties.BraveryMult *= 1.250000;
-		_properties.MeleeSkillMult *= 0.750000;
-		_properties.RangedSkillMult *= 0.750000;
-		_properties.MeleeDefenseMult *= 0.750000;
-		_properties.RangedDefenseMult *= 0.750000;
-		_properties.InitiativeMult *= 0.750000;
+		_properties.BraveryMult *= 1.25;
+		_properties.MeleeSkillMult *= 0.75;
+		_properties.RangedSkillMult *= 0.75;
+		_properties.MeleeDefenseMult *= 0.75;
+		_properties.RangedDefenseMult *= 0.75;
+		_properties.InitiativeMult *= 0.75;
 	}
 
 });

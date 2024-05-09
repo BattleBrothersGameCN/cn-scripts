@@ -41,7 +41,7 @@ this.gluttonous_trait <- this.inherit("scripts/skills/traits/character_trait", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DailyFood += 1.000000;
+		_properties.DailyFood += 1.0;
 	}
 
 });

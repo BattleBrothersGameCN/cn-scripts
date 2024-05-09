@@ -62,7 +62,7 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[0].getItems().equip(a);
 		bros[0].getItems().equip(this.new("scripts/items/weapons/scimitar"));
 		bros[0].getItems().equip(this.new("scripts/items/tools/throwing_net"));
-		bros[0].improveMood(0.750000, "渴望在竞技场外证明自己");
+		bros[0].improveMood(0.75, "渴望在竞技场外证明自己");
 		bros[1].setTitle("大熊");
 		bros[1].getSkills().add(this.new("scripts/skills/traits/glorious_endurance_trait"));
 		bros[1].getTalents().resize(this.Const.Attributes.COUNT, 0);
@@ -78,7 +78,7 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[1].getItems().equip(a);
 		bros[1].getItems().equip(this.new("scripts/items/weapons/oriental/heavy_southern_mace"));
 		bros[1].getItems().equip(this.new("scripts/items/shields/oriental/metal_round_shield"));
-		bros[1].improveMood(0.750000, "渴望在竞技场外证明自己");
+		bros[1].improveMood(0.75, "渴望在竞技场外证明自己");
 		bros[2].setTitle("毒蛇");
 		bros[2].getSkills().add(this.new("scripts/skills/traits/glorious_quickness_trait"));
 		bros[2].getTalents().resize(this.Const.Attributes.COUNT, 0);
@@ -94,7 +94,7 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[2].getItems().equip(a);
 		bros[2].getItems().equip(this.new("scripts/items/weapons/oriental/qatal_dagger"));
 		bros[2].getItems().equip(this.new("scripts/items/tools/throwing_net"));
-		bros[2].improveMood(0.750000, "渴望在竞技场外证明自己");
+		bros[2].improveMood(0.75, "渴望在竞技场外证明自己");
 		bros[0].getBackground().m.RawDescription = "{%fullname% 认为肌肉带来荣耀。大错特错。队长，我，" + bros[2].getName() + ", 才能让这里所有的女士言听计从。不用问我怎么做的。看啊！好好看看！看看它的大小！没错。我就是这么想的。 傻子们，随你们怎么练，你也练不出这个来！}";
 		bros[0].getBackground().buildDescription(true);
 		bros[1].getBackground().m.RawDescription = "{%fullname% 可不是这里最好的战士，让我们说清楚。队长，看我的肌肉，难道我， " + bros[0].getName() + "，不才是那个得到人生最大奖励的人吗：所有敌人都对我感到恐惧！看啊，只要涂上一点泡沫，跑到阳光底下，我的肌肉就会发光。 所有的女人都说她们就在这儿，特别是这儿，我美丽的胸脯上找到了天堂的时候，难道不是错把我的胸肌当成天堂了吗？}";

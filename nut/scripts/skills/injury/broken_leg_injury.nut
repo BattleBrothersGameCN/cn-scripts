@@ -54,7 +54,7 @@ this.broken_leg_injury <- this.inherit("scripts/skills/injury/injury", {
 		}
 
 		_properties.MovementAPCostAdditional += 2;
-		_properties.InitiativeMult *= 0.600000;
+		_properties.InitiativeMult *= 0.6;
 	}
 
 });

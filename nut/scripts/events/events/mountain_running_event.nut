@@ -6,7 +6,7 @@ this.mountain_running_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.mountain_running";
 		this.m.Title = "在山上…";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_42.png[/img]在高低起伏的山脉中攀爬和急行军不仅是我们所有敌人的障碍也是对于团里面兄弟们身体素质的考验。 尽管团里面的人对于登山装备没有做好充足的准备，但是在严寒和恶劣的地形影响下他们逐渐适应这里的环境表现得比刚进山时候强－尤其是 %dude%。",

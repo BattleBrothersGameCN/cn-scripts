@@ -79,11 +79,11 @@ this.fractured_skull_injury <- this.inherit("scripts/skills/injury/injury", {
 		}
 
 		_properties.Vision -= 2;
-		_properties.InitiativeMult *= 0.500000;
-		_properties.MeleeSkillMult *= 0.500000;
-		_properties.RangedSkillMult *= 0.500000;
-		_properties.MeleeDefenseMult *= 0.500000;
-		_properties.RangedDefenseMult *= 0.500000;
+		_properties.InitiativeMult *= 0.5;
+		_properties.MeleeSkillMult *= 0.5;
+		_properties.RangedSkillMult *= 0.5;
+		_properties.MeleeDefenseMult *= 0.5;
+		_properties.RangedDefenseMult *= 0.5;
 	}
 
 });

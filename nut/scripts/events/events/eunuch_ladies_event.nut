@@ -7,7 +7,7 @@ this.eunuch_ladies_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.eunuch_ladies";
 		this.m.Title = "在%town%";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_85.png[/img]关于 %eunuch% 这个太监的事情传开了。 显然，他和几个队员去了镇上的妓院。 妓女和队员们一开始都取笑这个太监，但他只要求和最有经验的女人待五分钟。 两分钟后她出来了，关于 %eunuch% 床上功夫的传言爆炸式的传开了。\n\n现在，半个城镇，更准确地说是半个城镇的妇女，都在高度赞扬 %companyname% 并希望它再次光临此地。%eunuch% 自己给你一个眼色和一个微笑。 你注意到他嘴唇周围长满了疣状物。",
@@ -37,7 +37,7 @@ this.eunuch_ladies_event <- this.inherit("scripts/events/event", {
 					_event.m.Town.getFactionOfType(this.Const.FactionType.Settlement).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "你的一个手下在女士们中享有盛名");
 				}
 
-				_event.m.Eunuch.improveMood(1.500000, "和女士友好相处，在 " + _event.m.Town.getName());
+				_event.m.Eunuch.improveMood(1.5, "和女士友好相处，在 " + _event.m.Town.getName());
 
 				if (_event.m.Eunuch.getMoodState() >= this.Const.MoodState.Neutral)
 				{

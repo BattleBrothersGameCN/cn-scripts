@@ -6,7 +6,7 @@ this.wound_heals_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.wound_heals";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "",

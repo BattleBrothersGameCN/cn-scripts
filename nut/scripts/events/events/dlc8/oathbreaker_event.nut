@@ -6,7 +6,7 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.oathbreaker";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_180.png[/img]{你发现一个身处消沉状态的人：一方面，他身披华丽的盔甲，看上去像是一个坐在马背上，准备参加盛大锦标赛的骑士。另一方面，他躺在地上，腿交叉晃动，陷入了醉酒的迷糊状态，他的手臂伸出去，仿佛搂着朋友的肩膀，但实际上只能感受到泥土的慰藉。%SPEECH_ON%我请求你，旅行者，购买我的盔甲和武器，留下适合它们的价值，这样我就可以用另一种方式来寻求救赎，因为战斗对我已经没有意义了，我更愿意花钱来向年轻的安塞姆示好，而不是用剑来解决问题，但愿旧神会惩罚我说出这些话，但我还是要说！%SPEECH_OFF% 他似乎在以9000克朗的价格出售他的武器和盔甲。}",

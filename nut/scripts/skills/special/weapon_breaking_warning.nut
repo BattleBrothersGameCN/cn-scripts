@@ -40,7 +40,7 @@ this.weapon_breaking_warning <- this.inherit("scripts/skills/skill", {
 	{
 		local item = this.getContainer().getActor().getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
 
-		if (item == null || item.getConditionMax() <= 1.000000 || item.getCondition() > this.Const.Combat.AlertWeaponBreakingCondition)
+		if (item == null || item.getConditionMax() <= 1.0 || item.getCondition() > this.Const.Combat.AlertWeaponBreakingCondition)
 		{
 			this.m.IsHidden = true;
 		}

@@ -25,7 +25,7 @@ this.disarm_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.000000;
+		this.m.DirectDamageMult = 0.0;
 		this.m.HitChanceBonus = -20;
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 30;
@@ -64,7 +64,7 @@ this.disarm_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInCleavers ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInCleavers ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 
 		if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInCleavers)
 		{
@@ -111,8 +111,8 @@ this.disarm_skill <- this.inherit("scripts/skills/skill", {
 				_properties.MeleeSkill -= 10;
 			}
 
-			_properties.DamageTotalMult = 0.000000;
-			_properties.HitChanceMult[this.Const.BodyPart.Head] = 0.000000;
+			_properties.DamageTotalMult = 0.0;
+			_properties.HitChanceMult[this.Const.BodyPart.Head] = 0.0;
 		}
 	}
 

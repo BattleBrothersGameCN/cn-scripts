@@ -6,7 +6,7 @@ this.win_x_arena_fights_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.win_x_arena_fights";
-		this.m.Duration = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "让我们在呼喊着我们名字的人群面前为名利而战。\n我们会在南方的竞技场上挥洒鲜血！";
 		this.m.UIText = "赢得竞技场战斗";
 		this.m.TooltipText = "进入南方城邦的竞技场并赢得5场战斗。";

@@ -7,7 +7,7 @@ this.hate_greenskins_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.hate_greenskins";
 		this.m.Title = "战斗之后……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%image%{%brother%怒吼，张开双臂，像一个被原始狂怒支配的人一样。%SPEECH_ON%该死的野蛮人！该死的绿皮族！只有当他们被允许踏上与我、我的亲人或我的孩子的亲人同样的土地时，我才算活够了！我将从他们的嘴中撕下獠牙，掠夺他们的女人，虽然我不知道他们是否有女人，如果他们真的有的话，我也不知道我是否会接近她们，但我将掠夺某些东西，然后实施一场猛烈而彻底的毁灭，以至于古老的神灵会来向我请教一些技巧！%SPEECH_OFF%}",
@@ -46,7 +46,7 @@ this.hate_greenskins_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.000000)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.0)
 		{
 			return;
 		}

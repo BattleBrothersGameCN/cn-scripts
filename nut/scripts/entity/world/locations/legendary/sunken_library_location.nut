@@ -13,7 +13,7 @@ this.sunken_library_location <- this.inherit("scripts/entity/world/location", {
 		this.m.IsShowingDefenders = false;
 		this.m.IsShowingBanner = false;
 		this.m.IsAttackable = true;
-		this.m.VisibilityMult = 0.800000;
+		this.m.VisibilityMult = 0.8;
 		this.m.Resources = 500;
 		this.m.OnEnter = "event.location.sunken_library_enter";
 	}

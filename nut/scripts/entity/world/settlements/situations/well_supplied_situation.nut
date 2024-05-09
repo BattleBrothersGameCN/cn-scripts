@@ -32,8 +32,8 @@ this.well_supplied_situation <- this.inherit("scripts/entity/world/settlements/s
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.PriceMult *= 0.900000;
-		_modifiers.RarityMult *= 1.150000;
+		_modifiers.PriceMult *= 0.9;
+		_modifiers.RarityMult *= 1.15;
 	}
 
 });

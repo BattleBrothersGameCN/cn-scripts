@@ -17,13 +17,13 @@ this.shamshir <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_scimitar_01";
 		this.m.Value = 2900;
-		this.m.Condition = 72.000000;
-		this.m.ConditionMax = 72.000000;
+		this.m.Condition = 72.0;
+		this.m.ConditionMax = 72.0;
 		this.m.StaminaModifier = -8;
 		this.m.RegularDamage = 45;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function onEquip()

@@ -6,7 +6,7 @@ this.deserter_in_forest_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.deserter_in_forest";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 200.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]在穿越森林时，突然看到一大群鸟惊慌飞散，枝叶发出哗啦啦的声响。紧跟着，一个浑身泥土的人从灌木丛中钻了出来，似乎而不同于赤裸裸的人类，他恳求你给他藏匿。%SPEECH_ON%听着，我坦白交代。我是个叛逃者。没错，我没有啥辩解。但是，你们呢？雇佣兵？太棒了！你们把我藏起来，我会一直支持你们的！%SPEECH_OFF%在他恳求的过程中，你听到远处传来了犬吠声。那人本能地躲进树丛一个洞穴，并用泥土迅速将自己覆盖。他点头示意你们已达成协议。\n\n赏金猎人已经进入树林，它们的犬已经开始搜寻。他们的中尉环顾四周。%SPEECH_ON%别想骗我，雇佣兵。我知道那个叛逃者经过这里。只要你帮我找到他的头颅，我就给你200克朗。他在哪儿？%SPEECH_OFF%",
@@ -107,7 +107,7 @@ this.deserter_in_forest_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.deserter")
 					{
-						bro.worsenMood(0.500000, "你把逃兵交给了赏金猎人");
+						bro.worsenMood(0.5, "你把逃兵交给了赏金猎人");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

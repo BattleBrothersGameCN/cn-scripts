@@ -4,7 +4,7 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.greenskins_caravan_ambush";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_59.png[/img]{在爬一座小山的时候，你看到一队人马正沿着路行进。 他们正沿着小路走着，载重货车边的锅碗瓢盆叮当作响，孩子们把腿从边缘上甩下来，前面的女人用鞭子命令牲口前进。 男人们一起走着，看着地图，争论着，朝不同的方向做着手势，表示不同的地理观点。 然后，在路上更远的地方，在这队人马的视线之外，有几个地精躺在草地上。%randombrother% 也看到他们了，建议。%SPEECH_ON%先生，我们最好现在就下去帮忙，免得发生屠杀。%SPEECH_OFF%%randombrother2% 耸了耸肩。%SPEECH_ON%或者…我们先让地精行动，然后我们再冲进去收拾残局。 在一团糟的情况下，我们的战术优势是很大的，不是吗？%SPEECH_OFF%}",
@@ -192,7 +192,7 @@ this.greenskins_caravan_ambush_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.worsenMood(1.000000, "对你逃避战争让农民死去感到失望");
+						bro.worsenMood(1.0, "对你逃避战争让农民死去感到失望");
 
 						if (bro.getMoodState() <= this.Const.MoodState.Neutral)
 						{

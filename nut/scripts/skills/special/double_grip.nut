@@ -51,7 +51,7 @@ this.double_grip <- this.inherit("scripts/skills/skill", {
 	{
 		if (this.canDoubleGrip())
 		{
-			_properties.MeleeDamageMult *= 1.250000;
+			_properties.MeleeDamageMult *= 1.25;
 		}
 	}
 

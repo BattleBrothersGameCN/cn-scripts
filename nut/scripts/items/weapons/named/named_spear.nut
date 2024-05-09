@@ -16,13 +16,13 @@ this.named_spear <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3200;
-		this.m.Condition = 72.000000;
-		this.m.ConditionMax = 72.000000;
+		this.m.Condition = 72.0;
+		this.m.ConditionMax = 72.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 1.000000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.0;
+		this.m.DirectDamageMult = 0.25;
 		this.randomizeValues();
 	}
 

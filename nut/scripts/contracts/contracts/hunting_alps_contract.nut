@@ -1,7 +1,7 @@
 this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 	m = {
 		Target = null,
-		SpawnAtTime = 0.000000,
+		SpawnAtTime = 0.0,
 		IsPlayerAttacking = false
 	},
 	function create()
@@ -9,7 +9,7 @@ this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.hunting_alps";
 		this.m.Name = "结束噩梦";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -23,12 +23,12 @@ this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		local names = [
@@ -92,9 +92,9 @@ this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				if (this.World.getTime().IsDaytime)
 				{
-					this.Contract.m.SpawnAtTime = 0.000000;
+					this.Contract.m.SpawnAtTime = 0.0;
 				}
-				else if (this.Contract.m.SpawnAtTime == 0.000000 && !this.World.getTime().IsDaytime)
+				else if (this.Contract.m.SpawnAtTime == 0.0 && !this.World.getTime().IsDaytime)
 				{
 					this.Contract.m.SpawnAtTime = this.Time.getVirtualTimeF() + this.Math.rand(8, 18);
 				}
@@ -105,13 +105,13 @@ this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 					this.World.Contracts.showActiveContract();
 					this.Contract.setState("Return");
 				}
-				else if (this.Contract.m.Target == null && !this.World.getTime().IsDaytime && this.Contract.isPlayerNear(this.Contract.m.Home, 600) && this.Contract.m.SpawnAtTime > 0.000000 && this.Time.getVirtualTimeF() >= this.Contract.m.SpawnAtTime)
+				else if (this.Contract.m.Target == null && !this.World.getTime().IsDaytime && this.Contract.isPlayerNear(this.Contract.m.Home, 600) && this.Contract.m.SpawnAtTime > 0.0 && this.Time.getVirtualTimeF() >= this.Contract.m.SpawnAtTime)
 				{
 					this.Flags.set("IsEncounterShown", true);
 					this.Contract.setScreen("Encounter");
 					this.World.Contracts.showActiveContract();
 				}
-				else if (!this.Flags.get("IsBanterShown") && this.World.getTime().IsDaytime && (this.Contract.m.Target == null || this.Contract.m.Target.isNull() || this.Contract.m.Target.isHiddenToPlayer()) && this.Contract.isPlayerNear(this.Contract.m.Home, 600) && this.Time.getVirtualTimeF() - this.Flags.get("StartTime") >= 6.000000 && this.Math.rand(1, 1000) <= 5)
+				else if (!this.Flags.get("IsBanterShown") && this.World.getTime().IsDaytime && (this.Contract.m.Target == null || this.Contract.m.Target.isNull() || this.Contract.m.Target.isHiddenToPlayer()) && this.Contract.isPlayerNear(this.Contract.m.Home, 600) && this.Time.getVirtualTimeF() - this.Flags.get("StartTime") >= 6.0 && this.Math.rand(1, 1000) <= 5)
 				{
 					this.Flags.set("IsBanterShown", true);
 					this.Contract.setScreen("Banter");
@@ -131,7 +131,7 @@ this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				if (_combatID == "Alps")
 				{
-					this.Contract.m.SpawnAtTime = -1.000000;
+					this.Contract.m.SpawnAtTime = -1.0;
 				}
 			}
 
@@ -319,7 +319,7 @@ this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (this.Math.rand(1, 100) <= 75)
 					{
-						bro.improveMood(1.000000, "睡了一夜好觉，神清气爽");
+						bro.improveMood(1.0, "睡了一夜好觉，神清气爽");
 						bro.getSkills().removeByID("effects.exhausted");
 						bro.getSkills().removeByID("effects.drunk");
 						bro.getSkills().removeByID("effects.hangover");

@@ -4,7 +4,7 @@ this.oath_of_wrath_ambition <- this.inherit("scripts/ambitions/oaths/oath_ambiti
 	{
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_wrath";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "在战斗中，没有比懦弱更致命的错误。\n让我们立下愤怒誓言，向敌人证明什么才是真正的崩溃!";
 		this.m.TooltipText = "年轻的安瑟姆写了许多关于武术战斗的手册，其中最受欢迎的手册鼓励使用双手武器并避免战术。这些文字的页面上有干血斑驳。";
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]在生死战中，只有一种方法可以保证胜利：彻底的歼灭。在这致命的努力中，双手武器是首选。当%companyname%的男人们誓言愤怒时，他们像蛾子跳到一半火红的铁匠铺里，从火炭中退缩时，铁匠像个疯狂的行刑官一样站在旁边，手持铁锤，准备把它的边缘敲平成最终的杀戮武器，并把它翻开，发现这个金属块对于普通人来说太大了，但如果放在合适的手中，却足以将人分成两半。所以%companyname%放弃了防御，欢迎着流血的战斗。\n\n满足了愤怒和饮尽了鲜血，%companyname%已经准备好接受他们的下一个誓言!";

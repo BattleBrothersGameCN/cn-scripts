@@ -136,7 +136,7 @@ this.historian_background <- this.inherit("scripts/skills/backgrounds/character_
 	function onUpdate( _properties )
 	{
 		this.character_background.onUpdate(_properties);
-		_properties.XPGainMult *= 1.150000;
+		_properties.XPGainMult *= 1.15;
 	}
 
 });

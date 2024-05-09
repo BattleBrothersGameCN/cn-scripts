@@ -40,7 +40,7 @@ this.light_padding_replacement_upgrade <- this.inherit("scripts/items/armor_upgr
 
 	function onAdded()
 	{
-		this.m.StaminaModifier = this.Math.floor(this.m.Armor.m.StaminaModifier * 0.200000);
+		this.m.StaminaModifier = this.Math.floor(this.m.Armor.m.StaminaModifier * 0.2);
 		this.armor_upgrade.onAdded();
 	}
 

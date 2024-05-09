@@ -7,7 +7,7 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 	{
 		this.m.ID = "event.gladiator_origin_vs_anatomist";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]{你看到解剖学家%anatomist%和角斗士%gladiator%一起坐在篝火旁。他俩似乎不太适合交谈，很快后者便愤怒地站起来。%SPEECH_ON%增强？你觉得我会使用增强剂？你这个愚蠢、棍形的、拔花的、追尸的傻瓜！我的肌肉是由汗水和鲜血组成的！没有痛苦，就没有收获！%SPEECH_OFF% 角斗士踢了一堆灰尘到解剖学家身上，愤怒地离开了。%anatomist%清理干净自己，然后拿出一堆笔记。他说这个\"实验对象\"正在经历一些愤怒的情绪。你问他是否暗地里对角斗士做了什么。%anatomist%猛地合上笔记本。%SPEECH_ON%队长！我绝对没有这样做！%SPEECH_OFF%}",
@@ -79,7 +79,7 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 					icon = "ui/icons/ranged_defense.png",
 					text = _event.m.Gladiator.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 远程防御"
 				});
-				_event.m.Gladiator.worsenMood(0.500000, "被指控使用了人工强化药物。");
+				_event.m.Gladiator.worsenMood(0.5, "被指控使用了人工强化药物。");
 
 				if (_event.m.Gladiator.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -90,7 +90,7 @@ this.gladiator_origin_vs_anatomist_event <- this.inherit("scripts/events/event",
 					});
 				}
 
-				_event.m.Anatomist.improveMood(0.500000, "实验关于" + _event.m.Gladiator.getName() + "正在顺利推进。");
+				_event.m.Anatomist.improveMood(0.5, "实验关于" + _event.m.Gladiator.getName() + "正在顺利推进。");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{

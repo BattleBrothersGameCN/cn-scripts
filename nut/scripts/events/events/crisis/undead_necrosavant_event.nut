@@ -6,7 +6,7 @@ this.undead_necrosavant_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.undead_necrosavant";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_76.png[/img]路边有一堆碎石。 在它的前面，有一个灰胡子老头正在专注地盯着那些石头。 他思考太过投入，大概根本不会注意到你刚刚路过。",
@@ -149,7 +149,7 @@ this.undead_necrosavant_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + item.getName()
 				});
-				_event.m.Witchhunter.improveMood(1.000000, "在路上杀了一个死灵学者");
+				_event.m.Witchhunter.improveMood(1.0, "在路上杀了一个死灵学者");
 
 				if (_event.m.Witchhunter.getMoodState() >= this.Const.MoodState.Neutral)
 				{

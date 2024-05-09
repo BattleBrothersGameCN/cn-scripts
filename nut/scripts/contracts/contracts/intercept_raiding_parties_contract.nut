@@ -9,7 +9,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.contract.create();
 		this.m.Type = "contract.intercept_raiding_parties";
 		this.m.Name = "拦截掠夺队";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 		this.m.MakeAllSpawnsResetOrdersOnContractEnd = false;
 	}
@@ -63,12 +63,12 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("LastLocationDestroyed", "");
@@ -119,7 +119,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 
 				foreach( c in cityStates )
 				{
-					c.addPlayerRelation(-99.000000, "在战争选择了阵营");
+					c.addPlayerRelation(-99.0, "在战争选择了阵营");
 				}
 
 				this.Contract.m.Destination.setLastSpawnTimeToNow();
@@ -141,7 +141,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 					this.Contract.m.Objectives.push(locations[r].getID());
 				}
 
-				local g = this.Contract.getDifficultyMult() > 1.100000 ? 3 : 2;
+				local g = this.Contract.getDifficultyMult() > 1.1 ? 3 : 2;
 
 				for( local i = 0; i < g; i = ++i )
 				{
@@ -196,14 +196,14 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 					c.getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
 					c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(false);
 					local wait = this.new("scripts/ai/world/orders/wait_order");
-					wait.setTime(80.000000 + i * 12.000000);
+					wait.setTime(80.0 + i * 12.0);
 					c.addOrder(wait);
 
 					for( local j = 0; j < 2; j = ++j )
 					{
 						local raid = this.new("scripts/ai/world/orders/raid_order");
 						raid.setTargetTile(j == 0 ? locations[0].getTile() : locations[1].getTile());
-						raid.setTime(60.000000);
+						raid.setTime(60.0);
 						c.addOrder(raid);
 					}
 
@@ -266,7 +266,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 				}
 				else if (alive == 0 || this.Contract.m.UnitsSpawned.len() == 0)
 				{
-					if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() < 4.000000 && alive > 0)
+					if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() < 4.0 && alive > 0)
 					{
 						if (this.Flags.get("IsThankfulVillagers") && this.Contract.isPlayerNear(this.Contract.m.Destination, 500))
 						{

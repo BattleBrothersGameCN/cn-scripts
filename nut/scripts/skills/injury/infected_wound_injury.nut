@@ -50,8 +50,8 @@ this.infected_wound_injury <- this.inherit("scripts/skills/injury/injury", {
 
 		if (this.m.IsShownOutOfCombat)
 		{
-			_properties.HitpointsMult *= 0.750000;
-			_properties.StaminaMult *= 0.750000;
+			_properties.HitpointsMult *= 0.75;
+			_properties.StaminaMult *= 0.75;
 		}
 	}
 

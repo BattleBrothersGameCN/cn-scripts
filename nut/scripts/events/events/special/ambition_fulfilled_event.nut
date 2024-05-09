@@ -100,9 +100,9 @@ this.ambition_fulfilled_event <- this.inherit("scripts/events/event", {
 	function onPrepareVariables( _vars )
 	{
 		local brothers = this.World.getPlayerRoster().getAll();
-		local lowest_hiretime = 100000000.000000;
+		local lowest_hiretime = 100000000.0;
 		local lowest_hiretime_bro;
-		local highest_hiretime = -9000.000000;
+		local highest_hiretime = -9000.0;
 		local highest_hiretime_bro;
 		local highest_bravery = 0;
 		local highest_bravery_bro;

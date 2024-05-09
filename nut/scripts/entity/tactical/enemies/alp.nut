@@ -7,7 +7,7 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.XP = this.Const.Tactical.Actor.Alp.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(20, -20);
-		this.m.DecapitateBloodAmount = 1.000000;
+		this.m.DecapitateBloodAmount = 1.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.m.IsUsingZoneOfControl = false;
 		this.m.IsFlashingOnHit = false;
@@ -59,9 +59,9 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/dlc2/alp_flee_04.wav",
 			"sounds/enemies/dlc2/alp_flee_05.wav"
 		];
-		this.m.SoundPitch = this.Math.rand(90, 110) * 0.010000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.000000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] = 1.000000;
+		this.m.SoundPitch = this.Math.rand(90, 110) * 0.01;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] = 1.0;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/alp_agent");
 		this.m.AIAgent.setActor(this);
 	}
@@ -72,11 +72,11 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (r <= 50)
 		{
-			this.playSound(this.Const.Sound.ActorEvent.Other1, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] * this.m.SoundVolumeOverall * (this.Math.rand(50, 90) * 0.010000) * (this.isHiddenToPlayer ? 0.500000 : 1.000000), this.m.SoundPitch * (this.Math.rand(50, 100) * 0.010000));
+			this.playSound(this.Const.Sound.ActorEvent.Other1, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] * this.m.SoundVolumeOverall * (this.Math.rand(50, 90) * 0.01) * (this.isHiddenToPlayer ? 0.5 : 1.0), this.m.SoundPitch * (this.Math.rand(50, 100) * 0.01));
 		}
 		else
 		{
-			this.playSound(this.Const.Sound.ActorEvent.Idle, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] * this.m.SoundVolumeOverall * (this.Math.rand(50, 100) * 0.010000) * (this.isHiddenToPlayer ? 0.500000 : 1.000000), this.m.SoundPitch * (this.Math.rand(60, 105) * 0.010000));
+			this.playSound(this.Const.Sound.ActorEvent.Idle, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] * this.m.SoundVolumeOverall * (this.Math.rand(50, 100) * 0.01) * (this.isHiddenToPlayer ? 0.5 : 1.0), this.m.SoundPitch * (this.Math.rand(60, 105) * 0.01));
 		}
 	}
 
@@ -128,22 +128,22 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail("bust_alp_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = skin.Color;
 			decal.Saturation = skin.Saturation;
-			decal.Scale = 0.900000;
-			decal.setBrightness(0.900000);
+			decal.Scale = 0.9;
+			decal.setBrightness(0.9);
 
 			if (_fatalityType == this.Const.FatalityType.Decapitated)
 			{
 				local layers = [
 					sprite_head.getBrush().Name + "_dead"
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-45, 30), 180.000000, sprite_head.getBrush().Name + "_bloodpool");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-45, 30), 180.0, sprite_head.getBrush().Name + "_bloodpool");
 
 				foreach( sprite in decap )
 				{
 					sprite.Color = skin.Color;
 					sprite.Saturation = skin.Saturation;
-					sprite.Scale = 0.900000;
-					sprite.setBrightness(0.900000);
+					sprite.Scale = 0.9;
+					sprite.setBrightness(0.9);
 				}
 			}
 			else
@@ -151,33 +151,33 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 				decal = _tile.spawnDetail(sprite_head.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Color = skin.Color;
 				decal.Saturation = skin.Saturation;
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 
 			if (_fatalityType == this.Const.FatalityType.Disemboweled)
 			{
 				decal = _tile.spawnDetail("bust_alp_guts", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 			else if (_fatalityType == this.Const.FatalityType.Smashed)
 			{
 				decal = _tile.spawnDetail("bust_alp_skull", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
 				decal = _tile.spawnDetail("bust_alp_body_01_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
 				decal = _tile.spawnDetail("bust_alp_body_01_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -185,7 +185,7 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 			local corpse = clone this.Const.Corpse;
 			corpse.CorpseName = "一个" + this.getName();
 			corpse.Tile = _tile;
-			corpse.Value = 2.000000;
+			corpse.Value = 2.0;
 			corpse.IsResurrectable = false;
 			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
 			_tile.Properties.set("Corpse", corpse);
@@ -270,7 +270,7 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local body = this.addSprite("body");
 		body.setBrush("bust_alp_body_01");
-		body.varySaturation(0.200000);
+		body.varySaturation(0.2);
 		local head = this.addSprite("head");
 		head.setBrush("bust_alp_head_0" + this.Math.rand(1, 3));
 		head.Saturation = body.Saturation;
@@ -278,7 +278,7 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 		injury.setBrush("bust_alp_01_injured");
 		injury.Visible = false;
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.550000;
+		this.getSprite("status_rooted").Scale = 0.55;
 		this.setSpriteOffset("status_rooted", this.createVec(0, 10));
 		this.m.Skills.add(this.new("scripts/skills/actives/sleep_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/nightmare_skill"));

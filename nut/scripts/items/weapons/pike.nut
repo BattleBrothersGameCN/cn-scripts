@@ -18,16 +18,16 @@ this.pike <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_pike_01";
 		this.m.Value = 900;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.StaminaModifier = -14;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 60;
 		this.m.RegularDamageMax = 80;
-		this.m.ArmorDamageMult = 1.000000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.0;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 5;
 	}
 

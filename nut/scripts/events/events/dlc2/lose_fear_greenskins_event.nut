@@ -6,7 +6,7 @@ this.lose_fear_greenskins_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.lose_fear_greenskins";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]{%fearful%盯着篝火喃喃自语，这是一个令人担忧的景象，但几乎就在这样的想法出现的同时他开口了。%SPEECH_ON%你知道吗？那些绿皮根本什么都不是。%SPEECH_OFF%}",
@@ -50,7 +50,7 @@ this.lose_fear_greenskins_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > this.World.getTime().SecondsPerDay * 1.000000)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > this.World.getTime().SecondsPerDay * 1.0)
 		{
 			return;
 		}

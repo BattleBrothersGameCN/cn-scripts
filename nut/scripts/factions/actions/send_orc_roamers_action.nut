@@ -3,7 +3,7 @@ this.send_orc_roamers_action <- this.inherit("scripts/factions/faction_action", 
 	function create()
 	{
 		this.m.ID = "send_orc_roamers_action";
-		this.m.Cooldown = 30.000000;
+		this.m.Cooldown = 30.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -33,12 +33,12 @@ this.send_orc_roamers_action <- this.inherit("scripts/factions/faction_action", 
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getResources() < 100.000000)
+			if (s.getResources() < 100.0)
 			{
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -65,12 +65,12 @@ this.send_orc_roamers_action <- this.inherit("scripts/factions/faction_action", 
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getResources() < 100.000000)
+			if (s.getResources() < 100.0)
 			{
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}

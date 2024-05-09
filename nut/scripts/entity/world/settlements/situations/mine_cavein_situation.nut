@@ -34,7 +34,7 @@ this.mine_cavein_situation <- this.inherit("scripts/entity/world/settlements/sit
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.RecruitsMult *= 1.250000;
+		_modifiers.RecruitsMult *= 1.25;
 	}
 
 	function onUpdateShop( _stash )

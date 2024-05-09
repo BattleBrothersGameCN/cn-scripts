@@ -20,13 +20,13 @@ this.heavy_southern_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_heavy_southern_mace_01";
 		this.m.Value = 2000;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 80.000000;
-		this.m.ConditionMax = 80.000000;
+		this.m.Condition = 80.0;
+		this.m.ConditionMax = 80.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 1.200000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 1.2;
+		this.m.DirectDamageMult = 0.4;
 	}
 
 	function onEquip()

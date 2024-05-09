@@ -6,7 +6,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.ruined_priory";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_40.png[/img]{你发现一个僧侣站在一个修道院前。建筑的墙壁已经破碎，石块从地基上破裂，较小的石头在随后的坍塌中被化为粉末。他解释说，一场地震使整个地方都被推移了，破碎了大块物体，几乎使整个地方倒塌。他叹了口气。%SPEECH_ON%最糟糕的不仅仅是物质损失，最糟糕的是这场地震使信徒们受到了影响，他们没有了应对日常苦难的抵抗力。他们还没有回到我这里，因为他们担心旧神选择我们的地盘作为一种惩罚，针对他们之前未曾实现的错误。%SPEECH_OFF%}",
@@ -70,7 +70,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] 克朗"
 				});
 				local item = this.new("scripts/items/weapons/noble_sword");
-				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(60, 80) * 0.010000));
+				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(60, 80) * 0.01));
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -83,11 +83,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.improveMood(0.750000, "该战团帮助修复了一个修道院。");
+						bro.improveMood(0.75, "该战团帮助修复了一个修道院。");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.500000, "该战团帮助修复了一个修道院。");
+						bro.improveMood(0.5, "该战团帮助修复了一个修道院。");
 					}
 
 					if (bro.getMoodState() > this.Const.MoodState.Neutral)
@@ -132,11 +132,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" && this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.500000, "该战团的善良被人利用了。");
+						bro.worsenMood(0.5, "该战团的善良被人利用了。");
 					}
 					else
 					{
-						bro.worsenMood(0.750000, "战团被一个江湖骗子骗走了一些克朗。");
+						bro.worsenMood(0.75, "战团被一个江湖骗子骗走了一些克朗。");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
@@ -188,11 +188,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.improveMood(1.000000, "帮助修复一座受损修道院。");
+						bro.improveMood(1.0, "帮助修复一座受损修道院。");
 					}
 					else
 					{
-						bro.improveMood(0.750000, "帮助修复一座受损修道院。");
+						bro.improveMood(0.75, "帮助修复一座受损修道院。");
 					}
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
@@ -265,11 +265,11 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(0.750000, "你拒绝帮助一个需要帮助的和尚。");
+						bro.worsenMood(0.75, "你拒绝帮助一个需要帮助的和尚。");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(0.500000, "你拒绝帮助一个需要帮助的和尚。");
+						bro.worsenMood(0.5, "你拒绝帮助一个需要帮助的和尚。");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)

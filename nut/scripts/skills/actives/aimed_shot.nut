@@ -51,7 +51,7 @@ this.aimed_shot <- this.inherit("scripts/skills/skill", {
 		this.m.IsDoingForwardMove = false;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 7;
 		this.m.FatigueCost = 20;
 		this.m.MinRange = 1;
@@ -159,7 +159,7 @@ this.aimed_shot <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.MaxRange = this.m.Item.getRangeMax() + (_properties.IsSpecializedInBows ? 1 : 0);
 		this.m.AdditionalAccuracy = this.m.Item.getAdditionalAccuracy();
-		this.m.FatigueCostMult = _properties.IsSpecializedInBows ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInBows ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -201,11 +201,11 @@ this.aimed_shot <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.RangedSkill += 10 + this.m.AdditionalAccuracy;
 			_properties.HitChanceAdditionalWithEachTile += -2 + this.m.AdditionalHitChance;
-			_properties.DamageRegularMult *= 1.100000;
+			_properties.DamageRegularMult *= 1.1;
 
 			if (_properties.IsSharpshooter)
 			{
-				_properties.DamageDirectMult += 0.050000;
+				_properties.DamageDirectMult += 0.05;
 			}
 		}
 	}

@@ -152,11 +152,11 @@ this.insect_swarm_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.MeleeSkillMult *= 0.500000;
-		_properties.RangedSkillMult *= 0.500000;
-		_properties.MeleeDefenseMult *= 0.500000;
-		_properties.RangedDefenseMult *= 0.500000;
-		_properties.InitiativeMult *= 0.500000;
+		_properties.MeleeSkillMult *= 0.5;
+		_properties.RangedSkillMult *= 0.5;
+		_properties.MeleeDefenseMult *= 0.5;
+		_properties.RangedDefenseMult *= 0.5;
+		_properties.InitiativeMult *= 0.5;
 	}
 
 	function onTurnEnd()

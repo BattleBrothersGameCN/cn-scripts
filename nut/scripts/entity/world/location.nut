@@ -9,7 +9,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 		RoamerSpawnList = null,
 		CombatLocation = null,
 		Resources = 0,
-		LastSpawnTime = -1000.000000,
+		LastSpawnTime = -1000.0,
 		Loot = null,
 		NamedWeaponsList = null,
 		NamedShieldsList = null,
@@ -312,8 +312,8 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 
 	function setLootScaleBasedOnResources( _r )
 	{
-		local resources = this.m.Resources * this.Math.minf(3.000000, 1.000000 + this.World.getTime().Days * 0.007500) * this.Const.Difficulty.EnemyMult[this.World.Assets.getCombatDifficulty()];
-		this.m.LootScale = this.Math.minf(1.000000, _r / resources);
+		local resources = this.m.Resources * this.Math.minf(3.0, 1.0 + this.World.getTime().Days * 0.0075) * this.Const.Difficulty.EnemyMult[this.World.Assets.getCombatDifficulty()];
+		this.m.LootScale = this.Math.minf(1.0, _r / resources);
 	}
 
 	function onEnter()
@@ -460,7 +460,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 		{
 			local num = 0;
 
-			for( local chance = (this.m.Resources + nearestSettlement * 4) / 5.000000 - 37.000000; num < 2;  )
+			for( local chance = (this.m.Resources + nearestSettlement * 4) / 5.0 - 37.0; num < 2;  )
 			{
 				local r = this.Math.rand(1, 100);
 
@@ -614,7 +614,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 
 		if (this.m.IsScalingDefenders)
 		{
-			resources = resources * this.Math.minf(3.000000, 1.000000 + this.World.getTime().Days * 0.007500);
+			resources = resources * this.Math.minf(3.0, 1.0 + this.World.getTime().Days * 0.0075);
 		}
 
 		if (!this.isAlliedWithPlayer())
@@ -622,9 +622,9 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 			resources = resources * this.Const.Difficulty.EnemyMult[this.World.Assets.getCombatDifficulty()];
 		}
 
-		if (this.Time.getVirtualTimeF() - this.m.LastSpawnTime <= 60.000000)
+		if (this.Time.getVirtualTimeF() - this.m.LastSpawnTime <= 60.0)
 		{
-			resources = resources * 0.750000;
+			resources = resources * 0.75;
 		}
 
 		local best;
@@ -648,7 +648,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 
 		foreach( party in this.m.DefenderSpawnList )
 		{
-			if (party.Cost > resources || party.Cost < bestCost * 0.750000)
+			if (party.Cost > resources || party.Cost < bestCost * 0.75)
 			{
 				continue;
 			}
@@ -679,7 +679,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 		{
 			this.m.Troops = [];
 
-			if (this.Time.getVirtualTimeF() - this.m.LastSpawnTime <= 60.000000)
+			if (this.Time.getVirtualTimeF() - this.m.LastSpawnTime <= 60.0)
 			{
 				this.m.DefenderSpawnDay = this.World.getTime().Days - 7;
 			}

@@ -7,7 +7,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_vs_ailing";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]{%ailing% 这个身体欠佳的佣兵盯着篝火蜷缩在一起。他已经病了一段时间，看起来情况并没有好转。然而，%anatomist%解剖学家建议他可能能够调制一种解药，一种他可以服用来增强身体和治愈自己的药剂。%SPEECH_ON%我看过它很多次。现在，有一个问题：所需的成分不是我们当前所在的地方所产，但是我对这方面的知识已经足够丰富，我可以轻松找到合适的替代品。%SPEECH_OFF%}",
@@ -210,7 +210,7 @@ this.anatomist_vs_ailing_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.000000, "被剥夺了研究机会");
+				_event.m.Anatomist.worsenMood(1.0, "被剥夺了研究机会");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

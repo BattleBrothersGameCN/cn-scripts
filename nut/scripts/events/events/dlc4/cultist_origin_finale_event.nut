@@ -7,7 +7,7 @@ this.cultist_origin_finale_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cultist_origin_finale";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_33.png[/img]%cultist% 进入你帐篷，一阵强劲、凛冽的风紧随其后，刮起你的卷轴和其他文件。 他走上前，双手交叉在胸前，看起来相当虔诚地走近。%SPEECH_ON%先生，我被喻示了，而且是件我被赋予责任的大事。%SPEECH_OFF%你举起手来，叫他安静。 小心地，你走到帐篷里的每一根蜡烛前面，把它们一一熄灭，直到有一根还剩下。 你把蜡烛拿到面前…",
@@ -112,7 +112,7 @@ this.cultist_origin_finale_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist")
 					{
-						bro.improveMood(2.000000, "安抚了达库尔");
+						bro.improveMood(2.0, "安抚了达库尔");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -125,7 +125,7 @@ this.cultist_origin_finale_event <- this.inherit("scripts/events/event", {
 					}
 					else
 					{
-						bro.worsenMood(3.000000, "被死亡吓坏了，死的是 " + _event.m.Sacrifice.getName());
+						bro.worsenMood(3.0, "被死亡吓坏了，死的是 " + _event.m.Sacrifice.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -165,7 +165,7 @@ this.cultist_origin_finale_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist")
 					{
-						bro.worsenMood(2.000000, "被剥夺了安抚达库尔的机会");
+						bro.worsenMood(2.0, "被剥夺了安抚达库尔的机会");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

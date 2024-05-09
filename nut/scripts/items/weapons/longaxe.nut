@@ -18,16 +18,16 @@ this.longaxe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_longaxe_01";
 		this.m.Value = 1200;
 		this.m.ShieldDamage = 24;
-		this.m.Condition = 72.000000;
-		this.m.ConditionMax = 72.000000;
+		this.m.Condition = 72.0;
+		this.m.ConditionMax = 72.0;
 		this.m.StaminaModifier = -14;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 70;
 		this.m.RegularDamageMax = 95;
-		this.m.ArmorDamageMult = 1.100000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.1;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 5;
 	}
 

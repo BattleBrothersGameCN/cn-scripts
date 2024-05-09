@@ -18,13 +18,13 @@ this.two_handed_saif <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_two_handed_saif_01";
 		this.m.Value = 1800;
-		this.m.Condition = 54.000000;
-		this.m.ConditionMax = 54.000000;
+		this.m.Condition = 54.0;
+		this.m.ConditionMax = 54.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 0.900000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 0.9;
+		this.m.DirectDamageMult = 0.25;
 	}
 
 	function onEquip()

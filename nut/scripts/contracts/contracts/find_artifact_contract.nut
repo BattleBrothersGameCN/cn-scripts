@@ -9,7 +9,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.find_artifact";
 		this.m.Name = "战役";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -81,12 +81,12 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("Score", 0);
@@ -147,7 +147,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 				}
 
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 				this.Contract.m.Destination.setLootScaleBasedOnResources(130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				this.Contract.m.Destination.clearTroops();
 				this.Contract.m.Destination.setResources(this.Math.min(this.Contract.m.Destination.getResources(), 130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult()));
@@ -448,7 +448,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 						this.Contract.m.Destination = this.WeakTableRef(best);
 						this.Flags.set("DestinationName", this.Contract.m.Destination.getName());
 						this.Contract.m.Destination.setDiscovered(true);
-						this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+						this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 						this.Contract.m.Destination.clearTroops();
 						this.Contract.m.Destination.setResources(this.Math.min(this.Contract.m.Destination.getResources(), 130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult()));
 						this.Contract.addUnitsToEntity(this.Contract.m.Destination, this.Const.World.Spawn.UndeadArmy, 130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
@@ -514,13 +514,13 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 						this.Contract.m.Destination = this.WeakTableRef(best);
 						this.Flags.set("DestinationName", this.Contract.m.Destination.getName());
 						this.Contract.m.Destination.setDiscovered(true);
-						this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+						this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 						this.Contract.m.Destination.clearTroops();
 						this.Contract.m.Destination.setResources(this.Math.min(this.Contract.m.Destination.getResources(), 130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult()));
 						this.Contract.addUnitsToEntity(this.Contract.m.Destination, this.Const.World.Spawn.UndeadArmy, 130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 						this.Contract.m.Destination.setLootScaleBasedOnResources(130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 
-						if (this.Contract.getDifficultyMult() <= 1.150000 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
+						if (this.Contract.getDifficultyMult() <= 1.15 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
 						{
 							this.Contract.m.Destination.getLoot().clear();
 						}
@@ -595,7 +595,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 
 						this.Contract.m.Destination = this.WeakTableRef(party);
 						party.setAttackableByAI(false);
-						party.setFootprintSizeOverride(0.750000);
+						party.setFootprintSizeOverride(0.75);
 						local c = party.getController();
 						c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(false);
 						local roam = this.new("scripts/ai/world/orders/roam_order");
@@ -607,7 +607,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 						roam.setTerrain(this.Const.World.TerrainType.Shore, false);
 						roam.setTerrain(this.Const.World.TerrainType.Mountains, false);
 						c.addOrder(roam);
-						this.Const.World.Common.addFootprintsFromTo(playerTile, this.Contract.m.Destination.getTile(), this.Const.GenericFootprints, this.Const.World.FootprintsType.Mercenaries, 0.750000);
+						this.Const.World.Common.addFootprintsFromTo(playerTile, this.Contract.m.Destination.getTile(), this.Const.GenericFootprints, this.Const.World.FootprintsType.Mercenaries, 0.75);
 						this.Contract.setState("Running_TooLate");
 						return 0;
 					}
@@ -712,7 +712,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 			],
 			function start()
 			{
-				local bribe = this.Contract.beautifyNumber(this.Contract.m.Payment.Pool * 0.400000);
+				local bribe = this.Contract.beautifyNumber(this.Contract.m.Payment.Pool * 0.4);
 				this.World.Assets.addMoney(-bribe);
 				this.List.push({
 					id = 10,
@@ -798,7 +798,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.Destination = this.WeakTableRef(best);
 				this.Flags.set("DestinationName", this.Contract.m.Destination.getName());
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 				this.Contract.m.Destination.clearTroops();
 				this.Contract.m.Destination.setResources(this.Math.min(this.Contract.m.Destination.getResources(), 120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult()));
 				this.Contract.addUnitsToEntity(this.Contract.m.Destination, this.Const.World.Spawn.UndeadArmy, 120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
@@ -875,7 +875,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 		]);
 		_vars.push([
 			"bribe",
-			this.beautifyNumber(this.m.Payment.Pool * 0.400000)
+			this.beautifyNumber(this.m.Payment.Pool * 0.4)
 		]);
 		_vars.push([
 			"direction",

@@ -6,7 +6,7 @@ this.witchhunter_ghoul_teeth_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.witchhunter_ghoul_teeth";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%witchhunter% 女巫猎人带了一小瓶未知的液体来找你。%SPEECH_ON%解毒剂。%SPEECH_OFF%她解释。她拔掉软木塞，给你闻了闻。 有一股强烈的尿臭味。他点头。%SPEECH_ON%是的，它很恶心，但是你需要恶毒的人去和恶毒的人战斗，而地精使用毒药是一件非常恶心的事情。 但这解药会有所帮助。%SPEECH_OFF%",

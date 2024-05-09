@@ -4,7 +4,7 @@ this.have_armor_upgrades_ambition <- this.inherit("scripts/ambitions/ambition", 
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.have_armor_upgrades";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "世俗的盔甲不适合作为真正的雇佣兵装备。\n我们应该用战利品来装饰我们的装备！";
 		this.m.UIText = "拥有至少6件带附件的盔甲";
 		this.m.TooltipText = "在你的所有中拥有至少6件带附件的盔甲。 购买它们，掠夺它们，或请一个剥制师为你制作他们，然后将它们与你的人的盔甲结合。";

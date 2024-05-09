@@ -16,13 +16,13 @@ this.dagger <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_dagger_01";
-		this.m.Condition = 40.000000;
-		this.m.ConditionMax = 40.000000;
+		this.m.Condition = 40.0;
+		this.m.ConditionMax = 40.0;
 		this.m.Value = 180;
 		this.m.RegularDamage = 15;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 0.600000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.6;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function onEquip()

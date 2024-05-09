@@ -48,7 +48,7 @@ this.throw_spear_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsDoingForwardMove = false;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
-		this.m.DirectDamageMult = 0.450000;
+		this.m.DirectDamageMult = 0.45;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 15;
 		this.m.MinRange = 2;
@@ -124,7 +124,7 @@ this.throw_spear_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInThrowing ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInThrowing ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -135,7 +135,7 @@ this.throw_spear_skill <- this.inherit("scripts/skills/skill", {
 		if (shield != null && shield.isItemType(this.Const.Items.ItemType.Shield))
 		{
 			local flip = !this.m.IsProjectileRotated && targetEntity.getPos().X > _user.getPos().X;
-			local time = this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), _targetTile, 1.000000, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
+			local time = this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), _targetTile, 1.0, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
 			this.Time.scheduleEvent(this.TimeUnit.Virtual, time, this.onApplyShieldDamage.bindenv(this), {
 				User = _user,
 				Skill = this,
@@ -207,9 +207,9 @@ this.throw_spear_skill <- this.inherit("scripts/skills/skill", {
 
 		if (!this.Tactical.getNavigator().isTravelling(_tag.TargetTile.getEntity()))
 		{
-			this.Tactical.getShaker().shake(_tag.TargetTile.getEntity(), _tag.User.getTile(), 2, this.Const.Combat.ShakeEffectSplitShieldColor, this.Const.Combat.ShakeEffectSplitShieldHighlight, this.Const.Combat.ShakeEffectSplitShieldFactor, 1.000000, [
+			this.Tactical.getShaker().shake(_tag.TargetTile.getEntity(), _tag.User.getTile(), 2, this.Const.Combat.ShakeEffectSplitShieldColor, this.Const.Combat.ShakeEffectSplitShieldHighlight, this.Const.Combat.ShakeEffectSplitShieldFactor, 1.0, [
 				"shield_icon"
-			], 1.000000);
+			], 1.0);
 		}
 	}
 

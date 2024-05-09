@@ -55,8 +55,8 @@ this.night_effect <- this.inherit("scripts/skills/skill", {
 		if (_properties.IsAffectedByNight)
 		{
 			_properties.Vision -= 2;
-			_properties.RangedSkillMult *= 0.700000;
-			_properties.RangedDefense *= 0.700000;
+			_properties.RangedSkillMult *= 0.7;
+			_properties.RangedDefense *= 0.7;
 		}
 	}
 

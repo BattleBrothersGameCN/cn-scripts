@@ -12,7 +12,7 @@ this.split_hand_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.IconMini = "injury_icon_08_mini";
 		this.m.HealingTimeMin = 5;
 		this.m.HealingTimeMax = 7;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -54,8 +54,8 @@ this.split_hand_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.MeleeSkillMult *= 0.500000;
-		_properties.RangedSkillMult *= 0.500000;
+		_properties.MeleeSkillMult *= 0.5;
+		_properties.RangedSkillMult *= 0.5;
 	}
 
 });

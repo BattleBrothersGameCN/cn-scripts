@@ -22,12 +22,12 @@ this.wonky_bow <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.RangeMax = 7;
 		this.m.RangeIdeal = 7;
 		this.m.StaminaModifier = -6;
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 0.500000;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.ArmorDamageMult = 0.5;
+		this.m.DirectDamageMult = 0.35;
 		this.m.AdditionalAccuracy = -10;
 	}
 

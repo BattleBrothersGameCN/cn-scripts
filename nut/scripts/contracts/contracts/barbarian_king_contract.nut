@@ -2,7 +2,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 	m = {
 		Destination = null,
 		Threat = null,
-		LastHelpTime = 0.000000,
+		LastHelpTime = 0.0,
 		IsPlayerAttacking = false,
 		IsEscortUpdated = false
 	},
@@ -13,16 +13,16 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r <= 70)
 		{
-			this.m.DifficultyMult = this.Math.rand(90, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(90, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
 		this.m.Type = "contract.barbarian_king";
 		this.m.Name = "野蛮人国王";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.0;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 	}
 
@@ -37,12 +37,12 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -77,7 +77,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				local party = f.spawnEntity(nearest_base.getTile(), "蛮王", false, this.Const.World.Spawn.Barbarians, 125 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				party.setDescription("一个强大的野蛮部落战团，集结在野蛮人国王旗下。");
 				party.getSprite("body").setBrush("figure_wildman_04");
-				party.setVisibilityMult(2.000000);
+				party.setVisibilityMult(2.0);
 				this.Contract.addUnitsToEntity(party, this.Const.World.Spawn.BarbarianKing, 100);
 				this.Contract.m.Destination = this.WeakTableRef(party);
 				party.getLoot().Money = this.Math.rand(150, 250);
@@ -91,7 +91,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				party.setAttackableByAI(false);
 				local c = party.getController();
 				local patrol = this.new("scripts/ai/world/orders/patrol_order");
-				patrol.setWaitTime(20.000000);
+				patrol.setWaitTime(20.0);
 				c.addOrder(patrol);
 				this.Contract.m.UnitsSpawned.push(party.getID());
 				this.Contract.m.LastHelpTime = this.Time.getVirtualTimeF() + this.Math.rand(10, 40);
@@ -132,7 +132,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					this.Contract.setState("Return");
 				}
-				else if (!this.Contract.isPlayerNear(this.Contract.m.Destination, 600) && this.Flags.get("HelpReceived") < 4 && this.Time.getVirtualTimeF() >= this.Contract.m.LastHelpTime + 70.000000)
+				else if (!this.Contract.isPlayerNear(this.Contract.m.Destination, 600) && this.Flags.get("HelpReceived") < 4 && this.Time.getVirtualTimeF() >= this.Contract.m.LastHelpTime + 70.0)
 				{
 					this.Contract.m.LastHelpTime = this.Time.getVirtualTimeF() + this.Math.rand(0, 30);
 					this.Contract.setScreen("Directions");
@@ -257,10 +257,10 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (!this.World.State.isPaused())
 				{
-					this.World.setSpeedMult(1.000000);
+					this.World.setSpeedMult(1.0);
 				}
 
-				this.World.State.m.LastWorldSpeedMult = 1.000000;
+				this.World.State.m.LastWorldSpeedMult = 1.0;
 			}
 
 			function onRetreatedFromCombat( _combatID )
@@ -656,7 +656,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 		if (this.m.Destination != null && !this.m.Destination.isNull() && this.m.Destination.isAlive())
 		{
 			local distance = this.World.State.getPlayer().getTile().getDistanceTo(this.m.Destination.getTile());
-			distance = this.Const.Strings.Distance[this.Math.min(this.Const.Strings.Distance.len() - 1, distance / 30.000000 * (this.Const.Strings.Distance.len() - 1))];
+			distance = this.Const.Strings.Distance[this.Math.min(this.Const.Strings.Distance.len() - 1, distance / 30.0 * (this.Const.Strings.Distance.len() - 1))];
 			local region = this.World.State.getRegion(this.m.Destination.getTile().Region);
 			local settlements = this.World.EntityManager.getSettlements();
 			local nearest;
@@ -732,10 +732,10 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 
 			if (!this.World.State.isPaused())
 			{
-				this.World.setSpeedMult(1.000000);
+				this.World.setSpeedMult(1.0);
 			}
 
-			this.World.State.m.LastWorldSpeedMult = 1.000000;
+			this.World.State.m.LastWorldSpeedMult = 1.0;
 			this.m.Home.getSprite("selection").Visible = false;
 		}
 	}

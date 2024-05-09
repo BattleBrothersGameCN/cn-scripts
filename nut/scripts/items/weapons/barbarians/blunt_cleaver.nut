@@ -17,14 +17,14 @@ this.blunt_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_wildmen_04";
 		this.m.Value = 600;
-		this.m.Condition = 66.000000;
-		this.m.ConditionMax = 66.000000;
+		this.m.Condition = 66.0;
+		this.m.ConditionMax = 66.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 0.800000;
-		this.m.DirectDamageMult = 0.250000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 0.8;
+		this.m.DirectDamageMult = 0.25;
+		this.m.DirectDamageAdd = 0.1;
 	}
 
 	function onEquip()

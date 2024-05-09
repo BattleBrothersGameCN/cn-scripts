@@ -6,7 +6,7 @@ this.sickness_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.sickness";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_09.png[/img] {沼泽紧紧拖住你的每一步，如此希望你停留在这。 当你的靴子陷入泥潭时，%someguy% 转过身来，突然呕吐起来，把他的早餐吐进了泥潭。 你转过身去，看见远处的另一个兄弟弯着腰，从他嘴里吐出一大团东西，把你自己将要吐出来的东西给呛住了。 %companyname% 表达了他们的集体不适，因为更多的可怜虫在呕吐。 这确实不是人待的地方。 | 虽然沼泽里充满了令人恶心的生命形式，但实际上却散发着有毒死亡的气味。 似乎有毒的蒸汽从静止的水流中翻腾而出。 它会灼伤你的眼睛和喉咙，使你的食物染毒变得很难吃。 有什么肮脏的东西敢住在这里？ 你看到蟾蜍，蛇和小动物，它们在出生的时候显然被魔鬼碰过。 %companyname% 的队员无一例外的病了。 只有强者才有勇气去忍受这些，其他人都已经恶心过了，并看见了那里不存在的东西。}",

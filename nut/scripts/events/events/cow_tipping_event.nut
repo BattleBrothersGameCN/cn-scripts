@@ -8,7 +8,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cow_tipping";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_72.png[/img]行军途中，你遇到一头孤独的奶牛站在田野里。 没啥大不了的：它就是一头牛。\n\n 但这时 %randombrother% 悄悄靠近你。 他说话时对扫把又咬又扭。%SPEECH_ON%你认为谁能做到？%SPEECH_OFF%你问做什么。他笑了。%SPEECH_ON%啊，抱歉。我不知道你没有听说。 我们要看看是否有人能把那头牛撞倒！ 比如说，假如我们只能撞它一次，你来选择我们中的某一个试试怎么样？%SPEECH_OFF%",
@@ -80,7 +80,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.worsenMood(0.500000, "在战团面前羞辱了自己");
+				_event.m.Other.worsenMood(0.5, "在战团面前羞辱了自己");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -102,7 +102,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.500000, "被招待于" + _event.m.Other.getName() + "\'尝试推倒一头奶牛");
+						bro.improveMood(0.5, "被招待于" + _event.m.Other.getName() + "\'尝试推倒一头奶牛");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -142,7 +142,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Other.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Other.worsenMood(0.500000, "在战团面前羞辱了自己");
+				_event.m.Other.worsenMood(0.5, "在战团面前羞辱了自己");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -181,7 +181,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/fatigue.png",
 					text = _event.m.Strong.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 最大疲劳值"
 				});
-				_event.m.Strong.improveMood(0.500000, "展示显示了他的体力");
+				_event.m.Strong.improveMood(0.5, "展示显示了他的体力");
 
 				if (_event.m.Other.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -203,7 +203,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.500000, "目击(Witnessed)" + _event.m.Strong.getName() + "的惊人壮举");
+						bro.improveMood(0.5, "目击(Witnessed)" + _event.m.Strong.getName() + "的惊人壮举");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -255,7 +255,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.500000, "目击(Witnessed)" + _event.m.Cocky.getName() + "的失败乐趣");
+						bro.improveMood(0.5, "目击(Witnessed)" + _event.m.Cocky.getName() + "的失败乐趣");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

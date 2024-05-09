@@ -223,7 +223,7 @@ this.town_barber_dialog_module <- this.inherit("scripts/ui/screens/ui_module", {
 			"beard_top"
 		]);
 		bro.setDirty(true);
-		this.Sound.play(this.Const.Sound.Barber[this.Math.rand(0, this.Const.Sound.Barber.len() - 1)], 1.000000);
+		this.Sound.play(this.Const.Sound.Barber[this.Math.rand(0, this.Const.Sound.Barber.len() - 1)], 1.0);
 		return bro.getImagePath();
 	}
 

@@ -3,7 +3,7 @@ this.send_undead_roamers_action <- this.inherit("scripts/factions/faction_action
 	function create()
 	{
 		this.m.ID = "send_undead_roamers_action";
-		this.m.Cooldown = 30.000000;
+		this.m.Cooldown = 30.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -31,7 +31,7 @@ this.send_undead_roamers_action <- this.inherit("scripts/factions/faction_action
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -63,7 +63,7 @@ this.send_undead_roamers_action <- this.inherit("scripts/factions/faction_action
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -81,7 +81,7 @@ this.send_undead_roamers_action <- this.inherit("scripts/factions/faction_action
 
 		local settlement = this.pickWeightedRandom(settlements);
 		settlement.setLastSpawnTimeToNow();
-		local party = this.getFaction().spawnEntity(settlement.getTile(), "亡灵", false, settlement.getRoamerSpawnList(), this.Math.max(settlement.getResources() * 0.750000, this.Math.rand(60, 100) * this.getReputationToDifficultyLightMult()));
+		local party = this.getFaction().spawnEntity(settlement.getTile(), "亡灵", false, settlement.getRoamerSpawnList(), this.Math.max(settlement.getResources() * 0.75, this.Math.rand(60, 100) * this.getReputationToDifficultyLightMult()));
 		party.getSprite("banner").setBrush(settlement.getBanner());
 		party.setDescription("一些邪秽之物。");
 		party.setFootprintType(this.Const.World.FootprintsType.Undead);

@@ -6,7 +6,7 @@ this.historian_mysterious_text_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.historian_mysterious_text";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_57.png[/img]你遇见了一个被遗弃的小教堂。 蜘蛛们在它的裂缝处结网，鸟儿们在它的角落里筑巢。 里面的座位要么翻倒在地，要么已经被劈开做了柴火。 那些古老的神明肯定已经放弃了这个地方。\n\n %historian% 这个历史学家手里拿着一份布满灰尘的稿件来到了你的身边。%SPEECH_ON%你能看看这个吗？古老的手稿！%SPEECH_OFF%他吹开卷轴上已经变黑的泥土和灰尘。%SPEECH_ON%你见过这么令人惊叹的东西吗？ 虽然我还不知道里面写了什么，但是这是一个非常有趣的发现！%SPEECH_OFF%好吧，随便了。",
@@ -164,7 +164,7 @@ this.historian_mysterious_text_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 75)
 					{
-						bro.improveMood(1.000000, "有一次愉快的超自然体验");
+						bro.improveMood(1.0, "有一次愉快的超自然体验");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

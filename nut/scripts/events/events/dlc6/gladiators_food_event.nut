@@ -6,7 +6,7 @@ this.gladiators_food_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.gladiators_food";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_155.png[/img]{角斗士们在要求更好的食物。%SPEECH_ON%抱歉，“队长”，但是你让我拿这东西怎么办？%SPEECH_OFF%%gl% 举起一片面包。%SPEECH_ON%肉呢？看看它。看。着它。 谁做的这个？面包师？ 你想让我吃面包师烤出来的软玩意？ 我想吃些会反抗的东西。 面包会反抗吗？ 我不这么认为。%SPEECH_OFF%看起来角斗士或许离竞技场很远但是并没有忘记那里的厨师每天提供的美食。 或许你应该找点更高档的食物来平息他们。 | %SPEECH_START%好东西在哪，哏？%SPEECH_OFF%%gl% 举起一份食物。 它被卷成一条从他的手中垂下。%SPEECH_ON%这不是角斗士该有的食物，这是软蛋的食物！%SPEECH_OFF%他转过身来，把食物扔了出去，食物拍打在战团载重货车的侧面，没有粘住然后便像个倒挂的钩子般软了下来。%SPEECH_ON%我们要求更好的食物，队长！ 不是这些变质的玩意。%SPEECH_OFF%你或许应该试着给角斗士安排点符合他们标准的食物。 | %SPEECH_START%酒呢？美食呢！%SPEECH_OFF%%gl% 拿着他的一盘食物并把它像飞盘一样扔出去。 它飞的还挺远，食物洒呈一个锥形。%SPEECH_ON%我要求美食，队长！ 我的美食在哪里？%SPEECH_OFF%看起来角斗士需要更高质量的食物。}",
@@ -32,7 +32,7 @@ this.gladiators_food_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.gladiator" && bro.getFlags().get("IsPlayerCharacter"))
 					{
-						bro.worsenMood(1.500000, "需要更好的食物");
+						bro.worsenMood(1.5, "需要更好的食物");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

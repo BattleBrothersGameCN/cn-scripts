@@ -4,7 +4,7 @@ this.holywar_sand_storm_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.holywar_sand_storm";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 70.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_161.png[/img]{你遇到一队半埋进沙子的士兵。 北方人，扎营过夜时被卷入沙尘暴。 他们在痛苦中哀嚎，至少还在活着那些。 有的人皮开肉绽，而其他的已经在被蝎子与秃鹫啄着。 看起来有的选择了自杀。 没有一个人可以被拯救，他们只是艰难的扒在终结的边缘。}",
@@ -70,7 +70,7 @@ this.holywar_sand_storm_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(1.000000, "同意你结束北方同胞苦难的决定");
+						bro.improveMood(1.0, "同意你结束北方同胞苦难的决定");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -83,7 +83,7 @@ this.holywar_sand_storm_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getEthnicity() == 1 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.worsenMood(0.750000, "不喜欢你结束了北方侵略者的苦难");
+						bro.worsenMood(0.75, "不喜欢你结束了北方侵略者的苦难");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -135,7 +135,7 @@ this.holywar_sand_storm_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.worsenMood(1.000000, "不喜欢你让北方同胞慢慢死去");
+						bro.worsenMood(1.0, "不喜欢你让北方同胞慢慢死去");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -148,7 +148,7 @@ this.holywar_sand_storm_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getEthnicity() == 1 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(0.750000, "同意你决定让镀金者来审判北方侵略者");
+						bro.improveMood(0.75, "同意你决定让镀金者来审判北方侵略者");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{

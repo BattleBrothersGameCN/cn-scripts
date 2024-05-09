@@ -6,7 +6,7 @@ this.determined_delivers_peptalk_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.determined_delivers_peptalk";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_58.png[/img]你开始担心一种不祥之兆会降临在队员们身上。 他们围坐在篝火旁，没头没脑地往火里加木头。 每一张脸都表现出一种控制的缺失，确切说是掌握自己命运的那种缺失。 如果一个人不知道明天会不会比今天更好，那他怎么能继续前进呢？ 就在你要回答这个问题的时候，%determined% 站了起来，表情是如此的沮丧，但他快速转换情绪的能力让整个战团都感到震惊。%SPEECH_ON%看看你们这些可怜的家伙。 你认为你是独一无二的吗？ 你以为你是第一个觉得自己很糟糕的人吗？ 不，当然不。 你不应该是第一个放弃的人。 躺下，就不再起来。 这是一件容易的事。 这就是这个世界想搞你的。 周围操蛋的事多了去了，如果你不想在这种我们称之为生活的惩罚中消沉，就没有必要像你们这样把事情想得一团糟。%SPEECH_OFF%这番话一出，你就看到整个战团一片欢腾。",
@@ -54,7 +54,7 @@ this.determined_delivers_peptalk_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getMoodState() <= this.Const.MoodState.Neutral && this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(1.000000, "受启发于" + _event.m.Determined.getNameOnly() + "的演讲");
+						bro.improveMood(1.0, "受启发于" + _event.m.Determined.getNameOnly() + "的演讲");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

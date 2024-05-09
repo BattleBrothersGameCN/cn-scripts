@@ -4,7 +4,7 @@ this.sergeant_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.sergeant";
-		this.m.Duration = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们作战情况不错，但还需要更好的组织来应对恶劣情况。我得命名一位军士在战场上集结你们。";
 		this.m.RewardTooltip = "你将获得一个独特的能增加佩戴者额外的决心的配饰。";
 		this.m.UIText = "有一人点出“集结部队”特技";

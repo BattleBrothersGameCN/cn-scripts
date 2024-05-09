@@ -54,11 +54,11 @@ this.hexe_potion_effect <- this.inherit("scripts/skills/skill", {
 		{
 			local hitInfo = clone this.Const.Tactical.HitInfo;
 			hitInfo.DamageRegular = _damageHitpoints;
-			hitInfo.DamageArmor = 0.000000;
-			hitInfo.DamageDirect = 1.000000;
+			hitInfo.DamageArmor = 0.0;
+			hitInfo.DamageDirect = 1.0;
 			hitInfo.BodyPart = this.Const.BodyPart.Body;
-			hitInfo.BodyDamageMult = 1.000000;
-			hitInfo.FatalityChanceMult = 0.000000;
+			hitInfo.BodyDamageMult = 1.0;
+			hitInfo.FatalityChanceMult = 0.0;
 			_attacker.onDamageReceived(_attacker, null, hitInfo);
 		}
 	}

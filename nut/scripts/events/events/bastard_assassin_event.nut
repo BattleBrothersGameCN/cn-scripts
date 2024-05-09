@@ -8,7 +8,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.bastard_assassin";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "Intro",
 			Text = "[img]gfx/ui/events/event_33.png[/img]在夜幕的掩护下，一个男人溜进了你的帐篷，而帐篷的帘子仅仅在地上飘了几下。 他披着一件黑斗篷，戴着高贵的宝龙面具。 你自己武装自己，但他伸出手来。%SPEECH_ON%不必麻烦了，佣兵，因为我不是为你而来的。%SPEECH_OFF%那对你来说不够好。 那人再走一步，你就冲过去把他按在你的桌子上，用你那只空着的手把匕首刺向他的脖子。他笑着说。%SPEECH_ON%我已经告诉过你，我不是为你而来。 我来是为了 %bastard%。%SPEECH_OFF%那个贵族私生子？你问这个陌生人想对他怎么样。%SPEECH_ON%好吧，那要看情况，你愿意谈谈么？%SPEECH_OFF%",
@@ -332,7 +332,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Bastard.improveMood(2.000000, "你为他冒着生命危险");
+				_event.m.Bastard.improveMood(2.0, "你为他冒着生命危险");
 
 				if (_event.m.Bastard.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -354,7 +354,7 @@ this.bastard_assassin_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.500000, "你为了别人冒着生命危险");
+						bro.improveMood(0.5, "你为了别人冒着生命危险");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

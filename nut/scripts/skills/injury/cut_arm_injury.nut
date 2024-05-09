@@ -13,7 +13,7 @@ this.cut_arm_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.HealingTimeMin = 2;
 		this.m.HealingTimeMax = 4;
 		this.m.IsShownOnArm = true;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -55,8 +55,8 @@ this.cut_arm_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.MeleeSkillMult *= 0.850000;
-		_properties.RangedSkillMult *= 0.850000;
+		_properties.MeleeSkillMult *= 0.85;
+		_properties.RangedSkillMult *= 0.85;
 	}
 
 });

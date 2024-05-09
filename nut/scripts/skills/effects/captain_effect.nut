@@ -79,7 +79,7 @@ this.captain_effect <- this.inherit("scripts/skills/skill", {
 
 		if (bestBravery != 0)
 		{
-			bestBravery = this.Math.min(bestBravery * 0.150000, bestBravery - this.getContainer().getActor().getBravery());
+			bestBravery = this.Math.min(bestBravery * 0.15, bestBravery - this.getContainer().getActor().getBravery());
 		}
 
 		return bestBravery;

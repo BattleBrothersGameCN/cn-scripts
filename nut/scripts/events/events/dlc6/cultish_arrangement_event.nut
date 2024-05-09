@@ -6,7 +6,7 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cultish_arrangement";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_03.png[/img]{你翻过一个沙丘看到半打人。 他们穿着黑色的斗篷，并且他们藏入袖子里的手连起来组成了一个完整的圆圈。 尽管他们中的一个低着头，他们看起来都注意到你并转过头来看。 其中一个放开了他的手并走上前来。%SPEECH_ON%达库尔即将降临到我们，旅行者，即使镀金者的道路也在他的耐心之内。%SPEECH_OFF%}",
@@ -105,7 +105,7 @@ this.cultish_arrangement_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了一个 " + item.getName()
 				});
-				_event.m.Cultist.improveMood(1.000000, "在信仰上与兄弟们有了默契");
+				_event.m.Cultist.improveMood(1.0, "在信仰上与兄弟们有了默契");
 
 				if (_event.m.Cultist.getMoodState() >= this.Const.MoodState.Neutral)
 				{

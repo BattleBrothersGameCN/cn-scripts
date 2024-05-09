@@ -23,8 +23,8 @@ this.safe_roads_situation <- this.inherit("scripts/entity/world/settlements/situ
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.PriceMult *= 1.100000;
-		_modifiers.RarityMult *= 1.100000;
+		_modifiers.PriceMult *= 1.1;
+		_modifiers.RarityMult *= 1.1;
 	}
 
 });

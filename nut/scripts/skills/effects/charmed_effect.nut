@@ -66,7 +66,7 @@ this.charmed_effect <- this.inherit("scripts/skills/skill", {
 
 		if (this.m.SoundOnUse.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.Skill * 1.000000, actor.getPos());
+			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.Skill * 1.0, actor.getPos());
 		}
 
 		local effect = {
@@ -79,36 +79,36 @@ this.charmed_effect <- this.inherit("scripts/skills/skill", {
 			],
 			Stages = [
 				{
-					LifeTimeMin = 1.000000,
-					LifeTimeMax = 1.000000,
+					LifeTimeMin = 1.0,
+					LifeTimeMax = 1.0,
 					ColorMin = this.createColor("fff3e50f"),
 					ColorMax = this.createColor("ffffff5f"),
-					ScaleMin = 0.500000,
-					ScaleMax = 0.500000,
+					ScaleMin = 0.5,
+					ScaleMax = 0.5,
 					RotationMin = 0,
 					RotationMax = 0,
 					VelocityMin = 80,
 					VelocityMax = 100,
-					DirectionMin = this.createVec(-0.500000, 0.000000),
-					DirectionMax = this.createVec(0.500000, 1.000000),
+					DirectionMin = this.createVec(-0.5, 0.0),
+					DirectionMax = this.createVec(0.5, 1.0),
 					SpawnOffsetMin = this.createVec(-30, -70),
 					SpawnOffsetMax = this.createVec(30, 30),
 					ForceMin = this.createVec(0, 0),
 					ForceMax = this.createVec(0, 0)
 				},
 				{
-					LifeTimeMin = 0.100000,
-					LifeTimeMax = 0.100000,
+					LifeTimeMin = 0.1,
+					LifeTimeMax = 0.1,
 					ColorMin = this.createColor("fff3e500"),
 					ColorMax = this.createColor("ffffff00"),
-					ScaleMin = 0.100000,
-					ScaleMax = 0.100000,
+					ScaleMin = 0.1,
+					ScaleMax = 0.1,
 					RotationMin = 0,
 					RotationMax = 0,
 					VelocityMin = 80,
 					VelocityMax = 100,
-					DirectionMin = this.createVec(-0.500000, 0.000000),
-					DirectionMax = this.createVec(0.500000, 1.000000),
+					DirectionMin = this.createVec(-0.5, 0.0),
+					DirectionMax = this.createVec(0.5, 1.0),
 					ForceMin = this.createVec(0, 0),
 					ForceMax = this.createVec(0, 0)
 				}
@@ -123,7 +123,7 @@ this.charmed_effect <- this.inherit("scripts/skills/skill", {
 
 		if (this.m.SoundOnUse.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.Skill * 1.000000, actor.getPos());
+			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.Skill * 1.0, actor.getPos());
 		}
 
 		if (this.m.OriginalAgent != null)

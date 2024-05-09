@@ -16,23 +16,23 @@ this.skill <- {
 		SoundOnHitHitpoints = [],
 		SoundOnHitArmor = [],
 		SoundOnHitShield = [],
-		SoundVolume = 1.000000,
+		SoundVolume = 1.0,
 		SoundOnHitDelay = 0,
 		ProjectileType = this.Const.ProjectileType.None,
-		ProjectileTimeScale = 1.000000,
+		ProjectileTimeScale = 1.0,
 		IsProjectileRotated = true,
 		Type = this.Const.SkillType.None,
 		Container = null,
 		Item = null,
 		ActionPointCost = 0,
 		FatigueCost = 0,
-		FatigueCostMult = 1.000000,
+		FatigueCostMult = 1.0,
 		MinRange = 0,
 		MaxRange = 0,
 		MaxRangeBonus = 9,
 		MaxLevelDifference = 1,
 		Order = this.Const.SkillOrder.Any,
-		DirectDamageMult = 0.000000,
+		DirectDamageMult = 0.0,
 		ChanceDecapitate = 0,
 		ChanceDisembowel = 0,
 		ChanceSmash = 0,
@@ -411,12 +411,12 @@ this.skill <- {
 		];
 		local damage_regular_min = this.Math.floor(p.DamageRegularMin * p.DamageRegularMult * p.DamageTotalMult * (this.m.IsRanged ? p.RangedDamageMult : p.MeleeDamageMult) * p.DamageTooltipMinMult);
 		local damage_regular_max = this.Math.floor(p.DamageRegularMax * p.DamageRegularMult * p.DamageTotalMult * (this.m.IsRanged ? p.RangedDamageMult : p.MeleeDamageMult) * p.DamageTooltipMaxMult);
-		local damage_direct_min = this.Math.floor(damage_regular_min * this.Math.minf(1.000000, p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + (this.m.IsRanged ? p.DamageDirectRangedAdd : p.DamageDirectMeleeAdd))));
-		local damage_direct_max = this.Math.floor(damage_regular_max * this.Math.minf(1.000000, p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + (this.m.IsRanged ? p.DamageDirectRangedAdd : p.DamageDirectMeleeAdd))));
+		local damage_direct_min = this.Math.floor(damage_regular_min * this.Math.minf(1.0, p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + (this.m.IsRanged ? p.DamageDirectRangedAdd : p.DamageDirectMeleeAdd))));
+		local damage_direct_max = this.Math.floor(damage_regular_max * this.Math.minf(1.0, p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + (this.m.IsRanged ? p.DamageDirectRangedAdd : p.DamageDirectMeleeAdd))));
 		local damage_armor_min = this.Math.floor(p.DamageRegularMin * p.DamageArmorMult * p.DamageTotalMult * (this.m.IsRanged ? p.RangedDamageMult : p.MeleeDamageMult) * p.DamageTooltipMinMult);
 		local damage_armor_max = this.Math.floor(p.DamageRegularMax * p.DamageArmorMult * p.DamageTotalMult * (this.m.IsRanged ? p.RangedDamageMult : p.MeleeDamageMult) * p.DamageTooltipMaxMult);
 
-		if (this.m.DirectDamageMult == 1.000000)
+		if (this.m.DirectDamageMult == 1.0)
 		{
 			ret.push({
 				id = 4,
@@ -425,7 +425,7 @@ this.skill <- {
 				text = "造成 [color=" + this.Const.UI.Color.DamageValue + "]" + damage_direct_min + "[/color] - [color=" + this.Const.UI.Color.DamageValue + "]" + damage_direct_max + "[/color] 伤害(忽略护甲)"
 			});
 		}
-		else if (this.m.DirectDamageMult > 0.000000)
+		else if (this.m.DirectDamageMult > 0.0)
 		{
 			ret.push({
 				id = 4,
@@ -686,10 +686,10 @@ this.skill <- {
 		local actor = this.m.Container.getActor();
 		local p = this.m.Container.buildPropertiesForUse(this, _target);
 		local d = _target.getSkills().buildPropertiesForDefense(actor, this);
-		local critical = 1.000000 + p.getHitchance(this.Const.BodyPart.Head) / 100.000000 * (p.DamageAgainstMult[this.Const.BodyPart.Head] - 1.000000);
-		local armor = _target.getArmor(this.Const.BodyPart.Head) * (p.getHitchance(this.Const.BodyPart.Head) / 100.000000) + _target.getArmor(this.Const.BodyPart.Body) * (this.Math.max(0, p.getHitchance(this.Const.BodyPart.Body)) / 100.000000);
+		local critical = 1.0 + p.getHitchance(this.Const.BodyPart.Head) / 100.0 * (p.DamageAgainstMult[this.Const.BodyPart.Head] - 1.0);
+		local armor = _target.getArmor(this.Const.BodyPart.Head) * (p.getHitchance(this.Const.BodyPart.Head) / 100.0) + _target.getArmor(this.Const.BodyPart.Body) * (this.Math.max(0, p.getHitchance(this.Const.BodyPart.Body)) / 100.0);
 		local armorDamage = this.Math.min(armor, p.getArmorDamageAverage());
-		local directDamage = this.Math.max(0, p.getRegularDamageAverage() * (p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + (this.m.IsRanged ? p.DamageDirectRangedAdd : p.DamageDirectMeleeAdd))) * critical - (p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + (this.m.IsRanged ? p.DamageDirectRangedAdd : p.DamageDirectMeleeAdd)) < 1.000000 ? (armor - armorDamage) * this.Const.Combat.ArmorDirectDamageMitigationMult : 0));
+		local directDamage = this.Math.max(0, p.getRegularDamageAverage() * (p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + (this.m.IsRanged ? p.DamageDirectRangedAdd : p.DamageDirectMeleeAdd))) * critical - (p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + (this.m.IsRanged ? p.DamageDirectRangedAdd : p.DamageDirectMeleeAdd)) < 1.0 ? (armor - armorDamage) * this.Const.Combat.ArmorDirectDamageMitigationMult : 0));
 		local hitpointDamage = this.Math.max(0, p.getRegularDamageAverage() * critical - directDamage - armorDamage);
 		armorDamage = armorDamage * (d.DamageReceivedArmorMult * d.DamageReceivedTotalMult);
 		directDamage = directDamage * (d.DamageReceivedDirectMult * d.DamageReceivedTotalMult);
@@ -1251,7 +1251,7 @@ this.skill <- {
 
 			if (shield != null && shield.isItemType(this.Const.Items.ItemType.Shield))
 			{
-				local shieldBonus = (this.m.IsRanged ? shield.getRangedDefense() : shield.getMeleeDefense()) * (_targetEntity.getCurrentProperties().IsSpecializedInShields ? 1.250000 : 1.000000);
+				local shieldBonus = (this.m.IsRanged ? shield.getRangedDefense() : shield.getMeleeDefense()) * (_targetEntity.getCurrentProperties().IsSpecializedInShields ? 1.25 : 1.0);
 				toHit = toHit + shieldBonus;
 
 				if (!this.m.IsShieldwallRelevant && _targetEntity.getSkills().hasSkill("effects.shieldwall"))
@@ -1262,7 +1262,7 @@ this.skill <- {
 		}
 
 		toHit = toHit * properties.TotalAttackToHitMult;
-		toHit = toHit + this.Math.max(0, 100 - toHit) * (1.000000 - defenderProperties.TotalDefenseToHitMult);
+		toHit = toHit + this.Math.max(0, 100 - toHit) * (1.0 - defenderProperties.TotalDefenseToHitMult);
 		local userTile = user.getTile();
 
 		if (allowDiversion && this.m.IsRanged && userTile.getDistanceTo(_targetEntity.getTile()) > 1)
@@ -1272,7 +1272,7 @@ this.skill <- {
 			if (blockedTiles.len() != 0)
 			{
 				local blockChance = this.Const.Combat.RangedAttackBlockedChance * properties.RangedAttackBlockedChanceMult;
-				toHit = this.Math.floor(toHit * (1.000000 - blockChance));
+				toHit = this.Math.floor(toHit * (1.0 - blockChance));
 			}
 		}
 
@@ -1310,7 +1310,7 @@ this.skill <- {
 
 				if (_user.getTile().getDistanceTo(_targetEntity.getTile()) >= this.Const.Combat.SpawnProjectileMinDist)
 				{
-					this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), _targetEntity.getTile(), 1.000000, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
+					this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), _targetEntity.getTile(), 1.0, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
 				}
 			}
 
@@ -1345,7 +1345,7 @@ this.skill <- {
 
 		if (shield != null && shield.isItemType(this.Const.Items.ItemType.Shield))
 		{
-			shieldBonus = (this.m.IsRanged ? shield.getRangedDefense() : shield.getMeleeDefense()) * (_targetEntity.getCurrentProperties().IsSpecializedInShields ? 1.250000 : 1.000000);
+			shieldBonus = (this.m.IsRanged ? shield.getRangedDefense() : shield.getMeleeDefense()) * (_targetEntity.getCurrentProperties().IsSpecializedInShields ? 1.25 : 1.0);
 
 			if (!this.m.IsShieldRelevant)
 			{
@@ -1364,12 +1364,12 @@ this.skill <- {
 		}
 
 		toHit = toHit * properties.TotalAttackToHitMult;
-		toHit = toHit + this.Math.max(0, 100 - toHit) * (1.000000 - defenderProperties.TotalDefenseToHitMult);
+		toHit = toHit + this.Math.max(0, 100 - toHit) * (1.0 - defenderProperties.TotalDefenseToHitMult);
 
 		if (this.m.IsRanged && !_allowDiversion && this.m.IsShowingProjectile)
 		{
 			toHit = toHit - 15;
-			properties.DamageTotalMult *= 0.750000;
+			properties.DamageTotalMult *= 0.75;
 		}
 
 		if (defense > -100 && skill > -100)
@@ -1485,7 +1485,7 @@ this.skill <- {
 			if (this.m.IsShowingProjectile && this.m.ProjectileType != 0 && _user.getTile().getDistanceTo(_targetEntity.getTile()) >= this.Const.Combat.SpawnProjectileMinDist && (!_user.isHiddenToPlayer() || !_targetEntity.isHiddenToPlayer()))
 			{
 				local flip = !this.m.IsProjectileRotated && _targetEntity.getPos().X > _user.getPos().X;
-				local time = this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), _targetEntity.getTile(), 1.000000, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
+				local time = this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), _targetEntity.getTile(), 1.0, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
 				this.Time.scheduleEvent(this.TimeUnit.Virtual, time, this.onScheduledTargetHit, info);
 
 				if (this.m.SoundOnHit.len() != 0)
@@ -1566,7 +1566,7 @@ this.skill <- {
 
 					if (_user.getTile().getDistanceTo(divertTile) >= this.Const.Combat.SpawnProjectileMinDist)
 					{
-						time = this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), divertTile, 1.000000, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
+						time = this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), divertTile, 1.0, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
 					}
 
 					this.Time.scheduleEvent(this.TimeUnit.Virtual, time, this.onShieldHit, info);
@@ -1590,13 +1590,13 @@ this.skill <- {
 
 					if (_user.getTile().getDistanceTo(divertTile) >= this.Const.Combat.SpawnProjectileMinDist)
 					{
-						this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), divertTile, 1.000000, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
+						this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), divertTile, 1.0, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
 					}
 				}
 
 				if (this.Tactical.State.getStrategicProperties() != null && this.Tactical.State.getStrategicProperties().IsArenaMode)
 				{
-					if (toHit >= 90 || _targetEntity.getHitpointsPct() <= 0.100000)
+					if (toHit >= 90 || _targetEntity.getHitpointsPct() <= 0.1)
 					{
 						this.Sound.play(this.Const.Sound.ArenaMiss[this.Math.rand(0, this.Const.Sound.ArenaBigMiss.len() - 1)], this.Const.Sound.Volume.Tactical * this.Const.Sound.Volume.Arena);
 					}
@@ -1640,9 +1640,9 @@ this.skill <- {
 
 			if (!this.Tactical.getNavigator().isTravelling(targetEntity))
 			{
-				this.Tactical.getShaker().shake(targetEntity, user.getTile(), 2, this.Const.Combat.ShakeEffectSplitShieldColor, this.Const.Combat.ShakeEffectSplitShieldHighlight, this.Const.Combat.ShakeEffectSplitShieldFactor, 1.000000, [
+				this.Tactical.getShaker().shake(targetEntity, user.getTile(), 2, this.Const.Combat.ShakeEffectSplitShieldColor, this.Const.Combat.ShakeEffectSplitShieldHighlight, this.Const.Combat.ShakeEffectSplitShieldFactor, 1.0, [
 					"shield_icon"
-				], 1.000000);
+				], 1.0);
 			}
 		}
 
@@ -1687,7 +1687,7 @@ this.skill <- {
 
 				if (this.m.IsShowingProjectile && this.m.ProjectileType != 0 && _user.getTile().getDistanceTo(tile) >= this.Const.Combat.SpawnProjectileMinDist)
 				{
-					time = this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), divertTile, 1.000000, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
+					time = this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), divertTile, 1.0, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
 				}
 
 				this.getContainer().setBusy(true);
@@ -1730,7 +1730,7 @@ this.skill <- {
 
 		local partHit = this.Math.rand(1, 100);
 		local bodyPart = this.Const.BodyPart.Body;
-		local bodyPartDamageMult = 1.000000;
+		local bodyPartDamageMult = 1.0;
 
 		if (partHit <= _info.Properties.getHitchance(this.Const.BodyPart.Head))
 		{
@@ -1748,7 +1748,7 @@ this.skill <- {
 		local damageArmor = this.Math.rand(_info.Properties.DamageRegularMin, _info.Properties.DamageRegularMax) * _info.Properties.DamageArmorMult;
 		damageRegular = this.Math.max(0, damageRegular + _info.DistanceToTarget * _info.Properties.DamageAdditionalWithEachTile);
 		damageArmor = this.Math.max(0, damageArmor + _info.DistanceToTarget * _info.Properties.DamageAdditionalWithEachTile);
-		local damageDirect = this.Math.minf(1.000000, _info.Properties.DamageDirectMult * (this.m.DirectDamageMult + _info.Properties.DamageDirectAdd + (this.m.IsRanged ? _info.Properties.DamageDirectRangedAdd : _info.Properties.DamageDirectMeleeAdd)));
+		local damageDirect = this.Math.minf(1.0, _info.Properties.DamageDirectMult * (this.m.DirectDamageMult + _info.Properties.DamageDirectAdd + (this.m.IsRanged ? _info.Properties.DamageDirectRangedAdd : _info.Properties.DamageDirectMeleeAdd)));
 		local injuries;
 
 		if (this.m.InjuriesOnBody != null && bodyPart == this.Const.BodyPart.Body)
@@ -1830,7 +1830,7 @@ this.skill <- {
 			}
 			else
 			{
-				local quantityMult = 0.500000;
+				local quantityMult = 0.5;
 
 				if (_info.TileHit.IsVisibleForPlayer && this.Const.Tactical.TerrainDropdownParticles[_info.TileHit.Subtype].len() != 0)
 				{

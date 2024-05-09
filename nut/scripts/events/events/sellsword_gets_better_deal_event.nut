@@ -8,7 +8,7 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.sellsword_gets_better_deal";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 35.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]在清点库存时，%sellsword% 加入进来，盲目地选择这把剑或那把盾。 你放下你的羽毛笔，问他发生了什么事，因为他肯定不会在这里算计任何东西。 他解释说，另一个战团想用他做剑士－而且他们愿意付更多的钱。 你问他多少钱，他举起手来表示。%SPEECH_ON%他们说 %newpay% 克朗一天。%SPEECH_OFF%他跟你一天才赚 %pay% 克朗。",
@@ -144,7 +144,7 @@ this.sellsword_gets_better_deal_event <- this.inherit("scripts/events/event", {
 
 		foreach( bro in brothers )
 		{
-			if (bro.getLevel() >= 4 && bro.getLevel() <= 9 && this.Time.getVirtualTimeF() - bro.getHireTime() > this.World.getTime().SecondsPerDay * 25.000000 && bro.getBackground().getID() == "background.sellsword" && !bro.getFlags().has("convincedToStayWithCompany"))
+			if (bro.getLevel() >= 4 && bro.getLevel() <= 9 && this.Time.getVirtualTimeF() - bro.getHireTime() > this.World.getTime().SecondsPerDay * 25.0 && bro.getBackground().getID() == "background.sellsword" && !bro.getFlags().has("convincedToStayWithCompany"))
 			{
 				candidates.push(bro);
 			}

@@ -8,7 +8,7 @@ this.lawmen_after_criminal_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.lawmen_after_criminal";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_90.png[/img]有骑手登上了附近的小山，他们的轮廓看上去是黑色的像礁石一样矗立在山峰上。 因为没有办法看清他们是谁，你叫了几个兄弟埋伏起来。 你需要凭借伏击来保护自己否则你根本没有机会对抗这些骑手。 当被选中的雇佣兵在灌木丛中隐藏好，这些骑手也开始下山。 马蹄的轰隆声越来越大，但你却依然坚定地站着，希望用你勇敢的表现激励自己的兄弟。\n\n你看到佩戴着带有 %noblehousename% 纹章徽章的封臣。在他生后另外一个骑手正在拉着运货车还有几个带着镣铐的人在帮助着运货。 当着一行人到达你面前，他们的领头者站在马蹬上俯视着你们并且指着你说道。%SPEECH_ON%雇佣兵！在领主大人的权柄之下我们有权力去要求－这个犯罪者！－在你们身边的 %criminal% 交还给我。我知道我说的人就在你们之间。 他必须为自己的罪行付出代价。 立刻把他交出来然后你就会得到奖赏。%SPEECH_OFF%你转头吐了口唾沫。 你在问问题之前先向他点头致意。%SPEECH_ON%那么是哪位大人给的你权力呢？ 在这片土地上有很多大人但不是所有的大人都会付给我报酬。%SPEECH_OFF%这群执法者的队长重新坐在马鞍上。 他的双手交叉放在他的鞍子上，带着肃穆的权威坐在那上面。 看上去他对你的话并没有感到有趣语气也开始变得不快。%SPEECH_ON%私自窝藏逃犯的惩罚是死刑。 你们还有最后一次机会把他交给我否则你们将会面对于相当适合战争鬣狗的结局。%SPEECH_OFF%",
@@ -170,7 +170,7 @@ this.lawmen_after_criminal_event <- this.inherit("scripts/events/event", {
 			{
 				this.Banner = _event.m.NobleHouse.getUIBannerSmall();
 				this.Characters.push(_event.m.Criminal.getImagePath());
-				_event.m.Criminal.improveMood(2.000000, "受到战团的保护");
+				_event.m.Criminal.improveMood(2.0, "受到战团的保护");
 
 				if (_event.m.Criminal.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -303,7 +303,7 @@ this.lawmen_after_criminal_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.180000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.18)
 		{
 			return;
 		}

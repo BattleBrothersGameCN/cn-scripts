@@ -9,9 +9,9 @@ this.ambition <- {
 		SuccessText = "",
 		SuccessButtonText = "",
 		SuccessList = [],
-		Duration = 0.000000,
-		StartTime = 0.000000,
-		CooldownUntil = 0.000000,
+		Duration = 0.0,
+		StartTime = 0.0,
+		CooldownUntil = 0.0,
 		IsDone = false,
 		IsShowingMood = true,
 		IsGrantingRenown = true,
@@ -184,12 +184,12 @@ this.ambition <- {
 		}
 
 		this.onReward();
-		this.m.CooldownUntil = this.Time.getVirtualTimeF() + 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.CooldownUntil = this.Time.getVirtualTimeF() + 14.0 * this.World.getTime().SecondsPerDay;
 	}
 
 	function fail()
 	{
-		this.m.CooldownUntil = this.Time.getVirtualTimeF() + 7.000000 * this.World.getTime().SecondsPerDay;
+		this.m.CooldownUntil = this.Time.getVirtualTimeF() + 7.0 * this.World.getTime().SecondsPerDay;
 	}
 
 	function activate()

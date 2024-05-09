@@ -7,7 +7,7 @@ this.hidden_cache_forest_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.hidden_cache_forest";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 200.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]森林并非人类的好朋友，因此，很多声名狼藉的人喜欢在森林里藏东西。 今天你就偶然发现了一个：%otherbrother% 的脚趾踢中了它的表面，从而发现了一个储藏处。 你们挖出了一个板条箱，用力地把它敲开，发现里面藏了各种各样的武器和盔甲，还有不少黄金。 你拍了拍发现那些东西的佣兵的肩膀并感谢他的“努力工作”。 他晃了晃他的靴子。%SPEECH_ON%是的，先生，我有一个猎犬鼻子一般的脚趾头。%SPEECH_OFF%",

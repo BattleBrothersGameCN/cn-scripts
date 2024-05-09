@@ -13,7 +13,7 @@ this.autumn_tree1 <- this.inherit("scripts/entity/tactical/entity", {
 	function onInit()
 	{
 		local hasLeaves = this.Math.rand(1, 100) <= 90;
-		local scale = 0.850000 + this.Math.rand(0, 15) / 100.000000;
+		local scale = 0.85 + this.Math.rand(0, 15) / 100.0;
 		local flip = this.Math.rand(0, 1) == 1;
 		local v = this.Math.rand(1, 1);
 		local rotation = this.Math.rand(-3, 3);
@@ -35,14 +35,14 @@ this.autumn_tree1 <- this.inherit("scripts/entity/tactical/entity", {
 			top.setHorizontalFlipping(flip);
 			top.Rotation = rotation;
 			top.Scale = scale;
-			top.varyColor(0.250000, 0.250000, 0.250000);
+			top.varyColor(0.25, 0.25, 0.25);
 			this.setSpriteOcclusion("top", 1, 2, -3);
 		}
 
 		local web = this.addSprite("web");
 		web.setBrush("web_03");
 		web.setHorizontalFlipping(this.Math.rand(0, 100) < 50);
-		web.Scale = bottom.Scale * 0.900000;
+		web.Scale = bottom.Scale * 0.9;
 		web.Visible = false;
 		this.setSpriteOcclusion("middle", 1, 2, -3);
 		this.setBlockSight(true);

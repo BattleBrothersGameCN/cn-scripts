@@ -88,7 +88,7 @@ this.named_armor <- this.inherit("scripts/items/armor/armor", {
 	function randomizeValues()
 	{
 		this.m.StaminaModifier = this.Math.min(-8, this.m.StaminaModifier + this.Math.rand(3, 9));
-		this.m.Condition = this.Math.floor(this.m.Condition * this.Math.rand(110, 125) * 0.010000) * 1.000000;
+		this.m.Condition = this.Math.floor(this.m.Condition * this.Math.rand(110, 125) * 0.01) * 1.0;
 		this.m.ConditionMax = this.m.Condition;
 	}
 

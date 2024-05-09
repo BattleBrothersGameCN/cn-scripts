@@ -61,7 +61,7 @@ this.oath_of_wrath_trait <- this.inherit("scripts/skills/traits/character_trait"
 	{
 		if (_skill.isAttack())
 		{
-			_properties.FatalityChanceMult = 1000.000000;
+			_properties.FatalityChanceMult = 1000.0;
 			local items = this.getContainer().getActor().getItems();
 			local main = items.getItemAtSlot(this.Const.ItemSlot.Mainhand);
 

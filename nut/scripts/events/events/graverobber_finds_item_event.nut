@@ -9,7 +9,7 @@ this.graverobber_finds_item_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.graverobber_finds_item";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_33.png[/img]天气不错。 这是一个美好的夜晚，一丝丝暖橘色的月光透出云层－云彩摆动着优雅的肢体，被清风吹散。 月轮一下变得如此明亮，你在想，会不会有花蕾看见了这月光，以为天光大亮而尽情开放。 你在想，蚊蝇、飞蛾和甲壳虫，会不会绕着月亮跳舞，就像它们对跳动的烛火那样。 他们也能意识到么？ 面对这庞大的宇宙星河，你和你的部队不过是渺小的沧海一粟，这是多么残酷而无法逃离的明悟…面对这现实，你怎么能不愤恨，不嫉妒…\n\n 突然，盗墓贼 %graverobber% 走到你旁边，身上刺鼻的气味一下把你的思绪吹散了。 你几乎认不出这是个人了，他看起来就像一座泥石搭建的傀儡，浑身覆盖着一层泥水和散碎草叶，只有两只白白的眼睛依稀可辨。 你叹气，问他想干啥。 他用大拇指指指背后，其他人都拄着铁锹。%SPEECH_ON%我们去开了几个墓。 看到了些有意思的东西，当然不只是坟墓本埋的东西。 要来看看吗？%SPEECH_OFF%你当然看得到。..",

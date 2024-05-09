@@ -34,7 +34,7 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
 		this.m.HitChanceBonus = -10;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 30;
 		this.m.MinRange = 1;
@@ -180,10 +180,10 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 					HitInfo = clone this.Const.Tactical.HitInfo
 				};
 				tag.HitInfo.DamageRegular = damage;
-				tag.HitInfo.DamageDirect = 1.000000;
+				tag.HitInfo.DamageDirect = 1.0;
 				tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-				tag.HitInfo.BodyDamageMult = 1.000000;
-				tag.HitInfo.FatalityChanceMult = 1.000000;
+				tag.HitInfo.BodyDamageMult = 1.0;
+				tag.HitInfo.FatalityChanceMult = 1.0;
 				this.Tactical.getNavigator().teleport(_target, knockToTile, this.onKnockedDown, tag, true);
 			}
 		}
@@ -213,7 +213,7 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInHammers ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInHammers ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )

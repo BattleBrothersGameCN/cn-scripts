@@ -12,7 +12,7 @@ this.smashed_hand_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.IconMini = "injury_icon_19_mini";
 		this.m.HealingTimeMin = 4;
 		this.m.HealingTimeMax = 6;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -54,8 +54,8 @@ this.smashed_hand_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.MeleeSkillMult *= 0.600000;
-		_properties.RangedSkillMult *= 0.600000;
+		_properties.MeleeSkillMult *= 0.6;
+		_properties.RangedSkillMult *= 0.6;
 	}
 
 });

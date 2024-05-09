@@ -43,7 +43,7 @@ this.new_knowledge_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.XPGainMult *= 2.000000;
+		_properties.XPGainMult *= 2.0;
 	}
 
 	function onCombatStarted()

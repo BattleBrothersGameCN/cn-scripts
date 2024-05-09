@@ -22,12 +22,12 @@ this.nomad_sling <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.RangeMin = 2;
 		this.m.RangeMax = 6;
 		this.m.RangeIdeal = 6;
-		this.m.Condition = 56.000000;
-		this.m.ConditionMax = 56.000000;
+		this.m.Condition = 56.0;
+		this.m.ConditionMax = 56.0;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 0.600000;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.ArmorDamageMult = 0.6;
+		this.m.DirectDamageMult = 0.35;
 	}
 
 	function onEquip()

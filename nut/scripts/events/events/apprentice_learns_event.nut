@@ -7,7 +7,7 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.apprentice_learns";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 90.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]学徒%apprentice%成了%teacher%的小拐杖。而剑术大师的年龄并没有影响他提携新人的热情。学徒使用真剑，剑术大师则只用一把木剑。即便在这样巨大的武器差异下，剑术大师依然展现出了对定位，抓破绽和脱离危险技巧的运用。\n\n他年事已高，却还能不停地闪转腾挪，使得学徒无法命中。这招尤其精妙，剑术大师察觉到自己要被击中，迈步上前，踩住了学徒的脚。学徒后退给自己腾出空间，脚步却不能跟上。突然的失衡让他跌倒在地，回过头来，一把木剑已经架在了他的脖子上。\n\n这小子总是弄得灰头土脸，但至少他没有放弃。姑且说他是水滴石穿好了。",
@@ -34,8 +34,8 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().MeleeDefense += meleeDefense;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.500000, "教授了" + _event.m.Apprentice.getName() + "一些东西");
+				_event.m.Apprentice.improveMood(1.0, "投师" + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(0.5, "教授了" + _event.m.Apprentice.getName() + "一些东西");
 				this.List = [
 					{
 						id = 16,
@@ -86,8 +86,8 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Bravery += resolve;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "一些东西");
+				_event.m.Apprentice.improveMood(1.0, "投师" + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(0.25, "教授了" + _event.m.Apprentice.getName() + "一些东西");
 				this.List = [
 					{
 						id = 16,
@@ -140,8 +140,8 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Stamina += stamina;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "一些东西");
+				_event.m.Apprentice.improveMood(1.0, "投师" + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(0.25, "教授了" + _event.m.Apprentice.getName() + "一些东西");
 				this.List = [
 					{
 						id = 16,
@@ -199,8 +199,8 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 				_event.m.Apprentice.getBaseProperties().Stamina += stamina;
 				_event.m.Apprentice.getSkills().update();
 				_event.markAsLearned();
-				_event.m.Apprentice.improveMood(1.000000, "投师" + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(0.250000, "教授了" + _event.m.Apprentice.getName() + "一些东西");
+				_event.m.Apprentice.improveMood(1.0, "投师" + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(0.25, "教授了" + _event.m.Apprentice.getName() + "一些东西");
 				this.List = [
 					{
 						id = 16,

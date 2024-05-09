@@ -2,8 +2,8 @@ this.event <- {
 	m = {
 		ID = "",
 		Title = "",
-		Cooldown = 0.000000,
-		CooldownUntil = 0.000000,
+		Cooldown = 0.0,
+		CooldownUntil = 0.0,
 		Score = 0,
 		Screens = [],
 		ActiveScreen = null,
@@ -545,15 +545,15 @@ this.event <- {
 
 	function getScaledDifficultyMult()
 	{
-		local r = this.Math.minf(4.000000, this.Math.maxf(0.750000, this.Math.pow(this.Math.maxf(0, 0.003000 * this.World.Assets.getBusinessReputation()), 0.400000)));
-		local s = this.Math.maxf(0.750000, this.Math.pow(0.010000 * this.World.State.getPlayer().getStrength(), 0.900000));
-		local d = this.Math.minf(5.000000, 0.400000 * r + 0.600000 * s + this.Math.minf(0.500000, this.World.getTime().Days * 0.005000));
+		local r = this.Math.minf(4.0, this.Math.maxf(0.75, this.Math.pow(this.Math.maxf(0, 0.003 * this.World.Assets.getBusinessReputation()), 0.4)));
+		local s = this.Math.maxf(0.75, this.Math.pow(0.01 * this.World.State.getPlayer().getStrength(), 0.9));
+		local d = this.Math.minf(5.0, 0.4 * r + 0.6 * s + this.Math.minf(0.5, this.World.getTime().Days * 0.005));
 		return d * this.Const.Difficulty.EnemyMult[this.World.Assets.getCombatDifficulty()];
 	}
 
 	function getReputationToDifficultyLightMult()
 	{
-		local d = 1.000000 + this.Math.minf(2.000000, this.World.getTime().Days * 0.011500);
+		local d = 1.0 + this.Math.minf(2.0, this.World.getTime().Days * 0.0115);
 		return d * this.Const.Difficulty.EnemyMult[this.World.Assets.getCombatDifficulty()];
 	}
 

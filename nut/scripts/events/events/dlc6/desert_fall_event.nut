@@ -6,7 +6,7 @@ this.desert_fall_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.desert_fall";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_161.png[/img]{随着你走下一个沙丘的斜坡，%fallbro% 脚滑了一下开始向下滑动。 他叫着求助，手舞足蹈的往下滚着。 每一次颠簸都在加速，每一次滚动肢体都好像把他比上一次弹的更高了。 尽管沙丘的斜坡如丝顺滑，谷地的底下则充满了硬物，而那个佣兵一路剐蹭过去直到完全停下来。 他没死，但是受了点冲击，划伤，淤青，灼伤还有点羞耻。}",
@@ -25,11 +25,11 @@ this.desert_fall_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.SomeGuy.worsenMood(1.000000, "从沙丘上滑下来时擦伤了腿");
+				_event.m.SomeGuy.worsenMood(1.0, "从沙丘上滑下来时擦伤了腿");
 				local injury = _event.m.SomeGuy.addInjury([
 					{
 						ID = "injury.bruised_leg",
-						Threshold = 0.250000,
+						Threshold = 0.25,
 						Script = "injury/bruised_leg_injury"
 					}
 				]);

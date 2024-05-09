@@ -135,10 +135,10 @@ this.line_breaker <- this.inherit("scripts/skills/skill", {
 			};
 			tag.HitInfo.DamageRegular = damage;
 			tag.HitInfo.DamageFatigue = this.Const.Combat.FatigueReceivedPerHit;
-			tag.HitInfo.DamageDirect = 1.000000;
+			tag.HitInfo.DamageDirect = 1.0;
 			tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-			tag.HitInfo.BodyDamageMult = 1.000000;
-			tag.HitInfo.FatalityChanceMult = 1.000000;
+			tag.HitInfo.BodyDamageMult = 1.0;
+			tag.HitInfo.FatalityChanceMult = 1.0;
 			this.Tactical.getNavigator().teleport(target, knockToTile, this.onKnockedDown, tag, true);
 		}
 

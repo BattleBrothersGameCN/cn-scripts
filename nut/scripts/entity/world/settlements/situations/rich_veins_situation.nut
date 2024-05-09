@@ -33,9 +33,9 @@ this.rich_veins_situation <- this.inherit("scripts/entity/world/settlements/situ
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.SellPriceMult *= 1.100000;
-		_modifiers.BuyPriceMult *= 1.100000;
-		_modifiers.MineralRarityMult = 1.500000;
+		_modifiers.SellPriceMult *= 1.1;
+		_modifiers.BuyPriceMult *= 1.1;
+		_modifiers.MineralRarityMult = 1.5;
 	}
 
 });

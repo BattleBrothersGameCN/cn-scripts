@@ -4,7 +4,7 @@ this.broken_wagon_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.broken_wagon";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%你在高高的芦苇丛中发现了一辆废弃的载重货车。%randombrother% 检查它，并吼叫回答。%SPEECH_ON%它破的像坨屎，但我想我们可以挽救回一部分。%SPEECH_OFF%",

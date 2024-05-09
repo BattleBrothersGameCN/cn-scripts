@@ -53,7 +53,7 @@ this.grazed_eye_socket_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.RangedSkillMult *= 0.500000;
+		_properties.RangedSkillMult *= 0.5;
 		_properties.Vision -= 2;
 	}
 

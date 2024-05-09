@@ -8,7 +8,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.the_horseman";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%当在路上的时候，你看到了一个男人被吊在树干上，上上下下摇晃着。 一堆人坐在他周围分享着一个羊皮袋子里的饮品，看起来像是他们完成了一天的辛苦工作。 当你问发生了什么时，他们中的一个抬起头来看了看然后笑了。%SPEECH_ON%用鞭子抽这家伙直到他皮开肉绽。%SPEECH_OFF%你问为什么。另外一个人回答了。%SPEECH_ON%他和这位伙计的老婆通奸了。%SPEECH_OFF%一个男人瞬间喷出了他喝的东西，然后被呛住了。 他擦了擦嘴。%SPEECH_ON%沃日，真好笑。 不，这个小人在操我的死马的时候被抓住了。%SPEECH_OFF%",
@@ -138,8 +138,8 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getBackground().m.RawDescription = "你发现%name%时，他正因“投身”一匹死马而被鞭打。希望这件旧事，呃，已经过去了对吧。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.setHitpoints(30);
-				_event.m.Dude.improveMood(1.000000, "用一匹死马来满足他的需要");
-				_event.m.Dude.worsenMood(1.000000, "被鞭打了");
+				_event.m.Dude.improveMood(1.0, "用一匹死马来满足他的需要");
+				_event.m.Dude.worsenMood(1.0, "被鞭打了");
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
 				{
@@ -205,7 +205,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 				_event.m.Flagellant.getBaseProperties().MeleeSkill += meleeSkill;
 				_event.m.Flagellant.getBaseProperties().Stamina += fatigue;
 				_event.m.Flagellant.getSkills().update();
-				_event.m.Flagellant.improveMood(1.000000, "充分利用他的独特技能");
+				_event.m.Flagellant.improveMood(1.0, "充分利用他的独特技能");
 
 				if (_event.m.Flagellant.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -281,7 +281,7 @@ this.the_horseman_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

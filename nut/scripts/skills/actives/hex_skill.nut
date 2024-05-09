@@ -105,7 +105,7 @@ this.hex_skill <- this.inherit("scripts/skills/skill", {
 
 			if (this.m.SoundOnHit.len() != 0)
 			{
-				this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill * 1.000000, _user.getPos());
+				this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill * 1.0, _user.getPos());
 			}
 		}
 
@@ -116,11 +116,11 @@ this.hex_skill <- this.inherit("scripts/skills/skill", {
 			do
 			{
 				color = this.createColor("#ff0000");
-				color.varyRGB(0.750000, 0.750000, 0.750000);
+				color.varyRGB(0.75, 0.75, 0.75);
 			}
 			while (color.R + color.G + color.B <= 150);
 
-			this.Tactical.spawnSpriteEffect("effect_pentagram_02", color, _targetTile, !target.getSprite("status_hex").isFlippedHorizontally() ? 10 : -5, 88, 3.000000, 1.000000, 0, 400, 300);
+			this.Tactical.spawnSpriteEffect("effect_pentagram_02", color, _targetTile, !target.getSprite("status_hex").isFlippedHorizontally() ? 10 : -5, 88, 3.0, 1.0, 0, 400, 300);
 			local slave = this.new("scripts/skills/effects/hex_slave_effect");
 			local master = this.new("scripts/skills/effects/hex_master_effect");
 			slave.setMaster(master);

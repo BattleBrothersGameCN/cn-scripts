@@ -16,13 +16,13 @@ this.obsidian_dagger <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_obsidian_dagger";
-		this.m.Condition = 1.000000;
-		this.m.ConditionMax = 1.000000;
+		this.m.Condition = 1.0;
+		this.m.ConditionMax = 1.0;
 		this.m.Value = 5000;
 		this.m.RegularDamage = 25;
 		this.m.RegularDamageMax = 45;
-		this.m.ArmorDamageMult = 0.700000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.7;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function getTooltip()
@@ -62,7 +62,7 @@ this.obsidian_dagger <- this.inherit("scripts/items/weapons/weapon", {
 		{
 			local corpse = _hitInfo.Tile.Properties.get("Corpse");
 			corpse.Faction = this.Const.Faction.PlayerAnimals;
-			corpse.Hitpoints = 1.000000;
+			corpse.Hitpoints = 1.0;
 			corpse.Items = _target.getItems();
 			corpse.IsConsumable = false;
 			corpse.IsResurrectable = false;

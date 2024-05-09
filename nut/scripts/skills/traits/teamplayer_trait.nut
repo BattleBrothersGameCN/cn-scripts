@@ -43,8 +43,8 @@ this.teamplayer_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		if (_skill.isAttack() && _targetEntity != null && _targetEntity.getID() != this.getContainer().getActor().getID() && _targetEntity.getFaction() == this.getContainer().getActor().getFaction())
 		{
-			_properties.MeleeSkillMult *= 0.500000;
-			_properties.RangedSkillMult *= 0.500000;
+			_properties.MeleeSkillMult *= 0.5;
+			_properties.RangedSkillMult *= 0.5;
 		}
 	}
 

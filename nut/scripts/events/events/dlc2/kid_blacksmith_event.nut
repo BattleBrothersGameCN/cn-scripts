@@ -10,7 +10,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.kid_blacksmith";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_97.png[/img]{你正逛着%townname%的商店，感到一阵拉扯。你转身发现一个孩子，他的脸涂黑了，两只闪亮的白眼睛盯着你。他问你是否知道关于剑的任何事情。你指向了插在你身旁的那一把。他拍了拍手。%SPEECH_ON%太好了！我为一家铁匠店工作，但他正在去取铁锭。他要我看守这把特殊的剑，但它，嗯，它掉下来了。然后就碎了。它自己掉下来的，也自己碎的。你能帮我把它修好吗？%SPEECH_OFF%}",
@@ -167,7 +167,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.worsenMood(1.500000, "不小心把一个小男孩弄残废了");
+				_event.m.Other.worsenMood(1.5, "不小心把一个小男孩弄残废了");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -199,7 +199,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Juggler.getImagePath());
-				_event.m.Juggler.improveMood(1.000000, "沉浸在人群的赞美中");
+				_event.m.Juggler.improveMood(1.0, "沉浸在人群的赞美中");
 
 				if (_event.m.Juggler.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -240,7 +240,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Apprentice.getImagePath());
-				_event.m.Apprentice.improveMood(1.000000, "带着他的铁匠技能去承受");
+				_event.m.Apprentice.improveMood(1.0, "带着他的铁匠技能去承受");
 
 				if (_event.m.Apprentice.getMoodState() > this.Const.MoodState.Neutral)
 				{

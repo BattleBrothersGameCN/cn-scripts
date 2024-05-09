@@ -9,7 +9,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.hold_chokepoint";
 		this.m.Name = "坚守要塞";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -62,17 +62,17 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("Wave", 0);
 		this.m.Flags.set("WavesDefeated", 0);
-		this.m.Flags.set("WaitUntil", 0.000000);
+		this.m.Flags.set("WaitUntil", 0.0);
 		this.m.Flags.set("MapSeed", this.Time.getRealTime());
 		this.contract.start();
 	}
@@ -96,7 +96,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (r <= 20)
 				{
-					if (this.Contract.getDifficultyMult() <= 1.050000)
+					if (this.Contract.getDifficultyMult() <= 1.05)
 					{
 						this.Flags.set("IsEnemyRetreating", true);
 					}
@@ -117,12 +117,12 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (n.getFlags().get("IsHolyWarParticipant"))
 					{
-						n.addPlayerRelation(-99.000000, "在战争选择了阵营");
+						n.addPlayerRelation(-99.0, "在战争选择了阵营");
 					}
 				}
 
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 				this.Contract.setScreen("Overview");
 				this.World.Contracts.setActiveContract(this.Contract);
 			}
@@ -199,7 +199,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 				}
 				else if (this.Flags.get("WaitUntil") > 0 && this.Time.getVirtualTimeF() >= this.Flags.get("WaitUntil"))
 				{
-					this.Flags.set("WaitUntil", 0.000000);
+					this.Flags.set("WaitUntil", 0.0);
 					this.Flags.set("IsWaveShown", false);
 
 					if (this.Flags.getAsInt("Wave") == 2 && this.Flags.get("IsEnemyRetreating"))
@@ -317,7 +317,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 						c.addOrder(move);
 						local guard = this.new("scripts/ai/world/orders/guard_order");
 						guard.setTarget(this.Contract.m.Destination.getTile());
-						guard.setTime(240.000000);
+						guard.setTime(240.0);
 						c.addOrder(guard);
 						party.setAttackableByAI(false);
 						party.setAlwaysAttackPlayer(true);
@@ -700,7 +700,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 
 						foreach( n in nobles )
 						{
-							n.addPlayerRelationEx(50.000000 - n.getPlayerRelation(), "在战争中改变了立场");
+							n.addPlayerRelationEx(50.0 - n.getPlayerRelation(), "在战争中改变了立场");
 							n.makeSettlementsFriendlyToPlayer();
 						}
 
@@ -931,7 +931,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		local c = party.getController();
 		local guard = this.new("scripts/ai/world/orders/guard_order");
 		guard.setTarget(this.m.Destination.getTile());
-		guard.setTime(240.000000);
+		guard.setTime(240.0);
 		c.addOrder(guard);
 	}
 

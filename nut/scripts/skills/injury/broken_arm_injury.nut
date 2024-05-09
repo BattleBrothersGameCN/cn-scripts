@@ -60,9 +60,9 @@ this.broken_arm_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.MeleeSkillMult *= 0.500000;
-		_properties.RangedSkillMult *= 0.500000;
-		_properties.DamageTotalMult *= 0.500000;
+		_properties.MeleeSkillMult *= 0.5;
+		_properties.RangedSkillMult *= 0.5;
+		_properties.DamageTotalMult *= 0.5;
 	}
 
 });

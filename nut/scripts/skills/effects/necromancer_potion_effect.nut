@@ -50,7 +50,7 @@ this.necromancer_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.XPGainMult *= 1.200000;
+		_properties.XPGainMult *= 1.2;
 	}
 
 	function onDeath( _fatalityType )

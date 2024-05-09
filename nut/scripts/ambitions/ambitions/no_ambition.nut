@@ -4,7 +4,7 @@ this.no_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.none";
-		this.m.Duration = 7.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 7.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "战团做得很好，我们只需要保持下去！\n（没有野心）";
 		this.m.RewardTooltip = null;
 	}

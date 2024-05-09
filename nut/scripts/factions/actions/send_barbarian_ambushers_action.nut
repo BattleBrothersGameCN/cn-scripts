@@ -3,7 +3,7 @@ this.send_barbarian_ambushers_action <- this.inherit("scripts/factions/faction_a
 	function create()
 	{
 		this.m.ID = "send_barbarian_ambushers_action";
-		this.m.Cooldown = 30.000000;
+		this.m.Cooldown = 30.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -45,7 +45,7 @@ this.send_barbarian_ambushers_action <- this.inherit("scripts/factions/faction_a
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -77,7 +77,7 @@ this.send_barbarian_ambushers_action <- this.inherit("scripts/factions/faction_a
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -90,7 +90,7 @@ this.send_barbarian_ambushers_action <- this.inherit("scripts/factions/faction_a
 
 		local settlement = this.pickWeightedRandom(settlements);
 		settlement.setLastSpawnTimeToNow();
-		local mult = this.World.FactionManager.isCivilWar() ? 1.100000 : 1.000000;
+		local mult = this.World.FactionManager.isCivilWar() ? 1.1 : 1.0;
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "野蛮人", false, this.Const.World.Spawn.Barbarians, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
 		party.getSprite("banner").setBrush(settlement.getBanner());
 		party.setDescription("一支野蛮部落的战团。");

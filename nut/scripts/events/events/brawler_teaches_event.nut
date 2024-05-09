@@ -7,7 +7,7 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.brawler_teaches";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 70.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]一个影子从你背后穿过。 当你回头看时，%brawler% 正站在那里，眼中带着深邃的目光。 他断断续续地敲了很久的指关节，然后问他是否可以训练 %noncom%。你问为什么。 打手俯视着你。%SPEECH_ON%因为他弱呗。%SPEECH_OFF%哼，这很好。",
@@ -46,7 +46,7 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.Student.getImagePath());
 				_event.m.Brawler.getFlags().add("brawler_teaches");
 				_event.m.Student.getFlags().add("brawler_teaches");
-				_event.m.Brawler.improveMood(0.250000, "使他更坚强了 " + _event.m.Student.getName());
+				_event.m.Brawler.improveMood(0.25, "使他更坚强了 " + _event.m.Student.getName());
 			}
 
 		});

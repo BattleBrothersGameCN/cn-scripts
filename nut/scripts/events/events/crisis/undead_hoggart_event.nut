@@ -7,7 +7,7 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.undead_hoggart";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_76.png[/img]行军穿过一片雾，雨水也是热的，你发现一个人影站在路中间。 他手里拿着一支带金属环的火炬，无疑是一个想要用火炬来吸引人注意的人。 当你走近时，他放下手里的火炬，照出一张熟悉得出奇的脸，但是你不敢用手指碰他。 你命令他宣布自己的身份。%SPEECH_ON%你们是一群佣兵，哼？%SPEECH_OFF%你告诉他这不是一个名字。 他清了清嗓子，脸上泛着柔和的橘红色，透过暴风雨的黑暗向外张望。%SPEECH_ON%我的名字是巴纳巴斯。 你们是不是佣兵？%SPEECH_OFF%你小心地穿过小路，靠近那个人。 他把火炬挥到一边。%SPEECH_ON%是的，我想也是。 我的兄弟，我需要一个人…我是说，我不能….%SPEECH_OFF%你点头听他说话。%SPEECH_ON%他从坟墓里出来了，现在你需要派人来照顾他。%SPEECH_OFF%那人点了点头，把火把朝远处一个有着昏暗亮光的地方一挥。%SPEECH_ON%他在那个方向。我会给你 %reward% 克朗，看看你们这些佣兵会怎么做。%SPEECH_OFF%",
@@ -313,7 +313,7 @@ this.undead_hoggart_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

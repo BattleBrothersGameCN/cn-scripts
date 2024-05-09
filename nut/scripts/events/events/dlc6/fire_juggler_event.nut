@@ -8,7 +8,7 @@ this.fire_juggler_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.fire_juggler";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 160.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 160.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_163.png[/img]{一个玩火杂耍者吸引着 %townname% 的广场中所有人的目光。他有三套青铜把手的火把。 他的计划进行的不错，但他有一次掉了个火炬引来了些嘲讽。 下一幕他要在一个打开的油桶上摆上一个板子，双手两侧展开，除了这样要同时耍五个火把。\n\n总结一下，他的下一幕表演看起像自杀而且他毫不意外的看来有点畏惧。 但是人群继续着欢呼和讥讽，无疑就像条狼将一只鹿赶到了山崖边，而那个杂耍者，眼睛张开环视四周寻找着某种出路。}",
@@ -103,7 +103,7 @@ this.fire_juggler_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 75)
 					{
-						bro.improveMood(0.500000, "被一个玩火杂耍者逗乐了");
+						bro.improveMood(0.5, "被一个玩火杂耍者逗乐了");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -193,7 +193,7 @@ this.fire_juggler_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getSkills().add(trait);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.improveMood(1.000000, "被一位同行杂技师从可能的火海中救出。");
+				_event.m.Dude.improveMood(1.0, "被一位同行杂技师从可能的火海中救出。");
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
 
@@ -225,7 +225,7 @@ this.fire_juggler_event <- this.inherit("scripts/events/event", {
 				local meleeSkill = this.Math.rand(1, 3);
 				_event.m.Juggler.getBaseProperties().MeleeSkill += meleeSkill;
 				_event.m.Juggler.getSkills().update();
-				_event.m.Juggler.improveMood(1.000000, "上演一出精彩的玩火表演");
+				_event.m.Juggler.improveMood(1.0, "上演一出精彩的玩火表演");
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",
@@ -268,7 +268,7 @@ this.fire_juggler_event <- this.inherit("scripts/events/event", {
 				local meleeSkill = this.Math.rand(1, 3);
 				_event.m.Juggler.getBaseProperties().MeleeSkill += meleeSkill;
 				_event.m.Juggler.getSkills().update();
-				_event.m.Juggler.improveMood(1.000000, "上演一出精彩的玩火表演");
+				_event.m.Juggler.improveMood(1.0, "上演一出精彩的玩火表演");
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/melee_skill.png",

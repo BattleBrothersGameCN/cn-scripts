@@ -31,9 +31,9 @@ this.abducted_children_situation <- this.inherit("scripts/entity/world/settlemen
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.BuyPriceMult *= 1.250000;
-		_modifiers.SellPriceMult *= 0.750000;
-		_modifiers.RecruitsMult *= 0.500000;
+		_modifiers.BuyPriceMult *= 1.25;
+		_modifiers.SellPriceMult *= 0.75;
+		_modifiers.RecruitsMult *= 0.5;
 	}
 
 });

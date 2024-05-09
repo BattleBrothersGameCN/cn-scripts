@@ -17,14 +17,14 @@ this.khopesh <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_khopesh_01";
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 42.000000;
-		this.m.ConditionMax = 42.000000;
+		this.m.Condition = 42.0;
+		this.m.ConditionMax = 42.0;
 		this.m.StaminaModifier = -10;
 		this.m.Value = 1300;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 55;
-		this.m.ArmorDamageMult = 1.200000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.2;
+		this.m.DirectDamageMult = 0.25;
 	}
 
 	function onEquip()

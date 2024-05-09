@@ -53,7 +53,7 @@ this.horn_plate_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgr
 	{
 		if (_hitInfo.BodyPart == this.Const.BodyPart.Body)
 		{
-			_properties.DamageReceivedMeleeMult *= 0.900000;
+			_properties.DamageReceivedMeleeMult *= 0.9;
 		}
 	}
 

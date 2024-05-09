@@ -13,7 +13,7 @@ this.deep_abdominal_cut_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.HealingTimeMin = 3;
 		this.m.HealingTimeMax = 4;
 		this.m.IsShownOnBody = true;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -62,9 +62,9 @@ this.deep_abdominal_cut_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		if (this.getContainer().getActor().getHitpointsPct() > 0.750000)
+		if (this.getContainer().getActor().getHitpointsPct() > 0.75)
 		{
-			this.getContainer().getActor().setHitpoints(this.getContainer().getActor().getHitpointsMax() * 0.750000);
+			this.getContainer().getActor().setHitpoints(this.getContainer().getActor().getHitpointsMax() * 0.75);
 		}
 	}
 
@@ -79,10 +79,10 @@ this.deep_abdominal_cut_injury <- this.inherit("scripts/skills/injury/injury", {
 
 		if (this.m.IsShownOutOfCombat)
 		{
-			_properties.HitpointsMult *= 0.750000;
+			_properties.HitpointsMult *= 0.75;
 		}
 
-		_properties.StaminaMult *= 0.750000;
+		_properties.StaminaMult *= 0.75;
 	}
 
 });

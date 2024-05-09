@@ -9,7 +9,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.destroy_orc_camp";
 		this.m.Name = "摧毁兽人营地";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -27,17 +27,17 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 		else if (r == 3)
 		{
-			this.m.Payment.Completion = 0.500000;
-			this.m.Payment.Count = 0.500000;
+			this.m.Payment.Completion = 0.5;
+			this.m.Payment.Count = 0.5;
 		}
 
 		local maximumHeads = [
@@ -75,7 +75,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.Destination.clearTroops();
 				this.Contract.m.Destination.setLastSpawnTimeToNow();
 
-				if (this.Contract.getDifficultyMult() < 1.150000 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
+				if (this.Contract.getDifficultyMult() < 1.15 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
 				{
 					this.Contract.m.Destination.getLoot().clear();
 				}
@@ -84,7 +84,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.Destination.setLootScaleBasedOnResources(115 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				this.Contract.m.Destination.setResources(this.Math.min(this.Contract.m.Destination.getResources(), 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult()));
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 				this.Flags.set("HeadsCollected", 0);
 
 				if (this.World.FactionManager.getFaction(this.Contract.getFaction()).getFlags().get("Betrayed") && this.Math.rand(1, 100) <= 75)
@@ -101,7 +101,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 					}
 					else if (r <= 15 && this.World.Assets.getBusinessReputation() > 800)
 					{
-						if (this.Contract.getDifficultyMult() >= 0.950000)
+						if (this.Contract.getDifficultyMult() >= 0.95)
 						{
 							this.Flags.set("IsOrcsAgainstOrcs", true);
 						}
@@ -410,7 +410,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body) != null)
 				{
-					this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).setArmor(this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).getArmor() * 0.330000);
+					this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).setArmor(this.Contract.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).getArmor() * 0.33);
 				}
 
 				if (this.Contract.m.Dude.getTitle() == "")

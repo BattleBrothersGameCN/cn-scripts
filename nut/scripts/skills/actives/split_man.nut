@@ -32,7 +32,7 @@ this.split_man <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 15;
 		this.m.MinRange = 1;
@@ -45,7 +45,7 @@ this.split_man <- this.inherit("scripts/skills/skill", {
 	function getTooltip()
 	{
 		local p = this.getContainer().buildPropertiesForUse(this, null);
-		local mult = 1.500000;
+		local mult = 1.5;
 		local damage_regular_min = this.Math.floor(p.DamageRegularMin * p.DamageRegularMult * p.DamageTotalMult * mult * p.MeleeDamageMult);
 		local damage_regular_max = this.Math.floor(p.DamageRegularMax * p.DamageRegularMult * p.DamageTotalMult * mult * p.MeleeDamageMult);
 		local damage_armor_min = this.Math.floor(p.DamageRegularMin * p.DamageArmorMult * p.DamageTotalMult * mult * p.MeleeDamageMult);
@@ -69,7 +69,7 @@ this.split_man <- this.inherit("scripts/skills/skill", {
 			}
 		];
 
-		if (this.m.DirectDamageMult > 0.000000)
+		if (this.m.DirectDamageMult > 0.0)
 		{
 			ret.push({
 				id = 4,
@@ -109,7 +109,7 @@ this.split_man <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInAxes ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInAxes ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -127,14 +127,14 @@ this.split_man <- this.inherit("scripts/skills/skill", {
 		{
 			local p = this.getContainer().buildPropertiesForUse(this, targetEntity);
 			local hitInfo = clone this.Const.Tactical.HitInfo;
-			local damageRegular = this.Math.rand(p.DamageRegularMin, p.DamageRegularMax) * p.DamageRegularMult * 0.500000;
-			local damageArmor = this.Math.rand(p.DamageRegularMin, p.DamageRegularMax) * p.DamageArmorMult * 0.500000;
-			local damageDirect = this.Math.minf(1.000000, p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + p.DamageDirectMeleeAdd));
+			local damageRegular = this.Math.rand(p.DamageRegularMin, p.DamageRegularMax) * p.DamageRegularMult * 0.5;
+			local damageArmor = this.Math.rand(p.DamageRegularMin, p.DamageRegularMax) * p.DamageArmorMult * 0.5;
+			local damageDirect = this.Math.minf(1.0, p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + p.DamageDirectMeleeAdd));
 			hitInfo.DamageRegular = damageRegular;
 			hitInfo.DamageArmor = damageArmor;
 			hitInfo.DamageDirect = damageDirect;
 			hitInfo.BodyPart = this.m.ApplyBonusToBodyPart;
-			hitInfo.BodyDamageMult = 1.000000;
+			hitInfo.BodyDamageMult = 1.0;
 			targetEntity.onDamageReceived(this.getContainer().getActor(), this, hitInfo);
 			this.m.ApplyBonusToBodyPart = -1;
 		}

@@ -6,7 +6,7 @@ this.fainthearted_is_shellshocked_event <- this.inherit("scripts/events/event", 
 	{
 		this.m.ID = "event.fainthearted_is_shellshocked";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_12.png[/img]你发现 %fainthearted% 在营火前踟躇。 他的脸上有几点已经干了的血迹，他的手在颤抖。 有几个队员试着和他说话，但没有一个人能奏效。 最近一场残酷战斗让这个懦弱的人感到恐慌。",
@@ -26,7 +26,7 @@ this.fainthearted_is_shellshocked_event <- this.inherit("scripts/events/event", 
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Rookie.getImagePath());
-				_event.m.Rookie.worsenMood(1.500000, "对战争的恐怖感到震惊");
+				_event.m.Rookie.worsenMood(1.5, "对战争的恐怖感到震惊");
 
 				if (_event.m.Rookie.getMoodState() < this.Const.MoodState.Neutral)
 				{

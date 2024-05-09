@@ -54,7 +54,7 @@ this.sprained_ankle_injury <- this.inherit("scripts/skills/injury/injury", {
 		}
 
 		_properties.MovementAPCostAdditional += 1;
-		_properties.InitiativeMult *= 0.800000;
+		_properties.InitiativeMult *= 0.8;
 	}
 
 });

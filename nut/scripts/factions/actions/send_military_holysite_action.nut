@@ -3,7 +3,7 @@ this.send_military_holysite_action <- this.inherit("scripts/factions/faction_act
 	function create()
 	{
 		this.m.ID = "send_military_holysite_action";
-		this.m.Cooldown = 600.000000;
+		this.m.Cooldown = 600.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -74,7 +74,7 @@ this.send_military_holysite_action <- this.inherit("scripts/factions/faction_act
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -178,14 +178,14 @@ this.send_military_holysite_action <- this.inherit("scripts/factions/faction_act
 			c.addOrder(attack);
 			local occupy = this.new("scripts/ai/world/orders/occupy_order");
 			occupy.setTarget(target);
-			occupy.setTime(10.000000);
+			occupy.setTime(10.0);
 			c.addOrder(occupy);
 
 			if (i == 0)
 			{
 				local guard = this.new("scripts/ai/world/orders/guard_order");
 				guard.setTarget(target.getTile());
-				guard.setTime(240.000000);
+				guard.setTime(240.0);
 				c.addOrder(guard);
 			}
 		}

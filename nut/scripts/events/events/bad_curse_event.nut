@@ -9,7 +9,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.bad_curse";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%superstitious% 走进你的帐篷手里拿着帽子。 帽子的边缘在他的手指间一圈又一圈地转着，好像他在拔帽子的羽毛。 即使你一个字也没说，那个男人还是狂怒地点头，他的眼睛扫视四周，好像在寻找要说的话。\n\n你放下羽毛笔，问是什么问题。 他舔了舔嘴唇，又点头，开始解释他的困境。 他说得很快，是当地的一个女巫诅咒他，说他是性无能，大概意思就是这样。\n\n你摇着头，问那女巫想要什么，%superstitious% 说 %payment% 克朗，以免自己一辈子都受到诅咒。",
@@ -83,7 +83,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Cursed.getImagePath());
-				_event.m.Cursed.improveMood(3.000000, "被诅咒治愈");
+				_event.m.Cursed.improveMood(3.0, "被诅咒治愈");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Cursed.getMoodState()],
@@ -126,7 +126,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 						text = _event.m.Cursed.getName() + "是害怕的"
 					}
 				];
-				_event.m.Cursed.worsenMood(2.000000, "为你感到失望");
+				_event.m.Cursed.worsenMood(2.0, "为你感到失望");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Cursed.getMoodState()],
@@ -202,7 +202,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Cursed.getImagePath());
 				this.Characters.push(_event.m.Sorcerer.getImagePath());
-				_event.m.Cursed.improveMood(3.000000, "被诅咒治愈");
+				_event.m.Cursed.improveMood(3.0, "被诅咒治愈");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Cursed.getMoodState()],

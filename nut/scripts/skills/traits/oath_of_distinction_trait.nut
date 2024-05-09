@@ -53,7 +53,7 @@ this.oath_of_distinction_trait <- this.inherit("scripts/skills/traits/character_
 
 	function onUpdate( _properties )
 	{
-		_properties.XPGainMult *= 1.500000;
+		_properties.XPGainMult *= 1.5;
 		_properties.IsAllyXPBlocked = true;
 		local actor = this.getContainer().getActor();
 
@@ -84,7 +84,7 @@ this.oath_of_distinction_trait <- this.inherit("scripts/skills/traits/character_
 		{
 			_properties.Bravery += 10;
 			_properties.FatigueRecoveryRate += 3;
-			_properties.DamageTotalMult *= 1.100000;
+			_properties.DamageTotalMult *= 1.1;
 		}
 	}
 

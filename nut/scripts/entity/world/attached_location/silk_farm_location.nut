@@ -39,7 +39,7 @@ this.silk_farm_location <- this.inherit("scripts/entity/world/attached_location"
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "trade/silk_item"
 			});
 		}

@@ -40,12 +40,12 @@ this.emperors_armor <- this.inherit("scripts/items/armor/armor", {
 		if (_attacker != null && _attacker.isAlive() && _attacker.getHitpoints() > 0 && _attacker.getID() != this.getContainer().getActor().getID() && _attacker.getTile().getDistanceTo(this.getContainer().getActor().getTile()) == 1 && !_attacker.getCurrentProperties().IsImmuneToDamageReflection)
 		{
 			local hitInfo = clone this.Const.Tactical.HitInfo;
-			hitInfo.DamageRegular = this.Math.maxf(1.000000, _damage * 0.250000);
-			hitInfo.DamageArmor = this.Math.maxf(1.000000, _damage * 0.250000);
-			hitInfo.DamageDirect = 0.000000;
+			hitInfo.DamageRegular = this.Math.maxf(1.0, _damage * 0.25);
+			hitInfo.DamageArmor = this.Math.maxf(1.0, _damage * 0.25);
+			hitInfo.DamageDirect = 0.0;
 			hitInfo.BodyPart = this.Const.BodyPart.Body;
-			hitInfo.BodyDamageMult = 1.000000;
-			hitInfo.FatalityChanceMult = 0.000000;
+			hitInfo.BodyDamageMult = 1.0;
+			hitInfo.FatalityChanceMult = 0.0;
 			_attacker.onDamageReceived(_attacker, null, hitInfo);
 		}
 	}

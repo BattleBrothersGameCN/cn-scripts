@@ -12,7 +12,7 @@ this.unhold_graveyard_location <- this.inherit("scripts/entity/world/location", 
 		this.m.LocationType = this.Const.World.LocationType.Unique;
 		this.m.IsShowingDefenders = false;
 		this.m.IsShowingBanner = false;
-		this.m.VisibilityMult = 0.900000;
+		this.m.VisibilityMult = 0.9;
 		this.m.Resources = 500;
 		this.m.OnEnter = "event.location.unhold_graveyard";
 	}

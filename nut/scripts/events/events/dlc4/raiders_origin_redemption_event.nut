@@ -7,7 +7,7 @@ this.raiders_origin_redemption_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.raiders_origin_redemption_";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_40.png[/img]{%monk% 是一个僧侣，在这一点上，已经非常、非常远离了他在家时的样子了。 独自漂泊的日子已经够苦了，而在路上的日子充满了暴力和掠夺，甚至更糟。 他主动来找你提出要求，这并不奇怪。 尽管在战团已经有一段时间了，但很明显，他仍然是一个文明人。\n\n 他解释了一条古老的法律：作为一名掠夺者，你是不受欢迎的人，但作为一名拥有大量金钱的掠夺者，你仍有机会以自己的方式重新与这片土地上的贵族打交道。 僧侣说他知道谁掌权。 显然，%noblehouse% 对“开辟新渠道”很感兴趣，他们想要 %crowns% 克朗来适应新事物。确切说是文明。}",
@@ -69,7 +69,7 @@ this.raiders_origin_redemption_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/asset_money.png",
 					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-2000[/color] 克朗"
 				});
-				_event.m.NobleHouse.addPlayerRelation(20.000000, "被贿赂来与你打交道。");
+				_event.m.NobleHouse.addPlayerRelation(20.0, "被贿赂来与你打交道。");
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/relations.png",
@@ -114,7 +114,7 @@ this.raiders_origin_redemption_event <- this.inherit("scripts/events/event", {
 
 		foreach( n in nobles )
 		{
-			if (n.getPlayerRelation() > 5.000000 && n.getPlayerRelation() < 25.000000)
+			if (n.getPlayerRelation() > 5.0 && n.getPlayerRelation() < 25.0)
 			{
 				candidates_nobles.push(n);
 			}

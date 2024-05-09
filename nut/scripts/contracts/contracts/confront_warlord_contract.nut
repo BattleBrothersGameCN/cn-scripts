@@ -11,16 +11,16 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r <= 70)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
 		this.m.Type = "contract.confront_warlord";
 		this.m.Name = "挑战兽人军阀";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -35,12 +35,12 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("Score", 0);
@@ -72,7 +72,7 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
 				this.Flags.set("MaxScore", 10 * this.Contract.getDifficultyMult());
-				this.Flags.set("LastRandomTime", 0.000000);
+				this.Flags.set("LastRandomTime", 0.0);
 				local r = this.Math.rand(1, 100);
 
 				if (r <= 10)
@@ -104,7 +104,7 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 					this.Contract.setScreen("MadeADent");
 					this.World.Contracts.showActiveContract();
 				}
-				else if (this.Flags.get("LastRandomTime") + 300.000000 <= this.Time.getVirtualTimeF() && this.Contract.getDistanceToNearestSettlement() >= 5 && this.Math.rand(1, 1000) <= 1)
+				else if (this.Flags.get("LastRandomTime") + 300.0 <= this.Time.getVirtualTimeF() && this.Contract.getDistanceToNearestSettlement() >= 5 && this.Math.rand(1, 1000) <= 1)
 				{
 					this.Flags.set("LastRandomTime", this.Time.getVirtualTimeF());
 					this.Contract.setScreen("ClosingIn");
@@ -221,7 +221,7 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 					{
 						if (e.getType() == this.Const.EntityType.OrcWarlord)
 						{
-							e.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.000000;
+							e.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.0;
 							e.getFlags().add("IsFinalBoss", true);
 							break;
 						}
@@ -490,7 +490,7 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (bro.getBackground().getID() == "background.houndmaster")
 					{
-						bro.worsenMood(1.000000, "你没有阻止战犬被兽人吃掉");
+						bro.worsenMood(1.0, "你没有阻止战犬被兽人吃掉");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

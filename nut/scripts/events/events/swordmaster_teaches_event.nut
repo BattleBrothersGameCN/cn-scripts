@@ -7,7 +7,7 @@ this.swordmaster_teaches_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.swordmaster_teaches";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_17.png[/img]一位老人的声音静静地发布命令。%SPEECH_ON%脚步为先，身体跟上。再说一遍。%SPEECH_OFF%你发现 %swordmaster% 这个剑术大师和 %swordstudent% 正在旷野中练习。 这个长者正在为最近看到的剑法摇头。%SPEECH_ON%脚步为先，身体跟上。再说一遍！%SPEECH_OFF%这个学生正在练习他所学的东西。 剑术大师点了点头，又吼着下命令。%SPEECH_ON%现在，反过来做。 脚步后退，身体跟上。 不要总想着后退。 让你的脚步跟上你的想法。 果敢才能生存！犹豫就会败北！ 像适者生存要求的那样行动。 如果一阵风吹向你，是不是要快过你听到树叶的声音？ 我看到了。很好…你正在学。现在…再来一次。%SPEECH_OFF%",
@@ -32,8 +32,8 @@ this.swordmaster_teaches_event <- this.inherit("scripts/events/event", {
 				_event.m.Student.getBaseProperties().MeleeDefense += meleeDefense;
 				_event.m.Student.getSkills().update();
 				_event.m.Student.getFlags().add("taughtBySwordmaster");
-				_event.m.Student.improveMood(0.500000, "学习 " + _event.m.Teacher.getName());
-				_event.m.Teacher.improveMood(1.000000, "教授了" + _event.m.Student.getName() + "某些东西");
+				_event.m.Student.improveMood(0.5, "学习 " + _event.m.Teacher.getName());
+				_event.m.Teacher.improveMood(1.0, "教授了" + _event.m.Student.getName() + "某些东西");
 				this.List = [
 					{
 						id = 17,

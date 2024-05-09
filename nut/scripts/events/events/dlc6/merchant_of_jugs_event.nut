@@ -4,7 +4,7 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.merchant_of_jugs";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_171.png[/img]{一个孤独的商人牵着骆驼拉的载重货车走了过来。 不小的瓶瓶罐罐在他货车底部磕磕碰碰，每一个的开口上系着根干草绳连在一起。 他在骆驼上弓起身并把腿摆向它的一边，他的靴子轻叩马镫。%SPEECH_ON%你好，旅行者，我祝你通往硬币的道路更加的金光闪耀。 我的已经是了，尽管我们的相逢恐怕恰巧在一个我的闪光数量上不多的时刻。 我只剩下了一点货物，都是些喝的。 50克朗一罐。有兴趣吗？%SPEECH_OFF%}",
@@ -74,7 +74,7 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 					{
 						if (this.Math.rand(1, 100) <= 33)
 						{
-							bro.improveMood(1.000000, "喝到清爽的饮料");
+							bro.improveMood(1.0, "喝到清爽的饮料");
 
 							if (bro.getMoodState() > this.Const.MoodState.Neutral)
 							{
@@ -120,7 +120,7 @@ this.merchant_of_jugs_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(1.000000, "喝到清爽的饮料");
+						bro.improveMood(1.0, "喝到清爽的饮料");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{

@@ -6,7 +6,7 @@ this.runaway_laborers_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.runaway_laborers";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_59.png[/img]当你走在路上时，一群衣衫褴褛的人从你身边狂奔而过。 他们或离开小径，或跳下路堤，或是躲在灌木丛的屏障后。\n\n灌木丛还在摇晃，很快又有一群人出现了。 在对方的领头开口之前，你就已经知道发生什么了。 显然，一些工人联合起来，因为一些追踪他们的监工只是轻描淡写地称作“问题”的原因放弃了工程。 他们问你有没有见过那群消极怠工的家伙。",
@@ -161,7 +161,7 @@ this.runaway_laborers_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

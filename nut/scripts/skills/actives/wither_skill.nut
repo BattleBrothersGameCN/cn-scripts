@@ -13,7 +13,7 @@ this.wither_skill <- this.inherit("scripts/skills/skill", {
 			"sounds/enemies/dlc6/wither_02.wav",
 			"sounds/enemies/dlc6/wither_03.wav"
 		];
-		this.m.SoundVolume = 1.200000;
+		this.m.SoundVolume = 1.2;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.UtilityTargeted;
 		this.m.Delay = 0;

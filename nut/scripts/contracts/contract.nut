@@ -8,8 +8,8 @@ this.contract <- {
 		Home = null,
 		Origin = null,
 		SituationID = 0,
-		DifficultyMult = 1.000000,
-		PaymentMult = 1.000000,
+		DifficultyMult = 1.0,
+		PaymentMult = 1.0,
 		Screens = [],
 		States = [],
 		ActiveScreen = null,
@@ -19,25 +19,25 @@ this.contract <- {
 		UnitsSpawned = [],
 		BulletpointsObjectives = [],
 		BulletpointsPayment = [],
-		TimeOut = 0.000000,
+		TimeOut = 0.0,
 		Payment = {
 			Annoyance = 0,
-			Pool = 0.000000,
-			Advance = 0.000000,
-			Completion = 0.000000,
-			Count = 0.000000,
+			Pool = 0.0,
+			Advance = 0.0,
+			Completion = 0.0,
+			Count = 0.0,
 			MaxCount = 0,
 			IsNegotiating = false,
 			IsFinal = false,
 			function getInAdvance()
 			{
-				local n = this.Math.round(this.Pool * this.Advance * this.Const.Contracts.Settings.PaymentInAdvanceMult * 0.100000);
+				local n = this.Math.round(this.Pool * this.Advance * this.Const.Contracts.Settings.PaymentInAdvanceMult * 0.1);
 				return n * 10;
 			}
 
 			function getOnCompletion()
 			{
-				local n = this.Math.round(this.Pool * this.Completion * this.Const.Contracts.Settings.PaymentOnCompletionMult * 0.100000);
+				local n = this.Math.round(this.Pool * this.Completion * this.Const.Contracts.Settings.PaymentOnCompletionMult * 0.1);
 				return n * 10;
 			}
 
@@ -225,18 +225,18 @@ this.contract <- {
 
 		if (r <= 30)
 		{
-			this.m.DifficultyMult = this.Math.rand(70, 85) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(70, 85) * 0.01;
 		}
 		else if (r <= 80)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
-		this.m.PaymentMult = this.Math.rand(90, 110) * 0.010000;
+		this.m.PaymentMult = this.Math.rand(90, 110) * 0.01;
 		this.m.Flags = this.new("scripts/tools/tag_collection");
 		this.m.TempFlags = this.new("scripts/tools/tag_collection");
 		this.createStates();
@@ -643,15 +643,15 @@ this.contract <- {
 
 	function getUIDifficultySmall()
 	{
-		if (this.m.DifficultyMult < 0.900000)
+		if (this.m.DifficultyMult < 0.9)
 		{
 			return "ui/icons/difficulty_easy";
 		}
-		else if (this.m.DifficultyMult >= 0.900000 && this.m.DifficultyMult <= 1.100000)
+		else if (this.m.DifficultyMult >= 0.9 && this.m.DifficultyMult <= 1.1)
 		{
 			return "ui/icons/difficulty_medium";
 		}
-		else if (this.m.DifficultyMult > 1.100000)
+		else if (this.m.DifficultyMult > 1.1)
 		{
 			return "ui/icons/difficulty_hard";
 		}
@@ -736,21 +736,21 @@ this.contract <- {
 	{
 		if (("ShowDifficulty" in this.m.ActiveScreen) && this.m.ActiveScreen.ShowDifficulty)
 		{
-			if (this.m.DifficultyMult < 0.900000)
+			if (this.m.DifficultyMult < 0.9)
 			{
 				return {
 					Image = "ui/images/difficulty_easy.png",
 					IsProcedural = false
 				};
 			}
-			else if (this.m.DifficultyMult >= 0.900000 && this.m.DifficultyMult <= 1.100000)
+			else if (this.m.DifficultyMult >= 0.9 && this.m.DifficultyMult <= 1.1)
 			{
 				return {
 					Image = "ui/images/difficulty_medium.png",
 					IsProcedural = false
 				};
 			}
-			else if (this.m.DifficultyMult > 1.100000)
+			else if (this.m.DifficultyMult > 1.1)
 			{
 				return {
 					Image = "ui/images/difficulty_hard.png",
@@ -1010,20 +1010,20 @@ this.contract <- {
 
 	function getScaledDifficultyMult()
 	{
-		local s = this.Math.maxf(0.750000, 0.940000 * this.Math.pow(0.010000 * this.World.State.getPlayer().getStrength(), 0.890000));
-		local d = this.Math.minf(5.000000, s);
+		local s = this.Math.maxf(0.75, 0.94 * this.Math.pow(0.01 * this.World.State.getPlayer().getStrength(), 0.89));
+		local d = this.Math.minf(5.0, s);
 		return d * this.Const.Difficulty.EnemyMult[this.World.Assets.getCombatDifficulty()];
 	}
 
 	function getReputationToPaymentMult()
 	{
-		local r = this.Math.minf(2.600000, this.Math.maxf(1.350000, this.Math.pow(this.Math.maxf(0, 0.003000 * this.World.Assets.getBusinessReputation()), 0.390000)));
+		local r = this.Math.minf(2.5999999, this.Math.maxf(1.35, this.Math.pow(this.Math.maxf(0, 0.003 * this.World.Assets.getBusinessReputation()), 0.39)));
 		return r * this.Const.Difficulty.PaymentMult[this.World.Assets.getEconomicDifficulty()];
 	}
 
 	function getReputationToPaymentLightMult()
 	{
-		local r = this.Math.minf(1.900000, this.Math.maxf(1.300000, this.Math.pow(this.Math.maxf(0, 0.003000 * this.World.Assets.getBusinessReputation()), 0.350000)));
+		local r = this.Math.minf(1.9, this.Math.maxf(1.3, this.Math.pow(this.Math.maxf(0, 0.003 * this.World.Assets.getBusinessReputation()), 0.35)));
 		return r * this.Const.Difficulty.PaymentMult[this.World.Assets.getEconomicDifficulty()];
 	}
 
@@ -1034,8 +1034,8 @@ this.contract <- {
 
 	function beautifyNumber( _n )
 	{
-		_n = this.Math.round(_n * 0.100000);
-		_n = _n * 10.000000;
+		_n = this.Math.round(_n * 0.1);
+		_n = _n * 10.0;
 		return _n;
 	}
 
@@ -1083,11 +1083,11 @@ this.contract <- {
 			speed = speed * this.Const.World.MovementSettings.RoadMult;
 		}
 
-		local seconds = _numTiles * 170.000000 / speed;
+		local seconds = _numTiles * 170.0 / speed;
 
-		if (seconds / this.World.getTime().SecondsPerDay > 1.000000)
+		if (seconds / this.World.getTime().SecondsPerDay > 1.0)
 		{
-			seconds = seconds * 1.100000;
+			seconds = seconds * 1.1;
 		}
 
 		return this.Math.max(1, this.Math.round(seconds / this.World.getTime().SecondsPerDay));
@@ -1139,7 +1139,7 @@ this.contract <- {
 
 	function isEnemiesNearby()
 	{
-		local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+		local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 
 		foreach( party in parties )
 		{
@@ -1159,7 +1159,7 @@ this.contract <- {
 
 		foreach( party in _partyList )
 		{
-			if (party.Cost < _resources * 0.700000)
+			if (party.Cost < _resources * 0.7)
 			{
 				continue;
 			}
@@ -1211,11 +1211,11 @@ this.contract <- {
 		{
 			local mb;
 
-			if (this.getDifficultyMult() >= 1.150000)
+			if (this.getDifficultyMult() >= 1.15)
 			{
 				mb = 5;
 			}
-			else if (this.getDifficultyMult() >= 0.850000)
+			else if (this.getDifficultyMult() >= 0.85)
 			{
 				mb = 0;
 			}
@@ -1555,7 +1555,7 @@ this.contract <- {
 	{
 		local navSettings = this.World.getNavigator().createSettings();
 		navSettings.ActionPointCosts = this.Const.World.TerrainTypeNavCost;
-		navSettings.RoadMult = 0.200000;
+		navSettings.RoadMult = 0.2;
 		navSettings.RoadOnly = true;
 		local path = this.World.getNavigator().findPath(_start, _dest, navSettings, 0);
 

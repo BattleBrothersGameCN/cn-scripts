@@ -19,8 +19,8 @@ this.deserters_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 		_bro.setStartValuesEx([
 			"deserter_background"
 		]);
-		_bro.worsenMood(1.000000, "从一场血战拖到下一场");
-		_bro.improveMood(1.500000, "被军队遗弃");
+		_bro.worsenMood(1.0, "从一场血战拖到下一场");
+		_bro.improveMood(1.5, "被军队遗弃");
 		_bro.m.HireTime = this.Time.getVirtualTimeF();
 		_bro.m.Talents = [];
 		_bro.m.Attributes = [];
@@ -43,12 +43,12 @@ this.deserters_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 
 		if (this.Math.rand(1, 100) <= 33 && items.getItemAtSlot(this.Const.ItemSlot.Head) != null)
 		{
-			items.getItemAtSlot(this.Const.ItemSlot.Head).setCondition(items.getItemAtSlot(this.Const.ItemSlot.Head).getConditionMax() * 0.500000);
+			items.getItemAtSlot(this.Const.ItemSlot.Head).setCondition(items.getItemAtSlot(this.Const.ItemSlot.Head).getConditionMax() * 0.5);
 		}
 
 		if (this.Math.rand(1, 100) <= 33 && items.getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
 		{
-			items.getItemAtSlot(this.Const.ItemSlot.Mainhand).setCondition(items.getItemAtSlot(this.Const.ItemSlot.Mainhand).getConditionMax() * 0.500000);
+			items.getItemAtSlot(this.Const.ItemSlot.Mainhand).setCondition(items.getItemAtSlot(this.Const.ItemSlot.Mainhand).getConditionMax() * 0.5);
 		}
 
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Body));
@@ -73,7 +73,7 @@ this.deserters_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 			armor = this.new("scripts/items/armor/basic_mail_shirt");
 		}
 
-		armor.setCondition(armor.getConditionMax() * this.Math.rand(25, 100) * 0.010000);
+		armor.setCondition(armor.getConditionMax() * this.Math.rand(25, 100) * 0.01);
 		items.equip(armor);
 	}
 
@@ -142,7 +142,7 @@ this.deserters_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 		this.World.Assets.updateLook(12);
 		this.World.getCamera().setPos(this.World.State.m.Player.getPos());
 		local f = randomVillage.getFactionOfType(this.Const.FactionType.NobleHouse);
-		f.addPlayerRelation(-100.000000, "你和你的人都被遗弃了");
+		f.addPlayerRelation(-100.0, "你和你的人都被遗弃了");
 		local names = [];
 
 		for( local i = 0; i < 3; i = ++i )

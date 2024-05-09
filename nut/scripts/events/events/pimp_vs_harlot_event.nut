@@ -10,7 +10,7 @@ this.pimp_vs_harlot_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.pimp_vs_harlot";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_92.png[/img]你在小镇的一栋建筑外面遇见了一个男人和一个女人正在争吵。%SPEECH_ON%为什么我要给你所有的东西？ 所有事都是我做的！%SPEECH_OFF%女人喊道。男人摸了摸下巴，回答道。%SPEECH_ON%我负责拉拢业务！ 如果没有我，你找到的工作吗？%SPEECH_OFF%那个女人看见了你，回过头来问你愿不愿意跟她上床。 她看起来就像是两个圆圈和一个三角，你有点想要来一发。 女人伸出手来，说道。%SPEECH_ON%看？只要我张开双腿，半个世界都准备着和我做生意。%SPEECH_OFF%想当皮条客的人请你对他的“前景”讲点道理。",
@@ -135,7 +135,7 @@ this.pimp_vs_harlot_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Minstrel.getImagePath());
-				_event.m.Minstrel.improveMood(2.000000, "被他自己的诗迷住了");
+				_event.m.Minstrel.improveMood(2.0, "被他自己的诗迷住了");
 
 				if (_event.m.Minstrel.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -181,7 +181,7 @@ this.pimp_vs_harlot_event <- this.inherit("scripts/events/event", {
 					text = _event.m.Tailor.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+2[/color]主动值"
 				});
 				this.Characters.push(_event.m.Tailor.getImagePath());
-				_event.m.Tailor.improveMood(1.000000, "把一个皮条客剪成合适的尺寸");
+				_event.m.Tailor.improveMood(1.0, "把一个皮条客剪成合适的尺寸");
 
 				if (_event.m.Tailor.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -226,7 +226,7 @@ this.pimp_vs_harlot_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Monk.improveMood(1.000000, "带领一个人回到正确的道路上");
+				_event.m.Monk.improveMood(1.0, "带领一个人回到正确的道路上");
 
 				if (_event.m.Monk.getMoodState() >= this.Const.MoodState.Neutral)
 				{

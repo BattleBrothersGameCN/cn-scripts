@@ -6,7 +6,7 @@ this.glutton_gets_fat_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.glutton_gets_fat";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_14.png[/img] 你看见 %glutton% 已经第三次在找食了。 他吃的太多了，于是你勒令这是他今天最后一次吃东西。 一位兄弟凑过来，嘲笑他的食量。 馋嘴的家伙勃然大怒，一把摔下手中的吃食站了起来。 但他的肚子却没那么听话，软软的甩起来使他失去了重心一屁股坐倒在地，摔成一滩挥舞着手臂的肉山。 就在其他兄弟们大笑不止的时候，你不得不担心这个佣兵是不是太胖了。",

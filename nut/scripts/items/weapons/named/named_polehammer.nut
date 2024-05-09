@@ -17,16 +17,16 @@ this.named_polehammer <- this.inherit("scripts/items/weapons/named/named_weapon"
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3200;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 100.000000;
-		this.m.ConditionMax = 100.000000;
+		this.m.Condition = 100.0;
+		this.m.ConditionMax = 100.0;
 		this.m.StaminaModifier = -14;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 75;
-		this.m.ArmorDamageMult = 1.850000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 1.85;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ChanceToHitHead = 5;
 		this.randomizeValues();
 	}

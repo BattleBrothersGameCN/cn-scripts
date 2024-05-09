@@ -1,7 +1,7 @@
 local gt = this.getroottable();
 gt.Const.Movement <- {
 	AutoEndTurnBelowAP = 2,
-	FatigueCostFactor = 0.250000,
+	FatigueCostFactor = 0.25,
 	LevelDifferenceActionPointCost = 1,
 	LevelDifferenceFatigueCost = 4,
 	LevelClimbingFatigueCost = 0,
@@ -12,7 +12,7 @@ gt.Const.Movement <- {
 	EnemySelectionFadeTime = 500
 };
 gt.Const.XP <- {
-	XPForKillerPct = 0.200000,
+	XPForKillerPct = 0.2,
 	MaxLevelWithPerkpoints = 11
 };
 gt.Const.BusinessReputation <- [
@@ -61,12 +61,12 @@ for( local i = 0; i < 22; i = ++i )
 }
 
 gt.Const.Combat <- {
-	GlobalXPMult = 0.850000,
-	GlobalXPVeteranLevelMult = 1.000000,
-	WeaponSpecFatigueMult = 0.750000,
+	GlobalXPMult = 0.85,
+	GlobalXPVeteranLevelMult = 1.0,
+	WeaponSpecFatigueMult = 0.75,
 	RetreatDeathChanceNotAtBorder = 0,
-	InitiativeAfterWaitMult = 0.750000,
-	InjuryThresholdMult = 1.000000,
+	InitiativeAfterWaitMult = 0.75,
+	InjuryThresholdMult = 1.0,
 	InjuryMinDamage = 10,
 	SurviveWithInjuryChance = 33,
 	FatigueReceivedPerHit = 5,
@@ -76,13 +76,13 @@ gt.Const.Combat <- {
 	LevelDifferenceToHitMalus = -10,
 	OverwhelmDefenseMalus = -10,
 	AttackOfOpportunityLimit = 999,
-	RangedAttackBlockedChance = 0.750000,
+	RangedAttackBlockedChance = 0.75,
 	FallingDamage = 10,
-	ArmorDirectDamageMitigationMult = 0.100000,
+	ArmorDirectDamageMitigationMult = 0.1,
 	PoisonEffectMinDamage = 6,
 	AlertWeaponBreakingCondition = 12,
-	WeaponDurabilityLossOnHit = 3.000000,
-	WeaponDurabilityLossOnUse = 2.000000,
+	WeaponDurabilityLossOnHit = 3.0,
+	WeaponDurabilityLossOnUse = 2.0,
 	MinDamageToApplyBleeding = 6,
 	BasicShieldDamage = 1,
 	HumanCorpseOffset = this.createVec(0, 10),
@@ -95,10 +95,10 @@ gt.Const.Combat <- {
 	SpawnBloodEffectMinDamage = 8,
 	PlayHitSoundMinDamage = 1,
 	PlayPainSoundMinDamage = 6,
-	PlayPainVolumeMaxDamage = 20.000000,
-	BloodSplattersAtDeathMult = 1.000000,
-	BloodSplattersAtOriginalPosMult = 0.050000,
-	DustSplattersAtResurrectionMult = 1.000000,
+	PlayPainVolumeMaxDamage = 20.0,
+	BloodSplattersAtDeathMult = 1.0,
+	BloodSplattersAtOriginalPosMult = 0.05,
+	DustSplattersAtResurrectionMult = 1.0,
 	BloodPoolsAtDeathMin = 4,
 	BloodPoolsAtDeathMax = 4,
 	BloodiedBustCount = 4,
@@ -109,24 +109,24 @@ gt.Const.Combat <- {
 	SpawnArrowDecalChance = 100,
 	SpawnArrowDecalAttempts = 3,
 	SpawnProjectileMinDist = 2,
-	ShowDamagedArmorThreshold = 0.500000,
-	ShowDamagedShieldThreshold = 0.500000,
+	ShowDamagedArmorThreshold = 0.5,
+	ShowDamagedShieldThreshold = 0.5,
 	StunnedBrush = "bust_stunned",
 	ShakeEffectHitpointsHitColor = this.createColor("#ffffff"),
 	ShakeEffectHitpointsHitHighlight = this.createColor("#600a0a"),
-	ShakeEffectHitpointsHitFactor = 0.500000,
+	ShakeEffectHitpointsHitFactor = 0.5,
 	ShakeEffectArmorHitColor = this.createColor("#ffffff"),
 	ShakeEffectArmorHitHighlight = this.createColor("#ffffff"),
-	ShakeEffectArmorHitFactor = 0.500000,
-	ShakeEffectHitpointsSaturation = 1.000000,
-	ShakeEffectArmorSaturation = 1.000000,
+	ShakeEffectArmorHitFactor = 0.5,
+	ShakeEffectHitpointsSaturation = 1.0,
+	ShakeEffectArmorSaturation = 1.0,
 	ShakeEffectSplitShieldColor = this.createColor("#ffffff"),
 	ShakeEffectSplitShieldHighlight = this.createColor("#ffffff"),
-	ShakeEffectSplitShieldFactor = 0.500000,
-	ResurrectAnimationTime = 1.000000,
-	ResurrectAnimationDistance = -200.000000,
-	RootedAnimationTime = 0.500000,
-	ZweihanderFatigueMult = 0.800000,
+	ShakeEffectSplitShieldFactor = 0.5,
+	ResurrectAnimationTime = 1.0,
+	ResurrectAnimationDistance = -200.0,
+	RootedAnimationTime = 0.5,
+	ZweihanderFatigueMult = 0.8,
 	StealthFailRadius = 4
 };
 gt.Const.Corpse <- {
@@ -136,15 +136,15 @@ gt.Const.Corpse <- {
 	CorpseName = "",
 	Description = "",
 	Tile = null,
-	Value = 1.000000,
+	Value = 1.0,
 	IsConsumable = true,
 	IsResurrectable = false,
 	IsRestoringSkin = false,
 	IsHeadAttached = true,
 	IsPlayer = false,
 	Color = this.createColor("#ffffff"),
-	Saturation = 1.000000,
-	Hitpoints = 0.450000,
+	Saturation = 1.0,
+	Hitpoints = 0.45,
 	Armor = [
 		0,
 		0
@@ -194,15 +194,15 @@ gt.Const.ShakeCharacterLayers <- [
 ];
 gt.Const.Morale <- {
 	EnemyKilledBaseDifficulty = -30,
-	EnemyKilledXPMult = 0.040000,
-	EnemyKilledDistancePow = 3.000000,
+	EnemyKilledXPMult = 0.04,
+	EnemyKilledDistancePow = 3.0,
 	EnemyKilledSelfBonus = 15,
 	AllyKilledBaseDifficulty = 20,
-	AllyKilledXPMult = 0.035000,
-	AllyKilledDistancePow = 2.400000,
+	AllyKilledXPMult = 0.035,
+	AllyKilledDistancePow = 2.4000001,
 	AllyFleeingBaseDifficulty = 30,
-	AllyFleeingXPMult = 0.035000,
-	AllyFleeingDistancePow = 3.000000,
+	AllyFleeingXPMult = 0.035,
+	AllyFleeingDistancePow = 3.0,
 	OnHitMinDamage = 15,
 	OnHitBaseDifficulty = -40,
 	RallyBaseDifficulty = 0,
@@ -320,34 +320,34 @@ gt.Const.ArmorStateName <- [
 	"完好无损"
 ];
 gt.Const.MoodChange <- {
-	DrunkAtTavern = 1.000000,
-	NotPaid = 1.000000,
-	NotPaidGreedy = 2.000000,
-	NotEaten = 1.000000,
-	NotEatenSpartan = 0.500000,
-	NotEatenGluttonous = 2.000000,
-	BrotherDied = 0.250000,
-	BrotherDismissed = 0.500000,
-	VeteranDismissed = 1.000000,
-	SlaveCompensated = 0.350000,
-	BattleWithoutMe = 0.200000,
-	BattleWon = 0.350000,
-	BattleLost = 0.450000,
-	BattleRetreat = 0.250000,
-	TooFewSlaves = 0.500000,
-	TooFewSlavesInBattle = 1.000000,
-	PermanentInjury = 1.350000,
-	Injury = 0.150000,
-	NearCity = 0.100000,
-	StandardLost = 0.250000,
-	AmbitionFulfilled = 1.000000,
-	AmbitionFailed = 0.750000,
-	OptimistMult = 1.330000,
-	PessimistMult = 1.330000,
+	DrunkAtTavern = 1.0,
+	NotPaid = 1.0,
+	NotPaidGreedy = 2.0,
+	NotEaten = 1.0,
+	NotEatenSpartan = 0.5,
+	NotEatenGluttonous = 2.0,
+	BrotherDied = 0.25,
+	BrotherDismissed = 0.5,
+	VeteranDismissed = 1.0,
+	SlaveCompensated = 0.35,
+	BattleWithoutMe = 0.2,
+	BattleWon = 0.35,
+	BattleLost = 0.45,
+	BattleRetreat = 0.25,
+	TooFewSlaves = 0.5,
+	TooFewSlavesInBattle = 1.0,
+	PermanentInjury = 1.35,
+	Injury = 0.15,
+	NearCity = 0.1,
+	StandardLost = 0.25,
+	AmbitionFulfilled = 1.0,
+	AmbitionFailed = 0.75,
+	OptimistMult = 1.33,
+	PessimistMult = 1.33,
 	CheckIntervalHours = 4,
-	RecoveryPerHour = 0.015000,
-	RelativeRecoveryPerHour = 0.010000,
-	Timeout = 5.000000 * this.World.getTime().SecondsPerDay
+	RecoveryPerHour = 0.015,
+	RelativeRecoveryPerHour = 0.01,
+	Timeout = 5.0 * this.World.getTime().SecondsPerDay
 };
 gt.Const.MoodState <- {
 	Angry = 0,
@@ -562,16 +562,16 @@ gt.Const.BloodPoolDecals <- [
 	[]
 ];
 gt.Const.BloodPoolTerrainAlpha <- [
-	0.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	1.000000,
-	0.660000,
-	0.800000,
-	0.660000,
-	0.660000
+	0.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	1.0,
+	0.66,
+	0.8,
+	0.66,
+	0.66
 ];
 gt.Const.CorpsePart <- [
 	"corpse_part_01",
@@ -750,122 +750,122 @@ gt.Const.CharacterProperties <- {
 	}
 
 	ActionPoints = 0,
-	ActionPointsMult = 1.000000,
+	ActionPointsMult = 1.0,
 	AdditionalActionPointCost = 0,
 	Hitpoints = 0,
-	HitpointsMult = 1.000000,
+	HitpointsMult = 1.0,
 	HitpointsRecoveryRate = 0,
-	HitpointsRecoveryRateMult = 1.000000,
+	HitpointsRecoveryRateMult = 1.0,
 	Bravery = 0,
-	BraveryMult = 1.000000,
-	MoraleEffectMult = 1.000000,
+	BraveryMult = 1.0,
+	MoraleEffectMult = 1.0,
 	Stamina = 0,
-	StaminaMult = 1.000000,
+	StaminaMult = 1.0,
 	FatigueOnSkillUse = 0,
-	FatigueEffectMult = 1.000000,
+	FatigueEffectMult = 1.0,
 	FatigueRecoveryRate = 15,
-	FatigueRecoveryRateMult = 1.000000,
-	FatigueArmorMult = 1.000000,
-	FatigueToInitiativeRate = 1.000000,
+	FatigueRecoveryRateMult = 1.0,
+	FatigueArmorMult = 1.0,
+	FatigueToInitiativeRate = 1.0,
 	Initiative = 0,
-	InitiativeMult = 1.000000,
-	InitiativeForTurnOrderMult = 1.000000,
+	InitiativeMult = 1.0,
+	InitiativeForTurnOrderMult = 1.0,
 	InitiativeForTurnOrderAdditional = 0,
 	InitiativeAfterWaitMult = this.Const.Combat.InitiativeAfterWaitMult,
 	MeleeSkill = 0,
-	MeleeSkillMult = 1.000000,
+	MeleeSkillMult = 1.0,
 	RangedSkill = 0,
-	RangedSkillMult = 1.000000,
-	TotalAttackToHitMult = 1.000000,
-	TotalDefenseToHitMult = 1.000000,
+	RangedSkillMult = 1.0,
+	TotalAttackToHitMult = 1.0,
+	TotalDefenseToHitMult = 1.0,
 	MeleeDefense = 0,
-	MeleeDefenseMult = 1.000000,
+	MeleeDefenseMult = 1.0,
 	RangedDefense = 0,
-	RangedDefenseMult = 1.000000,
+	RangedDefenseMult = 1.0,
 	Threat = 0,
 	ThreatOnHit = 0,
 	Vision = 7,
-	VisionMult = 1.000000,
-	XPGainMult = 1.000000,
+	VisionMult = 1.0,
+	XPGainMult = 1.0,
 	MovementAPCostAdditional = 0,
-	MovementAPCostMult = 1.000000,
+	MovementAPCostMult = 1.0,
 	MovementFatigueCostAdditional = 0,
-	MovementFatigueCostMult = 1.000000,
-	RangedAttackBlockedChanceMult = 1.000000,
-	FatalityChanceMult = 1.000000,
-	DamageReceivedRegularMult = 1.000000,
-	DamageReceivedArmorMult = 1.000000,
-	DamageReceivedDirectMult = 1.000000,
-	DamageReceivedRangedMult = 1.000000,
-	DamageReceivedMeleeMult = 1.000000,
-	DamageReceivedTotalMult = 1.000000,
+	MovementFatigueCostMult = 1.0,
+	RangedAttackBlockedChanceMult = 1.0,
+	FatalityChanceMult = 1.0,
+	DamageReceivedRegularMult = 1.0,
+	DamageReceivedArmorMult = 1.0,
+	DamageReceivedDirectMult = 1.0,
+	DamageReceivedRangedMult = 1.0,
+	DamageReceivedMeleeMult = 1.0,
+	DamageReceivedTotalMult = 1.0,
 	DamageRegularReduction = 0,
 	DamageArmorReduction = 0,
 	Armor = [
-		0.000000,
-		0.000000
+		0.0,
+		0.0
 	],
 	ArmorMax = [
-		0.000000,
-		0.000000
+		0.0,
+		0.0
 	],
 	ArmorMult = [
-		1.000000,
-		1.000000
+		1.0,
+		1.0
 	],
-	FatigueReceivedPerHitMult = 1.000000,
+	FatigueReceivedPerHitMult = 1.0,
 	MoraleCheckBravery = [
 		0,
 		0,
 		0
 	],
 	MoraleCheckBraveryMult = [
-		1.000000,
-		1.000000,
-		1.000000
+		1.0,
+		1.0,
+		1.0
 	],
-	ThresholdToReceiveInjuryMult = 1.000000,
-	SurviveWithInjuryChanceMult = 1.000000,
+	ThresholdToReceiveInjuryMult = 1.0,
+	SurviveWithInjuryChanceMult = 1.0,
 	StartSurroundCountAt = 0,
 	SurroundedDefense = 0,
 	RerollDefenseChance = 0,
 	RerollMoraleChance = 0,
 	NegativeStatusEffectDuration = 0,
 	DamageAgainstMult = [
-		1.000000,
-		1.500000
+		1.0,
+		1.5
 	],
 	HitChance = [
 		75,
 		25
 	],
 	HitChanceMult = [
-		1.000000,
-		1.000000
+		1.0,
+		1.0
 	],
-	HitChanceAdditionalWithEachTile = 0.000000,
-	HitChanceWithEachTileMult = 1.000000,
-	FatigueDealtPerHitMult = 1.000000,
-	FatigueLossOnAnyAttackMult = 1.000000,
-	MeleeDamageMult = 1.000000,
-	RangedDamageMult = 1.000000,
+	HitChanceAdditionalWithEachTile = 0.0,
+	HitChanceWithEachTileMult = 1.0,
+	FatigueDealtPerHitMult = 1.0,
+	FatigueLossOnAnyAttackMult = 1.0,
+	MeleeDamageMult = 1.0,
+	RangedDamageMult = 1.0,
 	DamageRegularMin = 0,
 	DamageRegularMax = 0,
-	DamageRegularMult = 1.000000,
-	DamageArmorMult = 1.000000,
-	DamageDirectAdd = 0.000000,
-	DamageDirectMeleeAdd = 0.000000,
-	DamageDirectRangedAdd = 0.000000,
-	DamageDirectMult = 1.000000,
-	DamageTotalMult = 1.000000,
-	DamageAdditionalWithEachTile = 0.000000,
+	DamageRegularMult = 1.0,
+	DamageArmorMult = 1.0,
+	DamageDirectAdd = 0.0,
+	DamageDirectMeleeAdd = 0.0,
+	DamageDirectRangedAdd = 0.0,
+	DamageDirectMult = 1.0,
+	DamageTotalMult = 1.0,
+	DamageAdditionalWithEachTile = 0.0,
 	DamageMinimum = 0,
-	DamageTooltipMinMult = 1.000000,
-	DamageTooltipMaxMult = 1.000000,
-	ThresholdToInflictInjuryMult = 1.000000,
+	DamageTooltipMinMult = 1.0,
+	DamageTooltipMaxMult = 1.0,
+	ThresholdToInflictInjuryMult = 1.0,
 	SurroundedBonus = 5,
-	SurroundedBonusMult = 1.000000,
-	TargetAttractionMult = 1.000000,
+	SurroundedBonusMult = 1.0,
+	TargetAttractionMult = 1.0,
 	IsImmuneToOverwhelm = false,
 	IsImmuneToZoneOfControl = false,
 	IsImmuneToStun = false,
@@ -921,26 +921,26 @@ gt.Const.CharacterProperties <- {
 	IsContentWithBeingInReserve = false,
 	IsAllyXPBlocked = false,
 	DailyWage = 0,
-	DailyWageMult = 1.000000,
-	DailyFood = 2.000000,
+	DailyWageMult = 1.0,
+	DailyFood = 2.0,
 	function getMeleeDefense()
 	{
-		return this.Math.floor(this.MeleeDefense * (this.MeleeDefense >= 0 ? this.MeleeDefenseMult : 1.000000 / this.MeleeDefenseMult));
+		return this.Math.floor(this.MeleeDefense * (this.MeleeDefense >= 0 ? this.MeleeDefenseMult : 1.0 / this.MeleeDefenseMult));
 	}
 
 	function getRangedDefense()
 	{
-		return this.Math.floor(this.RangedDefense * (this.RangedDefense >= 0 ? this.RangedDefenseMult : 1.000000 / this.RangedDefenseMult));
+		return this.Math.floor(this.RangedDefense * (this.RangedDefense >= 0 ? this.RangedDefenseMult : 1.0 / this.RangedDefenseMult));
 	}
 
 	function getMeleeSkill()
 	{
-		return this.Math.floor(this.MeleeSkill * (this.MeleeSkill >= 0 ? this.MeleeSkillMult : 1.000000 / this.MeleeSkillMult));
+		return this.Math.floor(this.MeleeSkill * (this.MeleeSkill >= 0 ? this.MeleeSkillMult : 1.0 / this.MeleeSkillMult));
 	}
 
 	function getRangedSkill()
 	{
-		return this.Math.floor(this.RangedSkill * (this.RangedSkill >= 0 ? this.RangedSkillMult : 1.000000 / this.RangedSkillMult));
+		return this.Math.floor(this.RangedSkill * (this.RangedSkill >= 0 ? this.RangedSkillMult : 1.0 / this.RangedSkillMult));
 	}
 
 	function getVision()
@@ -950,12 +950,12 @@ gt.Const.CharacterProperties <- {
 
 	function getBravery()
 	{
-		return this.Math.floor(this.Bravery * (this.Bravery >= 0 ? this.BraveryMult : 1.000000 / this.BraveryMult));
+		return this.Math.floor(this.Bravery * (this.Bravery >= 0 ? this.BraveryMult : 1.0 / this.BraveryMult));
 	}
 
 	function getInitiative()
 	{
-		return this.Math.floor(this.Initiative * (this.Initiative >= 0 ? this.InitiativeMult : 1.000000 / this.InitiativeMult));
+		return this.Math.floor(this.Initiative * (this.Initiative >= 0 ? this.InitiativeMult : 1.0 / this.InitiativeMult));
 	}
 
 	function getRegularDamageAverage()
@@ -997,11 +997,11 @@ gt.Const.CharacterProperties <- {
 	{
 		if (_bodyPart == this.Const.BodyPart.Head)
 		{
-			return this.Math.min(100.000000, this.Math.floor(this.HitChance[_bodyPart] * this.HitChanceMult[_bodyPart]) * 1.000000);
+			return this.Math.min(100.0, this.Math.floor(this.HitChance[_bodyPart] * this.HitChanceMult[_bodyPart]) * 1.0);
 		}
 		else
 		{
-			return 100.000000 - this.Math.minf(100.000000, this.getHitchance(this.Const.BodyPart.Head));
+			return 100.0 - this.Math.minf(100.0, this.getHitchance(this.Const.BodyPart.Head));
 		}
 	}
 

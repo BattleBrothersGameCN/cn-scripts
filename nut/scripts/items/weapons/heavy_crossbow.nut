@@ -34,12 +34,12 @@ this.heavy_crossbow <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.RangeMax = 6;
 		this.m.RangeIdeal = 6;
 		this.m.StaminaModifier = -12;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.5;
 	}
 
 	function getAmmoID()

@@ -14,7 +14,7 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 		this.contract.create();
 		this.m.Type = "contract.investigate_cemetery";
 		this.m.Name = "确保墓地的安全";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -50,12 +50,12 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -88,11 +88,11 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 			{
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 				this.Contract.m.Destination.clearTroops();
 				this.Contract.m.Destination.setLastSpawnTimeToNow();
 
-				if (this.Contract.getDifficultyMult() < 1.150000 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
+				if (this.Contract.getDifficultyMult() < 1.15 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
 				{
 					this.Contract.m.Destination.getLoot().clear();
 				}
@@ -429,7 +429,7 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 					Text = "这最好值得。",
 					function getResult()
 					{
-						this.World.uncoverFogOfWar(this.Contract.m.TreasureLocation.getTile().Pos, 700.000000);
+						this.World.uncoverFogOfWar(this.Contract.m.TreasureLocation.getTile().Pos, 700.0);
 						this.Contract.m.TreasureLocation.setDiscovered(true);
 						this.World.getCamera().moveTo(this.Contract.m.TreasureLocation.get());
 						this.Contract.m.Destination.fadeOutAndDie();
@@ -489,12 +489,12 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 						this.Contract.m.Destination.setLootScaleBasedOnResources(115 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 						this.Contract.addUnitsToEntity(this.Contract.m.Destination, this.Const.World.Spawn.Necromancer, 115 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 
-						if (this.Contract.getDifficultyMult() <= 1.150000 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
+						if (this.Contract.getDifficultyMult() <= 1.15 && !this.Contract.m.Destination.getFlags().get("IsEventLocation"))
 						{
 							this.Contract.m.Destination.getLoot().clear();
 						}
 
-						this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+						this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 						this.Contract.m.Home.getSprite("selection").Visible = false;
 						this.Flags.set("IsAttackDialogShown", false);
 						this.Contract.setState("Running_Necromancer");

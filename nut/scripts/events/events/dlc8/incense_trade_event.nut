@@ -6,7 +6,7 @@ this.incense_trade_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.incense_trade";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_144.png[/img]{当你穿越雪原时，一个奇怪的人走到了路上。你可以看到他肩上系着绳子，远处的黑色风筝在他上空翱翔，飘忽旋转，仿佛他在把自己当成自己制造的木偶。他的脸看起来像是一个能够制造这样玩意的人，一种疯狂的扭曲，对着他自己想了数年的一个笑话咯咯地笑着。他黑色的肤色在北方很不常见，而当他说话时，他知道你的语言。%SPEECH_ON%你们身上有怪东西，好闻的怪东西。那是什么呢，不是肉，不是柔软的人肉，也不是鸟肉，也不是嗷嗷待哺的狗崽子肉。那……它真的是肉吗？哦天啊，那是香料！看，让我先抽一口甜蜜的香味，然后我给你点东西作为回报。就一点点，我甚至会为它付款。%SPEECH_OFF% 你的手放在了剑柄上。}",

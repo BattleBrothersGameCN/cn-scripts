@@ -20,14 +20,14 @@ this.named_rusty_warblade <- this.inherit("scripts/items/weapons/named/named_wea
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3200;
 		this.m.ShieldDamage = 16;
-		this.m.Condition = 52.000000;
-		this.m.ConditionMax = 52.000000;
+		this.m.Condition = 52.0;
+		this.m.ConditionMax = 52.0;
 		this.m.StaminaModifier = -18;
 		this.m.RegularDamage = 60;
 		this.m.RegularDamageMax = 80;
-		this.m.ArmorDamageMult = 1.100000;
-		this.m.DirectDamageAdd = 0.100000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.1;
+		this.m.DirectDamageAdd = 0.1;
+		this.m.DirectDamageMult = 0.25;
 		this.randomizeValues();
 	}
 

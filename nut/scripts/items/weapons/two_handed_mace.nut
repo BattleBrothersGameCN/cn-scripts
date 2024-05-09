@@ -20,13 +20,13 @@ this.two_handed_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_mace_two_handed_01";
 		this.m.Value = 1100;
 		this.m.ShieldDamage = 20;
-		this.m.Condition = 80.000000;
-		this.m.ConditionMax = 80.000000;
+		this.m.Condition = 80.0;
+		this.m.ConditionMax = 80.0;
 		this.m.StaminaModifier = -14;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 75;
-		this.m.ArmorDamageMult = 1.150000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 1.15;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ChanceToHitHead = 0;
 	}
 

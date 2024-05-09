@@ -8,7 +8,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.black_market";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_01.png[/img]{%townname%的水果车堆满了各种美味但严重超价的食物。你瞟了车主一眼，试图趁他不注意的时候悄悄地偷点东西。就在你准备偷偷拿走时，解剖学家%anatomist%匆忙赶来，吸引了所有人的注意力。你放下了小偷念头，问他想干什么。他笑了。%SPEECH_ON%我们找到了%townname%的黑市。%SPEECH_OFF%你走到那里，找到一个瘦小的人靠在椅子上。桌子前是一堆“商品”，如果可以这么说的话。对你来说，它看起来像一堆不明显的垃圾，但对解剖学家来说，这可能像是来自古老神灵的礼物。瘦小的人打了个哈欠，让你随便挑。%anatomist%凑近一看，评估了这些商品，最终发现有三个的质量值得怀疑，而且用途也不明。他警告说，也许战团只应该购买一个。%SPEECH_ON%如果城镇警卫发现我们有太多东西，他们可能会把我们和小贩搞混，而出售这些商品是相当的犯罪行为。%SPEECH_OFF%你看了看这些选择。}",
@@ -76,7 +76,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.000000, "获得了一个有前途的研究样本。");
+				_event.m.Anatomist.improveMood(1.0, "获得了一个有前途的研究样本。");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -129,7 +129,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.000000, "获得了一个有前途的研究样本。");
+				_event.m.Anatomist.improveMood(1.0, "获得了一个有前途的研究样本。");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -182,7 +182,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.000000, "获得了一个有前途的研究样本。");
+				_event.m.Anatomist.improveMood(1.0, "获得了一个有前途的研究样本。");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -235,7 +235,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(0.500000, "一个有希望的研究样本结果被证明是无用的。");
+				_event.m.Anatomist.worsenMood(0.5, "一个有希望的研究样本结果被证明是无用的。");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

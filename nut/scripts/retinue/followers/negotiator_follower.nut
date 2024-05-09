@@ -22,10 +22,10 @@ this.negotiator_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onUpdate()
 	{
-		this.World.Assets.m.NegotiationAnnoyanceMult = 0.500000;
-		this.World.Assets.m.AdvancePaymentCap = 0.750000;
-		this.World.Assets.m.RelationDecayGoodMult = 0.850000;
-		this.World.Assets.m.RelationDecayBadMult = 1.150000;
+		this.World.Assets.m.NegotiationAnnoyanceMult = 0.5;
+		this.World.Assets.m.AdvancePaymentCap = 0.75;
+		this.World.Assets.m.RelationDecayGoodMult = 0.85;
+		this.World.Assets.m.RelationDecayBadMult = 1.15;
 	}
 
 	function onNewDay()
