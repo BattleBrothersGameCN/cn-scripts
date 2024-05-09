@@ -68,11 +68,11 @@ this.web_effect <- this.inherit("scripts/skills/skill", {
 	function onUpdate( _properties )
 	{
 		_properties.IsRooted = true;
-		_properties.DamageTotalMult *= 0.500000;
-		_properties.MeleeDefenseMult *= 0.500000;
-		_properties.RangedDefenseMult *= 0.500000;
-		_properties.InitiativeMult *= 0.500000;
-		_properties.TargetAttractionMult *= 1.500000;
+		_properties.DamageTotalMult *= 0.5;
+		_properties.MeleeDefenseMult *= 0.5;
+		_properties.RangedDefenseMult *= 0.5;
+		_properties.InitiativeMult *= 0.5;
+		_properties.TargetAttractionMult *= 1.5;
 	}
 
 });

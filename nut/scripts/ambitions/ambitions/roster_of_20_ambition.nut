@@ -4,7 +4,7 @@ this.roster_of_20_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.roster_of_20";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "让我们把人数增加到20人，这样伤员就能得到休息恢复活力重新上场。";
 		this.m.UIText = "花名册人数达到 20 人";
 		this.m.TooltipText = "雇佣足够多的人来达到 20 人的花名册。访问各地的定居点，寻找适合你需要的新兵。";

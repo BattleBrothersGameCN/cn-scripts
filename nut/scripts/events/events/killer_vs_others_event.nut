@@ -8,7 +8,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.killer_vs_others";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_06.png[/img]当你正在研究如何重绘一幅精度很差的地图时，刀刃被拔出鞘的声音闯入了你的耳中。 你把面前的地图卷起来然后将它收入袖口然后着手去解决那场骚乱。\n\n%killerontherun% 被一个兄弟用膝盖压着，并且看起来 %otherguy1% 和 %otherguy2% 正准备砍下他的脑袋。 看到你的到来，这些人冷静了一些。 他们向你解释这件事情的起因是这个杀手准备杀掉他们其中的一员。 事实上，这个兄弟的脖子上有一道伤痕。 如果它再深点那么现在就会有其他东西伴随着他的话一起从嘴里出来。 这些人要求对 %killerontherun% 处以绞刑。",
@@ -82,7 +82,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 				this.Characters.push(_event.m.OtherGuy1.getImagePath());
 				this.Characters.push(_event.m.Killer.getImagePath());
 				_event.m.Killer.addLightInjury();
-				_event.m.Killer.worsenMood(3.000000, "被你命令鞭打了");
+				_event.m.Killer.worsenMood(3.0, "被你命令鞭打了");
 				this.List = [
 					{
 						id = 10,
@@ -130,7 +130,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 				_event.m.Killer.getItems().transferToStash(this.World.Assets.getStash());
 				_event.m.Killer.getSkills().onDeath(this.Const.FatalityType.None);
 				this.World.getPlayerRoster().remove(_event.m.Killer);
-				_event.m.OtherGuy1.improveMood(2.000000, "达成满意\"" + _event.m.Killer.getNameOnly() + "\'s 绞刑");
+				_event.m.OtherGuy1.improveMood(2.0, "达成满意\"" + _event.m.Killer.getNameOnly() + "\'s 绞刑");
 
 				if (_event.m.OtherGuy1.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -163,7 +163,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.OtherGuy1.getImagePath());
 				this.Characters.push(_event.m.Killer.getImagePath());
-				_event.m.OtherGuy1.worsenMood(4.000000, "对你指挥下缺乏的公正感到愤怒");
+				_event.m.OtherGuy1.worsenMood(4.0, "对你指挥下缺乏的公正感到愤怒");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.OtherGuy1.getMoodState()],
@@ -178,7 +178,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(1.000000, "担心缺乏纪律");
+					bro.worsenMood(1.0, "担心缺乏纪律");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{
@@ -244,7 +244,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(1.000000, "担心缺乏纪律");
+					bro.worsenMood(1.0, "担心缺乏纪律");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{
@@ -290,7 +290,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Killer.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Killer.worsenMood(2.000000, "被战团的人打了");
+				_event.m.Killer.worsenMood(2.0, "被战团的人打了");
 
 				if (_event.m.Killer.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -315,7 +315,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(1.000000, "担心缺乏纪律");
+					bro.worsenMood(1.0, "担心缺乏纪律");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{

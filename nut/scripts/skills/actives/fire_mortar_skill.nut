@@ -42,7 +42,7 @@ this.fire_mortar_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsVisibleTileNeeded = false;
 		this.m.InjuriesOnBody = this.Const.Injury.BurningAndPiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BurningAndPiercingHead;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.DirectDamageMult = 0.2;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 0;
 		this.m.MinRange = 3;
@@ -86,7 +86,7 @@ this.fire_mortar_skill <- this.inherit("scripts/skills/skill", {
 		if (this.m.AffectedTiles.len() != 0)
 		{
 			this.getContainer().getActor().setActionPoints(0);
-			this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.000000, this.m.AffectedTiles[0].Pos);
+			this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, this.m.AffectedTiles[0].Pos);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 1400, this.onImpact.bindenv(this), this);
 		}
 	}
@@ -142,7 +142,7 @@ this.fire_mortar_skill <- this.inherit("scripts/skills/skill", {
 	function onImpact( _tag )
 	{
 		this.Tactical.EventLog.log("一发迫击炮弹砸入战场");
-		this.Tactical.getCamera().quake(this.createVec(0, -1.000000), 6.000000, 0.160000, 0.350000);
+		this.Tactical.getCamera().quake(this.createVec(0, -1.0), 6.0, 0.16, 0.35);
 
 		for( local i = 0; i < this.Const.Tactical.MortarImpactParticles.len(); i = ++i )
 		{
@@ -167,10 +167,10 @@ this.fire_mortar_skill <- this.inherit("scripts/skills/skill", {
 
 				local hitInfo = clone this.Const.Tactical.HitInfo;
 				hitInfo.DamageRegular = this.Math.rand(20, 40);
-				hitInfo.DamageArmor = hitInfo.DamageRegular * 0.700000;
-				hitInfo.DamageDirect = 0.200000;
+				hitInfo.DamageArmor = hitInfo.DamageRegular * 0.7;
+				hitInfo.DamageDirect = 0.2;
 				hitInfo.BodyPart = 0;
-				hitInfo.FatalityChanceMult = 0.000000;
+				hitInfo.FatalityChanceMult = 0.0;
 				hitInfo.Injuries = this.Const.Injury.BurningAndPiercingBody;
 				target.onDamageReceived(null, this, hitInfo);
 			}

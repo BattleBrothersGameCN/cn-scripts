@@ -4,7 +4,7 @@ this.oath_of_vengeance_ambition <- this.inherit("scripts/ambitions/oaths/oath_am
 	{
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_vengeance";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "绿皮已经毒害我们的土地太久了。\n让我们立下复仇誓言，反击这种威胁！";
 		this.m.TooltipText = "安瑟姆年轻时家人在众名之战期间被兽人杀害。据说他面对绿皮族时，似乎成为了一名不可阻挡的战士，他的追随者试图效仿他这种报复性的武术技能。";
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]绿皮兽人长期以来一直困扰着人类的土地。尽管它们的威胁长存，很少有人会发誓要摧毁这些生物。它们是一种瘟疫，正因为它们如此危险，大多数人宁愿掉过头去，也不敢去面对这些野兽。然而，%companyname%的人决定发誓一定要追捕到兽人和地精，从而成功找到和消灭它们，一种成就感油然而生。这些人已经迫不及待了：下一个应该发誓做什么？";

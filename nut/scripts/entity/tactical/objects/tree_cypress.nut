@@ -17,8 +17,8 @@ this.tree_cypress <- this.inherit("scripts/entity/tactical/entity", {
 		local bottom = this.addSprite("bottom");
 		bottom.setBrush("steppe_cypress_0" + v + "_bottom");
 		bottom.setHorizontalFlipping(flip);
-		bottom.varyColor(0.070000, 0.070000, 0.070000);
-		bottom.Scale = 0.900000 + this.Math.rand(0, 10) / 100.000000;
+		bottom.varyColor(0.07, 0.07, 0.07);
+		bottom.Scale = 0.9 + this.Math.rand(0, 10) / 100.0;
 		bottom.Rotation = this.Math.rand(-5, 5);
 		local top = this.addSprite("top");
 		top.setBrush("steppe_cypress_0" + v + "_top");

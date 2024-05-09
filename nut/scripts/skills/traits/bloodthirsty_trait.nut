@@ -51,7 +51,7 @@ this.bloodthirsty_trait <- this.inherit("scripts/skills/traits/character_trait",
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
 	{
-		_properties.FatalityChanceMult = 1000.000000;
+		_properties.FatalityChanceMult = 1000.0;
 	}
 
 });

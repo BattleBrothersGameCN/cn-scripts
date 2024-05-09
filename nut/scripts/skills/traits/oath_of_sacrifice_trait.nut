@@ -41,7 +41,7 @@ this.oath_of_sacrifice_trait <- this.inherit("scripts/skills/traits/character_tr
 
 	function onUpdate( _properties )
 	{
-		_properties.DailyWageMult *= 0.000000;
+		_properties.DailyWageMult *= 0.0;
 	}
 
 });

@@ -2,8 +2,8 @@ this.tavern_building <- this.inherit("scripts/entity/world/settlements/buildings
 	m = {
 		RumorsGiven = 0,
 		RoundsGiven = 0,
-		LastRumorTime = 0.000000,
-		LastRoundTime = 0.000000,
+		LastRumorTime = 0.0,
+		LastRoundTime = 0.0,
 		LastRumor = "",
 		ContractSettlement = null,
 		Location = null
@@ -21,105 +21,105 @@ this.tavern_building <- this.inherit("scripts/entity/world/settlements/buildings
 		this.m.Sounds = [
 			{
 				File = "ambience/buildings/tavern_laugh_00.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_01.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_02.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_03.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_04.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_05.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_06.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_08.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_09.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			}
 		];
 		this.m.SoundsAtNight = [
 			{
 				File = "ambience/buildings/tavern_laugh_00.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_01.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_02.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_03.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_04.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_05.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_06.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_08.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_laugh_09.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_drunk_00.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/tavern_drunk_01.wav",
-				Volume = 0.500000,
-				Pitch = 1.000000
+				Volume = 0.5,
+				Pitch = 1.0
 			}
 		];
 	}
@@ -138,7 +138,7 @@ this.tavern_building <- this.inherit("scripts/entity/world/settlements/buildings
 		}
 
 		local distance = this.m.Location != null && !this.m.Location.isNull() ? this.m.Settlement.getTile().getDistanceTo(this.m.Location.getTile()) : 0;
-		distance = this.Const.Strings.Distance[this.Math.min(this.Const.Strings.Distance.len() - 1, distance / 30.000000 * (this.Const.Strings.Distance.len() - 1))];
+		distance = this.Const.Strings.Distance[this.Math.min(this.Const.Strings.Distance.len() - 1, distance / 30.0 * (this.Const.Strings.Distance.len() - 1))];
 		local mercCompany = this.World.EntityManager.getMercenaries().len() != 0 ? this.World.EntityManager.getMercenaries()[this.Math.rand(0, this.World.EntityManager.getMercenaries().len() - 1)].getName() : this.Const.Strings.MercenaryCompanyNames[this.Math.rand(0, this.Const.Strings.MercenaryCompanyNames.len() - 1)];
 		local text;
 		local vars = [
@@ -282,7 +282,7 @@ this.tavern_building <- this.inherit("scripts/entity/world/settlements/buildings
 			{
 				if (!this.m.Settlement.isMilitary())
 				{
-					this.World.FactionManager.getFaction(this.m.Settlement.getFactions()[0]).addPlayerRelation(0.100000);
+					this.World.FactionManager.getFaction(this.m.Settlement.getFactions()[0]).addPlayerRelation(0.1);
 				}
 
 				rumor = rumor + this.Const.Strings.PayTavernRumorsIntro[this.Math.rand(0, this.Const.Strings.PayTavernRumorsIntro.len() - 1)];

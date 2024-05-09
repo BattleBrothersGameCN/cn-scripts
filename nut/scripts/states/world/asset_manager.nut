@@ -13,31 +13,31 @@ this.asset_manager <- {
 		Origin = null,
 		RestoreEquipment = [],
 		Money = 0,
-		Food = 0.000000,
-		Ammo = 0.000000,
-		ArmorParts = 0.000000,
-		Medicine = 0.000000,
+		Food = 0.0,
+		Ammo = 0.0,
+		ArmorParts = 0.0,
+		Medicine = 0.0,
 		FoodAdditionalDays = 0,
-		FoodConsumptionMult = 1.000000,
-		DailyWageMult = 1.000000,
-		TaxidermistPriceMult = 1.000000,
-		TrainingPriceMult = 1.000000,
-		TryoutPriceMult = 1.000000,
-		ContractPaymentMult = 1.000000,
-		ArmorPartsPerArmor = 0.067000,
-		HitpointsPerHourMult = 1.000000,
-		RepairSpeedMult = 1.000000,
-		HiringCostMult = 1.000000,
-		CampingMult = 1.500000,
+		FoodConsumptionMult = 1.0,
+		DailyWageMult = 1.0,
+		TaxidermistPriceMult = 1.0,
+		TrainingPriceMult = 1.0,
+		TryoutPriceMult = 1.0,
+		ContractPaymentMult = 1.0,
+		ArmorPartsPerArmor = 0.067,
+		HitpointsPerHourMult = 1.0,
+		RepairSpeedMult = 1.0,
+		HiringCostMult = 1.0,
+		CampingMult = 1.5,
 		RosterSizeAdditionalMin = 0,
 		RosterSizeAdditionalMax = 0,
-		XPMult = 1.000000,
+		XPMult = 1.0,
 		ChampionChanceAdditional = 0,
-		RelationDecayGoodMult = 1.000000,
-		RelationDecayBadMult = 1.000000,
-		NegotiationAnnoyanceMult = 1.000000,
-		AdvancePaymentCap = 0.500000,
-		VisionRadiusMult = 1.000000,
+		RelationDecayGoodMult = 1.0,
+		RelationDecayBadMult = 1.0,
+		NegotiationAnnoyanceMult = 1.0,
+		AdvancePaymentCap = 0.5,
+		VisionRadiusMult = 1.0,
 		AmmoMaxAdditional = 0,
 		MedicineMaxAdditional = 0,
 		ArmorPartsMaxAdditional = 0,
@@ -51,15 +51,15 @@ this.asset_manager <- {
 		IsSurvivalGuaranteed = false,
 		IsShowingExtendedFootprints = false,
 		BusinessReputation = 0,
-		BusinessReputationRate = 1.000000,
-		MoralReputation = 50.000000,
-		Score = 0.000000,
-		BuyPriceMult = 1.000000,
-		BuyPriceTradeMult = 1.000000,
-		SellPriceMult = 1.000000,
-		SellPriceTradeMult = 1.000000,
+		BusinessReputationRate = 1.0,
+		MoralReputation = 50.0,
+		Score = 0.0,
+		BuyPriceMult = 1.0,
+		BuyPriceTradeMult = 1.0,
+		SellPriceMult = 1.0,
+		SellPriceTradeMult = 1.0,
 		ExtraLootChance = 0,
-		FootprintVision = 1.000000,
+		FootprintVision = 1.0,
 		AverageMoodState = this.Const.MoodState.Neutral,
 		BrothersMax = 20,
 		BrothersMaxInCombat = 12,
@@ -304,7 +304,7 @@ this.asset_manager <- {
 
 	function addMoralReputation( _f )
 	{
-		this.m.MoralReputation = this.Math.minf(100.000000, this.Math.max(0.000000, this.m.MoralReputation + _f));
+		this.m.MoralReputation = this.Math.minf(100.0, this.Math.max(0.0, this.m.MoralReputation + _f));
 	}
 
 	function addMoney( _f )
@@ -319,7 +319,7 @@ this.asset_manager <- {
 
 		if (_f > 0)
 		{
-			this.m.Score += _f * 0.010000;
+			this.m.Score += _f * 0.01;
 		}
 
 		if (this.m.Money >= 5000)
@@ -525,7 +525,7 @@ this.asset_manager <- {
 		}
 
 		ret.ArmorParts = this.Math.ceil(ret.ArmorParts);
-		ret.Hours = this.Math.ceil(ret.Hours / (this.isCamping() ? this.m.CampingMult : 1.000000) / this.m.RepairSpeedMult);
+		ret.Hours = this.Math.ceil(ret.Hours / (this.isCamping() ? this.m.CampingMult : 1.0) / this.m.RepairSpeedMult);
 		return ret;
 	}
 
@@ -624,34 +624,34 @@ this.asset_manager <- {
 		this.m.BrothersMaxInCombat = 12;
 		this.m.BrothersScaleMax = 12;
 		this.m.BrothersScaleMin = 3;
-		this.m.BusinessReputationRate = 1.000000;
-		this.m.BuyPriceMult = 1.000000;
-		this.m.BuyPriceTradeMult = 1.000000;
-		this.m.SellPriceMult = 1.000000;
-		this.m.SellPriceTradeMult = 1.000000;
+		this.m.BusinessReputationRate = 1.0;
+		this.m.BuyPriceMult = 1.0;
+		this.m.BuyPriceTradeMult = 1.0;
+		this.m.SellPriceMult = 1.0;
+		this.m.SellPriceTradeMult = 1.0;
 		this.m.ExtraLootChance = 0;
-		this.m.FootprintVision = 1.000000;
+		this.m.FootprintVision = 1.0;
 		this.m.FoodAdditionalDays = 0;
-		this.m.FoodConsumptionMult = 1.000000;
-		this.m.DailyWageMult = 1.000000;
-		this.m.TaxidermistPriceMult = 1.000000;
-		this.m.TrainingPriceMult = 1.000000;
-		this.m.TryoutPriceMult = 1.000000;
-		this.m.ContractPaymentMult = 1.000000;
+		this.m.FoodConsumptionMult = 1.0;
+		this.m.DailyWageMult = 1.0;
+		this.m.TaxidermistPriceMult = 1.0;
+		this.m.TrainingPriceMult = 1.0;
+		this.m.TryoutPriceMult = 1.0;
+		this.m.ContractPaymentMult = 1.0;
 		this.m.ArmorPartsPerArmor = this.Const.World.Assets.ArmorPartsPerArmor;
-		this.m.HitpointsPerHourMult = 1.000000;
-		this.m.RepairSpeedMult = 1.000000;
-		this.m.HiringCostMult = 1.000000;
-		this.m.CampingMult = 1.500000;
+		this.m.HitpointsPerHourMult = 1.0;
+		this.m.RepairSpeedMult = 1.0;
+		this.m.HiringCostMult = 1.0;
+		this.m.CampingMult = 1.5;
 		this.m.RosterSizeAdditionalMin = 0;
 		this.m.RosterSizeAdditionalMax = 0;
-		this.m.XPMult = 1.000000;
+		this.m.XPMult = 1.0;
 		this.m.ChampionChanceAdditional = 0;
-		this.m.RelationDecayGoodMult = 1.000000;
-		this.m.RelationDecayBadMult = 1.000000;
-		this.m.NegotiationAnnoyanceMult = 1.000000;
-		this.m.AdvancePaymentCap = 0.500000;
-		this.m.VisionRadiusMult = 1.000000;
+		this.m.RelationDecayGoodMult = 1.0;
+		this.m.RelationDecayBadMult = 1.0;
+		this.m.NegotiationAnnoyanceMult = 1.0;
+		this.m.AdvancePaymentCap = 0.5;
+		this.m.VisionRadiusMult = 1.0;
 		this.m.AmmoMaxAdditional = 0;
 		this.m.MedicineMaxAdditional = 0;
 		this.m.ArmorPartsMaxAdditional = 0;
@@ -659,7 +659,7 @@ this.asset_manager <- {
 
 		for( local i = 0; i < this.m.TerrainTypeSpeedMult.len(); i = ++i )
 		{
-			this.m.TerrainTypeSpeedMult[i] = 1.000000;
+			this.m.TerrainTypeSpeedMult[i] = 1.0;
 		}
 
 		this.m.IsRecoveringAmmo = false;
@@ -773,7 +773,7 @@ this.asset_manager <- {
 		}
 
 		food.sort(this.sortFoodByFreshness);
-		local d = this.Math.maxf(0.000000, this.Time.getVirtualTimeF() - this.m.LastFoodConsumed);
+		local d = this.Math.maxf(0.0, this.Time.getVirtualTimeF() - this.m.LastFoodConsumed);
 		this.m.LastFoodConsumed = this.Time.getVirtualTimeF();
 		local eaten = d * this.getDailyFoodCost() * this.Const.World.TerrainFoodConsumption[this.World.State.getPlayer().getTile().Type] * this.m.FoodConsumptionMult * this.Const.World.Assets.FoodConsumptionMult;
 
@@ -916,7 +916,7 @@ this.asset_manager <- {
 			this.m.LastHourUpdated = this.World.getTime().Hours;
 			this.consumeFood();
 			local roster = this.World.getPlayerRoster().getAll();
-			local campMultiplier = this.isCamping() ? this.m.CampingMult : 1.000000;
+			local campMultiplier = this.isCamping() ? this.m.CampingMult : 1.0;
 
 			foreach( bro in roster )
 			{
@@ -1045,7 +1045,7 @@ this.asset_manager <- {
 	function updateFood()
 	{
 		local items = this.m.Stash.getItems();
-		this.m.Food = 0.000000;
+		this.m.Food = 0.0;
 
 		foreach( item in items )
 		{
@@ -1242,27 +1242,27 @@ this.asset_manager <- {
 				continue;
 			}
 
-			if (bro.getMood() < 1.000000)
+			if (bro.getMood() < 1.0)
 			{
-				local chance = (1.000000 - bro.getMood()) * 100;
+				local chance = (1.0 - bro.getMood()) * 100;
 
 				if (bro.getSkills().hasSkill("trait.loyal"))
 				{
-					chance = chance * 0.500000;
+					chance = chance * 0.5;
 				}
 				else if (bro.getSkills().hasSkill("trait.disloyal"))
 				{
-					chance = chance * 2.000000;
+					chance = chance * 2.0;
 				}
 
 				if (bro.getBackground().getID() == "background.companion")
 				{
-					chance = chance * 0.500000;
+					chance = chance * 0.5;
 				}
 
 				if (hasPaymaster)
 				{
-					chance = chance * 0.500000;
+					chance = chance * 0.5;
 				}
 
 				if (this.Math.rand(1, 100) <= chance)
@@ -1921,7 +1921,7 @@ this.asset_manager <- {
 		{
 			if (item != null)
 			{
-				s = s + item.getValue() * 0.002000;
+				s = s + item.getValue() * 0.002;
 
 				if (item.isItemType(this.Const.Items.ItemType.Named))
 				{
@@ -1943,7 +1943,7 @@ this.asset_manager <- {
 
 			if (item != null)
 			{
-				s = s + item.getValue() * 0.002000;
+				s = s + item.getValue() * 0.002;
 
 				if (item.isItemType(this.Const.Items.ItemType.Named))
 				{
@@ -1959,7 +1959,7 @@ this.asset_manager <- {
 
 			if (item != null)
 			{
-				s = s + item.getValue() * 0.002000;
+				s = s + item.getValue() * 0.002;
 
 				if (item.isItemType(this.Const.Items.ItemType.Named))
 				{
@@ -1975,7 +1975,7 @@ this.asset_manager <- {
 
 			if (item != null)
 			{
-				s = s + item.getValue() * 0.002000;
+				s = s + item.getValue() * 0.002;
 
 				if (item.isItemType(this.Const.Items.ItemType.Named))
 				{
@@ -1991,7 +1991,7 @@ this.asset_manager <- {
 
 			if (item != null)
 			{
-				s = s + item.getValue() * 0.002000;
+				s = s + item.getValue() * 0.002;
 
 				if (item.isItemType(this.Const.Items.ItemType.Named))
 				{
@@ -2007,7 +2007,7 @@ this.asset_manager <- {
 
 			if (item != null)
 			{
-				s = s + item.getValue() * 0.002000;
+				s = s + item.getValue() * 0.002;
 
 				if (item.isItemType(this.Const.Items.ItemType.Named))
 				{
@@ -2025,7 +2025,7 @@ this.asset_manager <- {
 
 				if (item != null)
 				{
-					s = s + item.getValue() * 0.002000;
+					s = s + item.getValue() * 0.002;
 
 					if (item.isItemType(this.Const.Items.ItemType.Named))
 					{
@@ -2041,14 +2041,14 @@ this.asset_manager <- {
 
 		s = s + 25 * namedItems;
 		s = s + 100 * legendaryItems;
-		s = s + (this.getBusinessReputation() - 100) * 0.250000;
+		s = s + (this.getBusinessReputation() - 100) * 0.25;
 
 		if (this.World.Statistics.getFlags().has("GreaterEvilsDefeated") && this.World.Statistics.getFlags().get("GreaterEvilsDefeated") >= 1)
 		{
-			s = s * this.Math.pow(1.250000, this.World.Statistics.getFlags().get("GreaterEvilsDefeated"));
+			s = s * this.Math.pow(1.25, this.World.Statistics.getFlags().get("GreaterEvilsDefeated"));
 		}
 
-		s = s / this.Math.maxf(10.000000, this.World.getTime().Days);
+		s = s / this.Math.maxf(10.0, this.World.getTime().Days);
 		return this.Math.max(0, this.Math.round(s * 10));
 	}
 

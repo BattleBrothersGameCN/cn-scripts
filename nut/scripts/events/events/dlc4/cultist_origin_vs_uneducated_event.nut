@@ -7,7 +7,7 @@ this.cultist_origin_vs_uneducated_event <- this.inherit("scripts/events/event", 
 	{
 		this.m.ID = "event.cultist_origin_vs_uneducated";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 13.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 13.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]有几个兄弟来找你，看上去很着急。他们说%cultist%和%uneducated%坐在一起已经几个小时了。当你问他们担心什么时，他们提醒你那个邪教徒额头有伤疤，还会说些令人难以置信的怪事。是的。这些都是达库尔的要求，一个某人奉献的范例。你不明白这有什么不对。\n\n你去见那两人。%uneducated%抬头看着你，微笑着，说这个邪教徒有很多东西要教他。也许他确实有，但你知道并不是所有人都需要感受到达库尔的存在，如果强迫其降临到世界上，那将是对达库尔目的的误解。",
@@ -101,7 +101,7 @@ this.cultist_origin_vs_uneducated_event <- this.inherit("scripts/events/event", 
 			{
 				this.Characters.push(_event.m.Cultist.getImagePath());
 				this.Characters.push(_event.m.Uneducated.getImagePath());
-				_event.m.Cultist.worsenMood(1.000000, "被剥夺了转化他人为邪教徒的机会，本将转化" + _event.m.Uneducated.getName());
+				_event.m.Cultist.worsenMood(1.0, "被剥夺了转化他人为邪教徒的机会，本将转化" + _event.m.Uneducated.getName());
 
 				if (_event.m.Cultist.getMoodState() < this.Const.MoodState.Neutral)
 				{

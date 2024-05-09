@@ -9,7 +9,7 @@ this.hunting_serpents_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.hunting_serpents";
 		this.m.Name = "狩猎大蛇";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -23,12 +23,12 @@ this.hunting_serpents_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -53,7 +53,7 @@ this.hunting_serpents_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (r <= 10)
 				{
-					if (this.Const.DLC.Lindwurm && this.Contract.getDifficultyMult() >= 1.150000 && this.World.getTime().Days >= 30)
+					if (this.Const.DLC.Lindwurm && this.Contract.getDifficultyMult() >= 1.15 && this.World.getTime().Days >= 30)
 					{
 						this.Flags.set("IsLindwurm", true);
 					}
@@ -130,7 +130,7 @@ this.hunting_serpents_contract <- this.inherit("scripts/contracts/contract", {
 					this.World.Contracts.showActiveContract();
 					this.Contract.setState("Return");
 				}
-				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Contract.isPlayerNear(this.Contract.m.Target, 700) && this.Math.rand(1, 100) <= 1 && this.Flags.get("StartTime") + 10.000000 <= this.Time.getVirtualTimeF())
+				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Contract.isPlayerNear(this.Contract.m.Target, 700) && this.Math.rand(1, 100) <= 1 && this.Flags.get("StartTime") + 10.0 <= this.Time.getVirtualTimeF())
 				{
 					this.Flags.set("IsBanterShown", true);
 					this.Contract.setScreen("Banter");

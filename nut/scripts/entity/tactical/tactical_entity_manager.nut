@@ -6,7 +6,7 @@ this.tactical_entity_manager <- {
 		TileEffects = [],
 		Strategies = [],
 		OnCombatFinishedListener = null,
-		LastIdleSound = 0.000000,
+		LastIdleSound = 0.0,
 		AmmoSpent = 0,
 		ArmorParts = 0,
 		Flags = null,
@@ -452,7 +452,7 @@ this.tactical_entity_manager <- {
 		for( local i = 0; i != maxFactions; i = ++i )
 		{
 			this.m.Instances.push([]);
-			this.m.InstancesMax.push(0.000000);
+			this.m.InstancesMax.push(0.0);
 			local s = this.new("scripts/ai/tactical/strategy");
 			s.setFaction(i);
 			this.m.Strategies.push(s);
@@ -466,7 +466,7 @@ this.tactical_entity_manager <- {
 		for( local i = 0; i != this.m.Instances.len(); i = ++i )
 		{
 			this.m.Instances[i] = [];
-			this.m.InstancesMax[i] = 0.000000;
+			this.m.InstancesMax[i] = 0.0;
 		}
 
 		this.m.Corpses = [];
@@ -793,17 +793,17 @@ this.tactical_entity_manager <- {
 			if (_info.Tile.IsVisibleForPlayer)
 			{
 				this.Tactical.CameraDirector.pushMoveToTileEvent(0, _info.Tile, -1, this.onResurrect.bindenv(this), _info, 200, this.Const.Tactical.Settings.CameraNextEventDelay);
-				this.Tactical.CameraDirector.addDelay(0.200000);
+				this.Tactical.CameraDirector.addDelay(0.2);
 			}
 			else if (knockToTile.IsVisibleForPlayer)
 			{
 				this.Tactical.CameraDirector.pushMoveToTileEvent(0, knockToTile, -1, this.onResurrect.bindenv(this), _info, 200, this.Const.Tactical.Settings.CameraNextEventDelay);
-				this.Tactical.CameraDirector.addDelay(0.200000);
+				this.Tactical.CameraDirector.addDelay(0.2);
 			}
 			else
 			{
 				this.Tactical.CameraDirector.pushIdleEvent(0, this.onResurrect.bindenv(this), _info, 200, this.Const.Tactical.Settings.CameraNextEventDelay);
-				this.Tactical.CameraDirector.addDelay(0.200000);
+				this.Tactical.CameraDirector.addDelay(0.2);
 			}
 
 			return null;
@@ -837,7 +837,7 @@ this.tactical_entity_manager <- {
 		if (_info.Tile.IsVisibleForPlayer)
 		{
 			this.Tactical.CameraDirector.addMoveToTileEvent(_delay, _info.Tile, -1, this.onResurrect.bindenv(this), _info, this.Const.Tactical.Settings.CameraWaitForEventDelay, this.Const.Tactical.Settings.CameraNextEventDelay);
-			this.Tactical.CameraDirector.addDelay(1.500000);
+			this.Tactical.CameraDirector.addDelay(1.5);
 		}
 		else
 		{
@@ -864,12 +864,12 @@ this.tactical_entity_manager <- {
 			clouds.Type = this.getconsttable().CloudType.Fog;
 			clouds.MinClouds = 20;
 			clouds.MaxClouds = 20;
-			clouds.MinVelocity = 3.000000;
-			clouds.MaxVelocity = 9.000000;
-			clouds.MinAlpha = 0.350000;
-			clouds.MaxAlpha = 0.450000;
-			clouds.MinScale = 2.000000;
-			clouds.MaxScale = 3.000000;
+			clouds.MinVelocity = 3.0;
+			clouds.MaxVelocity = 9.0;
+			clouds.MinAlpha = 0.35;
+			clouds.MaxAlpha = 0.45;
+			clouds.MinScale = 2.0;
+			clouds.MaxScale = 3.0;
 			weather.buildCloudCover(clouds);
 		}
 		else if (this.Math.rand(1, 100) <= 10 && _worldTile.TacticalType != this.Const.World.TerrainTacticalType.SteppeHills && _worldTile.TacticalType != this.Const.World.TerrainTacticalType.Steppe && _worldTile.TacticalType != this.Const.World.TerrainTacticalType.Snow && _worldTile.TacticalType != this.Const.World.TerrainTacticalType.SnowyForest && _worldTile.TacticalType != this.Const.World.TerrainTacticalType.SnowyHills && _worldTile.TacticalType != this.Const.World.TerrainTacticalType.AutumnForest && _worldTile.TacticalType != this.Const.World.TerrainTacticalType.Desert && _worldTile.TacticalType != this.Const.World.TerrainTacticalType.DesertHills)
@@ -884,21 +884,21 @@ this.tactical_entity_manager <- {
 			clouds.Type = this.getconsttable().CloudType.StaticFog;
 			clouds.MinClouds = 12;
 			clouds.MaxClouds = 18;
-			clouds.MinAlpha = 0.250000;
-			clouds.MaxAlpha = 0.500000;
-			clouds.MinScale = 2.000000;
-			clouds.MaxScale = 3.000000;
+			clouds.MinAlpha = 0.25;
+			clouds.MaxAlpha = 0.5;
+			clouds.MinScale = 2.0;
+			clouds.MaxScale = 3.0;
 			weather.buildCloudCover(clouds);
 			local rain = weather.createRainSettings();
 			rain.MinDrops = 150;
 			rain.MaxDrops = 150;
 			rain.NumSplats = 50;
-			rain.MinVelocity = 400.000000;
-			rain.MaxVelocity = 500.000000;
-			rain.MinAlpha = 1.000000;
-			rain.MaxAlpha = 1.000000;
-			rain.MinScale = 0.750000;
-			rain.MaxScale = 1.000000;
+			rain.MinVelocity = 400.0;
+			rain.MaxVelocity = 500.0;
+			rain.MinAlpha = 1.0;
+			rain.MaxAlpha = 1.0;
+			rain.MinScale = 0.75;
+			rain.MaxScale = 1.0;
 			weather.buildRain(rain);
 			this.Sound.setAmbience(0, this.Const.SoundAmbience.Rain, this.Const.Sound.Volume.Ambience, 0);
 		}
@@ -914,13 +914,13 @@ this.tactical_entity_manager <- {
 			rain.MinDrops = 40;
 			rain.MaxDrops = 40;
 			rain.NumSplats = 20;
-			rain.MinVelocity = 300.000000;
-			rain.MaxVelocity = 400.000000;
-			rain.MinAlpha = 0.400000;
-			rain.MaxAlpha = 0.600000;
-			rain.SplatAlpha = 0.500000;
-			rain.MinScale = 0.750000;
-			rain.MaxScale = 1.000000;
+			rain.MinVelocity = 300.0;
+			rain.MaxVelocity = 400.0;
+			rain.MinAlpha = 0.4;
+			rain.MaxAlpha = 0.6;
+			rain.SplatAlpha = 0.5;
+			rain.MinScale = 0.75;
+			rain.MaxScale = 1.0;
 			weather.buildRain(rain);
 			this.Sound.setAmbience(0, this.Const.SoundAmbience.RainLight, this.Const.Sound.Volume.Ambience, 0);
 		}
@@ -930,12 +930,12 @@ this.tactical_entity_manager <- {
 			rain.MinDrops = 200;
 			rain.MaxDrops = 200;
 			rain.NumSplats = 0;
-			rain.MinVelocity = 100.000000;
-			rain.MaxVelocity = 200.000000;
-			rain.MinAlpha = 0.500000;
-			rain.MaxAlpha = 0.900000;
-			rain.MinScale = 0.250000;
-			rain.MaxScale = 0.400000;
+			rain.MinVelocity = 100.0;
+			rain.MaxVelocity = 200.0;
+			rain.MinAlpha = 0.5;
+			rain.MaxAlpha = 0.9;
+			rain.MinScale = 0.25;
+			rain.MaxScale = 0.4;
 			rain.clearDropBrushes();
 			rain.addDropBrush("ice_crystal");
 			weather.buildRain(rain);
@@ -946,12 +946,12 @@ this.tactical_entity_manager <- {
 			rain.MinDrops = 200;
 			rain.MaxDrops = 200;
 			rain.NumSplats = 0;
-			rain.MinVelocity = 100.000000;
-			rain.MaxVelocity = 200.000000;
-			rain.MinAlpha = 0.500000;
-			rain.MaxAlpha = 0.900000;
-			rain.MinScale = 0.150000;
-			rain.MaxScale = 0.300000;
+			rain.MinVelocity = 100.0;
+			rain.MaxVelocity = 200.0;
+			rain.MinAlpha = 0.5;
+			rain.MaxAlpha = 0.9;
+			rain.MinScale = 0.15;
+			rain.MaxScale = 0.3;
 			rain.clearDropBrushes();
 			rain.addDropBrush("ice_crystal");
 			weather.buildRain(rain);
@@ -962,30 +962,30 @@ this.tactical_entity_manager <- {
 			rain.MinDrops = 300;
 			rain.MaxDrops = 300;
 			rain.NumSplats = 0;
-			rain.MinVelocity = 900.000000;
-			rain.MaxVelocity = 1200.000000;
-			rain.MinAlpha = 0.500000;
-			rain.MaxAlpha = 1.000000;
-			rain.MinScale = 0.500000;
-			rain.MaxScale = 1.000000;
+			rain.MinVelocity = 900.0;
+			rain.MaxVelocity = 1200.0;
+			rain.MinAlpha = 0.5;
+			rain.MaxAlpha = 1.0;
+			rain.MinScale = 0.5;
+			rain.MaxScale = 1.0;
 			rain.clearDropBrushes();
 			rain.addDropBrush("rain_03");
-			rain.Direction = this.createVec(-0.450000, -0.550000);
+			rain.Direction = this.createVec(-0.45, -0.55);
 			weather.buildRain(rain);
 			local clouds = weather.createCloudSettings();
 			clouds.Type = this.getconsttable().CloudType.Custom;
 			clouds.MinClouds = 150;
 			clouds.MaxClouds = 150;
-			clouds.MinVelocity = 400.000000;
-			clouds.MaxVelocity = 500.000000;
-			clouds.MinAlpha = 0.600000;
-			clouds.MaxAlpha = 1.000000;
-			clouds.MinScale = 1.000000;
-			clouds.MaxScale = 4.000000;
+			clouds.MinVelocity = 400.0;
+			clouds.MaxVelocity = 500.0;
+			clouds.MinAlpha = 0.6;
+			clouds.MaxAlpha = 1.0;
+			clouds.MinScale = 1.0;
+			clouds.MaxScale = 4.0;
 			clouds.Sprite = "wind_01";
 			clouds.RandomizeDirection = false;
 			clouds.RandomizeRotation = false;
-			clouds.Direction = this.createVec(-1.000000, -0.700000);
+			clouds.Direction = this.createVec(-1.0, -0.7);
 			weather.buildCloudCover(clouds);
 			this.Sound.setAmbience(0, this.Const.SoundAmbience.Blizzard, this.Const.Sound.Volume.Ambience, 0);
 		}
@@ -994,12 +994,12 @@ this.tactical_entity_manager <- {
 			local clouds = weather.createCloudSettings();
 			clouds.MinClouds = 5;
 			clouds.MaxClouds = 5;
-			clouds.MinVelocity = 30.000000;
-			clouds.MaxVelocity = 50.000000;
-			clouds.MinAlpha = 0.350000;
-			clouds.MaxAlpha = 0.500000;
-			clouds.MinScale = 1.500000;
-			clouds.MaxScale = 3.000000;
+			clouds.MinVelocity = 30.0;
+			clouds.MaxVelocity = 50.0;
+			clouds.MinAlpha = 0.35;
+			clouds.MaxAlpha = 0.5;
+			clouds.MinScale = 1.5;
+			clouds.MaxScale = 3.0;
 			weather.buildCloudCover(clouds);
 		}
 
@@ -1010,12 +1010,12 @@ this.tactical_entity_manager <- {
 			rain.MaxDrops = 20;
 			rain.DropLifetime = 7000;
 			rain.NumSplats = 0;
-			rain.MinVelocity = 50.000000;
-			rain.MaxVelocity = 100.000000;
-			rain.MinAlpha = 1.000000;
-			rain.MaxAlpha = 1.000000;
-			rain.MinScale = 0.300000;
-			rain.MaxScale = 0.500000;
+			rain.MinVelocity = 50.0;
+			rain.MaxVelocity = 100.0;
+			rain.MinAlpha = 1.0;
+			rain.MaxAlpha = 1.0;
+			rain.MinScale = 0.3;
+			rain.MaxScale = 0.5;
 			rain.ScaleDropsWithTime = true;
 			rain.clearDropBrushes();
 			rain.addDropBrush("leaf_01");
@@ -1549,7 +1549,7 @@ this.tactical_entity_manager <- {
 							}
 						}
 
-						local s = d + (centerTile.SquareCoords.X - x) * 2.500000 + cover * 2;
+						local s = d + (centerTile.SquareCoords.X - x) * 2.5 + cover * 2;
 						tiles.push({
 							Tile = tile,
 							Score = s,

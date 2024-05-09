@@ -7,7 +7,7 @@ this.sellsword_vs_raider_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.sellsword_vs_raider";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_82.png[/img]这个掠夺者，%raider%，正在篝火旁打磨他的武器。 他讲述了他的故事，他掠夺海岸地区，获得成堆的战利品的日子，他扭曲而狂放的笑声映衬在利刃被打磨锋利所产生的光亮之中。%sellsword% 这个佣兵听了一会儿并大笑起来。%SPEECH_ON%噢，小伙子，你讲的故事真不错。 这是我的：我一直在杀人，不管是在家里还是在战场上，但是男人不该这样。 你在你的船上乱跑，等着男人们离开，然后你跑过海滩，踢小男孩，强奸小女孩，从老修士那里偷东西。 你没什么好吹嘘的，掠夺者。%SPEECH_OFF%%raider% 放下他的利刃。%SPEECH_ON%我们岛上的人至少在我们中间是有荣誉的，而你会为了钱包里多几个的克朗在 %companyname% 后背捅上一刀。 再讲我过去的坏话，佣兵，我就让你的嘴巴啃泥土。%SPEECH_OFF%言语交锋只会导致：一场战斗。 刀锋一闪，鲜血四溅。 战团的其他成员在造成太大损失之前就加入进来了。",
@@ -48,7 +48,7 @@ this.sellsword_vs_raider_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Sellsword.worsenMood(0.500000, "和人打架跟 " + _event.m.Raider.getName());
+				_event.m.Sellsword.worsenMood(0.5, "和人打架跟 " + _event.m.Raider.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Sellsword.getMoodState()],
@@ -74,7 +74,7 @@ this.sellsword_vs_raider_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Raider.worsenMood(0.500000, "和人打架跟 " + _event.m.Sellsword.getName());
+				_event.m.Raider.worsenMood(0.5, "和人打架跟 " + _event.m.Sellsword.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Raider.getMoodState()],

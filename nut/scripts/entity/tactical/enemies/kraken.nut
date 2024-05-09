@@ -16,10 +16,10 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.XP = this.Const.Tactical.Actor.Kraken.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(-30, -15);
-		this.m.DecapitateBloodAmount = 2.000000;
+		this.m.DecapitateBloodAmount = 2.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.m.IsUsingZoneOfControl = false;
-		this.m.RenderAnimationDistanceMult = 3.000000;
+		this.m.RenderAnimationDistanceMult = 3.0;
 		this.actor.create();
 		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
 			"sounds/enemies/dlc2/krake_hurt_01.wav",
@@ -56,8 +56,8 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/dlc2/krake_enraging_03.wav",
 			"sounds/enemies/dlc2/krake_enraging_04.wav"
 		];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] = 1.500000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.500000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] = 1.5;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.5;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/kraken_agent");
 		this.m.AIAgent.setActor(this);
 	}
@@ -78,7 +78,7 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail("bust_kraken_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
-			decal.Scale = 0.950000;
+			decal.Scale = 0.95;
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
 			local corpse = clone this.Const.Corpse;
@@ -159,10 +159,10 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 
 		local hitInfo = clone this.Const.Tactical.HitInfo;
 		hitInfo.DamageRegular = this.Math.max(35, 190 - (this.m.TentaclesDestroyed - 1) * 5);
-		hitInfo.DamageDirect = 1.000000;
+		hitInfo.DamageDirect = 1.0;
 		hitInfo.BodyPart = this.Const.BodyPart.Head;
-		hitInfo.BodyDamageMult = 1.000000;
-		hitInfo.FatalityChanceMult = 0.000000;
+		hitInfo.BodyDamageMult = 1.0;
+		hitInfo.FatalityChanceMult = 0.0;
 		this.onDamageReceived(this, null, hitInfo);
 
 		if (!this.isAlive() || this.isDying())
@@ -170,7 +170,7 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 			return;
 		}
 
-		for( local numTentacles = this.Math.max(4, this.Math.min(8, this.Math.ceil(this.getHitpointsPct() * 2.000000 * 8))); this.m.Tentacles.len() < numTentacles;  )
+		for( local numTentacles = this.Math.max(4, this.Math.min(8, this.Math.ceil(this.getHitpointsPct() * 2.0 * 8))); this.m.Tentacles.len() < numTentacles;  )
 		{
 			local mapSize = this.Tactical.getMapSize();
 			local myTile = this.getTile();
@@ -203,7 +203,7 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 		_hitInfo.BodyPart = this.Const.BodyPart.Head;
 		local ret = this.actor.onDamageReceived(_attacker, _skill, _hitInfo);
 
-		if (!this.m.IsEnraged && (this.m.TentaclesDestroyed >= 6 || this.getHitpointsPct() <= 0.500000))
+		if (!this.m.IsEnraged && (this.m.TentaclesDestroyed >= 6 || this.getHitpointsPct() <= 0.5))
 		{
 			this.playSound(this.Const.Sound.ActorEvent.Other1, this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] * this.m.SoundVolumeOverall);
 			this.m.IsEnraged = true;
@@ -225,7 +225,7 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 		local body = this.getSprite("body");
 		local p = this.getHitpointsPct();
 
-		if (p > 0.500000)
+		if (p > 0.5)
 		{
 			body.setBrush("bust_kraken_body_01");
 		}
@@ -270,7 +270,7 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.Kraken);
-		b.TargetAttractionMult = 3.000000;
+		b.TargetAttractionMult = 3.0;
 		b.IsAffectedByNight = false;
 		b.IsImmuneToKnockBackAndGrab = true;
 		b.IsImmuneToStun = true;
@@ -303,12 +303,12 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varySaturation(0.200000);
+			body.varySaturation(0.2);
 		}
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varyColor(0.080000, 0.080000, 0.080000);
+			body.varyColor(0.08, 0.08, 0.08);
 		}
 
 		this.addDefaultStatusSprites();

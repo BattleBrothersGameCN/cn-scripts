@@ -6,7 +6,7 @@ this.broken_cart_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.broken_cart";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_55.png[/img]当你沿路行进时，你在路边发现一个人，他的货车坏了。 载重货车旁边站着一头无所事事的驴子，它看上去已经疲惫不堪了。 商人似乎看起来比较好一点，你的出现似乎吓了他一跳。 他向后仰起身子，立刻向后退去。%SPEECH_ON%你们是来拿我的东西的吗？ 如果是这样，你就不必杀我了。 拿走你想要的。%SPEECH_OFF%",

@@ -6,7 +6,7 @@ this.spartan_should_eat_more_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.spartan_should_eat_more";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img] %spartan% 对自己的食量总是有点苛刻。 你不确定这是某种宗教仪式的一部分，是一种责任感，还是他只是吃得不多。 无论如何，食物的缺乏已经削弱了这个人，你发现他几乎不能在一根圆木上坐直。 你手里拿着一碗肉和玉米，不知道该不该把它给他。",
@@ -123,7 +123,7 @@ this.spartan_should_eat_more_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Spartan.getImagePath());
-				_event.m.Spartan.worsenMood(1.000000, "被迫违背信仰吃东西");
+				_event.m.Spartan.worsenMood(1.0, "被迫违背信仰吃东西");
 
 				if (_event.m.Spartan.getMoodState() < this.Const.MoodState.Neutral)
 				{

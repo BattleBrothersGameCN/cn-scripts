@@ -26,7 +26,7 @@ this.schrat_racial <- this.inherit("scripts/skills/skill", {
 
 		if (actor.isArmedWithShield())
 		{
-			_properties.DamageReceivedTotalMult *= 0.300000;
+			_properties.DamageReceivedTotalMult *= 0.3;
 		}
 	}
 
@@ -39,15 +39,15 @@ this.schrat_racial <- this.inherit("scripts/skills/skill", {
 
 		if (_skill.getID() == "actives.aimed_shot" || _skill.getID() == "actives.quick_shot" || _skill.getID() == "actives.shoot_bolt" || _skill.getID() == "actives.shoot_stake")
 		{
-			_properties.DamageReceivedRegularMult *= 0.250000;
+			_properties.DamageReceivedRegularMult *= 0.25;
 		}
 		else if (_skill.getID() == "actives.throw_javelin")
 		{
-			_properties.DamageReceivedRegularMult *= 0.500000;
+			_properties.DamageReceivedRegularMult *= 0.5;
 		}
 		else if (_skill.getID() == "actives.ignite_firelance")
 		{
-			_properties.DamageReceivedRegularMult *= 1.330000;
+			_properties.DamageReceivedRegularMult *= 1.33;
 		}
 	}
 
@@ -55,7 +55,7 @@ this.schrat_racial <- this.inherit("scripts/skills/skill", {
 	{
 		local actor = this.getContainer().getActor();
 
-		if (_damageHitpoints >= actor.getHitpointsMax() * 0.100000)
+		if (_damageHitpoints >= actor.getHitpointsMax() * 0.1)
 		{
 			local candidates = [];
 			local myTile = actor.getTile();

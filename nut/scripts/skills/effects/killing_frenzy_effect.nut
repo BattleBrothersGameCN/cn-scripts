@@ -57,8 +57,8 @@ this.killing_frenzy_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageTotalMult *= 1.250000;
-		_properties.TargetAttractionMult *= 1.250000;
+		_properties.DamageTotalMult *= 1.25;
+		_properties.TargetAttractionMult *= 1.25;
 	}
 
 	function onTurnEnd()

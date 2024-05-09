@@ -7,7 +7,7 @@ this.herbs_along_the_way_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.herbs_along_the_way";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%在朝你的目的地进发的时候，%volunteer% 手里拿着一把草药向你跑来。 现在你知道这个傻蛋一点也不了解植物和野生动物，但他似乎非常执着地想要试一试它们。 大概什么“听说”草药的精华中蕴含着神奇的魔力。 这个话题引起了战团里其他的伙伴的注意。 不久之后，为了队伍里的兄弟的身体，一些人开始要求尝试一下这些“药物”。",

@@ -7,7 +7,7 @@ this.flagellation_horrifies_other_event <- this.inherit("scripts/events/event", 
 	{
 		this.m.ID = "event.flagellation_horrifies_other";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_38.png[/img]皮开肉绽。人类身体的某些部分显得很难理解。 空气中弥漫着血腥味。 当你的兄弟召唤你时，你发现这些事情。\n\n %flagellant% 这个苦修者俯身在一根树桩上，全身一动不动，只剩下一只胳膊拿着酒杯和带刺的鞭子抽打自己的背。 一个含着口水的打嗝声把你的眼睛吸引到 %weakbro% 身上，他正在高高的草丛中弯腰，把午餐吐出来了。 当意识到他在打扰别人时，%flagellant% 露出一丝微笑，笑得一点也不像他自己隐藏的那样恐怖。%SPEECH_ON%恐惧不是死神，%weakbro%，我将流更多的血来拯救你的灵魂。%SPEECH_OFF%",
@@ -28,7 +28,7 @@ this.flagellation_horrifies_other_event <- this.inherit("scripts/events/event", 
 			{
 				this.Characters.push(_event.m.Flagellant.getImagePath());
 				this.Characters.push(_event.m.OtherGuy.getImagePath());
-				_event.m.OtherGuy.worsenMood(1.000000, "震惊于" + _event.m.Flagellant.getName() + "的鞭笞");
+				_event.m.OtherGuy.worsenMood(1.0, "震惊于" + _event.m.Flagellant.getName() + "的鞭笞");
 
 				if (_event.m.OtherGuy.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -39,7 +39,7 @@ this.flagellation_horrifies_other_event <- this.inherit("scripts/events/event", 
 					});
 				}
 
-				_event.m.Flagellant.improveMood(1.000000, "对他的鞭打感到满意");
+				_event.m.Flagellant.improveMood(1.0, "对他的鞭打感到满意");
 
 				if (_event.m.Flagellant.getMoodState() >= this.Const.MoodState.Neutral)
 				{

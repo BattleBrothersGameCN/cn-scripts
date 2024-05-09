@@ -24,7 +24,7 @@ this.barbarian_fury_skill <- this.inherit("scripts/skills/skill", {
 			"sounds/enemies/dlc4/barbarian_fury_11.wav",
 			"sounds/enemies/dlc4/barbarian_fury_12.wav"
 		];
-		this.m.SoundVolume = 1.150000;
+		this.m.SoundVolume = 1.15;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.Any;
 		this.m.IsSerialized = false;
@@ -71,7 +71,7 @@ this.barbarian_fury_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.IsSpent = true;
 		local target = _targetTile.getEntity();
-		this.Tactical.getNavigator().switchEntities(_user, target, null, null, 1.000000);
+		this.Tactical.getNavigator().switchEntities(_user, target, null, null, 1.0);
 		return true;
 	}
 

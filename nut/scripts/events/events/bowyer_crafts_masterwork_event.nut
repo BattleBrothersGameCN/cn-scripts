@@ -8,7 +8,7 @@ this.bowyer_crafts_masterwork_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.bowyer_crafts_masterwork";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%bowyer% 这个弓匠带着小小的请求走到你面前：他希望为这个时代制造一件武器。 显然，这个人多年来一直试图建造一个具有传奇品质的弓，但是现在他已经在路上了，拣起了一些东西来填补他的知识空白。 说真的，他相信这次他能做好。 他所需要的只是一些资源来帮助他获得制作弓所需要的材料。 他谦卑要求给他五百克朗，并要你运来上等的木料。",
@@ -88,7 +88,7 @@ this.bowyer_crafts_masterwork_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + item.getName()
 				});
-				_event.m.Bowyer.improveMood(2.000000, "制作了一件杰作");
+				_event.m.Bowyer.improveMood(2.0, "制作了一件杰作");
 
 				if (_event.m.Bowyer.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -150,7 +150,7 @@ this.bowyer_crafts_masterwork_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + item.getName()
 				});
-				_event.m.Bowyer.worsenMood(1.000000, "制作杰作失败");
+				_event.m.Bowyer.worsenMood(1.0, "制作杰作失败");
 
 				if (_event.m.Bowyer.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -182,7 +182,7 @@ this.bowyer_crafts_masterwork_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Bowyer.getImagePath());
-				_event.m.Bowyer.worsenMood(2.000000, "请求被拒绝");
+				_event.m.Bowyer.worsenMood(2.0, "请求被拒绝");
 
 				if (_event.m.Bowyer.getMoodState() < this.Const.MoodState.Neutral)
 				{

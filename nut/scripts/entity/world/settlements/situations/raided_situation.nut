@@ -34,8 +34,8 @@ this.raided_situation <- this.inherit("scripts/entity/world/settlements/situatio
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.RecruitsMult *= 0.500000;
-		_modifiers.RarityMult *= 0.500000;
+		_modifiers.RecruitsMult *= 0.5;
+		_modifiers.RarityMult *= 0.5;
 	}
 
 });

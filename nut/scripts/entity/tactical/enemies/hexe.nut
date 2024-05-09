@@ -78,9 +78,9 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/dlc2/hexe_flee_07.wav",
 			"sounds/enemies/dlc2/hexe_flee_08.wav"
 		];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.500000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 5.000000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] = 2.500000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.5;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 5.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] = 2.5;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/hexe_agent");
 		this.m.AIAgent.setActor(this);
 	}
@@ -91,11 +91,11 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (r <= 5)
 		{
-			this.playSound(this.Const.Sound.ActorEvent.Idle, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] * this.m.SoundVolumeOverall * (this.Math.rand(60, 100) * 0.010000) * (this.isHiddenToPlayer ? 0.330000 : 1.000000), this.m.SoundPitch * (this.Math.rand(85, 115) * 0.010000));
+			this.playSound(this.Const.Sound.ActorEvent.Idle, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] * this.m.SoundVolumeOverall * (this.Math.rand(60, 100) * 0.01) * (this.isHiddenToPlayer ? 0.33 : 1.0), this.m.SoundPitch * (this.Math.rand(85, 115) * 0.01));
 		}
 		else
 		{
-			this.playSound(this.Const.Sound.ActorEvent.Other1, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] * this.m.SoundVolumeOverall * (this.Math.rand(60, 100) * 0.010000) * (this.isHiddenToPlayer ? 0.330000 : 1.000000), this.m.SoundPitch * (this.Math.rand(85, 115) * 0.010000));
+			this.playSound(this.Const.Sound.ActorEvent.Other1, this.Const.Sound.Volume.Actor * this.Const.Sound.Volume.ActorIdle * this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] * this.m.SoundVolumeOverall * (this.Math.rand(60, 100) * 0.01) * (this.isHiddenToPlayer ? 0.33 : 1.0), this.m.SoundPitch * (this.Math.rand(85, 115) * 0.01));
 		}
 	}
 
@@ -120,16 +120,16 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail(body.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
-			decal.Scale = 0.950000;
+			decal.Scale = 0.95;
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
 			{
 				decal = _tile.spawnDetail(head.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Color = head.Color;
 				decal.Saturation = head.Saturation;
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 				decal = _tile.spawnDetail(hair.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
 			{
@@ -137,22 +137,22 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 					head.getBrush().Name + "_dead",
 					hair.getBrush().Name + "_dead"
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), 45.000000, head.getBrush().Name + "_bloodpool");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), 45.0, head.getBrush().Name + "_bloodpool");
 				decap[0].Color = head.Color;
 				decap[0].Saturation = head.Saturation;
-				decap[0].Scale = 0.950000;
-				decap[1].Scale = 0.950000;
+				decap[0].Scale = 0.95;
+				decap[1].Scale = 0.95;
 			}
 
 			if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
 				decal = _tile.spawnDetail(body.getBrush().Name + "_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
 				decal = _tile.spawnDetail(body.getBrush().Name + "_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -226,7 +226,7 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.Hexe);
-		b.TargetAttractionMult = 3.000000;
+		b.TargetAttractionMult = 3.0;
 		b.IsImmuneToDisarm = true;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
@@ -236,8 +236,8 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local body = this.addSprite("body");
 		body.setBrush("bust_hexen_body_0" + this.Math.rand(1, 3));
-		body.varySaturation(0.100000);
-		body.varyColor(0.050000, 0.050000, 0.050000);
+		body.varySaturation(0.1);
+		body.varyColor(0.05, 0.05, 0.05);
 		local charm_body = this.addSprite("charm_body");
 		charm_body.setBrush("bust_hexen_charmed_body_01");
 		charm_body.Visible = false;
@@ -259,7 +259,7 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 		charm_hair.setBrush("bust_hexen_charmed_hair_0" + this.Math.rand(1, 5));
 		charm_hair.Visible = false;
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.550000;
+		this.getSprite("status_rooted").Scale = 0.55;
 		this.m.Skills.add(this.new("scripts/skills/actives/charm_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/hex_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/fake_drink_night_vision_skill"));
@@ -280,7 +280,7 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 		local injury = this.getSprite("injury");
 		local p = this.getHitpointsPct();
 
-		if (p > 0.500000)
+		if (p > 0.5)
 		{
 			if (injury.Visible)
 			{
@@ -404,36 +404,36 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 			],
 			Stages = [
 				{
-					LifeTimeMin = 1.000000,
-					LifeTimeMax = 1.000000,
+					LifeTimeMin = 1.0,
+					LifeTimeMax = 1.0,
 					ColorMin = this.createColor("fff3e50f"),
 					ColorMax = this.createColor("ffffff5f"),
-					ScaleMin = 0.500000,
-					ScaleMax = 0.500000,
+					ScaleMin = 0.5,
+					ScaleMax = 0.5,
 					RotationMin = 0,
 					RotationMax = 0,
 					VelocityMin = 80,
 					VelocityMax = 100,
-					DirectionMin = this.createVec(-0.500000, 0.000000),
-					DirectionMax = this.createVec(0.500000, 1.000000),
+					DirectionMin = this.createVec(-0.5, 0.0),
+					DirectionMax = this.createVec(0.5, 1.0),
 					SpawnOffsetMin = this.createVec(-30, -70),
 					SpawnOffsetMax = this.createVec(30, 30),
 					ForceMin = this.createVec(0, 0),
 					ForceMax = this.createVec(0, 0)
 				},
 				{
-					LifeTimeMin = 0.100000,
-					LifeTimeMax = 0.100000,
+					LifeTimeMin = 0.1,
+					LifeTimeMax = 0.1,
 					ColorMin = this.createColor("fff3e500"),
 					ColorMax = this.createColor("ffffff00"),
-					ScaleMin = 0.100000,
-					ScaleMax = 0.100000,
+					ScaleMin = 0.1,
+					ScaleMax = 0.1,
 					RotationMin = 0,
 					RotationMax = 0,
 					VelocityMin = 80,
 					VelocityMax = 100,
-					DirectionMin = this.createVec(-0.500000, 0.000000),
-					DirectionMax = this.createVec(0.500000, 1.000000),
+					DirectionMin = this.createVec(-0.5, 0.0),
+					DirectionMax = this.createVec(0.5, 1.0),
 					ForceMin = this.createVec(0, 0),
 					ForceMax = this.createVec(0, 0)
 				}

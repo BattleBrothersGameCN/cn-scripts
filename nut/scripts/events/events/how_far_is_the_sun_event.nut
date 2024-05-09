@@ -10,7 +10,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.how_far_is_the_sun";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]在休息的时候，伙计们开启了一个关于太阳有多远的话题。%otherbrother% 抬头看着，咬紧牙关、呲牙咧嘴地，在眼镜快被亮瞎之前完成了测量。 最后，他低下头来。%SPEECH_ON%我敢打赌，它离我们大概十到十五英里远。%SPEECH_OFF%他在自认为非常正确的结论中点了点头。%SPEECH_ON%没错，甚至可能没有那么远。 我听说过这么一个故事，在遥远的国度里甚至有个弓箭手用弓箭击中了太阳。%SPEECH_OFF%",
@@ -108,7 +108,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.500000, "被招待于" + _event.m.Historian.getName() + "的关于太阳的\"愚蠢想法\"");
+						bro.improveMood(0.5, "被招待于" + _event.m.Historian.getName() + "的关于太阳的\"愚蠢想法\"");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -153,7 +153,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.500000, "受到鼓舞于" + _event.m.Monk.getName() + "的布道");
+						bro.improveMood(0.5, "受到鼓舞于" + _event.m.Monk.getName() + "的布道");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -193,7 +193,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() == _event.m.Cultist.getID())
 					{
-						bro.improveMood(1.000000, "享受谈论垂死的太阳的机会");
+						bro.improveMood(1.0, "享受谈论垂死的太阳的机会");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -206,7 +206,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().getID() == "background.cultist")
 					{
-						bro.improveMood(0.500000, "喜爱的" + _event.m.Cultist.getName() + "的关于垂死的太阳的演讲");
+						bro.improveMood(0.5, "喜爱的" + _event.m.Cultist.getName() + "的关于垂死的太阳的演讲");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -219,7 +219,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getEthnicity() == 1)
 					{
-						bro.worsenMood(1.000000, "对异端言论感到愤怒来自 " + _event.m.Cultist.getName());
+						bro.worsenMood(1.0, "对异端言论感到愤怒来自 " + _event.m.Cultist.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -232,7 +232,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getSkills().hasSkill("trait.superstitious") || bro.getSkills().hasSkill("trait.mad"))
 					{
-						bro.worsenMood(1.000000, "对即将死去的太阳感到恐惧");
+						bro.worsenMood(1.0, "对即将死去的太阳感到恐惧");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -272,7 +272,7 @@ this.how_far_is_the_sun_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(0.500000, "被招待于" + _event.m.Archer.getName() + "的尝试射击太阳。");
+						bro.improveMood(0.5, "被招待于" + _event.m.Archer.getName() + "的尝试射击太阳。");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

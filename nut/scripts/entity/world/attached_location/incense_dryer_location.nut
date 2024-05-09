@@ -39,7 +39,7 @@ this.incense_dryer_location <- this.inherit("scripts/entity/world/attached_locat
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "trade/incense_item"
 			});
 		}

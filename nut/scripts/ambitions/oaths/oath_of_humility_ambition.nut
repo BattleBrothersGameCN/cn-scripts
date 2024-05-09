@@ -4,7 +4,7 @@ this.oath_of_humility_ambition <- this.inherit("scripts/ambitions/oaths/oath_amb
 	{
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_humility";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "要时刻警醒：骄傲自满是位缓慢却阴险的杀手。\n让我们立下谦逊誓言，并反思一下我们的缺点。";
 		this.m.TooltipText = "“既然你们是追求力量的人，就要时刻倾听弱者的声音……因为弱者比你更了解强者，而他们也会比你更了解你自己。”——年轻的安瑟姆";
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]任何软弱的人都可以跪下，但在强大的位置上做到这一点才是真正的谦卑。虽然%companyname%可以利用它的声誉来赚取新的财富，但它选择了退让，将其财富的一部分奉献给有需要的人，回馈社区，这些社区在第一时间提供了这些合同。很多人从这个经历中学到了很多，或许这些方法在今后的生活或来世都会有所用处。%companyname%已经准备好迎接下一个挑战了。";
@@ -63,7 +63,7 @@ this.oath_of_humility_ambition <- this.inherit("scripts/ambitions/oaths/oath_amb
 
 	function onUpdateEffect()
 	{
-		this.World.Assets.m.ContractPaymentMult *= 0.750000;
+		this.World.Assets.m.ContractPaymentMult *= 0.75;
 	}
 
 	function onStart()

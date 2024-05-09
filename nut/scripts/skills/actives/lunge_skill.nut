@@ -40,7 +40,7 @@ this.lunge_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
 		this.m.HitChanceBonus = 0;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.DirectDamageMult = 0.25;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 2;
@@ -128,7 +128,7 @@ this.lunge_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInSwords ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInSwords ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -168,7 +168,7 @@ this.lunge_skill <- this.inherit("scripts/skills/skill", {
 			OnRepelled = this.onRepelled
 		};
 		_user.spawnTerrainDropdownEffect(myTile);
-		this.Tactical.getNavigator().teleport(_user, destTile, this.onTeleportDone.bindenv(this), tag, false, 3.000000);
+		this.Tactical.getNavigator().teleport(_user, destTile, this.onTeleportDone.bindenv(this), tag, false, 3.0);
 		return true;
 	}
 
@@ -257,7 +257,7 @@ this.lunge_skill <- this.inherit("scripts/skills/skill", {
 		if (_skill == this)
 		{
 			local a = this.getContainer().getActor();
-			local s = this.Math.minf(2.000000, 2.000000 * (this.Math.max(0, a.getInitiative() + (_targetEntity != null ? this.getFatigueCost() * a.getCurrentProperties().FatigueToInitiativeRate : 0)) / 175.000000));
+			local s = this.Math.minf(2.0, 2.0 * (this.Math.max(0, a.getInitiative() + (_targetEntity != null ? this.getFatigueCost() * a.getCurrentProperties().FatigueToInitiativeRate : 0)) / 175.0));
 			_properties.DamageTotalMult *= s;
 		}
 	}

@@ -4,7 +4,7 @@ this.hire_follower_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.hire_follower";
-		this.m.Duration = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "这里有厨师，侦察兵还有很多人可以在战场外支援我们。\n我们会雇一个最适合我们需要的！";
 		this.m.UIText = "为你的随行队伍雇佣一位非战斗的追随者";
 		this.m.TooltipText = "获得至少为“初露锋芒”（250）的名望，解锁第一个非战斗随从位置。你可以通过完成合同和赢得战斗来提高自己的名望。然后，在随从界面中雇佣一个非战斗随从。 一些随从要求你满足特定的先决条件来解锁他们的服务。";

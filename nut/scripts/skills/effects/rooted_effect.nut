@@ -56,9 +56,9 @@ this.rooted_effect <- this.inherit("scripts/skills/skill", {
 	function onUpdate( _properties )
 	{
 		_properties.IsRooted = true;
-		_properties.MeleeDefenseMult *= 0.650000;
-		_properties.RangedDefenseMult *= 0.650000;
-		_properties.InitiativeMult *= 0.650000;
+		_properties.MeleeDefenseMult *= 0.65;
+		_properties.RangedDefenseMult *= 0.65;
+		_properties.InitiativeMult *= 0.65;
 	}
 
 });

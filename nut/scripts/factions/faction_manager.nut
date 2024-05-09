@@ -8,8 +8,8 @@ this.faction_manager <- {
 			LastType = 0,
 			TypesUsed = 0,
 			Phase = 0,
-			NextPhaseTime = 0.000000,
-			Strength = 0.000000,
+			NextPhaseTime = 0.0,
+			Strength = 0.0,
 			LastUpdate = 0
 		}
 	},
@@ -302,7 +302,7 @@ this.faction_manager <- {
 
 			if (!_explorationMode && (s.getOwner() != null || s.getSize() >= 2))
 			{
-				this.World.uncoverFogOfWar(s.getTile().Pos, 2100.000000);
+				this.World.uncoverFogOfWar(s.getTile().Pos, 2100.0);
 			}
 		}
 	}
@@ -586,12 +586,12 @@ this.faction_manager <- {
 		foreach( s in military )
 		{
 			local best;
-			local bestAvgDist = 9000.000000;
+			local bestAvgDist = 9000.0;
 
 			foreach( i, n in _nobleHouses )
 			{
 				local locales = n.getSettlements();
-				local avgDist = 0.000000;
+				local avgDist = 0.0;
 
 				foreach( l in locales )
 				{
@@ -825,7 +825,7 @@ this.faction_manager <- {
 			{
 				if (this.m.Factions[i].getPlayerRelation() < 30)
 				{
-					this.m.Factions[i].setPlayerRelation(30.000000);
+					this.m.Factions[i].setPlayerRelation(30.0);
 				}
 			}
 		}
@@ -894,18 +894,18 @@ this.faction_manager <- {
 			return;
 		}
 
-		if (GE.NextPhaseTime == 0.000000)
+		if (GE.NextPhaseTime == 0.0)
 		{
 			GE.NextPhaseTime = this.Time.getVirtualTimeF() + this.Math.rand(50, 60) * this.World.getTime().SecondsPerDay;
 
 			if (this.World.Assets.isIronman())
 			{
-				GE.NextPhaseTime += 5.000000 * this.World.getTime().SecondsPerDay;
+				GE.NextPhaseTime += 5.0 * this.World.getTime().SecondsPerDay;
 			}
 
 			if (this.World.Assets.getCombatDifficulty() == 0)
 			{
-				GE.NextPhaseTime += 5.000000 * this.World.getTime().SecondsPerDay;
+				GE.NextPhaseTime += 5.0 * this.World.getTime().SecondsPerDay;
 			}
 		}
 		else if (GE.NextPhaseTime <= this.Time.getVirtualTimeF())
@@ -980,7 +980,7 @@ this.faction_manager <- {
 				if (GE.Type == this.Const.World.GreaterEvilType.CivilWar)
 				{
 					this.World.Statistics.addNews("crisis_civilwar_start", this.World.Statistics.createNews());
-					GE.Strength -= 10.000000;
+					GE.Strength -= 10.0;
 					this.breakNobleHouseAlliances();
 				}
 				else if (GE.Type == this.Const.World.GreaterEvilType.Greenskins)
@@ -996,7 +996,7 @@ this.faction_manager <- {
 				else if (GE.Type == this.Const.World.GreaterEvilType.HolyWar)
 				{
 					this.World.Statistics.addNews("crisis_holywar_start", this.World.Statistics.createNews());
-					GE.Strength -= 10.000000;
+					GE.Strength -= 10.0;
 					this.breakNorthSouthAlliances();
 				}
 			}

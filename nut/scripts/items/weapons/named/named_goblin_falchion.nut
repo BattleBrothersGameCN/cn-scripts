@@ -18,13 +18,13 @@ this.named_goblin_falchion <- this.inherit("scripts/items/weapons/named/named_we
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 2600;
-		this.m.Condition = 52.000000;
-		this.m.ConditionMax = 52.000000;
+		this.m.Condition = 52.0;
+		this.m.ConditionMax = 52.0;
 		this.m.StaminaModifier = -2;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 45;
-		this.m.ArmorDamageMult = 0.700000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.7;
+		this.m.DirectDamageMult = 0.2;
 		this.randomizeValues();
 	}
 

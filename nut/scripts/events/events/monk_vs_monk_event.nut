@@ -8,7 +8,7 @@ this.monk_vs_monk_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.monk_vs_monk";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img] 唉，在营火旁布满了谈话和辩论的人。 人们正在享受啤酒和食物但是突然两个的互相训斥的声音传来并且这声音让整个营地都安静了下来，这不是因为这两个人比别人喊的更大声，而是因为这两人这两人正在做一些不符合他们身份的事情：僧侣 %monk1% 和 %monk2% 正在激烈地进行一场神学辩论。\n\n你所受的教育并不能让你理解他们争论的错综复杂之处，但你知道狠瞪着另一个人的脸愤怒地指着他，或一本圣经，很可能是在找麻烦。",
@@ -60,7 +60,7 @@ this.monk_vs_monk_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Monk1.getImagePath());
 				this.Characters.push(_event.m.Monk2.getImagePath());
-				_event.m.Monk1.improveMood(1.000000, "在宗教问题上进行了一次激动人心的演讲");
+				_event.m.Monk1.improveMood(1.0, "在宗教问题上进行了一次激动人心的演讲");
 
 				if (_event.m.Monk1.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -118,7 +118,7 @@ this.monk_vs_monk_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Monk2.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 决心"
 				});
-				_event.m.Monk1.worsenMood(1.000000, "失去镇静，诉诸暴力");
+				_event.m.Monk1.worsenMood(1.0, "失去镇静，诉诸暴力");
 
 				if (_event.m.Monk1.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -129,7 +129,7 @@ this.monk_vs_monk_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Monk2.worsenMood(1.000000, "失去镇静，诉诸暴力");
+				_event.m.Monk2.worsenMood(1.0, "失去镇静，诉诸暴力");
 
 				if (_event.m.Monk2.getMoodState() < this.Const.MoodState.Neutral)
 				{

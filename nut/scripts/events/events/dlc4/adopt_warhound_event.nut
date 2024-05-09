@@ -6,7 +6,7 @@ this.adopt_warhound_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.adopt_warhound";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 120.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{你碰到一个死火山口，在它的底部你发现几只羊用鼻子摩擦着什么东西。 当你走近时，你看到那里有一只巨大的猎犬，它的皮毛上沾满了鲜血，项圈被撕碎了，爪子上的指甲已经断了。 它对你发出一声咆哮，但没坚持多久它就垂下头，发出一声疲惫的呼噜声，也许它撑不了多久了。 羊走了，在他们后面，你看见一个人倚在岩石上。 他的胸部被撕开了，杀死他的东西用如此大的力量把他的内脏扯了出来，散落在岩石上。 沿着这条路走下去，你发现一个巨型食尸鬼，他的喉咙被撕开了。%randombrother% 点头。%SPEECH_ON%我觉得这条狗值得被收留到战团。%SPEECH_OFF%}",
@@ -139,7 +139,7 @@ this.adopt_warhound_event <- this.inherit("scripts/events/event", {
 
 		local currentTile = this.World.State.getPlayer().getTile();
 
-		if (currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.700000)
+		if (currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.7)
 		{
 			return;
 		}

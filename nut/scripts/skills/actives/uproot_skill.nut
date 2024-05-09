@@ -35,7 +35,7 @@ this.uproot_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsTargetingActor = false;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -63,7 +63,7 @@ this.uproot_skill <- this.inherit("scripts/skills/skill", {
 
 		for( local i = 0; i < this.Const.Tactical.DustParticles.len(); i = ++i )
 		{
-			this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, _targetTile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.500000, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.500000, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages, this.createVec(0, -30));
+			this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, _targetTile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.5, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.5, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages, this.createVec(0, -30));
 		}
 
 		if (_targetTile.IsOccupiedByActor && _targetTile.getEntity().isAttackable() && !(_targetTile.getEntity().getType() == this.Const.EntityType.Schrat || _targetTile.getEntity().getType() == this.Const.EntityType.SchratSmall))
@@ -71,7 +71,7 @@ this.uproot_skill <- this.inherit("scripts/skills/skill", {
 			if (_targetTile.getEntity().m.IsShakingOnHit)
 			{
 				this.Tactical.getShaker().shake(_targetTile.getEntity(), _targetTile, 7);
-				_user.playSound(this.Const.Sound.ActorEvent.Move, 2.000000);
+				_user.playSound(this.Const.Sound.ActorEvent.Move, 2.0);
 			}
 
 			this.Time.scheduleEvent(this.TimeUnit.Virtual, 200, function ( _tag )
@@ -92,13 +92,13 @@ this.uproot_skill <- this.inherit("scripts/skills/skill", {
 
 				for( local i = 0; i < this.Const.Tactical.DustParticles.len(); i = ++i )
 				{
-					this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, forwardTile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.500000, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.500000, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages, this.createVec(0, -30));
+					this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, forwardTile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.5, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.5, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages, this.createVec(0, -30));
 				}
 
 				if (forwardTile.IsOccupiedByActor && forwardTile.getEntity().m.IsShakingOnHit)
 				{
 					this.Tactical.getShaker().shake(forwardTile.getEntity(), forwardTile, 7);
-					_user.playSound(this.Const.Sound.ActorEvent.Move, 2.000000);
+					_user.playSound(this.Const.Sound.ActorEvent.Move, 2.0);
 				}
 			}.bindenv(this), null);
 
@@ -122,13 +122,13 @@ this.uproot_skill <- this.inherit("scripts/skills/skill", {
 
 					for( local i = 0; i < this.Const.Tactical.DustParticles.len(); i = ++i )
 					{
-						this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, furtherForwardTile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.500000, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.500000, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages, this.createVec(0, -30));
+						this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, furtherForwardTile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.5, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.5, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages, this.createVec(0, -30));
 					}
 
 					if (furtherForwardTile.IsOccupiedByActor && furtherForwardTile.getEntity().m.IsShakingOnHit)
 					{
 						this.Tactical.getShaker().shake(furtherForwardTile.getEntity(), furtherForwardTile, 7);
-						_user.playSound(this.Const.Sound.ActorEvent.Move, 2.000000);
+						_user.playSound(this.Const.Sound.ActorEvent.Move, 2.0);
 					}
 				}.bindenv(this), null);
 
@@ -156,7 +156,7 @@ this.uproot_skill <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.DamageRegularMin += 70;
 		_properties.DamageRegularMax += 100;
-		_properties.DamageArmorMult *= 0.850000;
+		_properties.DamageArmorMult *= 0.85;
 	}
 
 });

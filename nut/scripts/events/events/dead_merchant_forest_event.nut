@@ -4,7 +4,7 @@ this.dead_merchant_forest_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.dead_merchant_forest";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]当你在森林中行进时，你看到一具尸体在树枝上摇摆。 它似乎这样存在了足够长的时间，甚至连苍蝇都吃饱了。%randombrother% 注意到尸体脚上一双不错的山羊皮鞋。%SPEECH_ON%在我看来他好像是个商人，先生。%SPEECH_OFF%你同意他的观点并把尸体放了下来。 经过仔细观察，他的眼睛被刺瞎了，胸前有纹身。 鉴于你发现尸体上还有些克朗，这很有可能是未开化的野人的杰作。",

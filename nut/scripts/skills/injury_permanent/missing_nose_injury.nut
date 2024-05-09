@@ -35,7 +35,7 @@ this.missing_nose_injury <- this.inherit("scripts/skills/injury_permanent/perman
 
 	function onUpdate( _properties )
 	{
-		_properties.StaminaMult *= 0.900000;
+		_properties.StaminaMult *= 0.9;
 	}
 
 	function onApplyAppearance()

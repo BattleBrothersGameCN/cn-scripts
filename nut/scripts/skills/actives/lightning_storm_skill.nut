@@ -44,7 +44,7 @@ this.lightning_storm_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsVisibleTileNeeded = false;
 		this.m.InjuriesOnBody = this.Const.Injury.BurningAndPiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BurningAndPiercingHead;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 0;
 		this.m.MinRange = 1;
@@ -102,7 +102,7 @@ this.lightning_storm_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (this.m.AffectedTiles.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 0.800000);
+			this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 0.8);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 600, this.onImpact.bindenv(this), this);
 		}
 	}
@@ -148,7 +148,7 @@ this.lightning_storm_skill <- this.inherit("scripts/skills/skill", {
 	function onImpact( _tag )
 	{
 		this.Tactical.EventLog.log("闪电击中战场");
-		this.Tactical.getCamera().quake(this.createVec(0, -1.000000), 6.000000, 0.160000, 0.350000);
+		this.Tactical.getCamera().quake(this.createVec(0, -1.0), 6.0, 0.16, 0.35);
 		local actor = this.getContainer().getActor();
 
 		foreach( i, t in _tag.m.AffectedTiles )
@@ -176,10 +176,10 @@ this.lightning_storm_skill <- this.inherit("scripts/skills/skill", {
 					local target = tile.getEntity();
 					local hitInfo = clone this.Const.Tactical.HitInfo;
 					hitInfo.DamageRegular = this.Math.rand(25, 50);
-					hitInfo.DamageArmor = hitInfo.DamageRegular * 1.000000;
-					hitInfo.DamageDirect = 0.750000;
+					hitInfo.DamageArmor = hitInfo.DamageRegular * 1.0;
+					hitInfo.DamageDirect = 0.75;
 					hitInfo.BodyPart = 0;
-					hitInfo.FatalityChanceMult = 0.000000;
+					hitInfo.FatalityChanceMult = 0.0;
 					hitInfo.Injuries = this.Const.Injury.BurningBody;
 					target.onDamageReceived(_data.User, _data.Skill, hitInfo);
 				}
@@ -206,7 +206,7 @@ this.lightning_storm_skill <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.DamageRegularMin += 25;
 			_properties.DamageRegularMax += 50;
-			_properties.DamageArmorMult *= 1.000000;
+			_properties.DamageArmorMult *= 1.0;
 		}
 	}
 

@@ -47,8 +47,8 @@ this.traumatized_injury <- this.inherit("scripts/skills/injury_permanent/permane
 
 	function onUpdate( _properties )
 	{
-		_properties.BraveryMult *= 0.600000;
-		_properties.InitiativeMult *= 0.700000;
+		_properties.BraveryMult *= 0.6;
+		_properties.InitiativeMult *= 0.7;
 		_properties.IsContentWithBeingInReserve = true;
 	}
 

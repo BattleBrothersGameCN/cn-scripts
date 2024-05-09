@@ -27,7 +27,7 @@ this.warhound_bite <- this.inherit("scripts/skills/skill", {
 		this.m.IsUsingActorPitch = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.150000;
+		this.m.DirectDamageMult = 0.15;
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 10;
 		this.m.MinRange = 1;
@@ -38,7 +38,7 @@ this.warhound_bite <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.DamageRegularMin += 25;
 		_properties.DamageRegularMax += 40;
-		_properties.DamageArmorMult *= 0.400000;
+		_properties.DamageArmorMult *= 0.4;
 	}
 
 	function onUse( _user, _targetTile )

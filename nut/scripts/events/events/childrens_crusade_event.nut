@@ -7,7 +7,7 @@ this.childrens_crusade_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.childrens_crusade";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 300.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 300.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_97.png[/img]在路上，你遇到一小群孩子。 其中最年长的和最强壮的至多十五岁，长着一堆蓬乱的橙色头发，拿着一支长矛当武器。 他率领着一支部队，一支比任何村子或城镇巡逻队都弱小的杂牌军。 当他们在路上与你相遇时，这个小领袖抬头看向你。%SPEECH_ON%让路！我们正在进行正义的行军，不该被阻挡！%SPEECH_OFF%你很好奇，问他们要去哪里。 那孩子回答，好像不相信你不知道似。%SPEECH_ON%好吧，让我告诉你，佣兵。 我们正穿过冰冻的荒地向北行进。 无知的和未开化的部落需要了解古老的神明，要么用语言，要么用剑。%SPEECH_OFF%一支欢快的“战歌”从这支军队中响起。 看来是某种宗教狂热控制了这个流浪的、无害的，因此会自杀的群体。",
@@ -119,7 +119,7 @@ this.childrens_crusade_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Monk.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] 决心"
 				});
-				_event.m.Monk.improveMood(1.000000, "把一些孩子从某种灾难中解救出来");
+				_event.m.Monk.improveMood(1.0, "把一些孩子从某种灾难中解救出来");
 
 				if (_event.m.Monk.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -136,7 +136,7 @@ this.childrens_crusade_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() != _event.m.Monk.getID() && this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(0.500000, "很高兴" + _event.m.Monk.getName() + "拯救了孩子们免于灾难");
+						bro.improveMood(0.5, "很高兴" + _event.m.Monk.getName() + "拯救了孩子们免于灾难");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -179,7 +179,7 @@ this.childrens_crusade_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Traveller.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] 决心"
 				});
-				_event.m.Traveller.improveMood(1.000000, "把一些孩子从某种灾难中解救出来");
+				_event.m.Traveller.improveMood(1.0, "把一些孩子从某种灾难中解救出来");
 
 				if (_event.m.Traveller.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -196,7 +196,7 @@ this.childrens_crusade_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() != _event.m.Traveller.getID() && this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(0.500000, "很高兴" + _event.m.Traveller.getName() + "拯救了孩子们免于灾难");
+						bro.improveMood(0.5, "很高兴" + _event.m.Traveller.getName() + "拯救了孩子们免于灾难");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -250,7 +250,7 @@ this.childrens_crusade_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(1.000000, "对你下令抢劫儿童感到震惊");
+						bro.worsenMood(1.0, "对你下令抢劫儿童感到震惊");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -286,7 +286,7 @@ this.childrens_crusade_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

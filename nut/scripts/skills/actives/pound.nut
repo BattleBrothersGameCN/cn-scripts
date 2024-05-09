@@ -32,7 +32,7 @@ this.pound <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 15;
 		this.m.MinRange = 1;
@@ -120,7 +120,7 @@ this.pound <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInFlails ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInFlails ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -152,11 +152,11 @@ this.pound <- this.inherit("scripts/skills/skill", {
 		{
 			if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInFlails)
 			{
-				_hitInfo.DamageDirect += 0.200000;
+				_hitInfo.DamageDirect += 0.2;
 			}
 			else
 			{
-				_hitInfo.DamageDirect += 0.100000;
+				_hitInfo.DamageDirect += 0.1;
 			}
 		}
 	}

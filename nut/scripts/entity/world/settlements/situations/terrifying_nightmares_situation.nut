@@ -26,7 +26,7 @@ this.terrifying_nightmares_situation <- this.inherit("scripts/entity/world/settl
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.RecruitsMult *= 0.750000;
+		_modifiers.RecruitsMult *= 0.75;
 	}
 
 });

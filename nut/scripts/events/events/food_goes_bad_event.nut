@@ -6,7 +6,7 @@ this.food_goes_bad_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.food_goes_bad";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "",

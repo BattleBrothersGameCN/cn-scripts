@@ -3,7 +3,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 		InjuryType = 1,
 		Surcoat = null,
 		ResurrectionChance = 66,
-		ResurrectionValue = 2.000000,
+		ResurrectionValue = 2.0,
 		ResurrectWithScript = "scripts/entity/tactical/enemies/zombie",
 		IsResurrectingOnFatality = false,
 		IsCreatingAgent = true,
@@ -58,8 +58,8 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/zombie_idle_16.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Move] = this.m.Sound[this.Const.Sound.ActorEvent.Idle];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.100000;
-		this.m.SoundPitch = this.Math.rand(70, 120) * 0.010000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.1;
+		this.m.SoundPitch = this.Math.rand(70, 120) * 0.01;
 		this.getFlags().add("undead");
 		this.getFlags().add("zombie_minion");
 
@@ -70,7 +70,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 		}
 	}
 
-	function playSound( _type, _volume, _pitch = 1.000000 )
+	function playSound( _type, _volume, _pitch = 1.0 )
 	{
 		if (_type == this.Const.Sound.ActorEvent.Move && this.Math.rand(1, 100) <= 50)
 		{
@@ -99,37 +99,37 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 			local decal = _tile.spawnDetail(sprite_body.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 			decal.Color = sprite_body.Color;
 			decal.Saturation = sprite_body.Saturation;
-			decal.Scale = 0.900000;
-			decal.setBrightness(0.900000);
+			decal.Scale = 0.9;
+			decal.setBrightness(0.9);
 
 			if (tattoo_body.HasBrush)
 			{
 				decal = _tile.spawnDetail(tattoo_body.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 				decal.Color = tattoo_body.Color;
 				decal.Saturation = tattoo_body.Saturation;
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 
 			if (appearance.CorpseArmor != "")
 			{
 				local decal = _tile.spawnDetail(appearance.CorpseArmor, this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 
 			if (this.m.Surcoat != null)
 			{
 				decal = _tile.spawnDetail("surcoat_" + (this.m.Surcoat < 10 ? "0" + this.m.Surcoat : this.m.Surcoat) + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 
 			if (appearance.CorpseArmorUpgradeBack != "")
 			{
 				decal = _tile.spawnDetail(appearance.CorpseArmorUpgradeBack, this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated && !this.m.IsHeadless)
@@ -139,16 +139,16 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 					local decal = _tile.spawnDetail(sprite_head.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 					decal.Color = sprite_head.Color;
 					decal.Saturation = sprite_head.Saturation;
-					decal.Scale = 0.900000;
-					decal.setBrightness(0.900000);
+					decal.Scale = 0.9;
+					decal.setBrightness(0.9);
 
 					if (tattoo_head.HasBrush)
 					{
 						local decal = _tile.spawnDetail(tattoo_head.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 						decal.Color = tattoo_head.Color;
 						decal.Saturation = tattoo_head.Saturation;
-						decal.Scale = 0.900000;
-						decal.setBrightness(0.900000);
+						decal.Scale = 0.9;
+						decal.setBrightness(0.9);
 					}
 				}
 
@@ -157,24 +157,24 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 					local decal = _tile.spawnDetail(sprite_beard.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 					decal.Color = sprite_beard.Color;
 					decal.Saturation = sprite_beard.Saturation;
-					decal.Scale = 0.900000;
-					decal.setBrightness(0.900000);
+					decal.Scale = 0.9;
+					decal.setBrightness(0.9);
 
 					if (sprite_beard_top.HasBrush)
 					{
 						local decal = _tile.spawnDetail(sprite_beard_top.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 						decal.Color = sprite_beard.Color;
 						decal.Saturation = sprite_beard.Saturation;
-						decal.Scale = 0.900000;
-						decal.setBrightness(0.900000);
+						decal.Scale = 0.9;
+						decal.setBrightness(0.9);
 					}
 				}
 
 				if (!appearance.HideCorpseHead)
 				{
 					local decal = _tile.spawnDetail("zombify_0" + this.m.InjuryType + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-					decal.Scale = 0.900000;
-					decal.setBrightness(0.750000);
+					decal.Scale = 0.9;
+					decal.setBrightness(0.75);
 				}
 
 				if (!appearance.HideHair && !appearance.HideCorpseHead && sprite_hair.HasBrush)
@@ -182,20 +182,20 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 					local decal = _tile.spawnDetail(sprite_hair.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 					decal.Color = sprite_hair.Color;
 					decal.Saturation = sprite_hair.Saturation;
-					decal.Scale = 0.900000;
-					decal.setBrightness(0.900000);
+					decal.Scale = 0.9;
+					decal.setBrightness(0.9);
 				}
 
 				if (_fatalityType == this.Const.FatalityType.Smashed)
 				{
 					local decal = _tile.spawnDetail("bust_head_smashed_02", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-					decal.setBrightness(0.800000);
+					decal.setBrightness(0.8);
 				}
 				else if (appearance.HelmetCorpse != "")
 				{
 					local decal = _tile.spawnDetail(appearance.HelmetCorpse, this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-					decal.Scale = 0.900000;
-					decal.setBrightness(0.900000);
+					decal.Scale = 0.9;
+					decal.setBrightness(0.9);
 				}
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated && !this.m.IsHeadless)
@@ -237,15 +237,15 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 					layers.push(sprite_beard_top.getBrush().Name + "_dead");
 				}
 
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), -90.000000, "bust_head_dead_bloodpool_zombified");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), -90.0, "bust_head_dead_bloodpool_zombified");
 				local idx = 0;
 
 				if (!appearance.HideCorpseHead)
 				{
 					decap[idx].Color = sprite_head.Color;
 					decap[idx].Saturation = sprite_head.Saturation;
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.900000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.9);
 					idx = ++idx;
 				}
 
@@ -253,8 +253,8 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 				{
 					decap[idx].Color = tattoo_head.Color;
 					decap[idx].Saturation = tattoo_head.Saturation;
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.900000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.9);
 					idx = ++idx;
 				}
 
@@ -262,15 +262,15 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 				{
 					decap[idx].Color = sprite_beard.Color;
 					decap[idx].Saturation = sprite_beard.Saturation;
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.900000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.9);
 					idx = ++idx;
 				}
 
 				if (!appearance.HideCorpseHead)
 				{
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.750000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.75);
 					idx = ++idx;
 				}
 
@@ -278,15 +278,15 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 				{
 					decap[idx].Color = sprite_hair.Color;
 					decap[idx].Saturation = sprite_hair.Saturation;
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.900000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.9);
 					idx = ++idx;
 				}
 
 				if (appearance.HelmetCorpse.len() != 0)
 				{
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.900000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.9);
 					idx = ++idx;
 				}
 
@@ -294,8 +294,8 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 				{
 					decap[idx].Color = sprite_beard.Color;
 					decap[idx].Saturation = sprite_beard.Saturation;
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.900000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.9);
 				}
 			}
 
@@ -310,8 +310,8 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 					decal = _tile.spawnDetail(appearance.Corpse + "_arrows", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 				}
 
-				decal.Saturation = 0.850000;
-				decal.setBrightness(0.850000);
+				decal.Saturation = 0.85;
+				decal.setBrightness(0.85);
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
@@ -324,15 +324,15 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 					decal = _tile.spawnDetail(appearance.Corpse + "_javelin", this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
 				}
 
-				decal.Saturation = 0.850000;
-				decal.setBrightness(0.850000);
+				decal.Saturation = 0.85;
+				decal.setBrightness(0.85);
 			}
 
 			if (appearance.CorpseArmorUpgradeFront != "")
 			{
 				decal = _tile.spawnDetail(appearance.CorpseArmorUpgradeFront, this.Const.Tactical.DetailFlag.Corpse, flip, false, this.Const.Combat.HumanCorpseOffset);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -423,14 +423,14 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 
 			if (!_info.Custom.IsZombified)
 			{
-				head.Saturation = 0.500000;
-				head.varySaturation(0.200000);
+				head.Saturation = 0.5;
+				head.varySaturation(0.2);
 				head.Color = this.createColor("#c1ddaa");
-				head.varyColor(0.050000, 0.050000, 0.050000);
+				head.varyColor(0.05, 0.05, 0.05);
 
 				if (_info.Custom.Ethnicity == 1)
 				{
-					head.setBrightness(1.250000);
+					head.setBrightness(1.25);
 				}
 			}
 			else
@@ -458,14 +458,14 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 				beard.setBrush(_info.Custom.Beard);
 				beard.Color = _info.Custom.HairColor;
 				beard.Saturation = _info.Custom.HairSaturation;
-				beard.setBrightness(0.900000);
+				beard.setBrightness(0.9);
 
 				if (this.doesBrushExist(_info.Custom.Beard + "_top"))
 				{
 					beard_top.setBrush(_info.Custom.Beard + "_top");
 					beard_top.Color = _info.Custom.HairColor;
 					beard_top.Saturation = _info.Custom.HairSaturation;
-					beard_top.setBrightness(0.900000);
+					beard_top.setBrightness(0.9);
 				}
 			}
 			else
@@ -519,7 +519,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 
 					if (otherActor.m.MaxEnemiesThisTurn < numEnemies && !otherActor.isAlliedWith(this))
 					{
-						local difficulty = this.Math.maxf(10.000000, 50.000000 - this.getXPValue() * 0.200000);
+						local difficulty = this.Math.maxf(10.0, 50.0 - this.getXPValue() * 0.2);
 						otherActor.checkMorale(-1, difficulty);
 						otherActor.m.MaxEnemiesThisTurn = numEnemies;
 					}
@@ -544,7 +544,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			local corpse = _tile.Properties.get("Corpse");
 			corpse.Faction = this.getFaction();
-			corpse.Hitpoints = 1.000000;
+			corpse.Hitpoints = 1.0;
 			corpse.Items = _actor.getItems();
 			corpse.IsConsumable = false;
 			corpse.IsResurrectable = false;
@@ -558,7 +558,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 		local injury_body = this.getSprite("body_injury");
 		local p = this.m.Hitpoints / this.getHitpointsMax();
 
-		if (p > 0.500000)
+		if (p > 0.5)
 		{
 			if (injury.getBrush().Name != "zombify_0" + this.m.InjuryType)
 			{
@@ -570,7 +570,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 			injury.setBrush("zombify_0" + this.m.InjuryType + "_injured");
 		}
 
-		if (p > 0.500000)
+		if (p > 0.5)
 		{
 			injury_body.setBrush("zombify_body_01");
 			injury_body.Visible = true;
@@ -623,7 +623,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 90)
 		{
-			b.DamageTotalMult += 0.100000;
+			b.DamageTotalMult += 0.1;
 		}
 
 		this.m.ActionPoints = b.ActionPoints;
@@ -642,17 +642,17 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 		local body = this.addSprite("body");
 		body.setHorizontalFlipping(true);
 		body.setBrush(this.Const.Items.Default.PlayerNakedBody);
-		body.Saturation = 0.500000;
-		body.varySaturation(0.200000);
+		body.Saturation = 0.5;
+		body.varySaturation(0.2);
 		body.Color = this.createColor("#c1ddaa");
-		body.varyColor(0.050000, 0.050000, 0.050000);
+		body.varyColor(0.05, 0.05, 0.05);
 		local tattoo_body = this.addSprite("tattoo_body");
 		tattoo_body.setHorizontalFlipping(true);
-		tattoo_body.Saturation = 0.900000;
-		tattoo_body.setBrightness(0.750000);
+		tattoo_body.Saturation = 0.9;
+		tattoo_body.setBrightness(0.75);
 		local body_injury = this.addSprite("body_injury");
 		body_injury.Visible = true;
-		body_injury.setBrightness(0.750000);
+		body_injury.setBrightness(0.75);
 		body_injury.setBrush("zombify_body_01");
 		this.addSprite("armor").setHorizontalFlipping(true);
 		this.addSprite("surcoat");
@@ -667,18 +667,18 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 		head.Color = body.Color;
 		local tattoo_head = this.addSprite("tattoo_head");
 		tattoo_head.setHorizontalFlipping(true);
-		tattoo_head.Saturation = 0.900000;
-		tattoo_head.setBrightness(0.750000);
+		tattoo_head.Saturation = 0.9;
+		tattoo_head.setBrightness(0.75);
 		local beard = this.addSprite("beard");
 		beard.setHorizontalFlipping(true);
-		beard.varyColor(0.020000, 0.020000, 0.020000);
+		beard.varyColor(0.02, 0.02, 0.02);
 
 		if (this.Math.rand(1, 100) <= 50)
 		{
 			if (this.m.InjuryType == 4)
 			{
 				beard.setBrush("beard_" + hairColor + "_" + this.Const.Beards.ZombieExtended[this.Math.rand(0, this.Const.Beards.ZombieExtended.len() - 1)]);
-				beard.setBrightness(0.900000);
+				beard.setBrightness(0.9);
 			}
 			else
 			{
@@ -689,7 +689,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 		local injury = this.addSprite("injury");
 		injury.setHorizontalFlipping(true);
 		injury.setBrush("zombify_0" + this.m.InjuryType);
-		injury.setBrightness(0.750000);
+		injury.setBrightness(0.75);
 		local hair = this.addSprite("hair");
 		hair.setHorizontalFlipping(true);
 		hair.Color = beard.Color;
@@ -724,8 +724,8 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 		rage.setBrush("mind_control");
 		rage.Visible = false;
 		this.addDefaultStatusSprites();
-		this.getSprite("arms_icon").setBrightness(0.850000);
-		this.getSprite("status_rooted").Scale = 0.550000;
+		this.getSprite("arms_icon").setBrightness(0.85);
+		this.getSprite("status_rooted").Scale = 0.55;
 		this.m.Skills.add(this.new("scripts/skills/special/double_grip"));
 		this.m.Skills.add(this.new("scripts/skills/actives/zombie_bite"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
@@ -811,7 +811,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (this.Math.rand(1, 100) <= 50)
 		{
-			armor.setArmor(this.Math.round(armor.getArmorMax() / 2 - 1) / 1.000000);
+			armor.setArmor(this.Math.round(armor.getArmorMax() / 2 - 1) / 1.0);
 		}
 
 		this.m.Items.equip(armor);
@@ -844,7 +844,7 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 
 			if (this.Math.rand(1, 100) <= 50)
 			{
-				helmet.setArmor(this.Math.round(helmet.getArmorMax() / 2 - 1) / 1.000000);
+				helmet.setArmor(this.Math.round(helmet.getArmorMax() / 2 - 1) / 1.0);
 			}
 
 			this.m.Items.equip(helmet);

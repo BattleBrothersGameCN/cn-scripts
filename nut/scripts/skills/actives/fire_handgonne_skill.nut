@@ -48,7 +48,7 @@ this.fire_handgonne_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsAOE = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BurningAndPiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BurningAndPiercingHead;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.DirectDamageMult = 0.25;
 		this.m.ActionPointCost = 3;
 		this.m.FatigueCost = 5;
 		this.m.MinRange = 2;
@@ -280,7 +280,7 @@ this.fire_handgonne_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInCrossbows ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInCrossbows ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -328,7 +328,7 @@ this.fire_handgonne_skill <- this.inherit("scripts/skills/skill", {
 		}
 
 		local affectedTiles = this.getAffectedTiles(targetTile);
-		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.000000, user.getPos());
+		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, user.getPos());
 		local tag = {
 			Skill = _tag.Skill,
 			User = user,

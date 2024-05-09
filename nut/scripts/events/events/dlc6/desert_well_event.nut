@@ -7,7 +7,7 @@ this.desert_well_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.desert_well";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{你遇到一个水井。 井的外墙布置着动物头骨还有同样挂上去的动物肋骨。 随着你靠近，深处传来微弱的嘶嘶声。 向里面望去，你看到一个细小的橘色光点左到右蜿蜒而过。%SPEECH_ON%你最好不要多往下看。%SPEECH_OFF%你转身看到一个穿着破布的人。 他的头发丫字形的向后突出。 脸上满是黑色的斑点以及每个手指上都一样的淤青还有一个黑漆漆的笑容。%SPEECH_ON%要喷发了。%SPEECH_OFF%}",
@@ -152,7 +152,7 @@ this.desert_well_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getSkills().add(trait);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(2.500000, "有一连串的不幸，失去了一切");
+				_event.m.Dude.worsenMood(2.5, "有一连串的不幸，失去了一切");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				local item = this.new("scripts/items/loot/silverware_item");
 				this.World.Assets.getStash().add(item);

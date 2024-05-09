@@ -6,7 +6,7 @@ this.forestlover_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.forestlover";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img] {%forestlover% 抬头看向林中树冠，手嬉戏般的在泻下的阳光中撩拨。 他看着你。%SPEECH_ON%我小时候常在这些森林中玩耍。%SPEECH_OFF%你表示赞同，接着大声发出质疑。%SPEECH_ON%我以为你的出生地附近是 %randomtown% ？%SPEECH_OFF%%forestlover% 放下他的手，注视着地面。%SPEECH_ON%噢，是的，你说对了。 好了，我们该动身了对吧？%SPEECH_OFF%在你能说点什么出来之前，这个人脸红着走了。 | 你发现 %forestlover% 似乎最近心情变好了。 原来，他很熟悉森林，重返绿荫让他散发出一种温暖的怀乡气氛。 | 即使你曾踏足过不少森林，这样的青翠景致仍使你印象深刻。 毫无疑问 %forestlover% 爱极了重返浓郁的绿荫。 | 树木粗壮的枝干在你头顶延伸开来。%forestlover% 似乎沉浸于它们的环绕中。 你发现他最近一直在笑，好似重返森林也重返了那些美好的日子。}",
@@ -26,7 +26,7 @@ this.forestlover_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Forestlover.getImagePath());
-				_event.m.Forestlover.improveMood(1.000000, "喜欢在森林里");
+				_event.m.Forestlover.improveMood(1.0, "喜欢在森林里");
 
 				if (_event.m.Forestlover.getMoodState() >= this.Const.MoodState.Neutral)
 				{

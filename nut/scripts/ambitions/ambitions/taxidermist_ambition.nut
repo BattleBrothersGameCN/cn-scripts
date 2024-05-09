@@ -4,7 +4,7 @@ this.taxidermist_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.taxidermist";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "没什么能比冻土野兽的战利品更让人尊敬。让我们去狩猎一些然后请剥制师干点活！";
 		this.m.UIText = "在剥制师那里制作物品";
 		this.m.TooltipText = "拥有至少12件剥制成品。剥制师主要分布在被沼泽和森林覆盖的定居点，他们能把野兽掉落的东西制成有用的物品，比如罕见的大型恐狼掉落的狼皮。";

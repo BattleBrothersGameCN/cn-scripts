@@ -69,7 +69,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		items.equip(this.new("scripts/items/helmets/oriental/southern_head_wrap"));
 		items.equip(this.new("scripts/items/weapons/battle_whip"));
 		bros[1].getSkills().add(this.new("scripts/skills/actives/whip_slave_skill"));
-		bros[1].worsenMood(0.000000, "对你最近对不要虐待俘虏的训斥而感到恼火");
+		bros[1].worsenMood(0.0, "对你最近对不要虐待俘虏的训斥而感到恼火");
 		bros[1].m.Talents = [];
 		talents = bros[1].getTalents();
 		talents.resize(this.Const.Attributes.COUNT, 0);
@@ -89,7 +89,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.equip(this.new("scripts/items/weapons/wooden_stick"));
 		items.equip(this.new("scripts/items/helmets/oriental/nomad_head_wrap"));
-		bros[2].worsenMood(0.000000, "想念他的书");
+		bros[2].worsenMood(0.0, "想念他的书");
 		bros[3].setStartValuesEx([
 			"slave_background"
 		]);
@@ -100,9 +100,9 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		local items = bros[3].getItems();
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.equip(this.new("scripts/items/weapons/bludgeon"));
-		bros[3].worsenMood(2.000000, "差点被处决");
-		bros[3].improveMood(2.000000, "他逃脱了处决");
-		bros[3].worsenMood(0.000000, "担心接下来会发生什么");
+		bros[3].worsenMood(2.0, "差点被处决");
+		bros[3].improveMood(2.0, "他逃脱了处决");
+		bros[3].worsenMood(0.0, "担心接下来会发生什么");
 		bros[4].setStartValuesEx([
 			"slave_southern_background"
 		]);
@@ -113,7 +113,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		local items = bros[4].getItems();
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.equip(this.new("scripts/items/weapons/militia_spear"));
-		bros[4].worsenMood(0.500000, "觉得自己被诅咒了，逃离了一支军队，却在另一支军队中当负债者");
+		bros[4].worsenMood(0.5, "觉得自己被诅咒了，逃离了一支军队，却在另一支军队中当负债者");
 		bros[5].setStartValuesEx([
 			"slave_southern_background"
 		]);

@@ -6,7 +6,7 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_hungry_hamlet";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 35.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_79.png[/img]{当你在路上走的时候，你遇到了一个小村庄，很明显，几乎所有人都站村外。 他们的村长向前走了几步，伸出双手，恳求着，尽管他虚弱的几乎没有力气把双手合在一起。%SPEECH_ON%拜托，你能帮帮我们吗？ 我们已经将近一个星期没有食物吃了。 我们只能吃土了！ 我们已经什么都没有！ 战争蹂躏了我们所有人。%SPEECH_OFF% | 在你的旅途的路旁出现了一个小村庄，如果不是因为似乎外面站着一大群村民在等你的村民，这只不过是旅途路上的匆匆一瞥。他们的村长走上前来。%SPEECH_ON%雇佣兵，我知道你不是那个能保护我们的人，但是你有多余的食物吗？ 战争蹂躏了我们的庄稼，在这片土地上游荡的士兵们拿走了我们的一切！ 求求你，救救我们！%SPEECH_OFF% | 这条路通向一个小村庄。 村民们蹲在他们的村子外面，头埋在膝盖之间，看上去又瘦又灰。 孩子们和他们在一起，身体虚弱，精力充沛，但他们眼中仍闪烁着青春的光芒。 村长亲自来找你。%SPEECH_ON%先生…是佣兵？是的，佣兵。 求求你，我们已经一个星期没吃东西了。 我们靠我们的宠物，昆虫生存…甚至是泥土。 你能帮帮我们吗？%SPEECH_OFF% | 当你的人在路边休息的时候，附近一个村庄的村民来找你们。 他们蹒跚向前，瘦削的腿从一边到另一边摇晃着。 一群人的头抬起或者低下一只手，好像在祝福你的存在。%SPEECH_ON%噢，佣兵，请问，你有什么吃的吗？ 我们已经两天没有吃东西了！ 我们这几天所吃的，一些根本不能说的东西！ 贵族之间的战争毁了这个地方，你能帮帮我们吗？%SPEECH_OFF%}",
@@ -266,7 +266,7 @@ this.civilwar_hungry_hamlet_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

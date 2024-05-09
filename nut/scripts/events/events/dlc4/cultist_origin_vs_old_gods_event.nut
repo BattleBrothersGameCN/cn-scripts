@@ -7,7 +7,7 @@ this.cultist_origin_vs_old_gods_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cultist_origin_vs_old_gods";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 20.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 20.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_06.png[/img]正在享用一片培根的时候，你听到一场争吵愈演愈烈。 你忽视它一段时间，但叫喊声只是越来越大，迅速上升让你无法安心享用一顿美餐。 被惹怒了，你站起来朝骚动的方向走去。 你发现 %cultist% 和 %oldgods% 正在对峙，这些邪教徒和古老神明的追随者们显然发生了一些分歧，而后者显然无法真正开始理解这些差异。",
@@ -59,7 +59,7 @@ this.cultist_origin_vs_old_gods_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.OldGods.getImagePath());
 				this.Characters.push(_event.m.Cultist.getImagePath());
-				_event.m.OldGods.worsenMood(1.000000, "失去镇静，诉诸暴力");
+				_event.m.OldGods.worsenMood(1.0, "失去镇静，诉诸暴力");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.OldGods.getMoodState()],
@@ -108,13 +108,13 @@ this.cultist_origin_vs_old_gods_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.OldGods.getImagePath());
 				this.Characters.push(_event.m.Cultist.getImagePath());
-				_event.m.OldGods.worsenMood(1.000000, "被剥夺了启发异教者的机会");
+				_event.m.OldGods.worsenMood(1.0, "被剥夺了启发异教者的机会");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.OldGods.getMoodState()],
 					text = _event.m.OldGods.getName() + this.Const.MoodStateEvent[_event.m.OldGods.getMoodState()]
 				});
-				_event.m.Cultist.worsenMood(1.000000, "被剥夺了击溃古老神明的追随者的机会");
+				_event.m.Cultist.worsenMood(1.0, "被剥夺了击溃古老神明的追随者的机会");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Cultist.getMoodState()],

@@ -51,7 +51,7 @@ this.geomancy_once_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (this.m.AffectedTiles.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.000000, this.m.AffectedTiles[0].Pos);
+			this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, this.m.AffectedTiles[0].Pos);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 100, this.onLowerTiles.bindenv(this), this);
 		}
 	}

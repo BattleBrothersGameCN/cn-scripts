@@ -7,7 +7,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_vs_dog";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_27.png[/img]{%anatomist% 解剖学家过来找你，提出了一个可怕的想法：他想取一只战团的狗来进行解剖。你问他是否是打算杀死这只狗。他摇头示意在两个选择之间权衡。%SPEECH_ON%我认为在我们开始解剖之前，最好让这只狗已经去世了。%SPEECH_OFF%解剖学家解释说，狗用于研究并不罕见，并且这种要求将有助于更好地理解恐狼，而恐狼显然和狗有着某种关系。你无法想象屠杀战团的狗会和其他士兵相处的好，于是让他去找几百只懒散四处游荡的狗之一。他摇着头。%SPEECH_ON%所有的狗几乎可以肯定都是恐狼的同类，但是一只战斗狗却是不同种，而且几乎可以确定是最接近这个问题的犬种。%SPEECH_OFF%}",
@@ -139,7 +139,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Anatomist.addInjury([
 					{
 						ID = "injury.missing_finger",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury_permanent/missing_finger_injury"
 					}
 				]);
@@ -209,7 +209,7 @@ this.anatomist_vs_dog_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Anatomist.getImagePath());
-				_event.m.Anatomist.worsenMood(0.500000, "被拒绝学习战犬术的机会。");
+				_event.m.Anatomist.worsenMood(0.5, "被拒绝学习战犬术的机会。");
 			}
 
 		});

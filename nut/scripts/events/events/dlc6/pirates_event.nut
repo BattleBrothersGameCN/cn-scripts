@@ -7,7 +7,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.pirates";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 80.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_157.png[/img]{你遇到一排拷着锁链被驱赶的人。 他们的领头人声称这些人是“负债者，”但是其中一个人，显然是个北方人，喊道他们是被海盗绑架了的航船商人。 搜捕者头头走在他手下前面笑道。%SPEECH_ON%不要相信他的谎言，旅行者，这些人只是害怕向镀金者偿还债务的漫长救赎之旅。 他宁愿下地狱也不愿意麻烦自己获得救赎。 他难道没有点人性吗？%SPEECH_OFF%}",
@@ -104,7 +104,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(2.000000, "被猎奴者俘虏了");
+				_event.m.Dude.worsenMood(2.0, "被猎奴者俘虏了");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				local cityStates = this.World.FactionManager.getFactionsOfType(this.Const.FactionType.OrientalCityState);
 
@@ -159,9 +159,9 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(2.000000, "被猎奴者俘虏了");
-				_event.m.Dude.improveMood(0.500000, "被救出了奴隶生活，多亏了" + _event.m.Fisherman.getName());
-				_event.m.Fisherman.improveMood(2.000000, "已保存 (Saved)" + _event.m.Dude.getName() + "从奴隶生活中解放");
+				_event.m.Dude.worsenMood(2.0, "被猎奴者俘虏了");
+				_event.m.Dude.improveMood(0.5, "被救出了奴隶生活，多亏了" + _event.m.Fisherman.getName());
+				_event.m.Fisherman.improveMood(2.0, "已保存 (Saved)" + _event.m.Dude.getName() + "从奴隶生活中解放");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				local cityStates = this.World.FactionManager.getFactionsOfType(this.Const.FactionType.OrientalCityState);
 
@@ -207,7 +207,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(2.000000, "被猎奴者俘虏了");
+				_event.m.Dude.worsenMood(2.0, "被猎奴者俘虏了");
 				this.Characters.push(_event.m.Dude.getImagePath());
 				_event.m.Fisherman = roster.create("scripts/entity/tactical/player");
 				_event.m.Fisherman.setStartValuesEx([
@@ -218,7 +218,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Fisherman.getBackground().buildDescription(true);
 				_event.m.Fisherman.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Fisherman.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Fisherman.worsenMood(2.000000, "被猎奴者俘虏了");
+				_event.m.Fisherman.worsenMood(2.0, "被猎奴者俘虏了");
 				this.Characters.push(_event.m.Fisherman.getImagePath());
 			}
 

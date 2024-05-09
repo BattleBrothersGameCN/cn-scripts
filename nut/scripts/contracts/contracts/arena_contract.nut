@@ -3,10 +3,10 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 	function create()
 	{
 		this.contract.create();
-		this.m.DifficultyMult = 1.000000;
+		this.m.DifficultyMult = 1.0;
 		this.m.Type = "contract.arena";
 		this.m.Name = "竞技场";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 1.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 1.0;
 	}
 
 	function onImportIntro()
@@ -205,7 +205,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 		}
 
 		this.m.Payment.Pool = pay * this.getPaymentMult() * this.getReputationToPaymentMult();
-		this.m.Payment.Completion = 1.000000;
+		this.m.Payment.Completion = 1.0;
 	}
 
 	function createStates()
@@ -388,8 +388,8 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 					}
 					else
 					{
-						num = num + this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.GhoulLOW, baseDifficulty * 0.500000);
-						num = num + this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Ghoul, baseDifficulty * 0.500000);
+						num = num + this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.GhoulLOW, baseDifficulty * 0.5);
+						num = num + this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Ghoul, baseDifficulty * 0.5);
 					}
 
 					this.Flags.set("Number", num);
@@ -635,12 +635,12 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 							}
 							else
 							{
-								for( local i = 0; i < this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.GhoulLOW, baseDifficulty * 0.500000); i = ++i )
+								for( local i = 0; i < this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.GhoulLOW, baseDifficulty * 0.5); i = ++i )
 								{
 									this.Contract.addToCombat(p.Entities, this.Const.World.Spawn.Troops.GhoulLOW);
 								}
 
-								for( local i = 0; i < this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Ghoul, baseDifficulty * 0.500000); i = ++i )
+								for( local i = 0; i < this.Contract.getAmountToSpawn(this.Const.World.Spawn.Troops.Ghoul, baseDifficulty * 0.5); i = ++i )
 								{
 									this.Contract.addToCombat(p.Entities, this.Const.World.Spawn.Troops.Ghoul);
 								}
@@ -1081,14 +1081,14 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 		local p = this.World.State.getPlayer().getStrength();
 		p = p / this.World.getPlayerRoster().getSize();
 		p = p * 12;
-		local s = this.Math.maxf(0.750000, 1.000000 * this.Math.pow(0.010000 * p, 0.950000) + this.Math.minf(0.500000, (this.World.getTime().Days + this.World.Statistics.getFlags().getAsInt("ArenaFightsWon")) * 0.010000));
-		local d = this.Math.minf(5.000000, s);
+		local s = this.Math.maxf(0.75, 1.0 * this.Math.pow(0.01 * p, 0.95) + this.Math.minf(0.5, (this.World.getTime().Days + this.World.Statistics.getFlags().getAsInt("ArenaFightsWon")) * 0.01));
+		local d = this.Math.minf(5.0, s);
 		return d * this.Const.Difficulty.EnemyMult[this.World.Assets.getCombatDifficulty()];
 	}
 
 	function getReputationToPaymentMult()
 	{
-		local r = this.Math.minf(4.000000, this.Math.maxf(0.900000, this.Math.pow(this.Math.maxf(0, 0.003000 * this.World.Assets.getBusinessReputation() * 0.500000 + this.getScaledDifficultyMult()), 0.350000)));
+		local r = this.Math.minf(4.0, this.Math.maxf(0.9, this.Math.pow(this.Math.maxf(0, 0.003 * this.World.Assets.getBusinessReputation() * 0.5 + this.getScaledDifficultyMult()), 0.35)));
 		return r * this.Const.Difficulty.PaymentMult[this.World.Assets.getEconomicDifficulty()];
 	}
 

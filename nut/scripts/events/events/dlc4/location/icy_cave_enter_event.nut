@@ -6,7 +6,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.location.icy_cave_enter";
 		this.m.Title = "当你接近时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A1",
@@ -311,7 +311,7 @@ this.icy_cave_enter_event <- this.inherit("scripts/events/event", {
 				{
 					if (v.getTypeID() == "location.tundra_elk_location")
 					{
-						v.setVisibilityMult(0.800000);
+						v.setVisibilityMult(0.8);
 						v.onUpdate();
 						break;
 					}

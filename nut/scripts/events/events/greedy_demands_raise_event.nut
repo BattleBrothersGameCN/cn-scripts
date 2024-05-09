@@ -6,7 +6,7 @@ this.greedy_demands_raise_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.greedy_demands_raise";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_64.png[/img]{%bro% 带着一小卷纸走进你的帐篷。 他把纸摊开，一一列举了他加入以来杀过的东西。 你问他这是什么意思。 他把那张纸按在你的办公桌上，回答。%SPEECH_ON%补偿我。从现在开始提高工资。每天 %newpay% 克朗。%SPEECH_OFF% | %bro% 想要更高的工资，每天 %newpay% 克朗，而不是现在的 %oldpay% 克朗，他的理由是在加入之后杀了不少敌人，都是为了 %companyname%。\n\n说实话，杀敌众多对你来说是个说得过去的理由，你或许会考虑给他涨工资。 | 看来，%bro% 想涨工资了，因为他为你杀了不少敌人。 你告诉他，这些都不是为了你个人的利益，只是你付钱让他这么做。他点头。%SPEECH_ON%好吧，那我希望现在你能多给我点。每天 %newpay% 克朗。%SPEECH_OFF% | %bro% 认为自己对战团的服务没有得到公平的报酬。 他要求更高的工资，每天 %newpay% 克朗，而不是现在的 %oldpay% 克朗，理由是他精通于做一位雇佣兵。 | %bro% 向你要求更高的工资，每天 %newpay% 克朗，而不是现在的 %oldpay% 克朗，他认为自己已经向大家证明了自己的实力，在 %companyname%。\n\n他给出的理由合情合理，只是你不知道自己究竟愿不愿意多给点钱。}",
@@ -57,7 +57,7 @@ this.greedy_demands_raise_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Greedy.getImagePath());
 				_event.m.Greedy.getBaseProperties().DailyWage += 8;
-				_event.m.Greedy.improveMood(2.000000, "收到加薪");
+				_event.m.Greedy.improveMood(2.0, "收到加薪");
 				_event.m.Greedy.getSkills().update();
 				this.List.push({
 					id = 10,

@@ -7,7 +7,7 @@ this.lucky_finds_something_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.lucky_finds_something";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 35.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 35.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{%lucky%这位幸运的雇佣军找到了一件有趣的东西。你问他是如何找到这个物品的。他耸了耸肩。%SPEECH_ON%{我走路的时候就踩到了它。简单吧。 | 我仰头看到一只鸟拉了一泡屎，正好没拉在我身上，我去看它拉到了哪里，然后就看到了这个。这只鸟拉了屎，你手里拿的就是这个。 | 我手指感觉到一阵刺痛，接着小弟子也是，然后我就开始四处寻找一些无聊的东西从而弥补过失，我看到它就在那里。 | 我看到一个马蹄铁只是随意扔在地上，想去捡它，接着底下就是这个。 | 你懂的，我看到一片四叶草在那里，想要放到我的包里，我已经有几十片了，当我去捡它的时候，就看到那个东西放在那里。相当不错，对吧？}%SPEECH_OFF%}",
@@ -159,7 +159,7 @@ this.lucky_finds_something_event <- this.inherit("scripts/events/event", {
 
 		if (item.getConditionMax() > 1)
 		{
-			item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+			item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.01));
 		}
 
 		this.m.FoundItem = item;

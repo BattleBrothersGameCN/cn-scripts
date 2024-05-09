@@ -8,7 +8,7 @@ this.anatomist_confronts_healer_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_confronts_healer";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_20.png[/img]{你进入%townname%，看到一个白胡子慷慨激昂地帮助一家人治疗他们的生病孩子。对你而言，这情景并不稀奇。但对解剖师%anatomist%而言，这里出现了一些极大的冒犯。他迅速走到路对面的老人身边，你跳到他面前拦住他，感觉他的行为可能会给整个%companyname%带来负面影响。%anatomist%站直了身子。%SPEECH_ON%打扰一下，这个人正在提供错误的医疗建议，我需要纠正他。%SPEECH_OFF%你提醒他要注意本地的风俗习惯，插手这些事情可能会有不智之处，而老人几乎肯定是乡里人的代表。他可能也非常重要，比如监督当地的民兵组织。但解剖师对这个任务非常努力，他想要武装自己的知识并使用它，即使这会撕裂当地的政治局势。}",
@@ -76,7 +76,7 @@ this.anatomist_confronts_healer_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.000000, "向一个愿意接受的听众提供医疗建议。");
+				_event.m.Anatomist.improveMood(1.0, "向一个愿意接受的听众提供医疗建议。");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -138,7 +138,7 @@ this.anatomist_confronts_healer_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.000000, "医疗建议被拒绝了。");
+				_event.m.Anatomist.worsenMood(1.0, "医疗建议被拒绝了。");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -192,7 +192,7 @@ this.anatomist_confronts_healer_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.000000, "被拒绝纠正不当的医疗行为的机会。");
+				_event.m.Anatomist.worsenMood(1.0, "被拒绝纠正不当的医疗行为的机会。");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -225,7 +225,7 @@ this.anatomist_confronts_healer_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(0.500000, "学会了如何处理农民。");
+				_event.m.Anatomist.improveMood(0.5, "学会了如何处理农民。");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -243,7 +243,7 @@ this.anatomist_confronts_healer_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/xp_received.png",
 					text = _event.m.Anatomist.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+50[/color] 经验值"
 				});
-				_event.m.Monk.improveMood(1.000000, "停止了。" + _event.m.Anatomist.getName() + "玷污战团声誉");
+				_event.m.Monk.improveMood(1.0, "停止了。" + _event.m.Anatomist.getName() + "玷污战团声誉");
 
 				if (_event.m.Monk.getMoodState() >= this.Const.MoodState.Neutral)
 				{

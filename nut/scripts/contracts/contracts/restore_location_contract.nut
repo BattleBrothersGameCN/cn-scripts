@@ -12,10 +12,10 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 	function create()
 	{
 		this.contract.create();
-		this.m.DifficultyMult = this.Math.rand(70, 90) * 0.010000;
+		this.m.DifficultyMult = this.Math.rand(70, 90) * 0.01;
 		this.m.Type = "contract.restore_location";
 		this.m.Name = "重建工作";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -29,12 +29,12 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -247,10 +247,10 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (!this.World.State.isPaused())
 				{
-					this.World.setSpeedMult(1.000000);
+					this.World.setSpeedMult(1.0);
 				}
 
-				this.World.State.m.LastWorldSpeedMult = 1.000000;
+				this.World.State.m.LastWorldSpeedMult = 1.0;
 				this.Contract.clearSpawnedUnits();
 			}
 
@@ -595,13 +595,13 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 	function spawnCaravan()
 	{
 		local faction = this.World.FactionManager.getFaction(this.getFaction());
-		local party = faction.spawnEntity(this.m.Home.getTile(), "工人商队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.400000);
+		local party = faction.spawnEntity(this.m.Home.getTile(), "工人商队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.4);
 		party.getSprite("banner").Visible = false;
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
 		party.setDescription("一队来自的工人和建筑材料的队伍" + this.m.Home.getName() + ".");
 		party.setFootprintType(this.Const.World.FootprintsType.Caravan);
-		party.setMovementSpeed(this.Const.World.MovementSettings.Speed * 0.500000);
+		party.setMovementSpeed(this.Const.World.MovementSettings.Speed * 0.5);
 		party.setLeaveFootprints(false);
 		local c = party.getController();
 		c.getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
@@ -634,10 +634,10 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 
 			if (!this.World.State.isPaused())
 			{
-				this.World.setSpeedMult(1.000000);
+				this.World.setSpeedMult(1.0);
 			}
 
-			this.World.State.m.LastWorldSpeedMult = 1.000000;
+			this.World.State.m.LastWorldSpeedMult = 1.0;
 
 			if (this.m.Location != null && !this.m.Location.isNull())
 			{

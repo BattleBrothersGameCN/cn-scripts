@@ -13,7 +13,7 @@ this.exposed_ribs_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.HealingTimeMin = 3;
 		this.m.HealingTimeMax = 6;
 		this.m.IsShownOnBody = true;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -56,9 +56,9 @@ this.exposed_ribs_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		if (this.getContainer().getActor().getHitpointsPct() > 0.650000)
+		if (this.getContainer().getActor().getHitpointsPct() > 0.65)
 		{
-			this.getContainer().getActor().setHitpoints(this.getContainer().getActor().getHitpointsMax() * 0.650000);
+			this.getContainer().getActor().setHitpoints(this.getContainer().getActor().getHitpointsMax() * 0.65);
 		}
 	}
 
@@ -73,7 +73,7 @@ this.exposed_ribs_injury <- this.inherit("scripts/skills/injury/injury", {
 
 		if (this.m.IsShownOutOfCombat)
 		{
-			_properties.HitpointsMult *= 0.650000;
+			_properties.HitpointsMult *= 0.65;
 		}
 	}
 

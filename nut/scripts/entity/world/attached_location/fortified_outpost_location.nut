@@ -23,38 +23,38 @@ this.fortified_outpost_location <- this.inherit("scripts/entity/world/attached_l
 			r = [
 				{
 					File = "ambience/settlement/settlement_dog_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_dog_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_dog_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_03.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				}
 			];
 		}
@@ -65,9 +65,9 @@ this.fortified_outpost_location <- this.inherit("scripts/entity/world/attached_l
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 		this.getSprite("lighting").setBrush("world_fortified_outpost_01_light");
-		this.getSprite("lighting").Scale = 0.900000;
+		this.getSprite("lighting").Scale = 0.9;
 		this.registerThinker();
 	}
 
@@ -86,7 +86,7 @@ this.fortified_outpost_location <- this.inherit("scripts/entity/world/attached_l
 
 		this.updateLighting();
 
-		if (this.World.getTime().TimeOfDay >= 4 && this.World.getTime().TimeOfDay <= 7 && this.Time.getRealTimeF() - this.m.LastFireTime >= 10.000000)
+		if (this.World.getTime().TimeOfDay >= 4 && this.World.getTime().TimeOfDay <= 7 && this.Time.getRealTimeF() - this.m.LastFireTime >= 10.0)
 		{
 			this.spawnFire();
 			this.m.LastFireTime = this.Time.getRealTimeF();
@@ -130,142 +130,142 @@ this.fortified_outpost_location <- this.inherit("scripts/entity/world/attached_l
 		{
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/wardog_item"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/armored_wardog_item"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/leather_tunic"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_surcoat"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_leather"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/gambeson"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/basic_mail_shirt"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/mail_shirt"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/aketon_cap"
 			});
 			_list.push({
 				R = 15,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/full_aketon_cap"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/nasal_helmet"
 			});
 			_list.push({
 				R = 65,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/kettle_hat"
 			});
 			_list.push({
 				R = 65,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/flat_top_helmet"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "shields/wooden_shield"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/dagger"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/billhook"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/pike"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/military_cleaver"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/boar_spear"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/military_pick"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/padded_nasal_helmet"
 			});
 			_list.push({
 				R = 55,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/padded_kettle_hat"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/padded_flat_top_helmet"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/leather_lamellar"
 			});
 			_list.push({
 				R = 65,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/mail_hauberk"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/crossbow"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/light_crossbow"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "ammo/quiver_of_bolts"
 			});
 
@@ -274,22 +274,22 @@ this.fortified_outpost_location <- this.inherit("scripts/entity/world/attached_l
 				_list.extend([
 					{
 						R = 75,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/longsword"
 					},
 					{
 						R = 75,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/two_handed_wooden_flail"
 					},
 					{
 						R = 55,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/polehammer"
 					},
 					{
 						R = 55,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/throwing_spear"
 					}
 				]);
@@ -302,7 +302,7 @@ this.fortified_outpost_location <- this.inherit("scripts/entity/world/attached_l
 		{
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/military_pick"
 			});
 		}

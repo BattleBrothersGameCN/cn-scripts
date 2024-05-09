@@ -7,7 +7,7 @@ this.spooky_forest_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.spooky_forest";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]在森林中扎营时，%randombrother%叫你从指挥帐篷里出来。你问他想做什么，他用手指捂住嘴示意安静。他指了指一棵通向深夜黑暗的高大树木。你听到有东西像是在用整个树枝筑成一个巢，发出劈啪声响。只听到这个声音暂停了一下，然后就会发出喉咙里咕哝、嘻笑不停的嘶啦声，就像一只鸟在蛇的肚子里求救一样。当你把视线落回来时，士兵们正在盯着你看，希望你有关于这件事的一个主意。",
@@ -217,7 +217,7 @@ this.spooky_forest_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.worsenMood(0.500000, "担心你没有对可能的威胁采取行动");
+						bro.worsenMood(0.5, "担心你没有对可能的威胁采取行动");
 
 						if (bro.getMoodState() <= this.Const.MoodState.Neutral)
 						{

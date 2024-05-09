@@ -34,9 +34,9 @@ this.lost_at_sea_situation <- this.inherit("scripts/entity/world/settlements/sit
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.FoodRarityMult *= 0.500000;
-		_modifiers.FoodPriceMult *= 2.000000;
-		_modifiers.RecruitsMult *= 0.500000;
+		_modifiers.FoodRarityMult *= 0.5;
+		_modifiers.FoodPriceMult *= 2.0;
+		_modifiers.RecruitsMult *= 0.5;
 	}
 
 });

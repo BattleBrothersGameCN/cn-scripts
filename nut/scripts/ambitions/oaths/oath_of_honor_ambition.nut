@@ -4,7 +4,7 @@ this.oath_of_honor_ambition <- this.inherit("scripts/ambitions/oaths/oath_ambiti
 	{
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_honor";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "作为战士，我们决不能忽视真正的荣誉。\n让我们立下荣誉誓言，与我们的对手短兵相接！";
 		this.m.TooltipText = "“当箭被拉上弦时，心境转变。当剑挥舞时，一切都如应当的位置那样。把弓箭的技艺放下，走向近战，相信你的钢铁所寻求的，必然会找到。”——年轻的安瑟姆";
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]无论弓手们想说什么，当事情到了这个地步，没有什么比面对面遇见一名男子，你们各自手持剑，交错的刀剑间，对视一眼，然后在战斗中找到短暂的喘息，直到无一幸存。即使在比赛中，巨大的事件也不是一些荒谬的事情，比如从头上把苹果射出去或者把鸟射下来。不，是骑士比武！军事战斗！这是由%companyname%进行的最伟大的荣誉。\n\n现在，该战团已经强大，准备接受它的下一个誓言！";

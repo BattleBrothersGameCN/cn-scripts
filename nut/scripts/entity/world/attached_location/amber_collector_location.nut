@@ -34,7 +34,7 @@ this.amber_collector_location <- this.inherit("scripts/entity/world/attached_loc
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "trade/amber_shards_item"
 			});
 		}
@@ -46,7 +46,7 @@ this.amber_collector_location <- this.inherit("scripts/entity/world/attached_loc
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 	}
 
 });

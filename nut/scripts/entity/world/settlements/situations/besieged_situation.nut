@@ -33,11 +33,11 @@ this.besieged_situation <- this.inherit("scripts/entity/world/settlements/situat
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.SellPriceMult *= 1.000000;
-		_modifiers.BuyPriceMult *= 1.250000;
-		_modifiers.FoodPriceMult *= 2.000000;
-		_modifiers.RecruitsMult *= 0.500000;
-		_modifiers.RarityMult *= 0.500000;
+		_modifiers.SellPriceMult *= 1.0;
+		_modifiers.BuyPriceMult *= 1.25;
+		_modifiers.FoodPriceMult *= 2.0;
+		_modifiers.RecruitsMult *= 0.5;
+		_modifiers.RarityMult *= 0.5;
 	}
 
 });

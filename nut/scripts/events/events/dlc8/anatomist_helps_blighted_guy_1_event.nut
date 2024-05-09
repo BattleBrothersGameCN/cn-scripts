@@ -7,7 +7,7 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 	{
 		this.m.ID = "event.anatomist_helps_blighted_guy_1";
 		this.m.Title = "在路上...";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_53.png[/img]{你看到一个人被活埋了，他被捆绑着像是个死人，但还在尖叫。你询问发生了什么事情，其中一个挖掘者转身向你伸出一只手。%SPEECH_ON%离他远点。这个人被感染了，任何他碰过的人都会被感染。我们不想染病，你也不该想。%SPEECH_OFF%那个男人呼救着，又被一块泥土盖住了。他试图爬出坑来，但是一个挖掘者踢了他回去。踢人者还抱怨要烧掉他最喜欢的靴子。%anatomist%走过来，用平静的声音说道。他说这个男人有一种皮肤病，看起来像麻风或瘟疫，但实际上是良性的。你问他是否确定，他点了点头，虽然带着一丝犹豫。%SPEECH_ON%当然，我也可能错了。如果我错了，他真正的病就可能传染给我们所有人。但是活埋一个人并不是我所发现的，你如何说，科学上有说服力的做法。%SPEECH_OFF%}",
@@ -106,7 +106,7 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 					_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body).removeSelf();
 				}
 
-				_event.m.Dude.worsenMood(1.500000, "因患病差点被活埋");
+				_event.m.Dude.worsenMood(1.5, "因患病差点被活埋");
 				local i = this.new("scripts/skills/injury/sickness_injury");
 				i.addHealingTime(8);
 				_event.m.Dude.getSkills().add(i);
@@ -134,7 +134,7 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.000000, "不得不研究一种不同寻常的枯萎病。");
+				_event.m.Anatomist.improveMood(1.0, "不得不研究一种不同寻常的枯萎病。");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -189,11 +189,11 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 
 				if (this.Math.rand(1, 100) < 75)
 				{
-					_event.m.Anatomist.worsenMood(0.750000, "被拒绝研究一种不寻常的疾病。");
+					_event.m.Anatomist.worsenMood(0.75, "被拒绝研究一种不寻常的疾病。");
 				}
 				else
 				{
-					_event.m.Anatomist.worsenMood(0.500000, "被拒绝帮助一个生病的人。");
+					_event.m.Anatomist.worsenMood(0.5, "被拒绝帮助一个生病的人。");
 				}
 			}
 

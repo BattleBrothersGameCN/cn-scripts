@@ -11,7 +11,7 @@ this.adrenaline_skill <- this.inherit("scripts/skills/skill", {
 		this.m.SoundOnUse = [
 			"sounds/combat/perfect_focus_01.wav"
 		];
-		this.m.SoundVolume = 0.500000;
+		this.m.SoundVolume = 0.5;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.Any;
 		this.m.IsSerialized = false;

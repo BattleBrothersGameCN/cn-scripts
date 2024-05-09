@@ -25,8 +25,8 @@ this.arena_spectator <- this.inherit("scripts/entity/tactical/entity", {
 	{
 		local body = this.addSprite("body");
 		body.setBrush(this.Const.Bodies.SouthernMale[this.Math.rand(0, this.Const.Bodies.SouthernMale.len() - 1)]);
-		body.varyColor(0.050000, 0.050000, 0.050000);
-		body.varySaturation(0.100000);
+		body.varyColor(0.05, 0.05, 0.05);
+		body.varySaturation(0.1);
 		local armor = this.addSprite("armor");
 
 		if (this.Math.rand(1, 100) <= 95)
@@ -64,8 +64,8 @@ this.arena_spectator <- this.inherit("scripts/entity/tactical/entity", {
 		if (this.Math.rand(1, 100) <= 60)
 		{
 			beard.setBrush("beard_brown_" + this.Const.Beards.Southern[this.Math.rand(0, this.Const.Beards.Southern.len() - 1)]);
-			beard.Saturation = 0.800000;
-			beard.setBrightness(0.400000);
+			beard.Saturation = 0.8;
+			beard.setBrightness(0.4);
 		}
 
 		local hair = this.addSprite("hair");
@@ -89,8 +89,8 @@ this.arena_spectator <- this.inherit("scripts/entity/tactical/entity", {
 		else if (this.Math.rand(1, 100) <= 95)
 		{
 			hair.setBrush("hair_brown_" + this.Const.Hair.SouthernMale[this.Math.rand(0, this.Const.Hair.SouthernMale.len() - 1)]);
-			hair.Saturation = 0.800000;
-			hair.setBrightness(0.400000);
+			hair.Saturation = 0.8;
+			hair.setBrightness(0.4);
 		}
 
 		local beard_top = this.addSprite("beard_top");
@@ -98,8 +98,8 @@ this.arena_spectator <- this.inherit("scripts/entity/tactical/entity", {
 		if (beard.HasBrush && this.doesBrushExist(beard.getBrush().Name + "_top"))
 		{
 			beard_top.setBrush(beard.getBrush().Name + "_top");
-			beard_top.Saturation = 0.800000;
-			beard_top.setBrightness(0.400000);
+			beard_top.Saturation = 0.8;
+			beard_top.setBrightness(0.4);
 		}
 	}
 

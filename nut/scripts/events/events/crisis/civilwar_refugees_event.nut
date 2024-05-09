@@ -8,7 +8,7 @@ this.civilwar_refugees_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_refugees";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_59.png[/img]{通常情况下，一场真正的战争会有大量人员伤亡，这场战争也不例外：沿着一条小路，你看到一大群难民挤在一起。 你发现他们时，他们正在小溪里洗澡，一个帮人半裸半洗，你吓到他们了。 难民中大多数是妇女和儿童，还有一些老人，以及一些准备用生命守护周围人的男人，虽然他们非常瘦弱。 一个这样的人站出来。%SPEECH_ON%你想要什么？%SPEECH_OFF%%aggro_bro% 靠近了你。%SPEECH_ON%先生，我们可以拿走他们所有的东西，但我相信他们不会自愿放弃的。%SPEECH_OFF%%injured_bro% 摇了摇头。%SPEECH_ON%我得说他们不值得我们这样做。 这些人已经经历了太多东西了，他们现在已经一无所有了。%SPEECH_OFF% | 你遇到一群难民。 女人，孩子，老人，还有一些瘦小的男人。 他们几乎一无所有，但如果你花点力气，他们仍然有值得的东西。 | 难民。他们中的一群人沿着小路排成一长排。 一看到你，这个蜈蚣一样的队伍就停了下来，所有的身体慢慢地拖着步子，变成了一团可怕的东西。%aggro_bro% 建议杀了这些难民，拿走他们的所有东西，尽管你认为这些难民已经一无所有了。}",
@@ -310,7 +310,7 @@ this.civilwar_refugees_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

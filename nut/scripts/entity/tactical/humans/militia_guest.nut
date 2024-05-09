@@ -25,7 +25,7 @@ this.militia_guest <- this.inherit("scripts/entity/tactical/player", {
 		this.player.onInit();
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.Militia);
-		b.TargetAttractionMult = 1.000000;
+		b.TargetAttractionMult = 1.0;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;

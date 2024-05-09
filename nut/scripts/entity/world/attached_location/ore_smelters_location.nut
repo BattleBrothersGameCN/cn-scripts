@@ -21,23 +21,23 @@ this.ore_smelters_location <- this.inherit("scripts/entity/world/attached_locati
 			r = [
 				{
 					File = "ambience/buildings/blacksmith_hot_water_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/blacksmith_hammering_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/blacksmith_hammering_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/blacksmith_hammering_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				}
 			];
 
@@ -67,12 +67,12 @@ this.ore_smelters_location <- this.inherit("scripts/entity/world/attached_locati
 		{
 			_list.push({
 				R = 35,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/dagger"
 			});
 			_list.push({
 				R = 25,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/armor_parts_item"
 			});
 		}
@@ -83,47 +83,47 @@ this.ore_smelters_location <- this.inherit("scripts/entity/world/attached_locati
 		{
 			_list.push({
 				R = 35,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/fighting_axe"
 			});
 			_list.push({
 				R = 45,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/noble_sword"
 			});
 			_list.push({
 				R = 45,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/warhammer"
 			});
 			_list.push({
 				R = 35,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/flail"
 			});
 			_list.push({
 				R = 45,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/greatsword"
 			});
 			_list.push({
 				R = 35,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/warbrand"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/greataxe"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/longaxe"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/two_handed_hammer"
 			});
 		}
@@ -151,7 +151,7 @@ this.ore_smelters_location <- this.inherit("scripts/entity/world/attached_locati
 			return;
 		}
 
-		if (this.m.Settlement != null && this.m.Settlement.isDiscovered() && this.World.getTime().IsDaytime && this.Time.getRealTimeF() - this.m.LastFireTime >= 10.000000)
+		if (this.m.Settlement != null && this.m.Settlement.isDiscovered() && this.World.getTime().IsDaytime && this.Time.getRealTimeF() - this.m.LastFireTime >= 10.0)
 		{
 			this.m.LastFireTime = this.Time.getRealTimeF();
 			local smoke = this.Const.World.SmelterSmokeParticles;

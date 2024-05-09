@@ -6,7 +6,7 @@ this.kings_guard_2_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.kings_guard_2";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 9999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_82.png[/img]{你发现 %guard% 展示了不可思议的灵巧程度。 他看起来一点也不像那个被野蛮人遗弃在冰天雪地里的冻僵的人。 看到你，他点头走过来，低声说。%SPEECH_ON%我很高兴你信任我，队长。 也许你是出于好心，但我需要给你看样东西。%SPEECH_OFF%他拿出一个你已经听过很多次，但从未见过的徽章：它是国王的护卫的徽章，它是如此的真实以至于这不可能是一场闹剧。 这个人对你微笑。%SPEECH_ON%我想我很健康，准备像侍奉我的君主一样侍奉你。%SPEECH_OFF%这些土地上的国王早已倒台，取而代之的是争吵不休的领主和贵族。 如果这个人能像为国王那样为你而战，那么 %companyname% 一定会前途光明。}",
@@ -32,7 +32,7 @@ this.kings_guard_2_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getSkills().add(bg);
 				_event.m.Dude.getBackground().m.RawDescription = "你在北方发现了冻得半死的%name%。在你的帮助下，前国王护卫恢复了力量，为你而战。";
 				_event.m.Dude.getBackground().buildDescription(true);
-				_event.m.Dude.improveMood(1.000000, "重新成为昔日的自己");
+				_event.m.Dude.improveMood(1.0, "重新成为昔日的自己");
 
 				if (_event.m.Dude.getMoodState() >= this.Const.MoodState.Neutral)
 				{

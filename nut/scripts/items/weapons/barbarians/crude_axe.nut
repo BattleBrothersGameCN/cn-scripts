@@ -19,14 +19,14 @@ this.crude_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_wildmen_05";
 		this.m.Value = 800;
 		this.m.ShieldDamage = 12;
-		this.m.Condition = 82.000000;
-		this.m.ConditionMax = 82.000000;
+		this.m.Condition = 82.0;
+		this.m.ConditionMax = 82.0;
 		this.m.StaminaModifier = -12;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 1.200000;
-		this.m.DirectDamageMult = 0.300000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 1.2;
+		this.m.DirectDamageMult = 0.3;
+		this.m.DirectDamageAdd = 0.1;
 	}
 
 	function onEquip()

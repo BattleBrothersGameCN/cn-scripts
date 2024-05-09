@@ -8,7 +8,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.dogfighting";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 70.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%townImage%%doghandler% 请求你让 %wardog% 参加本地的斗狗比赛。 这听起来是个糟糕的主意，但是这个人继续解释说斗狗可以赚很多钱。 驯兽师所需要的只是二百克朗的赌注。",

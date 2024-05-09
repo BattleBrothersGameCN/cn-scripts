@@ -7,7 +7,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.warriors_death";
 		this.m.Title = "战斗之后……";
-		this.m.Cooldown = 200.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_87.png[/img]战争结束后，你看看它所造成的破坏。%deadbrother% 仰卧在地上，眼睛呆滞地盯着天空。 其他兄弟残肢飞的到处都是。 它们形状畸形，破碎不堪，支离破碎，很快就会发臭。 这是一个大型绞肉机现场。 现在苍蝇聚集在一起，像只小鼹鼠似的盯着死去的人。 他们以不知羞耻的方式在冰冷的皮肤上交配，并开始在温暖的血河中产卵。%randombrother% 走上前问你，那些尸体怎么办。",
@@ -91,7 +91,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(0.500000, "战死的战友们被留在战场上腐烂而感到沮丧");
+					bro.worsenMood(0.5, "战死的战友们被留在战场上腐烂而感到沮丧");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{
@@ -135,7 +135,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.improveMood(0.500000, "很高兴看到倒下的战友们得到了美好的告别");
+					bro.improveMood(0.5, "很高兴看到倒下的战友们得到了美好的告别");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -187,7 +187,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.improveMood(0.500000, "很高兴看到倒下的战友们得到了美好的告别");
+					bro.improveMood(0.5, "很高兴看到倒下的战友们得到了美好的告别");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -205,7 +205,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 
 	function onUpdateScore()
 	{
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.000000)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.0)
 		{
 			return;
 		}

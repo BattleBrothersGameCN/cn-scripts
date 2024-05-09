@@ -8,7 +8,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.traveling_troupe";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_92.png[/img]在路边露营时，一辆多彩的载重货车伴随着叮当作响的嘈杂声音隆隆驶来。 你可能不认为它是一辆特别大的车，但是大约有十五个男人和女人莫名其妙地从它的背后涌出。 彩绘的面孔、乐器、杂耍球、吞东西的长剑、喷火的酒壶，这群艺人在表演小型才艺表演，就好像你已经为他们的服务付了钱一样。 当他们结束时，他们鼓掌，跺脚，在你面前停下脚步，伸出手，脸上露出笑容。 一个白脸的哑剧演员讽刺地说。%SPEECH_ON%旅客们，你们喜欢看戏吗？ 只要付 %payment% 克朗就能让你整个晚上都很愉快！%SPEECH_OFF%",
@@ -92,7 +92,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.000000, "同巡回演出团娱乐");
+					bro.improveMood(1.0, "同巡回演出团娱乐");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -129,7 +129,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.000000, "同巡回演出团娱乐");
+					bro.improveMood(1.0, "同巡回演出团娱乐");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -188,7 +188,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getBackground().getID() == "background.raider")
 					{
-						bro.improveMood(1.000000, "喜欢打巡回演出团");
+						bro.improveMood(1.0, "喜欢打巡回演出团");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -230,7 +230,7 @@ this.traveling_troupe_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.000000, "同巡回演出团娱乐");
+					bro.improveMood(1.0, "同巡回演出团娱乐");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

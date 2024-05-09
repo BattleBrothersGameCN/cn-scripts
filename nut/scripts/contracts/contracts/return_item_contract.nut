@@ -8,7 +8,7 @@ this.return_item_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.return_item";
 		this.m.Name = "带回物品";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -22,12 +22,12 @@ this.return_item_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		local items = [
@@ -73,7 +73,7 @@ this.return_item_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (r <= 15)
 				{
-					if (this.Contract.getDifficultyMult() >= 0.950000)
+					if (this.Contract.getDifficultyMult() >= 0.95)
 					{
 						this.Flags.set("IsNecromancer", true);
 					}
@@ -81,7 +81,7 @@ this.return_item_contract <- this.inherit("scripts/contracts/contract", {
 				else if (r <= 30)
 				{
 					this.Flags.set("IsCounterOffer", true);
-					this.Flags.set("Bribe", this.Contract.beautifyNumber(this.Contract.m.Payment.getOnCompletion() * this.Math.rand(100, 300) * 0.010000));
+					this.Flags.set("Bribe", this.Contract.beautifyNumber(this.Contract.m.Payment.getOnCompletion() * this.Math.rand(100, 300) * 0.01));
 				}
 				else
 				{
@@ -99,13 +99,13 @@ this.return_item_contract <- this.inherit("scripts/contracts/contract", {
 				party.setFootprintType(this.Const.World.FootprintsType.Brigands);
 				party.setAttackableByAI(false);
 				party.getController().getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
-				party.setFootprintSizeOverride(0.750000);
-				this.Const.World.Common.addFootprintsFromTo(this.Contract.m.Home.getTile(), party.getTile(), this.Const.GenericFootprints, this.Const.World.FootprintsType.Brigands, 0.750000);
+				party.setFootprintSizeOverride(0.75);
+				this.Const.World.Common.addFootprintsFromTo(this.Contract.m.Home.getTile(), party.getTile(), this.Const.GenericFootprints, this.Const.World.FootprintsType.Brigands, 0.75);
 				this.Contract.m.Target = this.WeakTableRef(party);
 				party.getSprite("banner").setBrush("banner_bandits_0" + this.Math.rand(1, 6));
 				local c = party.getController();
 				local wait = this.new("scripts/ai/world/orders/wait_order");
-				wait.setTime(9000.000000);
+				wait.setTime(9000.0);
 				c.addOrder(wait);
 				this.Contract.setScreen("Overview");
 				this.World.Contracts.setActiveContract(this.Contract);

@@ -34,10 +34,10 @@ this.berserker_rage_effect <- this.inherit("scripts/skills/skill", {
 
 		if (!actor.isHiddenToPlayer())
 		{
-			if (this.m.SoundOnUse.len() != 0 && this.Time.getVirtualTimeF() - this.m.LastRageSoundTime > 5.000000)
+			if (this.m.SoundOnUse.len() != 0 && this.Time.getVirtualTimeF() - this.m.LastRageSoundTime > 5.0)
 			{
 				this.m.LastRageSoundTime = this.Time.getVirtualTimeF();
-				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * (this.Math.rand(75, 100) * 0.010000), actor.getPos(), this.Math.rand(75, 100) * 0.010000);
+				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * (this.Math.rand(75, 100) * 0.01), actor.getPos(), this.Math.rand(75, 100) * 0.01);
 			}
 
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + " 获得愤怒！");
@@ -49,7 +49,7 @@ this.berserker_rage_effect <- this.inherit("scripts/skills/skill", {
 	function onUpdate( _properties )
 	{
 		this.m.IsHidden = this.m.RageStacks == 0;
-		_properties.DamageReceivedTotalMult *= this.Math.maxf(0.300000, 1.000000 - 0.020000 * this.m.RageStacks);
+		_properties.DamageReceivedTotalMult *= this.Math.maxf(0.3, 1.0 - 0.02 * this.m.RageStacks);
 		_properties.Bravery += 1 * this.m.RageStacks;
 		_properties.DamageRegularMin += 1 * this.m.RageStacks;
 		_properties.DamageRegularMax += 1 * this.m.RageStacks;

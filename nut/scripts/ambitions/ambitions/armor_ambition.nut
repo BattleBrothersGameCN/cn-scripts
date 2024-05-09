@@ -4,7 +4,7 @@ this.armor_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.armor";
-		this.m.Duration = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们要装备出一支至少三人的重装部队\n作为抵御危险对手的堡垒。";
 		this.m.UIText = "拥有230耐久以上的铠甲头盔各3件";
 		this.m.TooltipText = "拥有230耐久以上的铠甲3件，头盔3顶。无论是市场来的还是战场来的，带来的防护都是实实在在的。";

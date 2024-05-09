@@ -70,7 +70,7 @@ this.kraken_ensnare_skill <- this.inherit("scripts/skills/skill", {
 
 	function onUse( _user, _targetTile )
 	{
-		_user.sinkIntoGround(0.750000);
+		_user.sinkIntoGround(0.75);
 		_user.getSkills().setBusy(true);
 		_user.m.IsAbleToDie = false;
 		this.Time.scheduleEvent(this.TimeUnit.Real, 800, this.onNetSpawn.bindenv(this), {
@@ -152,7 +152,7 @@ this.kraken_ensnare_skill <- this.inherit("scripts/skills/skill", {
 
 					_data.User.m.IsAbleToDie = true;
 					_data.User.setDirty(true);
-					_data.User.riseFromGround(0.100000);
+					_data.User.riseFromGround(0.1);
 				}
 			}
 		}, _data);
@@ -165,7 +165,7 @@ this.kraken_ensnare_skill <- this.inherit("scripts/skills/skill", {
 		breakFree.setDecal(this.Const.BloodDecals[this.Const.BloodType.Red][this.Math.rand(0, this.Const.BloodDecals[this.Const.BloodType.Red].len() - 1)]);
 		breakFree.setChanceBonus(0);
 		_data.TargetEntity.getSkills().add(breakFree);
-		_data.TargetEntity.raiseRootsFromGround(_data.User.getHitpointsPct() > 0.500000 ? "kraken_ensnare_front" : "kraken_ensnare_front_injured", _data.User.getMode() == 0 ? "kraken_ensnare_back" : "kraken_ensnare_back_2");
+		_data.TargetEntity.raiseRootsFromGround(_data.User.getHitpointsPct() > 0.5 ? "kraken_ensnare_front" : "kraken_ensnare_front_injured", _data.User.getMode() == 0 ? "kraken_ensnare_back" : "kraken_ensnare_back_2");
 		_data.User.getSkills().setBusy(false);
 		_data.User.removeFromMap();
 	}

@@ -12,7 +12,7 @@ this.icy_cave_location <- this.inherit("scripts/entity/world/location", {
 		this.m.LocationType = this.Const.World.LocationType.Unique;
 		this.m.IsShowingDefenders = false;
 		this.m.IsShowingBanner = false;
-		this.m.VisibilityMult = 0.800000;
+		this.m.VisibilityMult = 0.8;
 		this.m.Resources = 0;
 		this.m.OnEnter = "event.location.icy_cave_enter";
 	}

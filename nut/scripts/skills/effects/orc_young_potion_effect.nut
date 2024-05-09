@@ -50,7 +50,7 @@ this.orc_young_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageArmorMult += 0.100000;
+		_properties.DamageArmorMult += 0.1;
 	}
 
 	function onDeath( _fatalityType )

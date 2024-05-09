@@ -1,6 +1,6 @@
 this.new_trained_effect <- this.inherit("scripts/skills/skill", {
 	m = {
-		XPGainMult = 1.000000,
+		XPGainMult = 1.0,
 		Duration = 0,
 		Battles = 0,
 		IsCountingBattle = false

@@ -4,7 +4,7 @@ this.undead_plague_or_infected_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.undead_plague_or_infected";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_59.png[/img]你偶然遇到一群坐在路边的农民。 男人，女人，孩子。衣服很脏，靴子满是泥泞，皮肤都溃烂了。 有些人带着像是咬痕的伤口。 队伍的长者说。%SPEECH_ON%拜托了，先生，你有吃的或水能给我们吗？%SPEECH_OFF%他似乎看到你在盯着脓疱和咬痕。他摇了摇头。%SPEECH_ON%噢，别介意那些。 仅仅是的猎狐出了点问题。 我们只需要一点点帮助，然后我们就可以自己走了。%SPEECH_OFF%",

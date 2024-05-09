@@ -4,7 +4,7 @@ this.treant_vs_giants_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.treant_vs_giants";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 150.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 150.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_107.png[/img]{%randombrother%在森林地面上一个坑中扭曲着小腿，愤怒地诅咒着。%SPEECH_ON%我该死的，就好像我的狗不够吵闹一样！%SPEECH_OFF%你转过身去告诉他安静点，突然你看到一个不死族乱爬上了战团刚刚攀登的小山坡。而你们都奋力攀爬，这个巨人却向上跳跃和抓住倾斜的斜坡，在其身后留下小的山崩。你还没来得及大声喊出来，一颗巨大的树从仍未移动的树冠群中掉下来，把巨人绞断了。一颗口水球呼啸着穿过森林，打破着树枝和灌木，巨人砸到了森林地面上，即使在这个距离下，也能感觉到地面在颤抖。你看到更多的不死族巨人出现了，更多的树魔鬼（schrats）脱离了森林中的伪装，准备与他们战斗。这是一场树魔鬼对抗不死族的大乱斗！}",

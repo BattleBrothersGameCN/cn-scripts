@@ -1,6 +1,6 @@
 this.glorious_endurance_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	m = {
-		DamageReduction = 0.000000
+		DamageReduction = 0.0
 	},
 	function create()
 	{
@@ -31,13 +31,13 @@ this.glorious_endurance_trait <- this.inherit("scripts/skills/traits/character_t
 			}
 		];
 
-		if (this.m.DamageReduction > 0.000000)
+		if (this.m.DamageReduction > 0.0)
 		{
 			ret.push({
 				id = 6,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "仅受到所有伤害的 [color=" + this.Const.UI.Color.PositiveValue + "]" + (1.000000 - this.m.DamageReduction) * 100 + "%[/color]"
+				text = "仅受到所有伤害的 [color=" + this.Const.UI.Color.PositiveValue + "]" + (1.0 - this.m.DamageReduction) * 100 + "%[/color]"
 			});
 		}
 
@@ -54,26 +54,26 @@ this.glorious_endurance_trait <- this.inherit("scripts/skills/traits/character_t
 	{
 		if (_attacker != null && _attacker.getID() != this.getContainer().getActor().getID())
 		{
-			this.m.DamageReduction = this.Math.minf(0.250000, this.m.DamageReduction + 0.050000);
+			this.m.DamageReduction = this.Math.minf(0.25, this.m.DamageReduction + 0.05);
 			this.m.Type = this.Const.SkillType.Trait | this.Const.SkillType.StatusEffect;
 		}
 	}
 
 	function onCombatStarted()
 	{
-		this.m.DamageReduction = 0.000000;
+		this.m.DamageReduction = 0.0;
 		this.m.Type = this.Const.SkillType.Trait;
 	}
 
 	function onCombatFinished()
 	{
-		this.m.DamageReduction = 0.000000;
+		this.m.DamageReduction = 0.0;
 		this.m.Type = this.Const.SkillType.Trait;
 	}
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageReceivedTotalMult *= 1.000000 - this.m.DamageReduction;
+		_properties.DamageReceivedTotalMult *= 1.0 - this.m.DamageReduction;
 	}
 
 });

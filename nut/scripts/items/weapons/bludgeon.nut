@@ -19,13 +19,13 @@ this.bludgeon <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_mace_02";
 		this.m.Value = 90;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.StaminaModifier = -8;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.4;
 	}
 
 	function onEquip()

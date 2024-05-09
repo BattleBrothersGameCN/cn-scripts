@@ -65,7 +65,7 @@ this.undead_trophy_item <- this.inherit("scripts/items/accessory/accessory", {
 	function onUpdateProperties( _properties )
 	{
 		this.accessory.onUpdateProperties(_properties);
-		_properties.MoraleCheckBraveryMult[this.Const.MoraleCheckType.MentalAttack] *= 2.000000;
+		_properties.MoraleCheckBraveryMult[this.Const.MoraleCheckType.MentalAttack] *= 2.0;
 	}
 
 });

@@ -6,7 +6,7 @@ this.flagellants_wounds_heal_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.flagellants_wounds_heal";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 70.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_39.png[/img]%flagellant% 这个苦修者被发现盘腿坐在篝火前。 只有他一个人，尝试拯救着那些危险地扑向火焰的飞蛾。 他感觉到你的存在，就叫你过去。 你坐在他旁边，他对你微笑。%SPEECH_ON%自从加入你的战团，我已经变成一个更好的人。%SPEECH_OFF%你点头，他当然也点头了。他继续道。%SPEECH_ON%我为神流了很多血，但我的伤口…现在它们只是伤疤。 我感觉比以前更强壮了。%SPEECH_OFF%你再次点头，但很快问他是否会停止伤害自己。 这个男人的眼睛凝视着烧红的灰烬。 他摇摇头表示否定。%SPEECH_ON%我会为神明们流血，直到他们不再说话。%SPEECH_OFF%你大声地疑惑着，问神明们是否对他说过话。 那人不假思索，又摇了摇头。%SPEECH_ON%他们还没有开口，所以我要流血，直到他们的沉默被打破，或者直到我在永远的宁静中加入他们。%SPEECH_OFF%",

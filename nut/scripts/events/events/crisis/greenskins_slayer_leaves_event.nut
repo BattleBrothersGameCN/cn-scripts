@@ -6,7 +6,7 @@ this.greenskins_slayer_leaves_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.greenskins_slayer_leaves";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_35.png[/img]%orcslayer% 向你走来。%SPEECH_ON%好吧，我想就这样了。没有那么多的兽人和地精可以杀了。 我向你道别，佣兵。%SPEECH_OFF%你问他打算做什么。 他脱下盔甲，放在你面前的地上。%SPEECH_ON%我家人的仇已经报了。%SPEECH_OFF%既然他那明显的恶魔已经安息了，你点头祝他一切顺利。他笑着说。%SPEECH_ON%开玩笑的。我没有家庭。 我杀了那些混蛋，因为我喜欢听他们的哀嚎，但我的心已经不在那里了。 代我向其他人问好。%SPEECH_OFF%这个兽人杀手，或者说曾经的兽人杀手，离开了战团。",

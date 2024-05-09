@@ -9,7 +9,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.imprisoned_wildman";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_41.png[/img]在行军途中，你遇到一排停着的载重货车。 你意识到这些载重货车是笼子，每一辆车都是为一只野生动物服务的。 浏览这一排货车，你遇到各种各样的野兽。 一只蹲着的，喵喵叫的黑猫从栅栏里伸出它的杀人魔爪。 你跳开，回到另一个笼子边，里面的熊在咆哮，发出刺耳的声音。 值得庆幸的是，它强有力的爪子太胖了，塞不进栅栏里。 另一个笼子发出蛇的嘶嘶声。\n\n 一个男人从一辆载重货车后面走出来，向后靠了靠。 他脸上的表情很野蛮，就好像你刚刚抓住了他的手腕一样。%SPEECH_ON%嘿！你是谁？ 你在这儿干什么？%SPEECH_OFF%你告诉那个陌生人你是 %companyname% 的队长。男人直起身子。%SPEECH_ON%噢，佣兵！我以为我的运气来了，跑到我身上去了！ 听着，我遇到了麻烦而我的雇工拒绝帮忙。 他们漠不关心，也不想知道更多，但是现在该死的雇工们从载重货车上下来跑路了，然后雇主们闭口不谈我为他们运送了那么多货物！%SPEECH_OFF%",
@@ -205,7 +205,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Other.addInjury([
 					{
 						ID = "injury.missing_eye",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury_permanent/missing_eye_injury"
 					}
 				]);
@@ -366,7 +366,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Monk.getImagePath());
-				_event.m.Monk.worsenMood(1.000000, "被他目睹的暴力所震惊");
+				_event.m.Monk.worsenMood(1.0, "被他目睹的暴力所震惊");
 
 				if (_event.m.Monk.getMoodState() < this.Const.MoodState.Neutral)
 				{

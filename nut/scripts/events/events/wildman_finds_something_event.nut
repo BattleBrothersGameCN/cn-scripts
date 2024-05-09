@@ -7,7 +7,7 @@ this.wildman_finds_something_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.wildman_finds_something";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]当你试着不要因为有许多根低垂的树枝刮到了你的脸而发脾气时，%otherguy% 他赶紧跑到你身边说野人 %wildman% 跑了。 你转过身去看到其他人和你一样困惑。 举起你的拳头让队伍安静下来，森林不远处鸟儿的若有若无的叫声和蜜蜂或黄蜂的嗡嗡声在你的沉默中清晰可闻。 摇摇头，你决定继续前进。\n\n几个小时后，野人从你准备用大砍刀砍开的灌木丛后跳出来。 他手里拿着一大堆稀奇古怪的东西。 他从哪里得到这些东西，你不知道，但你让这些人筛选调查结果。 %wildman% 回到了队伍，就好像什么都没发生过一样。 你瞥了他一眼，发现他盯着停在他手指上的一只蝴蝶。 当你再撇他一眼的时候，蝴蝶不见了，那人正在吞东西。你的下属 %otherguy% 正向你报告他带来的东西。",

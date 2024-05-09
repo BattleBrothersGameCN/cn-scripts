@@ -7,7 +7,7 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.dried_oasis";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 120.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{沙漠里的景象是如此的一致以至于绿色非常惹眼。 这就是绿洲的吸引力。 你很远就看到了它，而随着你靠近你意识到这个绿东西不是树，而是枯树上飘荡的旗帜。 在边上有更多枯树，有的陷入了沙漠，沙子从四面八方侵蚀着它。 在这个曾经的绿洲中央有一具面朝一片碗状土地的骷髅，或许这里曾经有过水。 骷髅边上是一堆宝藏。 满是克朗，但没有一滴水可以买。\n\n 你拿起金子，但硬币随你移动，滑开变成一条黑蛇，挺起身向你发出嘶嘶声。 绿色的毒液从它的獠牙上滴下。}",
@@ -100,11 +100,11 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
 				_event.m.Dude.addHeavyInjury();
-				_event.m.Dude.worsenMood(1.500000, "被沙漠蛇咬了");
+				_event.m.Dude.worsenMood(1.5, "被沙漠蛇咬了");
 				local injury = _event.m.Dude.addInjury([
 					{
 						ID = "injury.pierced_hand",
-						Threshold = 0.250000,
+						Threshold = 0.25,
 						Script = "injury/pierced_hand_injury"
 					}
 				]);
@@ -167,7 +167,7 @@ this.dried_oasis_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Slayer.improveMood(1.000000, "把他的专长应用在生物上");
+				_event.m.Slayer.improveMood(1.0, "把他的专长应用在生物上");
 
 				if (_event.m.Slayer.getMoodState() >= this.Const.MoodState.Neutral)
 				{

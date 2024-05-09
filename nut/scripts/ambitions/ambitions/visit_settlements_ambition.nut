@@ -4,7 +4,7 @@ this.visit_settlements_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.visit_settlements";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我知道你们现在闲得发慌，而且我们还得宣传\n咱们的战团。让我们到处拜访每一处定居点！";
 		this.m.UIText = "拜访每一座城镇与城堡";
 		this.m.TooltipText = "拜访每一座村落，城镇，城堡来了解他们的商品与服务设施，并且推广战团。";

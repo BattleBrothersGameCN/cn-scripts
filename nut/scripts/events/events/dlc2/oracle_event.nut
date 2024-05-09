@@ -4,7 +4,7 @@ this.oracle_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.oracle";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_11.png[/img]{在路边你看到一顶山羊皮帐篷。皮油布被在紫色染料中泡过，新鲜的雏菊被缠在盘结的山羊毛结上。一位驼背老妇人站在帐篷外，双手交叉垂在身旁，她用干瘪的眼睛打量着你。%SPEECH_ON%啊，一个佣兵。不，是一队佣兵的队长。或者可能更多。你身上有异样的气味，不仅仅是男人的气味。你想算一下你的命运吗？%SPEECH_OFF%她朝帐篷里面比划。你看到一排长牌面朝下放在桌子上。}",

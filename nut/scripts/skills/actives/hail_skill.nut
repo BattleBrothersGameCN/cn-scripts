@@ -32,7 +32,7 @@ this.hail_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
 		this.m.HitChanceBonus = 0;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -75,7 +75,7 @@ this.hail_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInFlails ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInFlails ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 		this.m.IsShieldRelevant = !_properties.IsSpecializedInFlails;
 	}
 
@@ -128,9 +128,9 @@ this.hail_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.HitChance[this.Const.BodyPart.Head] += 100.000000;
-			_properties.DamageTotalMult *= 0.333333;
-			_properties.DamageTooltipMaxMult *= 3.000000;
+			_properties.HitChance[this.Const.BodyPart.Head] += 100.0;
+			_properties.DamageTotalMult *= 0.33333334;
+			_properties.DamageTooltipMaxMult *= 3.0;
 		}
 	}
 

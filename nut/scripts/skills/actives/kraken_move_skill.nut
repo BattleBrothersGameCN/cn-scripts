@@ -21,7 +21,7 @@ this.kraken_move_skill <- this.inherit("scripts/skills/skill", {
 			"sounds/enemies/dlc2/tentacle_appear_04.wav",
 			"sounds/enemies/dlc2/tentacle_appear_05.wav"
 		];
-		this.m.SoundVolume = 0.660000;
+		this.m.SoundVolume = 0.66;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.UtilityTargeted;
 		this.m.IsSerialized = false;
@@ -67,7 +67,7 @@ this.kraken_move_skill <- this.inherit("scripts/skills/skill", {
 
 		if (_user.getTile().IsVisibleForPlayer)
 		{
-			_user.sinkIntoGround(0.750000);
+			_user.sinkIntoGround(0.75);
 			this.Time.scheduleEvent(this.TimeUnit.Virtual, 800, this.onTeleportStart, tag);
 		}
 		else if (_targetTile.IsVisibleForPlayer)
@@ -91,7 +91,7 @@ this.kraken_move_skill <- this.inherit("scripts/skills/skill", {
 			_tag.User.fadeTo(this.createColor("ffffff00"), 0);
 		}
 
-		this.Tactical.getNavigator().teleport(_tag.User, _tag.TargetTile, _tag.OnDone, _tag, false, 1000.000000);
+		this.Tactical.getNavigator().teleport(_tag.User, _tag.TargetTile, _tag.OnDone, _tag, false, 1000.0);
 	}
 
 	function onTeleportDone( _entity, _tag )
@@ -103,7 +103,7 @@ this.kraken_move_skill <- this.inherit("scripts/skills/skill", {
 
 		if (!_entity.isHiddenToPlayer())
 		{
-			_entity.riseFromGround(0.750000);
+			_entity.riseFromGround(0.75);
 		}
 
 		if (_tag.Skill.m.SoundOnHit.len() > 0)

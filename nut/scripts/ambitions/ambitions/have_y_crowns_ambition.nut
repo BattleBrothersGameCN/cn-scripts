@@ -4,7 +4,7 @@ this.have_y_crowns_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.have_y_crowns";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "如果一两场战斗对我们不利，我们就会发现自己口袋空空，装备短缺。\n因此，战团将建立10,000克朗的储备。";
 		this.m.UIText = "拥有至少10,000克朗";
 		this.m.TooltipText = "储备至少10,000克朗，以防节外生枝。 你可以通过完成合同、掠夺废墟或营地、进行贸易等方式赚钱。";

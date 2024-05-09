@@ -13,7 +13,7 @@ this.split_shoulder_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.HealingTimeMin = 4;
 		this.m.HealingTimeMax = 6;
 		this.m.IsShownOnBody = true;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -49,7 +49,7 @@ this.split_shoulder_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.DamageTotalMult *= 0.500000;
+		_properties.DamageTotalMult *= 0.5;
 	}
 
 });

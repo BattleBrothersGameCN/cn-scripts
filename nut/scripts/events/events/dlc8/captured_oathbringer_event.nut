@@ -6,7 +6,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.captured_oathbringer";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "{[img]gfx/ui/events/event_05.png[/img]{一个男人冲进你的帐篷，大声说有人偷偷溜进了营地。你问他是不是盗贼。男人摇了摇头。%SPEECH_ON%不是，比盗贼更糟，他是一名誓约者。%SPEECH_OFF%混账东西！你跳起身，冲出去，这个入侵者已经被捆绑起来，并被誓约守卫们殴打。你将他们隔开，站在他面前。%SPEECH_ON%誓约者，Anselm的下巴在哪里？%SPEECH_OFF%这个人朝你的靴子吐了口口水，并告诉你他永远不会告诉你，而且誓约守卫可以去地狱，他认为Anselm本人如果能的话也会亲自将他们带到地狱。他亵渎年轻的Anselm名字的言论引起了你和你的士兵们的轻蔑。%randombrother%低下头。%SPEECH_ON%队长，只要一声令下，我们就可以让该死的誓约者认清自己的错误。%SPEECH_OFF%}",
@@ -68,7 +68,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					"helmets/heavy_mail_coif"
 				];
 				local item = this.new("scripts/items/" + potential_loot[this.Math.rand(0, potential_loot.len() - 1)]);
-				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 30) * 0.010000));
+				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 30) * 0.01));
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
@@ -81,7 +81,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" || !bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.improveMood(0.750000, "你击败一个誓约破坏者，我感到很高兴。");
+						bro.improveMood(0.75, "你击败一个誓约破坏者，我感到很高兴。");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -94,7 +94,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().isOffendedByViolence())
 					{
-						bro.worsenMood(0.500000, "不喜欢你冷血杀死了一个俘虏");
+						bro.worsenMood(0.5, "不喜欢你冷血杀死了一个俘虏");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -133,7 +133,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					"helmets/adorned_closed_flat_top_with_mail"
 				];
 				local item = this.new("scripts/items/" + potential_loot[this.Math.rand(0, potential_loot.len() - 1)]);
-				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 30) * 0.010000));
+				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 30) * 0.01));
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
@@ -147,7 +147,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					"shields/heater_shield"
 				];
 				local item = this.new("scripts/items/" + potential_loot[this.Math.rand(0, potential_loot.len() - 1)]);
-				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 30) * 0.010000));
+				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 30) * 0.01));
 				this.List.push({
 					id = 10,
 					icon = "ui/items/" + item.getIcon(),
@@ -160,7 +160,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" || !bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.improveMood(1.250000, "折磨了一个背离誓言者公司的异端人。");
+						bro.improveMood(1.25, "折磨了一个背离誓言者公司的异端人。");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -173,7 +173,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().isOffendedByViolence())
 					{
-						bro.worsenMood(0.750000, "对您下令拷问俘虏感到震惊。");
+						bro.worsenMood(0.75, "对您下令拷问俘虏感到震惊。");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -215,7 +215,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Torturer.addInjury([
 					{
 						ID = "injury.cut_throat",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury/cut_throat_injury"
 					}
 				]);
@@ -224,7 +224,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Torturer.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Torturer.worsenMood(0.500000, "放走一名被俘的誓言者(Oathbringer)。");
+				_event.m.Torturer.worsenMood(0.5, "放走一名被俘的誓言者(Oathbringer)。");
 			}
 
 		});
@@ -252,7 +252,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin" || this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(0.750000, "你差点让被俘的「誓言者」逃跑了。");
+						bro.worsenMood(0.75, "你差点让被俘的「誓言者」逃跑了。");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

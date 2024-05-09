@@ -3,7 +3,7 @@ this.send_undead_ambushers_action <- this.inherit("scripts/factions/faction_acti
 	function create()
 	{
 		this.m.ID = "send_undead_ambushers_action";
-		this.m.Cooldown = 30.000000;
+		this.m.Cooldown = 30.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -22,7 +22,7 @@ this.send_undead_ambushers_action <- this.inherit("scripts/factions/faction_acti
 			return;
 		}
 
-		if (this.World.FactionManager.getGreaterEvilPhase() == this.Const.World.GreaterEvilPhase.Live && this.World.FactionManager.getGreaterEvilStrength() >= 10.000000)
+		if (this.World.FactionManager.getGreaterEvilPhase() == this.Const.World.GreaterEvilPhase.Live && this.World.FactionManager.getGreaterEvilStrength() >= 10.0)
 		{
 			if (_faction.getUnits().len() >= 6)
 			{
@@ -38,7 +38,7 @@ this.send_undead_ambushers_action <- this.inherit("scripts/factions/faction_acti
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -65,7 +65,7 @@ this.send_undead_ambushers_action <- this.inherit("scripts/factions/faction_acti
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -83,7 +83,7 @@ this.send_undead_ambushers_action <- this.inherit("scripts/factions/faction_acti
 
 		local settlement = this.pickWeightedRandom(settlements);
 		settlement.setLastSpawnTimeToNow();
-		local mult = this.World.FactionManager.isUndeadScourge() ? 1.100000 : 1.000000;
+		local mult = this.World.FactionManager.isUndeadScourge() ? 1.1 : 1.0;
 		local party = _faction.spawnEntity(settlement.getTile(), "亡灵", false, this.Const.World.Spawn.UndeadScourge, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
 		party.getSprite("banner").setBrush(settlement.getBanner());
 		party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");

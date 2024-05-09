@@ -33,14 +33,14 @@ this.throw_balls <- this.inherit("scripts/skills/skill", {
 		this.m.IsDoingForwardMove = false;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntAndPiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntAndPiercingHead;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 15;
 		this.m.MinRange = 2;
 		this.m.MaxRange = 4;
 		this.m.MaxLevelDifference = 4;
 		this.m.ProjectileType = this.Const.ProjectileType.Bola;
-		this.m.ProjectileTimeScale = 1.500000;
+		this.m.ProjectileTimeScale = 1.5;
 		this.m.IsProjectileRotated = false;
 	}
 
@@ -124,7 +124,7 @@ this.throw_balls <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInThrowing ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInThrowing ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )

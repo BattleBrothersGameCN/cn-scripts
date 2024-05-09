@@ -166,14 +166,14 @@ this.sickness_injury <- this.inherit("scripts/skills/injury/injury", {
 	function onUpdate( _properties )
 	{
 		this.injury.onUpdate(_properties);
-		_properties.HitpointsMult *= 0.750000;
-		_properties.BraveryMult *= 0.750000;
-		_properties.InitiativeMult *= 0.750000;
-		_properties.StaminaMult *= 0.750000;
-		_properties.MeleeSkill *= 0.750000;
-		_properties.RangedSkill *= 0.750000;
-		_properties.MeleeDefense *= 0.750000;
-		_properties.RangedDefense *= 0.750000;
+		_properties.HitpointsMult *= 0.75;
+		_properties.BraveryMult *= 0.75;
+		_properties.InitiativeMult *= 0.75;
+		_properties.StaminaMult *= 0.75;
+		_properties.MeleeSkill *= 0.75;
+		_properties.RangedSkill *= 0.75;
+		_properties.MeleeDefense *= 0.75;
+		_properties.RangedDefense *= 0.75;
 		_properties.Vision += -2;
 	}
 

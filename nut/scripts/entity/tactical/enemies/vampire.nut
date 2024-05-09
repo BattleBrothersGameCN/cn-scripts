@@ -44,8 +44,8 @@ this.vampire <- this.inherit("scripts/entity/tactical/actor", {
 		if (_tile != null)
 		{
 			local decal = _tile.spawnDetail("bust_skeleton_vampire_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false);
-			decal.Scale = 0.900000;
-			decal.setBrightness(0.900000);
+			decal.Scale = 0.9;
+			decal.setBrightness(0.9);
 			this.spawnTerrainDropdownEffect(_tile);
 			local corpse = clone this.Const.Corpse;
 			corpse.Faction = this.getFaction();
@@ -108,14 +108,14 @@ this.vampire <- this.inherit("scripts/entity/tactical/actor", {
 		local bodyBrush = this.getSprite("body").getBrush().Name;
 		local headBrush = this.getSprite("head").getBrush().Name;
 
-		if (p <= 0.330000)
+		if (p <= 0.33)
 		{
 			this.getSprite("body").setBrush("bust_skeleton_body_03");
 			this.getSprite("body_injury").setBrush("bust_skeleton_body_03_injured");
 			this.getSprite("head").setBrush("bust_skeleton_head_03");
 			this.getSprite("injury").setBrush("bust_skeleton_head_03_injured");
 		}
-		else if (p <= 0.660000)
+		else if (p <= 0.66)
 		{
 			this.getSprite("body").setBrush("bust_skeleton_body_04");
 			this.getSprite("body_injury").setBrush("bust_skeleton_body_04_injured");
@@ -194,8 +194,8 @@ this.vampire <- this.inherit("scripts/entity/tactical/actor", {
 		}
 
 		local beard = this.addSprite("beard");
-		beard.setBrightness(0.700000);
-		beard.varyColor(0.020000, 0.020000, 0.020000);
+		beard.setBrightness(0.7);
+		beard.varyColor(0.02, 0.02, 0.02);
 		local hair = this.addSprite("hair");
 		hair.Color = beard.Color;
 
@@ -224,7 +224,7 @@ this.vampire <- this.inherit("scripts/entity/tactical/actor", {
 		body_dirt.setHorizontalFlipping(true);
 		body_dirt.Visible = this.Math.rand(1, 100) <= 33;
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.550000;
+		this.getSprite("status_rooted").Scale = 0.55;
 		this.m.Skills.add(this.new("scripts/skills/special/double_grip"));
 		this.m.Skills.add(this.new("scripts/skills/racial/vampire_racial"));
 		this.m.Skills.add(this.new("scripts/skills/actives/darkflight"));

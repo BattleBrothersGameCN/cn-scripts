@@ -40,7 +40,7 @@ this.gore_skill <- this.inherit("scripts/skills/skill", {
 		this.m.MinRange = 3;
 		this.m.MaxRange = 6;
 		this.m.MaxLevelDifference = 3;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ChanceDecapitate = 0;
 		this.m.ChanceDisembowel = 25;
 		this.m.ChanceSmash = 25;
@@ -106,7 +106,7 @@ this.gore_skill <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.DamageRegularMin += 100;
 		_properties.DamageRegularMax += 130;
-		_properties.DamageArmorMult *= 0.750000;
+		_properties.DamageArmorMult *= 0.75;
 
 		if (this.Time.getRound() == 1)
 		{
@@ -146,13 +146,13 @@ this.gore_skill <- this.inherit("scripts/skills/skill", {
 				{
 					for( local i = 0; i < this.Const.Tactical.DustParticles.len(); i = ++i )
 					{
-						this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, this.Tactical.getTile(tile), this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.500000, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.500000, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages);
+						this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, this.Tactical.getTile(tile), this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.5, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.5, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages);
 					}
 				}
 			}
 		}
 
-		this.Tactical.getNavigator().teleport(_user, _targetTile, this.onTeleportDone.bindenv(this), tag, false, 3.000000);
+		this.Tactical.getNavigator().teleport(_user, _targetTile, this.onTeleportDone.bindenv(this), tag, false, 3.0);
 		return true;
 	}
 
@@ -206,10 +206,10 @@ this.gore_skill <- this.inherit("scripts/skills/skill", {
 					HitInfo = clone this.Const.Tactical.HitInfo
 				};
 				tag.HitInfo.DamageRegular = damage;
-				tag.HitInfo.DamageDirect = 1.000000;
+				tag.HitInfo.DamageDirect = 1.0;
 				tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-				tag.HitInfo.BodyDamageMult = 1.000000;
-				tag.HitInfo.FatalityChanceMult = 1.000000;
+				tag.HitInfo.BodyDamageMult = 1.0;
+				tag.HitInfo.FatalityChanceMult = 1.0;
 				this.Tactical.getNavigator().teleport(_target, knockToTile, this.onKnockedDown, tag, true);
 			}
 		}

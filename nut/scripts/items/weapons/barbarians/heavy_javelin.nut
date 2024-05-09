@@ -33,8 +33,8 @@ this.heavy_javelin <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.StaminaModifier = -8;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 0.800000;
-		this.m.DirectDamageMult = 0.450000;
+		this.m.ArmorDamageMult = 0.8;
+		this.m.DirectDamageMult = 0.45;
 		this.m.ShieldDamage = 0;
 		this.m.IsDroppedAsLoot = true;
 		this.m.AdditionalAccuracy = -5;

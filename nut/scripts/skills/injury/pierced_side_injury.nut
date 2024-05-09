@@ -13,7 +13,7 @@ this.pierced_side_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.HealingTimeMin = 3;
 		this.m.HealingTimeMax = 4;
 		this.m.IsShownOnBody = true;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -49,7 +49,7 @@ this.pierced_side_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.StaminaMult *= 0.800000;
+		_properties.StaminaMult *= 0.8;
 	}
 
 });

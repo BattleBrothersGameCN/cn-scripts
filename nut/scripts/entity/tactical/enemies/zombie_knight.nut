@@ -9,7 +9,7 @@ this.zombie_knight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 		this.m.XP = this.Const.Tactical.Actor.ZombieKnight.XP;
 		this.m.Name = this.Const.Strings.EntityName[this.m.Type];
 		this.m.IsResurrectingOnFatality = true;
-		this.m.ResurrectionValue = 5.000000;
+		this.m.ResurrectionValue = 5.0;
 		this.m.ResurrectionChance = 90;
 		this.m.ResurrectWithScript = "scripts/entity/tactical/enemies/zombie_knight";
 	}
@@ -34,12 +34,12 @@ this.zombie_knight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 		b.IsAffectedByInjuries = false;
 		b.IsImmuneToBleeding = true;
 		b.IsImmuneToPoison = true;
-		b.FatigueDealtPerHitMult = 2.000000;
+		b.FatigueDealtPerHitMult = 2.0;
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 90)
 		{
 			b.MeleeSkill += 5;
-			b.DamageTotalMult += 0.100000;
+			b.DamageTotalMult += 0.1;
 		}
 
 		this.m.ActionPoints = b.ActionPoints;
@@ -74,7 +74,7 @@ this.zombie_knight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 			this.m.Sound[this.Const.Sound.ActorEvent.Resurrect] = [];
 			this.m.Sound[this.Const.Sound.ActorEvent.Idle] = [];
 			this.getSprite("head").setBrush("zombify_no_head");
-			this.getSprite("head").Saturation = 1.000000;
+			this.getSprite("head").Saturation = 1.0;
 			this.getSprite("head").Color = this.createColor("#ffffff");
 			this.getSprite("injury").Visible = false;
 			this.getSprite("hair").resetBrush();
@@ -143,7 +143,7 @@ this.zombie_knight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 
 			if (this.Math.rand(1, 100) <= 33)
 			{
-				a.setArmor(this.Math.round(a.getArmorMax() / 2 - 1) / 1.000000);
+				a.setArmor(this.Math.round(a.getArmorMax() / 2 - 1) / 1.0);
 			}
 
 			this.m.Items.equip(a);
@@ -167,7 +167,7 @@ this.zombie_knight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 
 			if (this.Math.rand(1, 100) <= 33)
 			{
-				h.setArmor(this.Math.round(h.getArmorMax() / 2 - 1) / 1.000000);
+				h.setArmor(this.Math.round(h.getArmorMax() / 2 - 1) / 1.0);
 			}
 
 			this.m.Items.equip(h);

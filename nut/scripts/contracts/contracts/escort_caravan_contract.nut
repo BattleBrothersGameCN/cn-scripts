@@ -11,7 +11,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.escort_caravan";
 		this.m.Name = "护送商队";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 	}
 
@@ -112,7 +112,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			}
 
 			local distance = this.getDistanceOnRoads(this.m.Origin.getTile(), s.getTile());
-			local days = this.getDaysRequiredToTravel(distance, this.Const.World.MovementSettings.Speed * 0.600000, true);
+			local days = this.getDaysRequiredToTravel(distance, this.Const.World.MovementSettings.Speed * 0.6, true);
 
 			if (days > 7 || distance < 15)
 			{
@@ -140,37 +140,37 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 
 		this.m.Destination = this.WeakTableRef(candidates[this.Math.rand(0, candidates.len() - 1)]);
 		local distance = this.getDistanceOnRoads(this.m.Origin.getTile(), this.m.Destination.getTile());
-		local days = this.getDaysRequiredToTravel(distance, this.Const.World.MovementSettings.Speed * 0.600000, true);
+		local days = this.getDaysRequiredToTravel(distance, this.Const.World.MovementSettings.Speed * 0.6, true);
 
 		if (days >= 5)
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 		else if (days >= 2)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(70, 85) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(70, 85) * 0.01;
 		}
 
-		this.m.Payment.Pool = this.Math.max(150, distance * 7.000000 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentMult());
+		this.m.Payment.Pool = this.Math.max(150, distance * 7.0 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentMult());
 		local r = this.Math.rand(1, 3);
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Count = 0.250000;
-			this.m.Payment.Completion = 0.750000;
+			this.m.Payment.Count = 0.25;
+			this.m.Payment.Completion = 0.75;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		local maximumHeads = [
@@ -240,7 +240,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 				}
 				else if (r <= 10)
 				{
-					if (this.World.Assets.getBusinessReputation() > 1000 && this.Contract.getDifficultyMult() >= 0.950000)
+					if (this.World.Assets.getBusinessReputation() > 1000 && this.Contract.getDifficultyMult() >= 0.95)
 					{
 						this.Flags.set("IsVampires", true);
 						this.Flags.set("IsEnoughCombat", true);
@@ -257,7 +257,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 						this.Flags.set("IsPrisoner", true);
 					}
 				}
-				else if (this.Contract.getDifficultyMult() < 0.950000 || this.World.Assets.getBusinessReputation() <= 500 || this.Contract.getDifficultyMult() <= 1.100000 && this.Math.rand(1, 100) <= 20)
+				else if (this.Contract.getDifficultyMult() < 0.95 || this.World.Assets.getBusinessReputation() <= 500 || this.Contract.getDifficultyMult() <= 1.1 && this.Math.rand(1, 100) <= 20)
 				{
 					this.Flags.set("IsEnoughCombat", true);
 				}
@@ -347,7 +347,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 				}
 				else
 				{
-					local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+					local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 					local numParties = 0;
 
 					foreach( party in parties )
@@ -460,10 +460,10 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (!this.World.State.isPaused())
 				{
-					this.World.setSpeedMult(1.000000);
+					this.World.setSpeedMult(1.0);
 				}
 
-				this.World.State.m.LastWorldSpeedMult = 1.000000;
+				this.World.State.m.LastWorldSpeedMult = 1.0;
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())
 				{
@@ -838,10 +838,10 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 
 						if (!this.World.State.isPaused())
 						{
-							this.World.setSpeedMult(1.000000);
+							this.World.setSpeedMult(1.0);
 						}
 
-						this.World.State.m.LastWorldSpeedMult = 1.000000;
+						this.World.State.m.LastWorldSpeedMult = 1.0;
 						this.Contract.m.Caravan.die();
 						this.Contract.m.Caravan = null;
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationAttacked, "屠杀了一个负责保护的商队");
@@ -965,7 +965,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 						}
 						else if (this.Flags.get("IsStolenGoods"))
 						{
-							this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess * 2.000000, "保护了一个商队的赃物");
+							this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess * 2.0, "保护了一个商队的赃物");
 						}
 						else
 						{
@@ -1014,7 +1014,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 						}
 						else if (this.Flags.get("IsStolenGoods"))
 						{
-							this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractPoor * 2.000000, "保护了一个商队的赃物, albeit poorly");
+							this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractPoor * 2.0, "保护了一个商队的赃物, albeit poorly");
 						}
 						else
 						{
@@ -1107,18 +1107,18 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (faction.hasTrait(this.Const.FactionTrait.OrientalCityState))
 		{
-			party = faction.spawnEntity(this.m.Home.getTile(), "贸易商队", false, this.Const.World.Spawn.CaravanSouthernEscort, this.m.Home.getResources() * this.Math.rand(10, 25) * 0.010000);
+			party = faction.spawnEntity(this.m.Home.getTile(), "贸易商队", false, this.Const.World.Spawn.CaravanSouthernEscort, this.m.Home.getResources() * this.Math.rand(10, 25) * 0.01);
 		}
 		else
 		{
-			party = faction.spawnEntity(this.m.Home.getTile(), "贸易商队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.400000);
+			party = faction.spawnEntity(this.m.Home.getTile(), "贸易商队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.4);
 		}
 
 		party.getSprite("banner").Visible = false;
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
 		party.setDescription("一支来自" + this.m.Home.getName() + "的贸易商队，在定居点之间运输各种各样的货物。");
-		party.setMovementSpeed(this.Const.World.MovementSettings.Speed * 0.600000);
+		party.setMovementSpeed(this.Const.World.MovementSettings.Speed * 0.6);
 		party.setLeaveFootprints(false);
 
 		if (this.m.Home.getProduce().len() != 0)
@@ -1139,7 +1139,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 		local unload = this.new("scripts/ai/world/orders/unload_order");
 		local despawn = this.new("scripts/ai/world/orders/despawn_order");
 		local wait = this.new("scripts/ai/world/orders/wait_order");
-		wait.setTime(4.000000);
+		wait.setTime(4.0);
 		c.addOrder(move);
 		c.addOrder(unload);
 		c.addOrder(wait);
@@ -1339,7 +1339,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 
 	function onPrepareVariables( _vars )
 	{
-		local days = this.getDaysRequiredToTravel(this.m.Flags.get("Distance"), this.Const.World.MovementSettings.Speed * 0.600000, true);
+		local days = this.getDaysRequiredToTravel(this.m.Flags.get("Distance"), this.Const.World.MovementSettings.Speed * 0.6, true);
 		_vars.push([
 			"objective",
 			this.m.Destination == null || this.m.Destination.isNull() ? "" : this.m.Destination.getName()
@@ -1385,10 +1385,10 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 
 			if (!this.World.State.isPaused())
 			{
-				this.World.setSpeedMult(1.000000);
+				this.World.setSpeedMult(1.0);
 			}
 
-			this.World.State.m.LastWorldSpeedMult = 1.000000;
+			this.World.State.m.LastWorldSpeedMult = 1.0;
 
 			if (this.m.Destination != null && !this.m.Destination.isNull())
 			{

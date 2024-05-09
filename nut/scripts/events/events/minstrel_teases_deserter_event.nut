@@ -7,7 +7,7 @@ this.minstrel_teases_deserter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.minstrel_teases_deserter";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img] 当营火劈啪作响的时候，%minstrel% 这个吟游诗人站了起来并且站在高高的树桩上。 他捶了一下自己的胸口并且指着 %deserter%。%SPEECH_ON%哟，没错逃兵总是在如何逃跑上面下了很大的功夫，所以总是在被打之前逃脱！ 逃兵！噢，要记住一件事情逃兵！ 逃兵永远都是逃兵！ 遗留在过去的勇气，已经被玷污了的荣耀，还有被抹杀掉的气概！这就是逃兵！%SPEECH_OFF%吟游诗人迅速地拍了拍手又坐回座位上。 吟游诗人还没坐下多久 %deserter%的手就掐住了他的脖子。 成员们一片哗然，不知道应该分开两人还是在旁边幸灾乐祸。",
@@ -28,7 +28,7 @@ this.minstrel_teases_deserter_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Minstrel.getImagePath());
 				this.Characters.push(_event.m.Deserter.getImagePath());
-				_event.m.Deserter.worsenMood(2.000000, "在战团面前感到丢脸");
+				_event.m.Deserter.worsenMood(2.0, "在战团面前感到丢脸");
 
 				if (_event.m.Deserter.getMoodState() < this.Const.MoodState.Neutral)
 				{

@@ -7,7 +7,7 @@ this.brawler_vs_brawler_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.brawler_vs_brawler";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]当你和男人们围坐在火堆旁时，一场火焰边的讨论开始变得有些喧嚣。%brawler% 这个打手站起来，指着自己的胸膛，发出一声爽朗的笑声。%SPEECH_ON%你？你觉得你能摆平我么？%SPEECH_OFF%另一个打手，%brawler2%，一跃而起。%SPEECH_ON%摆平你？我能让你躺地上，你个娘娘腔的蠢货！%SPEECH_OFF%哪怕是最轻微的暗示，说 %brawler%的拳头不是由能把人的下巴震碎的砖块构成的，都会引发一场凶残的打斗。 两个打手彼此抓住对方，绕着圈挥拳相向。 每一拳都异常猛烈。 当然没有人能承受这么大的伤害后还能站起来，但在这里，你正在目睹他俩这么干。 你命令队员们阻止这场争斗。\n\n%brawler% 捏着一个鼻孔，从另一个鼻孔里喷出血来。他耸耸肩。%SPEECH_ON%刚才只是小打小闹，先生。%SPEECH_OFF%把肩膀复位后，%brawler2% 点头。%SPEECH_ON%是啊，不打不成交。%SPEECH_OFF%你看到这两个人握手，拍拍对方的肩膀，互相祝贺对方的拳头有多狠。",
@@ -48,7 +48,7 @@ this.brawler_vs_brawler_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Brawler1.improveMood(2.000000, "建立友谊与 " + _event.m.Brawler2.getName());
+				_event.m.Brawler1.improveMood(2.0, "建立友谊与 " + _event.m.Brawler2.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Brawler1.getMoodState()],
@@ -74,7 +74,7 @@ this.brawler_vs_brawler_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Brawler2.improveMood(2.000000, "建立友谊与 " + _event.m.Brawler1.getName());
+				_event.m.Brawler2.improveMood(2.0, "建立友谊与 " + _event.m.Brawler1.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Brawler2.getMoodState()],

@@ -6,7 +6,7 @@ this.anatomist_vs_historian_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_vs_historian";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_40.png[/img]{%historian% 这位历史学家正在和解剖学家发生某种种类的纷争。你走过去看到%historian%拿着一本充满人体描述和图像的书。他说这是人类已知的最准确的人体描绘，但解剖学家们嗤之以鼻，说这样的书根本不存在，因为他们还没有写出这样的书。你很感兴趣，翻开了这本书。这些图画表现人类仿佛是一些非常长的蠕虫，它们流向心脏然后再流回去，每一条专门穿过一个特定的部位。其他的页面展示出身体器官的布局，展示肺、肾、肝脏等等。它似乎很详细，但你并不确定在这种情况下谁是正确的。%SPEECH_ON%不要信那本书的谎言，队长。让我们解剖学家来做我们的工作，这些可怕的文献应该扔到该去的地方。%SPEECH_OFF%历史学家非常愤怒地从你手中夺过这本书，并向他们展示了一页。上面展示了人类的大脑，并有大量的绳索或线从大脑上延伸出来，沿着脊柱往下延伸。他说这是人类体验的核心，我们所有的经验以及思考都存在于这个器官里。再一次，解剖学家们嘲笑起来。历史学家转向你，好像你这个门外汉的观点可以调节这些大脑的情感，现在每个人都在等你的判定。}",

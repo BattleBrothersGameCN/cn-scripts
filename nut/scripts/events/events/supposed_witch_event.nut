@@ -8,7 +8,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.supposed_witch";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 200.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_79.png[/img]你穿过小路来到一个小村庄。 这是一个相当普通的地方，除了一个女人被绑在即将点燃的篝火处。 她被一群农民包围着，这是处于这种地位的女人通常的状况。 一个来自乌合之众的修道士诵读了一本圣经，显然是想更有道义性地让每个人都知道她的罪行。 另一名男子拿着火把筒尽职地站在旁边，他已经巴不得要动手了。\n\n 看到你，那个女人大喊救命。%SPEECH_ON%他们要把我烧了！ 你必须做点什么！ 我在这里没有做错任何事！%SPEECH_OFF%",
@@ -127,7 +127,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25 && bro.getBackground().getID() != "background.witchhunter")
 					{
-						bro.improveMood(1.000000, "你把一个女人从火刑柱上救了出来");
+						bro.improveMood(1.0, "你把一个女人从火刑柱上救了出来");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -166,7 +166,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25 || bro.getBackground().getID() == "background.witchhunter" || bro.getBackground().getID() == "background.monk" || bro.getSkills().hasSkill("trait.superstitious") || bro.getSkills().hasSkill("trait.mad"))
 					{
-						bro.worsenMood(1.000000, "你释放了一个邪灵");
+						bro.worsenMood(1.0, "你释放了一个邪灵");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -205,7 +205,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 				_event.m.Witchhunter.getBaseProperties().Bravery += resolve;
 				_event.m.Witchhunter.getBaseProperties().Initiative += initiative;
 				_event.m.Witchhunter.getSkills().update();
-				_event.m.Witchhunter.improveMood(2.000000, "杀了一个邪灵");
+				_event.m.Witchhunter.improveMood(2.0, "杀了一个邪灵");
 
 				if (_event.m.Witchhunter.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -232,7 +232,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() != _event.m.Witchhunter.getID() && (this.Math.rand(1, 100) <= 25 || bro.getBackground().getID() == "background.witchhunter" || bro.getBackground().getID() == "background.monk" || bro.getSkills().hasSkill("trait.superstitious")))
 					{
-						bro.improveMood(1.000000, "看到一个邪灵被终结");
+						bro.improveMood(1.0, "看到一个邪灵被终结");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -269,7 +269,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 				local resolve = this.Math.rand(2, 3);
 				_event.m.Monk.getBaseProperties().Bravery += resolve;
 				_event.m.Monk.getSkills().update();
-				_event.m.Monk.improveMood(2.000000, "有个女巫被烧死了");
+				_event.m.Monk.improveMood(2.0, "有个女巫被烧死了");
 
 				if (_event.m.Monk.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -291,7 +291,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() != _event.m.Monk.getID() && (bro.getBackground().getID() == "background.witchhunter" || bro.getBackground().getID() == "background.monk" || bro.getSkills().hasSkill("trait.superstitious")))
 					{
-						bro.improveMood(1.000000, "看到一个女巫在火刑柱上燃烧");
+						bro.improveMood(1.0, "看到一个女巫在火刑柱上燃烧");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -328,7 +328,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 				local resolve = 2;
 				_event.m.Cultist.getBaseProperties().Bravery += resolve;
 				_event.m.Cultist.getSkills().update();
-				_event.m.Cultist.improveMood(2.000000, "见证了达库尔的力量");
+				_event.m.Cultist.improveMood(2.0, "见证了达库尔的力量");
 
 				if (_event.m.Cultist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -350,7 +350,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getID() != _event.m.Cultist.getID() && (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist"))
 					{
-						bro.improveMood(1.000000, "见证了达库尔的力量");
+						bro.improveMood(1.0, "见证了达库尔的力量");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -363,7 +363,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().getID() == "background.witchhunter" || bro.getBackground().getID() == "background.monk" || bro.getSkills().hasSkill("trait.superstitious"))
 					{
-						bro.worsenMood(1.000000, _event.m.Cultist.getName() + " 释放了一个女巫");
+						bro.worsenMood(1.0, _event.m.Cultist.getName() + " 释放了一个女巫");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -399,7 +399,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

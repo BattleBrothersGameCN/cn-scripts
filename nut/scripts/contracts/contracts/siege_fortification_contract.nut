@@ -9,16 +9,16 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 
 		if (r <= 70)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
 		this.m.Type = "contract.siege_fortification";
 		this.m.Name = "围攻防御工事";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		this.m.MakeAllSpawnsResetOrdersOnContractEnd = false;
 	}
 
@@ -37,19 +37,19 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 		this.m.Flags.set("ObjectiveName", this.m.Origin.getName());
 		this.m.Flags.set("RivalHouseID", this.m.Origin.getOwner().getID());
 		this.m.Flags.set("RivalHouse", this.m.Origin.getOwner().getName());
-		this.m.Flags.set("WaitUntil", 0.000000);
+		this.m.Flags.set("WaitUntil", 0.0);
 		this.m.Name = "围攻" + this.m.Origin.getName();
 		this.m.Flags.set("CommanderName", this.Const.Strings.KnightNames[this.Math.rand(0, this.Const.Strings.KnightNames.len() - 1)]);
 		this.m.Payment.Pool = 1550 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentMult();
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -79,7 +79,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 			function end()
 			{
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
-				this.Contract.m.Origin.getOwner().addPlayerRelation(-99.000000, "在战争选择了阵营");
+				this.Contract.m.Origin.getOwner().addPlayerRelation(-99.0, "在战争选择了阵营");
 				local r = this.Math.rand(1, 100);
 
 				if (r <= 50)
@@ -201,7 +201,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 					return;
 				}
 
-				this.Contract.m.Origin.getOwner().addPlayerRelation(-99.000000, "在战争选择了阵营");
+				this.Contract.m.Origin.getOwner().addPlayerRelation(-99.0, "在战争选择了阵营");
 
 				foreach( i, a in this.Contract.m.Allies )
 				{
@@ -760,7 +760,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 				}
 				else
 				{
-					this.Contract.m.Origin.getOwner().addPlayerRelation(-99.000000, "在战争选择了阵营");
+					this.Contract.m.Origin.getOwner().addPlayerRelation(-99.0, "在战争选择了阵营");
 					this.Contract.setScreen("DefendersSallyForth");
 					this.World.Contracts.showActiveContract();
 				}
@@ -797,7 +797,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 				}
 
 				this.Contract.m.Home.getSprite("selection").Visible = true;
-				this.Flags.set("WaitUntil", this.Time.getVirtualTimeF() + 5.000000);
+				this.Flags.set("WaitUntil", this.Time.getVirtualTimeF() + 5.0);
 			}
 
 			function update()
@@ -1516,7 +1516,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 					function getResult()
 					{
 						this.World.Assets.addMoralReputation(2);
-						this.World.FactionManager.getFaction(this.Flags.get("RivalHouseID")).addPlayerRelation(5.000000, "让他们的人在战斗结束后自由");
+						this.World.FactionManager.getFaction(this.Flags.get("RivalHouseID")).addPlayerRelation(5.0, "让他们的人在战斗结束后自由");
 						return 0;
 					}
 
@@ -1723,7 +1723,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 		move.setDestination(originTile);
 		c.addOrder(move);
 		local wait = this.new("scripts/ai/world/orders/wait_order");
-		wait.setTime(10.000000);
+		wait.setTime(10.0);
 		c.addOrder(wait);
 	}
 
@@ -1852,7 +1852,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 			lastTile = tile;
 			local party = f.spawnEntity(tile, castles[this.Math.rand(0, castles.len() - 1)].getName() + " 战团", true, this.Const.World.Spawn.Noble, castles[this.Math.rand(0, castles.len() - 1)].getResources());
 			party.setDescription("为地方领主服务的职业军人。");
-			party.setVisibilityMult(2.500000);
+			party.setVisibilityMult(2.5);
 
 			if (i == 0)
 			{
@@ -1894,7 +1894,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 			c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(false);
 			c.getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
 			local wait = this.new("scripts/ai/world/orders/wait_order");
-			wait.setTime(9000.000000);
+			wait.setTime(9000.0);
 			c.addOrder(wait);
 		}
 	}
@@ -2000,7 +2000,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 					if (e.isAlliedWithPlayer())
 					{
 						local wait = this.new("scripts/ai/world/orders/wait_order");
-						wait.setTime(60.000000);
+						wait.setTime(60.0);
 						c.addOrder(wait);
 					}
 				}

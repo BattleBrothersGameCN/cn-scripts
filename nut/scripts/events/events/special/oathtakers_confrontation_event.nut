@@ -255,7 +255,7 @@ this.oathtakers_confrontation_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 75 || bro.getBackground().getID() == "background.paladin")
 					{
-						bro.improveMood(2.000000, "夺回了小安瑟姆的下颌骨");
+						bro.improveMood(2.0, "夺回了小安瑟姆的下颌骨");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -337,7 +337,7 @@ this.oathtakers_confrontation_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 75 || bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(1.500000, "战团输给了誓约者。");
+						bro.worsenMood(1.5, "战团输给了誓约者。");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -378,7 +378,7 @@ this.oathtakers_confrontation_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25 || bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(2.000000, "你有机会却拒绝与誓言守护者战斗。");
+						bro.worsenMood(2.0, "你有机会却拒绝与誓言守护者战斗。");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -419,7 +419,7 @@ this.oathtakers_confrontation_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 50 || bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(2.500000, "你拒绝对抗誓约者，且已经有多次机会。");
+						bro.worsenMood(2.5, "你拒绝对抗誓约者，且已经有多次机会。");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

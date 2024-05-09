@@ -7,7 +7,7 @@ this.belly_dancer_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.belly_dancer";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_163.png[/img]{一个肚皮舞者在 %townname%的中心广场吸引着人群。有节奏的运动本身能让一个乞丐献出一克朗，但是以一整个广场为舞台，这足够引来人群和成堆的金子。舞者身穿薄丝绸，遮盖了半身，饰有透明的深绿色面纱。她无疑是自己领域的专家。她转动着，臀部充满魅惑，手肘弯曲，手抓着小铜钹鼓。她的脚尖踮起着在一个点上旋转，如此稳定好似有一个隐形的神使她在眼花缭乱的运动中保持原地。\n\n突然有人向空中扔了一个苹果，舞者立刻转身，用一把小匕首刺了进去，并且打在了目标中心，果实掉落在地上。然后又有一个苹果被扔了进来，这次舞者拿出了一把大刀，砍断了茎，并抓住剩下的部分咬了一口。人群轻轻拍掌为她喝彩。}",

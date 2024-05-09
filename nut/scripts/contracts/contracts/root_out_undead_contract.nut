@@ -13,16 +13,16 @@ this.root_out_undead_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r <= 70)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
 		this.m.Type = "contract.root_out_undead";
 		this.m.Name = "铲除亡灵";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -58,12 +58,12 @@ this.root_out_undead_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -100,24 +100,24 @@ this.root_out_undead_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.addUnitsToEntity(this.Contract.m.Objective1, this.Contract.m.Objective1.getDefenderSpawnList(), 120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				this.Contract.m.Objective1.setDiscovered(true);
 
-				if (this.Contract.getDifficultyMult() <= 1.150000 && !this.Contract.m.Objective1.getFlags().get("IsEventLocation"))
+				if (this.Contract.getDifficultyMult() <= 1.15 && !this.Contract.m.Objective1.getFlags().get("IsEventLocation"))
 				{
 					this.Contract.m.Objective1.getLoot().clear();
 				}
 
-				this.World.uncoverFogOfWar(this.Contract.m.Objective1.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Objective1.getTile().Pos, 500.0);
 				this.Contract.m.Objective2.setLootScaleBasedOnResources(120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				this.Contract.m.Objective2.setResources(120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				this.Contract.m.Objective2.clearTroops();
 				this.Contract.addUnitsToEntity(this.Contract.m.Objective2, this.Contract.m.Objective2.getDefenderSpawnList(), 120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				this.Contract.m.Objective2.setDiscovered(true);
 
-				if (this.Contract.getDifficultyMult() <= 1.150000 && !this.Contract.m.Objective2.getFlags().get("IsEventLocation"))
+				if (this.Contract.getDifficultyMult() <= 1.15 && !this.Contract.m.Objective2.getFlags().get("IsEventLocation"))
 				{
 					this.Contract.m.Objective2.getLoot().clear();
 				}
 
-				this.World.uncoverFogOfWar(this.Contract.m.Objective2.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Objective2.getTile().Pos, 500.0);
 				local r = this.Math.rand(1, 100);
 
 				if (r <= 10)
@@ -428,7 +428,7 @@ this.root_out_undead_contract <- this.inherit("scripts/contracts/contract", {
 						this.Contract.m.UnitsSpawned.push(party);
 						this.Contract.m.Target = this.WeakTableRef(party);
 						party.setAttackableByAI(true);
-						party.setFootprintSizeOverride(0.750000);
+						party.setFootprintSizeOverride(0.75);
 						local c = party.getController();
 						c.getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
 						local roam = this.new("scripts/ai/world/orders/roam_order");

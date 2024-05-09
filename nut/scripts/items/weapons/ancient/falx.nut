@@ -17,13 +17,13 @@ this.falx <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_falx_01";
 		this.m.Value = 350;
-		this.m.Condition = 30.000000;
-		this.m.ConditionMax = 30.000000;
+		this.m.Condition = 30.0;
+		this.m.ConditionMax = 30.0;
 		this.m.StaminaModifier = -6;
 		this.m.RegularDamage = 25;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 0.800000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 0.8;
+		this.m.DirectDamageMult = 0.25;
 	}
 
 	function onEquip()

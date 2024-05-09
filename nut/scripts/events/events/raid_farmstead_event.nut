@@ -7,7 +7,7 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.raid_farmstead";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_72.png[/img]%randombrother% 拿着一份关于战团食物库存的报告走到你身边。 手上有粮，干活不累，但战团已经快要没有足够的食物分给大家了。 库存里的大部分水果都已变质发软，上面长满了灰色的毛霉。 剩下所有的东西都被一股脑扔进锅里做成了乱炖，佣兵们形象地称之为“吊毛炖汤”。 老实说，那看起来根本不像是给人类吃的东西。\n\n不过，机缘巧合之下，一个小农场出现在了远方。 尽管兄弟们没人直接站出来明说，但还是有人委婉地建议战团或许可以去抢了它。",
@@ -226,7 +226,7 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getSkills().hasSkill("trait.bloodthirsty"))
 					{
-						bro.improveMood(1.000000, "喜欢掠夺和抢劫");
+						bro.improveMood(1.0, "喜欢掠夺和抢劫");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -239,7 +239,7 @@ this.raid_farmstead_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(1.000000, "对战团的行为感到震惊");
+						bro.worsenMood(1.0, "对战团的行为感到震惊");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

@@ -9,7 +9,7 @@ this.conquer_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.conquer_holy_site";
 		this.m.Name = "征服圣地";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -74,17 +74,17 @@ this.conquer_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("DestinationName", this.m.Destination.getName());
 		this.m.Flags.set("DestinationIndex", targetIndex);
-		this.m.Flags.set("MercenaryPay", this.beautifyNumber(this.m.Payment.Pool * 0.500000));
+		this.m.Flags.set("MercenaryPay", this.beautifyNumber(this.m.Payment.Pool * 0.5));
 		this.m.Flags.set("Mercenary", this.Const.Strings.CharacterNames[this.Math.rand(0, this.Const.Strings.CharacterNames.len() - 1)]);
 		this.m.Flags.set("MercenaryCompany", this.Const.Strings.MercenaryCompanyNames[this.Math.rand(0, this.Const.Strings.MercenaryCompanyNames.len() - 1)]);
 		this.m.Flags.set("MercenaryBanner", b);
@@ -138,13 +138,13 @@ this.conquer_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 					this.Flags.set("IsCounterAttack", true);
 				}
 
-				if (this.Contract.getDifficultyMult() >= 1.150000)
+				if (this.Contract.getDifficultyMult() >= 1.15)
 				{
 					this.Contract.spawnEnemy();
 				}
-				else if (this.Contract.getDifficultyMult() <= 0.850000)
+				else if (this.Contract.getDifficultyMult() <= 0.85)
 				{
-					local entities = this.World.getAllEntitiesAtPos(this.Contract.m.Destination.getPos(), 1.000000);
+					local entities = this.World.getAllEntitiesAtPos(this.Contract.m.Destination.getPos(), 1.0);
 
 					foreach( e in entities )
 					{
@@ -159,11 +159,11 @@ this.conquer_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 
 				foreach( c in cityStates )
 				{
-					c.addPlayerRelation(-99.000000, "在战争选择了阵营");
+					c.addPlayerRelation(-99.0, "在战争选择了阵营");
 				}
 
 				this.Contract.m.Destination.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Destination.getTile().Pos, 500.0);
 				this.Contract.setScreen("Overview");
 				this.World.Contracts.setActiveContract(this.Contract);
 			}
@@ -199,7 +199,7 @@ this.conquer_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 						this.Contract.setScreen("CounterAttack1");
 						this.World.Contracts.showActiveContract();
 					}
-					else if (!this.Contract.isEnemyPartyNear(this.Contract.m.Destination, 400.000000))
+					else if (!this.Contract.isEnemyPartyNear(this.Contract.m.Destination, 400.0))
 					{
 						this.Contract.setScreen("Victory");
 						this.World.Contracts.showActiveContract();
@@ -939,11 +939,11 @@ this.conquer_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		local c = party.getController();
 		local occupy = this.new("scripts/ai/world/orders/occupy_order");
 		occupy.setTarget(this.m.Destination);
-		occupy.setTime(10.000000);
+		occupy.setTime(10.0);
 		c.addOrder(occupy);
 		local guard = this.new("scripts/ai/world/orders/guard_order");
 		guard.setTarget(this.m.Destination.getTile());
-		guard.setTime(240.000000);
+		guard.setTime(240.0);
 		c.addOrder(guard);
 		return party;
 	}
@@ -1053,7 +1053,7 @@ this.conquer_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		c.addOrder(move);
 		local guard = this.new("scripts/ai/world/orders/guard_order");
 		guard.setTarget(this.m.Destination.getTile());
-		guard.setTime(999.000000);
+		guard.setTime(999.0);
 		c.addOrder(guard);
 		return party;
 	}

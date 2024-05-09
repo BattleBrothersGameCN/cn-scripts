@@ -9,7 +9,7 @@ this.hunting_hexen_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.hunting_hexen";
 		this.m.Name = "与女巫的契约";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -23,12 +23,12 @@ this.hunting_hexen_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("ProtecteeName", this.Const.Strings.CharacterNames[this.Math.rand(0, this.Const.Strings.CharacterNames.len() - 1)]);
@@ -78,7 +78,7 @@ this.hunting_hexen_contract <- this.inherit("scripts/contracts/contract", {
 				}
 
 				this.Flags.set("StartTime", this.Time.getVirtualTimeF());
-				this.Flags.set("Delay", this.Math.rand(10, 30) * 1.000000);
+				this.Flags.set("Delay", this.Math.rand(10, 30) * 1.0);
 				local envoy = this.World.getGuestRoster().create("scripts/entity/tactical/humans/firstborn");
 				envoy.setName(this.Flags.get("ProtecteeName"));
 				envoy.setTitle("");
@@ -172,7 +172,7 @@ this.hunting_hexen_contract <- this.inherit("scripts/contracts/contract", {
 
 					this.World.Contracts.showActiveContract();
 				}
-				else if (!this.Flags.get("IsBanterShown") && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 6.000000 <= this.Time.getVirtualTimeF())
+				else if (!this.Flags.get("IsBanterShown") && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 6.0 <= this.Time.getVirtualTimeF())
 				{
 					this.Flags.set("IsBanterShown", true);
 					this.Contract.setScreen("Banter");
@@ -264,9 +264,9 @@ this.hunting_hexen_contract <- this.inherit("scripts/contracts/contract", {
 					Text = "保持专注，小伙子们。",
 					function getResult()
 					{
-						if (this.Flags.get("StartTime") + this.Flags.get("Delay") - 3.000000 <= this.Time.getVirtualTimeF())
+						if (this.Flags.get("StartTime") + this.Flags.get("Delay") - 3.0 <= this.Time.getVirtualTimeF())
 						{
-							this.Flags.set("Delay", this.Flags.get("Delay") + 5.000000);
+							this.Flags.set("Delay", this.Flags.get("Delay") + 5.0);
 						}
 
 						return 0;
@@ -483,7 +483,7 @@ this.hunting_hexen_contract <- this.inherit("scripts/contracts/contract", {
 					icon = effect.getIcon(),
 					text = this.Contract.m.Dude.getName() + "是害怕的"
 				});
-				this.Contract.m.Dude.worsenMood(1.500000, "被女巫诅咒了");
+				this.Contract.m.Dude.worsenMood(1.5, "被女巫诅咒了");
 
 				if (this.Contract.m.Dude.getMoodState() <= this.Const.MoodState.Neutral)
 				{

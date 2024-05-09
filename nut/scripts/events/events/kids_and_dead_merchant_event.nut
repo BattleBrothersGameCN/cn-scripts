@@ -6,7 +6,7 @@ this.kids_and_dead_merchant_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.kids_and_dead_merchant";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_97.png[/img]你发现有个孩子脖子上戴着一个相当华丽的项链。 这个项链压得他头都抬不起来，但是这小小的不适并没有影响到他脸上的笑容。%randombrother% 将这个孩子推倒在地并且拿走了这个项链。%SPEECH_ON%你是从哪里拿到他的小鬼？%SPEECH_OFF%小孩开始嚎啕大哭，并且不断尝试去拿回那条项链，但是这小孩只有三英尺高并且也没有惊人的弹跳力。%SPEECH_ON%嘿，那是我的！还给我！%SPEECH_OFF%另外一个孩子出现你们一下就看到了他手上那足够遮盖两个手指的大戒指。 好的。已经足够了。将团队成员分散出去寻找线索最后在齐人高的杂草堆上方发现了吊死的商人。 他的脸因为骨折已经变得酱紫并且坑坑洼洼。 这似乎表明他是在被洗劫完之后被杀害的。\n\n 一群人数大概在四十到五十的年轻人从树梢上面出现，每一个人都在把弄手里的石头。 他们的领头，是一个红色头发并且在袖子上纹有花纹的小矮子，他站了出来为你们想要什么。 你告诉他你想要这个商人的货物。这个领头开始大笑。%SPEECH_ON%哦是这样吗？ 我给你十秒钟的时间重新考虑这个选择，会给你们十秒钟的，所以快点杂种！%SPEECH_OFF%",

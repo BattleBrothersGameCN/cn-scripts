@@ -9,8 +9,8 @@ this.hunting_lindwurms_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.hunting_unholds";
 		this.m.Name = "狩猎林德蠕龙";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
-		this.m.DifficultyMult = this.Math.rand(95, 135) * 0.010000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
+		this.m.DifficultyMult = this.Math.rand(95, 135) * 0.01;
 	}
 
 	function onImportIntro()
@@ -24,12 +24,12 @@ this.hunting_lindwurms_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("Bribe", this.Math.rand(300, 600));
@@ -86,8 +86,8 @@ this.hunting_lindwurms_contract <- this.inherit("scripts/contracts/contract", {
 				party.setDescription("林德蠕龙，一种无翼双足龙，形似巨蛇。");
 				party.setFootprintType(this.Const.World.FootprintsType.Lindwurms);
 				party.setAttackableByAI(false);
-				party.setFootprintSizeOverride(0.750000);
-				this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Lindwurms, 0.750000);
+				party.setFootprintSizeOverride(0.75);
+				this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Lindwurms, 0.75);
 				this.Contract.m.Target = this.WeakTableRef(party);
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				local c = party.getController();
@@ -142,7 +142,7 @@ this.hunting_lindwurms_contract <- this.inherit("scripts/contracts/contract", {
 					this.World.Contracts.showActiveContract();
 					this.Contract.setState("Return");
 				}
-				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 15.000000 <= this.Time.getVirtualTimeF())
+				else if (!this.Flags.get("IsBanterShown") && this.Contract.m.Target.isHiddenToPlayer() && this.Math.rand(1, 1000) <= 1 && this.Flags.get("StartTime") + 15.0 <= this.Time.getVirtualTimeF())
 				{
 					this.Flags.set("IsBanterShown", true);
 					this.Contract.setScreen("Banter");
@@ -503,7 +503,7 @@ this.hunting_lindwurms_contract <- this.inherit("scripts/contracts/contract", {
 						}
 
 						local location = candidates_location[this.Math.rand(0, candidates_location.len() - 1)];
-						this.World.uncoverFogOfWar(location.getTile().Pos, 700.000000);
+						this.World.uncoverFogOfWar(location.getTile().Pos, 700.0);
 						location.getFlags().set("IsEventLocation", true);
 						location.setDiscovered(true);
 						this.World.getCamera().moveTo(location);

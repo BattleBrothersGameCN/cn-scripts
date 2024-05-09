@@ -117,7 +117,7 @@ this.kraken_devour_skill <- this.inherit("scripts/skills/skill", {
 		local _user = _tag.User;
 		local myTile = this.getContainer().getActor().getTile();
 		local isScreenShaking = false;
-		this.Tactical.getCamera().quake(_user, _targetTile.getEntity(), 5.000000, 0.160000, 0.300000);
+		this.Tactical.getCamera().quake(_user, _targetTile.getEntity(), 5.0, 0.16, 0.3);
 
 		for( local i = 0; i < this.Const.Tactical.KrakenDevourParticles.len(); i = ++i )
 		{
@@ -143,7 +143,7 @@ this.kraken_devour_skill <- this.inherit("scripts/skills/skill", {
 						this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "吞噬了" + this.Const.UI.getColorizedEntityName(tile.getEntity()));
 					}
 
-					this.Tactical.getShaker().shake(tile.getEntity(), myTile, 3, this.Const.Combat.ShakeEffectHitpointsHitColor, this.Const.Combat.ShakeEffectHitpointsHitHighlight, this.Const.Combat.ShakeEffectHitpointsHitFactor, this.Const.Combat.ShakeEffectHitpointsSaturation, this.Const.ShakeCharacterLayers[this.Const.BodyPart.All], 2.000000);
+					this.Tactical.getShaker().shake(tile.getEntity(), myTile, 3, this.Const.Combat.ShakeEffectHitpointsHitColor, this.Const.Combat.ShakeEffectHitpointsHitHighlight, this.Const.Combat.ShakeEffectHitpointsHitFactor, this.Const.Combat.ShakeEffectHitpointsSaturation, this.Const.ShakeCharacterLayers[this.Const.BodyPart.All], 2.0);
 
 					for( local i = 0; i < this.Const.Tactical.KrakenDevourVictimParticles.len(); i = ++i )
 					{

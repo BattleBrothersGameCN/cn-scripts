@@ -19,13 +19,13 @@ this.named_crypt_cleaver <- this.inherit("scripts/items/weapons/named/named_weap
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3200;
 		this.m.ShieldDamage = 16;
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.StaminaModifier = -16;
 		this.m.RegularDamage = 60;
 		this.m.RegularDamageMax = 80;
-		this.m.ArmorDamageMult = 1.200000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.2;
+		this.m.DirectDamageMult = 0.25;
 		this.randomizeValues();
 	}
 

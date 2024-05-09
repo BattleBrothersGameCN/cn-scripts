@@ -108,21 +108,21 @@ this.town_training_dialog_module <- this.inherit("scripts/ui/screens/ui_module",
 		case 0:
 			price = this.Math.round(80 + 50 * entity.getLevel());
 			effect.m.Duration = 1;
-			effect.m.XPGainMult = 1.500000;
+			effect.m.XPGainMult = 1.5;
 			effect.m.Icon = "skills/status_effect_75.png";
 			break;
 
 		case 1:
 			price = this.Math.round(100 + 60 * entity.getLevel());
 			effect.m.Duration = 3;
-			effect.m.XPGainMult = 1.350000;
+			effect.m.XPGainMult = 1.35;
 			effect.m.Icon = "skills/status_effect_76.png";
 			break;
 
 		case 2:
 			price = this.Math.round(90 + 55 * entity.getLevel());
 			effect.m.Duration = 5;
-			effect.m.XPGainMult = 1.200000;
+			effect.m.XPGainMult = 1.2;
 			effect.m.Icon = "skills/status_effect_77.png";
 			break;
 		}

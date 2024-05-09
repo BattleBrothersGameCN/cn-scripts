@@ -88,7 +88,7 @@ this.possess_undead_skill <- this.inherit("scripts/skills/skill", {
 
 			if (this.m.SoundOnHit.len() != 0)
 			{
-				this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill * 1.200000, _user.getPos());
+				this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill * 1.2, _user.getPos());
 			}
 		}
 

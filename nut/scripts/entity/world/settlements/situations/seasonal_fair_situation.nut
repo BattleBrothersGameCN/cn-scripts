@@ -23,11 +23,11 @@ this.seasonal_fair_situation <- this.inherit("scripts/entity/world/settlements/s
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.PriceMult *= 1.250000;
-		_modifiers.RarityMult *= 1.250000;
-		_modifiers.FoodRarityMult *= 1.250000;
-		_modifiers.MedicalRarityMult *= 1.250000;
-		_modifiers.RecruitsMult *= 1.250000;
+		_modifiers.PriceMult *= 1.25;
+		_modifiers.RarityMult *= 1.25;
+		_modifiers.FoodRarityMult *= 1.25;
+		_modifiers.MedicalRarityMult *= 1.25;
+		_modifiers.RecruitsMult *= 1.25;
 	}
 
 	function onUpdateDraftList( _draftList )

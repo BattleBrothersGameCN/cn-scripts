@@ -67,7 +67,7 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/dlc6/sand_golem_disassemble_03.wav",
 			"sounds/enemies/dlc6/sand_golem_disassemble_04.wav"
 		];
-		this.m.SoundPitch = 1.100000;
+		this.m.SoundPitch = 1.1;
 		local onArmorHitSounds = this.getItems().getAppearance().ImpactSound;
 		onArmorHitSounds[this.Const.BodyPart.Body] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
 		onArmorHitSounds[this.Const.BodyPart.Head] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
@@ -190,13 +190,13 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail(sprite_body.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = skin.Color;
 			decal.Saturation = skin.Saturation;
-			decal.Scale = 0.900000;
-			decal.setBrightness(0.900000);
+			decal.Scale = 0.9;
+			decal.setBrightness(0.9);
 			this.spawnTerrainDropdownEffect(_tile);
 			local corpse = clone this.Const.Corpse;
 			corpse.CorpseName = "一个" + this.getName();
 			corpse.Tile = _tile;
-			corpse.Value = 2.000000;
+			corpse.Value = 2.0;
 			corpse.IsResurrectable = false;
 			corpse.IsConsumable = false;
 			corpse.Armor = this.m.BaseProperties.Armor;
@@ -287,10 +287,10 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local body = this.addSprite("body");
 		body.setBrush("bust_golem_body_0" + this.m.Variant + "_small");
-		body.varySaturation(0.200000);
-		body.varyColor(0.060000, 0.060000, 0.060000);
+		body.varySaturation(0.2);
+		body.varyColor(0.06, 0.06, 0.06);
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.450000;
+		this.getSprite("status_rooted").Scale = 0.45;
 		this.setSpriteOffset("status_rooted", this.createVec(-4, 7));
 		this.m.Skills.add(this.new("scripts/skills/racial/golem_racial"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
@@ -330,8 +330,8 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.ScaleStartTime = this.Time.getVirtualTimeF();
 			}
 
-			this.getSprite("status_rooted").Scale = 0.500000;
-			this.getSprite("status_rooted_back").Scale = 0.500000;
+			this.getSprite("status_rooted").Scale = 0.5;
+			this.getSprite("status_rooted_back").Scale = 0.5;
 			this.setSpriteOffset("status_rooted", this.createVec(-4, 10));
 			this.setSpriteOffset("status_rooted_back", this.createVec(-4, 10));
 
@@ -351,8 +351,8 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.ScaleStartTime = this.Time.getVirtualTimeF();
 			}
 
-			this.getSprite("status_rooted").Scale = 0.600000;
-			this.getSprite("status_rooted_back").Scale = 0.600000;
+			this.getSprite("status_rooted").Scale = 0.6;
+			this.getSprite("status_rooted_back").Scale = 0.6;
 			this.setSpriteOffset("status_rooted", this.createVec(-7, 14));
 			this.setSpriteOffset("status_rooted_back", this.createVec(-7, 14));
 			b.IsImmuneToKnockBackAndGrab = true;
@@ -364,7 +364,7 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 			}
 		}
 
-		this.m.SoundPitch = 1.200000 - this.m.Size * 0.100000;
+		this.m.SoundPitch = 1.2 - this.m.Size * 0.1;
 		this.m.Skills.update();
 		this.setDirty(true);
 	}
@@ -396,8 +396,8 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.ScaleStartTime = this.Time.getVirtualTimeF();
 			}
 
-			this.getSprite("status_rooted").Scale = 0.500000;
-			this.getSprite("status_rooted_back").Scale = 0.500000;
+			this.getSprite("status_rooted").Scale = 0.5;
+			this.getSprite("status_rooted_back").Scale = 0.5;
 			this.setSpriteOffset("status_rooted", this.createVec(-4, 10));
 			this.setSpriteOffset("status_rooted_back", this.createVec(-4, 10));
 
@@ -417,8 +417,8 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.ScaleStartTime = this.Time.getVirtualTimeF();
 			}
 
-			this.getSprite("status_rooted").Scale = 0.600000;
-			this.getSprite("status_rooted_back").Scale = 0.600000;
+			this.getSprite("status_rooted").Scale = 0.6;
+			this.getSprite("status_rooted_back").Scale = 0.6;
 			this.setSpriteOffset("status_rooted", this.createVec(-7, 14));
 			this.setSpriteOffset("status_rooted_back", this.createVec(-7, 14));
 
@@ -429,7 +429,7 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 			}
 		}
 
-		this.m.SoundPitch = 1.200000 - this.m.Size * 0.100000;
+		this.m.SoundPitch = 1.2 - this.m.Size * 0.1;
 		this.m.Skills.update();
 		this.setDirty(true);
 	}
@@ -442,18 +442,18 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			if (this.m.Size == 2)
 			{
-				this.getSprite("body").Scale = this.Math.maxf(1.000000, 1.040000 - 0.040000 * ((this.Time.getVirtualTimeF() - this.m.ScaleStartTime) / 0.300000));
+				this.getSprite("body").Scale = this.Math.maxf(1.0, 1.04 - 0.04 * ((this.Time.getVirtualTimeF() - this.m.ScaleStartTime) / 0.3));
 
-				if (this.moveSpriteOffset("body", this.createVec(0, 1), this.createVec(0, 0), 0.300000, this.m.ScaleStartTime))
+				if (this.moveSpriteOffset("body", this.createVec(0, 1), this.createVec(0, 0), 0.3, this.m.ScaleStartTime))
 				{
 					this.setRenderCallbackEnabled(false);
 				}
 			}
 			else if (this.m.Size == 1)
 			{
-				this.getSprite("body").Scale = this.Math.maxf(1.000000, 1.040000 - 0.040000 * ((this.Time.getVirtualTimeF() - this.m.ScaleStartTime) / 0.300000));
+				this.getSprite("body").Scale = this.Math.maxf(1.0, 1.04 - 0.04 * ((this.Time.getVirtualTimeF() - this.m.ScaleStartTime) / 0.3));
 
-				if (this.moveSpriteOffset("body", this.createVec(0, 1), this.createVec(0, 0), 0.300000, this.m.ScaleStartTime))
+				if (this.moveSpriteOffset("body", this.createVec(0, 1), this.createVec(0, 0), 0.3, this.m.ScaleStartTime))
 				{
 					this.setRenderCallbackEnabled(false);
 				}
@@ -461,18 +461,18 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 		}
 		else if (this.m.Size == 2)
 		{
-			this.getSprite("body").Scale = this.Math.minf(1.000000, 0.960000 + 0.040000 * ((this.Time.getVirtualTimeF() - this.m.ScaleStartTime) / 0.300000));
+			this.getSprite("body").Scale = this.Math.minf(1.0, 0.96 + 0.04 * ((this.Time.getVirtualTimeF() - this.m.ScaleStartTime) / 0.3));
 
-			if (this.moveSpriteOffset("body", this.createVec(0, -1), this.createVec(0, 0), 0.300000, this.m.ScaleStartTime))
+			if (this.moveSpriteOffset("body", this.createVec(0, -1), this.createVec(0, 0), 0.3, this.m.ScaleStartTime))
 			{
 				this.setRenderCallbackEnabled(false);
 			}
 		}
 		else if (this.m.Size == 3)
 		{
-			this.getSprite("body").Scale = this.Math.minf(1.000000, 0.940000 + 0.060000 * ((this.Time.getVirtualTimeF() - this.m.ScaleStartTime) / 0.300000));
+			this.getSprite("body").Scale = this.Math.minf(1.0, 0.94 + 0.06 * ((this.Time.getVirtualTimeF() - this.m.ScaleStartTime) / 0.3));
 
-			if (this.moveSpriteOffset("body", this.createVec(0, -1), this.createVec(0, 0), 0.300000, this.m.ScaleStartTime))
+			if (this.moveSpriteOffset("body", this.createVec(0, -1), this.createVec(0, 0), 0.3, this.m.ScaleStartTime))
 			{
 				this.setRenderCallbackEnabled(false);
 			}
@@ -483,7 +483,7 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		for( local i = 0; i < this.Const.Tactical.DustParticles.len(); i = ++i )
 		{
-			this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, _tile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.150000 * this.m.Size, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.150000 * this.m.Size, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages);
+			this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, _tile, this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.15 * this.m.Size, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.15 * this.m.Size, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages);
 		}
 
 		return this.actor.onMovementStep(_tile, _levelDifference);

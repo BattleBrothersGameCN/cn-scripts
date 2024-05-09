@@ -4,7 +4,7 @@ this.named_item_set_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.named_item_set";
-		this.m.Duration = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "一家有口皆碑的战团会因其装备而得到认可。 我们应该出发去\n获取一件非常著名的武器、盾牌、盔甲或头盔，以提高我们的名望。";
 		this.m.UIText = "拥有一件著名的武器、盾牌、盔甲和头盔";
 		this.m.TooltipText = "拥有至少 1 件著名的武器、盾牌、盔甲和头盔。在酒馆里打听谣言，了解在哪里可以找到著名的物品，在大城市和城堡的专门商店购买它们，或者亲自去探索掠夺废墟和营地。距离文明越远，发现稀有物品的几率越高。";

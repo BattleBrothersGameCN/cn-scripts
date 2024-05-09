@@ -38,7 +38,7 @@ this.town_taxidermist_dialog_module <- this.inherit("scripts/ui/screens/ui_modul
 
 		if (blueprint.getSounds().len() != 0)
 		{
-			this.Sound.play(blueprint.getSounds()[this.Math.rand(0, blueprint.getSounds().len() - 1)], 1.000000);
+			this.Sound.play(blueprint.getSounds()[this.Math.rand(0, blueprint.getSounds().len() - 1)], 1.0);
 		}
 
 		this.World.Statistics.getFlags().increment("ItemsCrafted");

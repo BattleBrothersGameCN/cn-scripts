@@ -17,14 +17,14 @@ this.butchers_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_cleaver_02";
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 40.000000;
-		this.m.ConditionMax = 40.000000;
+		this.m.Condition = 40.0;
+		this.m.ConditionMax = 40.0;
 		this.m.StaminaModifier = -6;
 		this.m.Value = 110;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 35;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.25;
 	}
 
 	function onEquip()

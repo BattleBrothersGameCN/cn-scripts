@@ -18,16 +18,16 @@ this.goblin_pike <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_goblin_weapon_04";
 		this.m.Value = 800;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 40.000000;
-		this.m.ConditionMax = 40.000000;
+		this.m.Condition = 40.0;
+		this.m.ConditionMax = 40.0;
 		this.m.StaminaModifier = -8;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 0.900000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 0.9;
+		this.m.DirectDamageMult = 0.25;
 		this.m.ChanceToHitHead = 5;
 	}
 

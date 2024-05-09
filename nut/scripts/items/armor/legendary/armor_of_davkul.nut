@@ -39,7 +39,7 @@ this.armor_of_davkul <- this.inherit("scripts/items/armor/armor", {
 
 	function onTurnStart()
 	{
-		this.m.Condition = this.Math.minf(this.m.ConditionMax, this.m.Condition + 90.000000);
+		this.m.Condition = this.Math.minf(this.m.ConditionMax, this.m.Condition + 90.0);
 		this.updateAppearance();
 	}
 

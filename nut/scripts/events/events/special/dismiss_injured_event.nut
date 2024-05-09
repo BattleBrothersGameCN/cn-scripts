@@ -41,7 +41,7 @@ this.dismiss_injured_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkillOfType(this.Const.SkillType.PermanentInjury))
 					{
-						bro.worsenMood(1.500000, "害怕因为他受到损伤而被解雇");
+						bro.worsenMood(1.5, "害怕因为他受到损伤而被解雇");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

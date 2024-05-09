@@ -35,7 +35,7 @@ this.tail_slam_zoc_skill <- this.inherit("scripts/skills/skill", {
 		this.m.FatigueCost = 10;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 1;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.DirectDamageMult = 0.35;
 		this.m.ChanceDecapitate = 0;
 		this.m.ChanceDisembowel = 0;
 		this.m.ChanceSmash = 66;
@@ -81,7 +81,7 @@ this.tail_slam_zoc_skill <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.DamageRegularMin += 60;
 			_properties.DamageRegularMax += 120;
-			_properties.DamageArmorMult *= 1.500000;
+			_properties.DamageArmorMult *= 1.5;
 		}
 	}
 

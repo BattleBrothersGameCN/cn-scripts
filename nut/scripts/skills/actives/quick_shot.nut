@@ -47,7 +47,7 @@ this.quick_shot <- this.inherit("scripts/skills/skill", {
 		this.m.IsDoingForwardMove = false;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.DirectDamageMult = 0.35;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 15;
 		this.m.MinRange = 1;
@@ -155,7 +155,7 @@ this.quick_shot <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.MaxRange = this.m.Item.getRangeMax() - 1 + (_properties.IsSpecializedInBows ? 1 : 0);
 		this.m.AdditionalAccuracy = this.m.Item.getAdditionalAccuracy();
-		this.m.FatigueCostMult = _properties.IsSpecializedInBows ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInBows ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -173,7 +173,7 @@ this.quick_shot <- this.inherit("scripts/skills/skill", {
 
 			if (_properties.IsSharpshooter)
 			{
-				_properties.DamageDirectMult += 0.050000;
+				_properties.DamageDirectMult += 0.05;
 			}
 		}
 	}

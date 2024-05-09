@@ -31,7 +31,7 @@ this.nightmare_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsUsingHitchance = false;
 		this.m.IsDoingForwardMove = false;
 		this.m.IsVisibleTileNeeded = false;
-		this.m.DirectDamageMult = 1.000000;
+		this.m.DirectDamageMult = 1.0;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 10;
 		this.m.MinRange = 1;
@@ -41,7 +41,7 @@ this.nightmare_skill <- this.inherit("scripts/skills/skill", {
 
 	function getDamage( _actor )
 	{
-		return this.Math.max(5, 25 - this.Math.floor(_actor.getCurrentProperties().getBravery() * 0.250000));
+		return this.Math.max(5, 25 - this.Math.floor(_actor.getCurrentProperties().getBravery() * 0.25));
 	}
 
 	function isUsable()
@@ -111,10 +111,10 @@ this.nightmare_skill <- this.inherit("scripts/skills/skill", {
 		local target = targetTile.getEntity();
 		local hitInfo = clone this.Const.Tactical.HitInfo;
 		hitInfo.DamageRegular = this.Math.rand(this.getDamage(target), this.getDamage(target) + 5);
-		hitInfo.DamageDirect = 1.000000;
+		hitInfo.DamageDirect = 1.0;
 		hitInfo.BodyPart = this.Const.BodyPart.Body;
-		hitInfo.BodyDamageMult = 1.000000;
-		hitInfo.FatalityChanceMult = 0.000000;
+		hitInfo.BodyDamageMult = 1.0;
+		hitInfo.FatalityChanceMult = 0.0;
 		target.onDamageReceived(user, this, hitInfo);
 	}
 

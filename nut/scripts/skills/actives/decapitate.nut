@@ -41,7 +41,7 @@ this.decapitate <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.DirectDamageMult = 0.25;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 20;
 		this.m.MinRange = 1;
@@ -100,11 +100,11 @@ this.decapitate <- this.inherit("scripts/skills/skill", {
 	{
 		if (this.m.ApplySwordMastery)
 		{
-			this.m.FatigueCostMult = _properties.IsSpecializedInSwords ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+			this.m.FatigueCostMult = _properties.IsSpecializedInSwords ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 		}
 		else
 		{
-			this.m.FatigueCostMult = _properties.IsSpecializedInCleavers ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+			this.m.FatigueCostMult = _properties.IsSpecializedInCleavers ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 		}
 	}
 
@@ -123,7 +123,7 @@ this.decapitate <- this.inherit("scripts/skills/skill", {
 
 		if (_skill == this)
 		{
-			_properties.DamageRegularMult += 1.000000 - _targetEntity.getHitpoints() / (_targetEntity.getHitpointsMax() * 1.000000);
+			_properties.DamageRegularMult += 1.0 - _targetEntity.getHitpoints() / (_targetEntity.getHitpointsMax() * 1.0);
 		}
 	}
 

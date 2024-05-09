@@ -47,7 +47,7 @@ this.fractured_elbow_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.MeleeDefenseMult *= 0.750000;
+		_properties.MeleeDefenseMult *= 0.75;
 	}
 
 });

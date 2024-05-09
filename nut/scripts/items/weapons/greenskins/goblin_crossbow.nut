@@ -38,8 +38,8 @@ this.goblin_crossbow <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 50;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.5;
 	}
 
 	function getAmmoID()

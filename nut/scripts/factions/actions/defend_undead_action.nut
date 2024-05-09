@@ -5,7 +5,7 @@ this.defend_undead_action <- this.inherit("scripts/factions/faction_action", {
 	function create()
 	{
 		this.m.ID = "defend_undead_action";
-		this.m.Cooldown = 5.000000;
+		this.m.Cooldown = 5.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -28,16 +28,16 @@ this.defend_undead_action <- this.inherit("scripts/factions/faction_action", {
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
 
-			local entities = this.World.getAllEntitiesAtPos(s.getPos(), 300.000000);
+			local entities = this.World.getAllEntitiesAtPos(s.getPos(), 300.0);
 
 			foreach( e in entities )
 			{
-				if (e.isParty() && e.isAttackable() && e.isAttackableByAI() && !s.isAlliedWith(e) && e.getStrength() < s.getResources() * 0.660000)
+				if (e.isParty() && e.isAttackable() && e.isAttackableByAI() && !s.isAlliedWith(e) && e.getStrength() < s.getResources() * 0.66)
 				{
 					if (e.getFaction() == beastFaction)
 					{
@@ -89,7 +89,7 @@ this.defend_undead_action <- this.inherit("scripts/factions/faction_action", {
 
 		for( local i = 0; i != spawnpoints.len(); i = ++i )
 		{
-			local party = this.getFaction().spawnEntity(spawnpoints[i], "亡灵", false, this.m.Settlement.getRoamerSpawnList(), this.m.Settlement.getResources() * 0.660000);
+			local party = this.getFaction().spawnEntity(spawnpoints[i], "亡灵", false, this.m.Settlement.getRoamerSpawnList(), this.m.Settlement.getResources() * 0.66);
 			party.getSprite("banner").setBrush(this.m.Settlement.getBanner());
 			party.setDescription("一些邪秽之物。");
 			party.setFootprintType(this.Const.World.FootprintsType.Undead);
@@ -102,7 +102,7 @@ this.defend_undead_action <- this.inherit("scripts/factions/faction_action", {
 			local c = party.getController();
 			local guard = this.new("scripts/ai/world/orders/guard_order");
 			guard.setTarget(spawnpoints[i]);
-			guard.setTime(20.000000);
+			guard.setTime(20.0);
 			local despawn = this.new("scripts/ai/world/orders/despawn_order");
 			c.addOrder(guard);
 			c.addOrder(despawn);

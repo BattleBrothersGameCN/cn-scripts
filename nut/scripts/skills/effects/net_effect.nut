@@ -56,9 +56,9 @@ this.net_effect <- this.inherit("scripts/skills/skill", {
 	function onUpdate( _properties )
 	{
 		_properties.IsRooted = true;
-		_properties.MeleeDefenseMult *= 0.550000;
-		_properties.RangedDefenseMult *= 0.550000;
-		_properties.InitiativeMult *= 0.550000;
+		_properties.MeleeDefenseMult *= 0.55;
+		_properties.RangedDefenseMult *= 0.55;
+		_properties.InitiativeMult *= 0.55;
 	}
 
 });

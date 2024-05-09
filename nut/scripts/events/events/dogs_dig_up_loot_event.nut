@@ -6,7 +6,7 @@ this.dogs_dig_up_loot_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.dogs_dig_up_loot";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_27.png[/img]在路上，你的战犬们突然跑开，然后开始挖地。 你不知道为什么，因为你不记得给过它们谁一块骨头。 几分钟后，他们开始为 %finding% 而争斗。你打断了这场争斗，把东西拿走了。 猎犬们在哀嚎，但一些好的施舍就能让它们安静下来。",
@@ -135,7 +135,7 @@ this.dogs_dig_up_loot_event <- this.inherit("scripts/events/event", {
 			item = this.new("scripts/items/armor/wizard_robe");
 		}
 
-		item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+		item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.01));
 		this.m.FoundItem = item;
 	}
 

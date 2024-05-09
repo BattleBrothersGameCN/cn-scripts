@@ -21,38 +21,38 @@ this.wooden_watchtower_location <- this.inherit("scripts/entity/world/attached_l
 			r = [
 				{
 					File = "ambience/settlement/settlement_dog_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_dog_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_dog_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/fortification_yelling_03.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				}
 			];
 			return r;
@@ -78,37 +78,37 @@ this.wooden_watchtower_location <- this.inherit("scripts/entity/world/attached_l
 		{
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/leather_tunic"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_surcoat"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_leather"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/gambeson"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/aketon_cap"
 			});
 			_list.push({
 				R = 15,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/full_aketon_cap"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "shields/wooden_shield"
 			});
 		}

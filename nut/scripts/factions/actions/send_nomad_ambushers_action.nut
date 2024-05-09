@@ -3,7 +3,7 @@ this.send_nomad_ambushers_action <- this.inherit("scripts/factions/faction_actio
 	function create()
 	{
 		this.m.ID = "send_nomad_ambushers_action";
-		this.m.Cooldown = 30.000000;
+		this.m.Cooldown = 30.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -38,7 +38,7 @@ this.send_nomad_ambushers_action <- this.inherit("scripts/factions/faction_actio
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -70,7 +70,7 @@ this.send_nomad_ambushers_action <- this.inherit("scripts/factions/faction_actio
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}

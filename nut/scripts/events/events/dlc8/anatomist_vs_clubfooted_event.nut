@@ -7,7 +7,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_vs_clubfooted";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]{你发现解剖学家%anatomist%盯着%clubfoot%笨拙的脚步情况看：即他的一只脚看起来像一袋锤子。这是一件令人厌恶和不美观的事情，当然也使得他难以履行雇佣兵的全部职责。消息称这在女人中间异常流行，但这是未经证实的传闻。不管怎样，解剖学家向你提出了建议。%SPEECH_ON%这种病症并不罕见，这个人的畸形足在年轻的时候很容易修复，但是年龄越大手术就越难以矫正。幸运的是，我是一位受过训练的解剖学家，在这个问题上拥有极其丰富的知识。如果你允许我，我将尝试治愈这个人的不幸并且不必要的终身情况。%SPEECH_OFF%%clubfoot%自己点头表示，如果你认为这是最好的办法，他就准备试一试。}",
@@ -66,7 +66,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Clubfooted.addInjury([
 					{
 						ID = "injury.broken_leg",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury/broken_leg_injury"
 					}
 				]);
@@ -78,7 +78,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 				injury = _event.m.Clubfooted.addInjury([
 					{
 						ID = "injury.cut_achilles_tendon",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury/cut_achilles_tendon_injury"
 					}
 				]);
@@ -87,7 +87,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Clubfooted.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Clubfooted.improveMood(1.000000, "他的畸形脚被治愈了。");
+				_event.m.Clubfooted.improveMood(1.0, "他的畸形脚被治愈了。");
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Clubfooted.getImagePath());
 			}
@@ -114,7 +114,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Clubfooted.addInjury([
 					{
 						ID = "injury.broken_leg",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury/broken_leg_injury"
 					}
 				]);
@@ -126,7 +126,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 				injury = _event.m.Clubfooted.addInjury([
 					{
 						ID = "injury.traumatized",
-						Threshold = 0.000000,
+						Threshold = 0.0,
 						Script = "injury_permanent/traumatized_injury"
 					}
 				]);
@@ -159,7 +159,7 @@ this.anatomist_vs_clubfooted_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.000000, "被剥夺了研究机会");
+				_event.m.Anatomist.worsenMood(1.0, "被剥夺了研究机会");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

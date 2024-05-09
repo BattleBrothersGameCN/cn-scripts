@@ -56,7 +56,7 @@ this.contract_manager <- {
 			return;
 		}
 
-		if (this.m.LastUpdateTime + 1.000000 < this.Time.getVirtualTimeF())
+		if (this.m.LastUpdateTime + 1.0 < this.Time.getVirtualTimeF())
 		{
 			this.m.LastUpdateTime = this.Time.getVirtualTimeF();
 			local garbage = [];
@@ -120,7 +120,7 @@ this.contract_manager <- {
 		if (_isNewContract)
 		{
 			_contract.m.ID = this.generateContractID();
-			_contract.m.TimeOut += this.World.getTime().SecondsPerDay * (this.Math.rand(0, 200) - 100) * 0.010000;
+			_contract.m.TimeOut += this.World.getTime().SecondsPerDay * (this.Math.rand(0, 200) - 100) * 0.01;
 		}
 
 		this.logDebug("添加合同：" + _contract.getName());

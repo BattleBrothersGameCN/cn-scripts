@@ -8,7 +8,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.sacrificed_man";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%一个奇怪的景象：一个死人被矛钉在地上。 他自己的血被用来在他的尸体上画圈。其他奇怪的仪式也用他的血来描绘。%otherbrother% 开始收回那些矛。 你试着让他停下来，但已经太晚了。 他举起其中一件武器。%SPEECH_ON%什么？这些武器质量很好。 我门为什么要把它们留在这？%SPEECH_OFF%好吧，如果这是一个神圣的守护仪式，它已经被破坏了。 你收起那些矛。",
@@ -129,7 +129,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Cultist.improveMood(1.000000, "你招募了一个邪教徒");
+				_event.m.Cultist.improveMood(1.0, "你招募了一个邪教徒");
 
 				if (_event.m.Cultist.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -163,7 +163,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
-				_event.m.Cultist.worsenMood(1.000000, "你没能招募到一个邪教徒");
+				_event.m.Cultist.worsenMood(1.0, "你没能招募到一个邪教徒");
 
 				if (_event.m.Cultist.getMoodState() < this.Const.MoodState.Neutral)
 				{

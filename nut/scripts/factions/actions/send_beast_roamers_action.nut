@@ -8,7 +8,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 	function create()
 	{
 		this.m.ID = "send_beast_roamers_action";
-		this.m.Cooldown = 5.000000;
+		this.m.Cooldown = 5.0;
 		this.faction_action.create();
 		local distanceToNextAlly = 10;
 		local beast;
@@ -42,7 +42,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				];
 			}
 
-			local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 35, 1000, 3, 0, _nearTile, 0.000000, 0.750000);
+			local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 35, 1000, 3, 0, _nearTile, 0.0, 0.75);
 
 			if (tile == null)
 			{
@@ -55,7 +55,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 			}
 
 			local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-			local party = _action.getFaction().spawnEntity(tile, "食尸鬼", false, this.Const.World.Spawn.Ghouls, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+			local party = _action.getFaction().spawnEntity(tile, "食尸鬼", false, this.Const.World.Spawn.Ghouls, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 			party.getSprite("banner").setBrush("banner_beasts_01");
 			party.setDescription("一群寻觅的食尸鬼");
 			party.setFootprintType(this.Const.World.FootprintsType.Ghouls);
@@ -87,7 +87,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 			}
 
-			local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 50, 1000, 3, 0, _nearTile, 0.200000);
+			local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 50, 1000, 3, 0, _nearTile, 0.2);
 
 			if (tile == null)
 			{
@@ -100,7 +100,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 			}
 
 			local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-			local party = _action.getFaction().spawnEntity(tile, "恐狼", false, this.Const.World.Spawn.Direwolves, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+			local party = _action.getFaction().spawnEntity(tile, "恐狼", false, this.Const.World.Spawn.Direwolves, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 			party.getSprite("banner").setBrush("banner_beasts_01");
 			party.setDescription("一群寻找猎物的凶猛恐狼。");
 			party.setFootprintType(this.Const.World.FootprintsType.Direwolves);
@@ -137,7 +137,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 50, 1000, 3, 0, _nearTile, 0.000000, 0.200000);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 50, 1000, 3, 0, _nearTile, 0.0, 0.2);
 
 				if (tile == null)
 				{
@@ -150,7 +150,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "鬣狗", false, this.Const.World.Spawn.Hyenas, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "鬣狗", false, this.Const.World.Spawn.Hyenas, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("一群贪婪的鬣狗在捕猎猎物。");
 				party.setFootprintType(this.Const.World.FootprintsType.Hyenas);
@@ -187,7 +187,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 50, 1000, 3, 0, _nearTile, 0.000000, 0.200000);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 50, 1000, 3, 0, _nearTile, 0.0, 0.2);
 
 				if (tile == null)
 				{
@@ -200,7 +200,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "大蛇", false, this.Const.World.Spawn.Serpents, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "大蛇", false, this.Const.World.Spawn.Serpents, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("巨大的蛇在游荡。");
 				party.setFootprintType(this.Const.World.FootprintsType.Serpents);
@@ -236,7 +236,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 40, 1000, 3, 0, _nearTile, this.Const.DLC.Desert ? 0.200000 : 0.100000, 0.800000);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 7, 40, 1000, 3, 0, _nearTile, this.Const.DLC.Desert ? 0.2 : 0.1, 0.8);
 
 				if (tile == null)
 				{
@@ -249,7 +249,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "蛛魔", false, this.Const.World.Spawn.Spiders, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "蛛魔", false, this.Const.World.Spawn.Spiders, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("一群蛛魔在游荡。");
 				party.setFootprintType(this.Const.World.FootprintsType.Spiders);
@@ -289,7 +289,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 10 - (_nearTile == null ? 0 : 2), 100, 1000, 3, 0, _nearTile, 0.000000, 0.900000);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 10 - (_nearTile == null ? 0 : 2), 100, 1000, 3, 0, _nearTile, 0.0, 0.9);
 
 				if (tile == null)
 				{
@@ -302,7 +302,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "巨魔", false, this.Const.World.Spawn.Unhold, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "巨魔", false, this.Const.World.Spawn.Unhold, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("一个或多个笨拙的巨人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Unholds);
@@ -342,7 +342,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 5, 100, 1000, 3, 0, _nearTile, 0.700000);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 5, 100, 1000, 3, 0, _nearTile, 0.7);
 
 				if (tile == null)
 				{
@@ -355,7 +355,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "巨魔", false, this.Const.World.Spawn.UnholdFrost, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "巨魔", false, this.Const.World.Spawn.UnholdFrost, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("一个或多个笨拙的巨人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Unholds);
@@ -412,7 +412,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "巨魔", false, this.Const.World.Spawn.UnholdBog, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "巨魔", false, this.Const.World.Spawn.UnholdBog, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("一个或多个笨拙的巨人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Unholds);
@@ -462,7 +462,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "梦魇", false, this.Const.World.Spawn.Alps, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "梦魇", false, this.Const.World.Spawn.Alps, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("苍白而憔悴的生物在四处爬行。");
 				party.setFootprintType(this.Const.World.FootprintsType.Alps);
@@ -499,7 +499,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					this.Const.World.TerrainType.SnowyForest,
 					this.Const.World.TerrainType.Desert,
 					this.Const.World.TerrainType.Oasis
-				], 8, 50, 1000, 3, 0, _nearTile, 0.100000, 0.900000);
+				], 8, 50, 1000, 3, 0, _nearTile, 0.1, 0.9);
 
 				if (tile == null)
 				{
@@ -512,7 +512,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "女巫", false, this.Const.World.Spawn.HexenAndMore, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "女巫", false, this.Const.World.Spawn.HexenAndMore, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("一个恶毒的老太婆，据说引诱和诱拐小孩子来做肉汤和调料，与村民签订邪恶的契约，并编织诅咒。");
 				party.setFootprintType(this.Const.World.FootprintsType.Hexen);
@@ -549,7 +549,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 20 - (_nearTile == null ? 0 : 11), 100, 1000, 3, 0, _nearTile, 0.100000, 0.900000);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 20 - (_nearTile == null ? 0 : 11), 100, 1000, 3, 0, _nearTile, 0.1, 0.9);
 
 				if (tile == null)
 				{
@@ -562,7 +562,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "树人", false, this.Const.World.Spawn.Schrats, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "树人", false, this.Const.World.Spawn.Schrats, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("一种树皮和木头的生物，混迹于树间，缓慢地蹒跚而行，它的根在土壤中挖掘。");
 				party.setFootprintType(this.Const.World.FootprintsType.Schrats);
@@ -652,7 +652,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 16 - (_nearTile == null ? 0 : 10), 100, 1000, 3, 0, _nearTile, 0.000000, 0.200000);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 16 - (_nearTile == null ? 0 : 10), 100, 1000, 3, 0, _nearTile, 0.0, 0.2);
 
 				if (tile == null)
 				{
@@ -665,7 +665,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "伊夫利特", false, this.Const.World.Spawn.SandGolems, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "伊夫利特", false, this.Const.World.Spawn.SandGolems, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("活生生的石头制成的生物，由南方烈日的酷热和烈火塑造而成。");
 				party.setFootprintType(this.Const.World.FootprintsType.SandGolems);
@@ -705,7 +705,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 18 - (_nearTile == null ? 0 : 10), 100, 1000, 3, 0, _nearTile, this.Const.DLC.Desert ? 0.100000 : 0.000000, 0.500000);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 18 - (_nearTile == null ? 0 : 10), 100, 1000, 3, 0, _nearTile, this.Const.DLC.Desert ? 0.1 : 0.0, 0.5);
 
 				if (tile == null)
 				{
@@ -718,7 +718,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 				}
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
-				local party = _action.getFaction().spawnEntity(tile, "林德蠕龙", false, this.Const.World.Spawn.Lindwurm, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.700000, this.Math.minf(1.500000, distanceToNextSettlement / 14.000000)));
+				local party = _action.getFaction().spawnEntity(tile, "林德蠕龙", false, this.Const.World.Spawn.Lindwurm, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("一条林德蠕龙 —— 一种无翼双足龙，形似巨蛇。");
 				party.setFootprintType(this.Const.World.FootprintsType.Lindwurms);
@@ -744,7 +744,7 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 	{
 		foreach( u in _faction.getUnits() )
 		{
-			if (!u.isDiscovered() && this.Time.getVirtualTimeF() - u.getSpawnTime() >= 20.000000 * this.World.getTime().SecondsPerDay && !u.getSprite("selection").Visible && (this.World.State.getPlayer() == null || this.World.State.getPlayer().getTile().getDistanceTo(u.getTile()) >= 8))
+			if (!u.isDiscovered() && this.Time.getVirtualTimeF() - u.getSpawnTime() >= 20.0 * this.World.getTime().SecondsPerDay && !u.getSprite("selection").Visible && (this.World.State.getPlayer() == null || this.World.State.getPlayer().getTile().getDistanceTo(u.getTile()) >= 8))
 			{
 				u.die();
 				break;
@@ -788,12 +788,12 @@ this.send_beast_roamers_action <- this.inherit("scripts/factions/faction_action"
 		{
 			if (this.m.Options[r](this))
 			{
-				this.m.Cooldown = 5.000000;
+				this.m.Cooldown = 5.0;
 				break;
 			}
 			else
 			{
-				this.m.Cooldown = 0.000000;
+				this.m.Cooldown = 0.0;
 			}
 		}
 	}

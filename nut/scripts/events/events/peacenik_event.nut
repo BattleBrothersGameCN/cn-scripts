@@ -6,7 +6,7 @@ this.peacenik_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.peacenik";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_40.png[/img]正在路上走着，你遇到了一个男人，他正盯着地上的一个洞看。 很自然地，你走过去问他在做什么。 他说洞里有一只兽人。 你往下一看。还真有。 你拔出配剑，问自己是否应该照顾照顾它。%SPEECH_ON%什么？不！我想让它活着。 我想我们可以试着去理解它。%SPEECH_OFF%试着去理解它？这个男人在说什么？他恳求着。%SPEECH_ON%让我们试试吧！ 每个人看到兽人都会杀，但它们不仅仅是动物。 它们表现出智慧，如果它们有智慧，那就意味着它们能学习，如果它们能学习，那么也许它们能学会与我们共存。%SPEECH_OFF%",
@@ -68,7 +68,7 @@ this.peacenik_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Houndmaster.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 决心"
 				});
-				_event.m.Houndmaster.improveMood(1.000000, "讲授动物的本性");
+				_event.m.Houndmaster.improveMood(1.0, "讲授动物的本性");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Houndmaster.getMoodState()],

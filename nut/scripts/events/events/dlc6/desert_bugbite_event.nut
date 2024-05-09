@@ -6,7 +6,7 @@ this.desert_bugbite_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.desert_bugbite";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_161.png[/img]{你在地图边转着检查仓库，突然 %bitbro% 喊叫着摔倒在沙地上。 他拍打他的腿把一只黑色的蝎子拍上半空。 另一个佣兵尖叫着把那虫子切成两半，力道比你在战场上看到他用过的任何攻击都大。%bitbro% 咬着牙拿下他的靴子。 看起来像给人钉了一钉子在脚踝上似的。 他说他有点恍惚，但不是很严重。}",
@@ -27,7 +27,7 @@ this.desert_bugbite_event <- this.inherit("scripts/events/event", {
 			{
 				local effect = this.new("scripts/skills/effects_world/exhausted_effect");
 				_event.m.SomeGuy.getSkills().add(effect);
-				_event.m.SomeGuy.worsenMood(1.000000, "被蝎子蜇了");
+				_event.m.SomeGuy.worsenMood(1.0, "被蝎子蜇了");
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),

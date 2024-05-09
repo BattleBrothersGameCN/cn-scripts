@@ -6,7 +6,7 @@ this.lone_wolf_origin_depressing_lady_event <- this.inherit("scripts/events/even
 	{
 		this.m.ID = "event.lone_wolf_origin_depressing_lady";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_91.png[/img]{你在一个贵族的房子外面碰到一个老妇人。 她对你的评价就好像她在回顾自己的过去。 有趣的是，你问她想要什么。这位女士微笑。%SPEECH_ON%你真的知道你在做什么吗？ 像个雇佣骑士一样在这片土地上游荡，一次次地杀戮、屠杀、强奸女人们？%SPEECH_OFF%你礼貌地告诉她，你实际上不只是一个经常找乐子的人，而是一个真正的佣兵。 她耸肩，把手伸向一位贵族的房子。%SPEECH_ON%那又怎么样呢？ 他们永远不会接纳你。 你会成为一名战士。 你不属于这里。 你只有在他们允许的情况下才能进去。 这不是一个你可以自我升华的世界。 。%SPEECH_OFF%}",

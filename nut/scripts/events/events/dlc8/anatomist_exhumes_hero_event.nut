@@ -8,7 +8,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.anatomist_exhumes_hero";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_20.png[/img]{你在%townname%听到一个当地的英雄最近去世了的消息。对你来说，这只是一条无聊的消息。如果你把他与级别高于捕鼠人的人物比较，那这个人或许甚至不是一个英雄，所以你并没有在意。当然，解剖学家们是另一种类型的人，他们像苍蝇闻到尸体味一样迅速，开始计划去掘开这位英雄的尸体，看看是什么让这位“英雄元素”不同于普通人。%anatomist%解释道。%SPEECH_ON% 英雄的尸体不仅仅是另一个尸体。它浸染着某种完全不同的东西，一种独特的动力让它与我们其他人不同。%SPEECH_OFF% 你见识过很多事情，所以你向解剖学家保证这具尸体看起来与其他任何尸体都差不多。但他们非常热衷于窥探一眼，即使这会冒犯民众。}",
@@ -75,8 +75,8 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.anatomist")
 					{
-						bro.improveMood(1.000000, "需要检查一位英雄的尸体。");
-						bro.worsenMood(0.500000, "被误导了关于该具尸体的特殊之处");
+						bro.improveMood(1.0, "需要检查一位英雄的尸体。");
+						bro.worsenMood(0.5, "被误导了关于该具尸体的特殊之处");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -132,7 +132,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.anatomist")
 					{
-						bro.worsenMood(0.750000, "无法挖掘出一具不寻常的尸体");
+						bro.worsenMood(0.75, "无法挖掘出一具不寻常的尸体");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -173,7 +173,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.anatomist")
 					{
-						bro.improveMood(1.000000, "得检查一位英雄不寻常的尸体。");
+						bro.improveMood(1.0, "得检查一位英雄不寻常的尸体。");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -194,7 +194,7 @@ this.anatomist_exhumes_hero_event <- this.inherit("scripts/events/event", {
 					}
 				}
 
-				_event.m.Graver.improveMood(1.000000, "运用他挖墓的技能。");
+				_event.m.Graver.improveMood(1.0, "运用他挖墓的技能。");
 
 				if (_event.m.Graver.getMoodState() >= this.Const.MoodState.Neutral)
 				{

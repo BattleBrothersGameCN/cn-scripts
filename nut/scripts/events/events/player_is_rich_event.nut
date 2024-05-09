@@ -4,7 +4,7 @@ this.player_is_rich_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.player_is_rich_event";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_04.png[/img]一段时间之后，你挣了很大一笔钱。 虽然你仍然保持战利品箱妥善保管，但是你却注意到一些兄弟的贪婪心随着待在战团里的时间的延长而日益膨胀。 最近你开始听见一些关于伙计们要求涨薪的传言。",
@@ -60,7 +60,7 @@ this.player_is_rich_event <- this.inherit("scripts/events/event", {
 					}
 
 					bro.getBaseProperties().DailyWage += 4;
-					bro.improveMood(2.000000, "得到加薪");
+					bro.improveMood(2.0, "得到加薪");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -103,7 +103,7 @@ this.player_is_rich_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkill("trait.greedy"))
 					{
-						bro.worsenMood(2.000000, "被拒绝加薪");
+						bro.worsenMood(2.0, "被拒绝加薪");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -128,7 +128,7 @@ this.player_is_rich_event <- this.inherit("scripts/events/event", {
 						}
 						else
 						{
-							bro.worsenMood(1.000000, "被拒绝加薪");
+							bro.worsenMood(1.0, "被拒绝加薪");
 
 							if (bro.getMoodState() < this.Const.MoodState.Neutral)
 							{
@@ -179,7 +179,7 @@ this.player_is_rich_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		this.m.Score = (this.World.Assets.getMoney() - 30000) * 0.000500;
+		this.m.Score = (this.World.Assets.getMoney() - 30000) * 0.0005;
 	}
 
 	function onPrepare()

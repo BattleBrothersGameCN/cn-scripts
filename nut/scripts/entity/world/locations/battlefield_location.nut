@@ -1,6 +1,6 @@
 this.battlefield_location <- this.inherit("scripts/entity/world/location", {
 	m = {
-		SpawnTime = 0.000000,
+		SpawnTime = 0.0,
 		Description = ""
 	},
 	function getDescription()
@@ -36,7 +36,7 @@ this.battlefield_location <- this.inherit("scripts/entity/world/location", {
 	{
 		this.location.onInit();
 		local body = this.addSprite("body");
-		body.Scale = 0.750000;
+		body.Scale = 0.75;
 		body.setBrush("world_battlefield_0" + this.Math.rand(1, 2));
 		body.setHorizontalFlipping(this.Math.rand(0, 1) == 1);
 		this.registerThinker();
@@ -50,7 +50,7 @@ this.battlefield_location <- this.inherit("scripts/entity/world/location", {
 
 	function onUpdate()
 	{
-		if (this.isAlive() && !this.getSprite("selection").Visible && this.Time.getVirtualTimeF() - this.m.SpawnTime > this.World.getTime().SecondsPerDay * 2.000000)
+		if (this.isAlive() && !this.getSprite("selection").Visible && this.Time.getVirtualTimeF() - this.m.SpawnTime > this.World.getTime().SecondsPerDay * 2.0)
 		{
 			this.onCombatLost();
 		}

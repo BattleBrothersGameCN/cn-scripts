@@ -20,13 +20,13 @@ this.named_two_handed_scimitar <- this.inherit("scripts/items/weapons/named/name
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3200;
 		this.m.ShieldDamage = 16;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.StaminaModifier = -14;
 		this.m.RegularDamage = 65;
 		this.m.RegularDamageMax = 85;
-		this.m.ArmorDamageMult = 1.100000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.1;
+		this.m.DirectDamageMult = 0.25;
 		this.randomizeValues();
 	}
 

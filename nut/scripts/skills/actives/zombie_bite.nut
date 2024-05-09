@@ -24,7 +24,7 @@ this.zombie_bite <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.100000;
+		this.m.DirectDamageMult = 0.1;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 10;
 		this.m.MinRange = 1;
@@ -43,7 +43,7 @@ this.zombie_bite <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.DamageRegularMin = 15;
 			_properties.DamageRegularMax = 35;
-			_properties.DamageArmorMult = 0.500000;
+			_properties.DamageArmorMult = 0.5;
 			_properties.HitChance[this.Const.BodyPart.Head] += 15;
 		}
 	}

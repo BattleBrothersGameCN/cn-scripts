@@ -7,7 +7,7 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.fell_down_well";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 150.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 150.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_91.png[/img]一个女人从小路旁边的树林里跳出来。%SPEECH_ON%噢，感谢上帝，我的祈祷应验了！ 请，快过来！我爷爷掉到井里了！%SPEECH_OFF%她转身匆匆离去，好像你已经答应帮她了。%otherbrother% 瞥了你一眼，并耸耸肩。",
@@ -75,7 +75,7 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.improveMood(2.000000, "得到一些爱");
+				_event.m.Other.improveMood(2.0, "得到一些爱");
 
 				if (_event.m.Other.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -130,7 +130,7 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Strong.getImagePath());
-				_event.m.Strong.improveMood(2.000000, "得到一些爱");
+				_event.m.Strong.improveMood(2.0, "得到一些爱");
 
 				if (_event.m.Strong.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -154,7 +154,7 @@ this.fell_down_well_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.200000)
+		if (currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

@@ -8,7 +8,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.melon_thief";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_43.png[/img]你看见了一群闹哄哄的村民从前方走来。 他们一群人抬着棵倒下的树木就像一群蚂蚁抬着和它们身形相差巨大的甲虫。 有一个蒙着眼的男人双手和双脚被绑在在树上。 当人群慢慢靠近，浓烈的酒味从那些村名身上传来那感觉就和直面从不断翻滚的沼泽冲出来的臭气一般。\n\n %otherbro% 询问这乱哄哄的人群他们要去哪里。 一个蓄着胡须的汉子突然转向你们，脚跟和脚尖同时行动就像一个不协调的木偶。%SPEECH_ON%哦！我们要去审判并且惩罚这个，这个，呃…%SPEECH_OFF%那闹哄哄的人群里面有人大喊着“偷水果的色鬼！”。 那大汉咬了咬自己的手指。%SPEECH_ON%没错！这个偷瓜贼将会得到，额，…将会带给他。%SPEECH_OFF%",
@@ -171,8 +171,8 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getSprite("head").setBrush("bust_head_03");
 				_event.m.Dude.getBackground().m.RawDescription = "%name%只不过是个普通的偷瓜贼 —— 别人问起来你总是这么说。";
 				_event.m.Dude.getBackground().buildDescription(true);
-				_event.m.Dude.improveMood(1.000000, "用甜瓜满足他的需要");
-				_event.m.Dude.worsenMood(0.500000, "差点被涂上沥青和羽毛");
+				_event.m.Dude.improveMood(1.0, "用甜瓜满足他的需要");
+				_event.m.Dude.worsenMood(0.5, "差点被涂上沥青和羽毛");
 
 				if (_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand) != null)
 				{
@@ -212,7 +212,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.improveMood(0.500000, "受到惩罚");
+				_event.m.Other.improveMood(0.5, "受到惩罚");
 
 				if (_event.m.Other.getMoodState() >= this.Const.MoodState.Neutral)
 				{

@@ -1,6 +1,6 @@
 this.spider <- this.inherit("scripts/entity/tactical/actor", {
 	m = {
-		Size = 1.000000,
+		Size = 1.0,
 		DistortTargetA = null,
 		DistortTargetPrevA = this.createVec(0, 0),
 		DistortTargetB = null,
@@ -17,7 +17,7 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.XP = this.Const.Tactical.Actor.Spider.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(20, -15);
-		this.m.DecapitateBloodAmount = 1.000000;
+		this.m.DecapitateBloodAmount = 1.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.m.ExcludedInjuries = [
 			"injury.fractured_hand",
@@ -77,14 +77,14 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/dlc2/giant_spider_idle_16.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Move] = this.m.Sound[this.Const.Sound.ActorEvent.Idle];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.700000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.000000;
-		this.m.SoundPitch = this.Math.rand(95, 105) * 0.010000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.7;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.0;
+		this.m.SoundPitch = this.Math.rand(95, 105) * 0.01;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/spider_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
-	function playSound( _type, _volume, _pitch = 1.000000 )
+	function playSound( _type, _volume, _pitch = 1.0 )
 	{
 		if (_type == this.Const.Sound.ActorEvent.Move && this.Math.rand(1, 100) <= 33)
 		{
@@ -100,26 +100,26 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (this.m.DistortTargetA == null)
 		{
-			this.m.DistortTargetA = this.m.IsFlipping ? this.createVec(0, 1.000000 * this.m.Size) : this.createVec(0, -1.000000 * this.m.Size);
-			this.m.DistortTargetB = !this.m.IsFlipping ? this.createVec(-0.500000 * this.m.Size, 0) : this.createVec(0.500000 * this.m.Size, 0);
-			this.m.DistortTargetC = !this.m.IsFlipping ? this.createVec(0.500000 * this.m.Size, 0) : this.createVec(-0.500000 * this.m.Size, 0);
-			this.m.DistortAnimationStartTimeA = this.Time.getVirtualTimeF() - this.Math.rand(10, 100) * 0.010000;
+			this.m.DistortTargetA = this.m.IsFlipping ? this.createVec(0, 1.0 * this.m.Size) : this.createVec(0, -1.0 * this.m.Size);
+			this.m.DistortTargetB = !this.m.IsFlipping ? this.createVec(-0.5 * this.m.Size, 0) : this.createVec(0.5 * this.m.Size, 0);
+			this.m.DistortTargetC = !this.m.IsFlipping ? this.createVec(0.5 * this.m.Size, 0) : this.createVec(-0.5 * this.m.Size, 0);
+			this.m.DistortAnimationStartTimeA = this.Time.getVirtualTimeF() - this.Math.rand(10, 100) * 0.01;
 		}
 
-		this.moveSpriteOffset("legs_back", this.m.DistortTargetPrevB, this.m.DistortTargetB, 1.000000, this.m.DistortAnimationStartTimeA);
-		this.moveSpriteOffset("legs_front", this.m.DistortTargetPrevC, this.m.DistortTargetC, 1.000000, this.m.DistortAnimationStartTimeA);
-		this.moveSpriteOffset("body", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.000000, this.m.DistortAnimationStartTimeA);
-		this.moveSpriteOffset("injury", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.000000, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("legs_back", this.m.DistortTargetPrevB, this.m.DistortTargetB, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("legs_front", this.m.DistortTargetPrevC, this.m.DistortTargetC, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("body", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("injury", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.0, this.m.DistortAnimationStartTimeA);
 
-		if (this.moveSpriteOffset("head", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.000000, this.m.DistortAnimationStartTimeA))
+		if (this.moveSpriteOffset("head", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.0, this.m.DistortAnimationStartTimeA))
 		{
 			this.m.DistortAnimationStartTimeA = this.Time.getVirtualTimeF();
 			this.m.DistortTargetPrevA = this.m.DistortTargetA;
-			this.m.DistortTargetA = this.m.IsFlipping ? this.createVec(0, 1.000000 * this.m.Size) : this.createVec(0, -1.000000 * this.m.Size);
+			this.m.DistortTargetA = this.m.IsFlipping ? this.createVec(0, 1.0 * this.m.Size) : this.createVec(0, -1.0 * this.m.Size);
 			this.m.DistortTargetPrevB = this.m.DistortTargetB;
-			this.m.DistortTargetB = !this.m.IsFlipping ? this.createVec(-0.500000 * this.m.Size, 0) : this.createVec(0.500000 * this.m.Size, 0);
+			this.m.DistortTargetB = !this.m.IsFlipping ? this.createVec(-0.5 * this.m.Size, 0) : this.createVec(0.5 * this.m.Size, 0);
 			this.m.DistortTargetPrevC = this.m.DistortTargetC;
-			this.m.DistortTargetC = !this.m.IsFlipping ? this.createVec(0.500000 * this.m.Size, 0) : this.createVec(-0.500000 * this.m.Size, 0);
+			this.m.DistortTargetC = !this.m.IsFlipping ? this.createVec(0.5 * this.m.Size, 0) : this.createVec(-0.5 * this.m.Size, 0);
 			this.m.IsFlipping = !this.m.IsFlipping;
 		}
 	}
@@ -138,7 +138,7 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail("bust_spider_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
-			decal.Scale = 0.900000 * this.m.Size;
+			decal.Scale = 0.9 * this.m.Size;
 			body_decal = decal;
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
@@ -146,7 +146,7 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 				decal = _tile.spawnDetail("bust_spider_head_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Color = head.Color;
 				decal.Saturation = head.Saturation;
-				decal.Scale = 0.900000 * this.m.Size;
+				decal.Scale = 0.9 * this.m.Size;
 				head_decal = decal;
 
 				if (_fatalityType == this.Const.FatalityType.None)
@@ -155,24 +155,24 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 						Body = body_decal,
 						Head = head_decal,
 						Start = this.Time.getRealTimeF(),
-						Vector = this.createVec(0.000000, -1.000000),
+						Vector = this.createVec(0.0, -1.0),
 						Iterations = 0,
 						function onCorpseEffect( _data )
 						{
-							if (this.Time.getRealTimeF() - _data.Start > 0.200000)
+							if (this.Time.getRealTimeF() - _data.Start > 0.2)
 							{
 								if (++_data.Iterations > 5)
 								{
 									return;
 								}
 
-								_data.Vector = this.createVec(this.Math.rand(-100, 100) * 0.010000, this.Math.rand(-100, 100) * 0.010000);
+								_data.Vector = this.createVec(this.Math.rand(-100, 100) * 0.01, this.Math.rand(-100, 100) * 0.01);
 								_data.Start = this.Time.getRealTimeF();
 							}
 
-							local f = (this.Time.getRealTimeF() - _data.Start) / 0.200000;
-							_data.Body.setOffset(this.createVec(0.000000 + 0.500000 * _data.Vector.X * f, 30.000000 + 1.000000 * _data.Vector.Y * f));
-							_data.Head.setOffset(this.createVec(0.000000 + 0.500000 * _data.Vector.X * f, 30.000000 + 1.000000 * _data.Vector.Y * f));
+							local f = (this.Time.getRealTimeF() - _data.Start) / 0.2;
+							_data.Body.setOffset(this.createVec(0.0 + 0.5 * _data.Vector.X * f, 30.0 + 1.0 * _data.Vector.Y * f));
+							_data.Head.setOffset(this.createVec(0.0 + 0.5 * _data.Vector.X * f, 30.0 + 1.0 * _data.Vector.Y * f));
 							this.Time.scheduleEvent(this.TimeUnit.Real, 10, _data.onCorpseEffect, _data);
 						}
 
@@ -185,27 +185,27 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 				local layers = [
 					"bust_spider_head_01_dead"
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, -10), 0.000000, "bust_spider_head_01_dead_bloodpool");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, -10), 0.0, "bust_spider_head_01_dead_bloodpool");
 				decap[0].Color = head.Color;
 				decap[0].Saturation = head.Saturation;
-				decap[0].Scale = 0.900000 * this.m.Size;
+				decap[0].Scale = 0.9 * this.m.Size;
 			}
 
 			if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
 				decal = _tile.spawnDetail("bust_spider_body_01_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000 * this.m.Size;
+				decal.Scale = 0.9 * this.m.Size;
 			}
 
 			if (_fatalityType == this.Const.FatalityType.Disemboweled)
 			{
 				decal = _tile.spawnDetail("bust_spider_gut", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000 * this.m.Size;
+				decal.Scale = 0.9 * this.m.Size;
 			}
 			else if (_fatalityType == this.Const.FatalityType.Smashed)
 			{
 				decal = _tile.spawnDetail("bust_spider_skull", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000 * this.m.Size;
+				decal.Scale = 0.9 * this.m.Size;
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -217,7 +217,7 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
 
-			if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.m.Size > 0.750000 && this.Math.rand(1, 100) <= 60)
+			if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.m.Size > 0.75 && this.Math.rand(1, 100) <= 60)
 			{
 				local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
 
@@ -261,11 +261,11 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 25)
 		{
-			b.DamageDirectAdd += 0.050000;
+			b.DamageDirectAdd += 0.05;
 
 			if (this.World.getTime().Days >= 50)
 			{
-				b.DamageDirectAdd += 0.050000;
+				b.DamageDirectAdd += 0.05;
 				b.MeleeDefense += 5;
 				b.RangedDefense += 5;
 			}
@@ -285,17 +285,17 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varySaturation(0.300000);
+			body.varySaturation(0.3);
 		}
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varyColor(0.100000, 0.100000, 0.100000);
+			body.varyColor(0.1, 0.1, 0.1);
 		}
 
 		if (this.Math.rand(0, 100) < 90)
 		{
-			body.varyBrightness(0.100000);
+			body.varyBrightness(0.1);
 		}
 
 		local legs_front = this.addSprite("legs_front");
@@ -312,11 +312,11 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 		injury.Visible = false;
 		injury.setBrush("bust_spider_01_injured");
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.650000;
+		this.getSprite("status_rooted").Scale = 0.65;
 		this.setSpriteOffset("status_rooted", this.createVec(7, 10));
 		this.setSpriteOffset("status_stunned", this.createVec(0, -20));
 		this.setSpriteOffset("arrow", this.createVec(0, -20));
-		this.setSize(this.Math.rand(70, 90) * 0.010000);
+		this.setSize(this.Math.rand(70, 90) * 0.01);
 		this.m.Skills.add(this.new("scripts/skills/actives/spider_bite_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/web_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/footwork"));
@@ -329,20 +329,20 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 	function setSize( _s )
 	{
 		this.m.Size = _s;
-		this.m.DecapitateBloodAmount = _s * 0.750000;
+		this.m.DecapitateBloodAmount = _s * 0.75;
 		this.getSprite("body").Scale = _s;
 		this.getSprite("head").Scale = _s;
 		this.getSprite("injury").Scale = _s;
-		this.getSprite("status_rooted").Scale = _s * 0.650000;
-		this.getSprite("status_rooted_back").Scale = _s * 0.650000;
+		this.getSprite("status_rooted").Scale = _s * 0.65;
+		this.getSprite("status_rooted_back").Scale = _s * 0.65;
 		this.getSprite("legs_back").Scale = _s;
 		this.getSprite("legs_front").Scale = _s;
-		local offset = this.createVec(0, -10.000000 * (1.000000 - _s));
+		local offset = this.createVec(0, -10.0 * (1.0 - _s));
 		this.setSpriteOffset("body", offset);
 		this.setSpriteOffset("head", offset);
 		this.setSpriteOffset("injury", offset);
-		this.setSpriteOffset("status_rooted", this.createVec(7, 10 - 10.000000 * (1.000000 - _s)));
-		this.setSpriteOffset("status_rooted_back", this.createVec(7, 10 - 10.000000 * (1.000000 - _s)));
+		this.setSpriteOffset("status_rooted", this.createVec(7, 10 - 10.0 * (1.0 - _s)));
+		this.setSpriteOffset("status_rooted_back", this.createVec(7, 10 - 10.0 * (1.0 - _s)));
 		this.setSpriteOffset("legs_back", offset);
 		this.setSpriteOffset("legs_front", offset);
 	}

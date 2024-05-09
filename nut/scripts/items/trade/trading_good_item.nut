@@ -100,7 +100,7 @@ this.trading_good_item <- this.inherit("scripts/items/item", {
 				}
 			}
 
-			return this.Math.max(this.getSellPrice(), this.Math.ceil(this.getValue() * this.getBuyPriceMult() * this.World.Assets.m.BuyPriceTradeMult * this.getPriceMult() * this.World.State.getCurrentTown().getBuyPriceMult() * (isBuildingPresent ? this.Const.World.Assets.BaseBuyPrice : this.Const.World.Assets.BuyPriceNotProducedHere) * (isLocalCulture ? 1.000000 : this.Const.World.Assets.BuyPriceNotLocalCulture)));
+			return this.Math.max(this.getSellPrice(), this.Math.ceil(this.getValue() * this.getBuyPriceMult() * this.World.Assets.m.BuyPriceTradeMult * this.getPriceMult() * this.World.State.getCurrentTown().getBuyPriceMult() * (isBuildingPresent ? this.Const.World.Assets.BaseBuyPrice : this.Const.World.Assets.BuyPriceNotProducedHere) * (isLocalCulture ? 1.0 : this.Const.World.Assets.BuyPriceNotLocalCulture)));
 		}
 
 		return this.item.getBuyPrice();
@@ -127,7 +127,7 @@ this.trading_good_item <- this.inherit("scripts/items/item", {
 				}
 			}
 
-			return this.Math.floor(this.getValue() * this.getSellPriceMult() * this.World.Assets.m.SellPriceTradeMult * this.World.State.getCurrentTown().getSellPriceMult() * (isBuildingPresent ? this.Const.World.Assets.BaseSellPrice : this.Const.World.Assets.SellPriceNotProducedHere) * (isLocalCulture ? 1.000000 : this.Const.World.Assets.SellPriceNotLocalCulture));
+			return this.Math.floor(this.getValue() * this.getSellPriceMult() * this.World.Assets.m.SellPriceTradeMult * this.World.State.getCurrentTown().getSellPriceMult() * (isBuildingPresent ? this.Const.World.Assets.BaseSellPrice : this.Const.World.Assets.SellPriceNotProducedHere) * (isLocalCulture ? 1.0 : this.Const.World.Assets.SellPriceNotLocalCulture));
 		}
 
 		return this.item.getSellPrice();

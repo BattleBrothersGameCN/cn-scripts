@@ -17,8 +17,8 @@ this.tree_olive <- this.inherit("scripts/entity/tactical/entity", {
 		local bottom = this.addSprite("bottom");
 		bottom.setBrush("steppe_tree_0" + v + "_bottom");
 		bottom.setHorizontalFlipping(flip);
-		bottom.varyColor(0.030000, 0.030000, 0.030000);
-		bottom.Scale = 0.700000 + this.Math.rand(0, 30) / 100.000000;
+		bottom.varyColor(0.03, 0.03, 0.03);
+		bottom.Scale = 0.7 + this.Math.rand(0, 30) / 100.0;
 		local middle = this.addSprite("middle");
 		middle.setBrush("steppe_tree_0" + v + "_middle");
 		middle.setHorizontalFlipping(flip);
@@ -27,7 +27,7 @@ this.tree_olive <- this.inherit("scripts/entity/tactical/entity", {
 		local top = this.addSprite("top");
 		top.setBrush("steppe_tree_0" + v + "_top");
 		top.setHorizontalFlipping(flip);
-		top.varyColor(0.050000, 0.050000, 0.050000);
+		top.varyColor(0.05, 0.05, 0.05);
 		top.Scale = bottom.Scale;
 		top.Rotation = this.Math.rand(-5, 5);
 		this.setSpriteOcclusion("bottom", 1, -1, -2);

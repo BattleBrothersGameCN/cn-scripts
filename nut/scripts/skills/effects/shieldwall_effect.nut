@@ -53,12 +53,12 @@ this.shieldwall_effect <- this.inherit("scripts/skills/skill", {
 	{
 		local bonus = this.getBonus();
 		local item = this.getContainer().getActor().getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
-		local mult = 1.000000;
+		local mult = 1.0;
 		local proficiencyBonus = 0;
 
 		if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInShields)
 		{
-			mult = mult * 1.250000;
+			mult = mult * 1.25;
 		}
 
 		if (this.getContainer().getActor().getCurrentProperties().IsProficientWithShieldSkills)
@@ -108,12 +108,12 @@ this.shieldwall_effect <- this.inherit("scripts/skills/skill", {
 
 		if (item.isItemType(this.Const.Items.ItemType.Shield) && item.getCondition() > 0)
 		{
-			local mult = 1.000000;
+			local mult = 1.0;
 			local proficiencyBonus = 0;
 
 			if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInShields)
 			{
-				mult = mult * 1.250000;
+				mult = mult * 1.25;
 			}
 
 			if (this.getContainer().getActor().getCurrentProperties().IsProficientWithShieldSkills)

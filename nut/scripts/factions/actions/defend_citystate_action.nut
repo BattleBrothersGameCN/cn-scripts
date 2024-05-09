@@ -5,7 +5,7 @@ this.defend_citystate_action <- this.inherit("scripts/factions/faction_action", 
 	function create()
 	{
 		this.m.ID = "defend_citystate_action";
-		this.m.Cooldown = 60.000000;
+		this.m.Cooldown = 60.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -22,7 +22,7 @@ this.defend_citystate_action <- this.inherit("scripts/factions/faction_action", 
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -33,7 +33,7 @@ this.defend_citystate_action <- this.inherit("scripts/factions/faction_action", 
 			}
 
 			local isAdded = false;
-			local entities = this.World.getAllEntitiesAtPos(s.getPos(), 500.000000);
+			local entities = this.World.getAllEntitiesAtPos(s.getPos(), 500.0);
 
 			foreach( e in entities )
 			{
@@ -62,7 +62,7 @@ this.defend_citystate_action <- this.inherit("scripts/factions/faction_action", 
 					continue;
 				}
 
-				local entities = this.World.getAllEntitiesAtPos(a.getPos(), 350.000000);
+				local entities = this.World.getAllEntitiesAtPos(a.getPos(), 350.0);
 
 				foreach( e in entities )
 				{
@@ -114,10 +114,10 @@ this.defend_citystate_action <- this.inherit("scripts/factions/faction_action", 
 			party.getFlags().set("IsRandomlySpawned", true);
 			local c = party.getController();
 			local sleep = this.new("scripts/ai/world/orders/sleep_order");
-			sleep.setTime(1.000000);
+			sleep.setTime(1.0);
 			local guard = this.new("scripts/ai/world/orders/guard_order");
 			guard.setTarget(spawnpoints[i]);
-			guard.setTime(30.000000);
+			guard.setTime(30.0);
 			local despawn = this.new("scripts/ai/world/orders/despawn_order");
 			c.addOrder(sleep);
 			c.addOrder(guard);

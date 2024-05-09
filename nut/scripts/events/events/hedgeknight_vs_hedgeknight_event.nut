@@ -9,7 +9,7 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.hedgeknight_vs_hedgeknight";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%nonhedgeknight% 急着投胎似的冲进你的大帐，在固定桩上绊了一跤，险些把整个帐篷都扯倒。 豆大的汗珠不住地从他脸上滴下，打湿了你的地图。 你盯着他，让他解释一下这整的是哪一出。 他忙说 %hedgeknight1% 和 %hedgeknight2% 那俩雇佣骑士闹起来了。 两人都抄着家伙，看架式多半是要玩命。 让队里块头最大的两个家伙打上一场对你甚至是对整个团队而言可都不是件…好事。 你连忙赶去现场。",
@@ -298,11 +298,11 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkill("trait.greedy"))
 					{
-						bro.worsenMood(2.000000, "因为你贿赂人来阻止他们的斗争而生气");
+						bro.worsenMood(2.0, "因为你贿赂人来阻止他们的斗争而生气");
 					}
 					else if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(1.000000, "担心你贿赂人来阻止他们的战斗");
+						bro.worsenMood(1.0, "担心你贿赂人来阻止他们的战斗");
 					}
 
 					this.List.push({

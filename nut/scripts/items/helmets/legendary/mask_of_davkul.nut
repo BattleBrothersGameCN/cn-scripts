@@ -21,8 +21,8 @@ this.mask_of_davkul <- this.inherit("scripts/items/helmets/helmet", {
 			"sounds/combat/cleave_hit_hitpoints_03.wav"
 		];
 		this.m.Value = 20000;
-		this.m.Condition = 270.000000;
-		this.m.ConditionMax = 270.000000;
+		this.m.Condition = 270.0;
+		this.m.ConditionMax = 270.0;
 		this.m.StaminaModifier = -10;
 		this.m.ItemType = this.m.ItemType | this.Const.Items.ItemType.Legendary;
 	}
@@ -41,7 +41,7 @@ this.mask_of_davkul <- this.inherit("scripts/items/helmets/helmet", {
 
 	function onTurnStart()
 	{
-		this.m.Condition = this.Math.minf(this.m.ConditionMax, this.m.Condition + 90.000000);
+		this.m.Condition = this.Math.minf(this.m.ConditionMax, this.m.Condition + 90.0);
 		this.updateAppearance();
 	}
 

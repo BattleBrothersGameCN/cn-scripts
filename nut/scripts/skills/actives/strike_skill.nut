@@ -43,7 +43,7 @@ this.strike_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.DirectDamageMult = 0.3;
 		this.m.HitChanceBonus = 0;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 15;
@@ -103,11 +103,11 @@ this.strike_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (this.m.ApplyAxeMastery)
 		{
-			this.m.FatigueCostMult = _properties.IsSpecializedInAxes ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+			this.m.FatigueCostMult = _properties.IsSpecializedInAxes ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 		}
 		else
 		{
-			this.m.FatigueCostMult = _properties.IsSpecializedInPolearms ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+			this.m.FatigueCostMult = _properties.IsSpecializedInPolearms ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 			this.m.ActionPointCost = _properties.IsSpecializedInPolearms ? 5 : 6;
 		}
 	}

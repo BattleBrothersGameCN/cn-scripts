@@ -8,7 +8,7 @@ this.alp_nightmare2_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.alp_nightmare2";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]{你去查看库存，却发现%addict%半垂不挂地躺在一个桶里，四肢悬在桶外，他的肚子上收集了许多小瓶。他用昏暗、红肿的眼睛盯着你，抱着他的眼窝，就像所有的血液都涌到那里一样。你问他到底发生了什么，%addict%只是微笑着说。%SPEECH_ON%做吧，队长，做你必须做的事情。因为我已经赢了。%SPEECH_OFF%}",

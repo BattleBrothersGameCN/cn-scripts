@@ -13,43 +13,43 @@ this.temple_building <- this.inherit("scripts/entity/world/settlements/buildings
 		this.m.Sounds = [
 			{
 				File = "ambience/buildings/temple_prayer_00.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/temple_prayer_01.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/temple_prayer_02.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/temple_bell_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/temple_bell_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/temple_bell_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/temple_bell_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/temple_bell_04.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			}
 		];
 		this.m.SoundsAtNight = [];

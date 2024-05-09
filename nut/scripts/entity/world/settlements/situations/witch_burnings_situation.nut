@@ -39,8 +39,8 @@ this.witch_burnings_situation <- this.inherit("scripts/entity/world/settlements/
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.FoodRarityMult *= 1.350000;
-		_modifiers.FoodPriceMult *= 1.150000;
+		_modifiers.FoodRarityMult *= 1.35;
+		_modifiers.FoodPriceMult *= 1.15;
 	}
 
 	function onUpdateDraftList( _draftList )

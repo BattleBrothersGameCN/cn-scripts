@@ -20,13 +20,13 @@ this.bardiche <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_bardiche_01";
 		this.m.Value = 2200;
 		this.m.ShieldDamage = 24;
-		this.m.Condition = 64.000000;
-		this.m.ConditionMax = 64.000000;
+		this.m.Condition = 64.0;
+		this.m.ConditionMax = 64.0;
 		this.m.StaminaModifier = -16;
 		this.m.RegularDamage = 75;
 		this.m.RegularDamageMax = 95;
-		this.m.ArmorDamageMult = 1.300000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 1.3;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ChanceToHitHead = 0;
 	}
 

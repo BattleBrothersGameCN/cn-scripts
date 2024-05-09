@@ -4,7 +4,7 @@ this.allied_civilians_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.allied_civilians";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们需要盟友。与某个城镇建立友谊和信任的纽带\n将使战团获得更好的出价，更多的志愿者和更稳定的工作。";
 		this.m.UIText = "与一个平民派系达成“友好”关系";
 		this.m.RewardTooltip = "建立良好的关系有助于得到更好的出价和更多可雇佣的人。";
@@ -21,7 +21,7 @@ this.allied_civilians_ambition <- this.inherit("scripts/ambitions/ambition", {
 		{
 			local f = this.World.FactionManager.getFaction(a);
 
-			if (f != null && (f.getType() == this.Const.FactionType.Settlement || f.getType() == this.Const.FactionType.OrientalCityState) && f.getPlayerRelation() >= 70.000000)
+			if (f != null && (f.getType() == this.Const.FactionType.Settlement || f.getType() == this.Const.FactionType.OrientalCityState) && f.getPlayerRelation() >= 70.0)
 			{
 				this.m.IsDone = true;
 				return;
@@ -39,7 +39,7 @@ this.allied_civilians_ambition <- this.inherit("scripts/ambitions/ambition", {
 		{
 			local f = this.World.FactionManager.getFaction(a);
 
-			if (f != null && (f.getType() == this.Const.FactionType.Settlement || f.getType() == this.Const.FactionType.OrientalCityState) && f.getPlayerRelation() >= 70.000000)
+			if (f != null && (f.getType() == this.Const.FactionType.Settlement || f.getType() == this.Const.FactionType.OrientalCityState) && f.getPlayerRelation() >= 70.0)
 			{
 				return true;
 			}
@@ -56,7 +56,7 @@ this.allied_civilians_ambition <- this.inherit("scripts/ambitions/ambition", {
 		{
 			local f = this.World.FactionManager.getFaction(a);
 
-			if (f != null && (f.getType() == this.Const.FactionType.Settlement || f.getType() == this.Const.FactionType.OrientalCityState) && f.getPlayerRelation() >= 70.000000)
+			if (f != null && (f.getType() == this.Const.FactionType.Settlement || f.getType() == this.Const.FactionType.OrientalCityState) && f.getPlayerRelation() >= 70.0)
 			{
 				_vars.push([
 					"friendlytown",

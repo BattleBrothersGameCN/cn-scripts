@@ -6,8 +6,8 @@ this.entity_manager <- {
 		RoadAmbushTiles = [],
 		Mercenaries = [],
 		LastMercUpdateTime = 0,
-		LastSnowSpawnTime = this.Time.getVirtualTimeF() + 5.000000,
-		LastWaveSpawnTime = this.Time.getVirtualTimeF() + 5.000000
+		LastSnowSpawnTime = this.Time.getVirtualTimeF() + 5.0,
+		LastWaveSpawnTime = this.Time.getVirtualTimeF() + 5.0
 	},
 	function addLocation( _l )
 	{
@@ -83,8 +83,8 @@ this.entity_manager <- {
 		this.m.Locations = [];
 		this.m.RoadAmbushTiles = [];
 		this.m.Mercenaries = [];
-		this.m.LastMercUpdateTime = 0.000000;
-		this.m.LastSnowSpawnTime = 0.000000;
+		this.m.LastMercUpdateTime = 0.0;
+		this.m.LastSnowSpawnTime = 0.0;
 	}
 
 	function getUniqueLocationName( _names )
@@ -150,13 +150,13 @@ this.entity_manager <- {
 				if (tile.HasRoad)
 				{
 				}
-				else if (this.Const.World.TerrainTypeVisibilityMult[tile.Type] >= 1.000000)
+				else if (this.Const.World.TerrainTypeVisibilityMult[tile.Type] >= 1.0)
 				{
 				}
-				else if (this.Const.World.TerrainTypeVisionRadiusMult[tile.Type] < 1.000000)
+				else if (this.Const.World.TerrainTypeVisionRadiusMult[tile.Type] < 1.0)
 				{
 				}
-				else if (this.Const.World.TerrainTypeSpeedMult[tile.Type] < 0.500000)
+				else if (this.Const.World.TerrainTypeSpeedMult[tile.Type] < 0.5)
 				{
 				}
 				else
@@ -322,7 +322,7 @@ this.entity_manager <- {
 				continue;
 			}
 
-			this.World.spawnWaveSprite("waves_0" + this.Math.rand(1, 4), tile.Pos, this.createVec(-15, -15), 1.250000);
+			this.World.spawnWaveSprite("waves_0" + this.Math.rand(1, 4), tile.Pos, this.createVec(-15, -15), 1.25);
 		}
 	}
 
@@ -451,7 +451,7 @@ this.entity_manager <- {
 			this.m.Mercenaries.remove(g);
 		}
 
-		if (this.m.LastMercUpdateTime + 3.000000 > this.Time.getVirtualTimeF())
+		if (this.m.LastMercUpdateTime + 3.0 > this.Time.getVirtualTimeF())
 		{
 			return;
 		}
@@ -495,7 +495,7 @@ this.entity_manager <- {
 			}
 
 			local r = this.Math.min(330, 150 + this.World.getTime().Days);
-			this.Const.World.Common.assignTroops(party, this.Const.World.Spawn.Mercenaries, this.Math.rand(r * 0.800000, r));
+			this.Const.World.Common.assignTroops(party, this.Const.World.Spawn.Mercenaries, this.Math.rand(r * 0.8, r));
 			party.getLoot().Money = this.Math.rand(300, 600);
 			party.getLoot().ArmorParts = this.Math.rand(0, 25);
 			party.getLoot().Medicine = this.Math.rand(0, 10);
@@ -623,14 +623,14 @@ this.entity_manager <- {
 				local dest = candidates[this.Math.rand(0, candidates.len() - 1)];
 				local c = merc.getController();
 				local wait1 = this.new("scripts/ai/world/orders/wait_order");
-				wait1.setTime(this.Math.rand(10, 60) * 1.000000);
+				wait1.setTime(this.Math.rand(10, 60) * 1.0);
 				c.addOrder(wait1);
 				local move = this.new("scripts/ai/world/orders/move_order");
 				move.setDestination(dest.getTile());
 				move.setRoadsOnly(false);
 				c.addOrder(move);
 				local wait2 = this.new("scripts/ai/world/orders/wait_order");
-				wait2.setTime(this.Math.rand(10, 60) * 1.000000);
+				wait2.setTime(this.Math.rand(10, 60) * 1.0);
 				c.addOrder(wait2);
 				local mercenary = this.new("scripts/ai/world/orders/mercenary_order");
 				mercenary.setSettlement(dest);

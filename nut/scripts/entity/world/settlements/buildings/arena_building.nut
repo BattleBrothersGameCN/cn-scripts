@@ -26,23 +26,23 @@ this.arena_building <- this.inherit("scripts/entity/world/settlements/buildings/
 		this.m.Sounds = [
 			{
 				File = "ambience/buildings/arena_01.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/arena_02.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/arena_03.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/arena_04.wav",
-				Volume = 0.750000,
-				Pitch = 1.000000
+				Volume = 0.75,
+				Pitch = 1.0
 			}
 		];
 		this.m.SoundsAtNight = [];

@@ -41,7 +41,7 @@ this.missing_eye_injury <- this.inherit("scripts/skills/injury_permanent/permane
 
 	function onUpdate( _properties )
 	{
-		_properties.RangedSkillMult *= 0.500000;
+		_properties.RangedSkillMult *= 0.5;
 		_properties.Vision -= 2;
 	}
 

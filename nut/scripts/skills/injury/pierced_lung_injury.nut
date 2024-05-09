@@ -13,7 +13,7 @@ this.pierced_lung_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.HealingTimeMin = 5;
 		this.m.HealingTimeMax = 7;
 		this.m.IsShownOnBody = true;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -49,7 +49,7 @@ this.pierced_lung_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.StaminaMult *= 0.400000;
+		_properties.StaminaMult *= 0.4;
 	}
 
 });

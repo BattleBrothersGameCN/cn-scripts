@@ -17,13 +17,13 @@ this.goblin_falchion <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_goblin_weapon_02";
 		this.m.Value = 900;
-		this.m.Condition = 52.000000;
-		this.m.ConditionMax = 52.000000;
+		this.m.Condition = 52.0;
+		this.m.ConditionMax = 52.0;
 		this.m.StaminaModifier = -4;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 45;
-		this.m.ArmorDamageMult = 0.700000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.7;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function onEquip()

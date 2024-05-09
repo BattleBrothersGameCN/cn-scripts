@@ -6,7 +6,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.oathtakers_skull_cracked";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "{[img]gfx/ui/events/event_183.png[/img]{%oathtaker%颤抖着拿着年轻的安瑟姆的骷髅冲进帐篷。%SPEECH_ON%它断了！%SPEECH_OFF%你从座位上跳起来，看了看年轻的安瑟姆圣洁的遗骸。骷髅后面有一道细小的裂痕，起初看上去并不太严重，但当你伸出小指并提起时，骨头分裂了。你俩都倒抽了一口气，放下骷髅。毫无疑问，只需再付出一点点力气就可以将骷髅分开。%SPEECH_ON%我们该怎么办？怎样修复它？%SPEECH_OFF%你仔细地思考这个问题。上次发生这样的事时，年轻的安瑟姆的下颚断了，誓言盟士们也断了——有一组仍然是誓言盟士，而另一组则成为了野蛮的亵渎者，誓言带来者。你不会让这种事情再次发生。}",
@@ -66,7 +66,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Oathtaker.improveMood(1.000000, "他对年幼的安瑟姆的信任加倍了。");
+				_event.m.Oathtaker.improveMood(1.0, "他对年幼的安瑟姆的信任加倍了。");
 
 				if (_event.m.Oathtaker.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -105,7 +105,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.paladin")
 					{
-						bro.worsenMood(0.250000, "他认为自己没有恪守誓言。");
+						bro.worsenMood(0.25, "他认为自己没有恪守誓言。");
 
 						if (this.Math.rand(1, 100) <= 33)
 						{
@@ -129,7 +129,7 @@ this.oathtakers_skull_cracked_event <- this.inherit("scripts/events/event", {
 						}
 					}
 
-					bro.improveMood(0.750000, "在誓言之后，被迫加倍努力。");
+					bro.improveMood(0.75, "在誓言之后，被迫加倍努力。");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

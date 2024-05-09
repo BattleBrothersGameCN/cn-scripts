@@ -4,7 +4,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.holywar_ill_southerners";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 70.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_71.png[/img]{你遇到一个农庄，你本打算快速通过不料突然一扇门摆开了，一个男人从中倒出来，腿交叉过门厅，直到他平倒在前院。 拔出了剑，你检查了他。 翻过他显露出一张又绿又紫的脸，嘴上都是呕吐物与干掉的血，头发也不停的掉下来。 你离开他并进入农庄，在那里你找到了更多像他一样的人。 他们都南方人，染上了某种他们或许不了解的北方疾病。 通过他们装备的败坏程度，他们已经在这里待了有一段时间了。\n\n 其中一个南方人向你伸出他骨瘦如柴的手。%SPEECH_ON%求你了，将我们送往镀金者。 这个世界已经没有光了。%SPEECH_OFF%}",
@@ -70,7 +70,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getEthnicity() == 1 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(1.000000, "认可你决定结束镀金者同胞的痛苦");
+						bro.improveMood(1.0, "认可你决定结束镀金者同胞的痛苦");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -83,7 +83,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.worsenMood(0.750000, "不喜欢你结束了南方侵略者的苦难");
+						bro.worsenMood(0.75, "不喜欢你结束了南方侵略者的苦难");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -135,7 +135,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getEthnicity() == 1 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.worsenMood(1.000000, "不喜欢你让镀金者的同胞慢慢死去");
+						bro.worsenMood(1.0, "不喜欢你让镀金者的同胞慢慢死去");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -148,7 +148,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 66)
 					{
-						bro.improveMood(0.750000, "认可你让南方侵略者去死的决定");
+						bro.improveMood(0.75, "认可你让南方侵略者去死的决定");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{
@@ -189,7 +189,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.200000)
+		if (currentTile.SquareCoords.Y < this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

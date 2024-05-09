@@ -56,12 +56,12 @@ gt.Const.Tactical.Settings <- {
 	AreaOfEffectIcon = "overlay_aoe_attack",
 	SkillOverlayOffsetX = 0,
 	SkillOverlayOffsetY = 105,
-	SkillOverlayScale = 0.750000,
+	SkillOverlayScale = 0.75,
 	SkillOverlayStayDuration = 500,
 	SkillOverlayFadeDuration = 900,
 	AttackEffectOffsetX = 35,
 	AttackEffectOffsetY = 40,
-	AttackEffectScale = 1.000000,
+	AttackEffectScale = 1.0,
 	AttackEffectStayDuration = 0,
 	AttackEffectFadeInDuration = 150,
 	AttackEffectFadeOutDuration = 150,
@@ -71,7 +71,7 @@ gt.Const.Tactical.Settings <- {
 	SkillIconStayDuration = 550,
 	SkillIconFadeOutDuration = 180,
 	SkillIconMovement = this.createVec(0, -200),
-	SkillIconScale = 0.750000,
+	SkillIconScale = 0.75,
 	CameraWaitForEventDelay = 500,
 	CameraNextEventDelay = 1000,
 	SwitchWeaponAPCost = 4,
@@ -101,25 +101,25 @@ gt.Const.Tactical.AmbientLightingColor <- {
 	]
 };
 gt.Const.Tactical.AmbientLightingSaturation <- {
-	Default = 1.000000,
-	Fog = 0.900000,
-	Dawn = 1.000000,
-	Dusk = 1.000000,
-	Night = 0.500000,
-	Midday = 1.000000,
-	Rain = 1.000000,
-	LightRain = 1.000000,
-	Storm = 0.900000,
-	Desert = 1.000000,
+	Default = 1.0,
+	Fog = 0.9,
+	Dawn = 1.0,
+	Dusk = 1.0,
+	Night = 0.5,
+	Midday = 1.0,
+	Rain = 1.0,
+	LightRain = 1.0,
+	Storm = 0.9,
+	Desert = 1.0,
 	Time = [
-		1.000000,
-		1.000000,
-		1.000000,
-		1.000000,
-		1.000000,
-		1.000000,
-		0.500000,
-		0.900000
+		1.0,
+		1.0,
+		1.0,
+		1.0,
+		1.0,
+		1.0,
+		0.5,
+		0.9
 	]
 };
 gt.Const.Tactical.TileBlendPriority <- {
@@ -261,482 +261,482 @@ gt.Const.Tactical.TerrainMovementSound <- [
 	[
 		{
 			File = "movement/movement_dry_earth_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_dry_earth_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_stone_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_grass_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_dry_earth_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_forest_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_forest_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_forest_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_forest_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_forest_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_muddy_earth_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_muddy_earth_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_muddy_earth_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_muddy_earth_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_muddy_earth_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_grass_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_shallow_water_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_shallow_water_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_shallow_water_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_shallow_water_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_grass_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_grass_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_dry_earth_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_dry_earth_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_dry_earth_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_snow_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_snow_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_snow_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_snow_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_snow_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_snow_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_snow_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_snow_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_stone_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_stone_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_stone_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/dlc6/movement_sand_01.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/dlc6/movement_sand_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/dlc6/movement_sand_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/dlc6/movement_sand_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/dlc6/movement_sand_05.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/dlc6/movement_sand_06.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/dlc6/movement_sand_07.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/dlc6/movement_sand_08.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	],
 	[
 		{
 			File = "movement/movement_shallow_water_00.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_shallow_water_02.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_shallow_water_03.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		},
 		{
 			File = "movement/movement_shallow_water_04.wav",
-			Volume = 1.000000,
-			Pitch = 1.000000
+			Volume = 1.0,
+			Pitch = 1.0
 		}
 	]
 ];
@@ -781,18 +781,18 @@ gt.Const.Tactical.LocationTemplate <- {
 	AdditionalRadius = 0
 };
 gt.Const.Tactical.HitInfo <- {
-	DamageRegular = 0.000000,
-	DamageArmor = 0.000000,
-	DamageDirect = 0.000000,
-	DamageFatigue = 0.000000,
+	DamageRegular = 0.0,
+	DamageArmor = 0.0,
+	DamageDirect = 0.0,
+	DamageFatigue = 0.0,
 	DamageMinimum = 0,
 	BodyPart = 0,
-	BodyDamageMult = 1.000000,
-	FatalityChanceMult = 1.000000,
+	BodyDamageMult = 1.0,
+	FatalityChanceMult = 1.0,
 	DamageInflictedHitpoints = 0,
 	DamageInflictedArmor = 0,
 	Injuries = null,
-	InjuryThresholdMult = 1.000000,
+	InjuryThresholdMult = 1.0,
 	Tile = null,
 	IsPlayingArmorSound = true
 };

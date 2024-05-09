@@ -31,9 +31,9 @@ this.refugees_situation <- this.inherit("scripts/entity/world/settlements/situat
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.RarityMult *= 0.900000;
-		_modifiers.FoodRarityMult *= 0.750000;
-		_modifiers.FoodPriceMult *= 1.250000;
+		_modifiers.RarityMult *= 0.9;
+		_modifiers.FoodRarityMult *= 0.75;
+		_modifiers.FoodPriceMult *= 1.25;
 	}
 
 	function onUpdateDraftList( _draftList )

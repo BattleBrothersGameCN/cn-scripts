@@ -22,7 +22,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 		CurrentActionState = null,
 		SelectedSkillID = null,
 		IsInputLocked = false,
-		LastFatigueSoundTime = 0.000000,
+		LastFatigueSoundTime = 0.0,
 		LastTileSelected = null,
 		LastTileHovered = null,
 		LastTileHoveredHadEntity = null,
@@ -133,12 +133,12 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 		if (_f)
 		{
-			this.Time.setVirtualSpeed(0.000000);
+			this.Time.setVirtualSpeed(0.0);
 			this.m.IsAIPaused = true;
 		}
 		else
 		{
-			this.Time.setVirtualSpeed(1.000000);
+			this.Time.setVirtualSpeed(1.0);
 			this.m.IsAIPaused = false;
 		}
 	}
@@ -449,12 +449,12 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 		{
 			if (_mouse.getState() == 3)
 			{
-				this.Tactical.getCamera().zoomBy(-this.Time.getDelta() * this.Math.max(60, this.Time.getFPS()) * 0.300000);
+				this.Tactical.getCamera().zoomBy(-this.Time.getDelta() * this.Math.max(60, this.Time.getFPS()) * 0.3);
 				return true;
 			}
 			else if (_mouse.getState() == 4)
 			{
-				this.Tactical.getCamera().zoomBy(this.Time.getDelta() * this.Math.max(60, this.Time.getFPS()) * 0.300000);
+				this.Tactical.getCamera().zoomBy(this.Time.getDelta() * this.Math.max(60, this.Time.getFPS()) * 0.3);
 				return true;
 			}
 		}
@@ -531,9 +531,9 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 						if (!item.isChangeableInBattle() && item.isDroppedAsLoot())
 						{
-							if (item.getCondition() > 1 && item.getConditionMax() > 1 && item.getCondition() > item.getConditionMax() * 0.660000 && this.Math.rand(1, 100) <= 50)
+							if (item.getCondition() > 1 && item.getConditionMax() > 1 && item.getCondition() > item.getConditionMax() * 0.66 && this.Math.rand(1, 100) <= 50)
 							{
-								local c = this.Math.minf(item.getCondition(), this.Math.rand(this.Math.maxf(10, item.getConditionMax() * 0.350000), item.getConditionMax()));
+								local c = this.Math.minf(item.getCondition(), this.Math.rand(this.Math.maxf(10, item.getConditionMax() * 0.35), item.getConditionMax()));
 								item.setCondition(c);
 							}
 
@@ -567,7 +567,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 		{
 			if (this.Tactical.Entities.getAmmoSpent() > 0 && this.World.Assets.m.IsRecoveringAmmo)
 			{
-				local amount = this.Math.max(1, this.Tactical.Entities.getAmmoSpent() * 0.200000);
+				local amount = this.Math.max(1, this.Tactical.Entities.getAmmoSpent() * 0.2);
 				amount = this.Math.rand(amount / 2, amount);
 
 				if (amount > 0)
@@ -580,7 +580,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 			if (this.Tactical.Entities.getArmorParts() > 0 && this.World.Assets.m.IsRecoveringArmor)
 			{
-				local amount = this.Math.min(60, this.Math.max(1, this.Tactical.Entities.getArmorParts() * this.Const.World.Assets.ArmorPartsPerArmor * 0.150000));
+				local amount = this.Math.min(60, this.Math.max(1, this.Tactical.Entities.getArmorParts() * this.Const.World.Assets.ArmorPartsPerArmor * 0.15));
 				amount = this.Math.rand(amount / 2, amount);
 
 				if (amount > 0)
@@ -862,7 +862,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 	function spawnRetreatIcon( _tile )
 	{
 		local icon = _tile.spawnDetail("icon_fleeing", 0, false, false, this.createVec(15, 0));
-		icon.Scale = 0.660000;
+		icon.Scale = 0.66;
 		icon.Alpha = 84;
 	}
 
@@ -1081,7 +1081,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 			{
 				this.Tactical.TurnSequenceBar.flashProgressbars(!skill.isAffordableBasedOnAP(), !skill.isAffordableBasedOnFatigue());
 
-				if (!skill.isAffordable() && this.m.LastFatigueSoundTime + 3.000000 < this.Time.getVirtualTimeF())
+				if (!skill.isAffordable() && this.m.LastFatigueSoundTime + 3.0 < this.Time.getVirtualTimeF())
 				{
 					activeEntity.playSound(this.Const.Sound.ActorEvent.Fatigue, this.Const.Sound.Volume.Actor * activeEntity.m.SoundVolume[this.Const.Sound.ActorEvent.Fatigue]);
 					this.m.LastFatigueSoundTime = this.Time.getVirtualTimeF();
@@ -1858,7 +1858,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 		local isVictory = this.Tactical.Entities.getCombatResult() == this.Const.Tactical.CombatResult.EnemyDestroyed || this.Tactical.Entities.getCombatResult() == this.Const.Tactical.CombatResult.EnemyRetreated;
 		this.m.IsFogOfWarVisible = false;
 		this.Tactical.fillVisibility(this.Const.Faction.Player, true);
-		this.Tactical.getCamera().zoomTo(2.000000, 1.000000);
+		this.Tactical.getCamera().zoomTo(2.0, 1.0);
 		this.Tooltip.hide();
 		this.m.TacticalScreen.hide();
 		this.Tactical.OrientationOverlay.removeOverlays();
@@ -2510,7 +2510,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 	function tactical_flee_screen_onFleePressed()
 	{
-		this.Sound.play("sounds/retreat_01.wav", 0.750000);
+		this.Sound.play("sounds/retreat_01.wav", 0.75);
 
 		if (this.isScenarioMode() || this.isEveryoneSafe())
 		{
@@ -2528,8 +2528,8 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 			this.m.MenuStack.pop();
 			this.Settings.getTempGameplaySettings().FasterPlayerMovement = true;
 			this.Settings.getTempGameplaySettings().FasterAIMovement = true;
-			this.Tactical.getCamera().zoomTo(this.Math.maxf(this.Tactical.getCamera().Zoom, 1.500000), 1.000000);
-			this.Time.setVirtualSpeed(1.500000);
+			this.Tactical.getCamera().zoomTo(this.Math.maxf(this.Tactical.getCamera().Zoom, 1.5), 1.0);
+			this.Time.setVirtualSpeed(1.5);
 			local alive = this.Tactical.Entities.getAllInstancesAsArray();
 
 			foreach( bro in alive )
@@ -2540,12 +2540,12 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 					{
 						local agent = bro.getSkills().getSkillByID("effects.charmed").m.OriginalAgent;
 						agent.setUseHeat(true);
-						agent.getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 1.000000;
+						agent.getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 1.0;
 					}
 					else
 					{
 						bro.getAIAgent().setUseHeat(true);
-						bro.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 1.000000;
+						bro.getAIAgent().getProperties().BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 1.0;
 					}
 
 					this.Tactical.TurnSequenceBar.updateEntity(bro.getID());
@@ -2999,7 +2999,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 				break;
 			}
 
-			this.Time.setVirtualSpeed(0.100000);
+			this.Time.setVirtualSpeed(0.1);
 			break;
 
 		case 36:
@@ -3008,7 +3008,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 				break;
 			}
 
-			this.Time.setVirtualSpeed(1.000000);
+			this.Time.setVirtualSpeed(1.0);
 			break;
 
 		case 31:
@@ -3664,7 +3664,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 			case 48:
 				if (_key.getModifier() != 2)
 				{
-					this.Tactical.getCamera().move(-1500.000000 * this.Time.getDelta(), 0);
+					this.Tactical.getCamera().move(-1500.0 * this.Time.getDelta(), 0);
 					return true;
 				}
 
@@ -3674,7 +3674,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 			case 50:
 				if (_key.getModifier() != 2)
 				{
-					this.Tactical.getCamera().move(1500.000000 * this.Time.getDelta(), 0);
+					this.Tactical.getCamera().move(1500.0 * this.Time.getDelta(), 0);
 					return true;
 				}
 
@@ -3685,7 +3685,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 			case 49:
 				if (_key.getModifier() != 2)
 				{
-					this.Tactical.getCamera().move(0, 1500.000000 * this.Time.getDelta());
+					this.Tactical.getCamera().move(0, 1500.0 * this.Time.getDelta());
 					return true;
 				}
 
@@ -3695,18 +3695,18 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 			case 51:
 				if (_key.getModifier() != 2)
 				{
-					this.Tactical.getCamera().move(0, -1500.000000 * this.Time.getDelta());
+					this.Tactical.getCamera().move(0, -1500.0 * this.Time.getDelta());
 					return true;
 				}
 
 				break;
 
 			case 46:
-				this.Tactical.getCamera().zoomBy(-this.Time.getDelta() * this.Math.max(60, this.Time.getFPS()) * 0.150000);
+				this.Tactical.getCamera().zoomBy(-this.Time.getDelta() * this.Math.max(60, this.Time.getFPS()) * 0.15);
 				break;
 
 			case 47:
-				this.Tactical.getCamera().zoomBy(this.Time.getDelta() * this.Math.max(60, this.Time.getFPS()) * 0.150000);
+				this.Tactical.getCamera().zoomBy(this.Time.getDelta() * this.Math.max(60, this.Time.getFPS()) * 0.15);
 				break;
 			}
 		}

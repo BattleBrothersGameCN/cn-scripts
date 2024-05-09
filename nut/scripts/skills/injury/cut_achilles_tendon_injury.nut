@@ -12,7 +12,7 @@ this.cut_achilles_tendon_injury <- this.inherit("scripts/skills/injury/injury", 
 		this.m.IconMini = "injury_icon_28_mini";
 		this.m.HealingTimeMin = 3;
 		this.m.HealingTimeMax = 5;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -55,7 +55,7 @@ this.cut_achilles_tendon_injury <- this.inherit("scripts/skills/injury/injury", 
 		}
 
 		_properties.MovementAPCostAdditional += 2;
-		_properties.InitiativeMult *= 0.700000;
+		_properties.InitiativeMult *= 0.7;
 	}
 
 });

@@ -35,7 +35,7 @@ this.oath_of_humility_trait <- this.inherit("scripts/skills/traits/character_tra
 
 	function onUpdate( _properties )
 	{
-		_properties.XPGainMult *= 1.100000;
+		_properties.XPGainMult *= 1.1;
 	}
 
 });

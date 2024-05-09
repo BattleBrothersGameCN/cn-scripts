@@ -25,8 +25,8 @@ this.beast_hunters_scenario <- this.inherit("scripts/scenarios/world/starting_sc
 			local bro;
 			bro = roster.create("scripts/entity/tactical/player");
 			bro.m.HireTime = this.Time.getVirtualTimeF();
-			bro.improveMood(1.000000, "杀死了一个危险的女巫");
-			bro.worsenMood(2.500000, "在一次背叛中失去了大部分的战团同伴");
+			bro.improveMood(1.0, "杀死了一个危险的女巫");
+			bro.worsenMood(2.5, "在一次背叛中失去了大部分的战团同伴");
 
 			while (names.find(bro.getNameOnly()) != null)
 			{
@@ -105,7 +105,7 @@ this.beast_hunters_scenario <- this.inherit("scripts/scenarios/world/starting_sc
 		this.World.Assets.getStash().add(this.new("scripts/items/misc/werewolf_pelt_item"));
 		this.World.Assets.getStash().add(this.new("scripts/items/misc/werewolf_pelt_item"));
 		this.World.Assets.getStash().add(this.new("scripts/items/accessory/night_vision_elixir_item"));
-		this.World.Assets.m.Money = this.Math.round(this.World.Assets.m.Money * 0.750000);
+		this.World.Assets.m.Money = this.Math.round(this.World.Assets.m.Money * 0.75);
 	}
 
 	function onSpawnPlayer()
@@ -171,10 +171,10 @@ this.beast_hunters_scenario <- this.inherit("scripts/scenarios/world/starting_sc
 
 	function onInit()
 	{
-		this.World.Assets.m.BuyPriceMult = 1.100000;
-		this.World.Assets.m.SellPriceMult = 0.900000;
+		this.World.Assets.m.BuyPriceMult = 1.1;
+		this.World.Assets.m.SellPriceMult = 0.9;
 		this.World.Assets.m.ExtraLootChance = 50;
-		this.World.Assets.m.FootprintVision = 1.500000;
+		this.World.Assets.m.FootprintVision = 1.5;
 	}
 
 });

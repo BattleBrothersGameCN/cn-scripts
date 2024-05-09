@@ -3,10 +3,10 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 	function create()
 	{
 		this.contract.create();
-		this.m.DifficultyMult = 1.300000;
+		this.m.DifficultyMult = 1.3;
 		this.m.Type = "contract.arena_tournament";
 		this.m.Name = "竞技场锦标赛";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 1.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 1.0;
 	}
 
 	function onImportIntro()
@@ -1088,8 +1088,8 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		local p = this.World.State.getPlayer().getStrength();
 		p = p / this.World.getPlayerRoster().getSize();
 		p = p * 12;
-		local s = this.Math.maxf(0.750000, 1.000000 * this.Math.pow(0.010000 * p, 0.950000) + this.Math.minf(0.500000, this.World.getTime().Days * 0.005000));
-		local d = this.Math.minf(5.000000, s);
+		local s = this.Math.maxf(0.75, 1.0 * this.Math.pow(0.01 * p, 0.95) + this.Math.minf(0.5, this.World.getTime().Days * 0.005));
+		local d = this.Math.minf(5.0, s);
 		return d * this.Const.Difficulty.EnemyMult[this.World.Assets.getCombatDifficulty()];
 	}
 

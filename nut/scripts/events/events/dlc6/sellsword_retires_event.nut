@@ -6,7 +6,7 @@ this.sellsword_retires_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.sellsword_retires";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_64.png[/img]{你遇到一个坐在路边的人。 他穿着些破损的盔甲还有把比之更加破损的武器在他腰边。 他用手用最微弱的力道挥了挥。%SPEECH_ON%晚上好。如果你不是佣兵，那我就从没把我爸爸的裤子点着。%SPEECH_OFF%他刚才说的听起来是个非常有趣的故事，但是比起那个你问他在这路中间干什么。 更重要的，你问他，一个还很健壮的小伙，需不需要工作。%SPEECH_ON%工作？不。我不需要。 我已经干过佣兵这一行而且我已经干完了。 你知道吗，这儿。%SPEECH_OFF%他开始脱下他的盔甲并把他丢到你面前。%SPEECH_ON%拿走它。我不再需要那种生活了。 把武器也拿走。 我要把这些都抛在身后。 你也应该，但我知道你不会。 在一切都太迟之前。 我要在这片大地上走到我入土。 至于你，祝你好运。%SPEECH_OFF%就像那样，陌生人离开了。}",

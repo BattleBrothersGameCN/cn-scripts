@@ -35,22 +35,22 @@ this.wool_spinner_location <- this.inherit("scripts/entity/world/attached_locati
 		{
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/linen_tunic"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/linen_tunic"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/hood"
 			});
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "trade/cloth_rolls_item"
 			});
 		}

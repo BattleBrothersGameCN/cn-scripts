@@ -29,7 +29,7 @@ this.bash <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 13;
 		this.m.MinRange = 1;
@@ -53,7 +53,7 @@ this.bash <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInMaces ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInMaces ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -66,7 +66,7 @@ this.bash <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.FatigueDealtPerHitMult += 2.000000;
+			_properties.FatigueDealtPerHitMult += 2.0;
 		}
 	}
 

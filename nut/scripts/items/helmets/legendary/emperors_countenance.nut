@@ -18,8 +18,8 @@ this.emperors_countenance <- this.inherit("scripts/items/helmets/helmet", {
 		this.m.ImpactSound = this.Const.Sound.ArmorHalfplateImpact;
 		this.m.InventorySound = this.Const.Sound.ArmorHalfplateImpact;
 		this.m.Value = 20000;
-		this.m.Condition = 400.000000;
-		this.m.ConditionMax = 400.000000;
+		this.m.Condition = 400.0;
+		this.m.ConditionMax = 400.0;
 		this.m.StaminaModifier = -20;
 		this.m.ItemType = this.m.ItemType | this.Const.Items.ItemType.Legendary;
 	}
@@ -43,12 +43,12 @@ this.emperors_countenance <- this.inherit("scripts/items/helmets/helmet", {
 		if (_attacker != null && _attacker.isAlive() && _attacker.getHitpoints() > 0 && _attacker.getID() != this.getContainer().getActor().getID() && _attacker.getTile().getDistanceTo(this.getContainer().getActor().getTile()) == 1 && !_attacker.getCurrentProperties().IsImmuneToDamageReflection)
 		{
 			local hitInfo = clone this.Const.Tactical.HitInfo;
-			hitInfo.DamageRegular = this.Math.maxf(1.000000, _damage * 0.250000);
-			hitInfo.DamageArmor = this.Math.maxf(1.000000, _damage * 0.250000);
-			hitInfo.DamageDirect = 0.000000;
+			hitInfo.DamageRegular = this.Math.maxf(1.0, _damage * 0.25);
+			hitInfo.DamageArmor = this.Math.maxf(1.0, _damage * 0.25);
+			hitInfo.DamageDirect = 0.0;
 			hitInfo.BodyPart = this.Const.BodyPart.Head;
-			hitInfo.BodyDamageMult = 1.000000;
-			hitInfo.FatalityChanceMult = 0.000000;
+			hitInfo.BodyDamageMult = 1.0;
+			hitInfo.FatalityChanceMult = 0.0;
 			_attacker.onDamageReceived(_attacker, null, hitInfo);
 		}
 	}

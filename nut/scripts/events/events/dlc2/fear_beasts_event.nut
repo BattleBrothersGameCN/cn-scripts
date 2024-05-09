@@ -6,7 +6,7 @@ this.fear_beasts_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.fear_beasts";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]{%brother%正在一块树皮上刻兔子，直到他生气地把整个东西扔进了篝火里。%SPEECH_ON%哦，我在瞎扯什么呢？我希望我能在这里狩猎！但这不是玩，这是怪物！是夜之生物！狗屁，全部都是狗屁，它们从哪里来的？我告诉你，我不会被它们中的一个杀了！不可能的！%SPEECH_OFF%战团其余的人看着他从情绪爆发中平静下来。他静静地看着雕刻着兔子的树皮的在篝火中焦糊。}",

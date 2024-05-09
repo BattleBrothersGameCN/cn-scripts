@@ -6,7 +6,7 @@ this.fear_greenskins_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.fear_greenskins";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]{%brother% 双手扶膝，凝视着篝火。%SPEECH_ON%该死，伙计。我不知道我是否能再次面对兽人了。他们比我们强壮得多，速度更快！我们，在人数至少两倍、不，三倍的情况下才能再次与他们对抗！%SPEECH_OFF% 你告诉战团要注意他。害怕是可以理解的，但散布它肯定不行。}",

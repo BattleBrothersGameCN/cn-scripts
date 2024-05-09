@@ -57,11 +57,11 @@ this.goblin <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/goblin_idle_13.wav",
 			"sounds/enemies/goblin_idle_14.wav"
 		];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 0.900000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Flee] = 1.000000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 0.500000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 1.250000;
-		this.m.SoundPitch = this.Math.rand(95, 110) * 0.010000;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 0.9;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Flee] = 1.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 0.5;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 1.25;
+		this.m.SoundPitch = this.Math.rand(95, 110) * 0.01;
 		this.m.Flags.add("goblin");
 	}
 
@@ -77,8 +77,8 @@ this.goblin <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail("bust_goblin_body_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = skin.Color;
 			decal.Saturation = skin.Saturation;
-			decal.setBrightness(0.900000);
-			decal.Scale = 0.950000;
+			decal.setBrightness(0.9);
+			decal.Scale = 0.95;
 			_tile.spawnDetail(this.getItems().getAppearance().CorpseArmor, this.Const.Tactical.DetailFlag.Corpse, flip);
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
@@ -88,15 +88,15 @@ this.goblin <- this.inherit("scripts/entity/tactical/actor", {
 					decal = _tile.spawnDetail(this.getSprite("head").getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 					decal.Color = skin.Color;
 					decal.Saturation = skin.Saturation;
-					decal.setBrightness(0.900000);
-					decal.Scale = 0.950000;
+					decal.setBrightness(0.9);
+					decal.Scale = 0.95;
 				}
 
 				if (this.getItems().getAppearance().HelmetCorpse != "")
 				{
 					decal = _tile.spawnDetail(this.getItems().getAppearance().HelmetCorpse, this.Const.Tactical.DetailFlag.Corpse, flip);
-					decal.setBrightness(0.900000);
-					decal.Scale = 0.950000;
+					decal.setBrightness(0.9);
+					decal.Scale = 0.95;
 				}
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
@@ -105,32 +105,32 @@ this.goblin <- this.inherit("scripts/entity/tactical/actor", {
 					this.getSprite("head").getBrush().Name + "_dead",
 					this.getItems().getAppearance().HelmetCorpse
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, 30), 180.000000, this.getSprite("head").getBrush().Name + "_dead_bloodpool");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, 30), 180.0, this.getSprite("head").getBrush().Name + "_dead_bloodpool");
 				decap[0].Color = skin.Color;
 				decap[0].Saturation = skin.Saturation;
-				decap[0].setBrightness(0.900000);
-				decap[0].Scale = 0.950000;
+				decap[0].setBrightness(0.9);
+				decap[0].Scale = 0.95;
 
 				if (decap.len() >= 2)
 				{
-					decap[1].setBrightness(0.900000);
+					decap[1].setBrightness(0.9);
 				}
 			}
 
 			if (_fatalityType == this.Const.FatalityType.Disemboweled)
 			{
 				local decal = _tile.spawnDetail("bust_goblin_body_dead_guts", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
 				decal = _tile.spawnDetail(this.getItems().getAppearance().CorpseArmor + "_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
 				decal = _tile.spawnDetail(this.getItems().getAppearance().CorpseArmor + "_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.950000;
+				decal.Scale = 0.95;
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -177,8 +177,8 @@ this.goblin <- this.inherit("scripts/entity/tactical/actor", {
 		quiver.Visible = false;
 		local body = this.addSprite("body");
 		body.setBrush("bust_goblin_01_body");
-		body.varySaturation(0.100000);
-		body.varyColor(0.070000, 0.070000, 0.090000);
+		body.varySaturation(0.1);
+		body.varyColor(0.07, 0.07, 0.09);
 		local injury_body = this.addSprite("injury_body");
 		injury_body.Visible = false;
 		injury_body.setBrush("bust_goblin_01_body_injured");
@@ -210,7 +210,7 @@ this.goblin <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onAfterInit()
 	{
-		this.getSprite("status_rooted").Scale = 0.470000;
+		this.getSprite("status_rooted").Scale = 0.47;
 		this.setSpriteOffset("status_rooted", this.createVec(0, -5));
 		this.actor.onAfterInit();
 	}

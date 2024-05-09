@@ -32,8 +32,8 @@ this.slave_revolt_situation <- this.inherit("scripts/entity/world/settlements/si
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.RecruitsMult *= 0.750000;
-		_modifiers.RarityMult *= 0.500000;
+		_modifiers.RecruitsMult *= 0.75;
+		_modifiers.RarityMult *= 0.5;
 	}
 
 	function onUpdateDraftList( _draftList )

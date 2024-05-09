@@ -19,13 +19,13 @@ this.hand_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_axe_02";
 		this.m.Value = 900;
 		this.m.ShieldDamage = 12;
-		this.m.Condition = 68.000000;
-		this.m.ConditionMax = 68.000000;
+		this.m.Condition = 68.0;
+		this.m.ConditionMax = 68.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 45;
-		this.m.ArmorDamageMult = 1.200000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.2;
+		this.m.DirectDamageMult = 0.3;
 	}
 
 	function onEquip()

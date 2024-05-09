@@ -6,7 +6,7 @@ this.desert_heat_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.desert_heat";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_161.png[/img]{%heatbro% 倒向沙地上，一只腿发软，刚挺直另一只腿就发软了。 你回头看他时正好看到他翻白眼瘫倒下去。 战团赶来帮他，给他水和遮蔽。 他又抡手又扭腰的恢复过来，但是炎热已经造成了伤害。}",
@@ -27,7 +27,7 @@ this.desert_heat_event <- this.inherit("scripts/events/event", {
 			{
 				local effect = this.new("scripts/skills/effects_world/exhausted_effect");
 				_event.m.SomeGuy.getSkills().add(effect);
-				_event.m.SomeGuy.worsenMood(1.000000, "体验中暑");
+				_event.m.SomeGuy.worsenMood(1.0, "体验中暑");
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),

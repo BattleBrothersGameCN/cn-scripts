@@ -8,7 +8,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.something_in_barn";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_115.png[/img]{有个人来到战团那里，说他的谷仓里被一只邪恶的恐狼所困。%anatomist% 解剖学家听到后滑了过来，他问他是否确定这只幼狼是邪恶的。陌生人点了点头。%SPEECH_ON%想必这是半只恐狼的后代吧，可恶的家伙躲在谷仓里，只有一个入口，这件事很棘手。%SPEECH_OFF%他请求你去杀死这只幼狼，因为狼一旦逃脱就难以收拾。%anatomist% 对于这项任务非常好奇，因为关于幼狼的知识还十分有限。他自告奋勇要和你一起去看看这个婴儿一样的生物。}",
@@ -110,7 +110,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(0.750000, "意外杀死了某人的狗。");
+				_event.m.Anatomist.worsenMood(0.75, "意外杀死了某人的狗。");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -150,7 +150,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + item.getName()
 				});
-				_event.m.BeastSlayer.improveMood(1.000000, "利用他的怪物猎杀技能");
+				_event.m.BeastSlayer.improveMood(1.0, "利用他的怪物猎杀技能");
 
 				if (_event.m.BeastSlayer.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -161,7 +161,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Anatomist.worsenMood(0.500000, "尝试击败怪物，但却让自己很尴尬。");
+				_event.m.Anatomist.worsenMood(0.5, "尝试击败怪物，但却让自己很尴尬。");
 				_event.m.Anatomist.addXP(200, false);
 				_event.m.Anatomist.updateLevel();
 				this.List.push({
@@ -215,7 +215,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + item.getName()
 				});
-				_event.m.Anatomist.improveMood(1.000000, "得研究一个有趣的样本。");
+				_event.m.Anatomist.improveMood(1.0, "得研究一个有趣的样本。");
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 				this.Characters.push(_event.m.Farmer.getImagePath());
 			}
@@ -239,7 +239,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.000000, "被剥夺了研究机会");
+				_event.m.Anatomist.worsenMood(1.0, "被剥夺了研究机会");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

@@ -9,16 +9,16 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r <= 70)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
 		this.m.Type = "contract.last_stand";
 		this.m.Name = "保卫定居点";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		this.m.MakeAllSpawnsResetOrdersOnContractEnd = false;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 	}
@@ -41,12 +41,12 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -425,7 +425,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 					function getResult()
 					{
 						this.Flags.set("Wave", 1);
-						this.Flags.set("TimeWaveHits", this.Time.getVirtualTimeF() + 8.000000);
+						this.Flags.set("TimeWaveHits", this.Time.getVirtualTimeF() + 8.0);
 						this.Contract.setState("Running_Wait");
 						return 0;
 					}
@@ -499,7 +499,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 					function getResult()
 					{
 						this.Flags.set("Wave", this.Flags.get("Wave") + 1);
-						this.Flags.set("TimeWaveHits", this.Time.getVirtualTimeF() + 3.000000);
+						this.Flags.set("TimeWaveHits", this.Time.getVirtualTimeF() + 3.0);
 						this.Flags.set("Militia", 3);
 						this.Flags.set("MilitiaStart", 3);
 						this.Contract.setState("Running_Wait");
@@ -521,7 +521,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 					function getResult()
 					{
 						this.Flags.set("Wave", this.Flags.get("Wave") + 1);
-						this.Flags.set("TimeWaveHits", this.Time.getVirtualTimeF() + 3.000000);
+						this.Flags.set("TimeWaveHits", this.Time.getVirtualTimeF() + 3.0);
 						this.Flags.set("Militia", 6);
 						this.Flags.set("MilitiaStart", 6);
 						this.Contract.setState("Running_Wait");
@@ -543,7 +543,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 					function getResult()
 					{
 						this.Flags.set("Wave", this.Flags.get("Wave") + 1);
-						this.Flags.set("TimeWaveHits", this.Time.getVirtualTimeF() + 3.000000);
+						this.Flags.set("TimeWaveHits", this.Time.getVirtualTimeF() + 3.0);
 						this.Flags.set("Militia", 8);
 						this.Flags.set("MilitiaStart", 8);
 						this.Contract.setState("Running_Wait");
@@ -711,7 +711,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 		attack.setTargetTile(originTile);
 		c.addOrder(attack);
 		local destroy = this.new("scripts/ai/world/orders/convert_order");
-		destroy.setTime(60.000000);
+		destroy.setTime(60.0);
 		destroy.setSafetyOverride(true);
 		destroy.setTargetTile(originTile);
 		destroy.setTargetID(this.m.Origin.getID());
@@ -735,10 +735,10 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 		c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(false);
 		c.getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
 		local wait = this.new("scripts/ai/world/orders/wait_order");
-		wait.setTime(15.000000);
+		wait.setTime(15.0);
 		c.addOrder(wait);
 		local destroy = this.new("scripts/ai/world/orders/convert_order");
-		destroy.setTime(90.000000);
+		destroy.setTime(90.0);
 		destroy.setSafetyOverride(true);
 		destroy.setTargetTile(this.m.Origin.getTile());
 		destroy.setTargetID(this.m.Origin.getID());
@@ -800,7 +800,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 		attack.setTargetTile(originTile);
 		c.addOrder(attack);
 		local destroy = this.new("scripts/ai/world/orders/convert_order");
-		destroy.setTime(60.000000);
+		destroy.setTime(60.0);
 		destroy.setSafetyOverride(true);
 		destroy.setTargetTile(originTile);
 		destroy.setTargetID(this.m.Origin.getID());

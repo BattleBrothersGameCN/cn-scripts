@@ -252,7 +252,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 	function onUpdate( _properties )
 	{
 		local mood = this.getContainer().getActor().getMoodState();
-		local p = this.Math.round(this.getContainer().getActor().getMood() / (this.Const.MoodState.len() - 0.050000) * 100.000000);
+		local p = this.Math.round(this.getContainer().getActor().getMood() / (this.Const.MoodState.len() - 0.05) * 100.0);
 		this.m.Name = this.Const.MoodStateName[mood] + " (" + p + "%)";
 
 		switch(mood)

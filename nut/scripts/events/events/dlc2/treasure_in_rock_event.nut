@@ -8,7 +8,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.treasure_in_rock";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 120.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_66.png[/img]%randombrother%带你来到一个卡里奇峰侧面的裂缝处。你可以看到昏暗中闪烁的物体。不管那是什么，都需要费很大的力气才能挖穿它的泥土包裹。佣兵点点头。%SPEECH_ON%我知道它很结实，但我认为那是值得拿回去的东西。你怎么想?%SPEECH_OFF%",
@@ -102,7 +102,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + item.getName()
 				});
-				_event.m.Miner.improveMood(2.000000, "利用他的采矿经验使战团受益");
+				_event.m.Miner.improveMood(2.0, "利用他的采矿经验使战团受益");
 
 				if (_event.m.Miner.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -148,7 +148,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了一个 " + item.getName()
 				});
-				_event.m.Tiny.improveMood(2.000000, "利用他独特的身材造福战团");
+				_event.m.Tiny.improveMood(2.0, "利用他独特的身材造福战团");
 
 				if (_event.m.Tiny.getMoodState() >= this.Const.MoodState.Neutral)
 				{

@@ -7,7 +7,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.lone_wolf_origin_squire";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_20.png[/img]酒吧里到处都是醉醺醺的人，他们在那里晃荡，欢呼唱歌，与女人们狂欢作乐，其中包括女仆、太太、妓女等等。 一个拿着琵琶的人在跳舞和演奏，另一个拿着金属钹的人在头顶轰鸣，而一个胖子则高唱着战争或爱情的歌曲，无论胜利还是失败的故事都能激起一轮又一轮的共饮啤酒和更多的欢乐。\n\n 你离开酒吧，进入另一栋建筑。 当你站在门口时，风呼啸着吹过满是长凳的教堂中殿。 一个人扫着石头地板，抬头看了一会儿，然后继续工作。 另一个男人高高兴兴地穿过房间，问你是否愿意祈祷。 你拒绝了，他噘起嘴唇，交叉双臂。 隔壁的人群醉醺醺地欢声笑语，好像在嘲笑你们俩，然后那人走了。 你再多呆一会儿，然后离开，回到城镇中心，蹲在一系列的台阶上。 那些台阶的顶端似乎曾经有过一座雕像，但破坏者和掠夺者等人很快就攫取了别人的手艺。 徘徊了一会儿，你就在那儿睡着了。 \n\n 中午你才醒来，你发现一个年轻人站在台阶的底部。 他说他知道你是个骑士，他是来当扈从的。",
@@ -158,7 +158,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 						this.World.getTemporaryRoster().clear();
 						_event.m.Dude.onHired();
 						_event.m.Dude.m.MoodChanges = [];
-						_event.m.Dude.improveMood(1.000000, "成为骑士的扈从");
+						_event.m.Dude.improveMood(1.0, "成为骑士的扈从");
 						_event.m.Dude.getFlags().set("IsLoneWolfSquire", true);
 						_event.m.Dude = null;
 						return 0;

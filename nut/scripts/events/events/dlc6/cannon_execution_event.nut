@@ -6,7 +6,7 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cannon_execution";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_177.png[/img]{你遇到一个军人穿着的男人和一对衣着相似的卫兵。 在他们中间是一个手脚绑在巨大臼炮上的男人，他的躯干面向炮管，他的头靠在瞄具上。 他抬头用侧眼看向你。%SPEECH_ON%啊，旅行者。我这儿陷入了个不小的麻烦。 你看的出来，这些友善的，沉默绅士们想用这个我们时代的技术奇观来把我射出沙漠。 尽管这可以让我避开行刑者的锈剑，我必须坦白在最后时刻看着自己的身体轰炸沙漠生物是相当羞耻的。 对于某些罪行而言固然是合理的，但我只不过偷了点东西而已。%SPEECH_OFF%士兵装束的行刑者瞥向你，但就像那个贼说的意义，他看起来是个哑巴。 或者是聋子，如果去解读他臼炮手的工作是怎么来的。}",
@@ -128,7 +128,7 @@ this.cannon_execution_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head));
-				_event.m.Dude.worsenMood(1.000000, "差点被一个技术奇迹以壮观的方式处决");
+				_event.m.Dude.worsenMood(1.0, "差点被一个技术奇迹以壮观的方式处决");
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
 

@@ -7,7 +7,7 @@ this.nightowl_catches_thief_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.nightowl_catches_thief";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 90.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 90.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_33.png[/img]{从一个奇怪的梦中醒来后，你走出帐篷，发现大部分的战团都在睡觉，只剩夜猫子%nightowl%。他在营地边缘背对着你，但似乎听到你的脚步声，没有看也开口说话了。%SPEECH_ON%就是这样开始的，长官。愤怒，发热。好人变得……啊啊啊。%SPEECH_OFF%他转过身来，向你展示他捉到的一只真正的猫头鹰。它的眼睑半闭，可能是累了逃脱，现在只是被抓住而感到羞辱。你问%nightowl%他是怎么抓到它的。那个佣兵放了鸟，耸了耸肩。%SPEECH_ON%用我的双手。我还抓到了这个。%SPEECH_OFF%他蹲下来，拖起一个此前未见的尸体。%SPEECH_ON%品味不错的小贼。他，嗯……打了折扣，可以这么说。我有点累得说不出话来，所以让我的刀告诉他，店关门了。然后我跟着他的脚步找到了他来的地方，找到了他，嗯，我们可以说是随身物品。%SPEECH_OFF%你点点头。好吧，当然。你告诉这个人你要回去睡觉，明天早上再判断他的行为。他也点了点头。%SPEECH_ON%明白的，长官。我会试着让自己也能睡一会儿。已经过了几天了，或者几周了吗？%SPEECH_OFF%}",
@@ -27,7 +27,7 @@ this.nightowl_catches_thief_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.NightOwl.getImagePath());
-				_event.m.NightOwl.improveMood(1.000000, "晚上抓到一个小偷");
+				_event.m.NightOwl.improveMood(1.0, "晚上抓到一个小偷");
 
 				if (_event.m.NightOwl.getMoodState() >= this.Const.MoodState.Neutral)
 				{

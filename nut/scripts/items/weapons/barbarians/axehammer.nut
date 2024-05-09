@@ -19,14 +19,14 @@ this.axehammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_wildmen_03";
 		this.m.Value = 800;
 		this.m.ShieldDamage = 14;
-		this.m.Condition = 96.000000;
-		this.m.ConditionMax = 96.000000;
+		this.m.Condition = 96.0;
+		this.m.ConditionMax = 96.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 20;
 		this.m.RegularDamageMax = 30;
-		this.m.ArmorDamageMult = 2.000000;
-		this.m.DirectDamageMult = 0.500000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 2.0;
+		this.m.DirectDamageMult = 0.5;
+		this.m.DirectDamageAdd = 0.1;
 	}
 
 	function onEquip()

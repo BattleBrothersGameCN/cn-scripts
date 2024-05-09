@@ -20,13 +20,13 @@ this.rhomphaia <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_rhomphaia_01";
 		this.m.Value = 1300;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 42.000000;
-		this.m.ConditionMax = 42.000000;
+		this.m.Condition = 42.0;
+		this.m.ConditionMax = 42.0;
 		this.m.StaminaModifier = -10;
 		this.m.RegularDamage = 45;
 		this.m.RegularDamageMax = 65;
-		this.m.ArmorDamageMult = 1.050000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 1.05;
+		this.m.DirectDamageMult = 0.2;
 		this.m.ChanceToHitHead = 5;
 	}
 

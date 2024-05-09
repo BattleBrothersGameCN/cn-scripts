@@ -37,12 +37,12 @@ this.noble_faction <- this.inherit("scripts/factions/faction", {
 			{
 				if (s.getFaction() != this.m.ID)
 				{
-					this.World.FactionManager.getFaction(s.getFaction()).addPlayerRelationEx(_r * 0.500000);
+					this.World.FactionManager.getFaction(s.getFaction()).addPlayerRelationEx(_r * 0.5);
 				}
 			}
 		}
 
-		if (this.m.PlayerRelation > 90.000000)
+		if (this.m.PlayerRelation > 90.0)
 		{
 			this.updateAchievement("MakingAllies", 1, 1);
 		}
@@ -59,9 +59,9 @@ this.noble_faction <- this.inherit("scripts/factions/faction", {
 
 			local civilian = s.getFactionOfType(this.Const.FactionType.Settlement);
 
-			if (civilian != null && civilian.getPlayerRelation() < 30.000000)
+			if (civilian != null && civilian.getPlayerRelation() < 30.0)
 			{
-				civilian.addPlayerRelationEx(30.000000 - civilian.getPlayerRelation(), "在战争中改变了立场");
+				civilian.addPlayerRelationEx(30.0 - civilian.getPlayerRelation(), "在战争中改变了立场");
 			}
 		}
 	}
@@ -93,7 +93,7 @@ this.noble_faction <- this.inherit("scripts/factions/faction", {
 
 	function isReadyForContract()
 	{
-		return this.m.Contracts.len() == 0 && (this.m.LastContractTime == 0 || this.Time.getVirtualTimeF() > this.m.LastContractTime + this.World.getTime().SecondsPerDay * 3.000000);
+		return this.m.Contracts.len() == 0 && (this.m.LastContractTime == 0 || this.Time.getVirtualTimeF() > this.m.LastContractTime + this.World.getTime().SecondsPerDay * 3.0);
 	}
 
 	function onSerialize( _out )

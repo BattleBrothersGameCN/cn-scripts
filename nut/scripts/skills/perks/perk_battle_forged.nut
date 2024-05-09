@@ -16,7 +16,7 @@ this.perk_battle_forged <- this.inherit("scripts/skills/skill", {
 	function isHidden()
 	{
 		local armor = this.getContainer().getActor().getArmor(this.Const.BodyPart.Head) + this.getContainer().getActor().getArmor(this.Const.BodyPart.Body);
-		local fm = this.Math.floor((1.000000 - armor * 0.050000 * 0.010000) * 100);
+		local fm = this.Math.floor((1.0 - armor * 0.05 * 0.01) * 100);
 		return fm >= 100;
 	}
 
@@ -28,7 +28,7 @@ this.perk_battle_forged <- this.inherit("scripts/skills/skill", {
 	function getTooltip()
 	{
 		local armor = this.getContainer().getActor().getArmor(this.Const.BodyPart.Head) + this.getContainer().getActor().getArmor(this.Const.BodyPart.Body);
-		local fm = this.Math.floor((1.000000 - armor * 0.050000 * 0.010000) * 100);
+		local fm = this.Math.floor((1.0 - armor * 0.05 * 0.01) * 100);
 		local tooltip = this.skill.getTooltip();
 
 		if (fm < 100)
@@ -61,7 +61,7 @@ this.perk_battle_forged <- this.inherit("scripts/skills/skill", {
 		}
 
 		local armor = this.getContainer().getActor().getArmor(this.Const.BodyPart.Head) + this.getContainer().getActor().getArmor(this.Const.BodyPart.Body);
-		_properties.DamageReceivedArmorMult *= 1.000000 - armor * 0.050000 * 0.010000;
+		_properties.DamageReceivedArmorMult *= 1.0 - armor * 0.05 * 0.01;
 	}
 
 });

@@ -47,12 +47,12 @@ this.named_handgonne <- this.inherit("scripts/items/weapons/named/named_weapon",
 		this.m.RangeIdeal = 2;
 		this.m.RangeMaxBonus = 1;
 		this.m.StaminaModifier = -14;
-		this.m.Condition = 60.000000;
-		this.m.ConditionMax = 60.000000;
+		this.m.Condition = 60.0;
+		this.m.ConditionMax = 60.0;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 75;
-		this.m.ArmorDamageMult = 0.900000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 0.9;
+		this.m.DirectDamageMult = 0.25;
 		this.m.IsEnforcingRangeLimit = true;
 		this.randomizeValues();
 	}

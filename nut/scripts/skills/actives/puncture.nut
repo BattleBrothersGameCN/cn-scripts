@@ -31,7 +31,7 @@ this.puncture <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
 		this.m.HitChanceBonus = -15;
-		this.m.DirectDamageMult = 1.000000;
+		this.m.DirectDamageMult = 1.0;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 20;
 		this.m.MinRange = 1;
@@ -84,14 +84,14 @@ this.puncture <- this.inherit("scripts/skills/skill", {
 		if (_skill == this)
 		{
 			_properties.MeleeSkill -= 15;
-			_properties.DamageArmorMult *= 0.000000;
+			_properties.DamageArmorMult *= 0.0;
 			_properties.IsIgnoringArmorOnAttack = true;
-			_properties.HitChanceMult[this.Const.BodyPart.Head] = 0.000000;
-			_properties.HitChanceMult[this.Const.BodyPart.Body] = 1.000000;
+			_properties.HitChanceMult[this.Const.BodyPart.Head] = 0.0;
+			_properties.HitChanceMult[this.Const.BodyPart.Body] = 1.0;
 
 			if (this.canDoubleGrip())
 			{
-				_properties.DamageTotalMult /= 1.250000;
+				_properties.DamageTotalMult /= 1.25;
 			}
 		}
 	}

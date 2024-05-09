@@ -8,7 +8,7 @@ this.wildman_causes_havoc_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.wildman_causes_havoc";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%townImage%城市文明是不适合像 %wildman% 的野人的，他很快就证明了这一点。\n\n显然，那该死的乡巴佬在商店里发疯了，他把整个地方弄得乱七八糟。 正如之前所想的，他只是走进来，开始拿东西，却不太了解购买商品的社会规矩。 店主拿着扫帚追赶他，想把他赶出商店。 野人从没见过像扫帚这样的怪物，于是他完全疯狂了。 从报告来看，当时相当混乱，包括野人把他的屎丢的满天飞。\n\n现在店主当着你的面要求赔偿所造成的损失。 很明显，他想要 %compensation% 的补偿。 在他身后，有几个城镇的民兵站在那里，个个眼里闪着警觉的光芒。",
@@ -131,7 +131,7 @@ this.wildman_causes_havoc_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/asset_daily_money.png",
 					text = _event.m.Wildman.getName() + "现在支付[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Wildman.getDailyCost() + "[/color] 克朗每天"
 				});
-				_event.m.Wildman.worsenMood(2.000000, "减薪了");
+				_event.m.Wildman.worsenMood(2.0, "减薪了");
 
 				if (_event.m.Wildman.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -213,7 +213,7 @@ this.wildman_causes_havoc_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().isCombatBackground() && this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(1.000000, "战团在一场战斗中退缩了");
+						bro.worsenMood(1.0, "战团在一场战斗中退缩了");
 					}
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)

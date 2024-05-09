@@ -6,7 +6,7 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 	{
 		this.m.ID = "event.mutated_gladiator_annoys_others";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 65.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 65.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]{自从角斗士%gladiator%服用了解剖学家的一种好奇药物，这名地下赛斗士就一直在不停地展示自己的肌肉。许多人对这个铜色、闪闪发光、过度肌肉化的男人感到恼火，因为他要求其他佣兵和他一对一进行裸体搏斗比赛。当他不在争夺grabass的比赛时，他在做锻炼，每次做完都会尖叫，仿佛他正在进行一场激烈的战斗。希望他的生命中的这个阶段很快就会结束。}",
@@ -52,7 +52,7 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 					icon = "ui/icons/initiative.png",
 					text = _event.m.Gladiator.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color]主动值"
 				});
-				_event.m.Gladiator.improveMood(0.500000, "感觉比以往任何时候都好。");
+				_event.m.Gladiator.improveMood(0.5, "感觉比以往任何时候都好。");
 
 				if (_event.m.Gladiator.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -72,7 +72,7 @@ this.mutated_gladiator_annoys_others_event <- this.inherit("scripts/events/event
 						continue;
 					}
 
-					bro.worsenMood(1.000000, "烦恼于" + _event.m.Gladiator.getName() + "的恶作剧");
+					bro.worsenMood(1.0, "烦恼于" + _event.m.Gladiator.getName() + "的恶作剧");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{

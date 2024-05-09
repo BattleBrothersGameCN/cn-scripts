@@ -6,7 +6,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.thief_caught";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_33.png[/img]在一次短暂的休息时，你的人设法抓到了一个尝试偷取你们补给的人。 他衣衫褴褛，比起人瘦得更像个骷髅。 你要怎么处理他？",
@@ -164,7 +164,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 			{
 				local food = this.World.Assets.getFoodItems();
 				food = food[this.Math.rand(0, food.len() - 1)];
-				food.setAmount(this.Math.maxf(0.000000, food.getAmount() - 5.000000));
+				food.setAmount(this.Math.maxf(0.0, food.getAmount() - 5.0));
 				this.List = [
 					{
 						id = 10,
@@ -271,7 +271,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 							continue;
 						}
 
-						bro.worsenMood(1.000000, "感觉像是被你杀死的小偷");
+						bro.worsenMood(1.0, "感觉像是被你杀死的小偷");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

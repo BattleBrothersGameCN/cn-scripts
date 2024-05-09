@@ -4,7 +4,7 @@ this.ancient_statue_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.location.ancient_statue";
 		this.m.Title = "当你接近时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
@@ -91,7 +91,7 @@ this.ancient_statue_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.500000, "一座宏伟的老雕像给人留下了深刻的印象");
+					bro.improveMood(1.5, "一座宏伟的老雕像给人留下了深刻的印象");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

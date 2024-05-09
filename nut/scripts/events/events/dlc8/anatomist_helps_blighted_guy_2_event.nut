@@ -6,7 +6,7 @@ this.anatomist_helps_blighted_guy_2_event <- this.inherit("scripts/events/event"
 	{
 		this.m.ID = "event.anatomist_helps_blighted_guy_2";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_58.png[/img]{那个解剖学家从字面上把他从坟墓中救出来的那个据说生病的人向前走了过来。他看上去比以往任何时候都要好。他感谢解剖学家的工作，尽管他们几乎没有注意到他。看起来他在生病时更能引起他们的兴趣，他们可以戳戳捏捏并从他的疾病中学到更多信息，还有一些未明言的希望他真的会死，以便他们可以学到更多。看到这一切，那个人就转向你。%SPEECH_ON%这一切都让我非常感激，我希望至少你知道这一点。你不知道我与那些试图活埋我的人一起经历了什么。我认为他们明白我不是什么瘟疫，他们只是想要我的财产。你看，我曾经领导过当地的民兵，但这个位置带来了阴谋和嫉妒的压力。%SPEECH_OFF%他揉了揉后脑勺，然后说出了实话。%SPEECH_ON%那些挖掘者把我所有的东西都拿走了，所以不管我是活是死，我都可能成为后者。所以，好吧，让我说我很高兴为你而战，为我自己在这里谋求新的生活。%SPEECH_OFF%}",
@@ -32,7 +32,7 @@ this.anatomist_helps_blighted_guy_2_event <- this.inherit("scripts/events/event"
 				_event.m.MilitiaCaptain.getSkills().add(bg);
 				_event.m.MilitiaCaptain.getBackground().m.RawDescription = "因为得了怪病，%name%被人活埋。解剖学家对他产生了兴趣，救了他，让他恢复了健康。他的本事不小，当上了卫兵队长，现在他用那些本领为你而战。";
 				_event.m.MilitiaCaptain.getBackground().buildDescription(true);
-				_event.m.MilitiaCaptain.improveMood(1.000000, "从影响他的瘟疫中恢复过来。");
+				_event.m.MilitiaCaptain.improveMood(1.0, "从影响他的瘟疫中恢复过来。");
 
 				if (_event.m.MilitiaCaptain.getMoodState() >= this.Const.MoodState.Neutral)
 				{

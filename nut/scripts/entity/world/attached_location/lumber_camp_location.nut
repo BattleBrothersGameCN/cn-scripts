@@ -19,33 +19,33 @@ this.lumber_camp_location <- this.inherit("scripts/entity/world/attached_locatio
 			r = [
 				{
 					File = "ambience/settlement/lumberjack_00.wav",
-					Volume = 1.100000,
-					Pitch = 1.000000
+					Volume = 1.1,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/lumberjack_01.wav",
-					Volume = 1.100000,
-					Pitch = 1.000000
+					Volume = 1.1,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/lumberjack_02.wav",
-					Volume = 1.100000,
-					Pitch = 1.000000
+					Volume = 1.1,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/lumberjack_03.wav",
-					Volume = 1.100000,
-					Pitch = 1.000000
+					Volume = 1.1,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_saw_00.wav",
-					Volume = 1.100000,
-					Pitch = 1.000000
+					Volume = 1.1,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_saw_01.wav",
-					Volume = 1.100000,
-					Pitch = 1.000000
+					Volume = 1.1,
+					Pitch = 1.0
 				}
 			];
 
@@ -113,37 +113,37 @@ this.lumber_camp_location <- this.inherit("scripts/entity/world/attached_locatio
 		{
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/woodcutters_axe"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/woodcutters_axe"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hatchet"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hatchet"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hand_axe"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hooked_blade"
 			});
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "trade/quality_wood_item"
 			});
 		}
@@ -151,22 +151,22 @@ this.lumber_camp_location <- this.inherit("scripts/entity/world/attached_locatio
 		{
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/woodcutters_axe"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hatchet"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hand_axe"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hooked_blade"
 			});
 		}

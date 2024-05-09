@@ -4,7 +4,7 @@ this.defeat_civilwar_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_civilwar";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "如果我们能为一个贵族家族赢得这场战争，我们将名冠天下。\n让我们选择一方，沐浴在战斗的荣光里，并因此发家致富吧！";
 		this.m.UIText = "结束贵族家族之间的战争";
 		this.m.TooltipText = "选择一个贵族家族，与他们合作粉碎他们的敌人。 每一支被摧毁的军队，每一份合同的履行，都将使你离结束战争更近。";
@@ -17,15 +17,15 @@ this.defeat_civilwar_ambition <- this.inherit("scripts/ambitions/ambition", {
 		local f = this.World.FactionManager.getGreaterEvil().Strength / this.Const.Factions.GreaterEvilStartStrength;
 		local text;
 
-		if (f >= 0.950000)
+		if (f >= 0.95)
 		{
 			text = "战争初始";
 		}
-		else if (f >= 0.500000)
+		else if (f >= 0.5)
 		{
 			text = "战况激烈";
 		}
-		else if (f >= 0.250000)
+		else if (f >= 0.25)
 		{
 			text = "陷入胶着";
 		}
@@ -71,7 +71,7 @@ this.defeat_civilwar_ambition <- this.inherit("scripts/ambitions/ambition", {
 	function onPrepareVariables( _vars )
 	{
 		local allies = this.World.FactionManager.getAlliedFactions(this.Const.Faction.Player);
-		local bestRelations = -1.000000;
+		local bestRelations = -1.0;
 		local best;
 
 		foreach( a in allies )

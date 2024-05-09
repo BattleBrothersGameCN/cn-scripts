@@ -6,7 +6,7 @@ this.raid_caravans_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.raid_caravans";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "那些大篷车装满了财富，就等着我们去抢。\n我们只需要像从树上摘下的果实一样拿走它们！";
 		this.m.UIText = "突袭贸易或补给商队";
 		this.m.TooltipText = "突袭 4 次沿途的贸易或补给商队。如果你和他们的派别不是敌对关系，你可以通过按住Ctrl键的同时左键点击他们来强制攻击--前提是你目前没有雇佣合同。";

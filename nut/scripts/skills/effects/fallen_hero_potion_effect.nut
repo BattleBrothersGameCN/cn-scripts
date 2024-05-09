@@ -50,7 +50,7 @@ this.fallen_hero_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.FatigueLossOnAnyAttackMult = 0.000000;
+		_properties.FatigueLossOnAnyAttackMult = 0.0;
 	}
 
 	function onDeath( _fatalityType )

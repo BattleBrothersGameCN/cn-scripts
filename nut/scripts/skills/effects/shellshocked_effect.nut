@@ -100,7 +100,7 @@ this.shellshocked_effect <- this.inherit("scripts/skills/skill", {
 
 			if (this.m.SoundOnUse.len() != 0)
 			{
-				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 0.800000, this.getContainer().getActor().getPos());
+				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 0.8, this.getContainer().getActor().getPos());
 			}
 
 			this.getContainer().getActor().checkMorale(-1, 0);
@@ -114,20 +114,20 @@ this.shellshocked_effect <- this.inherit("scripts/skills/skill", {
 
 		if (this.m.SoundOnUse.len() != 0)
 		{
-			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 0.800000, this.getContainer().getActor().getPos());
+			this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 0.8, this.getContainer().getActor().getPos());
 		}
 	}
 
 	function onUpdate( _properties )
 	{
 		local actor = this.getContainer().getActor();
-		_properties.DamageTotalMult *= 1.000000 - 0.050000 * this.m.TurnsLeft;
-		_properties.InitiativeMult *= 1.000000 - 0.050000 * this.m.TurnsLeft;
-		_properties.BraveryMult *= 1.000000 - 0.050000 * this.m.TurnsLeft;
-		_properties.MeleeSkillMult *= 1.000000 - 0.050000 * this.m.TurnsLeft;
-		_properties.RangedSkillMult *= 1.000000 - 0.050000 * this.m.TurnsLeft;
-		_properties.MeleeDefenseMult *= 1.000000 - 0.050000 * this.m.TurnsLeft;
-		_properties.RangedDefenseMult *= 1.000000 - 0.050000 * this.m.TurnsLeft;
+		_properties.DamageTotalMult *= 1.0 - 0.05 * this.m.TurnsLeft;
+		_properties.InitiativeMult *= 1.0 - 0.05 * this.m.TurnsLeft;
+		_properties.BraveryMult *= 1.0 - 0.05 * this.m.TurnsLeft;
+		_properties.MeleeSkillMult *= 1.0 - 0.05 * this.m.TurnsLeft;
+		_properties.RangedSkillMult *= 1.0 - 0.05 * this.m.TurnsLeft;
+		_properties.MeleeDefenseMult *= 1.0 - 0.05 * this.m.TurnsLeft;
+		_properties.RangedDefenseMult *= 1.0 - 0.05 * this.m.TurnsLeft;
 	}
 
 	function onTurnStart()

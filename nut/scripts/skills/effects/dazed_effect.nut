@@ -103,9 +103,9 @@ this.dazed_effect <- this.inherit("scripts/skills/skill", {
 
 		if (!actor.getCurrentProperties().IsImmuneToDaze)
 		{
-			_properties.DamageTotalMult *= 0.750000;
-			_properties.InitiativeMult *= 0.750000;
-			_properties.StaminaMult *= 0.750000;
+			_properties.DamageTotalMult *= 0.75;
+			_properties.InitiativeMult *= 0.75;
+			_properties.StaminaMult *= 0.75;
 
 			if (actor.hasSprite("status_stunned") && !this.getContainer().hasSkill("effects.stunned"))
 			{

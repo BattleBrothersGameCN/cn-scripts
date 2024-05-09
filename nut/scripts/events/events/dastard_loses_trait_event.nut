@@ -8,7 +8,7 @@ this.dastard_loses_trait_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.dastard_loses_trait";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_58.png[/img]你偶然看到 %braveman1% 和 %braveman2% 与 %dastard% 坐在一起。两个人扶起那个有点神经质的队员，让他知道在战斗中没有什么可怕的。%dastard% 解释说他害怕在痛苦中死去。%braveman1% 说他已经见过太多人死于刀剑，说真的，剑是杀人最快的。%braveman2% 举起他的手。%SPEECH_ON%除非剑插到你胃里。%SPEECH_OFF%%braveman1% 点了点头。%SPEECH_ON%是这样的。但除此之外，你真没什么好怕的！%SPEECH_OFF%",

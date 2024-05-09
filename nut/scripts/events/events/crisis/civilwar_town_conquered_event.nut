@@ -6,7 +6,7 @@ this.civilwar_town_conquered_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_town_conquered";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 1.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",

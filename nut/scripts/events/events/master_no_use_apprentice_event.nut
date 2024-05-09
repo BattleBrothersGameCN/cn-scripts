@@ -7,7 +7,7 @@ this.master_no_use_apprentice_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.master_no_use_apprentice";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%townImage%当你们在 %townname% 闲逛时，你看到一位老人正在拉着一个轻年的耳朵不断训斥着他。%SPEECH_ON%你想要成为一名大师，这个过程需要你的时间！鲜血！汗水！ 如果你是一个爱哭鬼现在就哭出来因为你只能成为那样的人。 那里，快看！一个佣兵！ 如果你这么想要战斗的话，为什么不去找他呢？%SPEECH_OFF%在参与着两个人的莫名其妙的争斗前你伸出手要求老人能给出一个合理的解释毕竟你自己也不想惹上什么麻烦。 这个老人心情渐渐平复下来并且也放开了那个孩子的耳朵。%SPEECH_ON%是啊，我认为你应该得到解释。 我是这个城镇的剑术老师，但是在我任何一个学生学会耐心和严守纪律之前我不会让他碰剑！ 但是我这个学生却一点都没有做到！ 所以我告诉他，如果你这么想战斗，滚出去！%SPEECH_OFF%你看了看孩子。 虽然他的脸庞依然很稚嫩，但是他的眼睛里充满着对战斗的热情。 你询问他这个剑术大师说的是不是真的。这个孩子点了点头。%SPEECH_ON%没错先生。并且我很乐意为你而战，这也是我一直想要的。%SPEECH_OFF%",

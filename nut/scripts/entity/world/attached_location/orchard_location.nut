@@ -72,17 +72,17 @@ this.orchard_location <- this.inherit("scripts/entity/world/attached_location", 
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/dried_fruits_item"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/hood"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/scramasax"
 			});
 		}

@@ -13,16 +13,16 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r <= 70)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
 		this.m.Type = "contract.decisive_battle";
 		this.m.Name = "会战";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -70,16 +70,16 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (r == 1)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else if (r == 2)
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
-		this.m.Flags.set("RequisitionCost", this.beautifyNumber(this.m.Payment.Pool * 0.250000));
-		this.m.Flags.set("Bribe", this.beautifyNumber(this.m.Payment.Pool * 0.350000));
+		this.m.Flags.set("RequisitionCost", this.beautifyNumber(this.m.Payment.Pool * 0.25));
+		this.m.Flags.set("Bribe", this.beautifyNumber(this.m.Payment.Pool * 0.35));
 		this.contract.start();
 	}
 
@@ -107,7 +107,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 			function end()
 			{
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
-				this.World.FactionManager.getFaction(this.Flags.get("EnemyNobleHouse")).addPlayerRelation(-99.000000, "在战争选择了阵营");
+				this.World.FactionManager.getFaction(this.Flags.get("EnemyNobleHouse")).addPlayerRelation(-99.0, "在战争选择了阵营");
 
 				if (this.Contract.m.WarcampTile == null)
 				{
@@ -152,7 +152,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.Warcamp.getSprite("banner").setBrush(this.World.FactionManager.getFaction(this.Contract.getFaction()).getBannerSmall());
 				this.Contract.m.Warcamp.setFaction(this.Contract.getFaction());
 				this.Contract.m.Warcamp.setDiscovered(true);
-				this.World.uncoverFogOfWar(this.Contract.m.Warcamp.getTile().Pos, 500.000000);
+				this.World.uncoverFogOfWar(this.Contract.m.Warcamp.getTile().Pos, 500.0);
 				local r = this.Math.rand(1, 100);
 
 				if (r <= 40)
@@ -702,7 +702,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 					this.Const.World.Common.addUnitsToCombat(p.Entities, this.Const.World.Spawn.Mercenaries, 60 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Flags.get("EnemyNobleHouse"));
 					p.Entities.push({
 						ID = this.Const.EntityType.Knight,
-						Variant = this.Const.DLC.Wildmen && this.Contract.getDifficultyMult() >= 1.150000 ? 1 : 0,
+						Variant = this.Const.DLC.Wildmen && this.Contract.getDifficultyMult() >= 1.15 ? 1 : 0,
 						Name = this.Const.Strings.KnightNames[this.Math.rand(0, this.Const.Strings.KnightNames.len() - 1)],
 						Row = 2,
 						Script = "scripts/entity/tactical/humans/knight",
@@ -888,7 +888,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 
 				this.Contract.m.Destination = this.WeakTableRef(party);
 				party.setAttackableByAI(false);
-				party.setFootprintSizeOverride(0.750000);
+				party.setFootprintSizeOverride(0.75);
 				local c = party.getController();
 				c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(false);
 				local roam = this.new("scripts/ai/world/orders/roam_order");
@@ -1354,8 +1354,8 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 				party.setFootprintType(this.Const.World.FootprintsType.Nobles);
 				party.setAttackableByAI(false);
 				party.getController().getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
-				party.setFootprintSizeOverride(0.750000);
-				this.Const.World.Common.addFootprintsFromTo(playerTile, party.getTile(), this.Const.GenericFootprints, this.Const.World.FootprintsType.Nobles, 0.750000);
+				party.setFootprintSizeOverride(0.75);
+				this.Const.World.Common.addFootprintsFromTo(playerTile, party.getTile(), this.Const.GenericFootprints, this.Const.World.FootprintsType.Nobles, 0.75);
 				this.Contract.m.Destination = this.WeakTableRef(party);
 				party.getLoot().Money = this.Math.rand(50, 100);
 				party.getLoot().ArmorParts = this.Math.rand(0, 10);
@@ -1386,7 +1386,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 
 				local c = party.getController();
 				local wait = this.new("scripts/ai/world/orders/wait_order");
-				wait.setTime(9000.000000);
+				wait.setTime(9000.0);
 				c.addOrder(wait);
 			}
 

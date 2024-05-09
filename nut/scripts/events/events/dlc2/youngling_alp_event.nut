@@ -9,7 +9,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.youngling_alp";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_33.png[/img]{%callbrother%跑进你的帐篷里，说有东西在监视营地。你走到外面看到远处有一个轮廓，躲在灌木和树枝后面。它发出嘶嘶声，你知道它在盯着什么，否则它不会发出这样的声音。它的手臂又长又细，末端是爪子。你拿了一把火把，向野兽扔去。火把着地，向外溅出一片橙色的光芒，野兽尖叫着逃离火花的云团。最后你看到的是那张满是尖牙的嘴渐渐消失在黑暗中。%SPEECH_ON%我想它是个梦魔，指挥官。据我们所知，就它一个。%SPEECH_OFF%你问佣兵是否有出现过幻觉。他耸耸肩。%SPEECH_ON%是的，有一些，但我也在喝酒，所以可能有误。%SPEECH_OFF%}",
@@ -93,7 +93,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/xp_received.png",
 					text = _event.m.Callbrother.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] 经验值"
 				});
-				_event.m.Callbrother.worsenMood(0.750000, "梦魇侵入了他的思想");
+				_event.m.Callbrother.worsenMood(0.75, "梦魇侵入了他的思想");
 
 				if (_event.m.Callbrother.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -109,7 +109,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/xp_received.png",
 					text = _event.m.Other.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+200[/color] 经验值"
 				});
-				_event.m.Other.worsenMood(0.750000, "梦魇侵入了他的思想");
+				_event.m.Other.worsenMood(0.75, "梦魇侵入了他的思想");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -146,7 +146,7 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getLevel() <= 3 || bro.getBackground().getID() == "background.beast_slayer" || bro.getBackground().getID() == "background.witchhunter" || bro.getSkills().hasSkill("trait.hate_beasts") || bro.getSkills().hasSkill("trait.fear_beasts") || bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getSkills().hasSkill("trait.paranoid") || bro.getSkills().hasSkill("trait.superstitious"))
 					{
-						bro.worsenMood(0.750000, "你让梦魇活下来，以后可能会闹鬼");
+						bro.worsenMood(0.75, "你让梦魇活下来，以后可能会闹鬼");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -180,14 +180,14 @@ this.youngling_alp_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Beastslayer.getImagePath());
-				_event.m.Beastslayer.improveMood(0.500000, "杀死了梦魔崽子");
+				_event.m.Beastslayer.improveMood(0.5, "杀死了梦魔崽子");
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
 				{
 					if (bro.getLevel() <= 3 && this.Math.rand(1, 100) <= 33 || bro.getBackground().getID() == "background.witchhunter" || bro.getSkills().hasSkill("trait.hate_beasts") || bro.getSkills().hasSkill("trait.fear_beasts") || bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getSkills().hasSkill("trait.paranoid") || bro.getSkills().hasSkill("trait.superstitious"))
 					{
-						bro.improveMood(1.000000, "通过学习年轻梦魇的弱点而变得胆大");
+						bro.improveMood(1.0, "通过学习年轻梦魇的弱点而变得胆大");
 
 						if (bro.getMoodState() > this.Const.MoodState.Neutral)
 						{

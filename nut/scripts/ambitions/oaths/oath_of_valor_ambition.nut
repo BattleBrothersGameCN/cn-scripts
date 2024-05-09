@@ -4,7 +4,7 @@ this.oath_of_valor_ambition <- this.inherit("scripts/ambitions/oaths/oath_ambiti
 	{
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_valor";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们必须有勇气面对任何挑战，无论挑战多么艰巨。\n让我们立下英勇誓言，向所有人证明我们的勇敢！";
 		this.m.TooltipText = "“在危难时刻，请记住：勇气可以克服技能。虽然勇气不能单独决定战斗的胜负，但纯粹的决心可以让你活下来，这是战斗之教训最好的结论。”——年轻的安瑟姆";
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{一个人不能仅凭技能和能力就获得成功。很多人都知道如何挥舞剑，举起斧头或者放箭。这并不是人类成长的关键，而是来自他自己内心的通过艰辛锻炼锤炼的品质。在那里锻造的坚如钢铁，永不言弃，因为即使是一个勇猛的战士在世界的历史长河中倒下了，他的名字也会被后人赞颂，被同类人传颂。\n\n现在，由于该战团已经证明了自己最坚定的元素，它已经准备好接受另一个誓言了!}";

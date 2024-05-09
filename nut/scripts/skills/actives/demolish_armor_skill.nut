@@ -18,7 +18,7 @@ this.demolish_armor_skill <- this.inherit("scripts/skills/skill", {
 			"sounds/combat/crush_armor_hit_02.wav",
 			"sounds/combat/crush_armor_hit_03.wav"
 		];
-		this.m.SoundVolume = 1.100000;
+		this.m.SoundVolume = 1.1;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;
 		this.m.IsSerialized = false;
@@ -29,7 +29,7 @@ this.demolish_armor_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsTooCloseShown = true;
 		this.m.IsWeaponSkill = true;
-		this.m.DirectDamageMult = 0.000000;
+		this.m.DirectDamageMult = 0.0;
 		this.m.HitChanceBonus = 0;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 35;
@@ -43,7 +43,7 @@ this.demolish_armor_skill <- this.inherit("scripts/skills/skill", {
 	function getTooltip()
 	{
 		local p = this.getContainer().getActor().getCurrentProperties();
-		local f = p.IsSpecializedInHammers ? 1.930000 : 1.450000;
+		local f = p.IsSpecializedInHammers ? 1.93 : 1.45;
 		local damage_armor_min = this.Math.floor(p.DamageRegularMin * p.DamageArmorMult * f * p.DamageTotalMult * p.MeleeDamageMult);
 		local damage_armor_max = this.Math.floor(p.DamageRegularMax * p.DamageArmorMult * f * p.DamageTotalMult * p.MeleeDamageMult);
 		local ret = this.getDefaultUtilityTooltip();
@@ -94,7 +94,7 @@ this.demolish_armor_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInHammers ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInHammers ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -108,8 +108,8 @@ this.demolish_armor_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.DamageArmorMult *= this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers ? 1.930000 : 1.450000;
-			_properties.DamageRegularMult *= 0.000000;
+			_properties.DamageArmorMult *= this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers ? 1.93 : 1.45;
+			_properties.DamageRegularMult *= 0.0;
 			_properties.DamageMinimum = this.Math.max(_properties.DamageMinimum, 10);
 
 			if (_targetEntity != null && !this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers && this.getContainer().getActor().getTile().getDistanceTo(_targetEntity.getTile()) == 1)

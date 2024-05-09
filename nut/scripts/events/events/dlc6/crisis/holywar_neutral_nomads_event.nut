@@ -6,7 +6,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.holywar_neutral_nomads";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 200.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_170.png[/img]{你遇到一群游牧民。 尽管战争惨烈的持续着，他们没有把你当做威胁。 一个人用饮品与可以遮阳的伞欢迎你，你接受了。%SPEECH_ON%我希望你的旅途坦荡，逐币者。 你和我们沙丘旅者有一些相似，特别在作为入侵者这件事上。 南北之间的恩怨我们没必要掺和进去。%SPEECH_OFF%他喝下他自己的饮料点头说道。%SPEECH_ON%不过我想你已经在冲突中赚了不少钱。 我的一些同胞会因此把你当做镀金者最忠实的信徒的。%SPEECH_OFF%}",
@@ -77,7 +77,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(0.500000, "喜欢游牧民的好客");
+					bro.improveMood(0.5, "喜欢游牧民的好客");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -139,7 +139,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().isOffendedByViolence() && this.Math.rand(1, 100) <= 75)
 					{
-						bro.worsenMood(0.750000, "不喜欢你杀害和抢劫你的主人");
+						bro.worsenMood(0.75, "不喜欢你杀害和抢劫你的主人");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -184,7 +184,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(0.500000, "喜欢游牧民的好客");
+					bro.improveMood(0.5, "喜欢游牧民的好客");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{

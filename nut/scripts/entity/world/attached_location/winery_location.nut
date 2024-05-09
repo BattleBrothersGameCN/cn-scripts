@@ -33,7 +33,7 @@ this.winery_location <- this.inherit("scripts/entity/world/attached_location", {
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/wine_item"
 			});
 		}
@@ -68,7 +68,7 @@ this.winery_location <- this.inherit("scripts/entity/world/attached_location", {
 					{
 						nextTile.clear();
 						local d = nextTile.spawnDetail("world_winery_detail_0" + this.Math.rand(1, 2), this.Const.World.ZLevel.Object, this.Const.World.DetailType.NotCompatibleWithRoad);
-						d.Scale = 0.900000;
+						d.Scale = 0.9;
 						num = ++num;
 					}
 
@@ -86,7 +86,7 @@ this.winery_location <- this.inherit("scripts/entity/world/attached_location", {
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 	}
 
 });

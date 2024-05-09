@@ -7,7 +7,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.graverobber_heist";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%graverobber% 那个阴暗的盗墓贼，把手藏在背后的阴影里走进你的帐篷。 你不想看他再故弄玄虚，于是直接问他想干啥。%SPEECH_ON%先生…我听说… 我听说本地一位男爵－一个有钱的男爵！－最近下葬了，就埋在离这儿不远的地方。%SPEECH_OFF%你换了个舒服的坐姿，耸耸肩。他接着说。%SPEECH_ON%I... 我不敢叫上别人，他们看我的眼神叫我不舒服。 But you... you\'re different. 无论如何是你把我雇来的。%SPEECH_OFF%你向前凑了凑，身上的铠甲压得屁股下面的椅子发出一声扭曲的短促哀嚎。%SPEECH_ON%让我想想：你想叫我跟你去挖了那个男爵的坟。%SPEECH_OFF%那人咧嘴一笑，一副可怜的样子，让你想起那次你骂狗偷饼干。",
@@ -123,7 +123,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Graverobber.worsenMood(0.500000, "被打了一顿，在 " + _event.m.Town.getName());
+				_event.m.Graverobber.worsenMood(0.5, "被打了一顿，在 " + _event.m.Town.getName());
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Graverobber.getMoodState()],
@@ -151,7 +151,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Graverobber.getImagePath());
-				_event.m.Graverobber.worsenMood(1.000000, "禁止盗墓");
+				_event.m.Graverobber.worsenMood(1.0, "禁止盗墓");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Graverobber.getMoodState()],
@@ -238,7 +238,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Graverobber.getImagePath());
-				_event.m.Graverobber.worsenMood(0.500000, "跟你一起盗墓没成功");
+				_event.m.Graverobber.worsenMood(0.5, "跟你一起盗墓没成功");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Graverobber.getMoodState()],
@@ -275,7 +275,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
 					}
 				];
-				_event.m.Graverobber.improveMood(1.000000, "盗墓时发现宝藏");
+				_event.m.Graverobber.improveMood(1.0, "盗墓时发现宝藏");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Graverobber.getMoodState()],
@@ -326,7 +326,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
-				_event.m.Graverobber.improveMood(1.000000, "盗墓时发现宝藏");
+				_event.m.Graverobber.improveMood(1.0, "盗墓时发现宝藏");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Graverobber.getMoodState()],
@@ -356,7 +356,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Graverobber.getImagePath());
-				_event.m.Graverobber.worsenMood(0.500000, "在盗窃坟墓时被抓");
+				_event.m.Graverobber.worsenMood(0.5, "在盗窃坟墓时被抓");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Graverobber.getMoodState()],

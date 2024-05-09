@@ -29,37 +29,37 @@ this.leather_tanner_location <- this.inherit("scripts/entity/world/attached_loca
 		{
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/leather_tunic"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/leather_tunic"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/apron"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_leather"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_leather"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/full_leather_cap"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/full_leather_cap"
 			});
 		}
@@ -73,47 +73,47 @@ this.leather_tanner_location <- this.inherit("scripts/entity/world/attached_loca
 		{
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/padded_leather"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/leather_lamellar"
 			});
 			_list.push({
 				R = 35,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/mail_hauberk"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/reinforced_mail_hauberk"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/padded_nasal_helmet"
 			});
 			_list.push({
 				R = 35,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/padded_kettle_hat"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/padded_flat_top_helmet"
 			});
 			_list.push({
 				R = 45,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/closed_flat_top_helmet"
 			});
 			_list.push({
 				R = 40,
-				P = 1.000000,
+				P = 1.0,
 				S = "shields/kite_shield"
 			});
 		}

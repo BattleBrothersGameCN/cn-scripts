@@ -4,7 +4,7 @@ this.defeat_greenskins_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_greenskins";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "绿皮入侵的威胁正要荡平我们的世界。\n坚强地站起来抵御他们，这就我们是传奇之路！";
 		this.m.UIText = "击败绿皮入侵";
 		this.m.TooltipText = "击败绿皮入侵！ 每完成一次针对他们的合约，每摧毁一支军队或一处营地，都将使你们离拯救人类世界更近。";
@@ -17,15 +17,15 @@ this.defeat_greenskins_ambition <- this.inherit("scripts/ambitions/ambition", {
 		local f = this.World.FactionManager.getGreaterEvil().Strength / this.Const.Factions.GreaterEvilStartStrength;
 		local text;
 
-		if (f >= 0.950000)
+		if (f >= 0.95)
 		{
 			text = "困难重重";
 		}
-		else if (f >= 0.500000)
+		else if (f >= 0.5)
 		{
 			text = "悬而未决";
 		}
-		else if (f >= 0.250000)
+		else if (f >= 0.25)
 		{
 			text = "看到曙光";
 		}

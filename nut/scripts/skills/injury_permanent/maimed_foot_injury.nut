@@ -48,7 +48,7 @@ this.maimed_foot_injury <- this.inherit("scripts/skills/injury_permanent/permane
 	function onUpdate( _properties )
 	{
 		_properties.MovementAPCostAdditional += 1;
-		_properties.InitiativeMult *= 0.800000;
+		_properties.InitiativeMult *= 0.8;
 		_properties.IsContentWithBeingInReserve = true;
 	}
 

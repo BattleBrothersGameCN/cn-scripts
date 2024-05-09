@@ -40,7 +40,7 @@ this.throw_smoke_bomb_skill <- this.inherit("scripts/skills/skill", {
 		this.m.MaxRange = 3;
 		this.m.MaxLevelDifference = 3;
 		this.m.ProjectileType = this.Const.ProjectileType.Bomb2;
-		this.m.ProjectileTimeScale = 1.500000;
+		this.m.ProjectileTimeScale = 1.5;
 		this.m.IsProjectileRotated = false;
 	}
 
@@ -108,7 +108,7 @@ this.throw_smoke_bomb_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInThrowing ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInThrowing ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -119,7 +119,7 @@ this.throw_smoke_bomb_skill <- this.inherit("scripts/skills/skill", {
 
 			if (_user.getTile().getDistanceTo(_targetTile) >= this.Const.Combat.SpawnProjectileMinDist)
 			{
-				this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), _targetTile, 1.000000, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
+				this.Tactical.spawnProjectileEffect(this.Const.ProjectileSprite[this.m.ProjectileType], _user.getTile(), _targetTile, 1.0, this.m.ProjectileTimeScale, this.m.IsProjectileRotated, flip);
 			}
 		}
 
@@ -148,7 +148,7 @@ this.throw_smoke_bomb_skill <- this.inherit("scripts/skills/skill", {
 			}
 		}
 
-		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.000000, _data.TargetTile.Pos);
+		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, _data.TargetTile.Pos);
 		local p = {
 			Type = "smoke",
 			Tooltip = "浓烟笼罩着这片区域，允许其中的人无视控制区域自由移动，并提供对远程攻击的保护",

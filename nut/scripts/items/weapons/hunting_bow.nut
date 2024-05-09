@@ -22,12 +22,12 @@ this.hunting_bow <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.RangeMax = 7;
 		this.m.RangeIdeal = 7;
 		this.m.StaminaModifier = -6;
-		this.m.Condition = 80.000000;
-		this.m.ConditionMax = 80.000000;
+		this.m.Condition = 80.0;
+		this.m.ConditionMax = 80.0;
 		this.m.RegularDamage = 40;
 		this.m.RegularDamageMax = 60;
-		this.m.ArmorDamageMult = 0.550000;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.ArmorDamageMult = 0.55;
+		this.m.DirectDamageMult = 0.35;
 	}
 
 	function getAmmoID()

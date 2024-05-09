@@ -33,7 +33,7 @@ this.warhound <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.IsActingImmediately = true;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(-4, -25);
-		this.m.DecapitateBloodAmount = 0.500000;
+		this.m.DecapitateBloodAmount = 0.5;
 		this.actor.create();
 		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
 			"sounds/enemies/wardog_hurt_00.wav",
@@ -68,7 +68,7 @@ this.warhound <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/wardog_charge_01.wav",
 			"sounds/enemies/wardog_charge_02.wav"
 		];
-		this.m.SoundPitch = 0.950000;
+		this.m.SoundPitch = 0.95;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/wardog_agent");
 		this.m.AIAgent.setActor(this);
 	}
@@ -90,30 +90,30 @@ this.warhound <- this.inherit("scripts/entity/tactical/actor", {
 			local decal;
 			this.m.IsCorpseFlipped = flip;
 			decal = _tile.spawnDetail(this.getSprite("body").getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-			decal.setBrightness(0.900000);
-			decal.Scale = 0.950000;
+			decal.setBrightness(0.9);
+			decal.Scale = 0.95;
 
 			if (appearance.CorpseArmor != "")
 			{
 				decal = _tile.spawnDetail(appearance.CorpseArmor, this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.setBrightness(0.900000);
-				decal.Scale = 0.950000;
+				decal.setBrightness(0.9);
+				decal.Scale = 0.95;
 			}
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
 			{
 				decal = _tile.spawnDetail(this.getSprite("head").getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.setBrightness(0.900000);
-				decal.Scale = 0.950000;
+				decal.setBrightness(0.9);
+				decal.Scale = 0.95;
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
 			{
 				local layers = [
 					this.getSprite("head").getBrush().Name + "_dead"
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-15, 5), 0.000000, this.getSprite("head").getBrush().Name + "_dead_bloodpool");
-				decap[0].setBrightness(0.900000);
-				decap[0].Scale = 0.950000;
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-15, 5), 0.0, this.getSprite("head").getBrush().Name + "_dead_bloodpool");
+				decap[0].setBrightness(0.9);
+				decap[0].Scale = 0.95;
 				decap[0].setHorizontalFlipping(true);
 			}
 
@@ -208,7 +208,7 @@ this.warhound <- this.inherit("scripts/entity/tactical/actor", {
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.Warhound);
-		b.TargetAttractionMult = 0.100000;
+		b.TargetAttractionMult = 0.1;
 		b.IsAffectedByInjuries = false;
 		b.IsImmuneToDisarm = true;
 		this.m.ActionPoints = b.ActionPoints;
@@ -230,7 +230,7 @@ this.warhound <- this.inherit("scripts/entity/tactical/actor", {
 		injury.Visible = false;
 		injury.setBrush("bust_hound_01_injured");
 		this.addDefaultStatusSprites();
-		this.getSprite("status_rooted").Scale = 0.460000;
+		this.getSprite("status_rooted").Scale = 0.46;
 		this.setSpriteOffset("status_rooted", this.createVec(8, -15));
 		this.setSpriteOffset("status_stunned", this.createVec(0, -25));
 		this.setSpriteOffset("arrow", this.createVec(0, -25));

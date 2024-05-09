@@ -17,13 +17,13 @@ this.militia_spear <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_spear_02";
 		this.m.Value = 180;
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.StaminaModifier = -6;
 		this.m.RegularDamage = 25;
 		this.m.RegularDamageMax = 30;
-		this.m.ArmorDamageMult = 0.900000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 0.9;
+		this.m.DirectDamageMult = 0.25;
 	}
 
 	function onEquip()

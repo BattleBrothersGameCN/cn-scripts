@@ -34,7 +34,7 @@ this.archery_contest_situation <- this.inherit("scripts/entity/world/settlements
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.RecruitsMult *= 1.250000;
+		_modifiers.RecruitsMult *= 1.25;
 	}
 
 	function onUpdateDraftList( _draftList )

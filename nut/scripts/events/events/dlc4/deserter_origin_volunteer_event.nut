@@ -8,7 +8,7 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.deserter_origin_volunteer";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_88.png[/img]{两个看起来衣衫不整、疲倦的人从路旁的一些树丛里冒了出来。 他们举起了他们的手，好像他们是过来投降的。%SPEECH_ON%你们是 %companyname%？我们已经听说了，你们是逃兵们组成的战团。 我这不是一种侮辱。 我们也是逃兵，但是我们无路可走了。 我们去的每一处都是赏金猎人和行刑者。 让我们为你而战吧。 战斗从来就吓不倒我们。%SPEECH_OFF%}",

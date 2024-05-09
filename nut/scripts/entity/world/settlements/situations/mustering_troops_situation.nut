@@ -34,9 +34,9 @@ this.mustering_troops_situation <- this.inherit("scripts/entity/world/settlement
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.PriceMult *= 1.250000;
-		_modifiers.RecruitsMult *= 0.500000;
-		_modifiers.RarityMult *= 0.500000;
+		_modifiers.PriceMult *= 1.25;
+		_modifiers.RecruitsMult *= 0.5;
+		_modifiers.RarityMult *= 0.5;
 	}
 
 });

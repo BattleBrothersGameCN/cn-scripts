@@ -4,7 +4,7 @@ this.cart_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.cart";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们快带不下更多的装备和战利品了。\n让我们存个7500克朗，买辆货车来减轻负担吧！";
 		this.m.RewardTooltip = "你将解锁27个额外的仓库栏位。";
 		this.m.UIText = "拥有至少7500克朗";

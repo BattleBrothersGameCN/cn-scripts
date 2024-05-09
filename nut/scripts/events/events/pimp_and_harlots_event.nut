@@ -6,7 +6,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.pimp_and_harlots";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_85.png[/img]在行进的时候，你遇见了一个站在路边的女人。 她站在一辆驴拉的载重货车之前。 看见你们，她高兴地拍了拍手，然后大声地喊叫着。 一会儿之后，一群少妇从载重货车上挤下来，然后排列在你们面前。 她们打扮得很糟糕，如果按艺术里的说法，排练地也很糟糕。 她们大部分看起来都更应该作为一名平凡的妇女出现在别的地方。 你走上前询问这群妇女们的领头人她在干什么。 她咧着嘴笑着。%SPEECH_ON%我是一个肉体商人，一个贩卖好东西的商人。 这些，就是我的货物。%SPEECH_OFF%她向妓女们挥了挥手。 她们排列地更整齐了一些，或者说放松了一些，假装对你和你的人们很有兴趣。皮条客点了点头。%SPEECH_ON%让我们帮你们放松一下，哼？ 很久没有了不是吗？ 就这几个人，我打赌你只需要花 %cost% 克朗。%SPEECH_OFF%",
@@ -74,7 +74,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.worsenMood(0.750000, "你拒绝为了妓女付钱");
+						bro.worsenMood(0.75, "你拒绝为了妓女付钱");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -117,7 +117,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 
 				foreach( bro in brothers )
 				{
-					bro.improveMood(1.000000, "和妓女玩得很开心");
+					bro.improveMood(1.0, "和妓女玩得很开心");
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
@@ -307,7 +307,7 @@ this.pimp_and_harlots_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(1.000000, "因为你，错过了一次理性交流的好机会");
+						bro.worsenMood(1.0, "因为你，错过了一次理性交流的好机会");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

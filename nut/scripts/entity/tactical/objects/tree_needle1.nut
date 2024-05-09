@@ -13,7 +13,7 @@ this.tree_needle1 <- this.inherit("scripts/entity/tactical/entity", {
 	function onInit()
 	{
 		local hasNeedles = this.Math.rand(1, 100) <= 90;
-		local scale = 1.000000;
+		local scale = 1.0;
 		local flip = this.Math.rand(0, 1) == 1;
 		local v = this.Math.rand(1, 2);
 		local rotation = this.Math.rand(-3, 3);
@@ -35,8 +35,8 @@ this.tree_needle1 <- this.inherit("scripts/entity/tactical/entity", {
 			top.setHorizontalFlipping(flip);
 			top.Rotation = rotation;
 			top.Scale = scale;
-			top.varyColor(0.150000, 0.150000, 0.150000);
-			top.varySaturation(0.100000);
+			top.varyColor(0.15, 0.15, 0.15);
+			top.varySaturation(0.1);
 			this.setSpriteOcclusion("top", 1, 2, -3);
 		}
 

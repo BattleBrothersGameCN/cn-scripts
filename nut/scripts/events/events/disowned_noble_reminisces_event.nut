@@ -6,7 +6,7 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.disowned_noble_reminisces";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]你发现 %disowned% 独自坐在营地外。 当营火周围的人在你身后发出叽叽喳喳的嘲笑和欢呼时，你走近那个人，问他在生气什么。他耸耸肩。%SPEECH_ON%我不是在生闷气，先生，我只是在思考。 尽管我认为其中一个很容易被误认为另一个。%SPEECH_OFF%轻声笑着，他提供了一点酒，你接过去了。 在他身边坐下，你问他在“想”什么。 那个没落的贵族又耸耸肩。%SPEECH_ON%啊，其实没什么。只是想家。 我现在离它还有很远一段路要走，我记得的最后一次也不是最好的，但我仍然觉得自己时不时地想去那里。 思乡病在我看来是一种高贵的疾病，想想看吧。%SPEECH_OFF%你把酒还给他，因为他可能比你更需要。 趁你头脑还清醒，你试着说出你的想法…",
@@ -64,7 +64,7 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Disowned.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] 决心"
 				});
-				_event.m.Disowned.improveMood(1.000000, "和你谈得很愉快");
+				_event.m.Disowned.improveMood(1.0, "和你谈得很愉快");
 
 				if (_event.m.Disowned.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -103,7 +103,7 @@ this.disowned_noble_reminisces_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Disowned.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + resolve + "[/color] 决心"
 				});
-				_event.m.Disowned.improveMood(1.000000, "和你谈得很愉快");
+				_event.m.Disowned.improveMood(1.0, "和你谈得很愉快");
 
 				if (_event.m.Disowned.getMoodState() >= this.Const.MoodState.Neutral)
 				{

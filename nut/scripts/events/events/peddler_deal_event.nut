@@ -6,7 +6,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.peddler_deal";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%peddler% 向你走来，用手摩擦着后颈，紧张地扯着衬衫的前襟。 他提出了一个建议：让他带一些货物去城镇里卖，就像他过去经常做的那样。\n\n唯一一个问题就是他还没有货物－他得去附近港口城镇里的当地人那里购买。 现在他只需要一些起始资金来购买货物。 总计大概500克朗。 自然，作为合作伙伴，如果一切正常进行，你能得到其中的一部分利益。",
@@ -72,7 +72,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/bravery.png",
 					text = _event.m.Peddler.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 决心"
 				});
-				_event.m.Peddler.improveMood(2.000000, "兜售商品牟利");
+				_event.m.Peddler.improveMood(2.0, "兜售商品牟利");
 
 				if (_event.m.Peddler.getMoodState() >= this.Const.MoodState.Neutral)
 				{

@@ -128,7 +128,7 @@ this.apprentice_background <- this.inherit("scripts/skills/backgrounds/character
 	function onUpdate( _properties )
 	{
 		this.character_background.onUpdate(_properties);
-		_properties.XPGainMult *= 1.100000;
+		_properties.XPGainMult *= 1.1;
 	}
 
 });

@@ -3,14 +3,14 @@ this.send_greenskin_army_action <- this.inherit("scripts/factions/faction_action
 	function create()
 	{
 		this.m.ID = "send_greenskin_army_action";
-		this.m.Cooldown = 190.000000;
+		this.m.Cooldown = 190.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
 
 	function onUpdate( _faction )
 	{
-		if (!this.World.FactionManager.isGreenskinInvasion() || this.World.FactionManager.getGreaterEvilStrength() < 15.000000)
+		if (!this.World.FactionManager.isGreenskinInvasion() || this.World.FactionManager.getGreaterEvilStrength() < 15.0)
 		{
 			return;
 		}
@@ -38,7 +38,7 @@ this.send_greenskin_army_action <- this.inherit("scripts/factions/faction_action
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -151,7 +151,7 @@ this.send_greenskin_army_action <- this.inherit("scripts/factions/faction_action
 			move.setDestination(target.getTile());
 			c.addOrder(move);
 			local raid = this.new("scripts/ai/world/orders/raid_order");
-			raid.setTime(40.000000);
+			raid.setTime(40.0);
 			raid.setTargetTile(target.getTile());
 			c.addOrder(raid);
 			local back = this.new("scripts/ai/world/orders/move_order");
@@ -168,7 +168,7 @@ this.send_greenskin_army_action <- this.inherit("scripts/factions/faction_action
 			move.setDestination(target.getTile());
 			c.addOrder(move);
 			local destroy = this.new("scripts/ai/world/orders/destroy_order");
-			destroy.setTime(60.000000);
+			destroy.setTime(60.0);
 			destroy.setTargetTile(target.getTile());
 			destroy.setTargetID(target.getID());
 			c.addOrder(destroy);

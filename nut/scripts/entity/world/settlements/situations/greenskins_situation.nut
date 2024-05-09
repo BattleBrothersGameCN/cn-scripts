@@ -32,8 +32,8 @@ this.greenskins_situation <- this.inherit("scripts/entity/world/settlements/situ
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.RarityMult *= 0.750000;
-		_modifiers.RecruitsMult *= 0.750000;
+		_modifiers.RarityMult *= 0.75;
+		_modifiers.RecruitsMult *= 0.75;
 	}
 
 });

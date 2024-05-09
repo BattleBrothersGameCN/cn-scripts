@@ -36,27 +36,27 @@ this.hunters_cabin_location <- this.inherit("scripts/entity/world/attached_locat
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/cured_venison_item"
 			});
 			_list.push({
 				R = 30,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/short_bow"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hunting_bow"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/hood"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/hunters_hat"
 			});
 
@@ -65,7 +65,7 @@ this.hunters_cabin_location <- this.inherit("scripts/entity/world/attached_locat
 				_list.extend([
 					{
 						R = 10,
-						P = 1.000000,
+						P = 1.0,
 						S = "weapons/spetum"
 					}
 				]);
@@ -76,7 +76,7 @@ this.hunters_cabin_location <- this.inherit("scripts/entity/world/attached_locat
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 	}
 
 });

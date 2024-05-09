@@ -7,7 +7,7 @@ this.more_action_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.more_action";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_64.png[/img]你坐在帐篷里面享受着片刻的宁静，成就和收获每天都在不断的增加，以某种方式不断的累积起来，让今天比昨天更令人愉快。 突然，%combatbro1% 和 %combatbro2% 进来。 他们要求和你谈一谈。 你同意了，你拍了拍桌子邀请他们坐下来。 他们这样做了并很快表示他们已经有很长时间没有战斗了。 你感觉十分莫名其妙，你靠在椅背。%SPEECH_ON%这不是件好事吗？%SPEECH_OFF%%combatbro1% 摇了摇头并且举起自己的手在空气不断比划着。%SPEECH_ON%不，我们是被雇来战斗的，并且我们也想要战斗。 我们想要战斗，我想要屠戮，更重要的是在完成这两者后所获得金钱和荣耀。%SPEECH_OFF%",
@@ -88,7 +88,7 @@ this.more_action_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().isCombatBackground() && this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(1.000000, "对你的领导能力失去了信心");
+						bro.worsenMood(1.0, "对你的领导能力失去了信心");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -129,7 +129,7 @@ this.more_action_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().isCombatBackground() && this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.000000, "很快就要开战了");
+						bro.improveMood(1.0, "很快就要开战了");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

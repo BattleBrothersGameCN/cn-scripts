@@ -6,7 +6,7 @@ this.discover_unique_locations_ambition <- this.inherit("scripts/ambitions/ambit
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.discover_unique_locations";
-		this.m.Duration = 7.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 7.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "荒野中隐藏有很多其他人不敢索取的宝藏。\n这是我们的机会，所以让我们出发去寻找三个传奇地点！";
 		this.m.UIText = "探索世界发现传奇地点";
 		this.m.TooltipText = "通过自己探索世界，发现3个传奇地点。 出发前一定要储备好食物！";

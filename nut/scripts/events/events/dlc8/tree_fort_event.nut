@@ -6,7 +6,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.tree_fort";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_97.png[/img]{你发现一群孩子坐在一个树屋里。从小圆窗里透出锐利的目光，在木头堡垒周围，你可以看到已经准备好的弹弓。当你审视这座堡垒时，他们收起了绳梯，告诉你走开。你很好奇，想知道他们为什么会对一群几乎肯定会摧毁他们的人做出这样的反应，他们究竟拥有什么有价值的东西。\n\n因为孩子们容易受到压力，你询问他们是否隐藏了什么东西。其中一个做了个手淫的动作，让你滚开，而另一个孩子狠狠地打了他一拳，叫他闭嘴。这不像是藏着糖果或糕点的孩子的回答。他们肯定有一些有价值的东西藏在那里。}",
@@ -80,7 +80,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 					"weapons/scramasax"
 				];
 				local item = this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]);
-				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.01));
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -88,7 +88,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 					text = "你获得了" + item.getName()
 				});
 				item = this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]);
-				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.01));
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -96,7 +96,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 					text = "你获得了" + item.getName()
 				});
 				item = this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]);
-				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(10, 40) * 0.01));
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,

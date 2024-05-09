@@ -53,9 +53,9 @@ this.broken_elbow_joint_injury <- this.inherit("scripts/skills/injury_permanent/
 
 	function onUpdate( _properties )
 	{
-		_properties.MeleeSkillMult *= 0.800000;
-		_properties.RangedSkillMult *= 0.800000;
-		_properties.MeleeDefenseMult *= 0.700000;
+		_properties.MeleeSkillMult *= 0.8;
+		_properties.RangedSkillMult *= 0.8;
+		_properties.MeleeDefenseMult *= 0.7;
 		_properties.IsContentWithBeingInReserve = true;
 	}
 

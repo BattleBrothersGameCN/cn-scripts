@@ -12,7 +12,7 @@ this.cut_leg_muscles_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.m.IconMini = "injury_icon_06_mini";
 		this.m.HealingTimeMin = 3;
 		this.m.HealingTimeMax = 5;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -54,8 +54,8 @@ this.cut_leg_muscles_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.MeleeDefenseMult *= 0.600000;
-		_properties.InitiativeMult *= 0.600000;
+		_properties.MeleeDefenseMult *= 0.6;
+		_properties.InitiativeMult *= 0.6;
 	}
 
 });

@@ -18,16 +18,16 @@ this.pitchfork <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_pitchfork_01";
 		this.m.Value = 150;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 40.000000;
-		this.m.ConditionMax = 40.000000;
+		this.m.Condition = 40.0;
+		this.m.ConditionMax = 40.0;
 		this.m.StaminaModifier = -14;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 5;
 	}
 

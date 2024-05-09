@@ -24,7 +24,7 @@ this.kraken_bite_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 10;
 		this.m.MinRange = 1;
@@ -43,7 +43,7 @@ this.kraken_bite_skill <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.DamageRegularMin += 70;
 		_properties.DamageRegularMax += 110;
-		_properties.DamageArmorMult *= 1.000000;
+		_properties.DamageArmorMult *= 1.0;
 	}
 
 	function onUse( _user, _targetTile )

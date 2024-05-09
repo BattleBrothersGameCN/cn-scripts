@@ -18,13 +18,13 @@ this.named_axe <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 4000;
 		this.m.ShieldDamage = 16;
-		this.m.Condition = 80.000000;
-		this.m.ConditionMax = 80.000000;
+		this.m.Condition = 80.0;
+		this.m.ConditionMax = 80.0;
 		this.m.StaminaModifier = -12;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 55;
-		this.m.ArmorDamageMult = 1.300000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.3;
+		this.m.DirectDamageMult = 0.3;
 		this.randomizeValues();
 	}
 

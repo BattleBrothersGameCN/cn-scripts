@@ -12,7 +12,7 @@ this.undead_monolith_location <- this.inherit("scripts/entity/world/location", {
 		this.m.LocationType = this.Const.World.LocationType.Lair | this.Const.World.LocationType.Unique;
 		this.m.IsShowingDefenders = false;
 		this.m.IsShowingBanner = false;
-		this.m.VisibilityMult = 0.800000;
+		this.m.VisibilityMult = 0.8;
 		this.m.Resources = 500;
 		this.m.NamedWeaponsList = this.Const.Items.NamedUndeadWeapons;
 		this.m.NamedShieldsList = this.Const.Items.NamedUndeadShields;

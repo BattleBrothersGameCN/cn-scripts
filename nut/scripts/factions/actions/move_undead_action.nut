@@ -6,7 +6,7 @@ this.move_undead_action <- this.inherit("scripts/factions/faction_action", {
 	function create()
 	{
 		this.m.ID = "move_undead_action";
-		this.m.Cooldown = 180.000000;
+		this.m.Cooldown = 180.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -34,7 +34,7 @@ this.move_undead_action <- this.inherit("scripts/factions/faction_action", {
 
 		foreach( s in settlements )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -97,7 +97,7 @@ this.move_undead_action <- this.inherit("scripts/factions/faction_action", {
 			if (i != 0)
 			{
 				local waitUntilMove = this.new("scripts/ai/world/orders/wait_order");
-				waitUntilMove.setTime(6.000000);
+				waitUntilMove.setTime(6.0);
 				c.addOrder(waitUntilMove);
 			}
 
@@ -105,7 +105,7 @@ this.move_undead_action <- this.inherit("scripts/factions/faction_action", {
 			move.setDestination(this.m.Dest.getTile());
 			move.setAvoidSettlements(true);
 			local wait = this.new("scripts/ai/world/orders/wait_order");
-			wait.setTime(2.000000);
+			wait.setTime(2.0);
 			local despawn = this.new("scripts/ai/world/orders/despawn_order");
 			c.addOrder(move);
 			c.addOrder(wait);

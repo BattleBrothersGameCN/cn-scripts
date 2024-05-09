@@ -31,8 +31,8 @@ this.moving_sands_situation <- this.inherit("scripts/entity/world/settlements/si
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.SellPriceMult *= 1.100000;
-		_modifiers.RarityMult *= 0.850000;
+		_modifiers.SellPriceMult *= 1.1;
+		_modifiers.RarityMult *= 0.85;
 	}
 
 });

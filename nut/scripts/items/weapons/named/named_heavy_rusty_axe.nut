@@ -22,14 +22,14 @@ this.named_heavy_rusty_axe <- this.inherit("scripts/items/weapons/named/named_we
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3400;
 		this.m.ShieldDamage = 36;
-		this.m.Condition = 96.000000;
-		this.m.ConditionMax = 96.000000;
+		this.m.Condition = 96.0;
+		this.m.ConditionMax = 96.0;
 		this.m.StaminaModifier = -16;
 		this.m.RegularDamage = 75;
 		this.m.RegularDamageMax = 90;
-		this.m.ArmorDamageMult = 1.500000;
-		this.m.DirectDamageMult = 0.400000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 1.5;
+		this.m.DirectDamageMult = 0.4;
+		this.m.DirectDamageAdd = 0.1;
 		this.m.ChanceToHitHead = 0;
 		this.randomizeValues();
 	}

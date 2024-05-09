@@ -12,7 +12,7 @@ this.kraken_cult_location <- this.inherit("scripts/entity/world/location", {
 		this.m.LocationType = this.Const.World.LocationType.Unique;
 		this.m.IsShowingDefenders = true;
 		this.m.IsShowingBanner = false;
-		this.m.VisibilityMult = 0.900000;
+		this.m.VisibilityMult = 0.9;
 		this.m.Resources = 500;
 		this.m.OnEnter = "event.location.kraken_cult_enter";
 		this.m.OnDestroyed = "event.location.kraken_cult_destroyed";

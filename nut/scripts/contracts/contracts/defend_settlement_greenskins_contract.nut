@@ -9,7 +9,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 		this.contract.create();
 		this.m.Type = "contract.defend_settlement_greenskins";
 		this.m.Name = "保卫定居点";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.0;
 		this.m.MakeAllSpawnsResetOrdersOnContractEnd = false;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 	}
@@ -25,12 +25,12 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -72,19 +72,19 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					this.Flags.set("IsGoblins", true);
 				}
 
-				if (this.Math.rand(1, 100) <= 25 && this.Contract.getDifficultyMult() >= 0.950000)
+				if (this.Math.rand(1, 100) <= 25 && this.Contract.getDifficultyMult() >= 0.95)
 				{
 					this.Flags.set("IsMilitia", true);
 				}
 
 				local number = 1;
 
-				if (this.Contract.getDifficultyMult() >= 0.950000)
+				if (this.Contract.getDifficultyMult() >= 0.95)
 				{
 					number = number + this.Math.rand(0, 1);
 				}
 
-				if (this.Contract.getDifficultyMult() >= 1.100000)
+				if (this.Contract.getDifficultyMult() >= 1.1)
 				{
 					number = number + 1;
 				}
@@ -125,7 +125,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					if (i > 0)
 					{
 						local wait = this.new("scripts/ai/world/orders/wait_order");
-						wait.setTime(4.000000 * i);
+						wait.setTime(4.0 * i);
 						c.addOrder(wait);
 					}
 
@@ -133,7 +133,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					move.setDestination(targets[t].getTile());
 					c.addOrder(move);
 					local raid = this.new("scripts/ai/world/orders/raid_order");
-					raid.setTime(40.000000);
+					raid.setTime(40.0);
 					raid.setTargetTile(targets[t].getTile());
 					c.addOrder(raid);
 					targets.remove(t);
@@ -163,7 +163,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					{
 						local p = this.World.getEntityByID(id);
 
-						if (p != null && p.isAlive() && p.getDistanceTo(this.Contract.m.Home) <= 1200.000000)
+						if (p != null && p.isAlive() && p.getDistanceTo(this.Contract.m.Home) <= 1200.0)
 						{
 							isEnemyGone = false;
 							break;
@@ -191,7 +191,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					{
 						local p = this.World.getEntityByID(id);
 
-						if (p != null && p.isAlive() && p.getDistanceTo(this.Contract.m.Home) <= 700.000000)
+						if (p != null && p.isAlive() && p.getDistanceTo(this.Contract.m.Home) <= 700.0)
 						{
 							isEnemyHere = true;
 							break;
@@ -234,7 +234,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 						c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(true);
 						this.Contract.m.Kidnapper = this.WeakTableRef(p);
 						this.Flags.set("IsKidnappingInProgress", true);
-						this.Flags.set("KidnappingTooLate", this.Time.getVirtualTimeF() + 60.000000);
+						this.Flags.set("KidnappingTooLate", this.Time.getVirtualTimeF() + 60.0);
 						this.Contract.setScreen("Kidnapping1");
 						this.World.Contracts.showActiveContract();
 						this.Contract.setState("Kidnapping");
@@ -281,7 +281,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 			{
 				if (this.Contract.m.Kidnapper == null || this.Contract.m.Kidnapper.isNull() || !this.Contract.m.Kidnapper.isAlive())
 				{
-					if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() <= 5.000000)
+					if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() <= 5.0)
 					{
 						this.Flags.set("IsKidnapping", false);
 						this.Contract.setScreen("Kidnapping2");
@@ -545,7 +545,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					function getResult()
 					{
 						local home = this.Contract.m.Home;
-						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.700000);
+						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.7);
 						party.getSprite("banner").setBrush(home.getBanner());
 						party.setDescription("勇敢的人用生命保卫家园。农夫、工匠、技工，但没有一个真正的士兵。");
 						party.setFootprintType(this.Const.World.FootprintsType.Militia);
@@ -553,7 +553,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 						local c = party.getController();
 						local guard = this.new("scripts/ai/world/orders/guard_order");
 						guard.setTarget(home.getTile());
-						guard.setTime(300.000000);
+						guard.setTime(300.0);
 						local despawn = this.new("scripts/ai/world/orders/despawn_order");
 						c.addOrder(guard);
 						c.addOrder(despawn);
@@ -566,7 +566,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					function getResult()
 					{
 						local home = this.Contract.m.Home;
-						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.700000);
+						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.7);
 						party.getSprite("banner").setBrush(home.getBanner());
 						party.setDescription("勇敢的人用生命保卫家园。农夫、工匠、技工，但没有一个真正的士兵。");
 						party.setFootprintType(this.Const.World.FootprintsType.Militia);
@@ -585,7 +585,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 
 						local guard = this.new("scripts/ai/world/orders/guard_order");
 						guard.setTarget(targets[this.Math.rand(0, targets.len() - 1)].getTile());
-						guard.setTime(300.000000);
+						guard.setTime(300.0);
 						local despawn = this.new("scripts/ai/world/orders/despawn_order");
 						c.addOrder(guard);
 						c.addOrder(despawn);

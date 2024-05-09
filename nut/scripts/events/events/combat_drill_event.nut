@@ -6,7 +6,7 @@ this.combat_drill_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.combat_drill";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]你走出帐篷去观察那些人。 他们中的许多人是新雇来的菜鸟，紧张不安地尝试结交新朋友或试着用手拿起武器。%oldguard% 来到你身边。%SPEECH_ON%我知道你在想什么。 你在想你刚刚雇了一堆小鲜肉来打谷子。 我该怎么鞭策这些孩子靠谱一些，使他们在第一次上战场的时候不会吃到兽人的利刃？%SPEECH_OFF%",
@@ -72,7 +72,7 @@ this.combat_drill_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Teacher.getImagePath());
-				_event.m.Teacher.improveMood(0.500000, "已经训练了新兵");
+				_event.m.Teacher.improveMood(0.5, "已经训练了新兵");
 			}
 
 		});
@@ -132,17 +132,17 @@ this.combat_drill_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkill("trait.clumsy") || bro.getSkills().hasSkill("trait.drunkard"))
 					{
-						injuryChance = injuryChance * 2.000000;
+						injuryChance = injuryChance * 2.0;
 					}
 
 					if (bro.getBackground().isCombatBackground())
 					{
-						injuryChance = injuryChance * 0.500000;
+						injuryChance = injuryChance * 0.5;
 					}
 
 					if (bro.getSkills().hasSkill("trait.dexterous"))
 					{
-						injuryChance = injuryChance * 0.500000;
+						injuryChance = injuryChance * 0.5;
 					}
 
 					if (this.Math.rand(1, 100) <= injuryChance)
@@ -189,7 +189,7 @@ this.combat_drill_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Teacher.getImagePath());
-				_event.m.Teacher.improveMood(0.500000, "已经训练了新兵");
+				_event.m.Teacher.improveMood(0.5, "已经训练了新兵");
 			}
 
 		});
@@ -238,17 +238,17 @@ this.combat_drill_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkill("trait.asthmatic"))
 					{
-						exhaustionChance = exhaustionChance * 4.000000;
+						exhaustionChance = exhaustionChance * 4.0;
 					}
 
 					if (bro.getSkills().hasSkill("trait.athletic"))
 					{
-						exhaustionChance = exhaustionChance * 0.000000;
+						exhaustionChance = exhaustionChance * 0.0;
 					}
 
 					if (bro.getSkills().hasSkill("trait.iron_lungs"))
 					{
-						exhaustionChance = exhaustionChance * 0.000000;
+						exhaustionChance = exhaustionChance * 0.0;
 					}
 
 					if (this.Math.rand(1, 100) <= exhaustionChance)
@@ -284,7 +284,7 @@ this.combat_drill_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Teacher.getImagePath());
-				_event.m.Teacher.improveMood(0.500000, "已经训练了新兵");
+				_event.m.Teacher.improveMood(0.5, "已经训练了新兵");
 			}
 
 		});
@@ -344,17 +344,17 @@ this.combat_drill_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getSkills().hasSkill("trait.asthmatic"))
 					{
-						exhaustionChance = exhaustionChance * 2.000000;
+						exhaustionChance = exhaustionChance * 2.0;
 					}
 
 					if (bro.getSkills().hasSkill("trait.athletic"))
 					{
-						exhaustionChance = exhaustionChance * 0.500000;
+						exhaustionChance = exhaustionChance * 0.5;
 					}
 
 					if (bro.getSkills().hasSkill("trait.iron_lungs"))
 					{
-						exhaustionChance = exhaustionChance * 0.500000;
+						exhaustionChance = exhaustionChance * 0.5;
 					}
 
 					if (this.Math.rand(1, 100) <= exhaustionChance)

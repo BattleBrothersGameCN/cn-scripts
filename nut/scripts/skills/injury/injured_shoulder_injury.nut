@@ -48,7 +48,7 @@ this.injured_shoulder_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.DamageTotalMult *= 0.750000;
+		_properties.DamageTotalMult *= 0.75;
 	}
 
 });

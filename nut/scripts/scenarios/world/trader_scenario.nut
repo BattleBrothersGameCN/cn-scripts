@@ -24,7 +24,7 @@ this.trader_scenario <- this.inherit("scripts/scenarios/world/starting_scenario"
 			local bro;
 			bro = roster.create("scripts/entity/tactical/player");
 			bro.m.HireTime = this.Time.getVirtualTimeF();
-			bro.worsenMood(0.500000, "遇到了另一个被绿皮屠杀的商队");
+			bro.worsenMood(0.5, "遇到了另一个被绿皮屠杀的商队");
 
 			while (names.find(bro.getNameOnly()) != null)
 			{
@@ -139,9 +139,9 @@ this.trader_scenario <- this.inherit("scripts/scenarios/world/starting_scenario"
 
 	function onInit()
 	{
-		this.World.Assets.m.BusinessReputationRate = 0.660000;
-		this.World.Assets.m.BuyPriceMult = 0.900000;
-		this.World.Assets.m.SellPriceMult = 1.100000;
+		this.World.Assets.m.BusinessReputationRate = 0.66;
+		this.World.Assets.m.BuyPriceMult = 0.9;
+		this.World.Assets.m.SellPriceMult = 1.1;
 	}
 
 });

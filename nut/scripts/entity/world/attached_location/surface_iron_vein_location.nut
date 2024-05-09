@@ -19,33 +19,33 @@ this.surface_iron_vein_location <- this.inherit("scripts/entity/world/attached_l
 			r = [
 				{
 					File = "ambience/settlement/mines_00.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_01.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_00.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_01.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_02.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/mines_shoveling_03.wav",
-					Volume = 1.250000,
-					Pitch = 1.000000
+					Volume = 1.25,
+					Pitch = 1.0
 				}
 			];
 
@@ -78,17 +78,17 @@ this.surface_iron_vein_location <- this.inherit("scripts/entity/world/attached_l
 		{
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/pickaxe"
 			});
 			_list.push({
 				R = 15,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/reinforced_wooden_flail"
 			});
 			_list.push({
 				R = 25,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/armor_parts_item"
 			});
 		}
@@ -99,37 +99,37 @@ this.surface_iron_vein_location <- this.inherit("scripts/entity/world/attached_l
 		{
 			_list.push({
 				R = 55,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/falchion"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/morning_star"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/arming_sword"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/military_cleaver"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/winged_mace"
 			});
 			_list.push({
 				R = 60,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/pike"
 			});
 			_list.push({
 				R = 70,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/longaxe"
 			});
 		}

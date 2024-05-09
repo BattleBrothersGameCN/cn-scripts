@@ -7,7 +7,7 @@ this.undead_boy_who_cried_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.undead_boy_who_cried";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 140.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 140.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_97.png[/img]{当你们拜访 %townname% 时，一个小男孩叫你，他哭着说亡灵要来吃他的家人。 你问他有多少只，他说只有一只，但那是致命的畜生。%SPEECH_ON%我想它是我以前的保姆。 她从不疼爱我。请，帮个忙！%SPEECH_OFF%如果只是一只亡灵，应该不会太麻烦，你可以自己解决。}",

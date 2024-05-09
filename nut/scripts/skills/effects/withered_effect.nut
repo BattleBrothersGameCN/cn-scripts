@@ -102,9 +102,9 @@ this.withered_effect <- this.inherit("scripts/skills/skill", {
 	function onUpdate( _properties )
 	{
 		local actor = this.getContainer().getActor();
-		_properties.DamageTotalMult *= 1.000000 - this.m.TurnsLeft * 0.250000;
-		_properties.InitiativeMult *= 1.000000 - this.m.TurnsLeft * 0.250000;
-		_properties.StaminaMult *= 1.000000 - this.m.TurnsLeft * 0.250000;
+		_properties.DamageTotalMult *= 1.0 - this.m.TurnsLeft * 0.25;
+		_properties.InitiativeMult *= 1.0 - this.m.TurnsLeft * 0.25;
+		_properties.StaminaMult *= 1.0 - this.m.TurnsLeft * 0.25;
 		_properties.FatigueRecoveryRate -= this.m.TurnsLeft * 5;
 
 		if (actor.hasSprite("status_stunned") && !this.getContainer().hasSkill("effects.stunned"))

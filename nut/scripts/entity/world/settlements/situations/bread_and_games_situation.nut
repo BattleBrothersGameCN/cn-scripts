@@ -34,8 +34,8 @@ this.bread_and_games_situation <- this.inherit("scripts/entity/world/settlements
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.FoodRarityMult *= 1.500000;
-		_modifiers.FoodPriceMult *= 0.900000;
+		_modifiers.FoodRarityMult *= 1.5;
+		_modifiers.FoodPriceMult *= 0.9;
 	}
 
 	function onUpdateDraftList( _draftList )

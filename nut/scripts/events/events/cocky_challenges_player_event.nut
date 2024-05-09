@@ -6,7 +6,7 @@ this.cocky_challenges_player_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cocky_challenges_player";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 45.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_26.png[/img]在篝火旁加入战团时，%cocky% 站起来，满脸通红地说话。%SPEECH_ON%我不知道你们这些可怜虫怎么想，但我想我比任何人都能更好地管理这个队伍！ 尤其是比他好！%SPEECH_OFF%他用手指着你。\n\n你在他旁边坐了下来。他盯着你, 等待着你的回答。",
@@ -70,7 +70,7 @@ this.cocky_challenges_player_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getMoodState() < this.Const.MoodState.Neutral && this.Math.rand(1, 100) <= 33)
 					{
-						bro.improveMood(1.000000, "对你的领导能力有了信心");
+						bro.improveMood(1.0, "对你的领导能力有了信心");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -104,7 +104,7 @@ this.cocky_challenges_player_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Cocky.getImagePath());
-				_event.m.Cocky.worsenMood(3.000000, "在战团面前感到丢脸");
+				_event.m.Cocky.worsenMood(3.0, "在战团面前感到丢脸");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Cocky.getMoodState()],
@@ -138,7 +138,7 @@ this.cocky_challenges_player_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(1.000000, "对你的领导能力失去了信心");
+						bro.worsenMood(1.0, "对你的领导能力失去了信心");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

@@ -71,7 +71,7 @@ this.geomancy_skill <- this.inherit("scripts/skills/skill", {
 
 	function onSwapTiles( _user )
 	{
-		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.000000, _user.getPos());
+		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, _user.getPos());
 
 		if (!_user.isHiddenToPlayer())
 		{
@@ -170,7 +170,7 @@ this.geomancy_skill <- this.inherit("scripts/skills/skill", {
 
 	function onLowerTiles( _user )
 	{
-		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.000000, _user.getPos());
+		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, _user.getPos());
 		this.Tactical.EventLog.log("大地又降下来了");
 		local entities = this.Tactical.Entities.getInstancesOfFaction(_user.getFaction());
 		local tiles = [];

@@ -72,10 +72,10 @@ this.burnt_face_injury <- this.inherit("scripts/skills/injury/injury", {
 			return;
 		}
 
-		_properties.MeleeSkillMult *= 0.750000;
-		_properties.RangedSkillMult *= 0.750000;
-		_properties.MeleeDefenseMult *= 0.750000;
-		_properties.RangedDefenseMult *= 0.750000;
+		_properties.MeleeSkillMult *= 0.75;
+		_properties.RangedSkillMult *= 0.75;
+		_properties.MeleeDefenseMult *= 0.75;
+		_properties.RangedDefenseMult *= 0.75;
 		_properties.Vision -= 2;
 	}
 

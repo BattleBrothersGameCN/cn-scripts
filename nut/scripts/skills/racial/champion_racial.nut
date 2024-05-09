@@ -16,24 +16,24 @@ this.champion_racial <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageTotalMult *= 1.150000;
-		_properties.BraveryMult *= 1.500000;
-		_properties.StaminaMult *= 1.500000;
-		_properties.MeleeSkillMult *= 1.150000;
-		_properties.RangedSkillMult *= 1.150000;
-		_properties.MeleeDefenseMult *= 1.250000;
-		_properties.RangedDefenseMult *= 1.250000;
-		_properties.InitiativeMult *= 1.150000;
-		_properties.HitpointsMult *= 1.350000;
+		_properties.DamageTotalMult *= 1.15;
+		_properties.BraveryMult *= 1.5;
+		_properties.StaminaMult *= 1.5;
+		_properties.MeleeSkillMult *= 1.15;
+		_properties.RangedSkillMult *= 1.15;
+		_properties.MeleeDefenseMult *= 1.25;
+		_properties.RangedDefenseMult *= 1.25;
+		_properties.InitiativeMult *= 1.15;
+		_properties.HitpointsMult *= 1.35;
 
 		if (this.getContainer().getActor().getBaseProperties().MeleeDefense >= 20 || this.getContainer().getActor().getBaseProperties().RangedDefense >= 20 || this.getContainer().getActor().getBaseProperties().MeleeDefense >= 15 && this.getContainer().getActor().getBaseProperties().RangedDefense >= 15)
 		{
-			_properties.MeleeDefenseMult *= 1.250000;
-			_properties.RangedDefenseMult *= 1.250000;
+			_properties.MeleeDefenseMult *= 1.25;
+			_properties.RangedDefenseMult *= 1.25;
 		}
 		else
 		{
-			_properties.HitpointsMult *= 1.350000;
+			_properties.HitpointsMult *= 1.35;
 		}
 	}
 

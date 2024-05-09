@@ -7,7 +7,7 @@ this.hate_undead_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.hate_undead";
 		this.m.Title = "战斗之后……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%image%{%brother%吐了口口水，用手抹了抹鼻子。他皱起眉头，似乎在自言自语，其他人在旁看着。%SPEECH_ON%如果我们允许死人再次行走，那么旧神们将惩罚我们！你们可以认为你们在这个世界上做对了，那么在天堂等待你们的结果，但是我不会走上这条毫无意义的路，因为我知道这条路直通地狱。我会以一个正义的终结来结束自己的生命，并摧毁每一个被诅咒的不死亡骑士！%SPEECH_OFF%}",
@@ -46,7 +46,7 @@ this.hate_undead_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.000000)
+		if (this.Time.getVirtualTimeF() - this.World.Events.getLastBattleTime() > 8.0)
 		{
 			return;
 		}

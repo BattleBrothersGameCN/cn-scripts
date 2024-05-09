@@ -33,10 +33,10 @@ this.unhold_attacks_situation <- this.inherit("scripts/entity/world/settlements/
 
 	function onUpdate( _modifiers )
 	{
-		_modifiers.BuyPriceMult *= 1.100000;
-		_modifiers.SellPriceMult *= 0.900000;
-		_modifiers.RarityMult *= 0.900000;
-		_modifiers.RecruitsMult *= 0.750000;
+		_modifiers.BuyPriceMult *= 1.1;
+		_modifiers.SellPriceMult *= 0.9;
+		_modifiers.RarityMult *= 0.9;
+		_modifiers.RecruitsMult *= 0.75;
 	}
 
 });

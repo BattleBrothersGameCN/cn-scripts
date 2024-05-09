@@ -6,7 +6,7 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.runaway_harem";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 200.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 200.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_170.png[/img]{你遇到一片稀疏的游牧民和一些维齐尔人的士兵在争论。 在他们中间是另一群看起来好像某种可能在维齐尔的后宫里的女人。 随着你靠近都停下来看着你。 一个维齐尔士兵的军官挥手示意让你离开。%SPEECH_ON%这跟你无关，逐币者。%SPEECH_OFF%但是，或许是想把你卷入这个事件，游牧民们解释道：这些女人都是“负债者”，那些要为失误或者冒犯服侍别人的人。 这个情形中，他们得去服侍维齐尔。 但是，她们逃跑了，并且把负债者这个概念视为异端的游牧民们接纳了她们。%SPEECH_ON%嘿，逐币者！不要听进那个游民的毒药！ 还有游牧民，这些女人得跟我们走，或者你们全得死在这里。%SPEECH_OFF%}",

@@ -19,28 +19,28 @@ this.pig_farm_location <- this.inherit("scripts/entity/world/attached_location",
 			r = [
 				{
 					File = "ambience/buildings/market_pig_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/market_pig_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/market_pig_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/market_pig_03.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/market_pig_04.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				}
 			];
 
@@ -80,17 +80,17 @@ this.pig_farm_location <- this.inherit("scripts/entity/world/attached_location",
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/smoked_ham_item"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/butchers_cleaver"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "armor/butcher_apron"
 			});
 		}
@@ -99,7 +99,7 @@ this.pig_farm_location <- this.inherit("scripts/entity/world/attached_location",
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 	}
 
 });

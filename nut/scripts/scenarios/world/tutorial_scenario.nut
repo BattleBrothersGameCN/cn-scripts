@@ -19,7 +19,7 @@ this.tutorial_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 			local bro;
 			bro = roster.create("scripts/entity/tactical/player");
 			bro.m.HireTime = this.Time.getVirtualTimeF();
-			bro.worsenMood(0.500000, "失去了大部分的战团同伴");
+			bro.worsenMood(0.5, "失去了大部分的战团同伴");
 
 			while (names.find(bro.getNameOnly()) != null)
 			{

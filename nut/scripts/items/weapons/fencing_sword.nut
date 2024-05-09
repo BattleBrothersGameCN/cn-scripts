@@ -16,14 +16,14 @@ this.fencing_sword <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_sword_fencing_01";
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.StaminaModifier = -4;
 		this.m.Value = 1550;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 0.750000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.75;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function onEquip()

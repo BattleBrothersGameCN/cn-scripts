@@ -18,16 +18,16 @@ this.hooked_blade <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ArmamentIcon = "icon_bill_02";
 		this.m.Value = 700;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 55.000000;
-		this.m.ConditionMax = 55.000000;
+		this.m.Condition = 55.0;
+		this.m.ConditionMax = 55.0;
 		this.m.StaminaModifier = -12;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 40;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 1.100000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.1;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 5;
 	}
 

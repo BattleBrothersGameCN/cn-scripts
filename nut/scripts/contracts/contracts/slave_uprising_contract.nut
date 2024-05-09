@@ -13,10 +13,10 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 	function create()
 	{
 		this.contract.create();
-		this.m.DifficultyMult = this.Math.rand(70, 105) * 0.010000;
+		this.m.DifficultyMult = this.Math.rand(70, 105) * 0.01;
 		this.m.Type = "contract.slave_uprising";
 		this.m.Name = "奴隶起义";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -30,12 +30,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("SpartacusName", this.Const.Strings.SouthernNames[this.Math.rand(0, this.Const.Strings.SouthernNames.len() - 1)] + " " + this.Const.Strings.SouthernNamesLast[this.Math.rand(0, this.Const.Strings.SouthernNamesLast.len() - 1)]);
@@ -346,7 +346,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 					Text = "我们当下就去追捕他们。",
 					function getResult()
 					{
-						this.World.uncoverFogOfWar(this.Contract.m.Target.getPos(), 400.000000);
+						this.World.uncoverFogOfWar(this.Contract.m.Target.getPos(), 400.0);
 						this.World.getCamera().moveTo(this.Contract.m.Target);
 						this.Contract.setState("Running_Outlaws");
 						return 0;
@@ -474,7 +474,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 							}
 						}
 
-						this.World.uncoverFogOfWar(location.getTile().Pos, 700.000000);
+						this.World.uncoverFogOfWar(location.getTile().Pos, 700.0);
 						location.getFlags().set("IsEventLocation", true);
 						location.setDiscovered(true);
 						this.World.getCamera().moveTo(location);
@@ -548,7 +548,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 					Text = "我们当下就去追捕他们。",
 					function getResult()
 					{
-						this.World.uncoverFogOfWar(this.Contract.m.Target.getPos(), 400.000000);
+						this.World.uncoverFogOfWar(this.Contract.m.Target.getPos(), 400.0);
 						this.World.getCamera().moveTo(this.Contract.m.Target);
 						this.Contract.setState("Running_Fleeing");
 						return 0;
@@ -571,7 +571,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 				party.setImportant(true);
 				party.setDiscovered(true);
 				party.setAttackableByAI(false);
-				party.setFootprintSizeOverride(0.750000);
+				party.setFootprintSizeOverride(0.75);
 				local c = party.getController();
 				local randomVillage;
 				local northernmostY = 0;
@@ -591,9 +591,9 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 				move.setDestination(randomVillage.getTile());
 				c.addOrder(move);
 				local wait = this.new("scripts/ai/world/orders/wait_order");
-				wait.setTime(9000.000000);
+				wait.setTime(9000.0);
 				c.addOrder(wait);
-				this.Const.World.Common.addFootprintsFromTo(this.Contract.m.Destination.getTile(), party.getTile(), this.Const.GenericFootprints, this.Const.World.FootprintsType.Nomads, 0.750000);
+				this.Const.World.Common.addFootprintsFromTo(this.Contract.m.Destination.getTile(), party.getTile(), this.Const.GenericFootprints, this.Const.World.FootprintsType.Nomads, 0.75);
 			}
 
 		});

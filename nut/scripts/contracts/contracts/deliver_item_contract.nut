@@ -7,10 +7,10 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 	function create()
 	{
 		this.contract.create();
-		this.m.DifficultyMult = this.Math.rand(70, 105) * 0.010000;
+		this.m.DifficultyMult = this.Math.rand(70, 105) * 0.01;
 		this.m.Type = "contract.deliver_item";
 		this.m.Name = "武装信使";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
 	function onImportIntro()
@@ -96,23 +96,23 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (days >= 2 || distance >= 40)
 		{
-			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(95, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(70, 85) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(70, 85) * 0.01;
 		}
 
-		this.m.Payment.Pool = this.Math.max(125, distance * 4.500000 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentLightMult());
+		this.m.Payment.Pool = this.Math.max(125, distance * 4.5 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentLightMult());
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.m.Flags.set("Distance", distance);
@@ -150,7 +150,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 
 				if (r <= 10)
 				{
-					if (this.Contract.getDifficultyMult() >= 0.950000 && this.World.Assets.getBusinessReputation() > 750 && (!this.World.Ambitions.hasActiveAmbition() || this.World.Ambitions.getActiveAmbition().getID() != "ambition.defeat_mercenaries"))
+					if (this.Contract.getDifficultyMult() >= 0.95 && this.World.Assets.getBusinessReputation() > 750 && (!this.World.Ambitions.hasActiveAmbition() || this.World.Ambitions.getActiveAmbition().getID() != "ambition.defeat_mercenaries"))
 					{
 						this.Flags.set("IsMercenaries", true);
 					}
@@ -220,7 +220,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 				}
 				else
 				{
-					local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.000000);
+					local parties = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), 400.0);
 
 					foreach( party in parties )
 					{
@@ -267,7 +267,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).addSettlement(this.Contract.m.Location.get(), false);
 						this.Contract.m.Location.onSpawned();
 						this.Contract.addUnitsToEntity(this.Contract.m.Location, this.Const.World.Spawn.BanditDefenders, 80 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
-						this.Const.World.Common.addFootprintsFromTo(this.World.State.getPlayer().getTile(), tile, this.Const.GenericFootprints, this.Const.World.FootprintsType.Brigands, 0.750000);
+						this.Const.World.Common.addFootprintsFromTo(this.World.State.getPlayer().getTile(), tile, this.Const.GenericFootprints, this.Const.World.FootprintsType.Brigands, 0.75);
 						this.Flags.set("IsStolenByThieves", true);
 						this.Contract.setScreen("Thieves1");
 						this.World.Contracts.showActiveContract();
@@ -477,7 +477,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 
 						if (recipientFaction != null)
 						{
-							recipientFaction.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 0.500000);
+							recipientFaction.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 0.5);
 						}
 
 						this.World.Contracts.finishActiveContract(true);
@@ -694,7 +694,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 
 						if (recipientFaction != null)
 						{
-							recipientFaction.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 0.500000);
+							recipientFaction.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail * 0.5);
 						}
 
 						this.World.Contracts.finishActiveContract(true);
@@ -750,7 +750,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 
 						if (recipientFaction != null)
 						{
-							recipientFaction.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess * 0.500000, "运送了一些货物");
+							recipientFaction.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess * 0.5, "运送了一些货物");
 						}
 
 						this.World.Contracts.finishActiveContract();
@@ -799,7 +799,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 
 						if (recipientFaction != null)
 						{
-							recipientFaction.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess * 0.500000, "运送了一些货物");
+							recipientFaction.addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess * 0.5, "运送了一些货物");
 						}
 
 						this.World.Contracts.finishActiveContract();

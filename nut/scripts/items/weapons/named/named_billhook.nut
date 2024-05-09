@@ -17,16 +17,16 @@ this.named_billhook <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 3200;
 		this.m.ShieldDamage = 0;
-		this.m.Condition = 72.000000;
-		this.m.ConditionMax = 72.000000;
+		this.m.Condition = 72.0;
+		this.m.ConditionMax = 72.0;
 		this.m.StaminaModifier = -14;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 55;
 		this.m.RegularDamageMax = 85;
-		this.m.ArmorDamageMult = 1.400000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.4;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 5;
 		this.randomizeValues();
 	}

@@ -21,13 +21,13 @@ this.lute <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_lute";
 		this.m.Value = 120;
-		this.m.Condition = 2.000000;
-		this.m.ConditionMax = 2.000000;
+		this.m.Condition = 2.0;
+		this.m.ConditionMax = 2.0;
 		this.m.StaminaModifier = -4;
 		this.m.RegularDamage = 5;
 		this.m.RegularDamageMax = 10;
-		this.m.ArmorDamageMult = 0.100000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 0.1;
+		this.m.DirectDamageMult = 0.4;
 	}
 
 	function onEquip()

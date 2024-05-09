@@ -56,7 +56,7 @@ this.orc_berserker_potion_effect <- this.inherit("scripts/skills/skill", {
 					id = 12,
 					type = "text",
 					icon = "ui/icons/sturdiness.png",
-					text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + (100 - this.Math.maxf(0.300000, 1.000000 - 0.020000 * this.m.RageStacks) * 100) + "%[/color] 伤害减免"
+					text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + (100 - this.Math.maxf(0.3, 1.0 - 0.02 * this.m.RageStacks) * 100) + "%[/color] 伤害减免"
 				},
 				{
 					id = 12,
@@ -96,7 +96,7 @@ this.orc_berserker_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageReceivedTotalMult *= this.Math.maxf(0.300000, 1.000000 - 0.020000 * this.m.RageStacks);
+		_properties.DamageReceivedTotalMult *= this.Math.maxf(0.3, 1.0 - 0.02 * this.m.RageStacks);
 		_properties.Bravery += 1 * this.m.RageStacks;
 		_properties.DamageRegularMin += 1 * this.m.RageStacks;
 		_properties.DamageRegularMax += 1 * this.m.RageStacks;

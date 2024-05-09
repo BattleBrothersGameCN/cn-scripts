@@ -4,7 +4,7 @@ this.man_in_forest_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.man_in_forest";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_76.png[/img]当你们在在树间跋涉时，一个男人突然从一个灌木丛中出现。 树枝和杂草和他那被汗水浸透的头发纠缠在一起。 他一见到你就突然紧张了起来。%SPEECH_ON%拜托，别再这样了。%SPEECH_OFF%你举手让他冷静下来然后问他发生了什么事。 这个陌生人退了一步。%SPEECH_ON%拜托，别再这样了！%SPEECH_OFF%他转身就跑，一路跌跌撞撞地往他来时的路跑。%randombrother% 急匆匆地来到你身边。%SPEECH_ON%我们应该跟着他吗？%SPEECH_OFF%",

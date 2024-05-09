@@ -4,7 +4,7 @@ this.oath_of_distinction_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 	{
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_distinction";
-		this.m.Duration = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "真正杰出的是那些能够遵循年轻的安瑟姆的教导的人。\n让我们立下超群誓言，证明我们有资格走他的路！";
 		this.m.TooltipText = "小安瑟姆经常寻求独处，有时甚至是在战场上。 “用这种方式证明你的价值，即使是古神也不会说他们的眼睛在他们所看到的荣耀中有错误。”";
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{许多剑术大师都是独处的。 他们的想法是，他们不是在与前面的人战斗，而是在为中间的空间而战。 虽然你不可能理解剑术大师和佣兵在空中舞剑的细微差别，但你会意识到这一公理的核心真理。 宣誓者，虽然可敬、勤奋，但内心仍然勇敢得近乎残酷，过分自信得荒谬可笑。 超群誓言在精神上遵循了剑术大师的技艺，而宣誓者则铭记于心。 每个人都独立自主地努力证明自己，证明自己值得别人的称赞。 如果有任何无偏见的俗人碰巧在观看，那么就不可能说 %companyname% 没有作为一个精良的队伍脱颖而出。\n\n但是区别是不可避免的。 我们不能整天霸占着荣耀！ 到下一个誓言！}";

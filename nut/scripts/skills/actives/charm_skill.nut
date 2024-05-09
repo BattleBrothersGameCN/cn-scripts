@@ -75,7 +75,7 @@ this.charm_skill <- this.inherit("scripts/skills/skill", {
 			return false;
 		}
 
-		if (_target.getCurrentProperties().MoraleCheckBraveryMult[this.Const.MoraleCheckType.MentalAttack] >= 1000.000000)
+		if (_target.getCurrentProperties().MoraleCheckBraveryMult[this.Const.MoraleCheckType.MentalAttack] >= 1000.0)
 		{
 			return false;
 		}
@@ -103,7 +103,7 @@ this.charm_skill <- this.inherit("scripts/skills/skill", {
 		local _targetTile = _tag.TargetTile;
 		local _user = _tag.User;
 		local target = _targetTile.getEntity();
-		local time = this.Tactical.spawnProjectileEffect("effect_heart_01", _user.getTile(), _targetTile, 0.330000, 2.000000, false, false);
+		local time = this.Tactical.spawnProjectileEffect("effect_heart_01", _user.getTile(), _targetTile, 0.33, 2.0, false, false);
 		local self = this;
 		this.Time.scheduleEvent(this.TimeUnit.Virtual, time, function ( _e )
 		{

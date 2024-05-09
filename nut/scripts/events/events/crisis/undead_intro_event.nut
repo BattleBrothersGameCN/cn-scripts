@@ -4,7 +4,7 @@ this.undead_intro_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.undead_intro";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 1.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 1.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",

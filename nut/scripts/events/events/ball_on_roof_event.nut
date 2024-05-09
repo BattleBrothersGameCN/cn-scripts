@@ -9,7 +9,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.ball_on_roof";
 		this.m.Title = "在%townname%";
-		this.m.Cooldown = 140.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 140.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_97.png[/img]战团遇到一个小男孩，他爬上了一棵树，爬到了树枝的边缘。 他伸手去拿一个卡在他家屋顶上的球。 没有一个家长能帮助他。 当他看到你时，他问你是否可以帮忙拿球。似乎非常简单。",
@@ -77,7 +77,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.improveMood(1.000000, "帮助一个小男孩");
+				_event.m.Other.improveMood(1.0, "帮助一个小男孩");
 
 				if (_event.m.Other.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -111,7 +111,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
 				this.Characters.push(_event.m.OtherOther.getImagePath());
-				_event.m.Other.worsenMood(1.500000, "不小心把一个小男孩弄残废了");
+				_event.m.Other.worsenMood(1.5, "不小心把一个小男孩弄残废了");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -144,7 +144,7 @@ this.ball_on_roof_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Surefooted.getImagePath());
-				_event.m.Surefooted.improveMood(1.500000, "他的才华给每个人留下了深刻的印象");
+				_event.m.Surefooted.improveMood(1.5, "他的才华给每个人留下了深刻的印象");
 
 				if (_event.m.Surefooted.getMoodState() >= this.Const.MoodState.Neutral)
 				{

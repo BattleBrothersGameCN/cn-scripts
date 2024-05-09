@@ -32,7 +32,7 @@ this.deathblow_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.DirectDamageMult = 0.2;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 10;
 		this.m.MinRange = 1;
@@ -76,8 +76,8 @@ this.deathblow_skill <- this.inherit("scripts/skills/skill", {
 
 		if (_skill == this && (targetStatus.hasSkill("effects.dazed") || targetStatus.hasSkill("effects.stunned") || targetStatus.hasSkill("effects.sleeping") || targetStatus.hasSkill("effects.net") || targetStatus.hasSkill("effects.web") || targetStatus.hasSkill("effects.rooted")))
 		{
-			_properties.DamageTotalMult *= 1.330000;
-			_properties.DamageDirectAdd += 0.200000;
+			_properties.DamageTotalMult *= 1.33;
+			_properties.DamageDirectAdd += 0.2;
 		}
 	}
 

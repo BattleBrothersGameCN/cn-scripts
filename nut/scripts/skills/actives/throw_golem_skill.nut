@@ -43,14 +43,14 @@ this.throw_golem_skill <- this.inherit("scripts/skills/skill", {
 		this.m.MaxRange = 5;
 		this.m.MaxLevelDifference = 3;
 		this.m.ProjectileType = this.Const.ProjectileType.Rock;
-		this.m.ProjectileTimeScale = 1.330000;
+		this.m.ProjectileTimeScale = 1.33;
 		this.m.IsProjectileRotated = true;
 		this.m.ChanceSmash = 50;
 	}
 
 	function onUpdate( _properties )
 	{
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 	}
 
 	function isUsable()

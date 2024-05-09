@@ -6,7 +6,7 @@ this.civilwar_wounded_soldier_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.civilwar_wounded_soldier";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 25.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 25.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_21.png[/img]{当你沿着一条小路行进时，你遇到了一个 %noblehouse% 的士兵，他是你的盟友。他在地上，靠在一堵岩壁上，一只手臂搭在岩壁上，就好像他刚刚放下了最后一块石头。 他抬头看着你，冷笑着。%SPEECH_ON%你想要什么，雇佣兵？ 你是来杀我的，哏？ 要拿走我所有的东西？%SPEECH_OFF%他穿着一套漂亮的盔甲，身上还带着件武器。 在他现在的状态下，不是说他会用它来保护自己，而是在你的手下手里看起来不错。%randombrother% 走上去。%SPEECH_ON%我们可以干掉他，先生，但我们得速战速决。 因为他这身贵族军服，我们行动越慢就越有危险。%SPEECH_OFF% | 你遇到一个受伤的 %noblehouse% 士兵，是你的盟友。 他躺在草地上，盯着你，你也盯着他：这个人身上戴着一件像样的盔甲，腿上还摆放着一把武器。 你可以把他的东西全部抢走，但是很明显，他不会愿意。 而且士兵的军队很可能就在不远处… | 一位受伤的 %noblehouse% 士兵，你的盟友，躺在路上。 他拖着身子爬行，但一听到你的声音，他就停下来转过身来。%SPEECH_ON%啊，见鬼。你最好不要对我有什么坏心思，雇佣兵。 我的人就离着不远，如果你再跟着我，我就会尖叫。%SPEECH_OFF%你挑了挑眉。%SPEECH_ON%你会像个娘们那样做，嗯？%SPEECH_OFF%那个人吐了口唾沫。%SPEECH_ON%我知道我不用等太久就能在另一个世界看到你了。%SPEECH_OFF%这个狡猾的家伙身上有一套很好的盔甲和武器，但是 %randombrother% 警告你，他是贵族军队的一员。 | 一个 %noblehouse%的军队的伤兵躺在你面前。 一方面，他确实有一件武器和一些盔甲，你可以从他身上抢走。 另一方面，他无疑是一支比你们强大得多的军队的一部分。 只是此时此刻这支军队不在周围。 如果你决定抢他的东西，一定要快。 | 是幸运还是灾难？ 你发现一个伤兵穿着相当漂亮的盔甲。 他身边还带着一件武器，放在 %companyname%的人旁边看起来会更好看。 拿走他的东西很容易。 周围没有人能看见他，而且让他发不出声也不是什么难事。\n\n但是你这样做很可能会被一支人数众多的军队所注意，因为这个士兵碰巧穿着你的盟友 %noblehouse% 的衣服。于是你决定，决定… | 你遇到一个伤兵，他身上挂着你的盟友 %noblehouse% 的破旗子。 看到你，他飞快地向后跨过草地。 他伸出手想骂人，但从他嘴里喷出来的只有血。%randombrother% 向你走过来。%SPEECH_ON%先生，他身上有一套漂亮的盔甲和武器。 如果你愿意的话，我们可以把他干掉，但他的军队有可能就在不远处。 我们应该非常小心。%SPEECH_OFF% | 你发现一个 %noblehouse% 的士兵试图踢进一个废弃的小屋的门。 听到你的话，他迅速转过身来，举起一把剑自卫。 然而，刀刃摇摇晃晃，握力不稳。 血从他的手臂一直流到手腕，他挣扎着站着。%SPEECH_ON%退后，你们所有人都给我退后！%SPEECH_OFF%之后他慢慢的往角落里靠。 就当你准备下令前进时…\n\n %randombrother% 抓着你的手。%SPEECH_ON%等一下，先生。如果他的军队发现我们，我们就有麻烦了。 我们行动前得先认真想想。%SPEECH_OFF%}",
@@ -148,7 +148,7 @@ this.civilwar_wounded_soldier_event <- this.inherit("scripts/events/event", {
 			item.setVariant(28);
 		}
 
-		item.setCondition(44.000000);
+		item.setCondition(44.0);
 		this.World.Assets.getStash().add(item);
 		_list.push({
 			id = 10,
@@ -171,7 +171,7 @@ this.civilwar_wounded_soldier_event <- this.inherit("scripts/events/event", {
 			return;
 		}
 
-		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.200000)
+		if (this.Const.DLC.Desert && currentTile.SquareCoords.Y <= this.World.getMapSize().Y * 0.2)
 		{
 			return;
 		}

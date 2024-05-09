@@ -8,10 +8,10 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 		this.contract.create();
 		this.m.Type = "contract.big_game_hunt";
 		this.m.Name = "大型狩猎";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.0;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 		this.m.MakeAllSpawnsResetOrdersOnceDiscovered = true;
-		this.m.DifficultyMult = 1.000000;
+		this.m.DifficultyMult = 1.0;
 	}
 
 	function onImportIntro()
@@ -26,17 +26,17 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 		if (r <= 40)
 		{
 			this.m.Size = 0;
-			this.m.DifficultyMult = 0.750000;
+			this.m.DifficultyMult = 0.75;
 		}
 		else if (r <= 75 || this.World.getTime().Days <= 30)
 		{
 			this.m.Size = 1;
-			this.m.DifficultyMult = 1.000000;
+			this.m.DifficultyMult = 1.0;
 		}
 		else
 		{
 			this.m.Size = 2;
-			this.m.DifficultyMult = 1.200000;
+			this.m.DifficultyMult = 1.2;
 		}
 	}
 
@@ -48,11 +48,11 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 		}
 
 		local maximumHeads;
-		local priceMult = 1.000000;
+		local priceMult = 1.0;
 
 		if (this.m.Size == 0)
 		{
-			local priceMult = 1.000000;
+			local priceMult = 1.0;
 			maximumHeads = [
 				15,
 				20,
@@ -62,7 +62,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 		}
 		else if (this.m.Size == 1)
 		{
-			local priceMult = 4.000000;
+			local priceMult = 4.0;
 			maximumHeads = [
 				10,
 				12,
@@ -73,7 +73,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 		}
 		else
 		{
-			local priceMult = 8.000000;
+			local priceMult = 8.0;
 			maximumHeads = [
 				8,
 				10,
@@ -83,7 +83,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 		}
 
 		this.m.Payment.Pool = 1300 * this.getPaymentMult() * this.Math.pow(this.getDifficultyMult(), this.Const.World.Assets.ContractRewardPOW) * this.getReputationToPaymentMult() * priceMult;
-		this.m.Payment.Count = 1.000000;
+		this.m.Payment.Count = 1.0;
 		this.m.Payment.MaxCount = maximumHeads[this.Math.rand(0, maximumHeads.len() - 1)];
 		local settlements = this.World.FactionManager.getFaction(this.m.Faction).getSettlements();
 		local other_settlements = this.World.EntityManager.getSettlements();
@@ -111,12 +111,12 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 				continue;
 			}
 
-			if (r.Discovered < 0.500000)
+			if (r.Discovered < 0.5)
 			{
 				this.World.State.updateRegionDiscovery(r);
 			}
 
-			if (r.Discovered < 0.500000)
+			if (r.Discovered < 0.5)
 			{
 				continue;
 			}
@@ -265,10 +265,10 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 							party.setAttackableByAI(false);
 							this.Contract.m.UnitsSpawned.push(party.getID());
 							local wait = this.new("scripts/ai/world/orders/wait_order");
-							wait.setTime(15.000000);
+							wait.setTime(15.0);
 							party.getController().addOrderInFront(wait);
 							local footPrintsOrigin = this.Contract.getTileToSpawnLocation(nearTile, 4, 8);
-							this.Const.World.Common.addFootprintsFromTo(footPrintsOrigin, party.getTile(), this.Const.BeastFootprints, party.getFootprintType(), party.getFootprintsSize(), 1.100000);
+							this.Const.World.Common.addFootprintsFromTo(footPrintsOrigin, party.getTile(), this.Const.BeastFootprints, party.getFootprintType(), party.getFootprintsSize(), 1.1);
 							break;
 						}
 					}
@@ -590,7 +590,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 	{
 		local dest = this.World.State.getRegion(this.m.Flags.get("Region")).Center;
 		local distance = this.World.State.getPlayer().getTile().getDistanceTo(dest);
-		distance = this.Const.Strings.Distance[this.Math.min(this.Const.Strings.Distance.len() - 1, distance / 30.000000 * (this.Const.Strings.Distance.len() - 1))];
+		distance = this.Const.Strings.Distance[this.Math.min(this.Const.Strings.Distance.len() - 1, distance / 30.0 * (this.Const.Strings.Distance.len() - 1))];
 		_vars.push([
 			"killcount",
 			this.m.Flags.get("HeadsCollected")

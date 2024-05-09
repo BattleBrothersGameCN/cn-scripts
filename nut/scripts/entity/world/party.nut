@@ -1,17 +1,17 @@
 this.party <- this.inherit("scripts/entity/world/world_entity", {
 	m = {
-		BaseMovementSpeed = 100.000000,
+		BaseMovementSpeed = 100.0,
 		Destination = null,
 		Path = null,
-		LastFootprintTime = 0.000000,
+		LastFootprintTime = 0.0,
 		LastFootprintType = 1,
 		Footprints = this.Const.GenericFootprints,
-		FootprintSizeOverride = 0.000000,
+		FootprintSizeOverride = 0.0,
 		FootprintType = 0,
 		IdleSoundsIndex = 0,
-		OriginalStrength = 0.000000,
-		SpawnTime = 0.000000,
-		StunTime = -900.000000,
+		OriginalStrength = 0.0,
+		SpawnTime = 0.0,
+		StunTime = -900.0,
 		Loot = {
 			Money = 0,
 			Ammo = 0,
@@ -20,7 +20,7 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 		},
 		Controller = null,
 		LastUpdateTime = this.Time.getVirtualTimeF(),
-		LastIdleSoundTime = 0.000000,
+		LastIdleSoundTime = 0.0,
 		IsSlowerAtNight = true,
 		IsPlayer = false,
 		IsMirrored = false,
@@ -54,7 +54,7 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 
 	function getFootprintsSize()
 	{
-		return this.Math.minf(1.000000, this.Math.maxf(0.400000, this.m.Troops.len() * 0.050000));
+		return this.Math.minf(1.0, this.Math.maxf(0.4, this.m.Troops.len() * 0.05));
 	}
 
 	function getFootprintType()
@@ -251,7 +251,7 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 	function onUpdate()
 	{
 		this.world_entity.onUpdate();
-		local delta = this.Math.maxf(0.000000, this.Time.getVirtualTimeF() - this.m.LastUpdateTime);
+		local delta = this.Math.maxf(0.0, this.Time.getVirtualTimeF() - this.m.LastUpdateTime);
 		this.m.LastUpdateTime = this.Time.getVirtualTimeF();
 
 		if (this.isInCombat())
@@ -276,12 +276,12 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 
 			if (this.World.getTime().IsDaytime)
 			{
-				this.m.VisibilityMult = 0.000000;
+				this.m.VisibilityMult = 0.0;
 				this.getController().getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
 			}
 			else
 			{
-				this.m.VisibilityMult = 1.000000;
+				this.m.VisibilityMult = 1.0;
 				this.getController().getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(true);
 			}
 		}
@@ -329,14 +329,14 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 
 			local myTile = this.getTile();
 			local speed = this.m.BaseMovementSpeed;
-			speed = speed * (1.000000 - this.Math.minf(0.500000, this.m.Troops.len() * this.Const.World.MovementSettings.SlowDownPartyPerTroop));
+			speed = speed * (1.0 - this.Math.minf(0.5, this.m.Troops.len() * this.Const.World.MovementSettings.SlowDownPartyPerTroop));
 			speed = speed * this.Const.World.MovementSettings.GlobalMult;
 
 			if (!this.isIgnoringCollision())
 			{
 				if (myTile.HasRoad)
 				{
-					speed = speed * this.Math.maxf(this.Const.World.TerrainTypeSpeedMult[myTile.Type] * this.Const.World.MovementSettings.RoadMult, 1.000000);
+					speed = speed * this.Math.maxf(this.Const.World.TerrainTypeSpeedMult[myTile.Type] * this.Const.World.MovementSettings.RoadMult, 1.0);
 				}
 				else
 				{
@@ -368,20 +368,20 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 
 			if (this.m.IsLeavingFootprints && !myTile.IsOccupied)
 			{
-				if (this.Time.getVirtualTimeF() - this.m.LastFootprintTime >= 1.000000)
+				if (this.Time.getVirtualTimeF() - this.m.LastFootprintTime >= 1.0)
 				{
 					local scale;
 
-					if (this.m.FootprintSizeOverride == 0.000000)
+					if (this.m.FootprintSizeOverride == 0.0)
 					{
-						scale = this.Math.minf(1.000000, this.Math.maxf(0.400000, this.m.Troops.len() * 0.050000));
+						scale = this.Math.minf(1.0, this.Math.maxf(0.4, this.m.Troops.len() * 0.05));
 					}
 					else
 					{
 						scale = this.m.FootprintSizeOverride;
 					}
 
-					this.World.spawnFootprint(this.createVec(this.getPos().X - 5, this.getPos().Y - 15), this.m.Footprints[this.getDirection8To(this.m.Destination)] + "_0" + this.m.LastFootprintType, scale, this.m.FootprintSizeOverride != 0.000000 ? 30.000000 : 0.000000, this.World.Assets.getFootprintVision(), this.m.FootprintType);
+					this.World.spawnFootprint(this.createVec(this.getPos().X - 5, this.getPos().Y - 15), this.m.Footprints[this.getDirection8To(this.m.Destination)] + "_0" + this.m.LastFootprintType, scale, this.m.FootprintSizeOverride != 0.0 ? 30.0 : 0.0, this.World.Assets.getFootprintVision(), this.m.FootprintType);
 					this.m.LastFootprintTime = this.Time.getVirtualTimeF();
 					this.m.LastFootprintType = this.m.LastFootprintType == 1 ? 2 : 1;
 				}
@@ -393,7 +393,7 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 			}
 		}
 
-		if (this.m.IdleSoundsIndex != 0 && this.m.LastIdleSound + 10.000000 < this.Time.getRealTimeF() && this.Math.rand(1, 100) <= 5 && this.isVisibleToEntity(this.World.State.getPlayer(), 500))
+		if (this.m.IdleSoundsIndex != 0 && this.m.LastIdleSound + 10.0 < this.Time.getRealTimeF() && this.Math.rand(1, 100) <= 5 && this.isVisibleToEntity(this.World.State.getPlayer(), 500))
 		{
 			this.m.LastIdleSound = this.Time.getRealTimeF();
 			this.Sound.play(this.Const.SoundPartyAmbience[this.m.IdleSoundsIndex][this.Math.rand(0, this.Const.SoundPartyAmbience[this.m.IdleSoundsIndex].len() - 1)], this.Const.Sound.Volume.Ambience, this.getPos());

@@ -114,7 +114,7 @@ this.mason_background <- this.inherit("scripts/skills/backgrounds/character_back
 	function onUpdate( _properties )
 	{
 		this.character_background.onUpdate(_properties);
-		_properties.XPGainMult *= 1.050000;
+		_properties.XPGainMult *= 1.05;
 	}
 
 });

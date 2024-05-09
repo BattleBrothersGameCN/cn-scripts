@@ -6,7 +6,7 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.kings_guard_1";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 9999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{在这片白雪皑皑的荒原上什么东西也没有，所以在这片严寒的土地上发现一个半裸的人是很不寻常的。 他甚至还活着。 你蹲在他旁边。 他的眼睛是空洞的，寒霜使他眨眼睛变成一种挣扎。 他的嘴唇褶皱着，冻成了紫色。 他的鼻子是深红色的，近乎黑色。 你问他是否会说话。他点头。%SPEECH_ON%野蛮人。带上。我。%SPEECH_OFF%你询问绑架他的人在哪里。 他耸耸肩，继续他那冷冰冰的调子。%SPEECH_ON%他们。觉得。烦了。然后。走了。%SPEECH_OFF%把一个俘虏留在冰天雪地里，这似乎禽兽不如。 他解释说他曾经是一个强壮的剑士。 他在痛苦中挤出一丝微笑。%SPEECH_ON%一个国王的。卫士。在。这个。没有国王的。土地。事情。会。更糟吧？%SPEECH_OFF%}",
@@ -58,7 +58,7 @@ this.kings_guard_1_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.fillAttributeLevelUpValues(this.Const.XP.MaxLevelWithPerkpoints - 1);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand));
-				_event.m.Dude.worsenMood(1.500000, "被野蛮人带走，留在寒冷中死去");
+				_event.m.Dude.worsenMood(1.5, "被野蛮人带走，留在寒冷中死去");
 				_event.m.Dude.getFlags().set("IsKingsGuard", true);
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}

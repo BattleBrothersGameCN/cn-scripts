@@ -19,38 +19,38 @@ this.fletchers_hut_location <- this.inherit("scripts/entity/world/attached_locat
 			r = [
 				{
 					File = "ambience/settlement/settlement_saw_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_saw_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_building_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_building_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_building_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_building_03.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/settlement/settlement_building_03.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				}
 			];
 
@@ -88,22 +88,22 @@ this.fletchers_hut_location <- this.inherit("scripts/entity/world/attached_locat
 		{
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/short_bow"
 			});
 			_list.push({
 				R = 0,
-				P = 0.800000,
+				P = 0.8,
 				S = "ammo/quiver_of_arrows"
 			});
 			_list.push({
 				R = 0,
-				P = 0.800000,
+				P = 0.8,
 				S = "ammo/quiver_of_bolts"
 			});
 			_list.push({
 				R = 0,
-				P = 0.800000,
+				P = 0.8,
 				S = "supplies/ammo_item"
 			});
 		}
@@ -114,12 +114,12 @@ this.fletchers_hut_location <- this.inherit("scripts/entity/world/attached_locat
 		{
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hunting_bow"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/light_crossbow"
 			});
 		}

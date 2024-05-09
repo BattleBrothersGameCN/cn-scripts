@@ -7,7 +7,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.location.ancient_temple_enter";
 		this.m.Title = "当你接近时……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
@@ -273,7 +273,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Volunteer.addInjury([
 					{
 						ID = "injury.pierced_arm_muscles",
-						Threshold = 0.250000,
+						Threshold = 0.25,
 						Script = "injury/pierced_arm_muscles_injury"
 					}
 				]);
@@ -282,7 +282,7 @@ this.ancient_temple_enter_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Volunteer.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Volunteer.worsenMood(1.000000, "在一座古墓的旅行中受伤");
+				_event.m.Volunteer.worsenMood(1.0, "在一座古墓的旅行中受伤");
 				this.World.Assets.getStash().makeEmptySlots(1);
 				local item;
 				item = this.new("scripts/items/tools/holy_water_item");

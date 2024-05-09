@@ -17,13 +17,13 @@ this.saif <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_southern_short_sword_01";
 		this.m.Value = 350;
-		this.m.Condition = 48.000000;
-		this.m.ConditionMax = 48.000000;
+		this.m.Condition = 48.0;
+		this.m.ConditionMax = 48.0;
 		this.m.StaminaModifier = -4;
 		this.m.RegularDamage = 35;
 		this.m.RegularDamageMax = 40;
-		this.m.ArmorDamageMult = 0.650000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.65;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function onEquip()

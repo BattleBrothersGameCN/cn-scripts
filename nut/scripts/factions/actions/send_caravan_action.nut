@@ -6,7 +6,7 @@ this.send_caravan_action <- this.inherit("scripts/factions/faction_action", {
 	function create()
 	{
 		this.m.ID = "send_caravan_action";
-		this.m.Cooldown = 300.000000;
+		this.m.Cooldown = 300.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -73,11 +73,11 @@ this.send_caravan_action <- this.inherit("scripts/factions/faction_action", {
 
 		if (_faction.hasTrait(this.Const.FactionTrait.OrientalCityState))
 		{
-			party = _faction.spawnEntity(this.m.Start.getTile(), "贸易商队", false, this.Const.World.Spawn.CaravanSouthern, this.m.Start.getResources() * 0.600000);
+			party = _faction.spawnEntity(this.m.Start.getTile(), "贸易商队", false, this.Const.World.Spawn.CaravanSouthern, this.m.Start.getResources() * 0.6);
 		}
 		else
 		{
-			party = _faction.spawnEntity(this.m.Start.getTile(), "贸易商队", false, this.Const.World.Spawn.Caravan, this.m.Start.getResources() * 0.500000);
+			party = _faction.spawnEntity(this.m.Start.getTile(), "贸易商队", false, this.Const.World.Spawn.Caravan, this.m.Start.getResources() * 0.5);
 		}
 
 		party.getSprite("banner").Visible = false;

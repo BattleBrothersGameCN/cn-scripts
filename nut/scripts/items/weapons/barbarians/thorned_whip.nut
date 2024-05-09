@@ -25,9 +25,9 @@ this.thorned_whip <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.StaminaModifier = -6;
 		this.m.RegularDamage = 15;
 		this.m.RegularDamageMax = 25;
-		this.m.ArmorDamageMult = 0.300000;
-		this.m.DirectDamageMult = 0.100000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 0.3;
+		this.m.DirectDamageMult = 0.1;
+		this.m.DirectDamageAdd = 0.1;
 	}
 
 	function onEquip()

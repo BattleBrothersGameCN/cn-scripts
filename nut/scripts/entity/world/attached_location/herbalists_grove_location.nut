@@ -34,17 +34,17 @@ this.herbalists_grove_location <- this.inherit("scripts/entity/world/attached_lo
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/medicine_item"
 			});
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/bandage_item"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "accessory/antidote_item"
 			});
 		}

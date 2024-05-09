@@ -26,8 +26,8 @@ this.faction_banner <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 60;
 		this.m.RegularDamageMax = 80;
-		this.m.ArmorDamageMult = 1.000000;
-		this.m.DirectDamageMult = 0.300000;
+		this.m.ArmorDamageMult = 1.0;
+		this.m.DirectDamageMult = 0.3;
 		this.m.ChanceToHitHead = 5;
 	}
 

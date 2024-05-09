@@ -14,7 +14,7 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.IsGeneratingKillName = false;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(20, -20);
-		this.m.DecapitateBloodAmount = 3.000000;
+		this.m.DecapitateBloodAmount = 3.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.actor.create();
 		this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
@@ -80,14 +80,14 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/orc_fatigue_02.wav",
 			"sounds/enemies/orc_fatigue_03.wav"
 		];
-		this.m.SoundPitch = 0.800000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 1.250000;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.750000;
+		this.m.SoundPitch = 0.8;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 1.25;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.75;
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/orc_warlord_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
-	function playSound( _type, _volume, _pitch = 1.000000 )
+	function playSound( _type, _volume, _pitch = 1.0 )
 	{
 		if (_type == this.Const.Sound.ActorEvent.Move && this.Math.rand(1, 100) <= 50)
 		{
@@ -117,14 +117,14 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail(sprite_body.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = sprite_body.Color;
 			decal.Saturation = sprite_body.Saturation;
-			decal.Scale = 0.900000;
-			decal.setBrightness(0.900000);
+			decal.Scale = 0.9;
+			decal.setBrightness(0.9);
 
 			if (appearance.CorpseArmor != "")
 			{
 				decal = _tile.spawnDetail(appearance.CorpseArmor, this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000;
-				decal.setBrightness(0.900000);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
 			}
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
@@ -134,15 +134,15 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 					decal = _tile.spawnDetail(sprite_head.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 					decal.Color = sprite_head.Color;
 					decal.Saturation = sprite_head.Saturation;
-					decal.Scale = 0.900000;
-					decal.setBrightness(0.900000);
+					decal.Scale = 0.9;
+					decal.setBrightness(0.9);
 				}
 
 				if (appearance.HelmetCorpse != "")
 				{
 					decal = _tile.spawnDetail(appearance.HelmetCorpse, this.Const.Tactical.DetailFlag.Corpse, flip);
-					decal.Scale = 0.900000;
-					decal.setBrightness(0.900000);
+					decal.Scale = 0.9;
+					decal.setBrightness(0.9);
 				}
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
@@ -159,22 +159,22 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 					layers.push(appearance.HelmetCorpse);
 				}
 
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, 30), 180.000000, "bust_orc_04_head_dead_bloodpool");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, 30), 180.0, "bust_orc_04_head_dead_bloodpool");
 				local idx = 0;
 
 				if (!appearance.HideCorpseHead)
 				{
 					decap[idx].Color = sprite_head.Color;
 					decap[idx].Saturation = sprite_head.Saturation;
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.900000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.9);
 					idx = ++idx;
 				}
 
 				if (appearance.HelmetCorpse.len() != 0)
 				{
-					decap[idx].Scale = 0.900000;
-					decap[idx].setBrightness(0.900000);
+					decap[idx].Scale = 0.9;
+					decap[idx].setBrightness(0.9);
 					idx = ++idx;
 				}
 			}
@@ -182,12 +182,12 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 			if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
 				decal = _tile.spawnDetail(appearance.CorpseArmor + "_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000;
+				decal.Scale = 0.9;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
 				decal = _tile.spawnDetail(appearance.CorpseArmor + "_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.900000;
+				decal.Scale = 0.9;
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -215,7 +215,7 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 200)
 		{
 			b.MeleeSkill += 5;
-			b.DamageTotalMult += 0.100000;
+			b.DamageTotalMult += 0.1;
 		}
 
 		b.IsSpecializedInAxes = true;
@@ -229,7 +229,7 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 		this.addSprite("socket").setBrush("bust_base_orcs");
 		local body = this.addSprite("body");
 		body.setBrush("bust_orc_04_body");
-		body.varyColor(0.100000, 0.100000, 0.100000);
+		body.varyColor(0.1, 0.1, 0.1);
 		local injury_body = this.addSprite("injury_body");
 		injury_body.Visible = false;
 		injury_body.setBrush("bust_orc_04_body_injured");
@@ -249,7 +249,7 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("arms_icon", this.createVec(-8, 0));
 		this.setSpriteOffset("shield_icon", this.createVec(-5, 0));
 		this.setSpriteOffset("stunned", this.createVec(0, 10));
-		this.getSprite("status_rooted").Scale = 0.650000;
+		this.getSprite("status_rooted").Scale = 0.65;
 		this.setSpriteOffset("status_rooted", this.createVec(0, 16));
 		this.setSpriteOffset("status_stunned", this.createVec(-5, 30));
 		this.setSpriteOffset("arrow", this.createVec(-5, 30));

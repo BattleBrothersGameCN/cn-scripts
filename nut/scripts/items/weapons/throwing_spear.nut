@@ -23,8 +23,8 @@ this.throwing_spear <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShieldDamage = 26;
 		this.m.RegularDamage = 45;
 		this.m.RegularDamageMax = 70;
-		this.m.ArmorDamageMult = 1.100000;
-		this.m.DirectDamageMult = 0.450000;
+		this.m.ArmorDamageMult = 1.1;
+		this.m.DirectDamageMult = 0.45;
 		this.m.IsDroppedAsLoot = true;
 	}
 

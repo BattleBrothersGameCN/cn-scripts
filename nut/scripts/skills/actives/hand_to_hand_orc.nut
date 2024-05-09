@@ -28,7 +28,7 @@ this.hand_to_hand_orc <- this.inherit("scripts/skills/skill", {
 		this.m.IsSerialized = false;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.DirectDamageMult = 0.350000;
+		this.m.DirectDamageMult = 0.35;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 5;
 		this.m.MinRange = 1;
@@ -53,7 +53,7 @@ this.hand_to_hand_orc <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.DamageRegularMin = 15;
 			_properties.DamageRegularMax = 30;
-			_properties.DamageArmorMult = 0.700000;
+			_properties.DamageArmorMult = 0.7;
 		}
 	}
 

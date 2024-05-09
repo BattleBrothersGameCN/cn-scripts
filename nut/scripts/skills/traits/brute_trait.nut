@@ -57,7 +57,7 @@ this.brute_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		if (_skill.isAttack() && !_skill.isRanged())
 		{
-			_properties.DamageAgainstMult[this.Const.BodyPart.Head] += 0.150000;
+			_properties.DamageAgainstMult[this.Const.BodyPart.Head] += 0.15;
 		}
 	}
 

@@ -12,7 +12,7 @@ this.pierced_leg_muscles_injury <- this.inherit("scripts/skills/injury/injury", 
 		this.m.IconMini = "injury_icon_11_mini";
 		this.m.HealingTimeMin = 3;
 		this.m.HealingTimeMax = 5;
-		this.m.InfectionChance = 1.000000;
+		this.m.InfectionChance = 1.0;
 	}
 
 	function getTooltip()
@@ -54,8 +54,8 @@ this.pierced_leg_muscles_injury <- this.inherit("scripts/skills/injury/injury", 
 			return;
 		}
 
-		_properties.MeleeDefenseMult *= 0.700000;
-		_properties.InitiativeMult *= 0.700000;
+		_properties.MeleeDefenseMult *= 0.7;
+		_properties.InitiativeMult *= 0.7;
 	}
 
 });

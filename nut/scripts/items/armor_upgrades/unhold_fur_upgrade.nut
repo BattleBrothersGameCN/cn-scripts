@@ -54,7 +54,7 @@ this.unhold_fur_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgr
 	{
 		if (_hitInfo.BodyPart == this.Const.BodyPart.Body)
 		{
-			_properties.DamageReceivedRangedMult *= 0.800000;
+			_properties.DamageReceivedRangedMult *= 0.8;
 		}
 	}
 

@@ -5,7 +5,7 @@ this.defend_militia_action <- this.inherit("scripts/factions/faction_action", {
 	function create()
 	{
 		this.m.ID = "defend_militia_action";
-		this.m.Cooldown = 120.000000;
+		this.m.Cooldown = 120.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -32,7 +32,7 @@ this.defend_militia_action <- this.inherit("scripts/factions/faction_action", {
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -43,7 +43,7 @@ this.defend_militia_action <- this.inherit("scripts/factions/faction_action", {
 			}
 
 			local isAdded = false;
-			local entities = this.World.getAllEntitiesAtPos(s.getPos(), 400.000000);
+			local entities = this.World.getAllEntitiesAtPos(s.getPos(), 400.0);
 
 			foreach( e in entities )
 			{
@@ -72,7 +72,7 @@ this.defend_militia_action <- this.inherit("scripts/factions/faction_action", {
 					continue;
 				}
 
-				local entities = this.World.getAllEntitiesAtPos(a.getPos(), 300.000000);
+				local entities = this.World.getAllEntitiesAtPos(a.getPos(), 300.0);
 
 				foreach( e in entities )
 				{
@@ -129,10 +129,10 @@ this.defend_militia_action <- this.inherit("scripts/factions/faction_action", {
 			party.getFlags().set("IsRandomlySpawned", true);
 			local c = party.getController();
 			local sleep = this.new("scripts/ai/world/orders/sleep_order");
-			sleep.setTime(1.000000);
+			sleep.setTime(1.0);
 			local guard = this.new("scripts/ai/world/orders/guard_order");
 			guard.setTarget(spawnpoints[i]);
-			guard.setTime(30.000000);
+			guard.setTime(30.0);
 			local despawn = this.new("scripts/ai/world/orders/despawn_order");
 			c.addOrder(sleep);
 			c.addOrder(guard);

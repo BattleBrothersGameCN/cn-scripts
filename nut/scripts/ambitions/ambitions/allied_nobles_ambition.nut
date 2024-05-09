@@ -4,7 +4,7 @@ this.allied_nobles_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.allied_nobles";
-		this.m.Duration = 40.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我们应赢得一个贵族家族的信任，成为他们的盟友。\n他们自然会与好朋友分享他们殷实的军械库里的宝贝。";
 		this.m.RewardTooltip = "你将被授予结盟的贵族家族独有的装备";
 		this.m.UIText = "与一个贵族家族达成“盟友”关系";
@@ -34,11 +34,11 @@ this.allied_nobles_ambition <- this.inherit("scripts/ambitions/ambition", {
 
 			if (f != null && f.getType() == this.Const.FactionType.NobleHouse)
 			{
-				if (f.getPlayerRelation() >= 90.000000)
+				if (f.getPlayerRelation() >= 90.0)
 				{
 					return;
 				}
-				else if (f.getPlayerRelation() >= 60.000000)
+				else if (f.getPlayerRelation() >= 60.0)
 				{
 					hasFriend = true;
 				}
@@ -61,7 +61,7 @@ this.allied_nobles_ambition <- this.inherit("scripts/ambitions/ambition", {
 		{
 			local f = this.World.FactionManager.getFaction(a);
 
-			if (f != null && f.getType() == this.Const.FactionType.NobleHouse && f.getPlayerRelation() >= 90.000000)
+			if (f != null && f.getType() == this.Const.FactionType.NobleHouse && f.getPlayerRelation() >= 90.0)
 			{
 				return true;
 			}
@@ -78,7 +78,7 @@ this.allied_nobles_ambition <- this.inherit("scripts/ambitions/ambition", {
 		{
 			local f = this.World.FactionManager.getFaction(a);
 
-			if (f != null && f.getType() == this.Const.FactionType.NobleHouse && f.getPlayerRelation() >= 90.000000)
+			if (f != null && f.getType() == this.Const.FactionType.NobleHouse && f.getPlayerRelation() >= 90.0)
 			{
 				_vars.push([
 					"noblehouse",
@@ -98,7 +98,7 @@ this.allied_nobles_ambition <- this.inherit("scripts/ambitions/ambition", {
 		{
 			local f = this.World.FactionManager.getFaction(a);
 
-			if (f != null && f.getType() == this.Const.FactionType.NobleHouse && f.getPlayerRelation() >= 90.000000)
+			if (f != null && f.getType() == this.Const.FactionType.NobleHouse && f.getPlayerRelation() >= 90.0)
 			{
 				banner = f.getBanner();
 				break;

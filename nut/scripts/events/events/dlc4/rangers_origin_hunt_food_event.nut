@@ -7,7 +7,7 @@ this.rangers_origin_hunt_food_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.rangers_origin_hunt_food";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 7.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 7.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_10.png[/img]{作为猎人圈子中的一员，很明显你已经进入了一个良好的狩猎场。%randombrother% 建议战团去狩猎，但他警告说，团队应该重视适度猎杀这些丰富的猎物。}",

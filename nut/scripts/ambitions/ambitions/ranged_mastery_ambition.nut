@@ -4,7 +4,7 @@ this.ranged_mastery_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.ranged_mastery";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "咱们战团缺乏老练的弓箭手，限制了咱们的策略选择。\n我们得训练三名弓箭或弩箭大师从远处给予致命威胁！";
 		this.m.UIText = "有1人点出弓精通或弩精通特技";
 		this.m.TooltipText = "有3人点出弓精通或弩精通特技。";

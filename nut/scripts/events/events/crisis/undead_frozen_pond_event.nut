@@ -7,7 +7,7 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.undead_frozen_pond";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_143.png[/img]当你穿越寒冷的荒野时，你来到了一个结冰的池塘边。%randombrother% 发现有东西从里面伸出来。 你看到一个身体已经冻在臀部以下的骑士，但上半身还在活动。 它的眼睛红红的，手指被冻伤后变得乌黑，但仍然紧握着。 它的下颚是由冰来保持肌肉的，就好像它有腐烂的半透明的肌腱一样。\n\n %randombrother% 指向有着冰冻面孔的巨大僵尸。%SPEECH_ON%嘿，瞧！那个混蛋身上有一把大剑。 这可能值得一试，不是吗？%SPEECH_OFF%",
@@ -76,7 +76,7 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
 				local item = this.new("scripts/items/weapons/greatsword");
-				item.setCondition(11.000000);
+				item.setCondition(11.0);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,
@@ -108,7 +108,7 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Other.addInjury([
 					{
 						ID = "injury.split_hand",
-						Threshold = 0.500000,
+						Threshold = 0.5,
 						Script = "injury/split_hand_injury"
 					}
 				]);
@@ -149,7 +149,7 @@ this.undead_frozen_pond_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Lightweight.getImagePath());
 				local item = this.new("scripts/items/weapons/greatsword");
-				item.setCondition(11.000000);
+				item.setCondition(11.0);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,

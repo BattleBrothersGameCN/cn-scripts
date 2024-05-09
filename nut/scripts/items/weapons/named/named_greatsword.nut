@@ -21,13 +21,13 @@ this.named_greatsword <- this.inherit("scripts/items/weapons/named/named_weapon"
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 4600;
 		this.m.ShieldDamage = 16;
-		this.m.Condition = 72.000000;
-		this.m.ConditionMax = 72.000000;
+		this.m.Condition = 72.0;
+		this.m.ConditionMax = 72.0;
 		this.m.StaminaModifier = -12;
 		this.m.RegularDamage = 85;
 		this.m.RegularDamageMax = 100;
-		this.m.ArmorDamageMult = 1.000000;
-		this.m.DirectDamageMult = 0.250000;
+		this.m.ArmorDamageMult = 1.0;
+		this.m.DirectDamageMult = 0.25;
 		this.m.ChanceToHitHead = 5;
 		this.randomizeValues();
 	}

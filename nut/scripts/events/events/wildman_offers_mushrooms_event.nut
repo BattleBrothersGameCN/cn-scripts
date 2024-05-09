@@ -7,7 +7,7 @@ this.wildman_offers_mushrooms_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.wildman_offers_mushrooms";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]你在一棵大树底下乘凉。 不知何故，一束阳光从树顶穿透重重树叶缝隙照耀到你的眼睛。 你遇到了野人 %wildman% 站起来活动了下身子。 他拿了一把各种各样的东西：蘑菇、花瓣、浆果。 放到你面前问你要不要。",

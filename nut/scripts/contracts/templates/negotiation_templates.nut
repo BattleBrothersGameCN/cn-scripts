@@ -92,10 +92,10 @@ gt.Const.Contracts.NegotiationDefault <- [
 				{
 					if (!this.World.Retinue.hasFollower("follower.negotiator"))
 					{
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelationEx(-0.500000);
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelationEx(-0.5);
 					}
 
-					this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+					this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 					if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 					{
@@ -109,7 +109,7 @@ gt.Const.Contracts.NegotiationDefault <- [
 					else
 					{
 						this.Contract.m.Payment.IsFinal = false;
-						this.Contract.m.Payment.Pool = this.Contract.m.Payment.Pool * (1.000000 + this.Math.rand(3, 10) * 0.010000);
+						this.Contract.m.Payment.Pool = this.Contract.m.Payment.Pool * (1.0 + this.Math.rand(3, 10) * 0.01);
 					}
 
 					return "Negotiation";
@@ -117,13 +117,13 @@ gt.Const.Contracts.NegotiationDefault <- [
 
 			});
 
-			if (this.Contract.m.Payment.Advance < 1.000000)
+			if (this.Contract.m.Payment.Advance < 1.0)
 			{
 				this.Options.push({
 					Text = this.Contract.m.Payment.Advance == 0 ? "我们需要预付款。" : "我们需要更多的预付款。",
 					function getResult()
 					{
-						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 						if (this.Contract.m.Payment.Advance >= this.World.Assets.m.AdvancePaymentCap || this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 						{
@@ -137,8 +137,8 @@ gt.Const.Contracts.NegotiationDefault <- [
 						else
 						{
 							this.Contract.m.Payment.IsFinal = false;
-							this.Contract.m.Payment.Advance = this.Math.minf(1.000000, this.Contract.m.Payment.Advance + 0.250000);
-							this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.250000);
+							this.Contract.m.Payment.Advance = this.Math.minf(1.0, this.Contract.m.Payment.Advance + 0.25);
+							this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.25);
 						}
 
 						return "Negotiation";
@@ -147,13 +147,13 @@ gt.Const.Contracts.NegotiationDefault <- [
 				});
 			}
 
-			if (this.Contract.m.Payment.Completion < 1.000000)
+			if (this.Contract.m.Payment.Completion < 1.0)
 			{
 				this.Options.push({
 					Text = this.Contract.m.Payment.Completion == 0 ? "我们需要在工作完成后马上拿到报酬。" : "我们需要在工作完成后拿到更多的报酬。",
 					function getResult()
 					{
-						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 						if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 						{
@@ -167,8 +167,8 @@ gt.Const.Contracts.NegotiationDefault <- [
 						else
 						{
 							this.Contract.m.Payment.IsFinal = false;
-							this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.250000);
-							this.Contract.m.Payment.Completion = this.Math.minf(1.000000, this.Contract.m.Payment.Completion + 0.250000);
+							this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.25);
+							this.Contract.m.Payment.Completion = this.Math.minf(1.0, this.Contract.m.Payment.Completion + 0.25);
 						}
 
 						return "Negotiation";
@@ -287,10 +287,10 @@ gt.Const.Contracts.NegotiationPerHead <- [
 				{
 					if (!this.World.Retinue.hasFollower("follower.negotiator"))
 					{
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelationEx(-0.500000);
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelationEx(-0.5);
 					}
 
-					this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+					this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 					if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 					{
@@ -304,7 +304,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 					else
 					{
 						this.Contract.m.Payment.IsFinal = false;
-						this.Contract.m.Payment.Pool = this.Contract.m.Payment.Pool * (1.000000 + this.Math.rand(3, 10) * 0.010000);
+						this.Contract.m.Payment.Pool = this.Contract.m.Payment.Pool * (1.0 + this.Math.rand(3, 10) * 0.01);
 					}
 
 					return "Negotiation";
@@ -312,13 +312,13 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 			});
 
-			if (this.Contract.m.Payment.Count < 1.000000)
+			if (this.Contract.m.Payment.Count < 1.0)
 			{
 				this.Options.push({
 					Text = this.Contract.m.Payment.Count == 0 ? "我们需要按拿回的人头支付报酬。" : "我们需要你为每个带回的人头付更多的钱。",
 					function getResult()
 					{
-						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 						if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 						{
@@ -335,19 +335,19 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 							if (this.Contract.m.Payment.Completion > 0 && this.Contract.m.Payment.Advance > 0)
 							{
-								this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.125000);
-								this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.125000);
+								this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.125);
+								this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.125);
 							}
 							else if (this.Contract.m.Payment.Advance > 0)
 							{
-								this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.250000);
+								this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.25);
 							}
 							else
 							{
-								this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.250000);
+								this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.25);
 							}
 
-							this.Contract.m.Payment.Count = this.Math.minf(1.000000, this.Contract.m.Payment.Count + 0.250000);
+							this.Contract.m.Payment.Count = this.Math.minf(1.0, this.Contract.m.Payment.Count + 0.25);
 						}
 
 						return "Negotiation";
@@ -356,13 +356,13 @@ gt.Const.Contracts.NegotiationPerHead <- [
 				});
 			}
 
-			if (this.Contract.m.Payment.Advance < 1.000000)
+			if (this.Contract.m.Payment.Advance < 1.0)
 			{
 				this.Options.push({
 					Text = this.Contract.m.Payment.Advance == 0 ? "我们需要预付款。" : "我们需要更多的预付款。",
 					function getResult()
 					{
-						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 						if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 						{
@@ -379,19 +379,19 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 							if (this.Contract.m.Payment.Completion > 0 && this.Contract.m.Payment.Count > 0)
 							{
-								this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.125000);
-								this.Contract.m.Payment.Count = this.Math.maxf(0.000000, this.Contract.m.Payment.Count - 0.125000);
+								this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.125);
+								this.Contract.m.Payment.Count = this.Math.maxf(0.0, this.Contract.m.Payment.Count - 0.125);
 							}
 							else if (this.Contract.m.Payment.Count > 0)
 							{
-								this.Contract.m.Payment.Count = this.Math.maxf(0.000000, this.Contract.m.Payment.Count - 0.250000);
+								this.Contract.m.Payment.Count = this.Math.maxf(0.0, this.Contract.m.Payment.Count - 0.25);
 							}
 							else
 							{
-								this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.250000);
+								this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.25);
 							}
 
-							this.Contract.m.Payment.Advance = this.Math.minf(1.000000, this.Contract.m.Payment.Advance + 0.250000);
+							this.Contract.m.Payment.Advance = this.Math.minf(1.0, this.Contract.m.Payment.Advance + 0.25);
 						}
 
 						return "Negotiation";
@@ -400,13 +400,13 @@ gt.Const.Contracts.NegotiationPerHead <- [
 				});
 			}
 
-			if (this.Contract.m.Payment.Completion < 1.000000)
+			if (this.Contract.m.Payment.Completion < 1.0)
 			{
 				this.Options.push({
 					Text = this.Contract.m.Payment.Completion == 0 ? "我们需要在工作完成后马上拿到报酬。" : "我们需要在工作完成后拿到更多的报酬。",
 					function getResult()
 					{
-						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 						if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 						{
@@ -423,19 +423,19 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 							if (this.Contract.m.Payment.Advance > 0 && this.Contract.m.Payment.Count > 0)
 							{
-								this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.125000);
-								this.Contract.m.Payment.Count = this.Math.maxf(0.000000, this.Contract.m.Payment.Count - 0.125000);
+								this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.125);
+								this.Contract.m.Payment.Count = this.Math.maxf(0.0, this.Contract.m.Payment.Count - 0.125);
 							}
 							else if (this.Contract.m.Payment.Count > 0)
 							{
-								this.Contract.m.Payment.Count = this.Math.maxf(0.000000, this.Contract.m.Payment.Count - 0.250000);
+								this.Contract.m.Payment.Count = this.Math.maxf(0.0, this.Contract.m.Payment.Count - 0.25);
 							}
 							else
 							{
-								this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.250000);
+								this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.25);
 							}
 
-							this.Contract.m.Payment.Completion = this.Math.minf(1.000000, this.Contract.m.Payment.Completion + 0.250000);
+							this.Contract.m.Payment.Completion = this.Math.minf(1.0, this.Contract.m.Payment.Completion + 0.25);
 						}
 
 						return "Negotiation";
@@ -570,10 +570,10 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 				{
 					if (!this.World.Retinue.hasFollower("follower.negotiator"))
 					{
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelationEx(-0.500000);
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelationEx(-0.5);
 					}
 
-					this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+					this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 					if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 					{
@@ -587,7 +587,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 					else
 					{
 						this.Contract.m.Payment.IsFinal = false;
-						this.Contract.m.Payment.Pool = this.Contract.m.Payment.Pool * (1.000000 + this.Math.rand(3, 10) * 0.010000);
+						this.Contract.m.Payment.Pool = this.Contract.m.Payment.Pool * (1.0 + this.Math.rand(3, 10) * 0.01);
 					}
 
 					return "Negotiation";
@@ -595,13 +595,13 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 			});
 
-			if (this.Contract.m.Payment.Count < 1.000000)
+			if (this.Contract.m.Payment.Count < 1.0)
 			{
 				this.Options.push({
 					Text = this.Contract.m.Payment.Count == 0 ? "我们需要按照我们带回来的人头数支付报酬。" : "我们需要你为我们带来的每个人头支付更多的报酬。",
 					function getResult()
 					{
-						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 						if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 						{
@@ -618,19 +618,19 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 							if (this.Contract.m.Payment.Completion > 0 && this.Contract.m.Payment.Advance > 0)
 							{
-								this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.125000);
-								this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.125000);
+								this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.125);
+								this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.125);
 							}
 							else if (this.Contract.m.Payment.Advance > 0)
 							{
-								this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.250000);
+								this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.25);
 							}
 							else
 							{
-								this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.250000);
+								this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.25);
 							}
 
-							this.Contract.m.Payment.Count = this.Math.minf(1.000000, this.Contract.m.Payment.Count + 0.250000);
+							this.Contract.m.Payment.Count = this.Math.minf(1.0, this.Contract.m.Payment.Count + 0.25);
 						}
 
 						return "Negotiation";
@@ -639,13 +639,13 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 				});
 			}
 
-			if (this.Contract.m.Payment.Advance < 1.000000)
+			if (this.Contract.m.Payment.Advance < 1.0)
 			{
 				this.Options.push({
 					Text = this.Contract.m.Payment.Advance == 0 ? "我们需要预付款。" : "我们需要更多的预付款。",
 					function getResult()
 					{
-						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 						if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 						{
@@ -662,19 +662,19 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 							if (this.Contract.m.Payment.Completion > 0 && this.Contract.m.Payment.Count > 0)
 							{
-								this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.125000);
-								this.Contract.m.Payment.Count = this.Math.maxf(0.000000, this.Contract.m.Payment.Count - 0.125000);
+								this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.125);
+								this.Contract.m.Payment.Count = this.Math.maxf(0.0, this.Contract.m.Payment.Count - 0.125);
 							}
 							else if (this.Contract.m.Payment.Count > 0)
 							{
-								this.Contract.m.Payment.Count = this.Math.maxf(0.000000, this.Contract.m.Payment.Count - 0.250000);
+								this.Contract.m.Payment.Count = this.Math.maxf(0.0, this.Contract.m.Payment.Count - 0.25);
 							}
 							else
 							{
-								this.Contract.m.Payment.Completion = this.Math.maxf(0.000000, this.Contract.m.Payment.Completion - 0.250000);
+								this.Contract.m.Payment.Completion = this.Math.maxf(0.0, this.Contract.m.Payment.Completion - 0.25);
 							}
 
-							this.Contract.m.Payment.Advance = this.Math.minf(1.000000, this.Contract.m.Payment.Advance + 0.250000);
+							this.Contract.m.Payment.Advance = this.Math.minf(1.0, this.Contract.m.Payment.Advance + 0.25);
 						}
 
 						return "Negotiation";
@@ -683,13 +683,13 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 				});
 			}
 
-			if (this.Contract.m.Payment.Completion < 1.000000)
+			if (this.Contract.m.Payment.Completion < 1.0)
 			{
 				this.Options.push({
 					Text = this.Contract.m.Payment.Completion == 0 ? "我们需要在工作完成后马上拿到报酬。" : "我们需要在工作完成后拿到更多的报酬。",
 					function getResult()
 					{
-						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.000000, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
+						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
 
 						if (this.Contract.m.Payment.Annoyance > this.Const.Contracts.Settings.NegotiationMaxAnnoyance)
 						{
@@ -706,19 +706,19 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 							if (this.Contract.m.Payment.Advance > 0 && this.Contract.m.Payment.Count > 0)
 							{
-								this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.125000);
-								this.Contract.m.Payment.Count = this.Math.maxf(0.000000, this.Contract.m.Payment.Count - 0.125000);
+								this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.125);
+								this.Contract.m.Payment.Count = this.Math.maxf(0.0, this.Contract.m.Payment.Count - 0.125);
 							}
 							else if (this.Contract.m.Payment.Count > 0)
 							{
-								this.Contract.m.Payment.Count = this.Math.maxf(0.000000, this.Contract.m.Payment.Count - 0.250000);
+								this.Contract.m.Payment.Count = this.Math.maxf(0.0, this.Contract.m.Payment.Count - 0.25);
 							}
 							else
 							{
-								this.Contract.m.Payment.Advance = this.Math.maxf(0.000000, this.Contract.m.Payment.Advance - 0.250000);
+								this.Contract.m.Payment.Advance = this.Math.maxf(0.0, this.Contract.m.Payment.Advance - 0.25);
 							}
 
-							this.Contract.m.Payment.Completion = this.Math.minf(1.000000, this.Contract.m.Payment.Completion + 0.250000);
+							this.Contract.m.Payment.Completion = this.Math.minf(1.0, this.Contract.m.Payment.Completion + 0.25);
 						}
 
 						return "Negotiation";

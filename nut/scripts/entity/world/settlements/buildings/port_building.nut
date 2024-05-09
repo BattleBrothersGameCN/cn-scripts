@@ -19,155 +19,155 @@ this.port_building <- this.inherit("scripts/entity/world/settlements/buildings/b
 		this.m.Sounds = [
 			{
 				File = "ambience/buildings/docks_rope_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_rope_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_bell_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_bell_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_bell_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_flapping_sail_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_flapping_sail_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_ship_creaking_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_ship_creaking_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_ship_creaking_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_ship_creaking_04.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_working_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_working_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_working_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_working_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_working_04.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_seagull_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_seagull_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_seagull_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_seagull_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_seagull_04.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_seagull_05.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_small_waves_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_small_waves_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_small_waves_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_small_waves_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_small_waves_04.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/terrain/coast_small_waves_05.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			}
 		];
 		this.m.SoundsAtNight = [
 			{
 				File = "ambience/buildings/docks_rope_00.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/docks_rope_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			}
 		];
 	}
@@ -252,9 +252,9 @@ this.port_building <- this.inherit("scripts/entity/world/settlements/buildings/b
 	{
 		local myTile = this.getSettlement().getTile();
 		local dist = _to.getTile().getDistanceTo(myTile);
-		local cost = dist * this.World.getPlayerRoster().getSize() * 0.500000;
-		cost = this.Math.round(cost * 0.100000);
-		cost = cost * 10.000000;
+		local cost = dist * this.World.getPlayerRoster().getSize() * 0.5;
+		cost = this.Math.round(cost * 0.1);
+		cost = cost * 10.0;
 		return cost;
 	}
 

@@ -64,10 +64,10 @@ this.grazed_neck_injury <- this.inherit("scripts/skills/injury/injury", {
 			this.spawnIcon("status_effect_01", this.getContainer().getActor().getTile());
 			local hitInfo = clone this.Const.Tactical.HitInfo;
 			hitInfo.DamageRegular = 1;
-			hitInfo.DamageDirect = 1.000000;
+			hitInfo.DamageDirect = 1.0;
 			hitInfo.BodyPart = this.Const.BodyPart.Body;
-			hitInfo.BodyDamageMult = 1.000000;
-			hitInfo.FatalityChanceMult = 0.000000;
+			hitInfo.BodyDamageMult = 1.0;
+			hitInfo.FatalityChanceMult = 0.0;
 			this.getContainer().getActor().onDamageReceived(this.getContainer().getActor(), this, hitInfo);
 		}
 	}
@@ -93,7 +93,7 @@ this.grazed_neck_injury <- this.inherit("scripts/skills/injury/injury", {
 
 		if (this.m.IsShownOutOfCombat)
 		{
-			_properties.HitpointsMult *= 0.850000;
+			_properties.HitpointsMult *= 0.85;
 		}
 	}
 

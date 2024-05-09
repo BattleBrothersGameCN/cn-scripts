@@ -22,7 +22,7 @@ this.strike_down_skill <- this.inherit("scripts/skills/skill", {
 			"sounds/combat/strike_down_hit_03.wav",
 			"sounds/combat/strike_down_hit_04.wav"
 		];
-		this.m.SoundVolume = 1.250000;
+		this.m.SoundVolume = 1.25;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;
 		this.m.IsSerialized = false;
@@ -34,7 +34,7 @@ this.strike_down_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.DirectDamageMult = 0.500000;
+		this.m.DirectDamageMult = 0.5;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 30;
 		this.m.MinRange = 1;
@@ -78,7 +78,7 @@ this.strike_down_skill <- this.inherit("scripts/skills/skill", {
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInMaces ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInMaces ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -114,8 +114,8 @@ this.strike_down_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.FatigueDealtPerHitMult += 4.000000;
-			_properties.DamageTotalMult *= 0.500000;
+			_properties.FatigueDealtPerHitMult += 4.0;
+			_properties.DamageTotalMult *= 0.5;
 		}
 	}
 

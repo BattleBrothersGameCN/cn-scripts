@@ -27,7 +27,7 @@ this.rally_the_troops <- this.inherit("scripts/skills/skill", {
 
 	function getTooltip()
 	{
-		local bravery = this.Math.max(0, this.Math.floor(this.getContainer().getActor().getCurrentProperties().getBravery() * 0.400000));
+		local bravery = this.Math.max(0, this.Math.floor(this.getContainer().getActor().getCurrentProperties().getBravery() * 0.4));
 		local ret = [
 			{
 				id = 1,
@@ -85,7 +85,7 @@ this.rally_the_troops <- this.inherit("scripts/skills/skill", {
 	function onUse( _user, _targetTile )
 	{
 		local myTile = _user.getTile();
-		local bravery = this.Math.floor(_user.getCurrentProperties().getBravery() * 0.400000);
+		local bravery = this.Math.floor(_user.getCurrentProperties().getBravery() * 0.4);
 		local actors = this.Tactical.Entities.getInstancesOfFaction(_user.getFaction());
 
 		foreach( a in actors )

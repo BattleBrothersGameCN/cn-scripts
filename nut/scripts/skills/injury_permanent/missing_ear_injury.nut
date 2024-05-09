@@ -35,7 +35,7 @@ this.missing_ear_injury <- this.inherit("scripts/skills/injury_permanent/permane
 
 	function onUpdate( _properties )
 	{
-		_properties.InitiativeMult *= 0.900000;
+		_properties.InitiativeMult *= 0.9;
 	}
 
 	function onApplyAppearance()

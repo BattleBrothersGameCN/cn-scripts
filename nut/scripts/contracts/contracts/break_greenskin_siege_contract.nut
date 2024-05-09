@@ -11,16 +11,16 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 
 		if (r <= 70)
 		{
-			this.m.DifficultyMult = this.Math.rand(90, 105) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(90, 105) * 0.01;
 		}
 		else
 		{
-			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.010000;
+			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
 		this.m.Type = "contract.break_greenskin_siege";
 		this.m.Name = "突破重围";
-		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.000000;
+		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		this.m.MakeAllSpawnsResetOrdersOnContractEnd = false;
 	}
 
@@ -45,12 +45,12 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 
 		if (this.Math.rand(1, 100) <= 33)
 		{
-			this.m.Payment.Completion = 0.750000;
-			this.m.Payment.Advance = 0.250000;
+			this.m.Payment.Completion = 0.75;
+			this.m.Payment.Advance = 0.25;
 		}
 		else
 		{
-			this.m.Payment.Completion = 1.000000;
+			this.m.Payment.Completion = 1.0;
 		}
 
 		this.contract.start();
@@ -200,10 +200,10 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 
 					if (!this.World.State.isPaused())
 					{
-						this.World.setSpeedMult(1.000000);
+						this.World.setSpeedMult(1.0);
 					}
 
-					this.World.State.m.LastWorldSpeedMult = 1.000000;
+					this.World.State.m.LastWorldSpeedMult = 1.0;
 					this.Contract.setScreen("TroopsHaveDied");
 					this.World.Contracts.showActiveContract();
 				}
@@ -228,10 +228,10 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 
 					if (!this.World.State.isPaused())
 					{
-						this.World.setSpeedMult(1.000000);
+						this.World.setSpeedMult(1.0);
 					}
 
-					this.World.State.m.LastWorldSpeedMult = 1.000000;
+					this.World.State.m.LastWorldSpeedMult = 1.0;
 				}
 			}
 
@@ -591,7 +591,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		local goblinBase = this.World.getEntityByID(this.m.Flags.get("GoblinBase"));
 		local numSiegeEngines;
 
-		if (this.m.DifficultyMult >= 1.150000)
+		if (this.m.DifficultyMult >= 1.15)
 		{
 			numSiegeEngines = this.Math.rand(1, 2);
 		}
@@ -602,11 +602,11 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 
 		local numOtherEnemies;
 
-		if (this.m.DifficultyMult >= 1.250000)
+		if (this.m.DifficultyMult >= 1.25)
 		{
 			numOtherEnemies = this.Math.rand(2, 3);
 		}
-		else if (this.m.DifficultyMult >= 0.950000)
+		else if (this.m.DifficultyMult >= 0.95)
 		{
 			numOtherEnemies = 2;
 		}
@@ -676,7 +676,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(false);
 			c.getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(false);
 			local wait = this.new("scripts/ai/world/orders/wait_order");
-			wait.setTime(9000.000000);
+			wait.setTime(9000.0);
 			c.addOrder(wait);
 		}
 
@@ -742,11 +742,11 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			local raidTarget = targets[this.Math.rand(0, targets.len() - 1)].getTile();
 			c.getBehavior(this.Const.World.AI.Behavior.ID.Flee).setEnabled(false);
 			local raid = this.new("scripts/ai/world/orders/raid_order");
-			raid.setTime(30.000000);
+			raid.setTime(30.0);
 			raid.setTargetTile(raidTarget);
 			c.addOrder(raid);
 			local destroy = this.new("scripts/ai/world/orders/destroy_order");
-			destroy.setTime(60.000000);
+			destroy.setTime(60.0);
 			destroy.setSafetyOverride(true);
 			destroy.setTargetTile(originTile);
 			destroy.setTargetID(this.m.Origin.getID());
@@ -762,7 +762,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			c.addOrder(intercept);
 			local guard = this.new("scripts/ai/world/orders/guard_order");
 			guard.setTarget(originTile);
-			guard.setTime(120.000000);
+			guard.setTime(120.0);
 		}
 
 		this.m.Origin.spawnFireAndSmoke();
@@ -789,10 +789,10 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 
 			if (!this.World.State.isPaused())
 			{
-				this.World.setSpeedMult(1.000000);
+				this.World.setSpeedMult(1.0);
 			}
 
-			this.World.State.m.LastWorldSpeedMult = 1.000000;
+			this.World.State.m.LastWorldSpeedMult = 1.0;
 
 			if (!this.m.Flags.get("IsSiegeSpawned"))
 			{
@@ -812,7 +812,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 						local c = e.getController();
 						c.clearOrders();
 						local wait = this.new("scripts/ai/world/orders/wait_order");
-						wait.setTime(120.000000);
+						wait.setTime(120.0);
 						c.addOrder(wait);
 					}
 				}

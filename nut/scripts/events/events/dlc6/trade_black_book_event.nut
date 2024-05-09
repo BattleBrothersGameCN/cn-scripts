@@ -6,7 +6,7 @@ this.trade_black_book_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.trade_black_book";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 99999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_174.png[/img]{一个人靠近了营地。 你离开你的帐篷发现他拿着一杆金色的长矛站在外面，枪杆像树枝一样突出些尖锐的棱角。 尽管武器看起来很具威慑性，但一对水罐和一个金色物件挂在上面使它有了其他用途。 那人自己把斗篷掀开露出一张非常奇特和苍白的脸，上面没有一根毛发。 他用完美的谈吐介绍他自己。%SPEECH_ON%你好陌生人，我的名字是尉迟绿洲。 我在这片土地上寻找着两件东西，其中一个我了解到在你的手中。这是一本关于死亡的本质，不，是关于死亡的存在的深刻的书。 我相信你的一个手下已经解开了它秘密的一部分，在这一点上，它它对你没有多大用处了。%SPEECH_OFF%%translator% 点头，声称只要他看向书页，他便不能解读出更多的内容并且怀疑某些人能做点什么。 尉迟吹了个口哨然后你回头看他。 那人伸出三根手指。%SPEECH_ON%为了书，我愿意用这些东西中的一样来交换：一个这片土地的忠实信徒称作镀金者的拥抱的金盾，我的两个罐子，喝下后，会让一个人强化到超越你想象的程度，或者，看你们是佣兵，50000克朗。%SPEECH_OFF%}",

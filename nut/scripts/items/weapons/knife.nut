@@ -17,12 +17,12 @@ this.knife <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_knife_01";
 		this.m.Value = 30;
-		this.m.Condition = 32.000000;
-		this.m.ConditionMax = 32.000000;
+		this.m.Condition = 32.0;
+		this.m.ConditionMax = 32.0;
 		this.m.RegularDamage = 15;
 		this.m.RegularDamageMax = 25;
-		this.m.ArmorDamageMult = 0.500000;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.ArmorDamageMult = 0.5;
+		this.m.DirectDamageMult = 0.2;
 	}
 
 	function onEquip()

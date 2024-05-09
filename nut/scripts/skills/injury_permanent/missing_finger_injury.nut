@@ -41,8 +41,8 @@ this.missing_finger_injury <- this.inherit("scripts/skills/injury_permanent/perm
 
 	function onUpdate( _properties )
 	{
-		_properties.MeleeSkillMult *= 0.950000;
-		_properties.RangedSkillMult *= 0.950000;
+		_properties.MeleeSkillMult *= 0.95;
+		_properties.RangedSkillMult *= 0.95;
 	}
 
 	function onApplyAppearance()

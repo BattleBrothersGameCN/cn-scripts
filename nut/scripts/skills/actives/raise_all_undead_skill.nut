@@ -13,7 +13,7 @@ this.raise_all_undead_skill <- this.inherit("scripts/skills/skill", {
 			"sounds/enemies/necromancer_02.wav",
 			"sounds/enemies/necromancer_03.wav"
 		];
-		this.m.SoundVolume = 1.350000;
+		this.m.SoundVolume = 1.35;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.UtilityTargeted;
 		this.m.IsSerialized = false;

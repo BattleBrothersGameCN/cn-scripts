@@ -27,7 +27,7 @@ this.perk_head_hunter <- this.inherit("scripts/skills/skill", {
 
 		if (this.m.Stacks != 0)
 		{
-			_properties.HitChance[this.Const.BodyPart.Head] = 100.000000;
+			_properties.HitChance[this.Const.BodyPart.Head] = 100.0;
 		}
 	}
 
@@ -67,7 +67,7 @@ this.perk_head_hunter <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill.isAttack() && this.m.Stacks != 0)
 		{
-			_properties.HitChanceMult[this.Const.BodyPart.Body] = 0.000000;
+			_properties.HitChanceMult[this.Const.BodyPart.Body] = 0.0;
 		}
 	}
 

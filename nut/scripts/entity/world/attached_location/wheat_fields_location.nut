@@ -19,28 +19,28 @@ this.wheat_fields_location <- this.inherit("scripts/entity/world/attached_locati
 			r = [
 				{
 					File = "ambience/buildings/market_chicken_00.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/market_chicken_01.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/market_chicken_02.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/market_chicken_04.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				},
 				{
 					File = "ambience/buildings/market_chicken_05.wav",
-					Volume = 1.000000,
-					Pitch = 1.000000
+					Volume = 1.0,
+					Pitch = 1.0
 				}
 			];
 
@@ -120,22 +120,22 @@ this.wheat_fields_location <- this.inherit("scripts/entity/world/attached_locati
 		{
 			_list.push({
 				R = 0,
-				P = 1.000000,
+				P = 1.0,
 				S = "supplies/bread_item"
 			});
 			_list.push({
 				R = 10,
-				P = 1.000000,
+				P = 1.0,
 				S = "helmets/straw_hat"
 			});
 			_list.push({
 				R = 20,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/pitchfork"
 			});
 			_list.push({
 				R = 50,
-				P = 1.000000,
+				P = 1.0,
 				S = "weapons/hooked_blade"
 			});
 		}
@@ -144,7 +144,7 @@ this.wheat_fields_location <- this.inherit("scripts/entity/world/attached_locati
 	function onInit()
 	{
 		this.attached_location.onInit();
-		this.getSprite("body").Scale = 0.900000;
+		this.getSprite("body").Scale = 0.9;
 	}
 
 });

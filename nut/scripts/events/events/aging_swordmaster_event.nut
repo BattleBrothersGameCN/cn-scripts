@@ -6,7 +6,7 @@ this.aging_swordmaster_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.aging_swordmaster";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 30.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 30.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_17.png[/img]你看到%swordmaster%费力地想要坐在树墩上。 当他慢慢蹲下时，他的双腿因难以弯曲而剧烈颤抖。好不容易坐下后，他不由得长出了一口气。他的剑就在身旁。它比拥有它的手还年轻，是一个替代品的替代品的替代品。他对它没有特殊的偏好，但一旦他摸到剑，剑就成了他想法的延伸，如何把剑变成自己身体的一部分，如何用它的锋刃砍杀别人。你转身离开，想让剑术大师独自静一静，但他已经注意到了你，开口喊道。%SPEECH_ON%嗨，队长，不是有意让你看到的。%SPEECH_OFF%",

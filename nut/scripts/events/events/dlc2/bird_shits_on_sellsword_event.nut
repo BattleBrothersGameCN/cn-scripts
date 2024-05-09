@@ -9,7 +9,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.bird_shits_on_sellsword";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 60.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{在旅行途中，%birdbro%被鸟屎击中。它打在他的剑手上，并溅到他的盔甲上。%SPEECH_ON%啊，啊！%SPEECH_OFF%他的手臂像鸡翅膀一样大张，看着伤口。%SPEECH_ON%该死的，真是我倒霉！%SPEECH_OFF%}",
@@ -82,7 +82,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Victim.getImagePath());
-				_event.m.Victim.worsenMood(0.500000, "粘到了鸟屎");
+				_event.m.Victim.worsenMood(0.5, "粘到了鸟屎");
 
 				if (_event.m.Victim.getMoodState() <= this.Const.MoodState.Neutral)
 				{
@@ -115,7 +115,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Victim.getImagePath());
 				this.Characters.push(_event.m.Superstitious.getImagePath());
-				_event.m.Victim.improveMood(1.000000, "幸运的粘到了鸟屎");
+				_event.m.Victim.improveMood(1.0, "幸运的粘到了鸟屎");
 
 				if (_event.m.Victim.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -126,7 +126,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Superstitious.improveMood(0.500000, "目睹(Witnessed)" + _event.m.Victim.getName() + "被鸟屎砸中");
+				_event.m.Superstitious.improveMood(0.5, "目睹(Witnessed)" + _event.m.Victim.getName() + "被鸟屎砸中");
 
 				if (_event.m.Superstitious.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -159,7 +159,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Victim.getImagePath());
 				this.Characters.push(_event.m.Archer.getImagePath());
-				_event.m.Victim.improveMood(0.500000, "报复一只鸟");
+				_event.m.Victim.improveMood(0.5, "报复一只鸟");
 
 				if (_event.m.Victim.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -170,7 +170,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Archer.improveMood(1.000000, "向那只拉屎的鸟复仇" + _event.m.Victim.getName() + "精准地");
+				_event.m.Archer.improveMood(1.0, "向那只拉屎的鸟复仇" + _event.m.Victim.getName() + "精准地");
 
 				if (_event.m.Archer.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -192,7 +192,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.000000, "目睹(Witnessed)" + _event.m.Archer.getName() + "队长精湛的射箭技艺");
+						bro.improveMood(1.0, "目睹(Witnessed)" + _event.m.Archer.getName() + "队长精湛的射箭技艺");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -227,7 +227,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Victim.getImagePath());
 				this.Characters.push(_event.m.Historian.getImagePath());
-				_event.m.Victim.worsenMood(0.500000, "粘到了鸟屎");
+				_event.m.Victim.worsenMood(0.5, "粘到了鸟屎");
 
 				if (_event.m.Victim.getMoodState() <= this.Const.MoodState.Neutral)
 				{
@@ -249,7 +249,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.000000, "感到愉快来自 " + _event.m.Historian.getName());
+						bro.improveMood(1.0, "感到愉快来自 " + _event.m.Historian.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

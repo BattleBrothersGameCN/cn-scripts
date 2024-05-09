@@ -6,7 +6,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.alp_captured_in_hole";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 170.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 170.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_51.png[/img]{你发现一个人坐在地上的一个洞边上。他身边有一个铁桩，上面系着一条链子，链子伸进了洞里。洞口被山羊皮覆盖着。他挥手看着你，但说如果你想看就得付钱。你问他手上的东西是什么。他咧嘴一笑.%SPEECH_ON%这是一个奇特的东西，先生。%SPEECH_OFF%几个武装人员站在不远处，毫无疑问是这里任何阴谋的一部分。}",
@@ -178,7 +178,7 @@ this.alp_captured_in_hole_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().getID() == "background.beast_slayer" || bro.getBackground().getID() == "background.witchhunter" || bro.getSkills().hasSkill("trait.hate_beasts") || bro.getSkills().hasSkill("trait.fear_beasts") || bro.getSkills().hasSkill("trait.bloodthirsty") || bro.getSkills().hasSkill("trait.paranoid") || bro.getSkills().hasSkill("trait.superstitious"))
 					{
-						bro.worsenMood(0.750000, "你让梦魇活下来，以后可能会闹鬼");
+						bro.worsenMood(0.75, "你让梦魇活下来，以后可能会闹鬼");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

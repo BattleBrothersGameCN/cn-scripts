@@ -18,17 +18,17 @@ this.named_goblin_heavy_bow <- this.inherit("scripts/items/weapons/named/named_w
 		this.m.ShowQuiver = true;
 		this.m.ShowArmamentIcon = true;
 		this.m.Value = 2200;
-		this.m.Condition = 62.000000;
-		this.m.ConditionMax = 62.000000;
+		this.m.Condition = 62.0;
+		this.m.ConditionMax = 62.0;
 		this.m.StaminaModifier = -2;
 		this.m.RangeMin = 2;
 		this.m.RangeMax = 7;
 		this.m.RangeIdeal = 7;
 		this.m.RegularDamage = 30;
 		this.m.RegularDamageMax = 50;
-		this.m.ArmorDamageMult = 0.600000;
-		this.m.DirectDamageMult = 0.350000;
-		this.m.DirectDamageAdd = 0.100000;
+		this.m.ArmorDamageMult = 0.6;
+		this.m.DirectDamageMult = 0.35;
+		this.m.DirectDamageAdd = 0.1;
 		this.randomizeValues();
 	}
 

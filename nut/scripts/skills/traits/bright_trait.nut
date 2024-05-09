@@ -43,7 +43,7 @@ this.bright_trait <- this.inherit("scripts/skills/traits/character_trait", {
 
 	function onUpdate( _properties )
 	{
-		_properties.XPGainMult *= 1.100000;
+		_properties.XPGainMult *= 1.1;
 	}
 
 });

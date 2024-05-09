@@ -11,7 +11,7 @@ this.shady_character_offers_map_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.shady_character_offers_map";
 		this.m.Title = "在路上……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_41.png[/img]行进中，一个孤独的商人带着他的驮马出现在你的路上。 他伸出双臂，双手清晰可见。%SPEECH_ON%晚上好，旅行者们。我可以让你对一些商品感兴趣吗？%SPEECH_OFF%他摆出很多东西但是 %companyname% 几乎都用不上，然后他提到了一张地图。 你当然已经扬起眉毛，因为他扬起眉毛笑了。%SPEECH_ON%唉，你对地图有兴趣吗？ 这是这里的绘制地图，地形，地理上奇怪的东西，我向你保证，带在一个人身上是非常有意义的！ 这篇文章告诉你著名的“%location%”的确切位置。 我肯定你过去听说过，是吗？ 拥有数不清的宝藏！ 世界上一些最好武器的安息之所！ 而这一切你将话费微不足道的 %mapcost% 克朗！%SPEECH_OFF%他咧嘴笑着转过头去。 看来他在旅途中卖掉了一些牙齿。%SPEECH_ON%所以，旅行者们，你们有什么想说的么？%SPEECH_OFF%",
@@ -84,7 +84,7 @@ this.shady_character_offers_map_event <- this.inherit("scripts/events/event", {
 					Text = "很高兴我们中有你这样的人才。",
 					function getResult( _event )
 					{
-						this.World.uncoverFogOfWar(_event.m.Location.getTile().Pos, 700.000000);
+						this.World.uncoverFogOfWar(_event.m.Location.getTile().Pos, 700.0);
 						_event.m.Location.getFlags().set("IsEventLocation", true);
 						_event.m.Location.setDiscovered(true);
 						this.World.getCamera().moveTo(_event.m.Location);
@@ -118,7 +118,7 @@ this.shady_character_offers_map_event <- this.inherit("scripts/events/event", {
 					Text = "这就是战团的财产！",
 					function getResult( _event )
 					{
-						this.World.uncoverFogOfWar(_event.m.Location.getTile().Pos, 700.000000);
+						this.World.uncoverFogOfWar(_event.m.Location.getTile().Pos, 700.0);
 						_event.m.Location.getFlags().set("IsEventLocation", true);
 						_event.m.Location.setDiscovered(true);
 						this.World.getCamera().moveTo(_event.m.Location);

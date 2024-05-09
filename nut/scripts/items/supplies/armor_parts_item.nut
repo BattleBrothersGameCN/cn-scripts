@@ -36,7 +36,7 @@ this.armor_parts_item <- this.inherit("scripts/items/item", {
 
 	function getValue()
 	{
-		return this.Math.floor(this.m.Amount / 20.000000 * this.m.Value);
+		return this.Math.floor(this.m.Amount / 20.0 * this.m.Value);
 	}
 
 	function getBuyPrice()
@@ -45,7 +45,7 @@ this.armor_parts_item <- this.inherit("scripts/items/item", {
 		{
 			local t = this.World.State.getCurrentTown();
 			local isBuildingPresent = t.hasAttachedLocation("attached_location.workshop") || t.hasAttachedLocation("attached_location.leather_tanner") || t.hasBuilding("building.armorsmith") || t.hasBuilding("building.armorsmith_oriental") || t.hasBuilding("building.weaponsmith") || t.hasBuilding("building.weaponsmith_oriental");
-			return this.Math.max(this.getSellPrice(), this.Math.ceil(this.getValue() * this.getPriceMult() * this.Const.Difficulty.BuyPriceMult[this.World.Assets.getEconomicDifficulty()] * this.World.State.getCurrentTown().getBuyPriceMult() * (isBuildingPresent ? 1.000000 : 1.500000)));
+			return this.Math.max(this.getSellPrice(), this.Math.ceil(this.getValue() * this.getPriceMult() * this.Const.Difficulty.BuyPriceMult[this.World.Assets.getEconomicDifficulty()] * this.World.State.getCurrentTown().getBuyPriceMult() * (isBuildingPresent ? 1.0 : 1.5)));
 		}
 
 		return this.item.getBuyPrice();

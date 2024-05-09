@@ -15,7 +15,7 @@ this.debilitated_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageTotalMult *= 0.500000;
+		_properties.DamageTotalMult *= 0.5;
 	}
 
 	function onTurnEnd()

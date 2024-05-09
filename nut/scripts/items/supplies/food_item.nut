@@ -1,8 +1,8 @@
 this.food_item <- this.inherit("scripts/items/item", {
 	m = {
-		Amount = 0.000000,
+		Amount = 0.0,
 		GoodForDays = 0,
-		BestBefore = 0.000000,
+		BestBefore = 0.0,
 		BoughtAtPrice = 0,
 		IsUndesirable = false
 	},
@@ -43,7 +43,7 @@ this.food_item <- this.inherit("scripts/items/item", {
 
 	function getValue()
 	{
-		return this.Math.floor(this.m.Amount / 25.000000 * this.Math.minf(1.000000, this.getSpoilInDays() / (this.m.GoodForDays * 1.000000)) * this.m.Value);
+		return this.Math.floor(this.m.Amount / 25.0 * this.Math.minf(1.0, this.getSpoilInDays() / (this.m.GoodForDays * 1.0)) * this.m.Value);
 	}
 
 	function getBestBeforeTime()
@@ -92,7 +92,7 @@ this.food_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Food;
-		this.m.Amount = 25.000000;
+		this.m.Amount = 25.0;
 		this.m.IsDroppedAsLoot = true;
 		this.m.IsChangeableInBattle = false;
 		this.m.IsAllowedInBag = false;

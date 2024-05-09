@@ -7,7 +7,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.juggler_tempts_fate";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 70.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]%juggler% 这个手脚轻快、手脚敏捷的杂耍者正在转着圈，要求兄弟们给他扔几把刀子。 看起来他是想要炫耀自己的杂技。",
@@ -61,7 +61,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				local injury = _event.m.Juggler.addInjury([
 					{
 						ID = "injury.injured_shoulder",
-						Threshold = 0.250000,
+						Threshold = 0.25,
 						Script = "injury/injured_shoulder_injury"
 					}
 				]);
@@ -72,7 +72,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 						text = _event.m.Juggler.getName() + " 遭受 " + injury.getNameOnly()
 					}
 				];
-				_event.m.Juggler.worsenMood(1.000000, "行为失当，自残");
+				_event.m.Juggler.worsenMood(1.0, "行为失当，自残");
 
 				if (_event.m.Juggler.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -178,7 +178,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 10)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -239,7 +239,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 20)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -292,7 +292,7 @@ this.juggler_tempts_fate_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 30)
 					{
-						bro.improveMood(1.000000, "感到愉快");
+						bro.improveMood(1.0, "感到愉快");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

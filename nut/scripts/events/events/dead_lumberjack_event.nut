@@ -4,7 +4,7 @@ this.dead_lumberjack_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.dead_lumberjack";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 120.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 120.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]森林里有许多稀奇古怪的东西，而尸体，说真的，甚至不是最稀奇的。 所以，当你偶然发现一伙死去的伐木工时，唯一让你感兴趣的就是在他们旁边被杀的恐狼。%randombrother% 盯着那几条原野上的脚印，这几串脚印突兀地中断了，几把斧子被留在了树干上。 他边吐边点头。%SPEECH_ON%可怜的家伙们。看起来好像是一些恐狼袭击了他们。%SPEECH_OFF%你让队员们去收集剩下的东西然后离开。",

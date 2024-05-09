@@ -2,7 +2,7 @@ this.kraken_ensnare_effect <- this.inherit("scripts/skills/skill", {
 	m = {
 		Mode = 0,
 		LastRoundApplied = 0,
-		SpriteScaleBackup = 1.000000,
+		SpriteScaleBackup = 1.0,
 		OnRemoveCallback = null,
 		OnRemoveCallbackData = null,
 		ParentID = null
@@ -80,15 +80,15 @@ this.kraken_ensnare_effect <- this.inherit("scripts/skills/skill", {
 
 			if (this.m.SoundOnUse.len() != 0)
 			{
-				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.000000, this.getContainer().getActor().getPos());
+				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.0, this.getContainer().getActor().getPos());
 			}
 
 			local hitInfo = clone this.Const.Tactical.HitInfo;
 			hitInfo.DamageRegular = this.Math.rand(10, 15);
-			hitInfo.DamageDirect = 1.000000;
+			hitInfo.DamageDirect = 1.0;
 			hitInfo.BodyPart = this.Const.BodyPart.Body;
-			hitInfo.BodyDamageMult = 1.000000;
-			hitInfo.FatalityChanceMult = 0.000000;
+			hitInfo.BodyDamageMult = 1.0;
+			hitInfo.FatalityChanceMult = 0.0;
 			this.getContainer().getActor().onDamageReceived(this.getContainer().getActor(), this, hitInfo);
 		}
 	}
@@ -99,8 +99,8 @@ this.kraken_ensnare_effect <- this.inherit("scripts/skills/skill", {
 		local sprite1 = actor.getSprite("status_rooted");
 		local sprite2 = actor.getSprite("status_rooted_back");
 		this.m.SpriteScaleBackup = sprite1.Scale;
-		sprite1.Scale = 1.000000;
-		sprite2.Scale = 1.000000;
+		sprite1.Scale = 1.0;
+		sprite2.Scale = 1.0;
 		actor.getAIAgent().addBehavior(this.new("scripts/ai/tactical/behaviors/ai_drag"));
 		this.getContainer().add(this.new("scripts/skills/actives/kraken_move_ensnared_skill"));
 		this.Tactical.TurnSequenceBar.pushEntityBack(this.getContainer().getActor().getID());

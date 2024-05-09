@@ -6,7 +6,7 @@ this.move_troops_action <- this.inherit("scripts/factions/faction_action", {
 	function create()
 	{
 		this.m.ID = "move_troops_action";
-		this.m.Cooldown = 400.000000;
+		this.m.Cooldown = 400.0;
 		this.m.IsSettlementsRequired = true;
 		this.faction_action.create();
 	}
@@ -34,7 +34,7 @@ this.move_troops_action <- this.inherit("scripts/factions/faction_action", {
 
 		foreach( s in settlements )
 		{
-			if (s.getLastSpawnTime() + 300.000000 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
 			{
 				continue;
 			}
@@ -107,14 +107,14 @@ this.move_troops_action <- this.inherit("scripts/factions/faction_action", {
 			move.setRoadsOnly(true);
 			move.setDestination(this.m.Dest.getTile());
 			local wait = this.new("scripts/ai/world/orders/wait_order");
-			wait.setTime(2.000000);
+			wait.setTime(2.0);
 			local despawn = this.new("scripts/ai/world/orders/despawn_order");
 			c.addOrder(move);
 			c.addOrder(wait);
 			c.addOrder(despawn);
 		}
 
-		this.m.Cooldown = this.World.FactionManager.isCivilWar() ? 200.000000 : 400.000000;
+		this.m.Cooldown = this.World.FactionManager.isCivilWar() ? 200.0 : 400.0;
 		return true;
 	}
 

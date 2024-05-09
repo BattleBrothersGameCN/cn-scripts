@@ -20,13 +20,13 @@ this.wooden_stick <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_club_01";
 		this.m.Value = 35;
-		this.m.Condition = 32.000000;
-		this.m.ConditionMax = 32.000000;
+		this.m.Condition = 32.0;
+		this.m.ConditionMax = 32.0;
 		this.m.StaminaModifier = -6;
 		this.m.RegularDamage = 15;
 		this.m.RegularDamageMax = 25;
-		this.m.ArmorDamageMult = 0.500000;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.ArmorDamageMult = 0.5;
+		this.m.DirectDamageMult = 0.4;
 	}
 
 	function onEquip()

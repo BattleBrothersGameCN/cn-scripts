@@ -173,8 +173,8 @@ this.slave_background <- this.inherit("scripts/skills/backgrounds/character_back
 
 		if (("State" in this.World) && this.World.State != null && this.World.Assets.getOrigin() != null && this.World.Assets.getOrigin().getID() == "scenario.manhunters")
 		{
-			_properties.XPGainMult *= 1.100000;
-			_properties.SurviveWithInjuryChanceMult = 0.000000;
+			_properties.XPGainMult *= 1.1;
+			_properties.SurviveWithInjuryChanceMult = 0.0;
 		}
 	}
 

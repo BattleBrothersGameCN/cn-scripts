@@ -8,7 +8,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.player_plays_dice";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_62.png[/img]走了一天的路之后，在休息的时候，%gambler% 手里拿着一副骰子和一个杯子走到了你的身边。 他问你想不想来玩一个小游戏。 规则非常简单：每个人摇一次骰子，点数高的人获胜。 这是一个好机会！每次的赌注是二十五克朗。",
@@ -20,7 +20,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 					Text = "那就来玩玩吧！",
 					function getResult( _event )
 					{
-						_event.m.Gambler.improveMood(1.000000, "和你玩了一场骰子游戏");
+						_event.m.Gambler.improveMood(1.0, "和你玩了一场骰子游戏");
 						_event.m.PlayerDice = this.Math.rand(3, 18);
 						_event.m.GamblerDice = this.Math.rand(3, 18);
 

@@ -7,7 +7,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.sellsword_vs_bees";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 70.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "%terrainImage%{沙漠里几乎没有什么沙子以外东西。 所以一颗单独立在那的树很吸引眼球，更奇怪的是树枝上还有个肥厚的蜂巢和一片工蜂围绕着它。 这个距离上你已经可以看到蜂巢里蜂蜜金色的闪光…}",
@@ -74,7 +74,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.750000, "在沙漠里享受蜂蜜");
+						bro.improveMood(0.75, "在沙漠里享受蜂蜜");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -109,7 +109,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Dude.getImagePath());
 				_event.m.Dude.addHeavyInjury();
-				_event.m.Dude.worsenMood(2.000000, "被蜜蜂残忍地对待");
+				_event.m.Dude.worsenMood(2.0, "被蜜蜂残忍地对待");
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
@@ -158,7 +158,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 50 || bro.getID() == _event.m.Wildman.getID())
 					{
-						bro.improveMood(0.750000, "在沙漠里享受蜂蜜");
+						bro.improveMood(0.75, "在沙漠里享受蜂蜜");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

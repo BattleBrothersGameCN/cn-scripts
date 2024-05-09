@@ -13,68 +13,68 @@ this.taxidermist_building <- this.inherit("scripts/entity/world/settlements/buil
 		this.m.Sounds = [
 			{
 				File = "ambience/buildings/taxidermist_boiling_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_boiling_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_cooking_pot_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_cooking_pot_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_crafting_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_crafting_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_crafting_03.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_crafting_04.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_crafting_05.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_hammering_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_hammering_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_sawing_01.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			},
 			{
 				File = "ambience/buildings/taxidermist_sawing_02.wav",
-				Volume = 1.000000,
-				Pitch = 1.000000
+				Volume = 1.0,
+				Pitch = 1.0
 			}
 		];
 		this.m.SoundsAtNight = [];

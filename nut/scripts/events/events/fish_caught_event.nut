@@ -6,7 +6,7 @@ this.fish_caught_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.hunt_food";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 7.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 7.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_52.png[/img]{在一条河边停了下来时，看来 %fisherman% 要去干他的老本行并抓到了几条鱼！ | 你来到一片水域，停下来和几个当地人谈论周围的风土人情。%fisherman% 这个曾经的渔夫抓住机会去逮了几条大马哈鱼和其他水生动物。 | 在沿河行军的时候，%fisherman% 这个曾经的渔夫，沿着河岸奔跑并抓了一桶龙虾！ 放在锅里煮，可以做成美味的食物。}",
@@ -35,7 +35,7 @@ this.fish_caught_event <- this.inherit("scripts/events/event", {
 						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + food.getAmount() + "[/color] 条鱼"
 					}
 				];
-				_event.m.Fisherman.improveMood(0.500000, "钓到一些鱼");
+				_event.m.Fisherman.improveMood(0.5, "钓到一些鱼");
 
 				if (_event.m.Fisherman.getMoodState() >= this.Const.MoodState.Neutral)
 				{

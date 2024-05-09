@@ -8,7 +8,7 @@ this.drunkard_loses_stuff_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.drunkard_loses_stuff";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_05.png[/img]当昨晚清点存货时，%drunkard% 多喝了一点酒，结果丢失了 %item%！\n\n你已经把叫带到你身边，而这个摇摇晃晃站着的男人仍然散发着酒气。 当他试图为自己辩解时候，他打了个嗝，但他所能做的就是倒在地上，变成一个酒鬼。 他一个劲儿地笑，但你看不出有啥可笑的。%otherguy% 问你该怎么处置这个家伙。",
@@ -129,7 +129,7 @@ this.drunkard_loses_stuff_event <- this.inherit("scripts/events/event", {
 					icon = "ui/traits/trait_icon_29.png",
 					text = _event.m.Drunkard.getName() + "不再是个酒鬼"
 				});
-				_event.m.Drunkard.worsenMood(2.500000, "被你命令鞭打了");
+				_event.m.Drunkard.worsenMood(2.5, "被你命令鞭打了");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Drunkard.getMoodState()],
@@ -149,7 +149,7 @@ this.drunkard_loses_stuff_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(1.000000, "你的命令让人感到愤慨" + _event.m.Drunkard.getName() + "鞭打");
+					bro.worsenMood(1.0, "你的命令让人感到愤慨" + _event.m.Drunkard.getName() + "鞭打");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{
@@ -190,7 +190,7 @@ this.drunkard_loses_stuff_event <- this.inherit("scripts/events/event", {
 						text = _event.m.Drunkard.getName() + "受到损伤"
 					}
 				];
-				_event.m.Drunkard.worsenMood(2.500000, "被你命令鞭打了");
+				_event.m.Drunkard.worsenMood(2.5, "被你命令鞭打了");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Drunkard.getMoodState()],
@@ -210,7 +210,7 @@ this.drunkard_loses_stuff_event <- this.inherit("scripts/events/event", {
 						continue;
 					}
 
-					bro.worsenMood(1.000000, "你的命令让人感到愤慨" + _event.m.Drunkard.getName() + "鞭打");
+					bro.worsenMood(1.0, "你的命令让人感到愤慨" + _event.m.Drunkard.getName() + "鞭打");
 
 					if (bro.getMoodState() < this.Const.MoodState.Neutral)
 					{

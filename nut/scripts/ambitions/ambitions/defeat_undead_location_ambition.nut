@@ -6,7 +6,7 @@ this.defeat_undead_location_ambition <- this.inherit("scripts/ambitions/ambition
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_undead_location";
-		this.m.Duration = 21.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "行尸对人们来说是一种可怕的诅咒。\n让我们把他们的一些巢穴烧成灰烬，赢得所有厚道人的尊重！";
 		this.m.RewardTooltip = "你将获得一件特殊的配饰，使佩戴者在抵御恐惧和精神控制效果时的决心翻倍。";
 		this.m.UIText = "摧毁亡灵营地";

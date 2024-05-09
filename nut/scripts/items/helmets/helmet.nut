@@ -15,8 +15,8 @@ this.helmet <- this.inherit("scripts/items/item", {
 		VariantString = "helmet",
 		ImpactSound = this.Const.Sound.ArmorLeatherImpact,
 		InventorySound = this.Const.Sound.ArmorLeatherImpact,
-		Armor = 0.000000,
-		ArmorMax = 0.000000,
+		Armor = 0.0,
+		ArmorMax = 0.0,
 		StaminaModifier = 0,
 		Vision = 0
 	},
@@ -59,12 +59,12 @@ this.helmet <- this.inherit("scripts/items/item", {
 
 	function getAmountString()
 	{
-		return "" + this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.000000) * 100) + "%";
+		return "" + this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.0) * 100) + "%";
 	}
 
 	function getAmountColor()
 	{
-		return this.Const.Items.ConditionColor[this.Math.max(0, this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.000000) * (this.Const.Items.ConditionColor.len() - 1)))];
+		return this.Const.Items.ConditionColor[this.Math.max(0, this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.0) * (this.Const.Items.ConditionColor.len() - 1)))];
 	}
 
 	function setPlainVariant()
@@ -179,7 +179,7 @@ this.helmet <- this.inherit("scripts/items/item", {
 		local isLucky = !this.Tactical.State.isScenarioMode() && !isPlayer && this.World.Assets.getOrigin().isDroppedAsLoot(this);
 		local isBlacksmithed = isPlayer && !this.Tactical.State.isScenarioMode() && this.World.Assets.m.IsBlacksmithed;
 
-		if (this.m.Condition > 15 && isPlayer || this.m.Condition > 30 && this.m.Condition / this.m.ConditionMax >= 0.250000 && (isLucky || this.Math.rand(1, 100) <= 70) || !isPlayer && this.isItemType(this.Const.Items.ItemType.Named) || this.isItemType(this.Const.Items.ItemType.Legendary) || isBlacksmithed)
+		if (this.m.Condition > 15 && isPlayer || this.m.Condition > 30 && this.m.Condition / this.m.ConditionMax >= 0.25 && (isLucky || this.Math.rand(1, 100) <= 70) || !isPlayer && this.isItemType(this.Const.Items.ItemType.Named) || this.isItemType(this.Const.Items.ItemType.Legendary) || isBlacksmithed)
 		{
 			return true;
 		}
@@ -318,7 +318,7 @@ this.helmet <- this.inherit("scripts/items/item", {
 			return;
 		}
 
-		this.m.Condition = this.Math.max(0, this.m.Condition - _damage) * 1.000000;
+		this.m.Condition = this.Math.max(0, this.m.Condition - _damage) * 1.0;
 
 		if (this.m.Condition == 0 && !this.m.IsIndestructible)
 		{
@@ -339,11 +339,11 @@ this.helmet <- this.inherit("scripts/items/item", {
 
 	function onUpdateProperties( _properties )
 	{
-		local staminaMult = 1.000000;
+		local staminaMult = 1.0;
 
 		if (this.getContainer().getActor().getSkills().hasSkill("perk.brawny"))
 		{
-			staminaMult = 0.700000;
+			staminaMult = 0.7;
 		}
 
 		_properties.Armor[this.Const.BodyPart.Head] += this.m.Condition;

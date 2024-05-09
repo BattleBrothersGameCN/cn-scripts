@@ -4,7 +4,7 @@ this.have_z_renown_ambition <- this.inherit("scripts/ambitions/ambition", {
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.have_z_renown";
-		this.m.Duration = 100.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "历史上很少有传奇雇佣兵战团。\n我们即将让我们的名字成为不朽，并被列入其中！";
 		this.m.UIText = "名望达到“彪炳千秋”";
 		this.m.TooltipText = "以“彪炳千秋”（8000名望）闻名并在历史上留下你的印记。你可以通过完成合同和赢得战斗来提高自己的名望。";

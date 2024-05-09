@@ -4,7 +4,7 @@ this.greenskins_trapped_goblin_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.greenskins_trapped_goblin";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 50.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_25.png[/img]战团穿过一片灌木丛，进入一片空地，在那里他们发现了一个蹲着的地精。 它转向人群，呼吸困难，眼神忧郁。 你看到一个巨大的捕熊器紧紧地夹住它的大腿下部。 绿皮试图咆哮，但只咳出一些血。\n\n 在奄奄一息的地精旁边，一个人脸朝下倒在草地上。 他的屁股上有个亮闪闪的东西，但你不知道那是什么。%randombrother% 来到你身边。%SPEECH_ON%可能是个陷阱。 陷阱中的陷阱。 他的其他伙伴可能离这里不远。 然后，如果我们离开，他一旦得到自由，会告诉每个人我们在这里。 我们应该怎么做？%SPEECH_OFF%",

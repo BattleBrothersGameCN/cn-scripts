@@ -24,7 +24,7 @@ this.addict_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				text = this.getDescription()
 			}
 		];
-		local time = 0.000000;
+		local time = 0.0;
 
 		if (("State" in this.World) && this.World.State != null && this.World.State.getCombatStartTime() != 0)
 		{
@@ -35,7 +35,7 @@ this.addict_trait <- this.inherit("scripts/skills/traits/character_trait", {
 			time = this.Time.getVirtualTimeF();
 		}
 
-		local isAffected = time - this.getContainer().getActor().getFlags().get("PotionLastUsed") >= 5.000000 * this.World.getTime().SecondsPerDay;
+		local isAffected = time - this.getContainer().getActor().getFlags().get("PotionLastUsed") >= 5.0 * this.World.getTime().SecondsPerDay;
 
 		if (isAffected)
 		{
@@ -105,7 +105,7 @@ this.addict_trait <- this.inherit("scripts/skills/traits/character_trait", {
 
 	function onUpdate( _properties )
 	{
-		local time = 0.000000;
+		local time = 0.0;
 
 		if (("State" in this.World) && this.World.State != null && this.World.State.getCombatStartTime() != 0)
 		{
@@ -116,15 +116,15 @@ this.addict_trait <- this.inherit("scripts/skills/traits/character_trait", {
 			time = this.Time.getVirtualTimeF();
 		}
 
-		local isAffected = time - this.getContainer().getActor().getFlags().get("PotionLastUsed") >= 7.000000 * this.World.getTime().SecondsPerDay;
+		local isAffected = time - this.getContainer().getActor().getFlags().get("PotionLastUsed") >= 7.0 * this.World.getTime().SecondsPerDay;
 
 		if (isAffected)
 		{
-			_properties.BraveryMult *= 0.900000;
-			_properties.MeleeSkillMult *= 0.900000;
-			_properties.RangedSkillMult *= 0.900000;
-			_properties.MeleeDefenseMult *= 0.900000;
-			_properties.RangedDefenseMult *= 0.900000;
+			_properties.BraveryMult *= 0.9;
+			_properties.MeleeSkillMult *= 0.9;
+			_properties.RangedSkillMult *= 0.9;
+			_properties.MeleeDefenseMult *= 0.9;
+			_properties.RangedDefenseMult *= 0.9;
 		}
 	}
 

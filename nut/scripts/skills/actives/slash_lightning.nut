@@ -36,7 +36,7 @@ this.slash_lightning <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
 		this.m.HitChanceBonus = 10;
-		this.m.DirectDamageMult = 0.200000;
+		this.m.DirectDamageMult = 0.2;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 10;
 		this.m.MinRange = 1;
@@ -93,17 +93,17 @@ this.slash_lightning <- this.inherit("scripts/skills/skill", {
 		{
 			local hitInfo = clone this.Const.Tactical.HitInfo;
 			hitInfo.DamageRegular = this.Math.rand(10, 20);
-			hitInfo.DamageDirect = 1.000000;
+			hitInfo.DamageDirect = 1.0;
 			hitInfo.BodyPart = this.Const.BodyPart.Body;
-			hitInfo.BodyDamageMult = 1.000000;
-			hitInfo.FatalityChanceMult = 0.000000;
+			hitInfo.BodyDamageMult = 1.0;
+			hitInfo.FatalityChanceMult = 0.0;
 			_data.Target.onDamageReceived(_data.User, _data.Skill, hitInfo);
 		}, _data);
 	}
 
 	function onAfterUpdate( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInSwords ? this.Const.Combat.WeaponSpecFatigueMult : 1.000000;
+		this.m.FatigueCostMult = _properties.IsSpecializedInSwords ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
 	}
 
 	function onUse( _user, _targetTile )
@@ -122,7 +122,7 @@ this.slash_lightning <- this.inherit("scripts/skills/skill", {
 
 			if (this.m.SoundOnLightning.len() != 0)
 			{
-				this.Sound.play(this.m.SoundOnLightning[this.Math.rand(0, this.m.SoundOnLightning.len() - 1)], this.Const.Sound.Volume.Skill * 2.000000, _user.getPos());
+				this.Sound.play(this.m.SoundOnLightning[this.Math.rand(0, this.m.SoundOnLightning.len() - 1)], this.Const.Sound.Volume.Skill * 2.0, _user.getPos());
 			}
 
 			if (!targetTile.IsEmpty && targetTile.getEntity().isAlive())

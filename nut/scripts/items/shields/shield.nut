@@ -19,12 +19,12 @@ this.shield <- this.inherit("scripts/items/item", {
 
 	function getAmountString()
 	{
-		return "" + this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.000000) * 100) + "%";
+		return "" + this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.0) * 100) + "%";
 	}
 
 	function getAmountColor()
 	{
-		return this.Const.Items.ConditionColor[this.Math.min(this.Math.max(0, this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.000000) * (this.Const.Items.ConditionColor.len() - 1))), this.Const.Items.ConditionColor.len() - 1)];
+		return this.Const.Items.ConditionColor[this.Math.min(this.Math.max(0, this.Math.floor(this.m.Condition / (this.m.ConditionMax * 1.0) * (this.Const.Items.ConditionColor.len() - 1))), this.Const.Items.ConditionColor.len() - 1)];
 	}
 
 	function getMeleeDefense()
@@ -44,7 +44,7 @@ this.shield <- this.inherit("scripts/items/item", {
 
 	function getValue()
 	{
-		return this.Math.ceil(this.m.Value * (this.m.Condition * 1.000000 / (this.m.ConditionMax * 1.000000)));
+		return this.Math.ceil(this.m.Value * (this.m.Condition * 1.0 / (this.m.ConditionMax * 1.0)));
 	}
 
 	function getSlotType()
@@ -188,7 +188,7 @@ this.shield <- this.inherit("scripts/items/item", {
 		local isLucky = !this.Tactical.State.isScenarioMode() && !isPlayer && this.World.Assets.getOrigin().isDroppedAsLoot(this);
 		local isBlacksmithed = isPlayer && !this.Tactical.State.isScenarioMode() && this.World.Assets.m.IsBlacksmithed;
 
-		if ((isBlacksmithed || this.m.Condition >= 6) && (isPlayer || this.m.Condition / this.m.ConditionMax >= 0.250000) && (isPlayer || isLucky || isBlacksmithed || !isPlayer && this.isItemType(this.Const.Items.ItemType.Named) || this.isItemType(this.Const.Items.ItemType.Legendary) || this.Math.rand(1, 100) <= 90))
+		if ((isBlacksmithed || this.m.Condition >= 6) && (isPlayer || this.m.Condition / this.m.ConditionMax >= 0.25) && (isPlayer || isLucky || isBlacksmithed || !isPlayer && this.isItemType(this.Const.Items.ItemType.Named) || this.isItemType(this.Const.Items.ItemType.Legendary) || this.Math.rand(1, 100) <= 90))
 		{
 			return true;
 		}
@@ -205,11 +205,11 @@ this.shield <- this.inherit("scripts/items/item", {
 
 		if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInShields)
 		{
-			_damage = this.Math.max(1, this.Math.ceil(_damage * 0.500000));
+			_damage = this.Math.max(1, this.Math.ceil(_damage * 0.5));
 		}
 
 		local Condition = this.m.Condition;
-		Condition = this.Math.maxf(0.000000, this.m.Condition - _damage);
+		Condition = this.Math.maxf(0.0, this.m.Condition - _damage);
 
 		if (Condition == 0)
 		{
@@ -272,7 +272,7 @@ this.shield <- this.inherit("scripts/items/item", {
 			if (_playHitSound && this.m.SoundOnHit.len() != 0)
 			{
 				this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, this.getContainer().getActor().getPos());
-				this.Sound.play(this.m.SoundOnDestroyed[this.Math.rand(0, this.m.SoundOnDestroyed.len() - 1)], this.Const.Sound.Volume.Skill * 0.330000, this.getContainer().getActor().getPos());
+				this.Sound.play(this.m.SoundOnDestroyed[this.Math.rand(0, this.m.SoundOnDestroyed.len() - 1)], this.Const.Sound.Volume.Skill * 0.33, this.getContainer().getActor().getPos());
 			}
 
 			if (this.m.ShowOnCharacter)
@@ -283,7 +283,7 @@ this.shield <- this.inherit("scripts/items/item", {
 				{
 					app.Shield = "";
 				}
-				else if (this.m.Condition / (this.m.ConditionMax * 1.000000) <= this.Const.Combat.ShowDamagedShieldThreshold)
+				else if (this.m.Condition / (this.m.ConditionMax * 1.0) <= this.Const.Combat.ShowDamagedShieldThreshold)
 				{
 					app.Shield = this.m.SpriteDamaged;
 				}
@@ -397,11 +397,11 @@ this.shield <- this.inherit("scripts/items/item", {
 			return;
 		}
 
-		local mult = 1.000000;
+		local mult = 1.0;
 
 		if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInShields)
 		{
-			mult = 1.250000;
+			mult = 1.25;
 		}
 
 		_properties.MeleeDefense += this.Math.floor(this.m.MeleeDefense * mult);

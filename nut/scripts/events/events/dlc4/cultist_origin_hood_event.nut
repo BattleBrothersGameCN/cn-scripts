@@ -6,7 +6,7 @@ this.cultist_origin_hood_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.cultist_origin_hood";
 		this.m.Title = "露营时……";
-		this.m.Cooldown = 15.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 15.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_03.png[/img]{%randomcultist%，你的一个追随者，进入你的帐篷，然后很快的离开了。 你站起来想看看他去哪儿了，却发现你的桌子上放着一顶皮头盔。 这种皮革是用来历不明的毛发缝制而成，然后用看似钩子和指甲的东西把它们夹在一起。 头盔上的洞是漆黑一片，你能感觉到即使你把它们填满，黑暗也永远不会消失。 然后，盯着头盔上那些空槽，你知道有什么东西在盯着你。你赞许地点头。}",

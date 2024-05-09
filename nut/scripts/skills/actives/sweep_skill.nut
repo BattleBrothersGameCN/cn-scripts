@@ -35,7 +35,7 @@ this.sweep_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
 		this.m.HitChanceBonus = 0;
-		this.m.DirectDamageMult = 0.400000;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 20;
 		this.m.MinRange = 1;
@@ -141,10 +141,10 @@ this.sweep_skill <- this.inherit("scripts/skills/skill", {
 					HitInfo = clone this.Const.Tactical.HitInfo
 				};
 				tag.HitInfo.DamageRegular = damage;
-				tag.HitInfo.DamageDirect = 1.000000;
+				tag.HitInfo.DamageDirect = 1.0;
 				tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-				tag.HitInfo.BodyDamageMult = 1.000000;
-				tag.HitInfo.FatalityChanceMult = 1.000000;
+				tag.HitInfo.BodyDamageMult = 1.0;
+				tag.HitInfo.FatalityChanceMult = 1.0;
 				this.Tactical.getNavigator().teleport(_target, knockToTile, this.onKnockedDown, tag, true);
 			}
 		}
@@ -272,7 +272,7 @@ this.sweep_skill <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.DamageRegularMin += 40;
 		_properties.DamageRegularMax += 80;
-		_properties.DamageArmorMult *= 0.800000;
+		_properties.DamageArmorMult *= 0.8;
 	}
 
 });

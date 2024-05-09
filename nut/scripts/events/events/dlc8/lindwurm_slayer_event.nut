@@ -7,7 +7,7 @@ this.lindwurm_slayer_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.crisis.lindwurm_slayer";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 999999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_35.png[/img]{你正在%townname%的舒适小酒馆里喝酒。不出意料，这样的舒适没能持续多久，一个人佩戴着喧哗的铠甲闯进了这个地方。你不慎看向他，对上了他的目光。他随即向你走来。你叹了口气，将另一只手放在剑柄上，等待着可能发生的事情。那人跺着脚走到你的桌子前，挺直了身子。%SPEECH_ON%让我介绍一下自己，以防传说和神话还没把我归到所在。我是%dragonslayer%。在这个世界上，我的使命是猎杀并消灭龙。%SPEECH_OFF%你喝了一口酒，放下杯子，告诉那个人龙并不存在。他咧嘴笑了。%SPEECH_ON%那是因为我父亲已经杀死了所有的龙。事实上，我是一名猎杀林德蠕龙的杀手，而我听说你是%companyname%的队长，该队伍有着一定的声望，几乎和我一样有名。不如我们合并技能和才华，怎么样？我愿意以%price%个克朗的价格加入你们。%SPEECH_OFF%}",

@@ -3,15 +3,15 @@ this.world_entity <- {
 		Name = "",
 		Description = "",
 		VisionRadius = this.Const.World.Settings.Vision,
-		VisibilityMult = 1.000000,
+		VisibilityMult = 1.0,
 		CombatID = 0,
 		CombatSeed = 0,
 		OnCombatWithPlayerCallback = null,
 		Troops = [],
-		Strength = 0.000000,
+		Strength = 0.0,
 		Flags = null,
 		Inventory = [],
-		LootScale = 1.000000,
+		LootScale = 1.0,
 		IsAlive = true,
 		IsDirty = false,
 		IsAttackable = false,
@@ -351,7 +351,7 @@ this.world_entity <- {
 				}
 				else
 				{
-					local num = this.Const.Strings.EngageEnemyNumbers[this.Math.max(0, this.Math.floor(this.Math.minf(1.000000, entityTypes[i] / 14.000000) * (this.Const.Strings.EngageEnemyNumbers.len() - 1)))];
+					local num = this.Const.Strings.EngageEnemyNumbers[this.Math.max(0, this.Math.floor(this.Math.minf(1.0, entityTypes[i] / 14.0) * (this.Const.Strings.EngageEnemyNumbers.len() - 1)))];
 					entities.push({
 						id = 20,
 						type = "text",
@@ -448,33 +448,33 @@ this.world_entity <- {
 		}
 
 		local p = this.World.State.getPlayer() != null ? this.World.State.getPlayer().getStrength() : 33;
-		local s = p / (v * 1.000000);
+		local s = p / (v * 1.0);
 
-		if (s >= 0.850000 && s <= 1.150000)
+		if (s >= 0.85 && s <= 1.15)
 		{
 			return "势均力敌";
 		}
-		else if (s >= 0.700000 && s < 0.850000)
+		else if (s >= 0.7 && s < 0.85)
 		{
 			return "具有挑战性的";
 		}
-		else if (s >= 0.500000 && s < 0.700000)
+		else if (s >= 0.5 && s < 0.7)
 		{
 			return "致命";
 		}
-		else if (s < 0.500000)
+		else if (s < 0.5)
 		{
 			return "不可能";
 		}
-		else if (s >= 1.150000 && s <= 1.300000)
+		else if (s >= 1.15 && s <= 1.3)
 		{
 			return "稍弱";
 		}
-		else if (s >= 1.300000 && s <= 1.500000)
+		else if (s >= 1.3 && s <= 1.5)
 		{
 			return "较弱";
 		}
-		else if (s > 1.500000)
+		else if (s > 1.5)
 		{
 			return "弱小的";
 		}
@@ -612,7 +612,7 @@ this.world_entity <- {
 		if (this.Const.World.AI.VisionDebugMode)
 		{
 			local debug_vision = this.getSprite("debug_vision");
-			debug_vision.Scale = this.getVisionRadius() / 100.000000;
+			debug_vision.Scale = this.getVisionRadius() / 100.0;
 		}
 	}
 
@@ -678,7 +678,7 @@ this.world_entity <- {
 		{
 			local debug_vision = this.addSprite("debug_vision");
 			debug_vision.setBrush("debug_circle_100");
-			debug_vision.Scale = this.m.VisionRadius / 100.000000;
+			debug_vision.Scale = this.m.VisionRadius / 100.0;
 			debug_vision.Visible = false;
 		}
 

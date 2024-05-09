@@ -10,7 +10,7 @@ this.strange_scribe_event <- this.inherit("scripts/events/event", {
 	{
 		this.m.ID = "event.strange_scribe";
 		this.m.Title = "在途中……";
-		this.m.Cooldown = 9999.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
 			Text = "[img]gfx/ui/events/event_31.png[/img]{当你在%townname%的时候，你被一个你在当地贵族周围看到的人拦住了。他穿着一件黑色的斗篷，深深地把脸藏在兜帽里。他很可疑。自然，%anatomist%解剖学家把他视为科学观察对象之一。那人鞠躬致意。%SPEECH_ON%我对你的工作非常敬重，%anatomist%。我们读了很多你的论文。%SPEECH_OFF%你把手放在剑上，等着看看会发生什么。那人继续说道。%SPEECH_ON%我们想邀请你一起用餐，深入地讨论身体的重要性问题……%SPEECH_OFF%你走到那人与你之间，问这个“我们”是谁。那人说他是一群研究人体问题的文书和学者中的一员，他们还研究了那些很适应他们野蛮任务性质的生物——即研究世界的怪物。%SPEECH_ON%当然，我们对那些失去自身的人类的野兽也有特别的兴趣……%SPEECH_OFF%由于有这么多的阴谋诡计在蔓延，你并不惊讶解剖学家想跟着这个奇怪的文书去了。}",
@@ -83,7 +83,7 @@ this.strange_scribe_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(0.750000, "学会了如何更好地应对平信徒。");
+				_event.m.Anatomist.improveMood(0.75, "学会了如何更好地应对平信徒。");
 
 				if (_event.m.Anatomist.getMoodState() > this.Const.MoodState.Neutral)
 				{
@@ -218,7 +218,7 @@ this.strange_scribe_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(0.750000, "目击了一起残忍的谋杀案");
+				_event.m.Anatomist.worsenMood(0.75, "目击了一起残忍的谋杀案");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -256,7 +256,7 @@ this.strange_scribe_event <- this.inherit("scripts/events/event", {
 					"weapons/rondel_dagger"
 				];
 				local armor = this.new("scripts/items/" + armors[this.Math.rand(0, armors.len() - 1)]);
-				armor.setCondition(this.Math.max(1, armor.getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+				armor.setCondition(this.Math.max(1, armor.getConditionMax() * this.Math.rand(10, 40) * 0.01));
 				this.World.Assets.getStash().add(armor);
 				this.List.push({
 					id = 10,
@@ -264,7 +264,7 @@ this.strange_scribe_event <- this.inherit("scripts/events/event", {
 					text = "你获得了" + armor.getName()
 				});
 				local weapon = this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]);
-				weapon.setCondition(this.Math.max(1, weapon.getConditionMax() * this.Math.rand(10, 40) * 0.010000));
+				weapon.setCondition(this.Math.max(1, weapon.getConditionMax() * this.Math.rand(10, 40) * 0.01));
 				this.World.Assets.getStash().add(weapon);
 				this.List.push({
 					id = 10,
@@ -294,7 +294,7 @@ this.strange_scribe_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.worsenMood(1.000000, "被剥夺了研究机会");
+				_event.m.Anatomist.worsenMood(1.0, "被剥夺了研究机会");
 
 				if (_event.m.Anatomist.getMoodState() < this.Const.MoodState.Neutral)
 				{

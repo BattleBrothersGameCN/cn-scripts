@@ -4,7 +4,7 @@ this.have_all_provisions_ambition <- this.inherit("scripts/ambitions/ambition", 
 	{
 		this.ambition.create();
 		this.m.ID = "ambition.have_all_provisions";
-		this.m.Duration = 14.000000 * this.World.getTime().SecondsPerDay;
+		this.m.Duration = 14.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "我知道你们已经厌倦了我们日复一日的霉运与陈腐食物。\n我们会从这片大陆上收集各种各样的食物和饮品来举办一场盛宴！";
 		this.m.RewardTooltip = "能大大改善你手下的情绪。";
 		this.m.UIText = "拥有每一种食物类型";
@@ -335,7 +335,7 @@ this.have_all_provisions_ambition <- this.inherit("scripts/ambitions/ambition", 
 
 		foreach( bro in brothers )
 		{
-			bro.improveMood(1.000000, "与战团共度盛宴");
+			bro.improveMood(1.0, "与战团共度盛宴");
 		}
 	}
 
