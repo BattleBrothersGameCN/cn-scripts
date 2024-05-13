@@ -559,7 +559,7 @@ gt.Const.Strings.CityStateNames <- [
 gt.Const.Strings.CityStateTitles <- [
 	"城邦·",
 	"城市·",
-	"保护国·",
+	"藩属国·",
 	"领地·",
 	"大城市·",
 	"自由城·",
@@ -1367,7 +1367,7 @@ gt.Const.Strings.PerkDescription <- {
 	Student = "世上无难事，只怕有心人。在战斗中获得[color=" + this.Const.UI.Color.PositiveValue + "]20%[/color]的额外经验。你的角色等级到十一级时，该特技失效并获得一个额外特技点。\n\n游玩“猎奴者”起源，你的负债者会在角色等级到七级时返还特技点。",
 	Gifted = "当你天生就有天赋时，雇佣兵的生活会变得很容易。立即升级以增加此角色的属性，数值为最大掷骰数，但没有天赋加成。",
 	Zweihander = "所有双手武器技能的疲劳值消耗降低 [color=" + this.Const.UI.Color.NegativeValue + "]-20%[/color].",
-	Pathfinder = "学会在困难的地形上移动。 在所有地形上移动的行动点消耗减少 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color](但每个单元格至少需要 2 个行动点)，疲劳值消耗减少到一半。 改变高度也不再需要消耗额外的行动点。",
+	Pathfinder = "学会在复杂地形上移动。 所有地形上的移动行动点消耗减少 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color](但每个单元格至少需要 2 个行动点)，疲劳值消耗减少到一半。 改变高度也不再需要消耗额外的行动点。",
 	FortifiedMind = "钢铁般的意志不会轻易偏离正道。决心提高[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color].",
 	Captain = "领导战场上的战士, 让每个人都保持斗志。 5 格范围内的盟友将获得该角色的 [color=" + this.Const.UI.Color.PositiveValue + "]15%[/color] 的决心加成，但加成后的最大值不会超过这个角色的决心。\n\n不叠加, 范围内有多个角色具有该特权时, 取最大决心值。",
 	InspiringPresence = "一个伟大的领袖会激励他的追随者去克服他们的极限。除非性格特征禁止，否则盟友会以自信的士气开始每场战斗。",

@@ -285,7 +285,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我相信你会为此付出很多。 | 我们来谈谈价钱。 | 如果报酬合适，一切都可以做。}",
+					Text = "{相信你会给得丰厚。 | 谈谈价钱吧。 | 价钱合适，一切好说。}",
 					function getResult()
 					{
 						return "Negotiation";

@@ -353,7 +353,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{这对你值多少钱？ | %townname% 愿意支付多少？ | 我们来谈谈酬劳。}",
+					Text = "{对你来说值多少？ | %townname%愿意付多少？ | 谈谈报酬吧。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -418,7 +418,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "赶紧结束这件事吧，我们还有克朗要拿。",
+					Text = "赶快完事吧，还有钱等着呢。",
 					function getResult()
 					{
 						return 0;

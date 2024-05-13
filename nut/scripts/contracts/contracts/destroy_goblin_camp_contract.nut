@@ -213,7 +213,7 @@ this.destroy_goblin_camp_contract <- this.inherit("scripts/contracts/contract", 
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{对抗地精可不是件容易的事。 | 我相信你会丰厚地支付报酬。 | 让我们谈钱。}",
+					Text = "{对抗地精可不便宜。 | 相信你会给得丰厚。 | 谈谈价钱吧。}",
 					function getResult()
 					{
 						return "Negotiation";

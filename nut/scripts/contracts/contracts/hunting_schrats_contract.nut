@@ -241,7 +241,7 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{当然感兴趣。 | 我们来谈谈酬劳。 | 我们来谈谈克朗。 | 这需要你花费一些。 | 去森林里捉迷藏？算我一个。 | %companyname% 可以提供帮助，只要价格合适。}",
+					Text = "{当然感兴趣。 | 谈谈报酬吧。 | 让克朗说话。 | 这会花你不少钱。 | 森林里捉迷藏？算我一个。 | %companyname%可以帮忙，只要价钱合适。}",
 					function getResult()
 					{
 						return "Negotiation";

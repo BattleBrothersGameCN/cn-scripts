@@ -1906,7 +1906,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 						if (this.m.StrategicProperties.IsArenaMode)
 						{
-							bro.improveMood(this.Const.MoodChange.BattleWon, "赢了一场竞技场战斗");
+							bro.improveMood(this.Const.MoodChange.BattleWon, "在一场角斗中获胜");
 						}
 						else
 						{

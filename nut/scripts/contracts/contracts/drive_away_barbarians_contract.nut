@@ -244,7 +244,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{你愿意为此出多少克朗？ | %townname%准备为他们的安全付多少？ | 我们来谈谈价钱。}",
+					Text = "{多大的生意？ | %townname%愿拿多少买个安生？ | 谈谈价钱吧。}",
 					function getResult()
 					{
 						return "Negotiation";

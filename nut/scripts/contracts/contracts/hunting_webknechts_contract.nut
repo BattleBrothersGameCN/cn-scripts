@@ -242,7 +242,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{你能拿出多少克朗？ | 我们来谈谈酬劳。 | 我们来谈谈克朗。}",
+					Text = "{你能拿出多少克朗？ | 谈谈报酬吧。 | 让克朗说话。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -307,7 +307,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "赶紧结束这件事吧，我们还有克朗要拿。",
+					Text = "赶快完事吧，还有钱等着呢。",
 					function getResult()
 					{
 						return 0;

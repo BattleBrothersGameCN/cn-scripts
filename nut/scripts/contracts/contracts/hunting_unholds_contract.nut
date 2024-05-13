@@ -239,7 +239,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{与巨人战斗可不便宜。 | 价钱合适，%companyname% 就能帮上忙。 | 我们来谈谈克朗。}",
+					Text = "{与巨人战斗可不便宜。 | %companyname%可以帮忙，只要价钱合适。 | 让克朗说话。}",
 					function getResult()
 					{
 						return "Negotiation";

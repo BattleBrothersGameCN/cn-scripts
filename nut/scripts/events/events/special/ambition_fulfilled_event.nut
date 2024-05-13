@@ -31,7 +31,7 @@ this.ambition_fulfilled_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 75)
 					{
-						bro.improveMood(this.Const.MoodChange.AmbitionFulfilled, "对你的领导能力有了信心");
+						bro.improveMood(this.Const.MoodChange.AmbitionFulfilled, "越发相信你的领导能力");
 					}
 				}
 

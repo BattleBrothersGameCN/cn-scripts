@@ -252,7 +252,7 @@ this.escort_envoy_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈价钱。 | 这对你来说值多少钱？ | 报酬如何？}",
+					Text = "{谈谈价钱吧。 | 对你来说值多少？ | 报酬如何？}",
 					function getResult()
 					{
 						return "Negotiation";

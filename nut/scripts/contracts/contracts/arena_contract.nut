@@ -220,7 +220,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 					"这场战斗将一决生死，你将无法撤退或获得战利品"
 				];
 				this.Contract.m.BulletpointsPayment = [
-					"获胜奖金为" + this.Contract.m.Payment.getOnCompletion() + "克朗"
+					"奖金为" + this.Contract.m.Payment.getOnCompletion() + "克朗"
 				];
 
 				if (this.World.Statistics.getFlags().getAsInt("ArenaRegularFightsWon") > 0 && this.World.Statistics.getFlags().getAsInt("ArenaRegularFightsWon") % 5 == 0)
@@ -779,7 +779,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "{胜利！ | 你不觉得有乐子吗？！ | 杀掉它了！ | 真是血腥十足。}",
+					Text = "{胜利！ | 难道没尽兴吗？！ | 杀掉它了！ | 真是血腥十足。}",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);

@@ -143,7 +143,7 @@ this.holywar_crucified_1_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getEthnicity() == 0 && this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.25, "对你的领导能力有了信心");
+						bro.improveMood(0.25, "越发相信你的领导能力");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

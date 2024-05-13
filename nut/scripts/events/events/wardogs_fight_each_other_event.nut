@@ -39,7 +39,7 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Houndmaster != null)
 				{
 					this.Options.push({
-						Text = "%houndmaster% 你是训犬师，把它处理好了！",
+						Text = "%houndmaster% 你是驯犬师，把它处理好了！",
 						function getResult( _event )
 						{
 							return "I";
@@ -237,7 +237,7 @@ this.wardogs_fight_each_other_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "I",
-			Text = "[img]gfx/ui/events/event_27.png[/img]你就命令驯兽师 %houndmaster% 做点什么阻止它们。 他点头，向前走去，平静地走在两只斗狗之间。 它们互相吠叫，互相攻击，但两狗都停下来看着进来的人。 一只在咆哮，但实际上慢慢坐下。 另一只后退了，它的尾巴拼命地摇着，虽然它任然有怒气。 那驯兽师蹲下来，摸摸狗头。 一只狗低下头，另一只跟着。\n\n 他慢慢地把两只狗拉在一起，先摸了摸鼻子，然后低声对它们说。 慢慢的，不错所料，狗的狂暴因子消失了，它们的温顺的性情似乎更适合看孩子，而不是在一个铁血交织的雇佣兵团战斗。 驯兽师站了起来，狗很高兴地跟着他。他点头。%SPEECH_ON%哈哈，只是狗儿之间的小吵闹。%SPEECH_OFF%他说完就走了，而队伍里的其他人惊掉下巴地看着他，就像是看到一种德鲁伊魔法。",
+			Text = "[img]gfx/ui/events/event_27.png[/img]你就命令驯犬师%houndmaster%做点什么阻止它们。 他点头，向前走去，平静地走在两只斗狗之间。 它们互相吠叫，互相攻击，但两狗都停下来看着进来的人。 一只在咆哮，但实际上慢慢坐下。 另一只后退了，它的尾巴拼命地摇着，虽然它任然有怒气。 那驯犬师蹲下来，摸摸狗头。 一只狗低下头，另一只跟着。\n\n 他慢慢地把两只狗拉在一起，先摸了摸鼻子，然后低声对它们说。 慢慢的，不错所料，狗的狂暴因子消失了，它们的温顺的性情似乎更适合看孩子，而不是在一个铁血交织的雇佣兵团战斗。 驯兽师站了起来，狗很高兴地跟着他。他点头。%SPEECH_ON%哈哈，只是狗儿之间的小吵闹。%SPEECH_OFF%他说完就走了，而队伍里的其他人惊掉下巴地看着他，就像是看到一种德鲁伊魔法。",
 			Image = "",
 			List = [],
 			Characters = [],

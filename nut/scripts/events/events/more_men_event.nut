@@ -96,7 +96,7 @@ this.more_men_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(this.Math.rand(1, 3), "对你的领导能力失去了信心");
+						bro.worsenMood(this.Math.rand(1, 3), "怀疑你的领导能力");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -196,7 +196,7 @@ this.more_men_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 20)
 					{
-						bro.worsenMood(1, "对你的领导能力失去了信心");
+						bro.worsenMood(1, "怀疑你的领导能力");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -274,7 +274,7 @@ this.more_men_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 20)
 					{
-						bro.improveMood(1.0, "对你的领导能力有了信心");
+						bro.improveMood(1.0, "越发相信你的领导能力");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

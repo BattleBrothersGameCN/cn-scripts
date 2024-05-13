@@ -217,7 +217,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 					this.Contract.m.BulletpointsObjectives.push("猎杀树人和林德蠕龙");
 				}
 
-				this.Contract.m.BulletpointsObjectives.push("在 %worldmapregion% 的%regiontype% 区域周围或其他地区猎杀目标");
+				this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype%区域或其他地区猎杀目标");
 				this.Contract.m.BulletpointsObjectives.push("随时返回 %townname% 领取报酬");
 
 				if (this.Contract.m.Size == 0)
@@ -293,16 +293,16 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 					}
 					else
 					{
-						this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype% 区域猎杀恐狼、蛛魔、食尸鬼、鬣狗和大蛇(%killcount%/%maxcount%)");
+						this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype%区域猎杀恐狼、蛛魔、食尸鬼、鬣狗和大蛇(%killcount%/%maxcount%)");
 					}
 				}
 				else if (this.Contract.m.Size == 1)
 				{
-					this.Contract.m.BulletpointsObjectives.push("在 %worldmapregion%的 %regiontype% 区域猎杀梦魇、巨魔和女巫 (%killcount%/%maxcount%)");
+					this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype%区域猎杀梦魇、巨魔和女巫(%killcount%/%maxcount%)");
 				}
 				else
 				{
-					this.Contract.m.BulletpointsObjectives.push("在 %worldmapregion% 的 %regiontype% 区域猎杀树人和林德蠕龙  (%killcount%/%maxcount%)");
+					this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype%区域猎杀树人和林德蠕龙(%killcount%/%maxcount%)");
 				}
 
 				this.Contract.m.BulletpointsObjectives.push("随时返回 %townname% 领取报酬");
@@ -390,7 +390,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈多少克朗？ | 我需要更合适的价格。 | 继续。 | 你的臣民的安全对你来说值多少钱？}",
+					Text = "{多大的生意？ | 只要价钱合适。 | 继续。 | 你臣民的安全值多少？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -422,7 +422,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈多少克朗？ | 我需要更合适的价格。 | 继续。 | 你的臣民的安全对你来说值多少钱？}",
+					Text = "{多大的生意？ | 只要价钱合适。 | 继续。 | 你臣民的安全值多少？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -454,7 +454,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈多少克朗？ | 这可不是一件小事。 | 我需要更合适的价格。 | 像这样的工作需要更高的报酬。 | 你的臣民的安全对你来说值多少钱？}",
+					Text = "{多大的生意？ | 这可不是件小事。 | 只要价钱合适。 | 这恐怕要多花点。 | 你臣民的安全值多少？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -507,7 +507,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 				});
 			}
 
@@ -543,7 +543,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 				});
 			}
 
@@ -579,7 +579,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 				});
 			}
 

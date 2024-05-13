@@ -249,7 +249,7 @@ this.roaming_beasts_desert_contract <- this.inherit("scripts/contracts/contract"
 			List = [],
 			Options = [
 				{
-					Text = "赶紧结束这件事吧，我们还有克朗要拿。",
+					Text = "赶快完事吧，还有钱等着呢。",
 					function getResult()
 					{
 						return 0;

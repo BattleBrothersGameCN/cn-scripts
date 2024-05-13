@@ -396,7 +396,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{%townname%为了他们的安全准备好支付多少报酬？ | 这应该对你来说值不少克朗，对吧？ | 对抗绿皮族可不便宜。}",
+					Text = "{%townname%愿拿多少买个安生？ | 对你来说值不少钱，对吧? | 对抗绿皮可不便宜。}",
 					function getResult()
 					{
 						return "Negotiation";

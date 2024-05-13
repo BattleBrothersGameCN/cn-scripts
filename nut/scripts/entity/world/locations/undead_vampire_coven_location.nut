@@ -2,7 +2,7 @@ this.undead_vampire_coven_location <- this.inherit("scripts/entity/world/locatio
 	m = {},
 	function getDescription()
 	{
-		return "这个古老的地方隐藏了几个世纪，成为一群食肉动物的避风港。";
+		return "这个古老的地方隐藏了几个世纪，成了一群吸血动物的避风港。";
 	}
 
 	function create()

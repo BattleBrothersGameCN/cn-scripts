@@ -47,7 +47,7 @@ this.ratcatcher_catches_food_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getBackground().isNoble())
 					{
-						bro.worsenMood(1.0, "对你的领导能力失去了信心");
+						bro.worsenMood(1.0, "怀疑你的领导能力");
 						bro.worsenMood(2.0, "拿老鼠肉当饭吃");
 						this.List.push({
 							id = 10,

@@ -1012,7 +1012,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Victory",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_168.png[/img]{最后一个南方士兵仰着头看着你。%SPEECH_ON%以镀金者的光辉为名，我欣然赴死。%SPEECH_OFF%你拔出剑。%SPEECH_ON%我活着，你死了，还管什么光辉不光辉的。%SPEECH_OFF%没等他回答，你就用剑刺穿了他的脖子。你让雇佣兵打扫战场，准备向%employer%复命。 | 你找到了最后一个南方士兵，他斜靠在石头上，手臂搭在顶部，仿佛那是他的好伙伴。他吐出一口血，点了点头。%SPEECH_ON%或许我的路并没有那么有希望。%SPEECH_OFF%你回点头告诉他，他马上就可以向Gilder自己询问。%SPEECH_ON%关于你，我也会问问他。%SPEECH_OFF%他回答道。你停顿了一会儿，然后用剑刺穿了他的身体。剩余的尸体需要被抢夺。%employer%肯定会很高兴见到你。 | 战斗结束，死者满地。你站在最后一个有呼吸的南方人身上。他目光呆滞地望着天空。当你问他是否认为他的“Gilder”在看着时，这个人微笑了。%SPEECH_ON%他正看着我们俩。%SPEECH_OFF%你点了点头，然后结束了他的生命。你发出一个尖锐的口哨，得到了%companyname%的注意。你的命令很简单：抢掠值钱的东西，然后准备返回%employer%。}",
+			Text = "[img]gfx/ui/events/event_168.png[/img]{最后一个南方士兵仰着头看着你。%SPEECH_ON%以镀金者的光辉为名，我欣然赴死。%SPEECH_OFF%你拔出剑。%SPEECH_ON%我在阳间，你在阴间，哪还有什么光辉不光辉的。%SPEECH_OFF%没等他回答，你就用剑刺穿了他的脖子。你让雇佣兵打扫战场，准备向%employer%复命。 | 你找到了最后一个南方士兵，他斜靠着石头，手臂搭在石头顶上，就像和酒友勾肩搭背。他吐出一口血，点了点头。%SPEECH_ON%或许我的路并没被镀金者祝福。%SPEECH_OFF%你点头回去，告诉他，他马上就能亲自问问镀金者了。%SPEECH_ON%我也会问问他你的。%SPEECH_OFF%他回答道。你听后顿了顿，用剑刺穿了他的身体。别的尸体还等着被搜刮呢。%employer%肯定很乐意见到你。 | 战斗结束，死者满地。你站在最后一个还有气儿的南方人身边。他目光呆滞地望着天空。你问他镀金者是不是正在看着，他笑了。%SPEECH_ON%他看着我，也看着你。%SPEECH_OFF%你点了点头，结束了他的生命。你用一声口哨让%companyname%全体注意。你的命令很简单：搜刮值钱的东西，准备向%employer%复命。}",
 			Image = "",
 			Characters = [],
 			List = [],

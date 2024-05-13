@@ -74,12 +74,12 @@ gt.Const.Contracts.NegotiationDefault <- [
 
 					if (this.Contract.m.Payment.Advance != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("获得 " + this.Contract.m.Payment.getInAdvance() + " 克朗预付款");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getInAdvance() + "克朗作为预付");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("获得 " + this.Contract.m.Payment.getOnCompletion() + " 克朗于合同完成之后");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
 					}
 
 					return "Overview";
@@ -264,17 +264,17 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 					if (this.Contract.m.Payment.Advance != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("获得 " + this.Contract.m.Payment.getInAdvance() + " 克朗预付款");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getInAdvance() + "克朗作为预付");
 					}
 
 					if (this.Contract.m.Payment.Count != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("获得 " + this.Contract.m.Payment.getPerCount() + " 克朗（每带回一个人头），人数最多为 " + this.Contract.m.Payment.MaxCount + " ");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + " 克朗（每带回一个人头），人数最多为 " + this.Contract.m.Payment.MaxCount + " ");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("获得 " + this.Contract.m.Payment.getOnCompletion() + " 克朗于合同完成之后");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
 					}
 
 					return "Overview";
@@ -547,17 +547,17 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 					if (this.Contract.m.Payment.Advance != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("获得 " + this.Contract.m.Payment.getInAdvance() + " 克朗预付款");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getInAdvance() + "克朗作为预付");
 					}
 
 					if (this.Contract.m.Payment.Count != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("获得 " + this.Contract.m.Payment.getPerCount() + " 克朗（到达时每取得一个人头），人数最多为 " + this.Contract.m.Payment.MaxCount + " ");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + " 克朗（到达时每取得一个人头），人数最多为 " + this.Contract.m.Payment.MaxCount + " ");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("获得 " + this.Contract.m.Payment.getOnCompletion() + " 克朗于合同完成之后");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
 					}
 
 					return "Overview";

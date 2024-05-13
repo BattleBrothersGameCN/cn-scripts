@@ -409,7 +409,7 @@ this.defend_settlement_bandits_contract <- this.inherit("scripts/contracts/contr
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{%townname%为了他们的安全准备好付出多少代价？ | 这对你来说应该值不少克朗，对吧?}",
+					Text = "{%townname%愿拿多少买个安生？ | 对你来说值不少钱，对吧?}",
 					function getResult()
 					{
 						return "Negotiation";

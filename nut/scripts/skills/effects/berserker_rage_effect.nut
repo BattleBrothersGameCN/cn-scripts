@@ -6,7 +6,7 @@ this.berserker_rage_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.berserker_rage";
-		this.m.Name = "愤怒";
+		this.m.Name = "狂怒";
 		this.m.Icon = "skills/status_effect_34.png";
 		this.m.IconMini = "status_effect_34_mini";
 		this.m.Overlay = "status_effect_34";

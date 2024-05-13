@@ -30,7 +30,7 @@ this.minstrel_background <- this.inherit("scripts/skills/backgrounds/character_b
 			"吟游诗人(the Minstrel)",
 			"说书人(the Skjald)",
 			"诗人(the Poet)",
-			"歌鸟(Songbird)",
+			"百灵鸟",
 			"巡回演者(the Troubadour)",
 			"歌者(the Chorine)",
 			"情人(the Lover)",

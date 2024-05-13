@@ -274,7 +274,7 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我相信你会为此付出很多。 | 如果报酬合适，一切都可以做。 | 用叮当作响的硬币说服我。}",
+					Text = "{相信你会给得丰厚。 | 价钱合适，一切好说。 | 有钱能使鬼推磨。}",
 					function getResult()
 					{
 						return "Negotiation";

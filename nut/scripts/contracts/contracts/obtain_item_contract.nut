@@ -253,7 +253,7 @@ this.obtain_item_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{你来找我们是对的。 我们来谈谈报酬。 | 我们来谈谈价钱。 | 听起来很简单。 多少报酬？}",
+					Text = "{找我们准没错。谈谈报酬吧。 | 谈谈价钱吧。 | 听起来很简单。报酬如何？}",
 					function getResult()
 					{
 						return "Negotiation";
