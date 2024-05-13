@@ -1227,7 +1227,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天. 你的 [color=" + this.Const.UI.Color.PositiveValue + "]" + food + "[/color]口粮能够供应您[color=" + this.Const.UI.Color.PositiveValue + "]" + time + "[/color] 天最多。记住，某些食物最终会变质！"
+							text = "你携带的食物总量。一般人每天需要2份食物，复杂地形上的需求量更大。你的人会先食用最接近过期的食物。食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你每天消耗[color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color]点食物。你的[color=" + this.Const.UI.Color.PositiveValue + "]" + food + "[/color]点食物能够供您食用至多[color=" + this.Const.UI.Color.PositiveValue + "]" + time + "[/color]天。记住，一批食物早晚会变质！"
 						}
 					];
 				}
@@ -1242,7 +1242,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你快要没有足够的食物养活你的人了！ 尽快购买新的食物，否则你的人会在饿死之前一个接一个地抛弃你！[/color]"
+							text = "你携带的食物总量。一般人每天需要2份食物，复杂地形上的需求量更大。你的人会先食用最接近过期的食物。食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你每天消耗[color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color]点食物。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你快要没有足够的食物养活你的人了！ 尽快购买新的食物，否则你的人会在饿死之前一个接一个地抛弃你！[/color]"
 						}
 					];
 				}
@@ -1257,7 +1257,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你携带的食物总量。 一般人每天需要2份食物，在困难的地形上需要更多。 你的人会先食用最接近过期的食物。 食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你消耗 [color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color] 补给每天。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你没有足够的食物来养活你的人！ 尽快购买新的食物，否则你的人会在饿死之前一个接一个地抛弃你！[/color]"
+							text = "你携带的食物总量。一般人每天需要2份食物，复杂地形上的需求量更大。你的人会先食用最接近过期的食物。食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你每天消耗[color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color]点食物。\n\n[color=" + this.Const.UI.Color.NegativeValue + "]你没有足够的食物来养活你的人！ 尽快购买新的食物，否则你的人会在饿死之前一个接一个地抛弃你！[/color]"
 						}
 					];
 				}
@@ -3482,12 +3482,12 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "训犬屋"
+						text = "驯犬屋"
 					},
 					{
 						id = 2,
 						type = "description",
-						text = "一间训犬屋，为战争繁殖和训练强壮而敏捷的战犬。"
+						text = "一间驯犬屋，为战争繁殖和训练强壮而敏捷的战犬。"
 					}
 				];
 

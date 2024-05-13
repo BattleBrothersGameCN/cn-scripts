@@ -49,7 +49,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"击退负债者的起义在 %location% 附近是 %townname%"
+					"镇压%townname%%location%的负债者起义"
 				];
 				this.Contract.setScreen("Task");
 			}
@@ -88,7 +88,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"击退负债者的起义在 %location% 附近是 %townname%"
+					"镇压%townname%%location%的负债者起义"
 				];
 				this.Contract.m.Destination.getSprite("selection").Visible = true;
 				this.Contract.m.Destination.setOnEnterCallback(this.onDestinationEntered.bindenv(this));

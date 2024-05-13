@@ -304,7 +304,7 @@ this.investigate_cemetery_contract <- this.inherit("scripts/contracts/contract",
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "我们来谈谈价钱。",
+					Text = "谈谈价钱吧。",
 					function getResult()
 					{
 						return "Negotiation";

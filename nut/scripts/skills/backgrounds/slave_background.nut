@@ -22,7 +22,7 @@ this.slave_background <- this.inherit("scripts/skills/backgrounds/character_back
 			"负债者(the Indebted)",
 			"负债者(the Indebted)",
 			"不自由者(the Unfree)",
-			"被监禁者(The Restrained)",
+			"受监者",
 			"受铐者(the Shackled)",
 			"被缚者(the Bound)"
 		];

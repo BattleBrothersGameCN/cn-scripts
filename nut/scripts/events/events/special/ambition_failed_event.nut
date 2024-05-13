@@ -31,7 +31,7 @@ this.ambition_failed_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(this.Const.MoodChange.AmbitionFailed, "对你的领导能力失去了信心");
+						bro.worsenMood(this.Const.MoodChange.AmbitionFailed, "怀疑你的领导能力");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

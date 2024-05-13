@@ -39,7 +39,7 @@ this.rangers_intro_event <- this.inherit("scripts/events/event", {
 
 	function onPrepare()
 	{
-		this.m.Title = "偷猎者团队";
+		this.m.Title = "偷猎团";
 	}
 
 	function onPrepareVariables( _vars )

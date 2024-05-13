@@ -348,12 +348,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 
 				if (this.Contract.m.Payment.Advance != 0)
 				{
-					this.Contract.m.BulletpointsPayment.push("得到" + this.Contract.m.Payment.getInAdvance() + " 克朗预付款");
+					this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getInAdvance() + "克朗作为预付");
 				}
 
 				if (this.Contract.m.Payment.Completion != 0)
 				{
-					this.Contract.m.BulletpointsPayment.push("得到" + this.Contract.m.Payment.getOnCompletion() + " 克朗于合同完成之后");
+					this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
 				}
 
 				this.Contract.m.Home.getSprite("selection").Visible = true;
@@ -386,7 +386,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{如果报酬合适，我们可以猎杀他们。 | 和绿皮作战可不便宜。 | 我们来谈谈克朗。}",
+					Text = "{我们猎杀他们，只要价钱合适。 | 对抗绿皮可不便宜。 | 让克朗说话。}",
 					function getResult()
 					{
 						return "Negotiation";

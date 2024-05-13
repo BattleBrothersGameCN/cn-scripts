@@ -32,7 +32,7 @@ this.ratcatcher_spreads_disease_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_food.png",
-						text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + food + "[/color] 军粮"
+						text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + food + "[/color]点食物"
 					}
 				];
 				local brothers = this.World.getPlayerRoster().getAll();

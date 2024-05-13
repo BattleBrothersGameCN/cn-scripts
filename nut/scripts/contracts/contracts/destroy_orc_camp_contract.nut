@@ -251,7 +251,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{对抗兽人可不便宜。 | 我相信你会丰厚支付。 | 谈谈钱。}",
+					Text = "{对抗兽人可不便宜。 | 相信你会给得丰厚。 | 谈谈价钱吧。}",
 					function getResult()
 					{
 						return "Negotiation";

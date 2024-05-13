@@ -61,7 +61,7 @@ this.combat_drill_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "向我展示下你能干什么！",
+					Text = "拿出你的真本事！",
 					function getResult( _event )
 					{
 						return "B2";

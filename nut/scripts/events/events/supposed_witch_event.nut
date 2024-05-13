@@ -16,7 +16,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "让我们释放她。",
+					Text = "把她放了。",
 					function getResult( _event )
 					{
 						if (this.Math.rand(1, 100) <= 80)
@@ -166,7 +166,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 				{
 					if (this.Math.rand(1, 100) <= 25 || bro.getBackground().getID() == "background.witchhunter" || bro.getBackground().getID() == "background.monk" || bro.getSkills().hasSkill("trait.superstitious") || bro.getSkills().hasSkill("trait.mad"))
 					{
-						bro.worsenMood(1.0, "你释放了一个邪灵");
+						bro.worsenMood(1.0, "你放走了一个邪灵");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
@@ -363,7 +363,7 @@ this.supposed_witch_event <- this.inherit("scripts/events/event", {
 					}
 					else if (bro.getBackground().getID() == "background.witchhunter" || bro.getBackground().getID() == "background.monk" || bro.getSkills().hasSkill("trait.superstitious"))
 					{
-						bro.worsenMood(1.0, _event.m.Cultist.getName() + " 释放了一个女巫");
+						bro.worsenMood(1.0, _event.m.Cultist.getName() + "放走了一名女巫");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

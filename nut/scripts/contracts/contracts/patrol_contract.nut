@@ -1007,7 +1007,7 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 				}
 				else
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "盗匪猎人", false, this.Const.World.Spawn.BanditRoamers, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "强盗猎人", false, this.Const.World.Spawn.BanditRoamers, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult());
 				}
 
 				party.setDescription("一支粗暴而强悍的强盗队伍在捕食弱者。");

@@ -854,11 +854,11 @@ this.asset_manager <- {
 				{
 					if (bro.getSkills().hasSkill("trait.greedy"))
 					{
-						bro.worsenMood(this.Const.MoodChange.NotPaidGreedy, "没有得到工资");
+						bro.worsenMood(this.Const.MoodChange.NotPaidGreedy, "没拿到工钱");
 					}
 					else
 					{
-						bro.worsenMood(this.Const.MoodChange.NotPaid, "没有得到工资");
+						bro.worsenMood(this.Const.MoodChange.NotPaid, "没拿到工钱");
 					}
 				}
 
@@ -866,15 +866,15 @@ this.asset_manager <- {
 				{
 					if (bro.getSkills().hasSkill("trait.spartan"))
 					{
-						bro.worsenMood(this.Const.MoodChange.NotEatenSpartan, "总挨饿");
+						bro.worsenMood(this.Const.MoodChange.NotEatenSpartan, "实在是饿了");
 					}
 					else if (bro.getSkills().hasSkill("trait.gluttonous"))
 					{
-						bro.worsenMood(this.Const.MoodChange.NotEatenGluttonous, "总挨饿");
+						bro.worsenMood(this.Const.MoodChange.NotEatenGluttonous, "实在是饿了");
 					}
 					else
 					{
-						bro.worsenMood(this.Const.MoodChange.NotEaten, "总挨饿");
+						bro.worsenMood(this.Const.MoodChange.NotEaten, "实在是饿了");
 					}
 				}
 
@@ -1017,7 +1017,7 @@ this.asset_manager <- {
 
 					if (town != null && bro.getMoodState() <= this.Const.MoodState.Neutral)
 					{
-						bro.improveMood(this.Const.MoodChange.NearCity, "喜欢访问" + town.getName());
+						bro.improveMood(this.Const.MoodChange.NearCity, "乐于造访" + town.getName());
 					}
 				}
 			}

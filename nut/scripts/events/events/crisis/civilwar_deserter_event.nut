@@ -15,7 +15,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "放了那个人！",
+					Text = "把他放了！",
 					function getResult( _event )
 					{
 						local roster = this.World.getTemporaryRoster();

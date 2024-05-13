@@ -284,7 +284,7 @@ this.raze_attached_location_contract <- this.inherit("scripts/contracts/contract
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈价钱。 | 你愿意为此出多少克朗？ | 报酬如何？ | 只要价钱合适，什么都办得到。}",
+					Text = "{谈谈价钱吧。 | 多大的生意？ | 报酬如何？ | 价钱合适，一切好说。}",
 					function getResult()
 					{
 						return "Negotiation";

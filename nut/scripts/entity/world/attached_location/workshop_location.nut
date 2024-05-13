@@ -5,7 +5,7 @@ this.workshop_location <- this.inherit("scripts/entity/world/attached_location",
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "作坊";
+		this.m.Name = "工坊";
 		this.m.ID = "attached_location.workshop";
 		this.m.Description = "这家工坊精于制造用于维持马车和机器运转的各类工具和耗材。";
 		this.m.Sprite = "world_workshop_01";

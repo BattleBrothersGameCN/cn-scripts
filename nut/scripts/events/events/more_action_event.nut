@@ -88,7 +88,7 @@ this.more_action_event <- this.inherit("scripts/events/event", {
 				{
 					if (bro.getBackground().isCombatBackground() && this.Math.rand(1, 100) <= 50)
 					{
-						bro.worsenMood(1.0, "对你的领导能力失去了信心");
+						bro.worsenMood(1.0, "怀疑你的领导能力");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

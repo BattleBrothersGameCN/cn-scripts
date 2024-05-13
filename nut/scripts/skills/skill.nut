@@ -1029,7 +1029,7 @@ this.skill <- {
 		{
 			ret.push({
 				icon = "ui/tooltips/positive.png",
-				text = "恶劣地形上的目标"
+				text = "目标位于恶劣地形"
 			});
 		}
 
@@ -1089,7 +1089,7 @@ this.skill <- {
 		{
 			ret.push({
 				icon = "ui/tooltips/negative.png",
-				text = "处于恶劣地形"
+				text = "位于恶劣地形"
 			});
 		}
 

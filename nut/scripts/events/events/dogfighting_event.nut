@@ -11,7 +11,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%townImage%%doghandler% 请求你让 %wardog% 参加本地的斗狗比赛。 这听起来是个糟糕的主意，但是这个人继续解释说斗狗可以赚很多钱。 驯兽师所需要的只是二百克朗的赌注。",
+			Text = "%townImage%%doghandler% 请求你让 %wardog% 参加本地的斗狗比赛。 这听起来是个糟糕的主意，但是这个人继续解释说斗狗可以赚很多钱。他只需要二百克朗的赌注。",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -284,7 +284,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "J",
-			Text = "[img]gfx/ui/events/event_20.png[/img]你把你的投注票扔进了泥土里。%SPEECH_ON%操他妈的。%SPEECH_OFF%你飞快地一跃跳过栅栏，跑进了竞技场。%doghandler% 就跟在你的后面。 两只狗还在打架，但你一脚踢过去就把它们分开了。 这个训犬师迅速抓住 %wardog%，把它从危险中拉了出来。 人群中嘘声四起，瓶子和玻璃杯纷纷飞了进来。 一个人吹一声口哨，让他们都安静下来。 他步入竞技场。%SPEECH_ON%这些人花钱是为了看血腥。 如果你不打算给他们，那么你最好找到另一种支付方式。 二百克朗怎么样？ 或者你直接把狗放回去。%SPEECH_OFF%人们正掰着指关节，拿出刀子，铁链和其他粗糙的武器。",
+			Text = "[img]gfx/ui/events/event_20.png[/img]你把你的投注票扔进了泥土里。%SPEECH_ON%操他妈的。%SPEECH_OFF%你飞快地一跃跳过栅栏，跑进了竞技场。%doghandler% 就跟在你的后面。 两只狗还在打架，但你一脚踢过去就把它们分开了。 驯犬师迅速抓住 %wardog%，把它从危险中拉了出来。 人群中嘘声四起，瓶子和玻璃杯纷纷飞了进来。 一个人吹一声口哨，让他们都安静下来。 他步入竞技场。%SPEECH_ON%这些人花钱是为了看血腥。 如果你不打算给他们，那么你最好找到另一种支付方式。 二百克朗怎么样？ 或者你直接把狗放回去。%SPEECH_OFF%人们正掰着指关节，拿出刀子，铁链和其他粗糙的武器。",
 			Image = "",
 			List = [],
 			Characters = [],

@@ -292,7 +292,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{听起来挺简单。 | 我们来谈谈克朗。}",
+					Text = "{听起来挺简单。 | 让克朗说话。}",
 					function getResult()
 					{
 						return "Negotiation";

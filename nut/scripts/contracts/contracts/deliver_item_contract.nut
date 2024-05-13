@@ -364,7 +364,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈价钱。 | 你愿意为此出多少克朗？}",
+					Text = "{谈谈价钱吧。 | 多大的生意？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -396,7 +396,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈价钱。 | 你愿意为此出多少克朗？}",
+					Text = "{谈谈价钱吧。 | 多大的生意？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -773,7 +773,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success2",
 			Title = "在 %objective%",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{%SPEECH_START%啊，逐币者。%SPEECH_OFF%一个声音从附近的小巷传来。通常情况下这意味着你会失去一些钱，但却发现是有个人打算给你钱。%SPEECH_ON%我是%recipient%，那个包裹是我的。替我向%employer%问好，或者不问，我无所谓。%SPEECH_OFF%这个人窃窃私语，就像他来时一样快地离去了。 | %recipient%是个矮个子，像拿着你带给他的大箱子那么重的东西一样，拿着维齐尔的纹章和徽记。%SPEECH_ON%我给过维齐尔许多，但他是怎么报答我的？逐币者的汗。让镀金者看到这个人的未来的时候眨一眨眼吧。%SPEECH_OFF%你对此一言不发，一部分原因是，你考虑这可能是一个考验，看看你是否会同意他的话，把自己变成那个威严的维齐尔的敌人。这个男人盯着你看了一会儿，耸了耸肩，继续说道。%SPEECH_ON%你的钱已经准备好了，都数过了，如果你想自己数一数，我不会介意。啊，我看你已经在数了。很好，全都在这儿对吧。快走吧，小逐币者。%SPEECH_OFF% | %recipient%正在指挥一群孩子。他很快就选中你，教育他们要好好学习，否则他们就会像你一样。孩子们被解散之后，这个男人带着一袋克朗走了过来。%SPEECH_ON%我的人告诉我，你已经到了，而且材料完好无损。这是付给你的，逐币者。%SPEECH_OFF% | 你进入%recipient%的家，放下的包裹被仆人带走。%recipient%坐在一张看着就很舒适的椅子上看着你，询问你的旅程是否顺利。你说闲谈并不能填满你的口袋，然后询问你的报酬在哪。这个男人挑了挑眉毛。%SPEECH_ON%啊，我用我善良、文明的态度冒犯了逐币者吗？我怎么敢呢。行吧，你的报酬就在墙角，按照约定足额的。%SPEECH_OFF% | %recipient%正在着一面镜子夸夸其谈鸟类的天性。他在从镜子里看到了你，他转过身来，好像什么都没发生过一样。%SPEECH_ON%逐币者，维齐尔当然会派逐币者来。我希望你们没敢用眼睛亵渎这个箱子里的物料，但我甚至不觉得你们这种人会有什么专业精神。但你可以期待我，你们的报酬在角落里，全额的。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{%SPEECH_START%啊，逐币者。%SPEECH_OFF%一个声音从附近的小巷传来。通常情况下这意味着你会失去一些钱，但却发现是有个人打算给你钱。%SPEECH_ON%我是%recipient%，那个包裹是我的。替我向%employer%问好，或者不问，我无所谓。%SPEECH_OFF%这个人窃窃私语，就像他来时一样快地离去了。 | %recipient%是个矮个子，像拿着你带给他的大箱子那么重的东西一样，拿着维齐尔的纹章和徽记。%SPEECH_ON%我给过维齐尔许多，但他是怎么报答我的？逐币者的汗。让镀金者看到这个人的未来的时候眨一眨眼吧。%SPEECH_OFF%你对此一言不发，一部分原因是，你考虑这可能是一个考验，看看你是否会同意他的话，把自己变成那个威严的维齐尔的敌人。这个男人盯着你看了一会儿，耸了耸肩，继续说道。%SPEECH_ON%你的钱已经准备好了，都数过了，如果你想自己数一数，我不会介意。啊，我看你已经在数了。很好，全都在这儿对吧。快走吧，小逐币者。%SPEECH_OFF% | %recipient%正在指挥一群孩子。他很快就选中你，教育他们要好好学习，否则他们就会像你一样。孩子们被解散之后，这个男人带着一袋克朗走了过来。%SPEECH_ON%我的人告诉我，你已经到了，而且材料完好无损。这是付给你的，逐币者。%SPEECH_OFF% | 你进入%recipient%的家，放下的包裹被仆人带走。%recipient%坐在一张看着就很舒适的椅子上看着你，询问你的旅程是否顺利。你说闲谈并不能填满你的口袋，然后询问你的报酬在哪。这个男人挑了挑眉毛。%SPEECH_ON%啊，我用我善良、文明的态度冒犯了逐币者吗？我怎么敢呢。行吧，你的报酬就在墙角，一分不差。%SPEECH_OFF% | %recipient%正在着一面镜子夸夸其谈鸟类的天性。他在从镜子里看到了你，他转过身来，好像什么都没发生过一样。%SPEECH_ON%逐币者，维齐尔当然会派逐币者来。我希望你们没敢用眼睛亵渎这个箱子里的物料，我不会奢求你们能有什么专业精神。但我有，你们的报酬在角落里，一分不差。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],

@@ -7,7 +7,7 @@ this.desert_camp_supplies <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "住民的补给。";
+		return "住民的食粮。";
 	}
 
 	function onInit()

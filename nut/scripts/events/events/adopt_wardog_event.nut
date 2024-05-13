@@ -198,7 +198,7 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "G",
-			Text = "[img]gfx/ui/events/event_27.png[/img]你问%houndmaster%训犬师能否试着和狗“交流”。他点头朝它走去。这只杂野狗的耳朵尖尖的竖了起来。训犬师蹲着，慢慢地向这只动物挪去。他伸出手，把一块肉放在手心里。饥饿战胜了谨慎，狗嗅着鼻子逐渐接近了驯兽师的手。狗用舌头舔出那块肉，狼吞虎咽地吃了下去。训犬师又喂了一块肉。他抓着它的颈头，找到了它耳后的舒适点。%houndmaster%回头望去，点了点头。%SPEECH_ON%嗯，这家伙通人性，容易驯服。%SPEECH_OFF%这太好了。你问它能否参加战斗。训犬师抿着嘴。%SPEECH_ON%狗就像人一样。只要还有一口气，就能战斗。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_27.png[/img]你问驯犬师%houndmaster%能否试着和狗“交流”。他点头朝它走去。这只杂野狗的耳朵尖尖的竖了起来。驯犬师蹲着，慢慢地向这只动物挪去。他伸出手，把一块肉放在手心里。饥饿战胜了谨慎，狗嗅着鼻子逐渐接近了驯犬师的手。狗用舌头舔出那块肉，狼吞虎咽地吃了下去。驯犬师又喂了一块肉。他抓着它的颈头，找到了它耳后的舒适点。%houndmaster%回头望去，点了点头。%SPEECH_ON%嗯，这家伙通人性，容易驯服。%SPEECH_OFF%这太好了。你问它能否参加战斗。驯犬师抿着嘴。%SPEECH_ON%狗就像人一样。只要还有一口气，就能战斗。%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],

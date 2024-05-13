@@ -69,7 +69,7 @@ this.dog_in_swamp_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Houndmaster != null)
 				{
 					this.Options.push({
-						Text = "也许我们的训犬师能帮忙？",
+						Text = "也许我们的驯犬师能帮忙？",
 						function getResult( _event )
 						{
 							return "Houndmaster";
@@ -152,7 +152,7 @@ this.dog_in_swamp_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Houndmaster",
-			Text = "[img]gfx/ui/events/event_09.png[/img]%houndmaster% 训犬师冲上前去，但沼泽中的狗就这样停了下来。这个男人滑进水里摸索。他的手紧紧握住，盯着那个陌生人。%SPEECH_ON%我内心深处是个训犬师。这意味着我训练他们不会陷入这么大的麻烦。但是我从来不需要训练一只狗提防这个沼泽，这意味着这个混蛋把他扔进去了，对吗？%SPEECH_OFF%陌生人的第一句话就是借口，所以训犬师痛打他。陌生人双腿生生地向后剪刀踢，裤子松了下来，在他的抽屉里掉出了各种宝藏。可恶的傻瓜是个宝藏猎人！%houndmaster% 拉出武器，准备谋杀这个人。陌生人尖叫着踢掉裤子，朝沼泽森林跑去，半裸着像被鬼魂控制的麻袋一样。你笑着蹲下来，寻找离去者的物品，其中并不都是闪亮的。",
+			Text = "[img]gfx/ui/events/event_09.png[/img]驯犬师%houndmaster%冲上前去，但沼泽中的狗就这样停了下来。这个男人滑进水里摸索。他的手紧紧握住，盯着那个陌生人。%SPEECH_ON%我内心深处是个驯犬师。这意味着我训练他们不会陷入这么大的麻烦。但是我从来不需要训练一只狗提防这个沼泽，这意味着这个混蛋把他扔进去了，对吗？%SPEECH_OFF%陌生人的第一句话就是借口，所以驯犬师痛打他。陌生人双腿生生地向后剪刀踢，裤子松了下来，在他的抽屉里掉出了各种宝藏。可恶的傻瓜是个宝藏猎人！%houndmaster% 拉出武器，准备谋杀这个人。陌生人尖叫着踢掉裤子，朝沼泽森林跑去，半裸着像被鬼魂控制的麻袋一样。你笑着蹲下来，寻找离去者的物品，其中并不都是闪亮的。",
 			Image = "",
 			List = [],
 			Characters = [],

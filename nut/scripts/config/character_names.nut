@@ -717,7 +717,7 @@ gt.Const.Strings.MilitiaTitles <- [
 ];
 gt.Const.Strings.BrawlerTitles <- [
 	"大拳头",
-	"·搬运工",
+	"拳击手",
 	"·岩石",
 	"·种马",
 	"铁颌",
@@ -755,7 +755,7 @@ gt.Const.Strings.BastardTitles <- [
 	"绿帽子",
 	"隐子",
 	"野种",
-	"玷污之人"
+	"污点"
 ];
 gt.Const.Strings.PilgrimTitles <- [
 	"信徒(the Believer)",

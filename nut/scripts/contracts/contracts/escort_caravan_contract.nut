@@ -529,7 +529,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈价钱。 | 你愿意为此出多少克朗？ | 报酬是多少？}",
+					Text = "{谈谈价钱吧。 | 多大的生意？ | 报酬如何？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -561,7 +561,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们来谈谈价钱。 | 你愿意为此出多少克朗？ | 报酬是多少？}",
+					Text = "{谈谈价钱吧。 | 多大的生意？ | 报酬如何？}",
 					function getResult()
 					{
 						return "Negotiation";

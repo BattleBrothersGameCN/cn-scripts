@@ -172,7 +172,7 @@ this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{你能拿出多少克朗？ | 我们来谈谈酬劳。 | 我们来谈谈克朗。 | 我们可以调查一下。 只要价钱合适。}",
+					Text = "{你能拿出多少克朗？ | 谈谈报酬吧。 | 让克朗说话。 | 我们愿意介入。只要价钱合适。}",
 					function getResult()
 					{
 						return "Negotiation";

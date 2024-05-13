@@ -261,7 +261,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{你愿意为此出多少克朗？ | %townname%准备为他们的安全付多少？ | 我们来谈谈价钱。}",
+					Text = "{多大的生意？ | %townname%愿拿多少买个安生？ | 谈谈价钱吧。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -428,7 +428,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "我们有更重要的事要做。",
+					Text = "还有更要紧的事等着我们。",
 					function getResult()
 					{
 						return 0;
@@ -445,7 +445,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "杀了他们也没人多给我们钱。",
+					Text = "杀了他们也没人多给钱。",
 					function getResult()
 					{
 						return 0;

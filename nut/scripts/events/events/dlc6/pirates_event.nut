@@ -18,7 +18,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Options.push({
-					Text = "立刻释放他们！",
+					Text = "马上放了他们！",
 					function getResult( _event )
 					{
 						return "B";

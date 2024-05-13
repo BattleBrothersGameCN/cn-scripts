@@ -22,7 +22,7 @@ this.slave_barbarian_background <- this.inherit("scripts/skills/backgrounds/slav
 			"俘虏(the Captive)",
 			"不自由者(the Unfree)",
 			"桀骜不驯者(the Unruly)",
-			"被监禁者(The Restrained)",
+			"受监者",
 			"受铐者(the Shackled)",
 			"被缚者(the Bound)"
 		];

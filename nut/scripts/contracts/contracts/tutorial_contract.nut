@@ -456,7 +456,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 					"击杀%boss%。"
 				];
 				this.Contract.m.BulletpointsPayment = [
-					"完成时获得400克朗"
+					"事成之后，获得400克朗"
 				];
 				this.World.State.getPlayer().setAttackable(false);
 			}
@@ -816,7 +816,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 					}
 					else
 					{
-						bro.improveMood(0.25, "对你的领导能力有了信心");
+						bro.improveMood(0.25, "越发相信你的领导能力");
 					}
 				}
 
