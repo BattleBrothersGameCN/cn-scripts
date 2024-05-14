@@ -171,7 +171,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 						}
 					}
 
-					party.setDescription("忠于城邦的应征士兵们。");
+					party.setDescription("忠于城邦的应征士兵。");
 					party.setAttackableByAI(false);
 					party.getLoot().Money = this.Math.rand(50, 200);
 					party.getLoot().ArmorParts = this.Math.rand(0, 25);
@@ -616,7 +616,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color]克朗"
 				});
 			}
 
@@ -654,7 +654,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color]克朗"
 				});
 			}
 

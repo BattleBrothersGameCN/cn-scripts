@@ -62,7 +62,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 					}
 				];
 				_event.m.Peddler.getBaseProperties().Bravery += 1;
@@ -109,7 +109,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]500[/color] 克朗"
+						text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]500[/color]克朗"
 					}
 				];
 				_event.m.Peddler.addLightInjury();

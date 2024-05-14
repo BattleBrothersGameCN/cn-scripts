@@ -623,7 +623,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color]克朗"
 				});
 				this.Contract.m.SituationID = this.Contract.resolveSituation(this.Contract.m.SituationID, this.Contract.m.Origin, this.List);
 			}
@@ -631,7 +631,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Failure1",
-			Title = "%objective% 附近",
+			Title = "%objective%周边",
 			Text = "[img]gfx/ui/events/event_30.png[/img]{不死族太多了，你不得不撤退。不幸的是，一个小镇没有这样的自由，因此%objective%被完全攻陷了。你没有留下来看看它的居民变成了什么样子，虽然聪明人也可以猜到。 | %companyname% 已经在战场上被不死族军团击败！在你的失败之后，%objective%很快被攻陷了。一群农民从城镇逃跑，那些太慢的人也被加入到了漫无目的的步履蹒跚的不死族之中。 | 你未能阻止不死族的攻击！尸体缓缓越过%objective%的城墙，吞噬并杀害所有它们遇到的人。当你逃离现场时，你看到警卫队长在不死族的后面缓缓地走着。}",
 			Image = "",
 			Characters = [],
@@ -691,7 +691,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 			}
 		}
 
-		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).spawnEntity(tile, "大群亡灵", false, this.Const.World.Spawn.UndeadArmy, (80 + this.m.Flags.get("Wave") * 10) * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).spawnEntity(tile, "亡灵军团", false, this.Const.World.Spawn.UndeadArmy, (80 + this.m.Flags.get("Wave") * 10) * this.getDifficultyMult() * this.getScaledDifficultyMult());
 		this.m.UnitsSpawned.push(party.getID());
 		party.getLoot().ArmorParts = this.Math.rand(0, 15);
 		party.getSprite("banner").setBrush(undeadBase.getBanner());
@@ -721,7 +721,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 	function spawnUndeadAtTheWalls()
 	{
 		local undeadBase = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).getNearestSettlement(this.m.Origin.getTile());
-		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).spawnEntity(this.m.Origin.getTile(), "大群亡灵", false, this.Const.World.Spawn.ZombiesOrZombiesAndGhosts, 100 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).spawnEntity(this.m.Origin.getTile(), "亡灵军团", false, this.Const.World.Spawn.ZombiesOrZombiesAndGhosts, 100 * this.getDifficultyMult() * this.getScaledDifficultyMult());
 		party.setPos(this.createVec(party.getPos().X - 50, party.getPos().Y - 50));
 		this.m.UnitsSpawned.push(party.getID());
 		party.getLoot().ArmorParts = this.Math.rand(0, 15);

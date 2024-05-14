@@ -109,7 +109,7 @@ this.defend_citystate_action <- this.inherit("scripts/factions/faction_action", 
 		{
 			local party = _faction.spawnEntity(spawnpoints[i], "团" + this.m.Settlement.getName(), true, this.Const.World.Spawn.Southern, this.m.Settlement.getResources());
 			party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + _faction.getBannerString());
-			party.setDescription("忠于城邦的应征士兵们。");
+			party.setDescription("忠于城邦的应征士兵。");
 			party.setFootprintType(this.Const.World.FootprintsType.CityState);
 			party.getFlags().set("IsRandomlySpawned", true);
 			local c = party.getController();

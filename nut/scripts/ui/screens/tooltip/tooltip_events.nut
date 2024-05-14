@@ -1352,7 +1352,7 @@ this.tooltip_events <- {
 						desc = desc + ("[color=" + this.Const.UI.Color.NegativeValue + "]");
 					}
 
-					desc = desc + (heal.MedicineMax + "[/color] 医疗用品");
+					desc = desc + (heal.MedicineMax + "[/color]点医疗用品");
 				}
 
 				desc = desc + ("你至多能携带" + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].Medicine + this.World.Assets.m.MedicineMaxAdditional) + "单位。");
@@ -1463,7 +1463,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "编队"
+						text = "作战序列中的角色"
 					},
 					{
 						id = 2,

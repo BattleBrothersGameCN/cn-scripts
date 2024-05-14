@@ -100,7 +100,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]25[/color] 克朗"
+						text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]25[/color]克朗"
 					}
 				];
 			}
@@ -152,7 +152,7 @@ this.player_plays_dice_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你赢了 [color=" + this.Const.UI.Color.PositiveEventValue + "]25[/color] 克朗"
+						text = "你赢了 [color=" + this.Const.UI.Color.PositiveEventValue + "]25[/color]克朗"
 					}
 				];
 			}

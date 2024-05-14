@@ -156,7 +156,7 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]45[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]45[/color]克朗"
 				});
 				this.Characters.push(_event.m.Anatomist.getImagePath());
 			}
@@ -184,7 +184,7 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]65[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]65[/color]克朗"
 				});
 
 				if (this.Math.rand(1, 100) < 75)

@@ -148,7 +148,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 
 					local party = f.spawnEntity(this.Contract.m.Destination.getTile(), candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + " 战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 150) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 					party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
-					party.setDescription("为地方领主服务的职业军人。");
+					party.setDescription("听命于当地领主的职业军人。");
 					party.getLoot().Money = this.Math.rand(50, 200);
 					party.getLoot().ArmorParts = this.Math.rand(0, 25);
 					party.getLoot().Medicine = this.Math.rand(0, 3);
@@ -1124,7 +1124,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color]克朗"
 				});
 			}
 
@@ -1204,7 +1204,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 
 		local party = f.spawnEntity(tiles[0].Tile, "团" + candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly(), true, this.Const.World.Spawn.Southern, this.Math.rand(100, 150) * this.getScaledDifficultyMult());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
-		party.setDescription("忠于城邦的应征士兵们。");
+		party.setDescription("忠于城邦的应征士兵。");
 		party.getLoot().Money = this.Math.rand(50, 200);
 		party.getLoot().ArmorParts = this.Math.rand(0, 25);
 		party.getLoot().Medicine = this.Math.rand(0, 3);
@@ -1312,7 +1312,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 
 		local party = f.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + " 战团", true, this.Const.World.Spawn.Noble, (this.m.Flags.get("IsEnemyLuredAway") ? 130 : 160) * this.getDifficultyMult() * this.getScaledDifficultyMult());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
-		party.setDescription("为地方领主服务的职业军人。");
+		party.setDescription("听命于当地领主的职业军人。");
 		party.setAttackableByAI(false);
 		party.setAlwaysAttackPlayer(true);
 		party.getLoot().Money = this.Math.rand(50, 200);

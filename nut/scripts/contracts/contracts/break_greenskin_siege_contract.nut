@@ -19,7 +19,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		}
 
 		this.m.Type = "contract.break_greenskin_siege";
-		this.m.Name = "突破重围";
+		this.m.Name = "解围";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		this.m.MakeAllSpawnsResetOrdersOnContractEnd = false;
 	}
@@ -63,8 +63,8 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"前往 %objective%",
-					"打破绿皮的围城"
+					"前往%objective%",
+					"打破绿皮围攻"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -110,7 +110,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 				local faction = this.World.FactionManager.getFaction(this.Contract.getFaction());
 				local party = faction.spawnEntity(this.Contract.getHome().getTile(), this.Contract.getHome().getName() + " 战团", true, this.Const.World.Spawn.Noble, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				party.getSprite("banner").setBrush(faction.getBannerSmall());
-				party.setDescription("为地方领主服务的职业军人。");
+				party.setDescription("听命于当地领主的职业军人。");
 				this.Contract.m.Troops = this.WeakTableRef(party);
 				party.getLoot().Money = this.Math.rand(50, 200);
 				party.getLoot().ArmorParts = this.Math.rand(0, 25);
@@ -246,8 +246,8 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"摧毁任何绿皮的攻城车",
-					"消灭在 %objective% 附近的所有绿皮"
+					"摧毁所有绿皮攻城器",
+					"消灭%objective%附近的所有绿皮"
 				];
 
 				if (this.Contract.m.Origin != null && !this.Contract.m.Origin.isNull())
@@ -341,7 +341,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{你认为 %objective% 值多少钱？ | 打破围城是 %companyname% 能做的事。}",
+					Text = "{救下%objective%值多少？ | %companyname%的能力足以解围。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -371,7 +371,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			List = [],
 			Options = [
 				{
-					Text = "我们走！",
+					Text = "我们上！",
 					function getResult()
 					{
 						return 0;
@@ -383,7 +383,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "TroopsHaveDied",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]所有贵族士兵在赶往攻城时都已经阵亡了。他们死了总比你死好。%companyname%继续前进，走向%objective%。",
+			Text = "[img]gfx/ui/events/event_22.png[/img]所有贵族士兵都死在了赶赴围城现场的路上。总比你死了强。%companyname%继续向%objective%进军。",
 			Image = "",
 			List = [],
 			Options = [
@@ -399,7 +399,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		});
 		this.m.Screens.push({
 			ID = "ArrivingAtTheSiege",
-			Title = "临近 %objective%…",
+			Title = "%objective%附近…",
 			Text = "[img]gfx/ui/events/event_68.png[/img]{你终于来到了围困现场。绿皮兽人包围了%objective%，你看着他们的攻城器械向空中发射着燃烧的石头。半个城镇已经被火焰吞噬，你看到小小的人影匆忙地跑来跑去扑灭火势。贵族士兵的中尉命令你前去攻击攻城器械，然后重新汇合并消灭剩余的敌人。 | %objective%看起来更像是一个巨大的篝火而不是一个城镇。你看着绿皮兽人的攻城器械发射出狂暴的轰炸，天空中充满了黑色的石头、死牛和燃烧的木材。贵族士兵的中尉命令你摧毁攻城器械。他和他的士兵将攻击绿皮兽人军队的主力部队，然后你们两个将重新汇合消灭任何残存的敌人。 | %objective%仍然坚持着，围困还在继续。看起来你们来得正是时候，因为绿皮兽人从攻城器械中发射出的破坏力如此之大，可能几个小时后就没有城镇了。看着这一幕，贵族士兵的中尉命令你侧翼攻击并摧毁攻城武器。他和他的士兵将攻击兽人军队的主要部队，然后你们一起重新汇合，消灭任何幸存者。 | 你先是听到轰击声，然后才看到了轰击。围绕%objective%的绿色野蛮人周围有着敌军攻城器械，正在猛烈地攻击，投石车、投尸器、尸体包扔过来，什么都用得上。\n\n高贵士兵的队长跟你介绍了他的计划。你需要从侧翼攻击攻城器械。他和他的士兵将攻击绿皮兽军的中心，成功后，你们两个将重新联合并消灭其余的敌人。 | 一名年轻的女子被发现在路上和一群孩子蜷缩在一起，就像冬天里的狼崽子。干血粘在她的头侧，但她用几缕凌乱的头发掩盖住了。她解释说，如果你要%objective%，你必须赶紧。绿皮族已经设置了他们的攻城武器，并发起了疯狂的轰击。你和高贵士兵继续前进，把女子留下一些面包来喂孩子们。\n\n攀登过下一个山丘，你看到了一个证明难民所说的故事的景象。贵族士兵的队长迅速下达命令。你和%companyname%将进攻攻城器械，而士兵们则进攻绿皮兽人军队的核心。完成这些任务后，你们将会汇合，消灭任何残留的敌人。 | 你和士兵们翻过了最近的山丘来到达%objective%。城镇还在那里，但它更接近于一堆废墟，而不是一个村庄。绿皮兽人肯定已经用他们简陋的攻城器械轰击它有一段时间了，而他们似乎并没有打算就此停止。\n\n贵族战士的队长命令你去迂回敌人，攻击攻城武器。与此同时，士兵们将攻击敌军的核心部队。完成两项任务后，你将会会合士兵们摧毁剩余的敌军残部。 | 你发现一个老人正在沿着路推一辆手推车。在车上，是一名双腿破碎的年轻人。他昏迷了过去，双手还紧握着破碎的膝盖。老人说%objective%就在附近的山丘上，那里正在遭受攻击。所以如果你要采取行动，最好赶紧去。%companyname%和士兵们前进了，留下老人独自继续前行。\n\n长老没有说谎： %objective% 被烧毁，正慢慢地变成废墟，被一堆野蛮的攻城器械围攻。见到这一幕，贵族士兵们的中尉迅速制定了一个行动计划： %companyname% 将从侧面攻击攻城器械，而士兵们则与大部分的绿皮兽人作战。一旦两项任务完成，您们将重聚并消灭剩余的敌人。 | 你发现一群野狗沿着道路奔跑。他们远离你的小组，但你注意到他们的尾巴紧贴着腿，头低垂。他们快速地路过你，没有停顿。\n\n翻过下一个山头，你看到混乱的原因：绿皮兽人正在用简陋的攻城机械无情轰击%objective%。部队队长点头表示同意，并迅速下达命令。%companyname%将侧翼进攻并直接摧毁攻城武器。完成任务后，你们需要绕回来与士兵汇合，然后继续前进。}",
 			Image = "",
 			List = [],
@@ -422,7 +422,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		});
 		this.m.Screens.push({
 			ID = "ArrivingAtTheSiegeNoTroops",
-			Title = "临近 %objective%…",
+			Title = "%objective%附近…",
 			Text = "[img]gfx/ui/events/event_68.png[/img]{你终于看到了%objective%，并且它处于极度危险之中。城镇正在遭受一连串的绿皮兽攻城战争机器的轰炸。你下令%companyname%准备行动：你将侧翼包抄敌军，并直接攻击这些攻城机械。 | 所有的贵族士兵都已经死亡，你独自到达%objective%。还是有绿皮兽在继续轰击这个可怜的城镇，使用拼凑的攻城武器。你决定最好的行动方案是侧翼包抄野蛮人并攻击他们的攻城机械。}",
 			Image = "",
 			List = [],
@@ -446,7 +446,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "SiegeEquipmentAhead",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_68.png[/img]{绿皮族已经在附近集结了一些攻城武器。你必须摧毁它们来帮助解除围城！ | 你的部队发现附近有几件攻城器械。绿皮族准备发动进攻！摧毁这些武器将有助于解除围城！}",
+			Text = "[img]gfx/ui/events/event_68.png[/img]{绿皮在附近集结了一些攻城器。你必须摧毁它们，帮助解除围城！ | 你的部队发现附近有几件攻城器械。绿皮正在做突击准备！你要摧毁它们，帮助解除围城！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -523,12 +523,12 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "%objective% 安全了。",
+					Text = "%objective%得救了。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "打破了围攻 " + this.Flags.get("ObjectiveName"));
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "从围攻中拯救了 " + this.Flags.get("ObjectiveName"));
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isGreenskinInvasion())
@@ -546,14 +546,14 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color]克朗"
 				});
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Failure1",
-			Title = "%objective% 附近",
+			Title = "%objective%周边",
 			Text = "[img]gfx/ui/events/event_68.png[/img]{你花费的时间太久了，现在%objective%已经被毁了。绿皮族使用了震惊战术冲破了城墙，从漂来的臭味不难发现城内所有人都已被屠杀。 | %companyname%没有及时解围导致%objective%付出了代价。他们本以为你会拯救他们，但却让他们失望了。如果有好消息的话，那就是没有人幸存下来诉说你的失败。然而你的雇主：%employer%则是另一回事。这位贵族毫无疑问会对你的无为愤怒。 | %objective%已经被破城而入了！兽人使用了可怕的战争机器摧毁了城墙。凶残的绿皮族涌入城镇，杀害了一切可以杀害的人，将一切可以抓的人掳到诸神都不知道的地方。你的雇主：%employer%对你的失败感到非常愤怒！ | 你没有及时解围%objective%！绿皮族击破了城门，城镇已经消失。考虑到%employer%的付费目标与之相反，可以肯定他对这一进展感到不满。 | 你在混乱中没有完成你的工作，导致%objective%被绿皮族攻陷！愿众神怜悯城民，但不要期望你的雇主%employer%会对这个结果感到满意。}",
 			Image = "",
 			Characters = [],
@@ -561,13 +561,13 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			ShowEmployer = false,
 			Options = [
 				{
-					Text = "%objective% 陷落了。",
+					Text = "%objective%陷落了。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, function ()
 						{
-							return this.RenderTemplate("未能突破针对%s的围攻", this.Flags.get("ObjectiveName"));
+							return this.RenderTemplate("未能解%s之围", this.Flags.get("ObjectiveName"));
 						}());
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
@@ -650,9 +650,9 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 				break;
 			}
 
-			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "攻城车", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(100, 120) * this.getDifficultyMult() * this.getScaledDifficultyMult());
+			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "攻城器", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(100, 120) * this.getDifficultyMult() * this.getScaledDifficultyMult());
 			this.m.UnitsSpawned.push(party.getID());
-			party.setDescription("一大群绿皮和他们的攻城车。");
+			party.setDescription("绿皮军团和他们的攻城器。");
 			local numSiegeUnits = this.Math.rand(3, 4);
 
 			for( local j = 0; j < numSiegeUnits; j = ++j )
@@ -731,9 +731,9 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 				break;
 			}
 
-			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "大群绿皮", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(90, 110) * this.getDifficultyMult() * this.getScaledDifficultyMult());
+			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "绿皮军团", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(90, 110) * this.getDifficultyMult() * this.getScaledDifficultyMult());
 			this.m.UnitsSpawned.push(party.getID());
-			party.setDescription("一大群绿皮向战场进军。");
+			party.setDescription("奔赴战场的绿皮军团。");
 			party.getLoot().ArmorParts = this.Math.rand(0, 15);
 			party.getLoot().Ammo = this.Math.rand(0, 10);
 			party.addToInventory("supplies/strange_meat_item");

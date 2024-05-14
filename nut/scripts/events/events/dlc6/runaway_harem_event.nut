@@ -70,7 +70,7 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color]克朗"
 					}
 				];
 				_event.m.Citystate.addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "你帮助维齐尔的后宫逃跑");
@@ -101,7 +101,7 @@ this.runaway_harem_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color]克朗"
 					}
 				];
 				_event.m.Citystate.addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "你帮助带回了维齐尔的后宫");

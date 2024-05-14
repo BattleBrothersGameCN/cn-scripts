@@ -103,7 +103,7 @@ this.travelling_monk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + 10 * this.World.getPlayerRoster().getSize() + "[/color] 克朗"
+						text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + 10 * this.World.getPlayerRoster().getSize() + "[/color]克朗"
 					}
 				];
 				this.List.extend(_event.giveTraits(90));

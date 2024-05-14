@@ -93,7 +93,7 @@ this.wildman_causes_havoc_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Compensation + "[/color] 克朗"
+					text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Compensation + "[/color]克朗"
 				});
 			}
 
@@ -120,7 +120,7 @@ this.wildman_causes_havoc_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Compensation + "[/color] 克朗"
+					text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Compensation + "[/color]克朗"
 				});
 				this.Characters.push(_event.m.Wildman.getImagePath());
 				_event.m.Wildman.getBaseProperties().DailyWage -= this.Math.floor(_event.m.Wildman.getDailyCost() / 4);
@@ -205,7 +205,7 @@ this.wildman_causes_havoc_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Compensation + "[/color] 克朗"
+					text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Compensation + "[/color]克朗"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 

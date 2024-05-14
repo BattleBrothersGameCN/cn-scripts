@@ -72,7 +72,7 @@ this.wildman_testing_money_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 					}
 				];
 			}

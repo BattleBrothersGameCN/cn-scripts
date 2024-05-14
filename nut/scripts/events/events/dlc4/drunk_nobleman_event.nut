@@ -95,7 +95,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 				});
 				local item = this.new("scripts/items/loot/signet_ring_item");
 				this.World.Assets.getStash().add(item);
@@ -187,7 +187,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 				});
 				local item = this.new("scripts/items/loot/signet_ring_item");
 				this.World.Assets.getStash().add(item);
@@ -309,7 +309,7 @@ this.drunk_nobleman_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 				});
 				local item;
 				item = this.new("scripts/items/loot/signet_ring_item");

@@ -856,7 +856,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 				local tile = this.Contract.getTileToSpawnLocation(playerTile, 5, 8);
 				local party = this.World.FactionManager.getFaction(this.Flags.get("EnemyNobleHouse")).spawnEntity(tile, "Scouts", false, this.Const.World.Spawn.Noble, 60 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				party.getSprite("banner").setBrush(this.World.FactionManager.getFaction(this.Flags.get("EnemyNobleHouse")).getBannerSmall());
-				party.setDescription("为地方领主服务的职业军人。");
+				party.setDescription("听命于当地领主的职业军人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Nobles);
 				this.Contract.m.UnitsSpawned.push(party);
 				party.getLoot().Money = this.Math.rand(50, 100);
@@ -1185,7 +1185,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + this.Flags.get("RequisitionCost") + "[/color] 克朗"
+					text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + this.Flags.get("RequisitionCost") + "[/color]克朗"
 				});
 			}
 
@@ -1449,7 +1449,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + this.Flags.get("Bribe") + "[/color] 克朗"
+					text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + this.Flags.get("Bribe") + "[/color]克朗"
 				});
 			}
 
@@ -1748,7 +1748,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 						local origin = settlements[this.Math.rand(0, settlements.len() - 1)];
 						local party = faction.spawnEntity(this.World.State.getPlayer().getTile(), origin.getName() + " 战团", true, this.Const.World.Spawn.Noble, 150);
 						party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + faction.getBannerString());
-						party.setDescription("为地方领主服务的职业军人。");
+						party.setDescription("听命于当地领主的职业军人。");
 						this.Contract.setState("Return");
 						return 0;
 					}
@@ -1789,7 +1789,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color]克朗"
 				});
 			}
 

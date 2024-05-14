@@ -271,7 +271,7 @@ this.kraken_cult_enter_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "保持队型！",
+					Text = "列队！",
 					function getResult( _event )
 					{
 						this.World.State.getLastLocation().setFaction(this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).getID());

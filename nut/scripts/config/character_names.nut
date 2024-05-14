@@ -708,7 +708,7 @@ gt.Const.Strings.MasonTitles <- [
 	"·奠基者",
 	"砌砖匠(Bricklayer)",
 	"建筑师",
-	"·匠人"
+	"匠人"
 ];
 gt.Const.Strings.MilitiaTitles <- [
 	"征召兵",
