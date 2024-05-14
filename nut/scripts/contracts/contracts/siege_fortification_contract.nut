@@ -1570,7 +1570,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]250[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]250[/color]克朗"
 				});
 			}
 
@@ -1608,7 +1608,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color] 克朗"
+					text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Payment.getOnCompletion() + "[/color]克朗"
 				});
 			}
 
@@ -1689,7 +1689,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 		local party = enemyFaction.spawnEntity(tile, this.m.Origin.getOwner().getName() + "军队(Army)", true, this.Const.World.Spawn.Noble, 200 * this.getDifficultyMult() * this.getScaledDifficultyMult());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + enemyFaction.getBannerString());
 		party.getSprite("banner").setBrush(enemyFaction.getBannerSmall());
-		party.setDescription("为地方领主服务的职业军人。");
+		party.setDescription("听命于当地领主的职业军人。");
 		party.setFootprintType(this.Const.World.FootprintsType.Nobles);
 		party.getLoot().Money = this.Math.rand(50, 200);
 		party.getLoot().ArmorParts = this.Math.rand(0, 25);
@@ -1851,7 +1851,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 
 			lastTile = tile;
 			local party = f.spawnEntity(tile, castles[this.Math.rand(0, castles.len() - 1)].getName() + " 战团", true, this.Const.World.Spawn.Noble, castles[this.Math.rand(0, castles.len() - 1)].getResources());
-			party.setDescription("为地方领主服务的职业军人。");
+			party.setDescription("听命于当地领主的职业军人。");
 			party.setVisibilityMult(2.5);
 
 			if (i == 0)

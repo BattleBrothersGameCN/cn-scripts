@@ -67,7 +67,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color]克朗"
 				});
 				local item = this.new("scripts/items/weapons/noble_sword");
 				item.setCondition(this.Math.max(1, item.getConditionMax() * this.Math.rand(60, 80) * 0.01));
@@ -124,7 +124,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]2500[/color]克朗"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -180,7 +180,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 11,
 					icon = "ui/icons/asset_supplies.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]40[/color] 工具和补给"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]40[/color] 工具和补给"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 

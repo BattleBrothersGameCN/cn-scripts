@@ -183,7 +183,7 @@ this.jousting_tournament_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你赢了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + _event.m.Bet + "[/color] 克朗"
+					text = "你赢了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + _event.m.Bet + "[/color]克朗"
 				});
 				_event.m.Jouster.improveMood(2.0, "赢得了一场比赛");
 
@@ -278,7 +278,7 @@ this.jousting_tournament_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Bet + "[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Bet + "[/color]克朗"
 				});
 				local injury = _event.m.Jouster.addInjury(this.Const.Injury.Jousting);
 				this.List.push({
@@ -342,7 +342,7 @@ this.jousting_tournament_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]500[/color] 克朗"
+					text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]500[/color]克朗"
 				});
 			}
 

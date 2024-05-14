@@ -83,7 +83,7 @@ this.beggar_begs_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]10[/color] 克朗"
+					text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]10[/color]克朗"
 				});
 				_event.m.Beggar.improveMood(0.5, "从你这多拿了几个克朗");
 

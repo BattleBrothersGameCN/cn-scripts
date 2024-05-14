@@ -67,7 +67,7 @@ this.raiders_origin_redemption_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-2000[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-2000[/color]克朗"
 				});
 				_event.m.NobleHouse.addPlayerRelation(20.0, "被贿赂来与你打交道。");
 				this.List.push({

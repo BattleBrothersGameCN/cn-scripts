@@ -109,7 +109,7 @@ this.retired_gladiator_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]1,000[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]1,000[/color]克朗"
 				});
 			}
 

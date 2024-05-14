@@ -98,7 +98,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Price + "[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Price + "[/color]克朗"
 				});
 				local part = this.new("scripts/items/misc/ghoul_brain_item");
 				this.World.Assets.getStash().add(part);
@@ -151,7 +151,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Price + "[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Price + "[/color]克朗"
 				});
 				local part = this.new("scripts/items/misc/unhold_heart_item");
 				this.World.Assets.getStash().add(part);
@@ -204,7 +204,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Price + "[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Price + "[/color]克朗"
 				});
 				local part = this.new("scripts/items/misc/adrenaline_gland_item");
 				this.World.Assets.getStash().add(part);
@@ -250,7 +250,7 @@ this.black_market_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Price + "[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + _event.m.Price + "[/color]克朗"
 				});
 				local food = this.new("scripts/items/supplies/strange_meat_item");
 				this.World.Assets.getStash().add(food);

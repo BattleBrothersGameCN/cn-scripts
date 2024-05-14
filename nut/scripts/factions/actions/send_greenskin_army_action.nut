@@ -118,9 +118,9 @@ this.send_greenskin_army_action <- this.inherit("scripts/factions/faction_action
 		}
 
 		local nearestOrcs = this.getNearestLocationTo(origin, this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).getSettlements());
-		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(myTile, "大群绿皮", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(80, 120) * this.getScaledDifficultyMult());
+		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(myTile, "绿皮军团", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(80, 120) * this.getScaledDifficultyMult());
 		party.getSprite("banner").setBrush(nearestOrcs.getBanner());
-		party.setDescription("一大群绿皮向战场进军。");
+		party.setDescription("奔赴战场的绿皮军团。");
 		party.setFootprintType(this.Const.World.FootprintsType.Orcs);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().ArmorParts = this.Math.rand(0, 10);

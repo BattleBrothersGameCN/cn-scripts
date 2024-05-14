@@ -122,7 +122,7 @@ this.undead_zombie_in_granary_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]50[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]50[/color]克朗"
 					}
 				];
 			}
@@ -184,7 +184,7 @@ this.undead_zombie_in_granary_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]50[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]50[/color]克朗"
 					}
 				];
 				_event.m.Dude.improveMood(0.25, "救了一个农民");

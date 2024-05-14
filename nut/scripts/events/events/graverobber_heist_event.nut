@@ -78,7 +78,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 					}
 				];
 			}
@@ -272,7 +272,7 @@ this.graverobber_heist_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 					}
 				];
 				_event.m.Graverobber.improveMood(1.0, "盗墓时发现宝藏");

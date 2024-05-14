@@ -116,7 +116,7 @@ this.holywar_neutral_nomads_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 					}
 				];
 				local item = this.new("scripts/items/supplies/dates_item");

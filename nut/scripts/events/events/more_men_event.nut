@@ -233,7 +233,7 @@ this.more_men_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + 1000 + "[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]" + 1000 + "[/color]克朗"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 

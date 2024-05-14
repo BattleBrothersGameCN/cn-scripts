@@ -77,7 +77,7 @@ this.fake_witchhunter_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]75[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]75[/color]克朗"
 				});
 			}
 

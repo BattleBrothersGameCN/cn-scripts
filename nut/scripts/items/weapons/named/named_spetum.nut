@@ -7,7 +7,7 @@ this.named_spetum <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_spetum";
 		this.m.NameList = this.Const.Strings.SpetumNames;
-		this.m.Description = "这是一把精心制作的三叉戟，它的三个尖端已经被打磨成完美的尖刺。";
+		this.m.Description = "这是一把精心制作的三叉矛，它的三个尖端已经被打磨成完美的尖刺。";
 		this.m.Categories = "矛，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

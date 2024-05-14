@@ -85,7 +85,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_ammo.png",
-							text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 弹药"
+							text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 弹药"
 						}
 					];
 				}
@@ -97,7 +97,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_supplies.png",
-							text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 工具和补给"
+							text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 工具和补给"
 						}
 					];
 				}
@@ -109,7 +109,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_medicine.png",
-							text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 医疗用品"
+							text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 医疗用品"
 						}
 					];
 				}
@@ -327,7 +327,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_ammo.png",
-							text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 弹药"
+							text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 弹药"
 						}
 					];
 				}
@@ -339,7 +339,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_supplies.png",
-							text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 工具和补给"
+							text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 工具和补给"
 						}
 					];
 				}
@@ -351,7 +351,7 @@ this.thief_caught_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/asset_medicine.png",
-							text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 医疗用品"
+							text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 医疗用品"
 						}
 					];
 				}

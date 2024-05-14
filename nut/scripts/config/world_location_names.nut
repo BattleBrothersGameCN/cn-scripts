@@ -315,7 +315,7 @@ gt.Const.World.LocationNames.MassGrave <- [
 	"下陷的古战场",
 	"%randomname% 的战败地",
 	"露天大坟场",
-	"挖掘的骨头堆",
+	"挖开的骨头堆",
 	"堆满尸骨的坟场",
 	"临时墓地",
 	"白骨平原",

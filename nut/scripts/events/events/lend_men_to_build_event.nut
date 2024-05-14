@@ -60,7 +60,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]150[/color]克朗"
 					}
 				];
 				local brothers = this.World.getPlayerRoster().getAll();
@@ -153,7 +153,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]200[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]200[/color]克朗"
 					}
 				];
 				local brothers = this.World.getPlayerRoster().getAll();

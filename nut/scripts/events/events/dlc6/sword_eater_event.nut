@@ -72,7 +72,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color] 克朗"
+						text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color]克朗"
 					}
 				];
 				_event.m.Town.getOwner().addPlayerRelation(5.0, "当地的演艺人员将你的名字传遍了。");
@@ -104,7 +104,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color] 克朗"
+						text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]5[/color]克朗"
 					}
 				];
 				local item = this.new("scripts/items/weapons/fencing_sword");

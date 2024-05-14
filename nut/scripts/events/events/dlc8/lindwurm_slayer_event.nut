@@ -158,7 +158,7 @@ this.lindwurm_slayer_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]5000[/color] 克朗"
+						text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]5000[/color]克朗"
 					}
 				];
 			}

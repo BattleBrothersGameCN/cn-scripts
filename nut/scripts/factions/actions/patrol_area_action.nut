@@ -32,7 +32,7 @@ this.patrol_area_action <- this.inherit("scripts/factions/faction_action", {
 		local settlements = _faction.getSettlements();
 		local party = _faction.spawnEntity(settlements[0].getTile(), "团" + settlements[0].getName(), true, this.Const.World.Spawn.Southern, this.Math.rand(120, 250) * this.getReputationToDifficultyLightMult());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + _faction.getBannerString());
-		party.setDescription("忠于城邦的应征士兵们。");
+		party.setDescription("忠于城邦的应征士兵。");
 		party.setFootprintType(this.Const.World.FootprintsType.CityState);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().Money = this.Math.rand(50, 200);

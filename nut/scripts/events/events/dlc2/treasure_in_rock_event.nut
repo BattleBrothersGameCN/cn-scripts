@@ -184,7 +184,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 工具和补给"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color]点工具和补给"
 				});
 				local item = this.new("scripts/items/loot/golden_chalice_item");
 				this.World.Assets.getStash().add(item);
@@ -220,7 +220,7 @@ this.treasure_in_rock_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 工具和补给"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color]点工具和补给"
 				});
 				local injury = _event.m.Other.addInjury(this.Const.Injury.Accident3);
 				this.List.push({

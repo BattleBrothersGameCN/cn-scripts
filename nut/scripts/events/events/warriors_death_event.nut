@@ -151,7 +151,7 @@ this.warriors_death_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]60[/color] 克朗"
+					text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]60[/color]克朗"
 				});
 			}
 

@@ -59,7 +59,7 @@ this.peacenik_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]50[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]50[/color]克朗"
 				});
 				_event.m.Houndmaster.getBaseProperties().Bravery += 1;
 				_event.m.Houndmaster.getSkills().update();

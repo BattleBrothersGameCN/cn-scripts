@@ -220,7 +220,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] 克朗"
+						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color]克朗"
 					}
 				];
 			}
@@ -356,7 +356,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color] 克朗"
+						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]100[/color]克朗"
 					}
 				];
 			}
@@ -418,7 +418,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]200[/color] 克朗"
+						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]200[/color]克朗"
 					}
 				];
 			}

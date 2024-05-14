@@ -109,7 +109,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_medicine.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 医疗用品"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color]点医疗用品"
 				});
 			}
 
@@ -150,7 +150,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_medicine.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] 医疗用品"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color]点医疗用品"
 				});
 			}
 
@@ -210,7 +210,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_medicine.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 医疗用品"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color]点医疗用品"
 				});
 			}
 
@@ -239,7 +239,7 @@ this.march_wear_and_tear_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_medicine.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]-" + amount + "[/color] 医疗用品"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]-" + amount + "[/color]点医疗用品"
 				});
 			}
 

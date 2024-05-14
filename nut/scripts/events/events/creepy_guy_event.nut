@@ -105,7 +105,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color]克朗"
 					}
 				];
 			}
@@ -135,7 +135,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]" + money + "[/color] 克朗"
+						text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]" + money + "[/color]克朗"
 					}
 				];
 			}
@@ -166,7 +166,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color] 克朗"
+						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]500[/color]克朗"
 					}
 				];
 				local initiative = this.Math.rand(2, 4);
@@ -213,12 +213,12 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你失去了 [color=" + this.Const.UI.Color.NegativeEventValue + "]500[/color] 克朗"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]500[/color]克朗"
 				});
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]1000[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]1000[/color]克朗"
 				});
 				local initiative = this.Math.rand(2, 4);
 				_event.m.Minstrel.getBaseProperties().Initiative += initiative;
@@ -264,7 +264,7 @@ this.creepy_guy_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_money.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]250[/color] 克朗"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]250[/color]克朗"
 				});
 				_event.m.Butcher.improveMood(1.0, "卖了他的一根手指赚了一大笔钱");
 

@@ -7,7 +7,7 @@ this.destroyed_greenskin_catapult <- this.inherit("scripts/entity/tactical/entit
 
 	function getDescription()
 	{
-		return "在绿皮围攻下已无法使用。";
+		return "失去作用的绿皮攻城器。";
 	}
 
 	function onInit()

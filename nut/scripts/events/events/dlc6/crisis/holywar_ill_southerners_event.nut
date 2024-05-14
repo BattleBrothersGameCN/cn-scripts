@@ -57,7 +57,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] 工具和补给"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color]点工具和补给"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -122,7 +122,7 @@ this.holywar_ill_southerners_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color] 工具和补给"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color]点工具和补给"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 

@@ -66,7 +66,7 @@ this.cart_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.m.SuccessList.push({
 			id = 10,
 			icon = "ui/icons/asset_money.png",
-			text = "你花费了 [color=" + this.Const.UI.Color.NegativeEventValue + "]5,000[/color] 克朗"
+			text = "你花了[color=" + this.Const.UI.Color.NegativeEventValue + "]5,000[/color]克朗"
 		});
 		this.World.Assets.getStash().resize(this.World.Assets.getStash().getCapacity() + 27);
 		this.m.SuccessList.push({
