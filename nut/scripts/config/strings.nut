@@ -509,10 +509,10 @@ gt.Const.Strings.MercenaryCompanyNames <- [
 ];
 gt.Const.Strings.NobleHouseNames <- [
 	"格林蒙德",
-	"小村堡",
+	"威尔博格",
 	"阿姆斯丘",
 	"哥达",
-	"铁石",
+	"埃森斯坦",
 	"格劳沃尔",
 	"拉本霍尔特",
 	"萨默温",
@@ -534,9 +534,9 @@ gt.Const.Strings.NobleHouseNames <- [
 	"尼德加德",
 	"罗森文",
 	"图拉",
-	"冽水井",
+	"卡尔滕伯恩",
 	"克里格",
-	"石壁山",
+	"斯坦沃尔",
 	"哈康",
 	"奥斯滕"
 ];
@@ -608,7 +608,7 @@ gt.Const.Strings.Relations <- [
 	"盟友"
 ];
 gt.Const.Strings.Tactical.TerrainName <- [
-	"没有任何",
+	"无",
 	"泥路",
 	"粘土路",
 	"鹅卵石路",
@@ -629,7 +629,7 @@ gt.Const.Strings.Tactical.TerrainName <- [
 	"浅水"
 ];
 gt.Const.Strings.Tactical.TerrainDescription <- [
-	"没有任何",
+	"无",
 	"源于人类和动物不断使用的土路。",
 	"一条由夯实粘土组成的原始道路。",
 	"用于马车和大型车辆的鹅卵石道路。",
@@ -1226,7 +1226,7 @@ gt.Const.Strings.Distance <- [
 gt.Const.Strings.PartyStrength <- [
 	"弱小的",
 	"虚弱的",
-	"平均",
+	"一般",
 	"强的",
 	"危险的",
 	"致命",
@@ -1235,9 +1235,9 @@ gt.Const.Strings.PartyStrength <- [
 gt.Const.Strings.EngageEnemyNumbers <- [
 	"几个(2-3)",
 	"一些(4-6)",
-	"许多(7-9)",
-	"很多(10-11)",
-	"大量(12以上)"
+	"许多(7-10)",
+	"很多(11-13)",
+	"大量(14以上)"
 ];
 gt.Const.Strings.InventoryHeader <- [
 	"驴",

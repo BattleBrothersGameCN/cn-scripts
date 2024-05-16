@@ -83,7 +83,7 @@ this.escort_envoy_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"护送使节%envoy_title% %envoy%至队长(caption)所在地" + this.Contract.m.Destination.getName() + "在%direction%方向"
+					"护送使节%envoy_title%%envoy%至" + this.Contract.m.Destination.getName() + "，在%direction%方"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)

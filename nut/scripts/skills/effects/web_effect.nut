@@ -3,7 +3,7 @@ this.web_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.web";
-		this.m.Name = "困在蛛网中";
+		this.m.Name = "蛛网缠身";
 		this.m.Description = "一张又大又粘的蛛网将这个角色固定在了原地，阻碍了他自我保护或全力攻击的能力，力。只有割开蛛网才能挣脱。";
 		this.m.Icon = "skills/status_effect_80.png";
 		this.m.IconMini = "status_effect_80_mini";

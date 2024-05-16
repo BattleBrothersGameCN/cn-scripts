@@ -243,7 +243,7 @@ this.hunting_alps_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "等待报酬。",
+					Text = "等着数钱吧。",
 					function getResult()
 					{
 						return 0;

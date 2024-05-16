@@ -37,7 +37,7 @@ gt.Const.Contracts.IntroNobleHouseFriendly <- [
 		ShowDifficulty = true,
 		Options = [
 			{
-				Text = "我们来商量商量。",
+				Text = "那就说正事吧。",
 				function getResult()
 				{
 					return "Task";
@@ -121,7 +121,7 @@ gt.Const.Contracts.IntroSettlementCold <- [
 		ShowDifficulty = true,
 		Options = [
 			{
-				Text = "我们来看看这是怎么回事。",
+				Text = "让我们一探究竟。",
 				function getResult()
 				{
 					return "Task";
