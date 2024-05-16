@@ -9,7 +9,7 @@ this.allied_nobles_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.m.RewardTooltip = "你将被授予结盟的贵族家族独有的装备";
 		this.m.UIText = "与一个贵族家族达成“盟友”关系";
 		this.m.TooltipText = "通过履行派系成员的合同，将与任一贵族家族的关系提升至“盟友”。半途而废或背叛他们会降低你们的关系。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_78.png[/img]你早就听说贵族是一群难以相处、反复无常的人，实际打过交道以后也确实是这样，但终究和%noblehouse%的关系有利可图，甚至令人愉快。在宴会上，他们不会和你平起平坐，但在战场上，他们也休想比得过你。通过辛勤的工作和一贯的忠诚，%companyname%终于被%noblehouse%看作可信赖的盟友。\n\n这种地位的好处之一是你的士兵获得了浏览贵族们的军械库的许可。一些与贵族意见相左者的激进分子可能会因你们与贵族结盟、在盾牌上整上他们的旗帜而称你们为贵族的走狗，好在没人会当面这么做。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_78.png[/img]你早就听说过，贵族是一群难以相处、反复无常的家伙，实际打过交道以后也确实如此，但终究和%noblehouse%的关系有利可图，甚至令人愉快。在宴会上，他们不会和你平起平坐，但在战场上，他们也休想比得过你。通过辛勤的工作和一贯的忠诚，%companyname%终于被%noblehouse%看作值得信赖的盟友。\n\n这种地位的好处之一是你的士兵获得了浏览贵族们的军械库的许可。一些与贵族意见相左者的激进分子可能会因你们与贵族结盟、在盾牌上整上他们的旗帜而称你们为贵族的走狗，好在没人会当面这么做。";
 		this.m.SuccessButtonText = "好极了。";
 	}
 

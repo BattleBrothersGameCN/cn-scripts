@@ -306,7 +306,7 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "FoundIt",
 			Title = "在%location%",
-			Text = "[img]gfx/ui/events/event_57.png[/img]{你用瞄准镜观察到了%location%，并将其标记在你的地图上。很容易。是时候回到%employer%那了。 | 好了，现在已经是时候回到%employer%那里了，因为寻找%location%比你想象的更容易。你在地图上做了标记，停下来笑了笑，摇了摇头。真是幸运。 | %location%出现在视野中，你立即发挥你的注解能力将其标注在地图上。%randombrother%问是否就这样任务就完成了，你点了点头。不管是难是易，%employer%都会等着付钱给你。}",
+			Text = "[img]gfx/ui/events/event_57.png[/img]{你用望远镜观察到了%location%，将其标记在你的地图上。容易极了。是时候回到%employer%那了。 | 好了，是时候回到%employer%那里，找到%location%比你想象的更容易多了。你在地图上做了标记，停下来笑了笑，摇了摇头。真是幸运。 | %location%在视野中现身，你立即发挥你的标记能力，将其再现在地图上。%randombrother%问是不是这样就行了，你点了点头。不管是难是易，%employer%都会准备好付钱。}",
 			Image = "",
 			List = [],
 			Options = [

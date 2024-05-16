@@ -306,7 +306,7 @@ gt.Const.HitpointsStateName <- [
 ];
 gt.Const.FatigueStateName <- [
 	"精神饱满",
-	"热身完成",
+	"热身完毕",
 	"喘息",
 	"疲劳",
 	"精疲力竭",

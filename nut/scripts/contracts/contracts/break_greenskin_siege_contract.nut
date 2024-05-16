@@ -554,7 +554,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Failure1",
 			Title = "%objective%周边",
-			Text = "[img]gfx/ui/events/event_68.png[/img]{你花费的时间太久了，现在%objective%已经被毁了。绿皮族使用了震惊战术冲破了城墙，从漂来的臭味不难发现城内所有人都已被屠杀。 | %companyname%没有及时解围导致%objective%付出了代价。他们本以为你会拯救他们，但却让他们失望了。如果有好消息的话，那就是没有人幸存下来诉说你的失败。然而你的雇主：%employer%则是另一回事。这位贵族毫无疑问会对你的无为愤怒。 | %objective%已经被破城而入了！兽人使用了可怕的战争机器摧毁了城墙。凶残的绿皮族涌入城镇，杀害了一切可以杀害的人，将一切可以抓的人掳到诸神都不知道的地方。你的雇主：%employer%对你的失败感到非常愤怒！ | 你没有及时解围%objective%！绿皮族击破了城门，城镇已经消失。考虑到%employer%的付费目标与之相反，可以肯定他对这一进展感到不满。 | 你在混乱中没有完成你的工作，导致%objective%被绿皮族攻陷！愿众神怜悯城民，但不要期望你的雇主%employer%会对这个结果感到满意。}",
+			Text = "[img]gfx/ui/events/event_68.png[/img]{你耽搁了太久，%objective%成了一片废墟。绿皮使用了震慑战术冲破了城墙，从飘来的臭味不难发现，城内的人已经被屠戮殆尽。 | %companyname%没能及时解围，%objective%为此付出了代价。他们本以为你会拯救他们，但你却让他们失望了。如果说有什么好消息，那就是没人能幸存下来诉说你的失败。怎么应付雇主%employer%就是另一码事了。毫无疑问，这位贵族会对你的无所作为感到愤怒。 | %objective%被攻破了！兽人驾驭着可怕的战争机器摧毁了城墙。凶残的绿皮涌入城镇，杀害了一切敢于挡路的人，掳到了鬼知道是哪的地方。你的雇主%employer%对你的失败非常愤怒！ | 你没能及时解%objective%之围！绿皮冲破了城门，把城镇夷为平地。考虑到这和%employer%付费的目的相反，可以肯定，他对事情发展成这样感到不满。 | 你磨磨蹭蹭不务正业，致使%objective%被绿皮攻陷！愿众神怜悯城民，但不要指望你的雇主%employer%会对这个结果感到满意。}",
 			Image = "",
 			Characters = [],
 			List = [],

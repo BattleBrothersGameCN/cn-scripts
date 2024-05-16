@@ -3,7 +3,7 @@ this.net_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.net";
-		this.m.Name = "陷在网中";
+		this.m.Name = "被困网中";
 		this.m.Description = "一张大网将这个角色固定在了原地并阻碍了他自我保护的能力。只有割开网才能挣脱。";
 		this.m.Icon = "skills/status_effect_58.png";
 		this.m.IconMini = "status_effect_58_mini";

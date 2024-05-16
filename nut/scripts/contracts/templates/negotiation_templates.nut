@@ -178,7 +178,7 @@ gt.Const.Contracts.NegotiationDefault <- [
 			}
 
 			this.Options.push({
-				Text = "算了吧，这不值得。",
+				Text = "算了吧，这可不值得。",
 				function getResult()
 				{
 					this.World.Contracts.removeContract(this.Contract);
@@ -190,16 +190,16 @@ gt.Const.Contracts.NegotiationDefault <- [
 
 			if (!this.Contract.m.Payment.IsNegotiating)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他直起身来。%SPEECH_ON%那么，关于报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意多给你点。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%好，当然。我早就在想这活儿的报酬了。 | 他直起身子。%SPEECH_ON%那么，至于报酬。 | 他笑着说道。%SPEECH_ON%干完这票你就是个大款了我的朋友。 | 他深吸了一口气。%SPEECH_ON%很好，这是我打算给你的。 | 他把手搭在你肩膀上，笑着重新说道。%SPEECH_ON%我想我知道怎样才算对得起你的服务。 | 他用手比划着，在手指上点来点去，算着什么，但你看不懂。%SPEECH_ON%从经验来看，合理的报酬会是。 | 他点了点头。%SPEECH_ON%你看起来挺有本事，我愿意多给你点。 | 他晃着一袋子钱币。%SPEECH_ON%搞定这件事，它就是你的了。 | 他摊开手掌。%SPEECH_ON%我最近手头很紧，多说无益，我只有这么多。 | %SPEECH_ON%放心吧，对你要做的事情来说，我给的相当不错。}";
 				this.Contract.m.Payment.IsNegotiating = true;
 			}
 			else if (this.Contract.m.Payment.IsFinal)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%我拒绝再为此付出更多的报酬。 | %SPEECH_START%给我理性点。 | %SPEECH_START%不，不，不。 | %SPEECH_START%你以为你是谁？给多少报酬是我决定的。 | 他只是严肃地看着你，摇了摇头。%SPEECH_ON% | %SPEECH_START%没门！%SPEECH_OFF%他愤怒地大吼。%SPEECH_ON% | %SPEECH_START%不，你已经得到的比你应得的更多了。 | %SPEECH_START%不。不要把我逼急了！ | %SPEECH_START%我觉得你还不太明白怎么回事。如果你想为这个任务得到报酬，我们需要达成一致。我的报价还是那样。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%我拒绝付更多报酬。 | %SPEECH_START%讲点道理。 | %SPEECH_START%不，不行，绝对不行。 | %SPEECH_START%你当你是谁？报酬是我定的。 | 他只是严肃地看着你，摇了摇头。%SPEECH_ON% | %SPEECH_START%没门！%SPEECH_OFF%他愤怒地大吼。%SPEECH_ON% | %SPEECH_START%不行，我已经多给着你了。 | %SPEECH_START%不行。别把我逼急了！ | %SPEECH_START%我觉得你还不太明白。如果你想得到报酬，那我们就需要达成一致。我的报价还是那样。}";
 			}
 			else
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%那就这样? | 他深吸了一口气。%SPEECH_ON% | 他叹了口气。%SPEECH_ON% | %SPEECH_START%行吧。 | %SPEECH_START%好吧，好吧。 | %SPEECH_START%如果一定要这样的话。 | %SPEECH_START%行吧，那这样呢？ | %SPEECH_START%当然，当然，我明白了。 | %SPEECH_START%还算合理。 | %SPEECH_START%有趣。我觉得那这样比较合适。 | %SPEECH_START%那这样如何？ | %SPEECH_START%让我报下价吧。 | %SPEECH_ON%可以。那这样你接受吗？ | %SPEECH_START%好吧。鉴于你的要求，这是我新的报价。 | %SPEECH_START%让我们快点敲定吧。这是我的新报价。 | %SPEECH_START%我们朋友一场，对吧？让我们看看……}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%那就这样? | 他深吸了一口气。%SPEECH_ON% | 他叹了口气。%SPEECH_ON% | %SPEECH_START%行吧。 | %SPEECH_START%好吧，好吧。 | %SPEECH_START%非要这样的话。 | %SPEECH_START%行吧，那这样呢？ | %SPEECH_START%好吧，当然，我理解。 | %SPEECH_START%还算合理。 | %SPEECH_START%有趣。我觉得那这样比较合适。 | %SPEECH_START%那这样如何？ | %SPEECH_START%我的报价如下。 | %SPEECH_ON%可以。那这样你接受吗？ | %SPEECH_START%好吧。鉴于你的要求，这是我新的报价。 | %SPEECH_START%快点敲定吧。这是我的新报价。 | %SPEECH_START%我们朋友一场，对吧？让我们看看……}";
 			}
 
 			if (this.Contract.m.Payment.Completion != 0 && this.Contract.m.Payment.Advance == 0)
@@ -216,7 +216,7 @@ gt.Const.Contracts.NegotiationDefault <- [
 			}
 			else
 			{
-				this.Text += "你什么也得不到。你希望这样吗？%SPEECH_OFF%";
+				this.Text += "那你什么也得不到。你真这么想吗？%SPEECH_OFF%";
 			}
 		}
 
@@ -224,7 +224,7 @@ gt.Const.Contracts.NegotiationDefault <- [
 	{
 		ID = "Negotiation.Fail",
 		Title = "谈判",
-		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%你表现得好像你们是世上唯一能用剑换钱的人。我想我会去找其他需要的人。祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，我想我在这里是在浪费时间。%SPEECH_OFF% | %SPEECH_START%我受够了！我肯定我会找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！忘了这份合同吧。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我没有和贪婪的魔鬼做交易的习惯！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，这样我就可以去找其他更明事理的人了。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_ON%这对我来说完全是浪费时间。要是没想明白就别再来找我了。%SPEECH_OFF%}",
+		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_ON%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
 		Image = "",
 		List = [],
 		ShowEmployer = true,
@@ -234,7 +234,7 @@ gt.Const.Contracts.NegotiationDefault <- [
 				Text = "我们不会为了这么微薄的报酬而冒生命危险……",
 				function getResult()
 				{
-					this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationContractNegotiationsFail, "合同谈判变糟了");
+					this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationContractNegotiationsFail, "合同谈崩了");
 					this.World.Contracts.removeContract(this.Contract);
 					return 0;
 				}
@@ -269,7 +269,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 					if (this.Contract.m.Payment.Count != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + " 克朗（每带回一个人头），人数最多为 " + this.Contract.m.Payment.MaxCount + " ");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + " 克朗乘带回的人头数，最多计 " + this.Contract.m.Payment.MaxCount + "个头");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
@@ -445,7 +445,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 			}
 
 			this.Options.push({
-				Text = "算了吧，这不值得。",
+				Text = "算了吧，这可不值得。",
 				function getResult()
 				{
 					this.World.Contracts.removeContract(this.Contract);
@@ -457,16 +457,16 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 			if (!this.Contract.m.Payment.IsNegotiating)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意多给你点。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%好，当然。我早就在想这活儿的报酬了。 | 他笑着说道。%SPEECH_ON%干完这票你就是个大款了我的朋友。 | 他深吸了一口气。%SPEECH_ON%很好，这是我打算给你的。 | 他把手搭在你肩膀上，笑着重新说道。%SPEECH_ON%我想我知道怎样才算对得起你的服务。 | 他用手比划着，在手指上点来点去，算着什么，但你看不懂。%SPEECH_ON%从经验来看，合理的报酬会是。 | 他点了点头。%SPEECH_ON%你看起来挺有本事，我愿意多给你点。 | 他晃着一袋子钱币。%SPEECH_ON%搞定这件事，它就是你的了。 | 他摊开手掌。%SPEECH_ON%我最近手头很紧，多说无益，我只有这么多。 | %SPEECH_ON%放心吧，对你要做的事情来说，我给的相当不错。}";
 				this.Contract.m.Payment.IsNegotiating = true;
 			}
 			else if (this.Contract.m.Payment.IsFinal)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%我拒绝再为此付出更多的报酬。 | %SPEECH_START%给我理性点。 | %SPEECH_START%不，不，不。 | %SPEECH_START%你以为你是谁？给多少报酬是我决定的。 | 他只是严肃地看着你，摇了摇头。%SPEECH_ON% | %SPEECH_START%没门！%SPEECH_OFF%他愤怒地大吼。%SPEECH_ON% | %SPEECH_START%不，你已经得到的比你应得的更多了。 | %SPEECH_START%不。不要把我逼急了！ | %SPEECH_START%我觉得你还不太明白怎么回事。如果你想为这个任务得到报酬，我们需要达成一致。我的报价还是那样。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%我拒绝付更多报酬。 | %SPEECH_START%讲点道理。 | %SPEECH_START%不，不行，绝对不行。 | %SPEECH_START%你当你是谁？报酬是我定的。 | 他只是严肃地看着你，摇了摇头。%SPEECH_ON% | %SPEECH_START%没门！%SPEECH_OFF%他愤怒地大吼。%SPEECH_ON% | %SPEECH_START%不行，我已经多给着你了。 | %SPEECH_START%不行。别把我逼急了！ | %SPEECH_START%我觉得你还不太明白。如果你想得到报酬，那我们就需要达成一致。我的报价还是那样。}";
 			}
 			else
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%那就这样? | 他深吸了一口气。%SPEECH_ON% | 他叹了口气。%SPEECH_ON% | %SPEECH_START%行吧。 | %SPEECH_START%好吧，好吧。 | %SPEECH_START%如果一定要这样的话。 | %SPEECH_START%行吧，那这样呢？ | %SPEECH_START%当然，当然，我明白了。 | %SPEECH_START%还算合理。 | %SPEECH_START%有趣。我觉得那这样比较合适。 | %SPEECH_START%那这样如何？ | %SPEECH_START%让我报下价吧。 | %SPEECH_ON%可以。那这样你接受吗？ | %SPEECH_START%好吧。鉴于你的要求，这是我新的报价。 | %SPEECH_START%让我们快点敲定吧。这是我的新报价。 | %SPEECH_START%我们朋友一场，对吧？让我们看看……}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%那就这样? | 他深吸了一口气。%SPEECH_ON% | 他叹了口气。%SPEECH_ON% | %SPEECH_START%行吧。 | %SPEECH_START%好吧，好吧。 | %SPEECH_START%非要这样的话。 | %SPEECH_START%行吧，那这样呢？ | %SPEECH_START%好吧，当然，我理解。 | %SPEECH_START%还算合理。 | %SPEECH_START%有趣。我觉得那这样比较合适。 | %SPEECH_START%那这样如何？ | %SPEECH_START%我的报价如下。 | %SPEECH_ON%可以。那这样你接受吗？ | %SPEECH_START%好吧。鉴于你的要求，这是我新的报价。 | %SPEECH_START%快点敲定吧。这是我的新报价。 | %SPEECH_START%我们朋友一场，对吧？让我们看看……}";
 			}
 
 			if (this.Contract.m.Payment.Completion != 0 && this.Contract.m.Payment.Advance == 0 && this.Contract.m.Payment.Count == 0)
@@ -499,7 +499,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 			}
 			else
 			{
-				this.Text += "你什么也得不到。你希望这样吗？%SPEECH_OFF%";
+				this.Text += "那你什么也得不到。你真这么想吗？%SPEECH_OFF%";
 			}
 		}
 
@@ -507,7 +507,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 	{
 		ID = "Negotiation.Fail",
 		Title = "谈判",
-		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%你表现得好像你们是世上唯一能用剑换钱的人。我想我会去找其他需要的人。祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，我想我在这里是在浪费时间。%SPEECH_OFF% | %SPEECH_START%我受够了！我肯定我会找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！忘了这份合同吧。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我没有和贪婪的魔鬼做交易的习惯！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，这样我就可以去找其他更明事理的人了。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_START%这对我来说完全是浪费时间。要是没想明白就别再来找我了。%SPEECH_OFF%}",
+		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_START%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
 		Image = "",
 		List = [],
 		ShowEmployer = true,
@@ -517,7 +517,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 				Text = "我们不会为了这么微薄的报酬而冒生命危险……",
 				function getResult()
 				{
-					this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationContractNegotiationsFail, "合同谈判变糟了");
+					this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationContractNegotiationsFail, "合同谈崩了");
 					this.World.Contracts.removeContract(this.Contract);
 					return 0;
 				}
@@ -552,7 +552,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 					if (this.Contract.m.Payment.Count != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + " 克朗（到达时每取得一个人头），人数最多为 " + this.Contract.m.Payment.MaxCount + " ");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + " 克朗乘回来时的人头数，最多计 " + this.Contract.m.Payment.MaxCount + "个头");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
@@ -728,7 +728,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 			}
 
 			this.Options.push({
-				Text = "算了吧，这不值得。",
+				Text = "算了吧，这可不值得。",
 				function getResult()
 				{
 					this.World.Contracts.removeContract(this.Contract);
@@ -740,16 +740,16 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 			if (!this.Contract.m.Payment.IsNegotiating)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%是的。很好。我之前就考虑过你任务的报酬。 | 他露出了微笑。%SPEECH_ON%这将使你成为一个阔佬，我的朋友。 | 他深吸了一口气。%SPEECH_ON%非常好，这是我准备给你的报价。 | 他把手放在你的肩膀上，露出肯定的微笑。%SPEECH_ON%我想我知道一种合适的报酬来回报你的服务。 | 他用手比划着，指着手指，好像在数什么东西，但这对你来说毫无意义。%SPEECH_ON%从经验来看，这是此项任务的合理报酬。 | 他点了点头。%SPEECH_ON%你看起来挺有能力的，我愿意多给你点。 | 他晃动着一袋钱币。%SPEECH_ON%如果你帮我解决这个问题，这就是你的了。 | 他摊开了双手。%SPEECH_ON%我现在手头紧张，所以在你提问之前，这是我现在全部能给的报酬。 | %SPEECH_ON%请放心，我现在所提供的报酬对于你的工作来说是非常不错的。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{他点了点头。%SPEECH_ON%好，当然。我早就在想这活儿的报酬了。 | 他笑着说道。%SPEECH_ON%干完这票你就是个大款了我的朋友。 | 他深吸了一口气。%SPEECH_ON%很好，这是我打算给你的。 | 他把手搭在你肩膀上，笑着重新说道。%SPEECH_ON%我想我知道怎样才算对得起你的服务。 | 他用手比划着，在手指上点来点去，算着什么，但你看不懂。%SPEECH_ON%从经验来看，合理的报酬会是。 | 他点了点头。%SPEECH_ON%你看起来挺有本事，我愿意多给你点。 | 他晃着一袋子钱币。%SPEECH_ON%搞定这件事，它就是你的了。 | 他摊开手掌。%SPEECH_ON%我最近手头很紧，多说无益，我只有这么多。 | %SPEECH_ON%放心吧，对你要做的事情来说，我给的相当不错。}";
 				this.Contract.m.Payment.IsNegotiating = true;
 			}
 			else if (this.Contract.m.Payment.IsFinal)
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%我拒绝再为此付出更多的报酬。 | %SPEECH_START%给我理性点。 | %SPEECH_START%不，不，不。 | %SPEECH_START%你以为你是谁？给多少报酬是我决定的。 | 他只是严肃地看着你，摇了摇头。%SPEECH_ON% | %SPEECH_START%没门！%SPEECH_OFF%他愤怒地大吼。%SPEECH_ON% | %SPEECH_START%不，你已经得到的比你应得的更多了。 | %SPEECH_START%不。不要把我逼急了！ | %SPEECH_START%我觉得你还不太明白怎么回事。如果你想为这个任务得到报酬，我们需要达成一致。我的报价还是那样。}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%我拒绝付更多报酬。 | %SPEECH_START%讲点道理。 | %SPEECH_START%不，不行，绝对不行。 | %SPEECH_START%你当你是谁？报酬是我定的。 | 他只是严肃地看着你，摇了摇头。%SPEECH_ON% | %SPEECH_START%没门！%SPEECH_OFF%他愤怒地大吼。%SPEECH_ON% | %SPEECH_START%不行，我已经多给着你了。 | %SPEECH_START%不行。别把我逼急了！ | %SPEECH_START%我觉得你还不太明白。如果你想得到报酬，那我们就需要达成一致。我的报价还是那样。}";
 			}
 			else
 			{
-				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%那就这样? | 他深吸了一口气。%SPEECH_ON% | 他叹了口气。%SPEECH_ON% | %SPEECH_START%行吧。 | %SPEECH_START%好吧，好吧。 | %SPEECH_START%如果一定要这样的话。 | %SPEECH_START%行吧，那这样呢？ | %SPEECH_START%当然，当然，我明白了。 | %SPEECH_START%还算合理。 | %SPEECH_START%有趣。我觉得那这样比较合适。 | %SPEECH_START%那这样如何？ | %SPEECH_START%让我报下价吧。 | %SPEECH_ON%可以。那这样你接受吗？ | %SPEECH_START%好吧。鉴于你的要求，这是我新的报价。 | %SPEECH_START%让我们快点敲定吧。这是我的新报价。 | %SPEECH_START%我们朋友一场，对吧？让我们看看……}";
+				this.Text = "[img]gfx/ui/events/event_04.png[/img]{%SPEECH_START%那就这样? | 他深吸了一口气。%SPEECH_ON% | 他叹了口气。%SPEECH_ON% | %SPEECH_START%行吧。 | %SPEECH_START%好吧，好吧。 | %SPEECH_START%非要这样的话。 | %SPEECH_START%行吧，那这样呢？ | %SPEECH_START%好吧，当然，我理解。 | %SPEECH_START%还算合理。 | %SPEECH_START%有趣。我觉得那这样比较合适。 | %SPEECH_START%那这样如何？ | %SPEECH_START%我的报价如下。 | %SPEECH_ON%可以。那这样你接受吗？ | %SPEECH_START%好吧。鉴于你的要求，这是我新的报价。 | %SPEECH_START%快点敲定吧。这是我的新报价。 | %SPEECH_START%我们朋友一场，对吧？让我们看看……}";
 			}
 
 			if (this.Contract.m.Payment.Completion != 0 && this.Contract.m.Payment.Advance == 0 && this.Contract.m.Payment.Count == 0)
@@ -782,7 +782,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 			}
 			else
 			{
-				this.Text += "你什么也得不到。你希望这样吗？%SPEECH_OFF%";
+				this.Text += "那你什么也得不到。你真这么想吗？%SPEECH_OFF%";
 			}
 		}
 
@@ -790,7 +790,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 	{
 		ID = "Negotiation.Fail",
 		Title = "谈判",
-		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%你表现得好像你们是世上唯一能用剑换钱的人。我想我会去找其他需要的人。祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，我想我在这里是在浪费时间。%SPEECH_OFF% | %SPEECH_START%我受够了！我肯定我会找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！忘了这份合同吧。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我没有和贪婪的魔鬼做交易的习惯！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，这样我就可以去找其他更明事理的人了。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_START%这对我来说完全是浪费时间。要是没想明白就别再来找我了。%SPEECH_OFF%}",
+		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_START%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
 		Image = "",
 		List = [],
 		ShowEmployer = true,
@@ -800,7 +800,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 				Text = "我们不会为了这么微薄的报酬而冒生命危险……",
 				function getResult()
 				{
-					this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationContractNegotiationsFail, "合同谈判变糟了");
+					this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationContractNegotiationsFail, "合同谈崩了");
 					this.World.Contracts.removeContract(this.Contract);
 					return 0;
 				}

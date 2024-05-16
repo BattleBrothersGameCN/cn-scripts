@@ -353,7 +353,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(1.0, "他很高兴和[caption]一起战斗。" + _event.m.Swordmaster.getName());
+						bro.improveMood(1.0, "乐意并肩作战和" + _event.m.Swordmaster.getName());
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
