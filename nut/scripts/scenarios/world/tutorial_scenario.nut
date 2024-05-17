@@ -3,8 +3,8 @@ this.tutorial_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 	function create()
 	{
 		this.m.ID = "scenario.tutorial";
-		this.m.Name = "重建一个战团（教程）";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_21.png[/img][/p][p]你是一家佣兵战团的二把手，战团一直在追踪一个名叫霍加特的强盗。一个意想不到的事件让战团四分五裂，而你负责重建它的昔日辉煌。\n\n[color=#bcad8c]推荐给新玩家，因为它包括了一些在开始时有用的指导。[/color][/p]";
+		this.m.Name = "重建战团（教程）";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_21.png[/img][/p][p]你是一家佣兵战团的二把手。在对一位名叫霍加特的强盗的追踪中，一场突如其来的变故让战团支离破碎。现在你接手了战团，负责重建它的昔日辉煌。\n\n[color=#bcad8c]推荐给新玩家，在游戏初期提供了一些实用引导。[/color][/p]";
 		this.m.Difficulty = 1;
 		this.m.Order = 0;
 	}
@@ -19,7 +19,7 @@ this.tutorial_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 			local bro;
 			bro = roster.create("scripts/entity/tactical/player");
 			bro.m.HireTime = this.Time.getVirtualTimeF();
-			bro.worsenMood(0.5, "失去了大部分的战团同伴");
+			bro.worsenMood(0.5, "失去了大部分战团同伴");
 
 			while (names.find(bro.getNameOnly()) != null)
 			{
