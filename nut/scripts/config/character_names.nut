@@ -448,7 +448,7 @@ gt.Const.Strings.GladiatorTitles <- [
 	"无情的",
 	"·猎头者",
 	"·无双",
-	"不败者",
+	"未尝一败",
 	"·残暴者",
 	"·弱者",
 	"奴隶",
@@ -641,8 +641,8 @@ gt.Const.Strings.SwordmasterTitles <- [
 	"·大蛇",
 	"·迅捷",
 	"刀锋舞者",
-	"不败者",
-	"·不败",
+	"未尝一败",
+	"不败",
 	"·冠军勇士",
 	"·王国之主",
 	"·长者",
@@ -983,7 +983,7 @@ gt.Const.Strings.AncientDeadNames <- [
 	"厄尔皮达斯",
 	"亚里士德",
 	"莫西姆斯",
-	"雅典娜",
+	"阿铁纳迭斯",
 	"巴丘斯"
 ];
 gt.Const.Strings.AncientDeadTitles <- [
