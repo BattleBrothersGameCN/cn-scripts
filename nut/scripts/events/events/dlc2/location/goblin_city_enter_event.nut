@@ -57,7 +57,7 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "我们会担任前锋。",
+					Text = "我们要铲除他们的前哨。",
 					function getResult( _event )
 					{
 						return "D";

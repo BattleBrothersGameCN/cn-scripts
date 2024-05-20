@@ -313,7 +313,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.Home.getSprite("selection").Visible = false;
 				this.Contract.m.BigCity.getSprite("selection").Visible = true;
 				this.Contract.m.BulletpointsObjectives = [
-					"拜访%townname%%citydirection%边的%bigcity% "
+					"造访%townname%%citydirection%边的%bigcity% "
 				];
 
 				if (this.World.getPlayerRoster().getSize() < 6)
@@ -452,7 +452,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 				}
 
 				this.Contract.m.BulletpointsObjectives = [
-					"前往在 %townname% %direction% 方向的 %location%",
+					"前往%townname%%direction%方向的%location%",
 					"击杀%boss%。"
 				];
 				this.Contract.m.BulletpointsPayment = [
@@ -527,7 +527,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.Home.getSprite("selection").Visible = true;
 				this.Contract.m.BigCity.getSprite("selection").Visible = false;
 				this.Contract.m.BulletpointsObjectives = [
-					"返回 %townname% 找 %employer% 索取报酬"
+					"返回%townname%，找%employer%领取报酬"
 				];
 				this.World.State.getPlayer().setAttackable(false);
 			}
@@ -581,7 +581,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "IntroAftermath",
 			Title = "结果",
-			Text = "[img]gfx/ui/events/event_22.png[/img]你还活着。你们赢了。\n\n肾上腺素逐渐褪去，你不能控制自己的身体倒在了地面上。 你咬紧牙关，折断了箭杆。 你的胸膛起伏着，呼吸带痛，一切都变得模糊起来。\n\n战团被毁灭了，只剩下了几个人。 霍加特那个混蛋名副其实，就像黄鼠狼一样逃走了。%SPEECH_ON%现在怎么办，队长？%SPEECH_OFF%一个声音在后面说道。 是坐在你边上的 %bro2%，他沾满血的斧子被平放在他的腿上。 你转向他回答，但你还没来得及回答，他就继续说下去。%SPEECH_ON%伯恩哈德死了。他们割断了他的喉咙。 他是个好人也是一个特别好的领袖，但一个错误就够了。 你成为了现在管事的那个人，不是吗？%SPEECH_OFF%%bro3% 加入了你们，仍然沉重的呼吸着。然后是 %bro1%。%SPEECH_ON%把仪式和涂油留到其他时候吧。让我们好好安葬这些人, 然后回到 %townname% 收取我们的报酬。 黄鼠狼的人被杀了，毕竟。 除此之外，队长，我们也应该在失去你之前处理好那个伤口。 不想剩下 %bro3% 来管事，对吧？%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_22.png[/img]你还活着。你们赢了。\n\n肾上腺素逐渐褪去，你控制不住自己的身体，倒在了地面上。你咬紧牙关，折断了箭杆。你的胸膛起伏着，呼吸带痛，一切都变得模糊起来。\n\n战团遭受了重创，只剩下了几个人。霍加特那个混蛋名不虚传，像黄鼠狼一样溜走了。%SPEECH_ON%现在怎么办，队长？%SPEECH_OFF%一个声音在后面说道。 是坐在你边上的%bro2%，他沾满血的斧子被平放在他的腿上。你转向他想要回话，但你还没来得及回答，他就继续说下去。%SPEECH_ON%伯恩哈德死了。他们割断了他的喉咙。他是个好人，也是个相当好的领袖，但一个错误就足以要了他的命。现在你管事了，对吧？%SPEECH_OFF%%bro3%加入了你们的对话，仍然重重的喘着。然后是%bro1%。%SPEECH_ON%把葬礼和涂油留到其他时候吧。让我们好好安葬这些人, 然后回%townname%拿我们的报酬。不管怎样，黄鼠狼的人确确实实被杀了。另外，队长，我们也得抓紧处理那伤口，别等你死了。没人想让%bro3%来管事，对吧？%SPEECH_OFF%",
 			List = [],
 			Characters = [],
 			Options = [
@@ -605,7 +605,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "PaymentAfterIntro1",
 			Title = "回%townname%路上",
-			Text = "[img]gfx/ui/events/event_79.png[/img]当你们到达 %townname% 的时候，对于旁观者来说是多么悲伤的情景。四个浑身是血并且被打败的雇佣兵运气不太好。 几天前雇用战团的那个人，%employer%，无疑希望你能以一种更荣耀的方式回来。\n\n但仍然，他欢迎你们去他的住宅并提供面包和酒，同时一个仆人去请了医生。 除了一位双手颤抖的老人在照料你的伤口时偶尔发出的呼哧呼哧的声音外，他们很少交谈。 一枚针刺入了你的皮肤，这是即将到来的很多针中的第一针。 你咬紧牙关，直到你以为自己听到一声断音。%employer% 坐在你旁边，问你是否照顾好霍加特。你摇了摇头。%SPEECH_ON%我们杀了他的人，但黄鼠狼最终躲过了我们的刀刃。%SPEECH_OFF%医生挥动一个发光的火棍，表示他想要把它推进你的伤口里。 你点头然后他那么做了。 片刻间，就是这么简单。 你不是一个人，是一团火，火里的血肉，痛苦的傀儡。%employer% 递给你一杯酒。%SPEECH_ON%你做的很好，佣兵。强盗被赶跑了，虽然很可惜霍加特仍然活着。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_79.png[/img]你们到达%townname%时，旁观者一定很伤心。四个运气不好，浑身是血，垂头丧气的雇佣兵。几天前雇佣战团的那个人，%employer%，无疑希望你能以一种更荣耀的方式回来。\n\n尽管如此，他还是欢迎你们去他家做客，拿出了面包和酒，还叫仆人去请了医生。 除了那位双手颤抖的老人在照料你的伤口时，偶尔发出的喘气声以外，他们很少交谈。 一枚针刺入了你的皮肤，而这只是第一针。你咬紧牙关，直到你以为自己听到一声断音。%employer%坐在你旁边，问你是否解决了霍加特。你摇了摇头。%SPEECH_ON%我们杀了他的人，但黄鼠狼本人终究是从我们刀下逃走了。%SPEECH_OFF%医生挥着一根发光的火棍，表示他想要把它推进你的伤口里。你点头，他便那么做了。只消片刻。你不是一个人，是一团火，火里的血肉，痛苦的傀儡。%employer% 递给你一杯酒。%SPEECH_ON%你做的很好，佣兵。强盗被赶跑了，可惜霍加特仍还活着。%SPEECH_OFF%",
 			Characters = [],
 			ShowEmployer = true,
 			List = [],
@@ -629,7 +629,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "PaymentAfterIntro2",
 			Title = "回%townname%路上",
-			Text = "[img]gfx/ui/events/event_79.png[/img]%employer% 叹了口气。%SPEECH_ON%好吧，当然！400克朗，和约定的一样。%SPEECH_OFF%他冲着一个仆人做了个手势，然后仆人手里拿着报酬跑到了你的身边。%SPEECH_ON%我想…我可以再次使用你的服务吗？ 我很想彻底结束霍加特这块心病。 并且我会再付钱给你们。 额外的400克朗，这么说可以吧？%SPEECH_OFF%%bro2% 嗤之以鼻的喝了更多的酒，但是 %bro1% 站起来要说话。%SPEECH_ON%是的，战团被毁了，但我们会重建它！ 没有 %companyname%，%bro2% 会喝酒花光克朗最后流落街头乞讨，还有 %bro3%，诸神在上，我们都知道他会去追女人直到某人把他腐烂的头颅扔进火炉。 我们需要 %companyname%，那是我们拥有的全部！ 你怎么说，队长？%SPEECH_OFF%%bro2% 打了个嗝然后向你举起了他的杯子。%bro3% 调皮地刮了下鼻子然后点了点头。%SPEECH_ON%杀掉那个混蛋霍加特或者不杀，由你来决定，队长。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_79.png[/img]%employer%叹了口气。%SPEECH_ON%好吧，天经地义！400克朗，和约好的一样。%SPEECH_OFF%他冲着一个仆人做了个手势，然后仆人手里拿着报酬跑到了你边上。%SPEECH_ON%我想…我可以再次使用你的服务吗？ 我很想彻底结束霍加特这块心病。当然了，我会再付钱给你们。再加400克朗，谈谈吗？%SPEECH_OFF%%bro2%嗤之以鼻，灌下了更多的酒，但是%bro1% 站起来说道。%SPEECH_ON%没错，战团被毁了，但我们会重建它！没了%companyname%，%bro2%会喝酒花光克朗，流落街头乞讨，还有%bro3%，诸神在上，我们都知道他会跑去追女人，直到头被打烂扔进火炉。我们需要%companyname%，那是我们的全部！你怎么说，队长？%SPEECH_OFF%%bro2%打了个嗝然后向你举起了他的杯子。%bro3%调皮地刮了下鼻子点了点头。%SPEECH_ON%要不要杀了那个混蛋霍加特，你来决定，队长。%SPEECH_OFF%",
 			Characters = [],
 			List = [],
 			Options = [
@@ -661,7 +661,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "PaymentAfterIntro3",
 			Title = "回%townname%路上",
-			Text = "[img]gfx/ui/events/event_79.png[/img]%employer% 满意地鼓了鼓掌。%SPEECH_ON%好极了！我的探子需要一些时间找到霍加特的藏身处。 在这段时间，我建议你们储存一些补给，这样当时机来临时你们就可以做好准备结束这件事。 我最迟过几天后见你们！%SPEECH_OFF%当你离开 %employer%的住宅，站在 %townname% 郊外，%bro1% 找你说话。%SPEECH_ON%我们需要更多的人手，队长。 我知道我在那做了一个大演讲，但虚张声势没有什么用。 我们需要更多的活人在队伍里。 我们应该找到三个不错的人手，给他们买一些像样的武器，给他们穿上我们可以买得起的最好的盔甲。%SPEECH_OFF%这个人暂停了下，环视四周。%SPEECH_ON%我打赌这镇上有一两个渴望新生活的农民。 或者我们可以旅行去 %citydirection%边的%bigcity%。那的市民并不像这的土包子一样耐劳，但我们更有可能找到休息完毕有战斗经验的人。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_79.png[/img]%employer%满意地拍了拍手。%SPEECH_ON%好极了！我的探子找到霍加特的藏身处需要点时间。我建议你们趁着这段时间囤点补给，等到时机到了，好去做个了断。最多几天后见！%SPEECH_OFF%等到你离开%employer%的住宅，走到%townname%郊外以后，%bro1%跟你搭上了话。%SPEECH_ON%我们需要更多的人手，队长。我知道我在那说了不少豪言壮语，但虚张声势没有什么用。我们需要生力军。应该去找三个好小伙，给他们买些像样的武器，穿上手头能买到最好的盔甲。%SPEECH_OFF%他停下来，看了看四周。%SPEECH_ON%我打赌，这个不起眼小镇会有一两个渴望新生活的农民。或者我们可以去%citydirection%边的%bigcity%。那儿的市民没有这里的土包子能吃苦，但有战斗经验的人更愿意在那里休整。%SPEECH_OFF%",
 			List = [],
 			Characters = [],
 			Options = [
@@ -685,7 +685,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "MarketplaceTip",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_77.png[/img]当 %bigcity%的轮廓出现在地平线上时，%bro3% 找你说话。%SPEECH_ON%我之前从没去过 %bigcity%，但去过很多类似的。 这样的城市很适合卖货，这些大惊小怪的，傲慢自大的混蛋喜欢让他们的货物流通。 有这么多商人，你可以找到几乎所有你需要的东西。 小心强盗，并且不要被残忍的商人骗了。%SPEECH_OFF%%bro2% 认为有必要对你应该做的事提出自己的意见。%SPEECH_ON%如果那有一家好的酒馆，我说那就是我们应该最先去的地方。 没什么比一品脱酒更能给人带来好运的了。 上帝知道这是我们应得的！%SPEECH_OFF%%bro3% 摇了摇头。%SPEECH_ON%每次我们到城镇你都这么说！ 甚至在你已经喝多了的时候！%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_77.png[/img]当%bigcity%的轮廓出现在地平线上时，%bro3% 找你搭话。%SPEECH_ON%我之前从没去过%bigcity%，但去过很多类似的。这样的城市很适合卖货，这些谨小慎微，傲慢自大的混蛋都喜欢让他们的货物流通。有了这么多商人，没什么是买不到的。看好便宜货，别被奸商给骗了。%SPEECH_OFF%%bro2%认为有必要对你该做的事提出自己的意见。%SPEECH_ON%如果哪儿有一家好的酒馆，那就是我们最该去的地方。没什么比一品脱酒更能给人带来好运的了。诸神知道，这是我们应得的！%SPEECH_OFF%%bro3%摇了摇头。%SPEECH_ON%到哪儿你都这么说！甚至包括你喝多了的时候！%SPEECH_OFF%",
 			List = [],
 			Characters = [],
 			Options = [
@@ -711,7 +711,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Briefing",
 			Title = "未完成的工作",
-			Text = "[img]gfx/ui/events/event_79.png[/img]%employer% 正在来回踱步，你找到了他。 曾经差点用火棍杀了你的医生站在附近。 他正在从指甲里剔除血块。%employer% 鼓起了掌。%SPEECH_ON%终于，你来了。我有好消息！ 我们抓住了一个霍加特以前的手下！ 我的朋友和那个人做了一次友好的谈话，现在我知道霍加特在哪舔他的伤口了。%SPEECH_OFF%医生清了清嗓子，张开手指就像有一个少女想要画它们似的。 他讲话的口气像是要检查恶疾一样。%SPEECH_ON%名为霍加特的强盗藏在一个小营地 %terrain%，在这里的 %direction%。 根据我和他其中一个手下最文明的讨论，Hoggart 知道 %companyname% 紧随其后，并且自从你上次见到他以来一直在召集人手。%SPEECH_OFF%%employer% 点着头挥手离开了。%SPEECH_ON%祝你好运，佣兵。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_79.png[/img]你找到他时，%employer%正来回踱步。那个差点用火棍杀了你的医生站在旁边，从指甲里剔着干掉的血块。%employer%拍了拍手。%SPEECH_ON%你总算来了。我有个好消息！ 我们抓住了一个霍加特以前的手下！ 我的朋友和那个人做了一次友好的谈话，现在我知道霍加特在哪舔他的伤口了。%SPEECH_OFF%医生清了清嗓子，像少女涂指甲一样张开了手指，讲话的口气像是要检查恶疾一样。%SPEECH_ON%名为霍加特的强盗正躲在%direction%边%terrain%的一间小屋里。基于我和他一名手下最文明的讨论，霍加特知道%companyname%紧追不舍，一直在召集人手。%SPEECH_OFF%%employer%点着头挥别了你。%SPEECH_ON%祝你好运，佣兵。%SPEECH_OFF%",
 			ShowEmployer = true,
 			List = [],
 			Options = [
@@ -733,7 +733,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AfterFinale",
 			Title = "战斗之后",
-			Text = "[img]gfx/ui/events/event_87.png[/img]霍加特死在了他自己的血泊中，僵在一个丑陋且可怕的姿势。 这次他没能逃掉。 你一只脚踩在他的尸体上然后看着你的人。%SPEECH_ON%为了战团。为了所有死去的同伴。%SPEECH_OFF%%bro3% 往死人脸上吐口水。%SPEECH_ON%让我们取下这混蛋的首级然后回到 %townname%%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_87.png[/img]霍加特死在了自己的血泊中，僵在一个丑陋且可怕的姿势。这次他没能逃掉。你一只脚踩在他的尸体上，看着你的人。%SPEECH_ON%为了战团。为了所有死去的同伴。%SPEECH_OFF%%bro3%往那死人脸上吐了口口水。%SPEECH_ON%快割了这混蛋的头，带回%townname%去。%SPEECH_OFF%",
 			List = [],
 			Characters = [],
 			Options = [
@@ -759,7 +759,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "CampingTip",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_75.png[/img]%bro3% 来到你旁边.%SPEECH_ON%有空吗，队长？%SPEECH_OFF%你点头示意他说自己的想法。%SPEECH_ON%战斗留下了磨损的装备而且一些人也受伤了。 我们可以在行军时疗伤和修理装备，但扎营下来做这些速度会快很多。 当然，如果我们扎营我们应该警惕埋伏。 这里的营火从每个地方都可以看到。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_75.png[/img]%bro3%来到你旁边。%SPEECH_ON%有空吗，队长？%SPEECH_OFF%你点点头，示意他说出自己的想法。%SPEECH_ON%战斗磨损一些装备，一些人也受了伤。我们可以边行军边疗伤修装备，但扎营做这些会快很多。当然，扎营了就得警惕埋伏。这儿的营火哪儿都能看到。%SPEECH_OFF%",
 			List = [],
 			Characters = [],
 			Options = [
@@ -784,19 +784,19 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success",
 			Title = "回%townname%路上",
-			Text = "[img]gfx/ui/events/event_24.png[/img]战团作为胜利者回到了 %townname%，这次他们的头抬得高多了。 %companyname% 不再是之前的规模了，但正如霍加特在最后一刻所学到的那样，他们仍是一支不可小觑的力量。\n\n你把他的头从 %employer% 脚前的袋子里拿出来。 他往后一跳，但医生飞快地捡起头颅，盯着它，然后点头。%employer% 靠近强盗沾满血的脸然后仔细地看着它。%SPEECH_ON%是的，是的…那就是他的丑脸。 仆人！付钱给这位先生！%SPEECH_OFF%手里拿着硬币，你高声对人们说。%SPEECH_ON%只要我们的血管里还流动着血液，只要我们还能拿起剑和盾牌，战团就不会倒下。 整个王国都会知道 %companyname%！%SPEECH_OFF%人们欢呼起来。%bro1% 把一只手放在你的肩上。%SPEECH_ON%你做的很棒，队长。 不管你带领我们去哪，伙伴们都会跟随你，作为战场上的兄弟。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_24.png[/img]战团作为胜利者回到了%townname%，这次他们的头抬得高多了。%companyname%的规模不及以往，但正如霍加特在最后一刻所学到的那样，他们仍是一支不可小觑的力量。\n\n你把他的头倒在了%employer%脚前。他往后一跳，但医生飞快地捡起了头颅，盯着它，点头。%employer%靠近强盗沾满血的脸仔细地看着。%SPEECH_ON%没错，没错…就是这张丑脸。仆人！付钱给他！%SPEECH_OFF%手里拿着硬币，你高声对人们说。%SPEECH_ON%只要我们的血管里还流动着血液，只要我们还能拿起剑和盾牌，战团就不会倒下。所有人都会知道%companyname%！%SPEECH_OFF%人们欢呼起来。%bro1%把一只手搭在你的肩上。%SPEECH_ON%你做的很棒，队长。 不管你带我们去哪，伙计们都会追随你，作为战场上的兄弟。%SPEECH_OFF%",
 			ShowEmployer = true,
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "像兄弟一样！",
+					Text = "浴血同袍！",
 					function getResult()
 					{
 						this.World.Flags.set("IsHoggartDead", true);
 						this.Music.setTrackList(this.Const.Music.WorldmapTracks, this.Const.Music.CrossFadeTime, true);
 						this.World.Assets.addMoney(400);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "彻底杀了霍加特");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "彻底杀死了霍加特");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}

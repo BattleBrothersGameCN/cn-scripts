@@ -64,7 +64,7 @@ this.research_notes_legendary_item <- this.inherit("scripts/items/item", {
 			},
 			{
 				flag = "isRachegeistPotionDiscovered",
-				creatureName = "雷切吉斯特",
+				creatureName = "复仇之魂",
 				potionName = "复仇刀锋灵药"
 			},
 			{
