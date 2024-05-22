@@ -53,7 +53,7 @@ this.ancient_priest_potion_item <- this.inherit("scripts/items/misc/anatomist/an
 			id = 11,
 			type = "text",
 			icon = "ui/icons/morale.png",
-			text = "士气最低降至瓦解，不会溃逃"
+			text = "士气最低降至崩溃，不会溃逃"
 		});
 		result.push({
 			id = 65,

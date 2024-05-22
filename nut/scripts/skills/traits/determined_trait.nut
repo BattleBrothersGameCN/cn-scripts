@@ -37,7 +37,7 @@ this.determined_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/morale.png",
-				text = "如果心情允许，将以自信的士气开始战斗"
+				text = "如果心情允许，将以自信士气开始战斗"
 			}
 		];
 	}

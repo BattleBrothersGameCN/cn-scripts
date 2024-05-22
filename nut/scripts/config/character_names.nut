@@ -303,16 +303,16 @@ gt.Const.Strings.BarbarianTitles <- [
 	"碎骨者",
 	"屠宰者",
 	"·神选者",
-	"战争者",
-	"铁甲",
-	"血污者",
+	"战裔",
+	"铁汉",
+	"·染血者",
 	"·猛兽",
 	"猛兽",
 	"·狼爪",
 	"·野蛮人",
 	"·血书",
-	"·破碎机",
-	"·永恒"
+	"·粉碎者",
+	"·永生者"
 ];
 gt.Const.Strings.SouthernNames <- [
 	"杰米尔",
@@ -459,10 +459,10 @@ gt.Const.Strings.GladiatorTitles <- [
 	"·屠夫",
 	"·冠军勇士",
 	"·角斗士",
-	"·种马",
+	"种马",
 	"·猛兽",
 	"·奇迹",
-	"·狂怒的公牛",
+	"·疯牛",
 	"·雷鸣",
 	"铁锤",
 	"·毁灭者",
@@ -472,7 +472,7 @@ gt.Const.Strings.NomadChampionTitles <- [
 	"·毒蝎",
 	"·沙灵",
 	"·大蛇",
-	"枯萎病",
+	"疫病",
 	"·银棍",
 	"·沙漠王子",
 	"·善变者",
@@ -484,7 +484,7 @@ gt.Const.Strings.NomadChampionTitles <- [
 	"·商人之祸",
 	"·沙漠之鼠",
 	"黑牙",
-	"·蛇",
+	"蛇",
 	"·沙漠掠袭者",
 	"·天灾",
 	"·诅咒",
@@ -493,7 +493,7 @@ gt.Const.Strings.NomadChampionTitles <- [
 	"·猩红",
 	"·镀金者之选",
 	"·沙蝰蛇",
-	"·朝圣者",
+	"朝圣者",
 	"流放者",
 	"·秃鹫",
 	"·活蜃景",
@@ -506,7 +506,7 @@ gt.Const.Strings.NomadChampionStandalone <- [
 	"毒蝎",
 	"沙之幽灵",
 	"大蛇",
-	"枯萎病",
+	"疫病",
 	"银棍",
 	"沙漠王子",
 	"难以捉摸的",
@@ -568,7 +568,7 @@ gt.Const.Strings.ExecutionerChampionTitles <- [
 	"镀金者之选",
 	"大山",
 	"弯刀",
-	"镀金者%randomsouthernname%",
+	"金镀者%randomsouthernname%",
 	"狂暴游牧者",
 	"不朽者%randomsouthernname%",
 	"头骨收集者",
@@ -612,7 +612,7 @@ gt.Const.Strings.VizierTitles <- [
 	"贸易维齐尔",
 	"大维齐尔",
 	"主占星师",
-	"·大祭司"
+	"大祭司"
 ];
 gt.Const.Strings.SellswordTitles <- [
 	"·屠夫",
@@ -628,7 +628,7 @@ gt.Const.Strings.SellswordTitles <- [
 	"无情的",
 	"·猩红",
 	"·黑皮",
-	"奥克班",
+	"兽人杀手",
 	"·骑士杀手",
 	"猎鹰"
 ];
@@ -667,12 +667,12 @@ gt.Const.Strings.HedgeKnightTitles <- [
 	"压碎者",
 	"流放者",
 	"怒吼",
-	"偷猎者",
+	"猎头者",
 	"砍刀"
 ];
 gt.Const.Strings.MasterArcherNames <- [
 	"神射手%randomname%",
-	"煞特",
+	"泰然之箭",
 	"射手大师%randomname%",
 	"猎人%randomname%",
 	"狙击手%randomname%",
@@ -705,7 +705,7 @@ gt.Const.Strings.OathbringerNames <- [
 	"正义者%randomname%"
 ];
 gt.Const.Strings.MasonTitles <- [
-	"·奠基者",
+	"奠基者",
 	"砌砖匠(Bricklayer)",
 	"建筑师",
 	"匠人"
@@ -718,36 +718,36 @@ gt.Const.Strings.MilitiaTitles <- [
 gt.Const.Strings.BrawlerTitles <- [
 	"大拳头",
 	"拳击手",
-	"·岩石",
-	"·种马",
+	"岩石",
+	"种马",
 	"铁颌",
-	"·打手"
+	"打手"
 ];
 gt.Const.Strings.PeddlerTitles <- [
-	"·蛇",
+	"蛇",
 	"黄鼠狼",
 	"银舌",
-	"·随军小贩",
+	"随军小贩",
 	"小贩",
-	"·商人"
+	"商人"
 ];
 gt.Const.Strings.WitchhunterTitles <- [
 	"夜猎者",
-	"·女巫猎人",
+	"女巫猎人",
 	"驱魔师",
-	"·折磨者"
+	"折磨者"
 ];
 gt.Const.Strings.GravediggerTitles <- [
 	"掘墓人",
-	"·铲子",
+	"铲工",
 	"格拉斯波特",
-	"·怪人"
+	"怪人"
 ];
 gt.Const.Strings.RatcatcherTitles <- [
-	"长鼻(Longnose)",
-	"·老鼠",
+	"长鼻",
+	"鼠",
 	"捕鼠者",
-	"·温热"
+	"温热"
 ];
 gt.Const.Strings.BastardTitles <- [
 	"私生子",
@@ -759,11 +759,11 @@ gt.Const.Strings.BastardTitles <- [
 ];
 gt.Const.Strings.PilgrimTitles <- [
 	"信徒(the Believer)",
-	"·探求者",
-	"·嗜血者",
+	"探求者",
+	"奇术士",
 	"纯净",
-	"·苦修者",
-	"·朝圣者"
+	"苦修者",
+	"朝圣者"
 ];
 gt.Const.Strings.KnightNames <- [
 	"罗德里克爵士",
@@ -932,7 +932,7 @@ gt.Const.Strings.BanditLeaderNames <- [
 	"无齿的巴尔塔萨",
 	"蜘蛛沃尔特",
 	"掘墓人奥古斯都",
-	"好人厄班"
+	"市井豪徒"
 ];
 gt.Const.Strings.KrakenNames <- [
 	"大噬者奥格-萨托斯",
@@ -1045,7 +1045,7 @@ gt.Const.Strings.GoblinTitles <- [
 	"猎头者",
 	"眼罩",
 	"罗特古特",
-	"长鼻(Longnose)",
+	"长鼻",
 	"·路匪",
 	"鼻涕虫",
 	"·顽固",

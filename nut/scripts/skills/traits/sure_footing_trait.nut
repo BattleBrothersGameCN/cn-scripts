@@ -6,7 +6,7 @@ this.sure_footing_trait <- this.inherit("scripts/skills/traits/character_trait",
 		this.m.ID = "trait.sure_footing";
 		this.m.Name = "下盘稳固";
 		this.m.Icon = "ui/traits/trait_icon_05.png";
-		this.m.Description = "一个稳定的下盘使这个角色很难失去平衡并被打中。";
+		this.m.Description = "稳定的下盘使这个角色很难失去平衡被打中。";
 		this.m.Excluded = [
 			"trait.clumsy",
 			"trait.insecure"

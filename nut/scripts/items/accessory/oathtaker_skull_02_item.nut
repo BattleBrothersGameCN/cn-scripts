@@ -63,7 +63,7 @@ this.oathtaker_skull_02_item <- this.inherit("scripts/items/accessory/accessory"
 			id = 11,
 			type = "text",
 			icon = "ui/icons/morale.png",
-			text = "如果心情允许，将以自信的士气开始战斗"
+			text = "如果心情允许，将以自信士气开始战斗"
 		});
 		return result;
 	}
