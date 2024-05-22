@@ -13,7 +13,7 @@ this.oath_of_camaraderie_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 		this.m.SuccessButtonText = "{为了小安瑟姆！ | 宣誓者万岁！ | 誓约使者去死吧！}";
 		this.m.OathName = "友谊誓言";
 		this.m.OathBoonText = "你可以带上 [color=" + this.Const.UI.Color.PositiveValue + "]14[/color] 人.";
-		this.m.OathBurdenText = "你的人总是随机以动摇或瓦解士气开始战斗。";
+		this.m.OathBurdenText = "你的人总是随机以动摇或崩溃士气开始战斗。";
 	}
 
 	function getRenownOnSuccess()

@@ -134,7 +134,7 @@ this.anatomist_helps_blighted_guy_1_event <- this.inherit("scripts/events/event"
 			],
 			function start( _event )
 			{
-				_event.m.Anatomist.improveMood(1.0, "不得不研究一种不同寻常的枯萎病。");
+				_event.m.Anatomist.improveMood(1.0, "得以研究一种不同寻常的疫病。");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{

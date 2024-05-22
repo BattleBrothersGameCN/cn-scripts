@@ -28,7 +28,7 @@ this.oath_of_camaraderie_trait <- this.inherit("scripts/skills/traits/character_
 				id = 10,
 				type = "text",
 				icon = "ui/icons/morale.png",
-				text = "将以动摇或瓦解士气开始战斗。"
+				text = "将以动摇或崩溃士气开始战斗。"
 			}
 		];
 	}

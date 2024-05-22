@@ -226,7 +226,7 @@ this.trade_black_book_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_174.png[/img]{尉迟转过身。%SPEECH_ON%哼？%SPEECH_OFF%你解释道他说过他来这里找寻两样物品。 其中一个是那本书，另一个呢？他笑道。%SPEECH_ON%这一片有一个城镇叫达根泰尔。 镇子没了但是有些住在那的东西依然在游荡。 一个他们称呼为“鬼”的东西。 我想找到它并和它说话。%SPEECH_OFF%当你想从他那儿询问更多信息时他单纯的用一个充满敬意的鞠躬告别。%SPEECH_ON%谢谢你的温柔交易，陌生人。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_174.png[/img]{尉迟转过身来。%SPEECH_ON%嗯？%SPEECH_OFF%你解释道，他说他来找寻两样物品。其中一件是这本书，另一件呢？他笑道。%SPEECH_ON%有一座城镇叫达根泰尔，英雄之泪。镇子没了，但有些曾经住在那的东西还在游荡。人们称之为“精魂”。我想找到它，和它谈谈。%SPEECH_OFF%当你问起更多时，他只是优雅地鞠了个躬。%SPEECH_ON%感谢你能以礼相待，陌生人。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],

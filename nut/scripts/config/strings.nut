@@ -1370,7 +1370,7 @@ gt.Const.Strings.PerkDescription <- {
 	Pathfinder = "学会在复杂地形上移动。 所有地形上的移动行动点消耗减少 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color](但每个单元格至少需要 2 个行动点)，疲劳值消耗减少到一半。 改变高度也不再需要消耗额外的行动点。",
 	FortifiedMind = "钢铁般的意志不会轻易偏离正道。决心提高[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color].",
 	Captain = "领导战场上的战士, 让每个人都保持斗志。 5 格范围内的盟友将获得该角色的 [color=" + this.Const.UI.Color.PositiveValue + "]15%[/color] 的决心加成，但加成后的最大值不会超过这个角色的决心。\n\n不叠加, 范围内有多个角色具有该特权时, 取最大决心值。",
-	InspiringPresence = "一个伟大的领袖会激励他的追随者去克服他们的极限。除非性格特征禁止，否则盟友会以自信的士气开始每场战斗。",
+	InspiringPresence = "一个伟大的领袖会激励他的追随者去克服他们的极限。除非性格特征禁止，否则盟友会以自信士气开始每场战斗。",
 	Underdog = "我已经习惯了。由于被对手包围而导致的围攻效果不再适用于该角色。如果攻击者拥有背刺特技，则该特技的效果失效，但由于被包围而导致的正常围攻效果将生效。",
 	Recover = "解锁 \'恢复\' 技能，允许角色休息一回合，以减少累积疲劳值的[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color].",
 	Backstabber = "荣誉并不能为你赢得战斗，刺中敌人的痛处才是。在近战中，每有一个盟友围绕着你的目标并分散其注意力，你的命中率就会增加[color=" + this.Const.UI.Color.PositiveValue + "]10%[/color] 。",

@@ -269,7 +269,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 					if (this.Contract.m.Payment.Count != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + " 克朗乘带回的人头数，最多计 " + this.Contract.m.Payment.MaxCount + "个头");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + "克朗乘带回来的人头数，最多计" + this.Contract.m.Payment.MaxCount + "个头");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
@@ -552,7 +552,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 					if (this.Contract.m.Payment.Count != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + " 克朗乘回来时的人头数，最多计 " + this.Contract.m.Payment.MaxCount + "个头");
+						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + "克朗乘回来时的人头数，最多计" + this.Contract.m.Payment.MaxCount + "个头");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)

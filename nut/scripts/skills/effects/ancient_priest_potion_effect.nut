@@ -36,7 +36,7 @@ this.ancient_priest_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/morale.png",
-				text = "士气最低降至瓦解，不会溃逃"
+				text = "士气最低降至崩溃，不会溃逃"
 			},
 			{
 				id = 12,
