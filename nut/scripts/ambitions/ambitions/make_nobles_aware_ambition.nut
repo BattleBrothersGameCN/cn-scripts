@@ -5,7 +5,7 @@ this.make_nobles_aware_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.make_nobles_aware";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "我们需要吸引其中一个贵族家族的眼球，以获得更有利可图的工作。 他们在玩自己的危险游戏，但只要报酬丰厚又有什么关系呢？";
+		this.m.ButtonText = "我们需要吸引其中一个贵族家族的眼球，以获得更有利可图的工作。 \n他们在玩自己的危险游戏，但只要报酬丰厚又有什么关系呢？";
 		this.m.RewardTooltip = "你将解锁由贵族签发的报酬更好的全新合同。";
 		this.m.UIText = "名望达到“行家里手”";
 		this.m.TooltipText = "以“行家里手”（1050名望）闻名以吸引贵族家族的注意。你可以通过完成合同和赢得战斗来提高自己的名望。";

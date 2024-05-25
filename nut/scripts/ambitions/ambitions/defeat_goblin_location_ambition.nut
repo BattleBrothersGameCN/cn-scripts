@@ -7,7 +7,7 @@ this.defeat_goblin_location_ambition <- this.inherit("scripts/ambitions/ambition
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_goblin_location";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "只有最勇敢的人才敢对抗大规模的地精。 我们要把他们的一些臭气熏天的营地夷为平地，让消息传出去！";
+		this.m.ButtonText = "只有最勇敢的人才敢对抗大规模的地精。 \n我们要把他们的一些臭气熏天的营地夷为平地，让消息传出去！";
 		this.m.RewardTooltip = "你将获得一件独特的配饰，使佩戴者免疫定身。";
 		this.m.UIText = "摧毁地精营地";
 		this.m.TooltipText = "摧毁四个地精营地来证明战团的实力，无论是作为合同的一部分，还是通过自己发现。 你还需要在仓库中留出足够的空间来存放一个新物品。";
