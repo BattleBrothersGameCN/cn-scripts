@@ -7,7 +7,7 @@ this.win_against_x_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.win_against_x";
 		this.m.Duration = 14.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "让我们先把小规模战斗放一边，去击败至少一打敌人。 这就是我们的名字将在这片土地上广为人知的原因！";
+		this.m.ButtonText = "让我们先把小规模战斗放一边，去击败至少一打敌人。 \n这就是我们的名字将在这片土地上广为人知的原因！";
 		this.m.RewardTooltip = "为你的胜利获得额外的150名望。";
 		this.m.UIText = "一战战胜至少12名敌人";
 		this.m.TooltipText = "一战战胜至少12名敌人，无论杀死打跑，也无论是否在合同之内。";

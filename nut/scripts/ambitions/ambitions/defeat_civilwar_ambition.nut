@@ -19,19 +19,19 @@ this.defeat_civilwar_ambition <- this.inherit("scripts/ambitions/ambition", {
 
 		if (f >= 0.95)
 		{
-			text = "战争初始";
+			text = "短兵相接";
 		}
 		else if (f >= 0.5)
 		{
-			text = "战况激烈";
+			text = "激战正酣";
 		}
 		else if (f >= 0.25)
 		{
-			text = "陷入胶着";
+			text = "难解难分";
 		}
 		else
 		{
-			text = "接近尾声";
+			text = "尘埃落定";
 		}
 
 		return this.m.UIText + " (" + text + ")";

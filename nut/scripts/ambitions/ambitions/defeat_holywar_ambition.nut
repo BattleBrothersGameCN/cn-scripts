@@ -5,7 +5,7 @@ this.defeat_holywar_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.defeat_holywar";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "宗教动乱之火威胁着要吞噬这片土地。 \n让我们的战团在热火中锻炼得比以往任何时候都强大，并通过赢得战争来赚取财富！";
+		this.m.ButtonText = "宗教动乱之火威胁着要吞噬这片土地。 让我们的战团在热火\n中锻炼得比以往任何时候都强大，并通过赢得战争来赚取财富！";
 		this.m.UIText = "结束南北战争";
 		this.m.TooltipText = "选择北方贵族家族或南方城邦，与他们合作，赢得他们的圣战。 每摧毁一支军队，每履行一分合同，都将加速战争的结束。";
 		this.m.SuccessButtonText = "不管他们是喜欢我们还是憎恨我们，但现在每个人都知道%companyname%！";
@@ -18,19 +18,19 @@ this.defeat_holywar_ambition <- this.inherit("scripts/ambitions/ambition", {
 
 		if (f >= 0.95)
 		{
-			text = "战争初始";
+			text = "短兵相接";
 		}
 		else if (f >= 0.5)
 		{
-			text = "战况激烈";
+			text = "激战正酣";
 		}
 		else if (f >= 0.25)
 		{
-			text = "陷入胶着";
+			text = "难解难分";
 		}
 		else
 		{
-			text = "接近尾声";
+			text = "尘埃落定";
 		}
 
 		return this.m.UIText + " (" + text + ")";
