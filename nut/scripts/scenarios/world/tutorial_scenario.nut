@@ -4,7 +4,7 @@ this.tutorial_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 	{
 		this.m.ID = "scenario.tutorial";
 		this.m.Name = "重建战团（教程）";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_21.png[/img][/p][p]你是一家佣兵战团的二把手。在对一位名叫霍加特的强盗的追踪中，一场突如其来的变故让战团支离破碎。现在你接手了战团，负责重建它的昔日辉煌。\n\n[color=#bcad8c]推荐给新玩家，在游戏初期提供了一些实用引导。[/color][/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_21.png[/img][/p][p]你是一家佣兵战团的二把手。在对一位名叫霍加特的强盗的追踪中，一场突如其来的变故让战团支离破碎。现在你接手了战团，负责重建它的昔日辉煌。\n\n[color=#bcad8c]推荐新玩家游玩，在游戏初期提供了一些指引。[/color][/p]";
 		this.m.Difficulty = 1;
 		this.m.Order = 0;
 	}
