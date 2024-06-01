@@ -3,7 +3,7 @@ this.break_ally_free_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.break_ally_free";
-		this.m.Name = "解放盟友";
+		this.m.Name = "解救盟友";
 		this.m.Description = "利用你所能用上的一切，把附近的盟友从束缚他们的东西中解放出来。如果需要，可以砍、劈、割或啃！";
 		this.m.Icon = "skills/active_151.png";
 		this.m.IconDisabled = "skills/active_151_sw.png";
