@@ -55,12 +55,12 @@ this.manhunters_ledger_item <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = indebted + "名在役负债者"
+			text = indebted + "名负债者在役"
 		});
 		result.push({
 			id = 65,
 			type = "text",
-			text = nonIndebted + "名在役猎奴者"
+			text = nonIndebted + "名猎奴者在役"
 		});
 		result.push({
 			id = 65,

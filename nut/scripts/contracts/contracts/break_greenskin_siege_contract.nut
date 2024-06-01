@@ -366,7 +366,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "PreparingForBattle",
 			Title = "在%townname%…",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{你走出%employer%的地方，准备好战团。周围的骑士和士兵在四处奔走。其中一些人围绕着圣洁的人默默无声地准备着死亡。%SPEECH_ON%必须先订好位置。%SPEECH_OFF%%randombrother%加入你的队伍。他冲你咧嘴一笑。%SPEECH_ON%怎么，太阴暗了吗？%SPEECH_OFF% | 在%employer%的住所外，有士兵在四处奔忙。一些人把供应品放入马车的后面，其他人则在磨利他们的武器，而一些侍从则带着一大堆盔甲来回穿梭。你走到你的队伍面前，命令他们准备好。%randombrother%向忙碌的人群点了点头。%SPEECH_ON%我想我们这次会有朋友与我们同行吧？%SPEECH_OFF% | 在%employer%的房间外有士兵，大厅里也有士兵。你走过惊恐的妇女和儿童以及宁愿失聪的盲老人的房间。在外面，你必须穿过一群侍从的热闹人群，他们带着武器和盔甲。%companyname%在等待你。%SPEECH_ON%让我们出发吧。这些人必须准备战斗，但我们只是走过而已，对吧伙计们？%SPEECH_OFF% | 离开%employer%的地方后，你发现%randombrother%正在等你。他正看着四周忙碌的战争准备：侍从们穿着盔甲忙着奔跑，士兵们往马车里装备，神圣的教士们暂时平息着年轻士兵的恐惧。你告诉你的佣兵准备好行装，你们将跟随这些士兵们一起突围。 | 你走出去发现%employer%的士兵正在准备战争。他们正在把装备装上马车，而一位神圣的教士正在他们中间走动。女性、儿童和老人站在路边。%companyname%正尽责地站着。你走过去告诉他们手头的任务。 | 走出去后，你发现%employer%的士兵正在准备战争。儿童们在那里奔跑，玩耍，充满对战争的无知而欢笑。有些女性已经失去了丈夫，或者失去了两个，她们更加沉思。你走过队伍去找%companyname%，并告诉他们任务的细节。 | %employer% 的士兵已经准备好战斗了。年轻人紧张不安，用虚假的勇气和不情愿的笑容掩饰他们的恐惧。老兵们继续执行他们的任务，他们的脸上显示出知道那些从未归来的老战友的人。而那些疯狂的、眼中冒血的家伙们，在即将到来的战争前几乎早早地感到兴奋。你穿过他们，去通知 %companyname% 需要做什么。 | 当你走出来时，你发现 %employer% 的军队士兵正在准备行军。武器散乱在一堆里供士兵们自由挑选。这是一个奇怪的景象，显示出缺乏组织。可能不是最好的信号，但你将其置于身后，去通知 %companyname% 完成新的合同任务。}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{你走出%employer%的驻地，准备好战团。周围到处都是跑来跑去的骑士和士兵。其中一些人围在神职人员周围，无声地为死亡做准备。%SPEECH_ON%他们正在天堂订位子呢。%SPEECH_OFF%%randombrother%凑到边上，冲你咧嘴一笑。%SPEECH_ON%怎么，太阴暗了吗？%SPEECH_OFF% | %employer%的住所外，士兵们东奔西跑。一些人在马车后装载补给，剩下的则在磨利他们的武器，还有个把侍从，带着大堆盔甲来回穿梭。你走到队伍前，命令他们准备好。%randombrother%向忙碌的人群点了点头。%SPEECH_ON%看来这次我们有伴儿了。%SPEECH_OFF% | %employer%的房间外有士兵，大厅里也有士兵。走过的房间里，满是惊恐的妇孺和失明的老人，他们宁愿自己聋了。走出大厅，你被迫挤过一群带着盔甲和武器，涌动着的侍从。%companyname%还等着你呢。%SPEECH_ON%我们出发吧。这些人必须为战斗做准备，但我们已经准备好了，对吧伙计们？%SPEECH_OFF% | 离开%employer%的地方，你发现%randombrother%正在等你。他正看着四周忙碌的战争准备：侍从们带着盔甲武器慌忙奔跑，士兵们往马车里装备，神职人员短暂平息着年轻士兵的恐惧。你告诉你的佣兵准备好行装，你们将跟随这些士兵们一起解围。 | 你走到外面，看到%employer%的士兵正为战斗准备。他们正把装备装上马车，一位神职人员正在他们中间走动。妇女、儿童和老人站在路边。%companyname%正尽责地站着。你走过去告诉他们手头的任务。 | 走出去后，你发现%employer%的士兵正整装待发。儿童们肆意奔跑，欢笑，玩着战争游戏，满不在乎真的战争就要来了。失去了一两个丈夫的妇女们就深沉多了。你穿过队伍找到%companyname%，告诉他们任务的细节。 | %employer%的士兵正在准备战斗。年轻人紧张不安，用虚假的勇气和不情愿的笑容掩饰他们的恐惧。老兵们埋头做他们自己的事，脸上显出对那些从未归来的老战友的思念。而那些疯狂的、眼中冒血的家伙们，在即将到来的战争前几乎早早地感到兴奋。你穿过他们，去通知%companyname%担负的任务。 | 当你走出来时，你发现%employer%的军队士兵正为行军做准备。武器散乱成堆，士兵在里面挑挑拣拣。这种怪象显示了组织度的缺乏。这不是个好兆头，但你把它抛在脑后，告诉%companyname%他们的合同。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -423,7 +423,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "ArrivingAtTheSiegeNoTroops",
 			Title = "%objective%附近…",
-			Text = "[img]gfx/ui/events/event_68.png[/img]{你终于看到了%objective%，并且它处于极度危险之中。城镇正在遭受一连串的绿皮兽攻城战争机器的轰炸。你下令%companyname%准备行动：你将侧翼包抄敌军，并直接攻击这些攻城机械。 | 所有的贵族士兵都已经死亡，你独自到达%objective%。还是有绿皮兽在继续轰击这个可怜的城镇，使用拼凑的攻城武器。你决定最好的行动方案是侧翼包抄野蛮人并攻击他们的攻城机械。}",
+			Text = "[img]gfx/ui/events/event_68.png[/img]{你终于看到了%objective%，它正处于极度危险之中。城镇正受到绿皮攻城器的连环轰炸。你命令%companyname%准备行动：你们将从侧翼包抄敌军，直接攻击这些攻城机械。 | 所有贵族士兵都死在了路上，你独自抵达了%objective%。绿皮还在城镇周围，用拼凑的攻城武器轰击着它。你决定包抄这些化外之民，攻击他们的攻城器。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -464,7 +464,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Shaman",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_48.png[/img]{你走近了包围着的地精，看到了一个独特的身影站在他们的队伍之中。那是一个萨满。你告诉你的队员为之做好充分准备。 | 一个独特的身影在地精中脱颖而出。你看到它用那可怕的语言发出命令。这个污秽的东西被奇怪的植物缠绕着，并佩戴着动物骨头的项链。%SPEECH_ON%那是一个萨满。%SPEECH_OFF% %randombrother%加入了我们的一方说道。%SPEECH_ON%我会提醒其他人的。%SPEECH_OFF% | %randombrother%从侦查中返回。他分享了一个消息，即有一个地精萨满在入侵的绿皮兽人组内。那个人似乎相当恼火。%SPEECH_ON%我喜欢杀掉这些地精，但这次他们会给我们带来真正的头疼。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_48.png[/img]{你走向围城的地精，在队伍中看到了一个独特的身影。一个萨满。你让手下做好充分准备。 | 一个独特的身影矗立在地精当中。它用自以为是语言的骇人声音发号施令。这邪性家伙身上绕着奇怪的植物，显现出兽骨项链的形状。%SPEECH_ON%那是个萨满。%SPEECH_OFF%%randombrother%凑近了说道。%SPEECH_ON%我会提醒其他人的。%SPEECH_OFF% | %randombrother%的侦察结束了。他带来消息说，攻城队伍中有一名地精萨满。那人似乎相当恼火。%SPEECH_ON%我喜欢杀地精，但这次恐怕要头疼了。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -481,7 +481,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Warlord",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_49.png[/img]{当你临近围攻的绿皮兽人时，你会注意到一个几乎无法忽视的东西：一位兽人督军高大威猛。这个恶心的东西的盔甲在它转身喊叫着命令它的兽人战士时闪闪发光，鼓舞着他们的狂热。你让%randombrother%散布消息并准备士兵。 | 当你走近包围营地时，你会认出那高大的残暴的兽人督军的身影。即使在这样的距离，你也能听到他朝着手下怒吼的声音。这场战斗爆发的越来越扣人心弦。 | 你临近绿皮兽人的营地时，只听到清晰的兽人督军的咆哮。他用那种令人讨厌的语言大声喊出命令。他的出现让任务稍稍更有挑战，你通知士兵这一点。 | %randombrother%从侦查任务归来，他说有一个兽人督军在绿皮兽人的营地里。虽然是个坏消息，但现在知道并做好准备总比事先一无所知然后惊讶地被攻击强。}",
+			Text = "[img]gfx/ui/events/event_49.png[/img]{随着你接近围攻的绿皮，一个无法忽视的东西引起了你的注意：一位高大威猛的兽人军阀。这坏东西的盔甲闪闪发光，它转身用兽人的语言发号施令，激发着麾下同胞们的狂热。你让%randombrother%送去这个消息，让大家做好准备。 | 走近围城营地的同时，你认出了兽人军阀那高大残暴的身影。即使在这么远的距离，你也能听到他朝着手下怒吼的声音。这场战斗越来越扣人心弦了。 | 你朝绿皮的营地走去，只听到兽人军阀独特的咆哮。他用那种令人作呕的语言大声喊出命令。他的出现让任务稍稍棘手了一点，你通知给了士兵们。 | %randombrother%侦察归来，他说绿皮营地里有个兽人军阀。虽然是个坏消息，但提前知道做好准备总比临阵被吓住要好。}",
 			Image = "",
 			List = [],
 			Options = [
