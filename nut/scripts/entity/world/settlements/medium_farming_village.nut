@@ -14,7 +14,7 @@ this.medium_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"阔地乡",
 			"硬河湾",
 			"白乡",
-			"碾磨乡",
+			"石碾乡",
 			"绿地镇",
 			"神恩镇",
 			"河草滩",

@@ -29,7 +29,7 @@ this.small_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"井垒",
 			"低地垒",
 			"犬吠岗",
-			"草原垒"
+			"草野垒"
 		]);
 		this.m.DraftList = [
 			"caravan_hand_background",
