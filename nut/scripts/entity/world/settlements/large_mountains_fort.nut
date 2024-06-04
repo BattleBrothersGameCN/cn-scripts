@@ -30,7 +30,7 @@ this.large_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"石塔",
 			"顶峰要塞",
 			"连山要塞",
-			"花岗岩堡垒",
+			"花岗要塞",
 			"锡山要塞",
 			"坚石要塞",
 			"远眺要塞",

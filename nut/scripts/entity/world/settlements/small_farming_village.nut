@@ -14,7 +14,7 @@ this.small_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"新乡",
 			"阔地乡",
 			"白乡",
-			"碾磨乡",
+			"石碾乡",
 			"绿地镇",
 			"神恩乡",
 			"晋爵原",
