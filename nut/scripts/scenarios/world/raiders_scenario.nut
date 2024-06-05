@@ -45,7 +45,7 @@ this.raiders_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Body));
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Head));
 		local warhound = this.new("scripts/items/accessory/warhound_item");
-		warhound.m.Name = "芬里尔战獒";
+		warhound.m.Name = "战獒芬里尔";
 		items.equip(warhound);
 		items.equip(this.new("scripts/items/armor/barbarians/reinforced_animal_hide_armor"));
 		items.equip(this.new("scripts/items/helmets/barbarians/bear_headpiece"));
