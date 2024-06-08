@@ -9,7 +9,7 @@ this.running_around_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{走走路，跑跑步，打打仗，操操逼，都是些有益身心健康的事情。 在大陆上四处旅行的时间锻炼了你战团成员的精气与活力。 你甚至看见过一个脸皮厚的雇佣兵弯腰走进池塘里，像个傻缺一样欣赏自己的倒影。 | 在大陆上来回奔走锻炼了战团成员的体力。 一个在原地跑步，把一根手指抵在脖子上。 他声称他的心率根本没有升高。 另一个兄弟说那家伙连数数都不知道。 跑步的那个佣兵停了下来。%SPEECH_ON%Oh. 你说得对。%SPEECH_OFF%}",
+			Text = "%terrainImage%{走走路，跑跑步，打打仗，操操逼，都是些有益身心健康的事情。 在大陆上四处旅行的时间锻炼了你战团成员的精气与活力。 你甚至看见过一个脸皮厚的雇佣兵弯腰走进池塘里，像个傻缺一样欣赏自己的倒影。 | 在大陆上来回奔走锻炼了战团成员的体力。 一个在原地跑步，把一根手指抵在脖子上。 他声称他的心率根本没有升高。 另一个兄弟说那家伙连数数都不知道。 跑步的那个佣兵停了下来。%SPEECH_ON%哦，你说得对。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],

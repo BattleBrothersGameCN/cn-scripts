@@ -3372,7 +3372,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这个合同的条款已经谈妥了。 剩下的就是你签字了。"
+						text = "合同已经谈妥，就等你签字了。"
 					}
 				];
 				return ret;
