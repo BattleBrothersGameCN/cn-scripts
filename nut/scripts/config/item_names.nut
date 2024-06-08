@@ -29,10 +29,10 @@ gt.Const.Strings.ShieldNames <- [
 ];
 gt.Const.Strings.SwordNames <- [
 	"切裂者",
-	"切片者",
-	"刀",
+	"切削者",
+	"刃",
 	"切割者",
-	"切肉刀",
+	"劈斩者",
 	"剑",
 	"死亡使者",
 	"宽恕",
@@ -69,9 +69,9 @@ gt.Const.Strings.CleaverNames <- [
 	"斩劈者",
 	"开膛者",
 	"切裂者",
-	"切片者",
+	"切削者",
 	"切割者",
-	"切肉刀",
+	"劈斩者",
 	"斩首者",
 	"掠袭者",
 	"饮血者",
@@ -93,7 +93,7 @@ gt.Const.Strings.CleaverNames <- [
 	"残杀者"
 ];
 gt.Const.Strings.WhipNames <- [
-	"鞭子",
+	"鞭",
 	"长舌",
 	"蛇",
 	"闪电",
@@ -134,12 +134,12 @@ gt.Const.Strings.LongaxeNames <- [
 	"寡妇制造者",
 	"破盾者",
 	"开山斧",
-	"长柄刀刃",
+	"长刃",
 	"长柄战斧",
 	"斩首者",
 	"开膛者",
 	"分裂者",
-	"切肉刀",
+	"劈斩者",
 	"唤雷者",
 	"破坏者",
 	"灭顶之灾"
@@ -204,7 +204,7 @@ gt.Const.Strings.BillNames <- [
 	"狂舞者",
 	"镰",
 	"钩镰",
-	"长柄刀刃",
+	"长刃",
 	"杆枪",
 	"月牙斧",
 	"斧枪",
@@ -221,8 +221,8 @@ gt.Const.Strings.BillNames <- [
 ];
 gt.Const.Strings.GreatswordNames <- [
 	"大剑",
-	"双手剑士",
-	"刀",
+	"双手剑",
+	"刃",
 	"长刀",
 	"杀手",
 	"征伐者",
@@ -243,7 +243,7 @@ gt.Const.Strings.WarbrandNames <- [
 	"布兰德战刃",
 	"寻战者",
 	"护手刀",
-	"刀",
+	"刃",
 	"长刀",
 	"杀手",
 	"征伐者",
@@ -266,7 +266,7 @@ gt.Const.Strings.DaggerNames <- [
 	"凿子",
 	"钻子",
 	"毒针",
-	"德克",
+	"长匕",
 	"锥子",
 	"短刀",
 	"匕首",
@@ -299,7 +299,7 @@ gt.Const.Strings.CrossbowNames <- [
 	"掷矛者",
 	"天火",
 	"信使",
-	"手炮",
+	"速射",
 	"巨人杀手",
 	"强弩",
 	"触及",
@@ -311,7 +311,7 @@ gt.Const.Strings.BowNames <- [
 	"大弓",
 	"长弓",
 	"战弓",
-	"穿杨",
+	"矢",
 	"稳固者",
 	"天擎",
 	"反曲弓",
@@ -325,21 +325,21 @@ gt.Const.Strings.BowNames <- [
 	"射手",
 	"透心者",
 	"毒刺",
-	"灾星(Comet)",
+	"彗星",
 	"天陨",
 	"风暴使者",
 	"唤雨者",
 	"雹暴",
 	"穿云",
-	"绒线",
-	"刚力",
-	"肌腱"
+	"弦",
+	"筋弦",
+	"筋角弓"
 ];
 gt.Const.Strings.FlailNames <- [
 	"链枷",
 	"猛击者",
 	"响吻",
-	"鞭子",
+	"鞭",
 	"裁决",
 	"净化者",
 	"怨毒",
@@ -349,7 +349,7 @@ gt.Const.Strings.FlailNames <- [
 	"审判",
 	"盲目的正义",
 	"救赎",
-	"打谷机",
+	"抽打",
 	"鞭挞者",
 	"惩击者",
 	"决胜",
@@ -421,7 +421,7 @@ gt.Const.Strings.FencingSwordNames <- [
 	"钢钳",
 	"利刃",
 	"打击者",
-	"刀",
+	"刃",
 	"掏心者",
 	"饮血者",
 	"封喉剑",
@@ -476,7 +476,7 @@ gt.Const.Strings.TwoHandedFlailNames <- [
 	"链枷",
 	"惩罚者",
 	"猛击者",
-	"鞭子",
+	"鞭",
 	"收割者"
 ];
 gt.Const.Strings.TwoHandedMaceNames <- [
@@ -494,10 +494,10 @@ gt.Const.Strings.TwoHandedMaceNames <- [
 	"撼地者"
 ];
 gt.Const.Strings.WarscytheNames <- [
-	"军用镰刀",
+	"战镰",
 	"死神",
 	"镰刀",
-	"刀",
+	"刃",
 	"利刃",
 	"长柄镰刀",
 	"收割者",
@@ -505,19 +505,19 @@ gt.Const.Strings.WarscytheNames <- [
 ];
 gt.Const.Strings.HandgonneNames <- [
 	"加农炮",
-	"龙息少年",
+	"龙息",
 	"火药柱",
 	"咆哮",
 	"雷鸣",
 	"火棒",
 	"龙舌",
-	"戈恩",
+	"火枪",
 	"雷霆棒",
 	"火舌喷吐者"
 ];
 gt.Const.Strings.SwordlanceNames <- [
-	"利刃法杖",
-	"刀刃长矛"
+	"刃杖",
+	"刃矛"
 ];
 this.Const.Strings.SwordlanceNames.extend(this.Const.Strings.WarscytheNames);
 gt.Const.Strings.OldWeaponPrefix <- [
@@ -580,7 +580,7 @@ gt.Const.Strings.BarbarianSuffix <- [
 ];
 gt.Const.Strings.SouthernPrefix <- [
 	"南方的",
-	"游牧民族",
+	"游牧民的",
 	"猎奴者的",
 	"角斗士的",
 	"刺客的",

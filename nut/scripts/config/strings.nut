@@ -496,7 +496,7 @@ gt.Const.Strings.MercenaryCompanyNames <- [
 	"黎明行者",
 	"冬之子",
 	"溪流家族战团",
-	"燃燃彗星战团",
+	"燃星战团",
 	"大战团",
 	"正义掠夺者",
 	"被遗忘者旅",
@@ -656,10 +656,10 @@ gt.Const.Strings.UI <- {
 };
 gt.Const.Strings.AlpStateName <- [
 	"",
-	"部分存在于梦中",
-	"部分存在于梦中",
-	"主要存在于梦中",
-	"主要存在于梦中"
+	"在梦中若隐若现",
+	"在梦中若隐若现",
+	"在梦中清晰可见",
+	"在梦中清晰可见"
 ];
 gt.Const.Strings.BodyPartName <- [
 	"body",
@@ -1247,7 +1247,7 @@ gt.Const.Strings.InventoryHeader <- [
 ];
 gt.Const.Strings.InventoryUpgradeHeader <- [
 	"购置马车",
-	"购置马车",
+	"购置货车",
 	"购置大货车"
 ];
 gt.Const.Strings.InventoryUpgradeText <- [
