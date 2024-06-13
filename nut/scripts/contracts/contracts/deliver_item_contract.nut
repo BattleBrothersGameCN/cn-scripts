@@ -553,7 +553,7 @@ this.deliver_item_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "回到它应该在的地方。",
+					Text = "物归原主。",
 					function getResult()
 					{
 						this.Flags.set("IsThieves", false);

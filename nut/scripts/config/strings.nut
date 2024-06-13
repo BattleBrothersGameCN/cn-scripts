@@ -936,7 +936,7 @@ gt.Const.Strings.TerrainRegionNames <- [
 		"黑窝",
 		"枝条谷",
 		"蜘蛛林",
-		"扁虱灌木",
+		"扁虱灌",
 		"德鲁伊之林",
 		"脆枝林",
 		"白狼栖",
@@ -1221,7 +1221,7 @@ gt.Const.Strings.Distance <- [
 	"[color=#00ff00]稍远[/color]",
 	"[color=#00ff00]远[/color]",
 	"[color=#00ff00]很远[/color]",
-	"[color=#00ff00]非常远[/color]"
+	"[color=#00ff00]遥远[/color]"
 ];
 gt.Const.Strings.PartyStrength <- [
 	"弱小的",
@@ -1328,7 +1328,7 @@ gt.Const.Strings.PerkName <- {
 gt.Const.Strings.PerkDescription <- {
 	Relentless = "不要慢下来! 在任何时候，你的主动值都只减少累积疲劳值的[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]，而不是全部的。此外，使用\'等待\'命令将不再使你在下一回合的主动值受到惩罚。",
 	Rotation = "解锁“换位”技能，该技能允许两个角色在无视控制区域的情况下切换位置，只要两个角色都没有被击晕、定身或因其他方式失能。",
-	Footwork = "解锁“步法”技能，使您可以通过熟练的步法离开控制区域而不会触发自由攻击。",
+	Footwork = "解锁“步法”技能，使您可以通过熟练的步法离开控制区域而不会触发免费借机攻击。",
 	Debilitate = "解锁 \'衰弱\' 技能，该技能可以使你的下一次攻击使目标瘫痪一回合，使其造成伤害的能力降低[color=" + this.Const.UI.Color.NegativeValue + "]-50%[/color].",
 	Indomitable = "解锁 \'不屈\' 技能，该技能给予[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]的伤害减免，以及对昏迷、击退或勾拽的免疫，持续一回合。",
 	RallyTheTroops = "解锁“集结”技能，可以集结逃跑的盟友，并提高附近所有盟友的士气到稳定的等级。使用技能的角色决心越高，成功的几率就越高。",

@@ -6,7 +6,7 @@ this.iron_lungs_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.iron_lungs";
 		this.m.Name = "铁肺";
 		this.m.Icon = "ui/traits/trait_icon_33.png";
-		this.m.Description = "这个角色很少会气喘吁吁，无论是挥舞着重型武器还是跑过整个战场。";
+		this.m.Description = "这个角色很少会气喘吁吁，哪怕是挥舞重型武器或是跑过整个战场。";
 		this.m.Titles = [];
 		this.m.Excluded = [
 			"trait.asthmatic",

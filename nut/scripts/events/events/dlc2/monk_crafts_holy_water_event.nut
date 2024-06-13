@@ -15,7 +15,7 @@ this.monk_crafts_holy_water_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "即使是圣人也有交易的技俩。",
+					Text = "即便圣人也会取巧。",
 					function getResult( _event )
 					{
 						return 0;
