@@ -1021,7 +1021,7 @@ this.skill <- {
 		{
 			ret.push({
 				icon = "ui/tooltips/positive.png",
-				text = "高度优势"
+				text = "高地优势"
 			});
 		}
 

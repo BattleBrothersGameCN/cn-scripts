@@ -569,7 +569,7 @@ gt.Const.Strings.BarbarianPrefix <- [
 	"天选的"
 ];
 gt.Const.Strings.BarbarianSuffix <- [
-	"·北方",
+	"·朔来",
 	"·陈旧",
 	"·愤怒",
 	"·杀戮",

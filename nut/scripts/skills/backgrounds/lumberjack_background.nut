@@ -8,7 +8,7 @@ this.lumberjack_background <- this.inherit("scripts/skills/backgrounds/character
 		this.m.Icon = "ui/backgrounds/background_04.png";
 		this.m.BackgroundDescription = "伐木工习惯于体力劳动。还有斧子。";
 		this.m.GoodEnding = "魁梧的伐木工%name%最终离开战团，回到了森林。他把伐木干成了一门生意，全年无休地经营。贵族们最近迷上了小木屋，愿意为此付一大笔钱，他真是赶上了个好时候。";
-		this.m.BadEnding = "伐木工%name%受够了佣兵生活，决定回去砍树。最后你听说，他被倒下的树砸成了肉饼，连骨头都碎了。";
+		this.m.BadEnding = "伐木工%name%受够了佣兵生活，决定回去砍树。最后你听说，他被倒下的树砸成了肉饼，连块整骨头都没留下。";
 		this.m.HiringCost = 100;
 		this.m.DailyCost = 13;
 		this.m.Excluded = [

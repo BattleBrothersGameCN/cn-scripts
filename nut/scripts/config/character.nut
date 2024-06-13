@@ -298,7 +298,7 @@ gt.Const.MoraleStateEvent <- [
 	""
 ];
 gt.Const.HitpointsStateName <- [
-	"濒死",
+	"奄奄一息",
 	"遍体鳞伤",
 	"皮开肉绽",
 	"不痛不痒",

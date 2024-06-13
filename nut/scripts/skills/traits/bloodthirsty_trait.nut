@@ -6,7 +6,7 @@ this.bloodthirsty_trait <- this.inherit("scripts/skills/traits/character_trait",
 		this.m.ID = "trait.bloodthirsty";
 		this.m.Name = "嗜血";
 		this.m.Icon = "ui/traits/trait_icon_42.png";
-		this.m.Description = "这个角色容易对敌人过度暴力和残忍。死了还不够，把他的头串起来！";
+		this.m.Description = "这个角色容易对敌人过度暴力和残忍。死了还不够，把他的头挑起来！";
 		this.m.Titles = [
 			"屠夫",
 			"疯子",

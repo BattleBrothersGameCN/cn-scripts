@@ -13,7 +13,7 @@ this.undead_warnings_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "那是关于…",
+					Text = "这可不是什么好兆头…",
 					function getResult( _event )
 					{
 						return 0;

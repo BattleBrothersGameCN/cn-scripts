@@ -52,7 +52,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Archer != null)
 				{
 					this.Options.push({
-						Text = "有人打倒了那个冒失的家伙！",
+						Text = "来人，把那个冒失的家伙打下来！",
 						function getResult( _event )
 						{
 							return "Archer";

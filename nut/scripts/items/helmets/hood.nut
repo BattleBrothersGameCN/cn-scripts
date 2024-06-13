@@ -5,7 +5,7 @@ this.hood <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.hood";
 		this.m.Name = "兜帽";
-		this.m.Description = "一顶用于应对天气和擦伤的简单兜帽。";
+		this.m.Description = "一顶朴素兜帽，能抵御天气和擦伤。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

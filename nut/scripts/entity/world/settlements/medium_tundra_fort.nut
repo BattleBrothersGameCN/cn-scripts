@@ -31,7 +31,7 @@ this.medium_tundra_fort <- this.inherit("scripts/entity/world/settlement", {
 			"雪韵卫",
 			"颅骨卫",
 			"蕨台",
-			"古菲尔斯加德",
+			"容留卫",
 			"军屯漫",
 			"小河台",
 			"雷击漫",

@@ -36,12 +36,12 @@ this.assassin_southern_background <- this.inherit("scripts/skills/backgrounds/ch
 		this.m.Titles = [
 			"影子(the Shadow)",
 			"刺客(the Assassin)",
-			"潜伏者(the Insidious)",
+			"潜伏者",
 			"背刺者(the Backstabber)",
 			"无形者(the Unseen)",
 			"凶手(the Murderer)",
 			"匕首(the Dagger)",
-			"难以捉摸者(the Elusive)"
+			"莫测(the Elusive)"
 		];
 		this.m.Bodies = this.Const.Bodies.SouthernSkinny;
 		this.m.Faces = this.Const.Faces.SouthernMale;
