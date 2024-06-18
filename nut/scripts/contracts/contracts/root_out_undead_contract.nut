@@ -349,7 +349,7 @@ this.root_out_undead_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "做好面对最糟糕情况的准备！",
+					Text = "为最坏的情况做好准备！",
 					function getResult()
 					{
 						return 0;
