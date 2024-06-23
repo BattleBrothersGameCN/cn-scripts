@@ -248,20 +248,20 @@ gt.Const.World.LocationNames.Crypt <- [
 	"荒废的陵墓",
 	"毁坏的墓穴",
 	"隐秘的神殿",
-	"%randomnoble% 的坟墓",
+	"%randomnoble%之墓",
 	"死亡之门墓穴",
 	"猎犬之陵墓",
 	"贾菲戈之墓",
 	"大先知之墓",
 	"乌鸦之墓",
-	"{伟大的 | 残暴的 | 霸王·} %randomname% 之墓",
+	"{大帝 | 厉君 | 暴君}%randomname%之墓",
 	"先民之墓",
 	"奥格玛之陵墓",
 	"骸骨安息之处",
 	"黑暗避难所",
 	"最后的安息之地",
 	"毁坏的神殿",
-	"坟墓",
+	"墓中之墓",
 	"永恒之墓",
 	"灰胡子之墓",
 	"地狱之门陵墓",
@@ -313,7 +313,7 @@ gt.Const.World.LocationNames.MassGrave <- [
 	"冒险之终结",
 	"最后的希望",
 	"下陷的古战场",
-	"%randomname% 的战败地",
+	"%randomname%折戟之地",
 	"露天大坟场",
 	"挖开的骨头堆",
 	"堆满尸骨的坟场",
@@ -428,7 +428,7 @@ gt.Const.World.LocationNames.Ruins <- [
 	"倒塌的了望塔",
 	"先祖的废墟",
 	"被埋葬的住宅",
-	"未能竣工的要塞"
+	"烂尾要塞"
 ];
 gt.Const.World.LocationNames.BuriedCastle <- [
 	"失落的宫殿",
@@ -783,7 +783,7 @@ gt.Const.World.LocationNames.HiddenCamp <- [
 	"烧沙营地",
 	"白沙营地",
 	"自由灵魂营地",
-	"金日暮藏身处(Golden Sun Hideout)",
+	"金日藏身处",
 	"流沙藏身处",
 	"沙漠掠袭者营地"
 ];

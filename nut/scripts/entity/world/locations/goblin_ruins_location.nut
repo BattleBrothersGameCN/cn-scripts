@@ -10,7 +10,7 @@ this.goblin_ruins_location <- this.inherit("scripts/entity/world/location", {
 		}
 		else
 		{
-			return "曾经骄傲的要塞如今已成废墟。";
+			return "昔日傲立的要塞如今已成废墟。";
 		}
 	}
 
