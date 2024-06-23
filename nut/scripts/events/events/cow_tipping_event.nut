@@ -80,7 +80,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.worsenMood(0.5, "在战团面前羞辱了自己");
+				_event.m.Other.worsenMood(0.5, "当着整个战团出了洋相");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -142,7 +142,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Other.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Other.worsenMood(0.5, "在战团面前羞辱了自己");
+				_event.m.Other.worsenMood(0.5, "当着整个战团出了洋相");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
