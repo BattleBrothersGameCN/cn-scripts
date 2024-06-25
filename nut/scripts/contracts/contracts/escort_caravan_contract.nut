@@ -489,7 +489,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 				}
 
 				this.Contract.m.BulletpointsObjectives = [
-					"将%noble%安全地送到%nobledirection%的%noblesettlement%。"
+					"将%noble%安全护送到%nobledirection%方的%noblesettlement%。"
 				];
 				this.Contract.m.BulletpointsPayment = [];
 				this.Contract.m.BulletpointsPayment.push("到达时获得报酬");

@@ -5,7 +5,7 @@ this.medium_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 		this.settlement.create();
 		this.m.Name = this.getRandomName([
 			"海港镇",
-			"维克港",
+			"维京港",
 			"沙镇",
 			"沙渡",
 			"冻鱼港",

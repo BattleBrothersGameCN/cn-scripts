@@ -398,7 +398,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这并不值得我去跑腿。 | 我们不打算追捕幽灵，尤其是在 %worldmapregion%。 | 那不是我们要找的工作。}",
+					Text = "{长途跋涉并不合我口味。 | 我们可不想跑到%worldmapregion%去玩捉迷藏。 | 那不是我们要找的工作。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -430,7 +430,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这并不值得我去跑腿。 | 我们不打算追捕幽灵，尤其是在 %worldmapregion%。 | 那不是我们要找的工作。}",
+					Text = "{长途跋涉并不合我口味。 | 我们可不想跑到%worldmapregion%去玩捉迷藏。 | 那不是我们要找的工作。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -462,7 +462,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{我们不打算追捕幽灵，尤其是在 %worldmapregion%。 | 那不是我们要找的工作。 | 我不会让战团冒险对付这样的敌人。}",
+					Text = "{我们可不想跑到%worldmapregion%去玩捉迷藏。 | 那不是我们要找的工作。 | 我不会让战团冒险对付这样的敌人。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
