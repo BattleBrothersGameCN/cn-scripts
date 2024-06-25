@@ -5,7 +5,7 @@ this.quartermaster_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.quartermaster";
 		this.m.Name = "军需官";
-		this.m.Description = "凭借多年的商队旅行经验，军需官能够将任何装备、行李或盔甲挤压和旋转到最佳位置，尽可能有效地利用空间。";
+		this.m.Description = "有了多年的商旅经验，军需官能把装备、行李、盔甲，都塞到最合适的位置，最大限度地利用空间。";
 		this.m.Image = "ui/campfire/quartermaster_01";
 		this.m.Cost = 3000;
 		this.m.Effects = [
