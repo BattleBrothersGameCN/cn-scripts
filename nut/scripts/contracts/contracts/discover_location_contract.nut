@@ -111,7 +111,7 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"找到位于%direction%边%distance%处的%location%，大约在%region%区域附近。"
+					"寻找位于%direction%边%distance%处的%location%，该地在%region%附近。"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)

@@ -247,7 +247,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			{
 				this.Contract.m.BulletpointsObjectives = [
 					"摧毁所有绿皮攻城器",
-					"消灭%objective%附近的所有绿皮"
+					"消灭%objective%周边的所有绿皮"
 				];
 
 				if (this.Contract.m.Origin != null && !this.Contract.m.Origin.isNull())
