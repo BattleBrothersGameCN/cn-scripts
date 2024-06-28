@@ -110,7 +110,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"杀死劫掠的绿皮，大约在 %origin%"
+					"杀死%origin%周边烧杀抢掠的绿皮"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)

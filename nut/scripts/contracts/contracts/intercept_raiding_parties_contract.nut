@@ -82,7 +82,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"拦截所有的南方掠夺队，大约在 %objective%",
+					"阻止所有%objective%附近的南方掠夺队",
 					"不要让他们烧了任何地点"
 				];
 

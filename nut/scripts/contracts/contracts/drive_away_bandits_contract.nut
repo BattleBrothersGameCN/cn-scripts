@@ -9,7 +9,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 	{
 		this.contract.create();
 		this.m.Type = "contract.drive_away_bandits";
-		this.m.Name = "击退强盗";
+		this.m.Name = "驱逐强盗";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
