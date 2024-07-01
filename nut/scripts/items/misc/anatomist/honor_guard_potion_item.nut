@@ -53,7 +53,7 @@ this.honor_guard_potion_item <- this.inherit("scripts/items/misc/anatomist/anato
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "承受[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color] 到 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 的伤害减免。"
+			text = "承受[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]到[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 的伤害减免。"
 		});
 		result.push({
 			id = 65,

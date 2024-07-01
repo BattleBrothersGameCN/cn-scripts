@@ -4,7 +4,7 @@ this.thrust <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.thrust";
 		this.m.Name = "戳击";
-		this.m.Description = "一记难以避免或阻挡的准确刺击。";
+		this.m.Description = "一记难以躲开或格挡的巧妙刺击。";
 		this.m.KilledString = "被刺穿";
 		this.m.Icon = "skills/active_04.png";
 		this.m.IconDisabled = "skills/active_04_sw.png";

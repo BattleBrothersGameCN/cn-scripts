@@ -158,7 +158,7 @@ this.broken_cart_event <- this.inherit("scripts/events/event", {
 			result.push({
 				id = 10,
 				icon = "ui/icons/asset_medicine.png",
-				text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color]点医疗用品"
+				text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color]医疗用品。"
 			});
 		}
 

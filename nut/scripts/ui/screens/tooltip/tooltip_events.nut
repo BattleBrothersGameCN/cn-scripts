@@ -1330,7 +1330,7 @@ this.tooltip_events <- {
 
 				if (heal.MedicineMin > 0)
 				{
-					desc = desc + ("\n\n治愈所有士兵将需要一段时间 [color=" + this.Const.UI.Color.PositiveValue + "]" + heal.DaysMin + "[/color] 和 [color=" + this.Const.UI.Color.PositiveValue + "]" + heal.DaysMax + "[/color] 天并需要大约");
+					desc = desc + ("\n\n治愈所有士兵将需要一段时间 [color=" + this.Const.UI.Color.PositiveValue + "]" + heal.DaysMin + "[/color]到[color=" + this.Const.UI.Color.PositiveValue + "]" + heal.DaysMax + "[/color] 天并需要大约");
 
 					if (heal.MedicineMin <= this.World.Assets.getMedicine())
 					{
@@ -1341,7 +1341,7 @@ this.tooltip_events <- {
 						desc = desc + ("[color=" + this.Const.UI.Color.NegativeValue + "]");
 					}
 
-					desc = desc + (heal.MedicineMin + "[/color] 和 ");
+					desc = desc + (heal.MedicineMin + "[/color]到");
 
 					if (heal.MedicineMax <= this.World.Assets.getMedicine())
 					{
@@ -1352,7 +1352,7 @@ this.tooltip_events <- {
 						desc = desc + ("[color=" + this.Const.UI.Color.NegativeValue + "]");
 					}
 
-					desc = desc + (heal.MedicineMax + "[/color]点医疗用品");
+					desc = desc + (heal.MedicineMax + "[/color]医疗用品。");
 				}
 
 				desc = desc + ("你至多能携带" + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].Medicine + this.World.Assets.m.MedicineMaxAdditional) + "单位。");
