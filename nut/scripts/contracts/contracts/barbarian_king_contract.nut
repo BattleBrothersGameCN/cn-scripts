@@ -116,7 +116,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.BulletpointsObjectives.clear();
 				this.Contract.m.BulletpointsObjectives = [
 					"猎杀野蛮人国王和他的战团",
-					"他的战团最后现身在%region%附近，位于你%direction%边的%terrain%上，靠近%nearest_town%"
+					"他的战团最后现身在%region%附近，位于你%direction%边的%terrain%，靠近%nearest_town%"
 				];
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())

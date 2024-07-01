@@ -36,7 +36,7 @@ this.honor_guard_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "每次遭受穿刺攻击（例如弓和矛）伤害时随机获得 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color] 到 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 的伤害减免。"
+				text = "每次遭受穿刺攻击（例如弓和矛）伤害时随机获得 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]到[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color] 的伤害减免。"
 			},
 			{
 				id = 12,

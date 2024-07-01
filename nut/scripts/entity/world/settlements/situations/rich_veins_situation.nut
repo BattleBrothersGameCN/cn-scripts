@@ -4,8 +4,8 @@ this.rich_veins_situation <- this.inherit("scripts/entity/world/settlements/situ
 	{
 		this.situation.create();
 		this.m.ID = "situation.rich_veins";
-		this.m.Name = "丰富的矿脉";
-		this.m.Description = "一些幸运的矿工找到了一条特别丰富的矿脉！矿产和金属的开采量将大大增加，直到耗尽，但定居点的物价也上涨了。";
+		this.m.Name = "富集矿脉";
+		this.m.Description = "某些幸运的矿工找到了一条储量尤其丰富的矿脉！在开采殆尽前，矿产和金属的产量将大幅增加，但定居点的物价也因此而上涨。";
 		this.m.Icon = "ui/settlement_status/settlement_effect_33.png";
 		this.m.Rumors = [
 			"他们在 %settlement% 的一个母矿脉里打起来了。我自己也在矿井里工作了几十年，我所能表现出来的只是一次严重的咳嗽。",

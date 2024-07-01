@@ -100,7 +100,7 @@ this.grant_night_vision_skill <- this.inherit("scripts/skills/skill", {
 
 		if (!_user.isHiddenToPlayer())
 		{
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " 使授予夜间视野");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "施放了授予夜视");
 		}
 
 		return true;

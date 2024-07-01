@@ -75,7 +75,7 @@ this.happy_powder_item <- this.inherit("scripts/items/item", {
 	function onUse( _actor, _item = null )
 	{
 		this.Sound.play("sounds/combat/taunt_03.wav", this.Const.Sound.Volume.Inventory);
-		_actor.improveMood(10.0, "沿途的恐惧和厌恶");
+		_actor.improveMood(10.0, "恐惧和厌恶抛在脑后");
 		this.Const.Tactical.Common.checkDrugEffect(_actor);
 		return true;
 	}
