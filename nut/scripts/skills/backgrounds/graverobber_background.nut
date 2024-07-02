@@ -7,7 +7,7 @@ this.graverobber_background <- this.inherit("scripts/skills/backgrounds/characte
 		this.m.Name = "盗墓贼";
 		this.m.Icon = "ui/backgrounds/background_25.png";
 		this.m.BackgroundDescription = "盗墓贼胆子不小。";
-		this.m.GoodEnding = "像%name%这样的盗墓贼并不受欢迎，但你只是想让他当个好佣兵，他也没有辜负你的期望。你离开后得知，这位盗墓贼长期留在了战团里，他现在是战团的培训师，帮助新兵跟上进度。";
+		this.m.GoodEnding = "像%name%这样的盗墓贼并不受欢迎，但你只是想让他当个好佣兵，他也没有辜负你的期望。你离开后得知，这位盗墓贼长期留在了战团里，他现在是战团的培训师，发掘新兵的才能。";
 		this.m.BadEnding = "像盗墓贼%name%这样的人加入战团，无非是为了摆脱过去所犯下的错误，那些最不能为法律道德容忍的错误。收钱把人送进坟里适合他不过了。不幸的是，%companyname%逐渐瓦解。你得知%name%最终离开了战团，加入了一家类似的竞争对手。你不确定他现在何处，也不确定该生他背叛的气，还是理解他的难处。毕竟生意就只是生意。";
 		this.m.HiringCost = 60;
 		this.m.DailyCost = 6;
