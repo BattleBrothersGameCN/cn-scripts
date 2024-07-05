@@ -153,7 +153,7 @@ this.anatomist_confronts_healer_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Anatomist.getName() + "遭受轻伤"
+					text = _event.m.Anatomist.getName() + "受到了轻微伤"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -165,7 +165,7 @@ this.anatomist_confronts_healer_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = bro.getName() + "遭受轻伤"
+							text = bro.getName() + "受到了轻微伤"
 						});
 					}
 				}

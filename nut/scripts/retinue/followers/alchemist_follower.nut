@@ -5,7 +5,7 @@ this.alchemist_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.alchemist";
 		this.m.Name = "炼金术士";
-		this.m.Description = "炼金术士拥有丰富的知识，可以使用特殊材料制造各种神秘的装置和药剂，只要他有使用制作工具的权限，并且更节省材料。";
+		this.m.Description = "炼金术士拥有丰富的，用珍奇材料制造装置和合剂的知识，只要能拿到剥制设备，他就能用更少材料做出成品。";
 		this.m.Image = "ui/campfire/alchemist_01";
 		this.m.Cost = 2500;
 		this.m.Effects = [

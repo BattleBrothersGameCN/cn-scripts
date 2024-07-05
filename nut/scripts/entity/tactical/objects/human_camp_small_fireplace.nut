@@ -2,12 +2,12 @@ this.human_camp_small_fireplace <- this.inherit("scripts/entity/tactical/entity"
 	m = {},
 	function getName()
 	{
-		return "火炉";
+		return "火堆";
 	}
 
 	function getDescription()
 	{
-		return "一个点着火的火盆。";
+		return "支着大锅的火堆。";
 	}
 
 	function onInit()

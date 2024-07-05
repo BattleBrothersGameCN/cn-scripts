@@ -7,7 +7,7 @@ this.barbarian_camp_small_idol <- this.inherit("scripts/entity/tactical/entity",
 
 	function getDescription()
 	{
-		return "一个蛮族雕像。";
+		return "一座蛮族雕像。";
 	}
 
 	function onInit()

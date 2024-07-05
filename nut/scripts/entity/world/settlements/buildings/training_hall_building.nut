@@ -5,7 +5,7 @@ this.training_hall_building <- this.inherit("scripts/entity/world/settlements/bu
 		this.building.create();
 		this.m.ID = "building.training_hall";
 		this.m.Name = "训练厅";
-		this.m.Description = "让你的人接受战斗训练向老兵学习";
+		this.m.Description = "让你的人接受战斗训练，学习老兵经验";
 		this.m.UIImage = "ui/settlements/building_07";
 		this.m.UIImageNight = "ui/settlements/building_07_night";
 		this.m.Tooltip = "world-town-screen.main-dialog-module.VeteransHall";

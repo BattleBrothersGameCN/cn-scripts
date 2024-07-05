@@ -5,7 +5,7 @@ this.taxidermist_building <- this.inherit("scripts/entity/world/settlements/buil
 		this.building.create();
 		this.m.ID = "building.taxidermist";
 		this.m.Name = "剥制屋";
-		this.m.Description = "一个剥制师可以从你得到的各种战利品中创造有用的物品。";
+		this.m.Description = "剥制师能把你得到的战利品制成各种实用物品。";
 		this.m.UIImage = "ui/settlements/building_13";
 		this.m.UIImageNight = "ui/settlements/building_13_night";
 		this.m.Tooltip = "world-town-screen.main-dialog-module.Taxidermist";

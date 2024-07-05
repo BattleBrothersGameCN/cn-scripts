@@ -82,7 +82,7 @@ this.town_training_dialog_module <- this.inherit("scripts/ui/screens/ui_module",
 
 		return {
 			Title = "训练厅",
-			SubTitle = "让您的士兵接受战斗训练并向老兵学习",
+			SubTitle = "让你的人接受战斗训练，学习老兵经验",
 			Roster = roster,
 			Assets = this.m.Parent.queryAssetsInformation()
 		};

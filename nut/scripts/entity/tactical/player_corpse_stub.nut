@@ -123,12 +123,12 @@ this.player_corpse_stub <- {
 
 		if (this.m.LifetimeStats.Battles != 0)
 		{
-			text = text + ("参加了" + this.m.LifetimeStats.Battles + "场战斗并且拥有" + this.m.LifetimeStats.Kills + "次击杀。");
+			text = text + ("参加过" + this.m.LifetimeStats.Battles + "场战斗，达成过" + this.m.LifetimeStats.Kills + "次击杀。");
 		}
 
 		if (this.m.LifetimeStats.MostPowerfulVanquished != "")
 		{
-			text = text + ("他曾击败过的最强对手是" + this.m.LifetimeStats.MostPowerfulVanquished + ".");
+			text = text + ("他击败过的最强对手是" + this.m.LifetimeStats.MostPowerfulVanquished + ".");
 		}
 
 		tooltip.push({
@@ -149,7 +149,7 @@ this.player_corpse_stub <- {
 				id = 3,
 				type = "text",
 				icon = "ui/icons/asset_daily_money.png",
-				text = "薪资: [img]gfx/ui/tooltips/money.png[/img]" + this.m.DailyCost + " /日"
+				text = "薪资: [img]gfx/ui/tooltips/money.png[/img]" + this.m.DailyCost + "/日"
 			});
 		}
 

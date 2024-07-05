@@ -7,7 +7,7 @@ this.graveyard_wall <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "一个老旧并且部分坍塌的墙。";
+		return "一面塌了一部分的老墙。";
 	}
 
 	function setDirBasedOnCenter( _centerTile, _dist )

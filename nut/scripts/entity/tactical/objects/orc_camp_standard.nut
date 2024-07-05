@@ -7,7 +7,7 @@ this.orc_camp_standard <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "一个明示营地主人的旗子。";
+		return "一面旗帜，昭示着营地的主人。";
 	}
 
 	function onInit()

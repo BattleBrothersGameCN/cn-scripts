@@ -609,7 +609,7 @@ this.traveler_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "S3",
-			Text = "[img]gfx/ui/events/event_26.png[/img] 这个男人盯着镜子就好像在看着自己的死尸一般。 他搓着下巴转动着脑袋，拼命地试图寻找到一个不让人失望的角度。%SPEECH_ON%如果我的老妈不是这个世界上最大的骗子那就是我被诅咒了。 你看那个丑鬼！%SPEECH_OFF%他递还镜子并且因为那丑脸而忍不住地笑起来。%SPEECH_ON%Well, 我想我再也不用疑惑为什么女人都离我远远的了。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_26.png[/img] 这个男人盯着镜子就好像在看着自己的死尸一般。 他搓着下巴转动着脑袋，拼命地试图寻找到一个不让人失望的角度。%SPEECH_ON%如果我的老妈不是这个世界上最大的骗子那就是我被诅咒了。 你看那个丑鬼！%SPEECH_OFF%他递还镜子并且因为那丑脸而忍不住地笑起来。%SPEECH_ON%好吧， 我想我再也不用疑惑为什么女人都离我远远的了。%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [

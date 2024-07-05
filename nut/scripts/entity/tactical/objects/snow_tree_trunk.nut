@@ -7,7 +7,7 @@ this.snow_tree_trunk <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "曾经骄傲的树的残骸。";
+		return "傲立过的大树的残骸。";
 	}
 
 	function onInit()

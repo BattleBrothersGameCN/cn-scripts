@@ -104,12 +104,12 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.HedgeKnight1.getName() + "遭受轻伤"
+					text = _event.m.HedgeKnight1.getName() + "受到了轻微伤"
 				});
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.HedgeKnight2.getName() + "遭受轻伤"
+					text = _event.m.HedgeKnight2.getName() + "受到了轻微伤"
 				});
 			}
 
@@ -147,12 +147,12 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.HedgeKnight1.getName() + "遭受轻伤"
+					text = _event.m.HedgeKnight1.getName() + "受到了轻微伤"
 				});
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.HedgeKnight2.getName() + "遭受轻伤"
+					text = _event.m.HedgeKnight2.getName() + "受到了轻微伤"
 				});
 			}
 
@@ -198,12 +198,12 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.HedgeKnight1.getName() + "遭受轻伤"
+					text = _event.m.HedgeKnight1.getName() + "受到了轻微伤"
 				});
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.HedgeKnight2.getName() + "遭受轻伤"
+					text = _event.m.HedgeKnight2.getName() + "受到了轻微伤"
 				});
 			}
 
@@ -249,12 +249,12 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.HedgeKnight1.getName() + "遭受轻伤"
+					text = _event.m.HedgeKnight1.getName() + "受到了轻微伤"
 				});
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.HedgeKnight2.getName() + "遭受轻伤"
+					text = _event.m.HedgeKnight2.getName() + "受到了轻微伤"
 				});
 			}
 
@@ -354,7 +354,7 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 						this.List.push({
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = bro.getName() + "遭受轻伤"
+							text = bro.getName() + "受到了轻微伤"
 						});
 					}
 					else
@@ -403,7 +403,7 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.HedgeKnight2.getName() + "是死了"
+					text = _event.m.HedgeKnight2.getName() + "死了"
 				});
 				_event.m.HedgeKnight2.getItems().transferToStash(this.World.Assets.getStash());
 				_event.m.HedgeKnight2.getSkills().onDeath(this.Const.FatalityType.None);
@@ -473,7 +473,7 @@ this.hedgeknight_vs_hedgeknight_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.HedgeKnight1.getName() + "是死了"
+					text = _event.m.HedgeKnight1.getName() + "死了"
 				});
 				_event.m.HedgeKnight1.getItems().transferToStash(this.World.Assets.getStash());
 				_event.m.HedgeKnight1.getSkills().onDeath(this.Const.FatalityType.None);

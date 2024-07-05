@@ -113,7 +113,7 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Student.getName() + "遭受轻伤"
+					text = _event.m.Student.getName() + "受到了轻微伤"
 				});
 			}
 

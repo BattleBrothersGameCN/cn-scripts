@@ -116,7 +116,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Peddler.getName() + "遭受轻伤"
+					text = _event.m.Peddler.getName() + "受到了轻微伤"
 				});
 				_event.m.Peddler.worsenMood(2, "他的计划失败了，损失了一大笔钱");
 

@@ -11,7 +11,7 @@ this.bandage_ally_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.bandage_ally";
 		this.m.Name = "使用绷带";
-		this.m.Description = "通过对任何这样的伤口施加压力和临时包扎，使自己或另一个角色免于失血致死。不治愈生命值。使用该技能的角色和受治者旁均不能有敌人。";
+		this.m.Description = "通过对伤口施压进行临时包扎，防止自己或其他角色失血而死。无法恢复生命值。使用者和救治对象均不能卷入近战。";
 		this.m.Icon = "skills/active_105.png";
 		this.m.IconDisabled = "skills/active_105_sw.png";
 		this.m.Overlay = "active_105";

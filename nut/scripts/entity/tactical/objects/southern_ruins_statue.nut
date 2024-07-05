@@ -7,7 +7,7 @@ this.southern_ruins_statue <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "古早时代的青铜雕像。.";
+		return "一座远古铜像。";
 	}
 
 	function onInit()

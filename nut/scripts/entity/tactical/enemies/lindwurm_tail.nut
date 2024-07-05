@@ -366,17 +366,17 @@ this.lindwurm_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 					if (this.isPlayerControlled() || !this.isHiddenToPlayer())
 					{
-						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中 [b]" + this.Math.floor(damage) + "[/b]点伤害并遭受" + injury.getNameOnly() + "!");
+						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b]点伤害，身受" + injury.getNameOnly() + "!");
 					}
 				}
 				else if (damage > 0 && !this.isHiddenToPlayer())
 				{
-					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中 [b]" + this.Math.floor(damage) + "[/b]点伤害");
+					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b]点伤害");
 				}
 			}
 			else if (damage > 0 && !this.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中 [b]" + this.Math.floor(damage) + "[/b]点伤害");
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b]点伤害");
 			}
 
 			if (this.m.Body.m.MoraleState != this.Const.MoraleState.Ignore && damage >= this.Const.Morale.OnHitMinDamage && this.getCurrentProperties().IsAffectedByLosingHitpoints)

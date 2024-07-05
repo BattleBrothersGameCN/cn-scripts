@@ -2,7 +2,7 @@ this.tree_olive <- this.inherit("scripts/entity/tactical/entity", {
 	m = {},
 	function getName()
 	{
-		return "橄榄树(Olive Tree)";
+		return "橄榄树";
 	}
 
 	function getDescription()

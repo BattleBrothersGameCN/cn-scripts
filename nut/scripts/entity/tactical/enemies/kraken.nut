@@ -289,7 +289,7 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			if (!this.World.Flags.get("IsKrakenDefeated"))
 			{
-				this.setName("比斯巨兽");
+				this.setName("万兽之王");
 			}
 			else
 			{

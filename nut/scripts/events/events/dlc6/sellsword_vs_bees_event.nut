@@ -150,7 +150,7 @@ this.sellsword_vs_bees_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Wildman.getName() + "遭受轻伤"
+					text = _event.m.Wildman.getName() + "受到了轻微伤"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 

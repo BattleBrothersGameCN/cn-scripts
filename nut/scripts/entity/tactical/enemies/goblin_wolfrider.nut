@@ -250,7 +250,7 @@ this.goblin_wolfrider <- this.inherit("scripts/entity/tactical/goblin", {
 
 		this.spawnTerrainDropdownEffect(_tile);
 		local corpse = clone this.Const.Corpse;
-		corpse.CorpseName = "一只狼";
+		corpse.CorpseName = "一头狼";
 		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
 		corpse.IsResurrectable = false;
 		_tile.Properties.set("Corpse", corpse);

@@ -10,7 +10,7 @@ this.berserker_mushrooms_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.berserker_mushrooms";
-		this.m.Name = "吃或者给予奇怪的蘑菇";
+		this.m.Name = "吃下或给出怪异蘑菇";
 		this.m.Description = "给邻近的盟友或自己吃奇怪的蘑菇，进入一种恍惚般的愤怒状态，而不考虑你的安全。 可能会导致疾病。 效果将在4回合内慢慢消失。 不能在近战中使用，任何收到物品的人都需要有一个空的背包位置。";
 		this.m.Icon = "skills/active_98.png";
 		this.m.IconDisabled = "skills/active_98_sw.png";
@@ -147,7 +147,7 @@ this.berserker_mushrooms_skill <- this.inherit("scripts/skills/skill", {
 
 			if (!_user.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(user) + " 吃了奇怪的蘑菇");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(user) + " 吃了怪异蘑菇");
 			}
 
 			if (this.m.Item != null && !this.m.Item.isNull())
@@ -161,7 +161,7 @@ this.berserker_mushrooms_skill <- this.inherit("scripts/skills/skill", {
 		{
 			if (!_user.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " 把奇怪的蘑菇给" + this.Const.UI.getColorizedEntityName(user));
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " 把怪异蘑菇递给了" + this.Const.UI.getColorizedEntityName(user));
 			}
 
 			this.spawnIcon("status_effect_67", _targetTile);

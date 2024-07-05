@@ -49,7 +49,7 @@ this.generic_object <- this.inherit("scripts/entity/tactical/entity", {
 
 		if (b.Visible && this.m.OnlyVisibleWhenCameraIsFlipped)
 		{
-			this.logInfo("镜子出现了！");
+			this.logInfo("镜像视觉！");
 		}
 	}
 

@@ -314,7 +314,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 	{
 		if (this.m.IsBattleEnded)
 		{
-			this.logDebug("信息: 战斗结束时间为：" + this.m.CurrentRound + "回合。");
+			this.logDebug("信息: 战斗历时" + this.m.CurrentRound + "回合。");
 			return;
 		}
 
@@ -740,7 +740,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 					flashBars.fatigue <- true;
 				}
 
-				this.Tactical.EventLog.log("[color=" + this.Const.UI.Color.NegativeValue + "]太疲劳了！[/color]");
+				this.Tactical.EventLog.log("[color=" + this.Const.UI.Color.NegativeValue + "]角色太疲劳了！[/color]");
 			}
 
 			if (flashBars != null)
@@ -905,7 +905,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 			return;
 		}
 
-		this.Tactical.State.showDialogPopup("结束回合", "你所有的角色都跳过他们的回合直到下一轮开始？", function ()
+		this.Tactical.State.showDialogPopup("结束回合", "确认让你所有角色跳过回合，直到下轮开始再行动？", function ()
 		{
 			this.m.IsSkippingRound = true;
 			this.m.JSHandle.call("setEndTurnAllButtonVisible", false);

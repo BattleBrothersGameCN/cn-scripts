@@ -23,7 +23,7 @@ this.campfire_main_dialog_module <- this.inherit("scripts/ui/screens/ui_module",
 		local shield = this.World.Assets.getBannerID() < 10 ? "0" + this.World.Assets.getBannerID() : this.World.Assets.getBannerID();
 		local result = {
 			Title = "随从",
-			SubTitle = "管理你的非战斗追随者随从",
+			SubTitle = "管理你的非战斗追随者",
 			Assets = this.UIDataHelper.convertAssetsInformationToUIData(),
 			Background = this.Const.World.TerrainSettlementImages[type].Background + (night ? "_night" : "") + ".jpg",
 			BackgroundCenter = "ui/campfire/campfire_tents_01.png",

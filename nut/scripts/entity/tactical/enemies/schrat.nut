@@ -119,7 +119,7 @@ this.schrat <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一个树妖(Schrat)";
+			corpse.CorpseName = "一个树人";
 			corpse.IsHeadAttached = true;
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);

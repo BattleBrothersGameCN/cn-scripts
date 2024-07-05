@@ -19,7 +19,7 @@ this.early_access_scenario <- this.inherit("scripts/scenarios/world/starting_sce
 			local bro;
 			bro = roster.create("scripts/entity/tactical/player");
 			bro.m.HireTime = this.Time.getVirtualTimeF();
-			bro.improveMood(1.5, "加入了一个雇佣兵战团");
+			bro.improveMood(1.5, "加入了佣兵团");
 
 			while (names.find(bro.getNameOnly()) != null)
 			{

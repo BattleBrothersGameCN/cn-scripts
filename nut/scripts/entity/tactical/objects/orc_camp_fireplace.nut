@@ -2,12 +2,12 @@ this.orc_camp_fireplace <- this.inherit("scripts/entity/tactical/entity", {
 	m = {},
 	function getName()
 	{
-		return "火炉";
+		return "火堆";
 	}
 
 	function getDescription()
 	{
-		return "一个篝火。你不想知道他们在煮着什么。";
+		return "一个火堆。你可不想知道他们在煮什么。";
 	}
 
 	function onInit()

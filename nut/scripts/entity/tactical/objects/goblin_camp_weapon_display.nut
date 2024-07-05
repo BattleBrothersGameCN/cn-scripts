@@ -7,7 +7,7 @@ this.goblin_camp_weapon_display <- this.inherit("scripts/entity/tactical/entity"
 
 	function getDescription()
 	{
-		return "几杆长柄被展示出来，用来表明领地或警告入侵者。";
+		return "几柄展示出来的长杆兵器，用以标记领地或警告入侵者。";
 	}
 
 	function onInit()

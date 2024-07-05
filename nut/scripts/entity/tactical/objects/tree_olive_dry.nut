@@ -2,12 +2,12 @@ this.tree_olive_dry <- this.inherit("scripts/entity/tactical/entity", {
 	m = {},
 	function getName()
 	{
-		return "死树(Dead Tree)";
+		return "死树";
 	}
 
 	function getDescription()
 	{
-		return "这棵枯树已经死了很久了。阻挡移动和视线。";
+		return "枯死了很久的树。阻挡移动和视线。";
 	}
 
 	function onInit()

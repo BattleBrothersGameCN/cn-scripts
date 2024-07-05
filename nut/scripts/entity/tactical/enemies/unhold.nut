@@ -156,7 +156,7 @@ this.unhold <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一只巨魔";
+			corpse.CorpseName = "一头巨魔";
 			corpse.Tile = _tile;
 			corpse.IsResurrectable = false;
 			corpse.IsConsumable = true;

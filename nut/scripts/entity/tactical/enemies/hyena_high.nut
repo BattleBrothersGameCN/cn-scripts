@@ -2,7 +2,7 @@ this.hyena_high <- this.inherit("scripts/entity/tactical/enemies/hyena", {
 	m = {},
 	function getName()
 	{
-		return "狂暴鬣狗(Frenzied Hyena)";
+		return "狂暴鬣狗";
 	}
 
 	function create()

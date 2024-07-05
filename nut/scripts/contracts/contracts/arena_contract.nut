@@ -402,7 +402,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 
 					if (this.Flags.get("Number") == 1)
 					{
-						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场，对战一只巨魔";
+						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场，对战一头巨魔";
 					}
 					else
 					{

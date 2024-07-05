@@ -2,12 +2,12 @@ this.orc_camp_large_remains <- this.inherit("scripts/entity/tactical/entity", {
 	m = {},
 	function getName()
 	{
-		return "可怕的陈列";
+		return "骇人陈列";
 	}
 
 	function getDescription()
 	{
-		return "剥落的皮肤和肠子展示。";
+		return "剥落的皮肤和肠子被展示出来。";
 	}
 
 	function onInit()

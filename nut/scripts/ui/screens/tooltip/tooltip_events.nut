@@ -184,7 +184,7 @@ this.tooltip_events <- {
 						tooltipContent.push({
 							id = 90,
 							type = "text",
-							text = "消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "+" + actor.getLevelActionPointCost() + "[/color][/b] AP和 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "+" + actor.getLevelFatigueCost() + "[/color][/b] 疲劳值以移动(由于处于不同的高度)"
+							text = "移动消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "+" + actor.getLevelActionPointCost() + "[/color][/b] AP和 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "+" + actor.getLevelFatigueCost() + "[/color][/b] 点疲劳（高度落差）"
 						});
 					}
 					else
@@ -192,7 +192,7 @@ this.tooltip_events <- {
 						tooltipContent.push({
 							id = 90,
 							type = "text",
-							text = "消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "[/color][/b] AP和 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "[/color][/b] 疲劳值以移动"
+							text = "移动消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "[/color][/b] AP和 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "[/color][/b] 点疲劳"
 						});
 					}
 				}
@@ -2065,7 +2065,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "所有危机将在以下选项中随机选择。"
+						text = "每次危机都会在下列选项中随机选出。"
 					}
 				];
 
@@ -2079,7 +2079,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "不会有后期游戏危机，你可以永远继续玩沙盒体验。 请注意，选择此选项后，将无法体验相当一部分游戏内容和后期游戏挑战。 如果你想获得游玩最佳体验，不推荐选择此选项。"
+						text = "不会有后期游戏危机，你可以永远继续玩沙盒体验。请注意，选择此选项后，将无法体验相当一部分游戏内容和后期游戏挑战。 如果你想获得游玩最佳体验，不推荐选择此选项。"
 					}
 				];
 
@@ -2093,7 +2093,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在游戏后期的危机中，城市、城镇和城堡都可能被永久摧毁，让世界陷入火海是你失去战役的众多途径之一。"
+						text = "在游戏后期的危机中，城市、城镇和城堡都可能被永久摧毁，整个世界陷入火海会成为你输掉游戏的原因之一。"
 					}
 				];
 
@@ -2102,12 +2102,12 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "战争"
+						text = "贵族战争"
 					},
 					{
 						id = 2,
 						type = "description",
-						text = "游戏后期的第一场危机将是贵族家族之间的一场残酷的权力战争。 如果你活得够久，接下来的将随机选择。"
+						text = "游戏后期的第一场危机将是贵族家族之间的一场残酷的权力战争。如果你活得够久，接下来的危机将会随机选择。"
 					}
 				];
 
@@ -2121,7 +2121,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "游戏后期的第一场危机将是大群绿皮的入侵，他们威胁要席卷人类世界。 如果你活得够久，接下来的将随机选择。"
+						text = "游戏后期的第一场危机将是绿皮部落入侵，他们威胁要荡平人类世界。如果你活得够久，接下来的危机将会随机选择。"
 					}
 				];
 
@@ -2135,7 +2135,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "游戏后期的第一次危机将是古代死难者再次出现，夺回曾经属于他们的东西。 如果你活得够久，接下来的将随机选择。"
+						text = "游戏后期的第一场危机将是古代亡灵再次现身，夺回曾经属于他们的东西。如果你活得够久，接下来的危机将会随机选择。"
 					}
 				];
 
@@ -2149,7 +2149,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "游戏后期的第一场危机将是南北文化之间的圣战。 如果你活得够久，接下来的将随机选择。"
+						text = "游戏后期的第一场危机将是南北文化之间的圣战。如果你活得够久，接下来的危机将会随机选择。"
 					}
 				];
 
@@ -2163,7 +2163,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "启用景深效果将巧妙的使战斗中相机下方的高度水平稍微偏离焦点（即模糊），从而产生更多的微型效果，使区分高度更加容易，但可能会牺牲一些细节。"
+						text = "启用景深效果后，在战术战斗中，低于摄像机的高度会略微失焦（即模糊），产生更多的微缩感，使区分高度更加容易，但可能会牺牲一些细节。"
 					}
 				];
 
@@ -2177,7 +2177,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "更改用户界面的比例，即菜单和文本。"
+						text = "更改用户界面的比例，即菜单和文本等。"
 					}
 				];
 
@@ -2219,7 +2219,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "通过按鼠标左键（默认）并拖动滚动屏幕。"
+						text = "通过按住鼠标左键拖动来滚动屏幕（默认）。"
 					}
 				];
 
@@ -2233,7 +2233,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在游戏中移动鼠标时，使用硬件光标可以最大限度地减少输入延迟。 如果鼠标光标出现问题，请禁用此选项。"
+						text = "在游戏中移动鼠标时，使用硬件光标可以最大限度地减少输入延迟。如果鼠标光标出现问题，请禁用此选项。"
 					}
 				];
 
@@ -2247,7 +2247,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "使用硬件加速声音播放以获得更好的性能。 如果遇到任何与声音相关的问题，请禁用此选项。"
+						text = "使用硬件加速声音播放以改善性能表现。如遇到任何与声音相关的问题，请禁用此选项。"
 					}
 				];
 
@@ -2261,7 +2261,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "始终让摄像头对准任何你能看到的AI移动。"
+						text = "始终让摄像机对准所有视野内的AI移动。"
 					}
 				];
 
@@ -2275,7 +2275,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "自动调整摄像机的高度，以查看战斗中当前活动的角色。 禁用此选项将防止摄像机在不严格需要时更改高度级别，但当角色恰好被地形阻挡时，还需要手动调整高度级别。"
+						text = "自动调整摄像机的高度，以查看战斗中当前活动的角色。禁用此选项能防止摄像机在不必要时更改高度级别，但当角色恰好被地形阻挡时，还需要手动调整高度级别。"
 					}
 				];
 
@@ -2289,7 +2289,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在战斗中，始终显示在角色上方浮动的生命和护甲条，而不是只有在角色被击中时才显示。"
+						text = "始终在战斗中显示在角色上方浮动的生命和护甲条，反选此选项则只会在角色被击中时显示。"
 					}
 				];
 
@@ -2303,7 +2303,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在屏幕边缘显示图标，指示当前屏幕外的任何角色在地图上的方向。"
+						text = "在屏幕边缘显示图标，指示当前屏幕外的所有角色在地图上的方向。"
 					}
 				];
 
@@ -2331,7 +2331,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在战斗中显著加速由AI控制的任何角色的移动。  不会影响移动相关技能。"
+						text = "在战斗中显著加速由AI控制的任何角色的移动。不影响带有移动效果的技能。"
 					}
 				];
 
@@ -2359,7 +2359,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "如果可能的话，自动将装备放回战斗前的摆放位置中。例如，如果一个角色开始使用弩作战，但在战斗中变为长矛，则在战斗结束时，他们将自动再次手握弩。"
+						text = "在条件允许的情况下，自动将装备放回战斗前的物品栏位中。例如，在战斗开始时，某个角色持有弩，在战斗中切换为矛，则在战斗结束时，他将自动重新拿起弩。"
 					}
 				];
 
@@ -2373,7 +2373,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "离开一个城市后自动暂停游戏，这样你就不会浪费任何时间，但代价是每次都必须手动取消暂停。"
+						text = "离开城市后自动暂停游戏，避免时间浪费，代价是每次都要手动取消暂停。"
 					}
 				];
 
@@ -2485,7 +2485,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在显示和隐藏红色覆盖层之间切换，红色覆盖层表示角色无法移动到的被环境物体（比如树）阻挡的格子。"
+						text = "切换显示或隐藏标记角色无法通行环境物体（如：树）的红色遮罩层。"
 					}
 				];
 
@@ -2527,7 +2527,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在显示和隐藏护甲和生命条，以及状态效果图标之间切换，将每个可见的角色都显示出来。"
+						text = "切换显示或隐藏每个角色头顶的护甲条，生命条以及状态效果图标。"
 					}
 				];
 
@@ -2541,7 +2541,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在显示和隐藏地图上的树和其他大型对象之间切换。"
+						text = "切换显示或隐藏地图上的树以及其他大型对象。"
 					}
 				];
 
@@ -2609,7 +2609,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "暂停当前角色的回合并将其移动到队列的末尾。 等待这个回合，也会让你在下一轮晚一些再行动。"
+						text = "暂停当前角色的回合并将其移动到队列的末尾。在当前回合中选择等待，也会让你在下一轮晚一些再行动。"
 					}
 				];
 
@@ -2665,7 +2665,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这个角色刚刚升级！ 在世界地图上时，你可以在花名册中找到他，以提高他的属性并选择一个特技。"
+						text = "这个角色刚刚升级！在世界地图上时，你可以在花名册中找到他，提高他的属性并选择一个特技。"
 					}
 				];
 				return result;
@@ -2675,7 +2675,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "轻伤"
+						text = "轻微伤"
 					},
 					{
 						id = 2,
@@ -2732,7 +2732,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在战斗中从战斗和杀死对手中获得的经验点数。 获得足够的经验点将使这个人升级，增加属性和获得新的特技。"
+						text = "战斗期间通过搏斗和击杀对手获得的经验点数。获得足够的经验点数将使这个人升级，提升属性，获得新的特技。"
 					}
 				];
 
@@ -2779,7 +2779,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这个角色受到的伤害，分为对生命值的伤害和对盔甲的伤害。 该值是在计算了所有减伤之后的值。"
+						text = "这个角色受到的伤害，分为生命值伤害和盔甲伤害。该值是在计算了所有减伤之后的值。"
 					}
 				];
 
@@ -2840,7 +2840,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "角色在战斗中杀死敌人时获得经验。 如果一个角色积累了足够的经验，他将提升自己的等级，并且能够提高自己的属性，并授予可以选择一个独特奖励的特技。\n\n在角色11级之后，角色成为经验丰富的人，不再获得特技点，但仍可以继续提高。"
+						text = "角色能在自己或盟友杀敌时获得经验。如果角色积累了足够经验，他的等级会得到提高，能够提高自己的属性，选择一项能带来独特加成的特技。\n\n在角色11级之后，角色将成为老兵，不再获得特技点，但仍可有所提高。"
 					}
 				];
 
@@ -2854,7 +2854,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "角色的等级衡量战斗中的经验。 角色在获得经验的同时也会提升等级，并且能够增加他们的属性和获得使他们更擅长雇佣职业的特技。\n\n在角色11级之后，角色成为经验丰富的人，不再获得特技点，但仍可以继续提高。"
+						text = "角色的等级衡量了他在战斗中的经验。随着经验提升，其等级也会提高，并能提高属性、获得特技，更好的从事佣兵事业。\n\n在角色11级之后，角色将成为老兵，不再获得特技点，但仍可有所提高。"
 					}
 				];
 
@@ -2868,7 +2868,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这个角色升级了。增加他的属性值并选择一个特技！"
+						text = "这个角色升级了。提高他的属性，选择一项特技！"
 					}
 				];
 				return result;
@@ -2883,7 +2883,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "把这个角色从你的花名册中解雇掉，这样可以节省日工资，并为其他人腾出空间。 负债者角色将解除奴隶身份，离开你的战团。"
+						text = "将此角色从名册中解雇，以节省日工资，为他人腾出位置。负债者角色将摆脱奴隶身份，离开你的战团。"
 					}
 				];
 
@@ -2897,7 +2897,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "切换到查看雇佣兵战团的仓库，或战斗中选定角色下方的地面。"
+						text = "切换到佣兵团仓库一览，或是战斗中选定角色下方的地面。"
 					}
 				];
 
@@ -2911,7 +2911,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "切换到查看选定角色的特技。\n\n括号中的数字（如果有）是可用的特技点数。"
+						text = "切换到当前角色的特技一览。\n\n括号中的数字（如有）是可用的特技点数。"
 					}
 				];
 
@@ -2925,7 +2925,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "关闭此屏幕。"
+						text = "关闭此界面。"
 					}
 				];
 
@@ -2967,7 +2967,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "只显示武器、进攻性的工具和附件。"
+						text = "只显示武器、攻击性的工具和配件。"
 					}
 				];
 
@@ -3023,7 +3023,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在显示和隐藏你的人的情绪之间切换。"
+						text = "切换显示或隐藏你的人的情绪。"
 					}
 				];
 
@@ -3051,7 +3051,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "在每次升级时，花费这些点数来提高8项属性中的任意3项，属性值随机掷骰。每项属性在单次升级中只能被提高一次。\n\n星标意味着角色在某项特定属性上天赋异禀，总能掷骰更好的属性值。"
+						text = "花费该点数，能让你在随机出的8项属性成长中，任意选择3项升级。每项属性在单次升级中只能被提高一次。升级时可以获得该点数。\n\n星标意味角色在特定属性上天赋异禀，总能骰出更好的成长值。"
 					}
 				];
 
@@ -3065,7 +3065,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "给被解雇者支付一笔赔偿金、酬金或是养老金，这有助于使他们离开公司时能够保有尊严并能够开启新的生活，同时也避免其他公司员工因解雇而产生的愤怒情绪。\n为负债奴隶支付赔偿金以弥补他们在公司工作的时间。其他负债奴隶会感激你支付赔偿金，但如果你不支付，也不会有谁因此而生气。"
+						text = "给被解雇者支付一笔赔偿金、酬金或是养老金，帮助他们更有尊严的离开战团，开启新生活，也能避免其他战团成员因解雇可能出现的愤怒情绪。\n为负债奴隶支付赔偿金，弥补他们在公司工作的时间。其他负债奴隶会感激你支付赔偿金，但如果你不支付，也不会有谁因此而生气。"
 					}
 				];
 
@@ -3135,7 +3135,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "看看你所知道的所有派别以及你与他们的关系。"
+						text = "查看所有已知派系以及你与他们的关系。"
 					}
 				];
 
@@ -3149,7 +3149,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "把相机移到中间，放大你的雇佣兵战团。"
+						text = "把相机移到中间，以佣兵团为中心放大画面。"
 					}
 				];
 
@@ -3163,7 +3163,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "锁定或解锁相机，始终集中在你的雇佣兵战团。"
+						text = "锁定或解锁相机，将你的佣兵团固定在画面中央。"
 					}
 				];
 
@@ -3191,7 +3191,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "搭帐篷或拆帐篷。 扎营的时候，时间会更快，你的人会更快的治愈和修复他们的装备。 然而，你也更容易受到突然袭击。"
+						text = "搭拆帐篷。扎营的时候，时间流逝加快，你的人会更快治愈、修好装备。然而，你也更容易受到突然袭击。"
 					}
 				];
 
@@ -3324,7 +3324,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "终结"
+						text = "死因"
 					},
 					{
 						id = 2,
@@ -3352,7 +3352,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "可接受的合同"
+						text = "能接到的合同"
 					},
 					{
 						id = 2,
@@ -3367,7 +3367,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "可接受的合同"
+						text = "能接到的合同"
 					},
 					{
 						id = 2,
@@ -3402,7 +3402,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这里只有拥有这座防御工事的贵族家族的合同，但他们不承认你值得他们关注。 增加你的名望，完成让贵族家族注意到你的战团的野心，以解锁新合同！"
+						text = "这里只有拥有这座防御工事的贵族家族的合同，但他们不认为你值得他们关注。提高你的名望，完成让贵族家族注意到你的战团的野心，解锁新合同！"
 					}
 				];
 				return ret;
@@ -3417,7 +3417,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "为你的雇佣兵战团雇佣新人。志愿者的质量和数量取决于这个定居点的规模和类型，以及你在这里的声誉。 每隔几天，就会有新的人来，而其他人会继续旅行。"
+						text = "为你的雇佣兵战团雇佣新人。志愿者的质量和数量取决于这个定居点的规模和类型，以及你在这里的声誉。每隔几天，就会有新人到来，而其他人则会继续旅行。"
 					}
 				];
 
@@ -3431,7 +3431,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "一家大酒馆，到处都是顾客，提供饮料、食物和活跃的气氛，可以分享新闻和谣言。"
+						text = "一家充满了酒客的大酒馆，提供了饮料，食物以及新闻和流言编织成的活跃氛围。"
 					}
 				];
 
@@ -3459,7 +3459,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "战斗专业人士的集合点。 让你的士兵在这里接受训练并向有经验的战士学习，这样你就能更快地把他们塑造成坚强的雇佣兵。"
+						text = "专业战斗人士汇集的地方。在这里，你的人能接受老练战士的教授和训练，更快被塑造成坚强的雇佣兵。"
 					}
 				];
 
@@ -3473,7 +3473,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "只要价格合适，一个剥制师可以从你带给他的各种战利品中创造出有用的物品。"
+						text = "只要肯花钱，剥制师能把你带给他的战利品制成各种实用物品。"
 					}
 				];
 
@@ -3563,7 +3563,7 @@ this.tooltip_events <- {
 						id = 3,
 						type = "hint",
 						icon = "ui/tooltips/warning.png",
-						text = "你不能在签约做其他工作的时候在竞技场上战斗"
+						text = "你已经签订了其他合同，不能在竞技场上战斗"
 					});
 				}
 				else if (this.World.Contracts.getActiveContract() == null && this.World.State.getCurrentTown() != null && this.World.State.getCurrentTown().hasSituation("situation.arena_tournament") && this.World.Assets.getStash().getNumberOfEmptySlots() < 5)
@@ -3581,7 +3581,7 @@ this.tooltip_events <- {
 						id = 3,
 						type = "hint",
 						icon = "ui/tooltips/warning.png",
-						text = "你需要至少3个空的仓库空间在才能在竞技场战斗"
+						text = "你需要至少3个空的仓库栏位在才能在竞技场战斗"
 					});
 				}
 
@@ -3597,7 +3597,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "一个为外来商船和当地渔民服务的港口。你很可能能够在这里乘船前往该大陆的其他地区。"
+						text = "一个为外来商船和当地渔民服务的港口。在这里你能买到前往大陆其他地区的船票。"
 					}
 				];
 
@@ -3637,7 +3637,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "一个武器匠的工作室展示各种精心制作的武器。 损坏的装备也可以在这里以一定的价格修理。"
+						text = "这间铁匠工坊陈列着各种精心制作的武器。损坏的装备也可以在这里以一定的价格修理。"
 					}
 				];
 
@@ -3651,7 +3651,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这间盔甲店是寻找制作精良、经久耐用的防护用品的理想场所。 损坏的装备也可以在这里以一定的价格修理。"
+						text = "这间盔甲店是寻找制作精良、经久耐用的防护用品的理想场所。损坏的装备也可以在这里以一定的价格修理。"
 					}
 				];
 
@@ -3665,7 +3665,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "离开此屏幕并返回上一个屏幕。"
+						text = "离开当前界面返回上级界面。"
 					}
 				];
 
@@ -3735,7 +3735,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "离开此屏幕并返回上一个屏幕。"
+						text = "离开当前界面返回上级界面。"
 					}
 				];
 
@@ -3749,7 +3749,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "为你的战团预订商票，并快速前往选定的目的地。"
+						text = "为你的战团预订船票，快速前往选定目的地。"
 					}
 				];
 
@@ -3763,7 +3763,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "离开此屏幕并返回上一个屏幕。"
+						text = "离开当前界面返回上级界面。"
 					}
 				];
 
@@ -3777,7 +3777,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "让你的队员与有经验的对手进行练习战斗，并学习不同的战斗方式。所获得的挫伤和经验教训将会导致[color=" + this.Const.UI.Color.PositiveValue + "]+50%[/color] 经验加成（下一场战斗）。"
+						text = "让你的队员与有经验的对手进行练习战斗，并学习多样的战斗方式。所获得的挫伤和经验教训将会给下一场战斗带来[color=" + this.Const.UI.Color.PositiveValue + "]+50%[/color]经验加成。"
 					}
 				];
 
@@ -3791,7 +3791,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "让您的人从一位真正的行家里手那里学习有价值的课程和经验。所传授的知识将带来[color=" + this.Const.UI.Color.PositiveValue + "]+35%[/color] 经验获取（持续三场战斗）。"
+						text = "让你的人从一位真正的行家里手那里学习有价值的课程和经验。所传授的知识将会给接下来的三场战斗带来[color=" + this.Const.UI.Color.PositiveValue + "]+35%[/color]经验加成。"
 					}
 				];
 
@@ -3805,7 +3805,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "让你的人接受严格的训练计划，将他打造成一个熟练的战士。今天所付出的血汗将会使他日后受益匪浅。[color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color] 经验加成，持续五场战斗。"
+						text = "让你的人接受严格的训练计划，将他打造成一个熟练的战士。今天所付出的血汗将会使他日后受益匪浅。给接下来的五场战斗[color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color]经验加成。"
 					}
 				];
 
@@ -3833,7 +3833,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "你与某个派系的关系决定了他们是否会与你进行和平的战斗或交易，他们是否愿意雇佣你来签订合同，以及他们给你的价格和在他们的定居点为你提供的新兵数量。\n\n当成功地为派系工作时，关系会增加，如果不这样做，背叛或攻击派系，关系会减少。 随着时间的推移，双方关系逐渐趋于中立。"
+						text = "你与某个派系的关系的好坏，决定了他们和你是战是和，是否愿意雇佣你来签订合同，以及他们给你的价格和在他们的定居点为你提供的新兵数量。\n\n如果你成功的完成了派系安排的工作，则会增进你们之间的关系。相反，如果没能完成工作，甚至背叛或主动发起攻击，则会损害你们的关系。随着时间流逝，关系会逐渐趋于中立。"
 					}
 				];
 				local changes = this.World.FactionManager.getFaction(_entityId).getPlayerRelationChanges();
@@ -3872,7 +3872,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "雇佣兵战团必须携带大量的装备和物资。 通过使用货车和载重货车，你可以扩大你的可用库存空间，进一步加大携带量。"
+						text = "佣兵团免不了携带大量装备物资。通过货车和载重货车，你可以扩大你的可用库存空间，进一步加大携带量。"
 					}
 				];
 
@@ -3960,7 +3960,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "北方勇士DLC添加了一个新的人类派系——北方野蛮人，他们有自己的战斗风格和装备，新的战团起源，基于北欧和罗斯风格设计的新装备，以及新的合同和事件。"
+						text = "北方勇士DLC添加了一个新的，有着自己的战斗风格和装备的人类派系——北方野蛮人，新的战团起源系统，基于北欧和罗斯风格设计的新装备，以及新的合同和事件。"
 					}
 				];
 
@@ -3991,7 +3991,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "炽热沙漠DLC为南方增添了一个新的沙漠地区，灵感来自中世纪的阿拉伯和波斯文化，一场新的涉及圣战的游戏后期危机，非战斗追随者随从可以改制你的战团，炼金术装置和原始火器，新的人类和野兽对手，新的合同和事件，等等。"
+						text = "炽热沙漠DLC在地图南方增添了一个以中世纪的阿拉伯和波斯文化为原型的沙漠地区，一场新的涉及圣战的游戏后期危机，用于定制战团的非战斗追随者，炼金术装置和原始火器，新的人类和野兽对手，新的合同和事件，等等。"
 					}
 				];
 

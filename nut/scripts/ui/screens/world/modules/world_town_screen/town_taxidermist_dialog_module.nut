@@ -24,7 +24,7 @@ this.town_taxidermist_dialog_module <- this.inherit("scripts/ui/screens/ui_modul
 	{
 		return {
 			Title = "剥制屋",
-			SubTitle = "一个剥制师可以从你带给他的各种野兽战利品中创造有用的物品",
+			SubTitle = "剥制师能把你带给他的战利品制成各种实用物品。",
 			Blueprints = this.World.Crafting.getQualifiedBlueprintsForUI(),
 			Assets = this.m.Parent.queryAssetsInformation()
 		};

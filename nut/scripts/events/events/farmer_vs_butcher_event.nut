@@ -44,7 +44,7 @@ this.farmer_vs_butcher_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Butcher.getName() + "遭受轻伤"
+						text = _event.m.Butcher.getName() + "受到了轻微伤"
 					});
 				}
 
@@ -70,7 +70,7 @@ this.farmer_vs_butcher_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Farmer.getName() + "遭受轻伤"
+						text = _event.m.Farmer.getName() + "受到了轻微伤"
 					});
 				}
 

@@ -4,7 +4,7 @@ this.caravan_hand_background <- this.inherit("scripts/skills/backgrounds/charact
 	{
 		this.character_background.create();
 		this.m.ID = "background.caravan_hand";
-		this.m.Name = "商队队员";
+		this.m.Name = "商队帮工";
 		this.m.Icon = "ui/backgrounds/background_12.png";
 		this.m.BackgroundDescription = "商队队员已经习惯了漫长而疲惫的旅行。";
 		this.m.GoodEnding = "曾经的商队队员，%name%，从战斗生涯中退役了。他用自己当佣兵赚来的钱做起了押镖的生意，专门运送货物通过危险的地区。";
