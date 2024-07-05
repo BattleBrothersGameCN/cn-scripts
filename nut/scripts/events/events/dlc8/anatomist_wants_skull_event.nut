@@ -86,7 +86,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/days_wounded.png",
-					text = _event.m.Anatomist.getName() + "遭受轻伤"
+					text = _event.m.Anatomist.getName() + "受到了轻微伤"
 				});
 				local resolveBoost = this.Math.rand(1, 3);
 				local initiativeBoost = this.Math.rand(1, 3);

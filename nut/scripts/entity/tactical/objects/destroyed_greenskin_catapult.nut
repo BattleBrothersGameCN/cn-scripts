@@ -2,7 +2,7 @@ this.destroyed_greenskin_catapult <- this.inherit("scripts/entity/tactical/entit
 	m = {},
 	function getName()
 	{
-		return "工程在围攻中被摧毁";
+		return "被毁的攻城器";
 	}
 
 	function getDescription()

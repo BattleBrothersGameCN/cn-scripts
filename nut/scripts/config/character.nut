@@ -291,8 +291,8 @@ gt.Const.MoraleStateName <- [
 ];
 gt.Const.MoraleStateEvent <- [
 	"落荒而逃",
-	"的士气崩溃了",
-	"的士气动摇了",
+	"现在处于崩溃士气",
+	"现在处于动摇士气",
 	"的士气归于稳定",
 	"自信了",
 	""

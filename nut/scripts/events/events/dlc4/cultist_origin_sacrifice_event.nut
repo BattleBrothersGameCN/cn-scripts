@@ -76,7 +76,7 @@ this.cultist_origin_sacrifice_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Sacrifice.getName() + "是死了"
+					text = _event.m.Sacrifice.getName() + "死了"
 				});
 				_event.m.Sacrifice.getItems().transferToStash(this.World.Assets.getStash());
 				this.World.getPlayerRoster().remove(_event.m.Sacrifice);

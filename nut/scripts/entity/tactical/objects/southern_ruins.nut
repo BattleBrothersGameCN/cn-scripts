@@ -7,7 +7,7 @@ this.southern_ruins <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "碎石的废墟。";
+		return "石头建物倒塌形成的废墟。";
 	}
 
 	function onInit()

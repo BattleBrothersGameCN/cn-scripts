@@ -2,12 +2,12 @@ this.barbarian_camp_fireplace <- this.inherit("scripts/entity/tactical/entity", 
 	m = {},
 	function getName()
 	{
-		return "火炉";
+		return "火堆";
 	}
 
 	function getDescription()
 	{
-		return "用来做饭的火炉。";
+		return "用来做饭的火堆。";
 	}
 
 	function onInit()

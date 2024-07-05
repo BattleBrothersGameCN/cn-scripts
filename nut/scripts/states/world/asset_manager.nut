@@ -3,7 +3,7 @@ this.asset_manager <- {
 		Stash = null,
 		OverflowItems = [],
 		CampaignID = 0,
-		Name = "战斗兄弟(Battle Brothers)",
+		Name = "战场兄弟(Battle Brothers)",
 		Banner = "banner_01",
 		BannerID = 1,
 		Look = 1,
@@ -1017,7 +1017,7 @@ this.asset_manager <- {
 
 					if (town != null && bro.getMoodState() <= this.Const.MoodState.Neutral)
 					{
-						bro.improveMood(this.Const.MoodChange.NearCity, "乐于造访" + town.getName());
+						bro.improveMood(this.Const.MoodChange.NearCity, "高兴能来" + town.getName());
 					}
 				}
 			}
@@ -1627,7 +1627,7 @@ this.asset_manager <- {
 		local data = {
 			Image = "",
 			Text = "",
-			Score = "" + this.getScore() + "积分 (Points)"
+			Score = "" + this.getScore() + "分"
 		};
 		local brothers = this.World.getPlayerRoster().getAll();
 		local excludedBackgrounds = [];
@@ -1642,7 +1642,7 @@ this.asset_manager <- {
 			this.Music.setTrackList(this.Const.Music.Retirement4Tracks, this.Const.Music.CrossFadeTime);
 			this.updateAchievement("LeavingALegacy", 1, 1);
 			data.Image = "ui/screens/retirement_04.jpg";
-			data.Text = "{你的梦想比你过去的生活更现实！在你的指挥下，%companyname%不仅获得了巨大的财富、荣誉和声望，还帮助击败了许多几乎摧毁整个领域的邪恶、入侵和战争! | %companyname%是一个家喻户晓的名字。它不仅积累了财富、权力和声望，还在击败困扰整个领土的一系列危机中发挥了关键作用。文士和历史学家将谈论战团，甚至在数千年后，人们都将知道%companyname%! | 退休后，一位文士带着一名艺术家来找你，他们画了一个你的形象，并把你的话写在了一卷非常非常长的卷轴上。看来，经过多次危机的打败和积累了惊人的财富，多年后的人们将知道%companyname%的名字。 | 离开%companyname%并不容易，但你知道这是正确的选择。而且时间选择得再好不过了：战团已经在整个土地上声名远扬，它已经帮助解决了一系列的危机，并且最重要的是，它达到了前所未有的财富水平。 | 在你的领导下，%companyname%在全国范围内获得了巨大的名声，更重要的是，它还因为帮助结束了一系列威胁整个领域的危机而获得了很多感谢！雇佣军很少出现在历史书籍中，但毫无疑问，文士和学者们会用尽笔墨来记录%companyname%！}";
+			data.Text = "{你的梦想近在眼前，甚至近过你过去的生活！在你的指挥下，%companyname%不仅获得了巨大的财富、荣誉和声望，还在结束许多几乎摧毁整个地区的邪恶、入侵和战争中起到了作用! | %companyname%是个家喻户晓的名字。它不仅积累了财富、权力和声望，还在击败困扰整个地区的一系列危机中发挥了作用。文士和历史学家将会讲述战团的故事，即便数千年后，人们也会知道%companyname%! | 退休后，一位文士带着一名艺术家来找你，他们为你画了一幅肖像，并把你的话写在了一卷非常非常长的卷轴上。看来，挫败了多次危机，积累了惊人的财富，%companyname%的名字将会流传后世。 | 离开%companyname%并不容易，但你知道这是正确的选择。而且时间选得再好不过了：战团声名远扬，在解决一系列的危机中起到了作用，最重要的是，它达到了前所未有的财富水平。 | 在你的领导下，%companyname%在整个地区获得了巨大的名声，更重要的是，它还因为参与结束了一系列地区级别的危机，获得了很多感谢！雇佣军很少出现在历史书籍中，但毫无疑问，文士和学者们会用尽笔墨来记录%companyname%！}";
 			this.removeSuccessor(brothers);
 			data.Text += this.addBrotherEnding(brothers, excludedBackgrounds, true);
 			data.Text += this.addBrotherEnding(brothers, excludedBackgrounds, true);

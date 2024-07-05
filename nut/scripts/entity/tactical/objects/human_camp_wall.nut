@@ -7,7 +7,7 @@ this.human_camp_wall <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "一个木栅栏。";
+		return "一道木栅栏。";
 	}
 
 	function setDirBasedOnCenter( _centerTile, _dist )

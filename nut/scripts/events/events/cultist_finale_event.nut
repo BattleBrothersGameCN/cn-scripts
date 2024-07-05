@@ -93,7 +93,7 @@ this.cultist_finale_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Sacrifice.getName() + "已经死了"
+					text = _event.m.Sacrifice.getName() + "死了"
 				});
 				_event.m.Sacrifice.getItems().transferToStash(this.World.Assets.getStash());
 				_event.m.Sacrifice.getSkills().onDeath(this.Const.FatalityType.None);

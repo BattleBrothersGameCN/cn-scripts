@@ -174,7 +174,7 @@ this.direwolf <- this.inherit("scripts/entity/tactical/actor", {
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
 			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一只恐狼";
+			corpse.CorpseName = "一头恐狼";
 			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);

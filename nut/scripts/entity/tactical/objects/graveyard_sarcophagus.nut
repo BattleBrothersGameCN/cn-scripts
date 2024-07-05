@@ -7,7 +7,7 @@ this.graveyard_sarcophagus <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "推测是很久以前死去人的安眠之地。";
+		return "也许是很久前的某人的安眠之地。";
 	}
 
 	function onInit()

@@ -7,7 +7,7 @@ this.goblin_camp_cage <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "一个关着不幸俘虏尸体的笼子。";
+		return "一个笼子，装着某个不幸俘虏的遗体。";
 	}
 
 	function onInit()

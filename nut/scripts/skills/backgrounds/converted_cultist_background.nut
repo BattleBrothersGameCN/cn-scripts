@@ -26,7 +26,7 @@ this.converted_cultist_background <- this.inherit("scripts/skills/backgrounds/ch
 		this.m.Titles = [
 			"邪教徒(the Cultist)",
 			"疯子(the Mad)",
-			"信徒(the Believer)",
+			"信徒",
 			"疯狂者(the Insane)"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;

@@ -2,12 +2,12 @@ this.tree_stump2 <- this.inherit("scripts/entity/tactical/entity", {
 	m = {},
 	function getName()
 	{
-		return "树桩(Tree Stump)";
+		return "树桩";
 	}
 
 	function getDescription()
 	{
-		return "被砍倒的树的残留物。";
+		return "被砍倒的树的遗骸。";
 	}
 
 	function onInit()

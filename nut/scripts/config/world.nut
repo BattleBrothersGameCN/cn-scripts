@@ -501,8 +501,8 @@ gt.Const.World.RoadBrushes <- {
 		}
 		else
 		{
-			this.logWarning("路面刷未定义（" + _d + ")!");
-			return "未定义的道路画刷。";
+			this.logWarning("未定义道路笔刷（" + _d + ")!");
+			return "未定义的道路笔刷";
 		}
 	}
 
@@ -590,8 +590,8 @@ gt.Const.World.RiverBrushes <- {
 		}
 		else
 		{
-			this.logWarning("河流画笔未定义！");
-			return "未定义的河流画笔。";
+			this.logWarning("未定义河流笔刷！");
+			return "未定义的河流笔刷";
 		}
 	}
 
@@ -671,8 +671,8 @@ gt.Const.World.BridgeBrushes <- {
 		}
 		else
 		{
-			this.logWarning("桥刷未定义！");
-			return "未定义的桥梁刷子";
+			this.logWarning("未定义桥梁笔刷！");
+			return "未定义的桥梁笔刷";
 		}
 	}
 
@@ -704,8 +704,8 @@ gt.Const.World.CrossingBrushes <- {
 		}
 		else
 		{
-			this.logWarning("穿过刷未定义！");
-			return "无定义的越过刷子。";
+			this.logWarning("未定义河滩笔刷！");
+			return "未定义的河滩笔刷";
 		}
 	}
 
@@ -730,8 +730,8 @@ gt.Const.World.ShoreBrushes <- {
 		}
 		else
 		{
-			this.logWarning("海岸刷未定义！");
-			return "未定义的海岸刷。";
+			this.logWarning("未定义海岸笔刷！");
+			return "未定义的海岸笔刷";
 		}
 	}
 

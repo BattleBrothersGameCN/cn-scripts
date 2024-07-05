@@ -378,7 +378,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 				id = 2,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = this.Tactical.TurnSequenceBar.getActiveEntity() == this ? "现在行动！" : this.m.IsTurnDone || turnsToGo == null ? "回合结束" : "行动于" + turnsToGo + (turnsToGo > 1 ? "回合后" : "回合后")
+				text = this.Tactical.TurnSequenceBar.getActiveEntity() == this ? "正在行动！" : this.m.IsTurnDone || turnsToGo == null ? "回合结束" : "将在" + turnsToGo + (turnsToGo > 1 ? "回合后行动" : "回合后行动")
 			},
 			{
 				id = 3,
@@ -466,27 +466,27 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 			}
 			else
 			{
-				text = "刚加入战团。";
+				text = "刚刚加入战团。";
 			}
 
 			if (this.m.LifetimeStats.Battles != 0)
 			{
 				if (this.m.LifetimeStats.Battles == 1)
 				{
-					text = text + ("参加了" + this.m.LifetimeStats.Battles + "场战斗");
+					text = text + ("参加过" + this.m.LifetimeStats.Battles + "场战斗");
 				}
 				else
 				{
-					text = text + ("参加了" + this.m.LifetimeStats.Battles + "场战斗");
+					text = text + ("参加过" + this.m.LifetimeStats.Battles + "场战斗");
 				}
 
 				if (this.m.LifetimeStats.Kills == 1)
 				{
-					text = text + ("并且达成" + this.m.LifetimeStats.Kills + "次击杀。");
+					text = text + ("，达成过" + this.m.LifetimeStats.Kills + "次击杀。");
 				}
 				else if (this.m.LifetimeStats.Kills > 1)
 				{
-					text = text + ("并且达成" + this.m.LifetimeStats.Kills + "次击杀。");
+					text = text + ("，达成过" + this.m.LifetimeStats.Kills + "次击杀。");
 				}
 				else
 				{
@@ -495,7 +495,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 				if (this.m.LifetimeStats.MostPowerfulVanquished != "")
 				{
-					text = text + ("他曾击败过的最强对手是" + this.m.LifetimeStats.MostPowerfulVanquished + ".");
+					text = text + ("他击败过的最强对手是" + this.m.LifetimeStats.MostPowerfulVanquished + ".");
 				}
 			}
 
@@ -517,7 +517,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 					id = 3,
 					type = "text",
 					icon = "ui/icons/asset_daily_money.png",
-					text = "薪资: [img]gfx/ui/tooltips/money.png[/img]" + this.getDailyCost() + " /日"
+					text = "薪资: [img]gfx/ui/tooltips/money.png[/img]" + this.getDailyCost() + "/日"
 				});
 			}
 
@@ -534,7 +534,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 					id = 6,
 					type = "hint",
 					icon = "ui/icons/stat_screen_dmg_dealt.png",
-					text = "出战中"
+					text = "在战斗序列中"
 				});
 			}
 			else
@@ -543,7 +543,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 					id = 6,
 					type = "hint",
 					icon = "ui/icons/camp.png",
-					text = "处于后备队"
+					text = "在预备队中"
 				});
 			}
 		}
@@ -605,7 +605,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 					id = 133,
 					type = "text",
 					icon = "ui/icons/days_wounded.png",
-					text = "轻伤 (" + ht + "天)"
+					text = "轻微伤(" + ht + "天)"
 				});
 			}
 			else
@@ -614,7 +614,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 					id = 133,
 					type = "text",
 					icon = "ui/icons/days_wounded.png",
-					text = "轻伤 (" + ht + "天)"
+					text = "轻微伤(" + ht + "天)"
 				});
 			}
 		}
@@ -723,7 +723,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 		if (this.getBackground().getID() != "background.slave")
 		{
-			this.improveMood(1.5, "加入了一个雇佣兵战团");
+			this.improveMood(1.5, "加入了佣兵团");
 		}
 
 		if (("State" in this.World) && this.World.State != null && this.World.Assets.getOrigin() != null)
@@ -849,7 +849,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 				this.m.Skills.add(skill);
 				this.Tactical.getSurvivorRoster().add(this);
 				this.m.IsDying = false;
-				this.worsenMood(this.Const.MoodChange.PermanentInjury, "遭受了永久性的伤害");
+				this.worsenMood(this.Const.MoodChange.PermanentInjury, "身负永久伤残");
 				this.updateAchievement("ScarsForLife", 1, 1);
 
 				if (numPermInjuries + 1 >= 3)
@@ -1099,7 +1099,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 			}
 			else if (_fatalityType == this.Const.FatalityType.Suicide)
 			{
-				killedBy = "自杀";
+				killedBy = "自杀身亡";
 			}
 			else if (_skill.isType(this.Const.SkillType.StatusEffect))
 			{
@@ -2220,7 +2220,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 	{
 		if (!this.isHiddenToPlayer())
 		{
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this) + "已经退出了战斗");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this) + "撤出了战斗");
 		}
 
 		this.m.IsTurnDone = true;

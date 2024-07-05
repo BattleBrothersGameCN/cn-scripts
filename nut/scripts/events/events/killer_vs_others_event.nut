@@ -87,7 +87,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Killer.getName() + "遭受轻伤"
+						text = _event.m.Killer.getName() + "受到了轻微伤"
 					}
 				];
 
@@ -125,7 +125,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Killer.getName() + "是死了"
+					text = _event.m.Killer.getName() + "死了"
 				});
 				_event.m.Killer.getItems().transferToStash(this.World.Assets.getStash());
 				_event.m.Killer.getSkills().onDeath(this.Const.FatalityType.None);
@@ -225,7 +225,7 @@ this.killer_vs_others_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Killer.getName() + "是死了"
+					text = _event.m.Killer.getName() + "死了"
 				});
 				_event.m.Killer.getItems().transferToStash(this.World.Assets.getStash());
 				_event.m.Killer.getSkills().onDeath(this.Const.FatalityType.None);

@@ -137,8 +137,8 @@ gt.Const.Strings.EntityName <- [
 	"盔甲僵尸",
 	"堕落英雄",
 	"复仇之魂",
-	"古代辅军",
-	"古代军团",
+	"古代辅兵",
+	"古代军团士兵",
 	"古代仪仗队",
 	"古代祭司",
 	"征服者",
@@ -155,9 +155,9 @@ gt.Const.Strings.EntityName <- [
 	"民兵队长",
 	"赏金猎人",
 	"农民",
-	"商队队员",
-	"商队卫队",
-	"商队运货马车",
+	"商队帮工",
+	"商队护卫",
+	"商队驴车",
 	"步兵",
 	"双手剑士",
 	"钩镰兵",
@@ -183,7 +183,7 @@ gt.Const.Strings.EntityName <- [
 	"雇佣兵",
 	"剑圣",
 	"雇佣骑士",
-	"弓箭手大师",
+	"射手大师",
 	"绿皮投石机",
 	"邪教徒",
 	"恐狼",
@@ -199,8 +199,8 @@ gt.Const.Strings.EntityName <- [
 	"树苗",
 	"野人",
 	"克拉肯",
-	"伊尔利赫特",
-	"堕落的背叛者",
+	"幻光之触",
+	"堕落背叛者",
 	"恶梦",
 	"野蛮人奴仆",
 	"野蛮人掠夺者",
@@ -235,10 +235,10 @@ gt.Const.Strings.EntityName <- [
 	"市民",
 	"博学者",
 	"博学者的幻影",
-	"护符",
+	"护命匣",
 	"失落的宝藏猎人",
 	"尖叫骷髅",
-	"誓约使者"
+	"守誓者"
 ];
 gt.Const.Strings.EntityNamePlural <- [
 	"死灵法师",
@@ -246,8 +246,8 @@ gt.Const.Strings.EntityNamePlural <- [
 	"盔甲僵尸",
 	"堕落的英雄",
 	"复仇之魂",
-	"古代辅军",
-	"古代军团",
+	"古代辅兵",
+	"古代军团士兵",
 	"古代仪仗队",
 	"古代祭司",
 	"征服者",
@@ -264,9 +264,9 @@ gt.Const.Strings.EntityNamePlural <- [
 	"民兵队长",
 	"赏金猎人",
 	"农民",
-	"商队队员",
-	"商队卫队",
-	"商队运货马车",
+	"商队帮工",
+	"商队护卫",
+	"商队驴车",
 	"步兵",
 	"双手剑士",
 	"钩镰兵",
@@ -292,7 +292,7 @@ gt.Const.Strings.EntityNamePlural <- [
 	"雇佣兵",
 	"剑圣",
 	"雇佣骑士",
-	"弓箭手大师",
+	"射手大师",
 	"绿皮投石机",
 	"邪教徒",
 	"恐狼",
@@ -308,8 +308,8 @@ gt.Const.Strings.EntityNamePlural <- [
 	"树苗",
 	"Wildmen",
 	"克拉肯",
-	"伊尔利赫特",
-	"堕落的背叛者",
+	"幻光之触",
+	"堕落背叛者",
 	"噩梦",
 	"野蛮人奴仆",
 	"野蛮人掠夺者",
@@ -363,15 +363,15 @@ gt.Const.Strings.Tactical.EntityName <- {
 };
 gt.Const.Strings.Tactical.EntityDescription <- {
 	Boulder = "一块大石头。阻挡移动和视线。",
-	Ruin = "很久以前的废墟。",
+	Ruin = "远古废墟。",
 	Shrubbery = "非常茂密的灌木丛，阻挡移动和视线。",
 	Tree = "一棵树干粗壮的大树。",
 	TreeSwamp = "这棵树已经腐烂，早已枯死。",
-	TreeTrunk = "一棵树干，一半被脏水覆盖。",
+	TreeTrunk = "一段半淹在脏水里的树桩。",
 	Brush = "非常茂密的灌木丛，阻挡移动和视线。",
 	Cartwheel = "牛车的破旧车轮。",
 	RuinedPillar = "TODO",
-	Cart = "满载贸易商品的运货马车。",
+	Cart = "满载贸易商品的货运驴车。",
 	Donkey = "用来拉重车的驴。",
 	Plant = "异域植物，阻挡移动和视线。"
 };
@@ -379,7 +379,7 @@ gt.Const.Strings.FootprintsType <- [
 	"",
 	"北方士兵",
 	"镀金者的士兵",
-	"大篷车",
+	"商队",
 	"农民",
 	"民兵",
 	"难民",
@@ -508,10 +508,10 @@ gt.Const.Strings.MercenaryCompanyNames <- [
 	"失落军团"
 ];
 gt.Const.Strings.NobleHouseNames <- [
-	"格林蒙德",
-	"威尔博格",
-	"阿姆斯丘",
-	"哥达",
+	"格里蒙德",
+	"魏尔堡",
+	"阿姆斯贝格",
+	"戈塔",
 	"埃森斯坦",
 	"格劳沃尔",
 	"拉本霍尔特",
@@ -525,8 +525,8 @@ gt.Const.Strings.NobleHouseNames <- [
 	"冈巴尔德",
 	"高斯温",
 	"阿德尔海姆",
-	"阿蒙德",
-	"巴托林",
+	"阿蒙特",
+	"巴托兰",
 	"埃伯林",
 	"福尔萨赫",
 	"赫定",
@@ -545,16 +545,16 @@ gt.Const.Strings.CityStateNames <- [
 	"卡比拉",
 	"拉斯 萨南",
 	"坦维尔",
-	"阿兹姆 沙布",
+	"阿齐姆 沙布",
 	"塔尔瓦",
 	"哈基姆 阿尔 拉马尔",
 	"卡拉坎",
-	"阿尔-哈兹雷德",
-	"哈齐夫",
+	"阿尔·哈萨德",
+	"阿尔·哈齐夫",
 	"夸丁",
 	"希克玛",
 	"埃尔哈代",
-	"阿尔-安瓦尔"
+	"阿尔·安瓦尔"
 ];
 gt.Const.Strings.CityStateTitles <- [
 	"城邦·",
@@ -1241,17 +1241,17 @@ gt.Const.Strings.EngageEnemyNumbers <- [
 ];
 gt.Const.Strings.InventoryHeader <- [
 	"驴",
-	"马车",
+	"驴车",
 	"货车",
 	"大货车"
 ];
 gt.Const.Strings.InventoryUpgradeHeader <- [
-	"购置马车",
+	"购置驴车",
 	"购置货车",
 	"购置大货车"
 ];
 gt.Const.Strings.InventoryUpgradeText <- [
-	"购置马车",
+	"购置驴车",
 	"购置货车",
 	"购置大货车"
 ];

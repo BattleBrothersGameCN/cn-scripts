@@ -288,7 +288,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 				id = 21,
 				type = "hint",
 				icon = "ui/orientation/terrain_orientation.png",
-				text = "这个地方在" + this.Const.Strings.TerrainAlternative[this.getTile().Type]
+				text = "地点位于" + this.Const.Strings.TerrainAlternative[this.getTile().Type]
 			});
 
 			if (this.isShowingDefenders() && this.getCombatLocation().Template[0] != null && this.getCombatLocation().Fortification != 0 && !this.getCombatLocation().ForceLineBattle)
@@ -297,7 +297,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 					id = 20,
 					type = "hint",
 					icon = "ui/orientation/palisade_01_orientation.png",
-					text = "这个地方有防御工事"
+					text = "地点巩固有防御工事"
 				});
 			}
 		}
@@ -360,7 +360,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 
 		if (this.m.Troops.len() == 0)
 		{
-			this.logWarning("地点丧失战斗 —— 生成列表中没有防御者！");
+			this.logWarning("地点丧失战斗力 —— 生成列表中没有防御者！");
 			this.onCombatLost();
 		}
 	}

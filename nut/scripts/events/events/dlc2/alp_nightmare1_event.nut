@@ -61,7 +61,7 @@ this.alp_nightmare1_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Victim.getName() + "是死了"
+					text = _event.m.Victim.getName() + "死了"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
@@ -130,7 +130,7 @@ this.alp_nightmare1_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 13,
 					icon = "ui/icons/kills.png",
-					text = _event.m.Victim.getName() + "是死了"
+					text = _event.m.Victim.getName() + "死了"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 

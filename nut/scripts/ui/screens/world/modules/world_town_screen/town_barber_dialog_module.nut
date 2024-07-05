@@ -43,7 +43,7 @@ this.town_barber_dialog_module <- this.inherit("scripts/ui/screens/ui_module", {
 
 		return {
 			Title = "理发店",
-			SubTitle = "在理发店定制你的人的外观",
+			SubTitle = "理发店用于自定义队员外观",
 			Roster = roster,
 			Assets = this.m.Parent.queryAssetsInformation()
 		};

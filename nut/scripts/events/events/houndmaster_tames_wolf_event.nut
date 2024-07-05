@@ -33,7 +33,7 @@ this.houndmaster_tames_wolf_event <- this.inherit("scripts/events/event", {
 					icon = "ui/items/" + item.getIcon(),
 					text = "你获得了" + item.getName()
 				});
-				_event.m.Houndmaster.improveMood(2.0, "设法驯服了一只狼");
+				_event.m.Houndmaster.improveMood(2.0, "设法驯服了一头狼");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.Houndmaster.getMoodState()],

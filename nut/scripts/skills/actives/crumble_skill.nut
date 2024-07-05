@@ -66,7 +66,7 @@ this.crumble_skill <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/hitchance.png",
-				text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]-15%[/color]攻击近身敌人的命中惩罚，因为武器过于笨重"
+				text = "武器施展不便，对近身敌人有 [color=" + this.Const.UI.Color.NegativeValue + "]-15%[/color] 命中惩罚"
 			});
 		}
 

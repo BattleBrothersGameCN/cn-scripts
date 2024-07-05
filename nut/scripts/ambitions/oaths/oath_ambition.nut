@@ -50,7 +50,7 @@ this.oath_ambition <- this.inherit("scripts/ambitions/ambition", {
 				id = 5,
 				type = "text",
 				icon = "ui/icons/ambition_tooltip.png",
-				text = "你的名望会提高，这意味着合同的报酬会更高，并有可能解锁新类型的合同。" + (reward_tooltip == "" ? "\n\n" : "")
+				text = "你的名望会提高，这意味着合同报酬的增长和新合同类型的可能。" + (reward_tooltip == "" ? "\n\n" : "")
 			});
 		}
 

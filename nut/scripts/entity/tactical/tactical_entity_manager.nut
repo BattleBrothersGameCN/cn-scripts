@@ -1383,7 +1383,7 @@ this.tactical_entity_manager <- {
 
 					if (bro.getBackground().getID() != "background.slave")
 					{
-						bro.worsenMood(this.Const.MoodChange.TooFewSlavesInBattle, "战斗中负债者过少。");
+						bro.worsenMood(this.Const.MoodChange.TooFewSlavesInBattle, "参战的负债者过少。");
 					}
 				}
 			}

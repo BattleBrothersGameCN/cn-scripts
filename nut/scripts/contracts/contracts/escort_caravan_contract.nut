@@ -43,7 +43,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			this.m.NobleHouseID = nobleHouses[this.Math.rand(0, nobleHouses.len() - 1)].getID();
 		}
 
-		local name = this.Const.Strings.CharacterNames[this.Math.rand(0, this.Const.Strings.CharacterNames.len() - 1)] + "冯·" + this.World.FactionManager.getFaction(this.m.NobleHouseID).getNameOnly();
+		local name = this.Const.Strings.CharacterNames[this.Math.rand(0, this.Const.Strings.CharacterNames.len() - 1)] + "·冯·" + this.World.FactionManager.getFaction(this.m.NobleHouseID).getNameOnly();
 		this.m.Flags.set("NobleName", name);
 		local settlements = this.World.EntityManager.getSettlements();
 		local bestDist = 9000;

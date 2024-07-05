@@ -7,7 +7,7 @@ this.autumn_tree2 <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "一棵高大纤细的桦树，叶子开始变成棕色和红色。";
+		return "一棵高大纤细的桦树，叶子开始变成棕红色。";
 	}
 
 	function onInit()

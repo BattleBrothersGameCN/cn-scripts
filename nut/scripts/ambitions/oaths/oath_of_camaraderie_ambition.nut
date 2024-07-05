@@ -12,7 +12,7 @@ this.oath_of_camaraderie_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{力量在于人数，友情在于兄弟情谊。 虽然增派人手会阻碍你的指挥能力，但在每次战斗过程中，%companyname% 很快意识到，通过与你身边的人并肩作战，相信他能完成他的工作，他也相信你能完成你的工作，就能克服战斗的混乱。 这一经历使战团经受住了战争的浩劫。\n\n现在，战团知道可以通过信任自己的成员来对抗敌人，准备再次宣誓！}";
 		this.m.SuccessButtonText = "{为了小安瑟姆！ | 宣誓者万岁！ | 誓约使者去死吧！}";
 		this.m.OathName = "友谊誓言";
-		this.m.OathBoonText = "你可以带上 [color=" + this.Const.UI.Color.PositiveValue + "]14[/color] 人.";
+		this.m.OathBoonText = "你至多能带[color=" + this.Const.UI.Color.PositiveValue + "]14[/color]人加入战斗。";
 		this.m.OathBurdenText = "你的人总是随机以动摇或崩溃士气开始战斗。";
 	}
 

@@ -12,7 +12,7 @@ this.councilman <- this.inherit("scripts/entity/tactical/human", {
 			local titles = [
 				"智者",
 				"长老",
-				"年轻人",
+				"后起之秀",
 				"议员",
 				"商人",
 				"委员",
@@ -20,7 +20,7 @@ this.councilman <- this.inherit("scripts/entity/tactical/human", {
 				"市长",
 				"行会会长",
 				"司库",
-				"行业主管"
+				"商贸主管"
 			];
 			this.m.Title = titles[this.Math.rand(0, titles.len() - 1)];
 		}

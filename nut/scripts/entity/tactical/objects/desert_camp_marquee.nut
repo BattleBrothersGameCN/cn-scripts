@@ -2,12 +2,12 @@ this.desert_camp_marquee <- this.inherit("scripts/entity/tactical/entity", {
 	m = {},
 	function getName()
 	{
-		return "大帐篷";
+		return "遮阳篷";
 	}
 
 	function getDescription()
 	{
-		return "一个为南方烈日提供遮蔽的帐篷。";
+		return "用来遮蔽南方烈日的遮阳篷。";
 	}
 
 	function onInit()

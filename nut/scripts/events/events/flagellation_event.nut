@@ -69,7 +69,7 @@ this.flagellation_event <- this.inherit("scripts/events/event", {
 						{
 							id = 10,
 							icon = "ui/icons/days_wounded.png",
-							text = _event.m.Flagellant.getName() + "遭受轻伤"
+							text = _event.m.Flagellant.getName() + "受到了轻微伤"
 						}
 					];
 				}

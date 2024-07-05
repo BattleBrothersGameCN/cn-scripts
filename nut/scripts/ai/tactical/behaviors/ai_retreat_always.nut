@@ -40,7 +40,7 @@ this.ai_retreat_always <- this.inherit("scripts/ai/tactical/behavior", {
 				this.logInfo("* " + this.getAgent().getActor().getName() + ": Retreated!");
 			}
 
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getAgent().getActor()) + "已经退出了战斗");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getAgent().getActor()) + "撤出了战斗");
 			this.getAgent().setFinished(true);
 			_entity.retreat();
 			return true;
@@ -91,7 +91,7 @@ this.ai_retreat_always <- this.inherit("scripts/ai/tactical/behavior", {
 							this.logInfo("* " + this.getAgent().getActor().getName() + ": Retreated!");
 						}
 
-						this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getAgent().getActor()) + "已经退出了战斗");
+						this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getAgent().getActor()) + "撤出了战斗");
 						this.getAgent().setFinished(true);
 						_entity.retreat();
 					}

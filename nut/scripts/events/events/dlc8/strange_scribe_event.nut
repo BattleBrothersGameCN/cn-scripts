@@ -181,7 +181,7 @@ this.strange_scribe_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "振作起来，解剖师[%anatomist%]。",
+					Text = "%anatomist%，振作起来。",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);

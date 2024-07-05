@@ -333,7 +333,7 @@ this.character_screen <- {
 
 						if (other.getBackground().getID() == "background.slave")
 						{
-							other.improveMood(this.Const.MoodChange.SlaveCompensated, "高兴见到你" + bro.getName() + "得到了为他花费时间的赔偿");
+							other.improveMood(this.Const.MoodChange.SlaveCompensated, "看到" + bro.getName() + "根据他在战团里的时间获得了补偿而高兴");
 						}
 					}
 				}
@@ -372,11 +372,11 @@ this.character_screen <- {
 
 					if (bro.getDaysWithCompany() >= 50)
 					{
-						other.worsenMood(this.Const.MoodChange.VeteranDismissed, "解雇" + bro.getName());
+						other.worsenMood(this.Const.MoodChange.VeteranDismissed, "你解雇了" + bro.getName());
 					}
 					else
 					{
-						other.worsenMood(this.Const.MoodChange.BrotherDismissed, "解雇" + bro.getName());
+						other.worsenMood(this.Const.MoodChange.BrotherDismissed, "你解雇了" + bro.getName());
 					}
 				}
 			}

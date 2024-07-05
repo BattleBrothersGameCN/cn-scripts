@@ -1005,7 +1005,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 						id = 4,
 						type = "text",
 						icon = "ui/icons/initiative.png",
-						text = "现在行动！"
+						text = "正在行动！"
 					});
 				}
 				else if (this.m.IsTurnDone || turnsToGo == null)
@@ -1023,7 +1023,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 						id = 4,
 						type = "text",
 						icon = "ui/icons/initiative.png",
-						text = "行动于" + turnsToGo + (turnsToGo > 1 ? "回合后" : "回合后")
+						text = "将在" + turnsToGo + (turnsToGo > 1 ? "回合后行动" : "回合后行动")
 					});
 				}
 			}
@@ -1216,7 +1216,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 	function onTurnStart()
 	{
-		this.logDebug("回合开始于：" + this.getName());
+		this.logDebug("角色回合开始：" + this.getName());
 
 		if (!this.isAlive())
 		{
@@ -1687,7 +1687,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 						if (this.isPlayerControlled() || !this.isHiddenToPlayer())
 						{
-							this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b]点伤害并遭受" + injury.getNameOnly() + "!");
+							this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "的" + this.Const.Strings.BodyPartName[_hitInfo.BodyPart] + "被击中，受到 [b]" + this.Math.floor(damage) + "[/b]点伤害，身受" + injury.getNameOnly() + "!");
 						}
 
 						appliedInjury = true;
@@ -2958,11 +2958,11 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 			{
 				if (_noNewLine)
 				{
-					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + " 振作起来");
+					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "振作了起来");
 				}
 				else
 				{
-					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this) + " 振作起来");
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this) + "振作了起来");
 				}
 			}
 		}
@@ -3329,11 +3329,11 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		if (!isReallyDead)
 		{
 			_fatalityType = this.Const.FatalityType.Unconscious;
-			this.logDebug(this.getName() + " 是无意识的。");
+			this.logDebug(this.getName() + "失去意识。");
 		}
 		else
 		{
-			this.logDebug(this.getName() + " 是死了.");
+			this.logDebug(this.getName() + "死了。");
 		}
 
 		if (!_silent)
@@ -3361,16 +3361,16 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 				}
 				else
 				{
-					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "是死了");
+					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "死了");
 				}
 			}
 			else if (_killer.getID() != this.getID())
 			{
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_killer) + " 击倒 " + this.Const.UI.getColorizedEntityName(this));
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_killer) + "击倒了" + this.Const.UI.getColorizedEntityName(this));
 			}
 			else
 			{
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + " 被击倒");
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this) + "被击倒了");
 			}
 		}
 
@@ -3498,7 +3498,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 					{
 						if (this.World.Assets.getOrigin().getID() != "scenario.manhunters" || this.getBackground().getID() != "background.slave" || bro.getBackground().getID() == "background.slave")
 						{
-							bro.worsenMood(this.Const.MoodChange.BrotherDied, this.getName() + "在战斗中死亡");
+							bro.worsenMood(this.Const.MoodChange.BrotherDied, this.getName() + "在战斗中丧生");
 						}
 					}
 				}
@@ -3537,7 +3537,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 	{
 		if (!this.isHiddenToPlayer())
 		{
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this) + "已经退出了战斗");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this) + "撤出了战斗");
 		}
 
 		this.m.IsTurnDone = true;

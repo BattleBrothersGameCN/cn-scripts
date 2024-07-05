@@ -256,7 +256,7 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 
 		if (this.isInCombat())
 		{
-			this.setOrders("对战中");
+			this.setOrders("正在交战");
 			return;
 		}
 

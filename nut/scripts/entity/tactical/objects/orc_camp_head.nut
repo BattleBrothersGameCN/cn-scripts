@@ -2,12 +2,12 @@ this.orc_camp_head <- this.inherit("scripts/entity/tactical/entity", {
 	m = {},
 	function getName()
 	{
-		return "尖头";
+		return "刺穿的头颅";
 	}
 
 	function getDescription()
 	{
-		return "用来警示这一带的人类会遭遇什么的标记。";
+		return "对擅闯人类下场的骇人展示。";
 	}
 
 	function setFlipped( _flip )

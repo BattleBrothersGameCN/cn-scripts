@@ -35,7 +35,7 @@ this.gambler_vs_other_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Gambler.getName() + "遭受轻伤"
+						text = _event.m.Gambler.getName() + "受到了轻微伤"
 					});
 				}
 				else
@@ -54,7 +54,7 @@ this.gambler_vs_other_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.DumbGuy.getName() + "遭受轻伤"
+						text = _event.m.DumbGuy.getName() + "受到了轻微伤"
 					});
 				}
 				else

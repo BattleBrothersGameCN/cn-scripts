@@ -50,7 +50,7 @@ this.training_accident_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.ClumsyGuy.getName() + "遭受轻伤"
+						text = _event.m.ClumsyGuy.getName() + "受到了轻微伤"
 					});
 				}
 				else if (r == 3)
@@ -96,7 +96,7 @@ this.training_accident_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.ClumsyGuy.getName() + "遭受轻伤"
+						text = _event.m.ClumsyGuy.getName() + "受到了轻微伤"
 					});
 				}
 			}

@@ -117,7 +117,7 @@ gt.Const.Strings.CharacterNames <- [
 	"威廉",
 	"希尔德",
 	"埃里克",
-	"提乌德鲍德",
+	"托伊多巴尔德",
 	"哈瓦德",
 	"哈康",
 	"沃尔夫冈",
@@ -164,7 +164,7 @@ gt.Const.Strings.CharacterNames <- [
 	"巴尔杜",
 	"瓦尔德马尔",
 	"恩格尔伯特",
-	"托比昂",
+	"托比约恩",
 	"埃兰",
 	"托克尔",
 	"霍斯特",
@@ -450,7 +450,7 @@ gt.Const.Strings.GladiatorTitles <- [
 	"·无双",
 	"未尝一败",
 	"·残暴者",
-	"·弱者",
+	"·黑马",
 	"奴隶",
 	"·雄狮",
 	"·鬣狗",
@@ -518,7 +518,7 @@ gt.Const.Strings.NomadChampionStandalone <- [
 	"商人之祸",
 	"沙漠之鼠",
 	"黑牙",
-	"蛇(The Snake)",
+	"蛇",
 	"沙漠掠袭者",
 	"天灾",
 	"被诅咒的人",
@@ -573,7 +573,7 @@ gt.Const.Strings.ExecutionerChampionTitles <- [
 	"不朽者%randomsouthernname%",
 	"头骨收集者",
 	"巨人",
-	"岩石(The Rock)",
+	"巨石",
 	"沙尘暴",
 	"碎头机",
 	"伊夫利特",
@@ -597,7 +597,7 @@ gt.Const.Strings.DesertStalkerChampionTitles <- [
 	"·秃鹫",
 	"·大蛇",
 	"·毒刺",
-	"·寻心者"
+	"·猎心者"
 ];
 gt.Const.Strings.NobleTitles <- [
 	"伯爵",
@@ -677,7 +677,7 @@ gt.Const.Strings.MasterArcherNames <- [
 	"猎人%randomname%",
 	"狙击手%randomname%",
 	"百步穿杨",
-	"速射%randomname%",
+	"速射手%randomname%",
 	"猎头者%randomname%",
 	"死神之眼",
 	"神射手%randomname%",
@@ -706,7 +706,7 @@ gt.Const.Strings.OathbringerNames <- [
 ];
 gt.Const.Strings.MasonTitles <- [
 	"奠基者",
-	"砌砖匠(Bricklayer)",
+	"泥瓦匠",
 	"建筑师",
 	"匠人"
 ];
@@ -747,7 +747,7 @@ gt.Const.Strings.RatcatcherTitles <- [
 	"长鼻",
 	"鼠",
 	"捕鼠者",
-	"温热"
+	"冷落者"
 ];
 gt.Const.Strings.BastardTitles <- [
 	"私生子",
@@ -758,7 +758,7 @@ gt.Const.Strings.BastardTitles <- [
 	"污点"
 ];
 gt.Const.Strings.PilgrimTitles <- [
-	"信徒(the Believer)",
+	"信徒",
 	"探求者",
 	"奇术士",
 	"纯净",
@@ -889,7 +889,7 @@ gt.Const.Strings.BanditLeaderNames <- [
 	"四指%randomname%",
 	"硫磺石巴拉巴斯",
 	"鸦黑罗托尔",
-	"黑乌鸦巴萨沙尔",
+	"黑乌鸦巴尔塔扎",
 	"%randomtown%的悍牛",
 	"%randomname%·血髯",
 	"蜜酒罐%randomname%",
@@ -1081,7 +1081,7 @@ gt.Const.Strings.FallenHeroTitles <- [
 	"·空魂",
 	"·幽灵",
 	"·失魂",
-	"·酒桶"
+	"·空壳"
 ];
 gt.Const.Strings.NecromancerNames <- [
 	"虫王",
