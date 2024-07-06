@@ -44,7 +44,7 @@ this.cripple_pep_talk_event <- this.inherit("scripts/events/event", {
 					{
 						id = 17,
 						icon = "ui/icons/fatigue.png",
-						text = _event.m.Cripple.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + fatigue + "[/color] 最大疲劳值"
+						text = _event.m.Cripple.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + fatigue + "[/color] 点疲劳值上限"
 					},
 					{
 						id = 17,

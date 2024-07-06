@@ -75,7 +75,7 @@ this.anatomist_helps_blighted_guy_2_event <- this.inherit("scripts/events/event"
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.MilitiaCaptain.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+3[/color] 最大疲劳值"
+					text = _event.m.MilitiaCaptain.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+3[/color] 点疲劳值上限"
 				});
 				this.List.push({
 					id = 16,

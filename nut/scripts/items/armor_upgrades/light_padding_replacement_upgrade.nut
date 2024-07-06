@@ -29,7 +29,7 @@ this.light_padding_replacement_upgrade <- this.inherit("scripts/items/armor_upgr
 			id = 14,
 			type = "text",
 			icon = "ui/icons/fatigue.png",
-			text = "减少一件盔甲的最大疲劳值惩罚 [color=" + this.Const.UI.Color.NegativeValue + "]20%[/color]"
+			text = "减少一件盔甲的疲劳值上限惩罚 [color=" + this.Const.UI.Color.NegativeValue + "]20%[/color]"
 		});
 		return result;
 	}

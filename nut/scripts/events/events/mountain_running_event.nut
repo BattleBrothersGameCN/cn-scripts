@@ -33,7 +33,7 @@ this.mountain_running_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/fatigue.png",
-					text = bro.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] 最大疲劳值"
+					text = bro.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color] 点疲劳值上限"
 				});
 			}
 

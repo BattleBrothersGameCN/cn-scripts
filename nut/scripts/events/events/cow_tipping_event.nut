@@ -179,7 +179,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 17,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Strong.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 最大疲劳值"
+					text = _event.m.Strong.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 点疲劳值上限"
 				});
 				_event.m.Strong.improveMood(0.5, "展示显示了他的体力");
 

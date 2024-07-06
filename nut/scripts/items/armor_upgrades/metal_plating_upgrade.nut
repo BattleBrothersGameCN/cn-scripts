@@ -35,7 +35,7 @@ this.metal_plating_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 			id = 14,
 			type = "text",
 			icon = "ui/icons/fatigue.png",
-			text = "[color=" + this.Const.UI.Color.NegativeValue + "]-3[/color] 最大疲劳值"
+			text = "[color=" + this.Const.UI.Color.NegativeValue + "]-3[/color] 疲劳值上限"
 		});
 		return result;
 	}

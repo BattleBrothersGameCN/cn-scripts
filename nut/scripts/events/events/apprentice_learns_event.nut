@@ -156,7 +156,7 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 					{
 						id = 17,
 						icon = "ui/icons/fatigue.png",
-						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color]点最大疲劳值"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color]点疲劳值上限"
 					}
 				];
 
@@ -215,7 +215,7 @@ this.apprentice_learns_event <- this.inherit("scripts/events/event", {
 					{
 						id = 17,
 						icon = "ui/icons/fatigue.png",
-						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color]点最大疲劳值"
+						text = _event.m.Apprentice.getName() + " 获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + stamina + "[/color]点疲劳值上限"
 					}
 				];
 

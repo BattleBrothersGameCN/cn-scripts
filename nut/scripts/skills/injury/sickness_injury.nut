@@ -38,7 +38,7 @@ this.sickness_injury <- this.inherit("scripts/skills/injury/injury", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-25%[/color] 最大疲劳值"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-25%[/color] 疲劳值上限"
 			},
 			{
 				id = 12,

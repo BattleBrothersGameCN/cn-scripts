@@ -100,7 +100,7 @@ this.follower <- {
 			id = 1,
 			type = "hint",
 			icon = "ui/icons/mouse_left_button.png",
-			text = "打开雇佣界面以替换"
+			text = "打开雇佣界面替换"
 		});
 		return ret;
 	}

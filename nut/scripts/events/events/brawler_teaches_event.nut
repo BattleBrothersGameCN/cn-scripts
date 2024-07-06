@@ -76,7 +76,7 @@ this.brawler_teaches_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Student.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + skill + "[/color] 最大疲劳值"
+					text = _event.m.Student.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + skill + "[/color] 点疲劳值上限"
 				});
 			}
 

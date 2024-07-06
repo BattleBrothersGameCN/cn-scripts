@@ -39,7 +39,7 @@ this.deep_chest_cut_injury <- this.inherit("scripts/skills/injury/injury", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-35%[/color] 最大疲劳值"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-35%[/color] 疲劳值上限"
 			},
 			{
 				id = 6,

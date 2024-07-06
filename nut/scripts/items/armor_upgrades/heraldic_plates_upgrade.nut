@@ -48,7 +48,7 @@ this.heraldic_plates_upgrade <- this.inherit("scripts/items/armor_upgrades/armor
 			id = 14,
 			type = "text",
 			icon = "ui/icons/fatigue.png",
-			text = "[color=" + this.Const.UI.Color.NegativeValue + "]-4[/color] 最大疲劳值"
+			text = "[color=" + this.Const.UI.Color.NegativeValue + "]-4[/color] 疲劳值上限"
 		});
 		return result;
 	}

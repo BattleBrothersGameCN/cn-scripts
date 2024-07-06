@@ -68,7 +68,7 @@ this.kings_guard_2_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Dude.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+10[/color] 最大疲劳值"
+					text = _event.m.Dude.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+10[/color] 点疲劳值上限"
 				});
 				this.List.push({
 					id = 16,

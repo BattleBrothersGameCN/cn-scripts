@@ -35,14 +35,14 @@ this.strength_contest_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Strong1.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 最大疲劳值"
+					text = _event.m.Strong1.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 点疲劳值上限"
 				});
 				_event.m.Strong2.getBaseProperties().Stamina += 1;
 				_event.m.Strong2.getSkills().update();
 				this.List.push({
 					id = 16,
 					icon = "ui/icons/fatigue.png",
-					text = _event.m.Strong2.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 最大疲劳值"
+					text = _event.m.Strong2.getName() + " 获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+1[/color] 点疲劳值上限"
 				});
 				_event.m.Strong1.improveMood(1.0, "建立友谊与 " + _event.m.Strong2.getName());
 				this.List.push({

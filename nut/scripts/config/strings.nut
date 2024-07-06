@@ -157,7 +157,7 @@ gt.Const.Strings.EntityName <- [
 	"农民",
 	"商队帮工",
 	"商队护卫",
-	"商队驴车",
+	"商队货车",
 	"步兵",
 	"双手剑士",
 	"钩镰兵",
@@ -266,7 +266,7 @@ gt.Const.Strings.EntityNamePlural <- [
 	"农民",
 	"商队帮工",
 	"商队护卫",
-	"商队驴车",
+	"商队货车",
 	"步兵",
 	"双手剑士",
 	"钩镰兵",
@@ -1241,17 +1241,17 @@ gt.Const.Strings.EngageEnemyNumbers <- [
 ];
 gt.Const.Strings.InventoryHeader <- [
 	"驴",
-	"驴车",
+	"板车",
 	"货车",
 	"大货车"
 ];
 gt.Const.Strings.InventoryUpgradeHeader <- [
-	"购置驴车",
+	"购置板车",
 	"购置货车",
 	"购置大货车"
 ];
 gt.Const.Strings.InventoryUpgradeText <- [
-	"购置驴车",
+	"购置板车",
 	"购置货车",
 	"购置大货车"
 ];
@@ -1343,15 +1343,15 @@ gt.Const.Strings.PerkDescription <- {
 	Anticipation = "当被远程武器攻击时，攻击者每远离一格, 则获得[color=" + this.Const.UI.Color.PositiveValue + "] 1+ 10% 基础远程防御[/color]作为额外的远程防御，并且至少获得 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color]点远程防御加成。",
 	HoldOut = "挺住! 任何具有有限持续时间的负面状态效果（例如流血、魅惑）的持续时间都会减少到[color=" + this.Const.UI.Color.NegativeValue + "]1[/color]回合。那些效果在几个回合内逐渐减弱的状态效果（例如地精毒药）从一开始就处于最弱的状态。",
 	Dodge = "快你一步！近战、远程防御增加角色当前主动值的[color=" + this.Const.UI.Color.PositiveValue + "]15%[/color]。",
-	Nimble = "轻甲专精! 通过灵活地躲避或偏转打击来回避所有攻击。所受的伤害最多可以减少[color=" + this.Const.UI.Color.PositiveValue + "]60%[/color]，但在盔甲和头盔的最大疲劳值超过[color=" + this.Const.UI.Color.PositiveValue + "] 15 [/color]时会技能效果会大幅下降。你的盔甲和头盔越轻，你就越受益。\n\n\'强壮\'不影响该特性。\n\n不影响精神攻击和状态效果的伤害, 但是可以帮助避免受到它们",
+	Nimble = "轻甲专精! 通过灵活地躲避或偏转打击来回避所有攻击。所受的伤害最多可以减少[color=" + this.Const.UI.Color.PositiveValue + "]60%[/color]，但在盔甲和头盔的疲劳值上限减益超过[color=" + this.Const.UI.Color.PositiveValue + "] 15 [/color]时会技能效果会大幅下降。你的盔甲和头盔越轻，你就越受益。\n\n\'强壮\'不影响该特性。\n\n不影响精神攻击和状态效果的伤害, 但是可以帮助避免受到它们",
 	BattleForged = "重甲专精! 受到的护甲伤害会减少，减少的百分比等于盔甲和头盔当前总护甲值之和的[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]。你的盔甲和头盔越重，你的好处就越多。\n\n不影响精神攻击或状态效果的伤害，但可以帮助避免收到它们。",
 	Duelist = "与你的武器融为一体，去攻击弱点! 如果副手未持有武器或者携带着可投掷的工具(如投掷网), 则可额外造成 [color=" + this.Const.UI.Color.PositiveValue + "]+25%[/color] 忽略护甲的伤害。不适用于双手武器。",
 	CripplingStrikes = "致残你的敌人！近战、远程攻击造成创伤的阈值降低[color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]。",
 	QuickHands = "在找这个吗？在战斗中每回合第一次交换除盾牌以外的任何物品成为一个免费动作，不需要行动点数。",
 	Bullseye = "射得好! 当瞄准的目标没有被清空的弹道路线（即目标被遮挡）时，受到的命中惩罚从[color=" + this.Const.UI.Color.NegativeValue + "]75%[/color]减少到[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]。",
 	Ballistics = "命中率的距离惩罚每格减少[color=" + this.Const.UI.Color.NegativeValue + "]-1[/color]",
-	Berserk = "哇！ 每回合第一次击杀立即恢复 [color=" + this.Const.UI.Color.PositiveValue + "]4[/color] 行动点数。 角色恢复的行动点数不能超过其最大行动点数，一次攻击击杀多名敌人也只恢复 4 行动点数",
-	BattleFlow = "每回合第一次击杀会使恢复 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 的基础最大疲劳（即在应用护甲惩罚之前的疲劳值）。",
+	Berserk = "哇！ 每回合第一次击杀立即恢复 [color=" + this.Const.UI.Color.PositiveValue + "]4[/color] 行动点数。 角色恢复的行动点数不能超过其行动点数上限，一次攻击击杀多名敌人也只恢复 4 行动点数",
+	BattleFlow = "每回合第一次击杀会使恢复 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 的基础疲劳值上限（即在应用护甲惩罚之前的疲劳值）。",
 	DevastatingStrikes = "所有武器造成的所有伤害都会增加 [color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color]。 现在还有什么可以拦着你？",
 	KillingFrenzy = "进入杀戮时刻！ 每次击杀后会获得增加所有伤害 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]的加成，持续 2 回合。再次击杀不叠加，但会刷新计时器。",
 	ShieldBash = "撞退技能额外造成 [color=" + this.Const.UI.Color.DamageValue + "]10 ~ 25[/color] 点伤害（对护甲只造成 50%）和 [color=" + this.Const.UI.Color.DamageValue + "]10[/color] 点疲劳值。同时, 撞退技能的疲劳值消耗减少 10",
@@ -1363,13 +1363,13 @@ gt.Const.Strings.PerkDescription <- {
 	ShieldExpert = "学会更好地将攻击偏向一边而不是正面阻挡。\n\n盾牌防御增加 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color], 这也适用于盾墙技能的额外防御加成。\n\n盾牌受到的伤害减少 [color=" + this.Const.UI.Color.NegativeValue + "]50%[/color], 但至少为 1。\n\n “撞退”技能命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]+15%[/color]。",
 	NineLives = "每场战斗限一次，遭受致命伤害时，你会以少量的生命值存活下来，并治愈所有的持续伤害效果（例如流血、中毒）。当然，下一击很可能置你于死地，但直到你的下个回合，提升的防御属性会助你挺过难关。",
 	BatteringRam = "免疫昏迷。",
-	BagsAndBelts = "解锁两个额外的包槽以携带所有您喜爱的物品。放在袋子里的物品不再对最大疲劳值造成惩罚，除了双手武器。",
+	BagsAndBelts = "解锁两个额外的背包槽位，好带上所有喜爱的物品。放在背包里的物品不再对疲劳值上限造成惩罚，双手武器除外。",
 	Student = "世上无难事，只怕有心人。在战斗中获得[color=" + this.Const.UI.Color.PositiveValue + "]20%[/color]的额外经验。你的角色等级到十一级时，该特技失效并获得一个额外特技点。\n\n游玩“猎奴者”起源，你的负债者会在角色等级到七级时返还特技点。",
-	Gifted = "当你天生就有天赋时，雇佣兵的生活会变得很容易。立即升级以增加此角色的属性，数值为最大掷骰数，但没有天赋加成。",
+	Gifted = "当你天生就有天赋时，雇佣兵的生活会变得很容易。立即升级以增加此角色的属性，数值为最大掷骰值，但没有天赋加成。",
 	Zweihander = "所有双手武器技能的疲劳值消耗降低 [color=" + this.Const.UI.Color.NegativeValue + "]-20%[/color].",
 	Pathfinder = "学会在复杂地形上移动。 所有地形上的移动行动点消耗减少 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color](但每个单元格至少需要 2 个行动点)，疲劳值消耗减少到一半。 改变高度也不再需要消耗额外的行动点。",
 	FortifiedMind = "钢铁般的意志不会轻易偏离正道。决心提高[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color].",
-	Captain = "领导战场上的战士, 让每个人都保持斗志。 5 格范围内的盟友将获得该角色的 [color=" + this.Const.UI.Color.PositiveValue + "]15%[/color] 的决心加成，但加成后的最大值不会超过这个角色的决心。\n\n不叠加, 范围内有多个角色具有该特权时, 取最大决心值。",
+	Captain = "领导战场上的战士, 让每个人都保持斗志。 5 格范围内的盟友将获得该角色的 [color=" + this.Const.UI.Color.PositiveValue + "]15%[/color] 的决心加成，但加成后的最大值不会超过这个角色的决心。\n\n不叠加, 范围内有多个角色具有该特技时, 取最大决心值。",
 	InspiringPresence = "一个伟大的领袖会激励他的追随者去克服他们的极限。除非性格特征禁止，否则盟友会以自信士气开始每场战斗。",
 	Underdog = "我已经习惯了。由于被对手包围而导致的围攻效果不再适用于该角色。如果攻击者拥有背刺特技，则该特技的效果失效，但由于被包围而导致的正常围攻效果将生效。",
 	Recover = "解锁 \'恢复\' 技能，允许角色休息一回合，以减少累积疲劳值的[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color].",

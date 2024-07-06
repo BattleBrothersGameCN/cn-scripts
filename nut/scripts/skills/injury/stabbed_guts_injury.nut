@@ -39,7 +39,7 @@ this.stabbed_guts_injury <- this.inherit("scripts/skills/injury/injury", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-40%[/color] 最大疲劳值"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-40%[/color] 疲劳值上限"
 			}
 		];
 		this.addTooltipHint(ret);

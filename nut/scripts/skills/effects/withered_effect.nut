@@ -49,7 +49,7 @@ this.withered_effect <- this.inherit("scripts/skills/skill", {
 				id = 12,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-" + this.m.TurnsLeft * 25 + "%[/color] 最大疲劳值"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-" + this.m.TurnsLeft * 25 + "%[/color] 疲劳值上限"
 			},
 			{
 				id = 11,
