@@ -32,7 +32,7 @@ this.exhausted_effect <- this.inherit("scripts/skills/injury/injury", {
 				id = 13,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-40%[/color] 最大疲劳值"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-40%[/color] 疲劳值上限"
 			}
 		];
 		this.addTooltipHint(ret);

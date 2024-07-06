@@ -39,7 +39,7 @@ this.strong_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 最大疲劳值"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 点疲劳值上限"
 			}
 		];
 	}

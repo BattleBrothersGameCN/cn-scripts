@@ -86,7 +86,7 @@ this.noble_faction <- this.inherit("scripts/factions/faction", {
 			character.setFaction(this.m.ID);
 			character.m.HairColors = this.Const.HairColors.Lineage[this.m.HairColor];
 			character.setAppearance();
-			character.setTitle("冯·" + this.m.Name);
+			character.setTitle("·冯·" + this.m.Name);
 			character.assignRandomEquipment();
 		}
 	}

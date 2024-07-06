@@ -26,7 +26,7 @@ this.collapsed_lung_part_injury <- this.inherit("scripts/skills/injury_permanent
 				id = 7,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-40%[/color] 最大疲劳值"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-40%[/color] 疲劳值上限"
 			},
 			{
 				id = 16,

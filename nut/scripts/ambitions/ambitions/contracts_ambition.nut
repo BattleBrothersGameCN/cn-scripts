@@ -7,10 +7,10 @@ this.contracts_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.contracts";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "我们需要把自己打造成可信赖的雇佣兵团。\n让我们一次又一次地接受考验，毫无疑问地证明这一点！";
+		this.m.ButtonText = "我们要把自己打造成一支可靠的佣兵团。\n让我们一次次接受考验，毋庸置疑地证明这一点！";
 		this.m.UIText = "完成更多合同";
 		this.m.TooltipText = "完成8份任何形式的合同，证明自己的可靠毋庸置疑。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_62.png[/img]出发的时候，全世界都看到了你的本来面目：武装起来的野心。 每个人都有一个梦想，大约一半的人梦里都有武器。 如果你回过头好好审视过去的自己，你不特别，不杰出，甚至不是多么危险。 但你做到了。 门在你面前关上了。 讨价还价的尝试让你失去了好买卖。 口水，那么多口水。 这是一个寒冷的世界，而你敢于温暖自己。你成功了。\n\n 你手头上的合同，地平线上的合同，他们都模糊在一起。 一种胜利的文化已经开始席卷%companyname%，你有充分的理由为自己的指挥感到自豪。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_62.png[/img]出发的时候，全世界都看到了你的本来面目：武装起来的野心。每个人都有一个梦想，大约一半的人梦里都有武器。如果你回过头好好审视过去的自己，你不特别，不杰出，甚至不是多么危险。但你做到了。你梦到了在你面前关上的门。试图讨价还价而失去的好买卖。口水，横飞四溅的口水。 这是一个寒冷的世界，而你敢于温暖自己。你成功了。\n\n你手头上的合同，地平线上的合同，他们都模糊在一起。一种胜利的文化已经开始席卷%companyname%，你有充分的理由为自己的指挥感到自豪。";
 		this.m.SuccessButtonText = "我们正为自己打响名号。";
 	}
 

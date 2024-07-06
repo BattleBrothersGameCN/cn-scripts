@@ -9,7 +9,7 @@ this.paymaster_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Image = "ui/campfire/paymaster_01";
 		this.m.Cost = 3500;
 		this.m.Effects = [
-			"每人每日工资减少15%",
+			"所有人的日薪降低15%",
 			"减少50%的逃兵几率",
 			"阻止你的人要求更高报酬的事件出现"
 		];
