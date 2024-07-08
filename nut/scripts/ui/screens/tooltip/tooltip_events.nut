@@ -1296,7 +1296,7 @@ this.tooltip_events <- {
 
 				if (repair.ArmorParts > 0)
 				{
-					desc = desc + ("\n\n修理你所有装备需要[color=" + this.Const.UI.Color.PositiveValue + "]" + repair.Hours + "[/color] 小时并消耗");
+					desc = desc + ("\n\n修理你所有装备需要[color=" + this.Const.UI.Color.PositiveValue + "]" + repair.Hours + "[/color]小时并消耗");
 
 					if (repair.ArmorParts <= this.World.Assets.getArmorParts())
 					{
@@ -1307,7 +1307,7 @@ this.tooltip_events <- {
 						desc = desc + ("[color=" + this.Const.UI.Color.NegativeValue + "]");
 					}
 
-					desc = desc + (repair.ArmorParts + "[/color] 工具和补给。");
+					desc = desc + (repair.ArmorParts + "[/color]工具和补给。");
 				}
 
 				desc = desc + ("你至多能携带" + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].ArmorParts + this.World.Assets.m.ArmorPartsMaxAdditional) + "单位。");
@@ -1330,7 +1330,7 @@ this.tooltip_events <- {
 
 				if (heal.MedicineMin > 0)
 				{
-					desc = desc + ("\n\n治愈所有士兵需要花上 [color=" + this.Const.UI.Color.PositiveValue + "]" + heal.DaysMin + "[/color]到[color=" + this.Const.UI.Color.PositiveValue + "]" + heal.DaysMax + "[/color] 天并需要大约");
+					desc = desc + ("\n\n治愈所有士兵需要花上[color=" + this.Const.UI.Color.PositiveValue + "]" + heal.DaysMin + "[/color]到[color=" + this.Const.UI.Color.PositiveValue + "]" + heal.DaysMax + "[/color]天并需要大约");
 
 					if (heal.MedicineMin <= this.World.Assets.getMedicine())
 					{
@@ -1463,7 +1463,7 @@ this.tooltip_events <- {
 					{
 						id = 1,
 						type = "title",
-						text = "作战序列中的角色"
+						text = "战斗序列中的角色"
 					},
 					{
 						id = 2,
@@ -2701,7 +2701,7 @@ this.tooltip_events <- {
 							id = 1,
 							type = "text",
 							icon = "ui/icons/days_wounded.png",
-							text = "将在[color=" + this.Const.UI.Color.NegativeValue + "]" + entity.getDaysWounded() + "[/color] 天内治愈"
+							text = "将在[color=" + this.Const.UI.Color.NegativeValue + "]" + entity.getDaysWounded() + "[/color]天内治愈"
 						});
 					}
 				}
