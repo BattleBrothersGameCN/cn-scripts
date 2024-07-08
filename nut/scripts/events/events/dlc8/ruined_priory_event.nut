@@ -180,7 +180,7 @@ this.ruined_priory_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 11,
 					icon = "ui/icons/asset_supplies.png",
-					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]40[/color] 工具和补给"
+					text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]40[/color]点工具和补给"
 				});
 				local brothers = this.World.getPlayerRoster().getAll();
 
