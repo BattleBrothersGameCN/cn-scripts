@@ -5,10 +5,10 @@ this.find_and_destroy_location_ambition <- this.inherit("scripts/ambitions/ambit
 		this.ambition.create();
 		this.m.ID = "ambition.find_and_destroy_location";
 		this.m.Duration = 7.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "让我们踏上荒野，去探索未知的世界，去掠夺它。\n无论是巫师的坟墓，地精营地，或者我们能找到的任何东西。";
-		this.m.UIText = "发现一个废墟或敌对营地，并摧毁它";
+		this.m.ButtonText = "让我们踏上荒野，去探索未知的世界，去掠夺它。\n无论是巫师的坟墓，地精营地，或者任何我们能找到的地方。";
+		this.m.UIText = "发现一个废墟或敌对营地，摧毁它";
 		this.m.TooltipText = "通过自己探索这片土地，发现一处废墟、营地或其他敌对地点，摧毁它，并夺取战利品。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_65.png[/img]在当时，这听起来是个好主意，但在没有地图或任何目的地的荒野中行走，结果证明是一种相当费劲的寻找财富甚至是一场战斗的方式。不过，你的脚痛队伍最终还是找到了一个有价值的目标，所有人都不得不同意这一冒险终究是值得的。当%farmer%审视着%recently_destroyed%的那几块残存的灰烬时，他几乎得意洋洋。%SPEECH_ON%他们一点儿也不知道我们要来。就像镰刀前的麦子，兄弟们！%SPEECH_OFF%%notfarmer%挑了挑眉毛。%SPEECH_ON%你只代表了你自己，我可不是个农夫。%SPEECH_OFF%";
+		this.m.SuccessText = "[img]gfx/ui/events/event_65.png[/img]在当时，这听起来是个好主意，但在没有地图或任何目的地的荒野中行走，被证明是一种相当费劲的寻找财富的方式 —— 甚至是找上一场战斗。不过，你的脚痛队伍最终还是找到了一个有价值的目标，所有人都不得不同意，这场冒险终究是值得的。当%farmer%审视着%recently_destroyed%的那几块残存的灰烬时，似乎十分得意。%SPEECH_ON%他们一点儿也不知道我们要来。就像镰刀前的麦子，兄弟们！%SPEECH_OFF%%notfarmer%挑了挑眉毛。%SPEECH_ON%你只代表你自己，我可不是个泥腿子。%SPEECH_OFF%";
 		this.m.SuccessButtonText = "又一个挑战被征服了。";
 	}
 
