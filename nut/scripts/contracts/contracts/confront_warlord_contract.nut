@@ -418,7 +418,7 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "{%companyname% 获胜了！ | 胜利！}",
+					Text = "{%companyname%的胜利！ | 胜利！}",
 					function getResult()
 					{
 						return 0;

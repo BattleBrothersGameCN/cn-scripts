@@ -433,7 +433,7 @@ gt.Const.Strings.ShipNames <- [
 	"斗胆号",
 	"虎爪号",
 	"梧桐号",
-	"高贵跑者号",
+	"赫渡号",
 	"凄凉月光号",
 	"族人号",
 	"鲸游号",
@@ -580,7 +580,7 @@ gt.Const.Strings.BusinessReputation <- [
 	"丰功伟绩",
 	"留名青史",
 	"功高盖世",
-	"彪炳千秋",
+	"举世无双",
 	"万古流芳"
 ];
 gt.Const.Strings.MoralReputation <- [

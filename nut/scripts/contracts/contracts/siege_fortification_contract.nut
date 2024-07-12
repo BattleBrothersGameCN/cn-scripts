@@ -62,7 +62,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"前往 %direction% 的 %objective% ",
+					"前往%direction%方的%objective%",
 					"帮助围城"
 				];
 

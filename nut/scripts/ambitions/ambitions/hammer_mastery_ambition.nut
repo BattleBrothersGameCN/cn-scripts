@@ -5,10 +5,10 @@ this.hammer_mastery_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.hammer_mastery";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "我们战团没有做好与装甲对手作战的准备。\n我们得训练俩人精通战锤来战斗，没有骑士能逃出我们的魔掌。";
+		this.m.ButtonText = "战团面对重甲对手缺乏准备。我们要训练两\n名战锤专家，让骑士也逃不出我们的手掌心。";
 		this.m.UIText = "培训掌握锤精通特技的成员";
-		this.m.TooltipText = "拥有 2 个掌握锤精通特技的人。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_82.png[/img]人们聚集在一起，观看 %hammerbrother% 在一棵松树上练习击打的技术，啪－啪－啪。%SPEECH_ON%看那锤头！ 你几乎可以直接打穿任何头盔，好看看那个颅碗里有什么！%SPEECH_OFF%他又挥了一下，树干从中间裂开，上半部分直接落在营地里。%nothammerbrother% 从座位上爬起来，把汤洒了一身，险些被压碎。 %SPEECH_ON%我原以为这世上没什么新鲜的东西，但我从来没有用倒下的树杀过人！%SPEECH_OFF%%hammerbrother% 笑着喊道。你可以期望下次遇到重装甲的敌人时，你会好过。";
+		this.m.TooltipText = "拥有2名掌握锤精通特技的队员。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_82.png[/img]啪－啪－啪，%hammerbrother%正拿一棵松树练习着他的击打技术。人们聚了过来，想要看看他有多大本事。%SPEECH_ON%看那锤头！别说是打穿头盔，我都能看到头盖骨里的脑花了！%SPEECH_OFF%他又挥了一下，树干从中间裂开，上半部分直接朝营地倒了过去。%nothammerbrother%赶紧从座位上爬了起来，把汤洒了一身，差点就被压扁了。 %SPEECH_ON%我原以为这世上没什么新鲜的东西，但我从来没有用倒下的树杀过人！%SPEECH_OFF%%hammerbrother%笑着喊道。可以预见的是，下次遇到重甲的敌人时，你会很好过。";
 		this.m.SuccessButtonText = "盔甲，什么盔甲？";
 	}
 
