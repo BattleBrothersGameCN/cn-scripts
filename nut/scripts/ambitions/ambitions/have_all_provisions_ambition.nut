@@ -5,11 +5,11 @@ this.have_all_provisions_ambition <- this.inherit("scripts/ambitions/ambition", 
 		this.ambition.create();
 		this.m.ID = "ambition.have_all_provisions";
 		this.m.Duration = 14.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "我知道你们已经厌倦了我们日复一日的霉运与陈腐食物。\n我们会从这片大陆上收集各种各样的食物和饮品来举办一场盛宴！";
+		this.m.ButtonText = "我知道你们已经厌倦了我们日复一日的霉运与陈腐食物。我们\n会从这片大陆上收集各种各样的食物和饮品，举办一场盛宴！";
 		this.m.RewardTooltip = "能大大改善你手下的情绪。";
-		this.m.UIText = "拥有每一种食物类型";
-		this.m.TooltipText = "仓库中拥有每一种食物类型来举办一场盛宴。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_61.png[/img]花大力气奔走在粮商与农夫之间，你收集到了整日山珍海味的贵族也会注目的食物。 储藏室已经满了，你随即为 %companyname% 举办一场盛宴，请兄弟们吃个够。 你的兄弟们立即投入‘战斗’。 礼仪里缺了的就在肚子里补上。%randombrother% 利用这个机会分享他对肉类的知识%SPEECH_ON%这只野兽死的时候心里充满了喜悦，这就是为什么它如此嫩滑。%SPEECH_OFF%令他的战友们钦佩的是，%strongest_brother% 打了个雷鸣般的嗝。%SPEECH_ON%我不好意思这么说，但我接下来只能喝水顺气，喝不下再多酒了。%SPEECH_OFF%在这之后，没有太多的谈话了，但油腻的胡子和饱满的肚子保证了他们会在下次跟你见面时心情愉快。";
+		this.m.UIText = "拥有每种类型的食物";
+		this.m.TooltipText = "获得每种类型的食物，举办一场盛宴。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_61.png[/img]花大力气奔走在粮商与农夫之间，你收集到了整日山珍海味的贵族也会注目的食物。眼见储藏室被堆得满满当当，你随即为%companyname%举办了一场盛宴，请兄弟们吃个够。你的兄弟们立即投入‘战斗’。礼仪里缺了的就在饭量里补上。%randombrother%利用这个机会分享他对肉类的知识%SPEECH_ON%这只野兽死的时候心里充满了喜悦，这就是为什么它如此嫩滑。%SPEECH_OFF%%strongest_brother%打了个雷鸣般的嗝，引来了他战友们的钦佩。%SPEECH_ON%这么说挺不好意思的，但我接下来只能喝水顺气，喝不下再多酒了。%SPEECH_OFF%在这之后，说话的声音少了许多，但油腻的胡子和饱满的肚子保证了他们会在下次跟你见面时心情愉快。";
 		this.m.SuccessButtonText = "这是你们应得的。";
 	}
 
@@ -134,7 +134,7 @@ this.have_all_provisions_ambition <- this.inherit("scripts/ambitions/ambition", 
 
 		if (!dried_fruits)
 		{
-			ret = ret + "\n- 水果干";
+			ret = ret + "\n- 果脯";
 		}
 
 		if (!ground_grains)
@@ -174,7 +174,7 @@ this.have_all_provisions_ambition <- this.inherit("scripts/ambitions/ambition", 
 
 		if (!cured_rations)
 		{
-			ret = ret + "\n- 腌制口粮";
+			ret = ret + "\n- 精制口粮";
 		}
 
 		if (this.Const.DLC.Desert)
@@ -335,7 +335,7 @@ this.have_all_provisions_ambition <- this.inherit("scripts/ambitions/ambition", 
 
 		foreach( bro in brothers )
 		{
-			bro.improveMood(1.0, "与战团共度盛宴");
+			bro.improveMood(1.0, "与战团共享盛宴");
 		}
 	}
 
