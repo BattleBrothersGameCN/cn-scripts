@@ -20,7 +20,7 @@ this.no_ambition <- this.inherit("scripts/ambitions/ambition", {
 			{
 				id = 2,
 				type = "text",
-				text = "现在不选择野心。 三天后你会被要求再次选择。"
+				text = "暂不选择野心。三天后，你会再次被要求选择。"
 			}
 		];
 		return ret;

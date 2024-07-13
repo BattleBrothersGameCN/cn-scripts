@@ -5,10 +5,10 @@ this.make_nobles_aware_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.make_nobles_aware";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "我们需要吸引其中一个贵族家族的眼球，以获得更有利可图的工作。 \n他们在玩自己的危险游戏，但只要报酬丰厚又有什么关系呢？";
-		this.m.RewardTooltip = "你将解锁由贵族签发的报酬更好的全新合同。";
-		this.m.UIText = "名望达到“行家里手”";
-		this.m.TooltipText = "以“行家里手”（1050名望）闻名以吸引贵族家族的注意。你可以通过完成合同和赢得战斗来提高自己的名望。";
+		this.m.ButtonText = "我们要获得某个贵族家族的青睐，以期得到回报更丰厚的工\n作。他们老是惹火上身，但只要给得够多，那又有什么关系呢？";
+		this.m.RewardTooltip = "解锁贵族签发的新类型合同，这些合同的报酬更高";
+		this.m.UIText = "达到“行家里手”名望";
+		this.m.TooltipText = "以“行家里手”（1050名望）闻名，吸引贵族家族的注意。你可以通过完成合同和赢得战斗来提高自己的名望。";
 		this.m.SuccessText = "[img]gfx/ui/events/event_31.png[/img]想要让人们对 %companyname% 这个名字产生兴趣，从而增加你在贵族中的前景，你推动你的人去做伟大的事，表现出杰出的勇敢，还有大量的流血事件。 在几份合同和几场小冲突之后，你付出了足够的努力和时间，让一些领主注意到了战团的能力。\n\n这些都是出身名门世家的人，他们通过一个死去很久的祖先征服一群手无寸铁的农民来统治这片土地。 正如 %highestexperience_brother% 所说，现在这些娇生惯养、近亲繁殖的纨绔子弟对你印象深刻，足以让战团在他们的争斗与你集为一体了。 如果你洗洗脸，礼貌地提出要求，他们就会不时地给你一份有利可图的合同。 你可以祝贺自己！";
 		this.m.SuccessButtonText = "我们要从贵族的口袋里掏钱了！";
 	}
@@ -54,7 +54,7 @@ this.make_nobles_aware_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.m.SuccessList.push({
 			id = 10,
 			icon = "ui/icons/special.png",
-			text = "贵族现在会给你合同"
+			text = "贵族开始向你派发合同了"
 		});
 
 		if (!this.World.Assets.getOrigin().isFixedLook())

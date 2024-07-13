@@ -5,12 +5,12 @@ this.named_item_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.named_item";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "一家受人尊敬的战团会因其装备而得到认可。 我们应该出发去\n获取一件著名的武器、盾牌、盔甲或头盔，以提高我们的名望。";
-		this.m.RewardTooltip = "为你的胜利获得额外的150名望。";
-		this.m.UIText = "拥有至少 1 件著名的装备";
-		this.m.TooltipText = "拥有至少 1 件著名的装备－武器、盾牌、盔甲或头盔。在酒馆里打听谣言，了解在哪里可以找到著名的物品，在大城市和城堡的专门商店购买它们，或者亲自去探索掠夺废墟和营地。距离文明越远，发现稀有物品的几率越高。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_28.png[/img]寻找一件被认为是战士护身符的稀有物品绝非易事，但 %nameditem% 真的很了不起。 获得它后，人们都相当自豪。 在火堆周围，兄弟们中的一些人甚至在杯中变得伤感，泪眼婆娑，像最喜欢的猎犬一样挠着火堆。%SPEECH_ON%这不是很美吗？%SPEECH_OFF%%randombrother% 一边在篝火的火光中欣赏着，一边问，很快就被另一个人打断了。%SPEECH_ON%把它转过来，让我好好看看！%SPEECH_OFF%在接下来的日子里，你的人拿着 %nameditem% 到处炫耀就像可怖野兽的战利品一样。 通常在酒馆或节日里，以及靠近其他蜂蜜酒和啤酒来源的地方，兄弟们习惯于在你去的任何地方炫耀他们的战利品。";
-		this.m.SuccessButtonText = "这对我们很有帮助。";
+		this.m.ButtonText = "受人尊敬的战团会因其装备而得到认可。我们应该去获\n取一件著名武器、盾牌、盔甲或头盔，提高我们的名望。";
+		this.m.RewardTooltip = "成功时额外获得150名望。";
+		this.m.UIText = "至少拥有 1 件著名装备";
+		this.m.TooltipText = "至少拥有 1 件著名装备－武器、盾牌、盔甲或头盔。在酒馆里打探谣言，搜罗著名物品的消息，在大城市和城堡的专门商店购买它们，或者是自己探索，攻陷废墟和营地。距离文明越远，发现稀有物品的几率越高。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_28.png[/img]寻找一件被认为是战士护身符的稀有物品绝非易事，但%nameditem%的确首屈一指。你的人因为得到了它而相当自豪。在篝火旁，一些兄弟甚至喝着喝着伤感起来，流起了眼泪，把它像心爱的猎犬一样捧在手心里。%SPEECH_ON%这难道不美吗？%SPEECH_OFF%%randombrother%一边在篝火的火光中欣赏着，一边问道。很快被另一个人打断。%SPEECH_ON%转过来！转过来！让我好好看看！%SPEECH_OFF%在接下来的日子里，你的人带着%nameditem%，把它像什么恐怖巨兽的头颅一样到处炫耀。只要是在酒馆里或是节日期间，不管是蜜酒还是啤酒，只要有可能讨到口酒喝，兄弟们都会遵循这种炫耀战利品的习惯。";
+		this.m.SuccessButtonText = "它将为我所用。";
 	}
 
 	function onUpdateScore()
@@ -203,7 +203,7 @@ this.named_item_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.m.SuccessList.push({
 			id = 10,
 			icon = "ui/icons/special.png",
-			text = "你因拥有一件著名的物品而获得额外的名望"
+			text = "因拥有一件著名物品获得了额外的名望"
 		});
 	}
 
