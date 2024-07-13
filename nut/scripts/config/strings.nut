@@ -1295,7 +1295,7 @@ gt.Const.Strings.PerkName <- {
 	Weaponmaster = "武器大师",
 	FastAdaption = "快速适应",
 	SunderingStrikes = "崩裂打击",
-	BattleFlow = "战斗流程",
+	BattleFlow = "行云流水",
 	HeadHunter = "猎头者",
 	RallyTheTroops = "集结部队",
 	Fearsome = "恐惧",
