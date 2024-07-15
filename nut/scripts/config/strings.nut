@@ -1139,7 +1139,7 @@ gt.Const.Strings.TerrainRegionNames <- [
 		"北地之刺",
 		"北围",
 		"大河原",
-		"凄贫埆"
+		"凄荒"
 	],
 	[
 		"木棘野",

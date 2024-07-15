@@ -5,10 +5,10 @@ this.ranged_mastery_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.ranged_mastery";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "咱们战团缺乏老练的弓箭手，限制了咱们的策略选择。\n我们得训练三名弓箭或弩箭大师从远处给予致命威胁！";
+		this.m.ButtonText = "战团缺乏老练射手，限制了咱们的战术选择。\n我们得训练三名弓弩大师，从远处给予致命威胁！";
 		this.m.UIText = "有1人点出弓精通或弩精通特技";
 		this.m.TooltipText = "有3人点出弓精通或弩精通特技。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_10.png[/img]每有机会，你都会鼓励你指挥下的人进行几次群射。每个人都参与其中，即使是那些愚蠢的傻瓜，如果你允许的话，他们也会穿着盔甲睡觉。任何目标都足够了：一棵小树的树干，一只在清晨吃草的母鹿，或者一个逃命的地精侦察兵。%SPEECH_ON%是的，我们是全世界干草捆的公敌！%SPEECH_OFF%%randombrother%在练习中指着一个常见的目标说道。当他的一个战友的箭从他的头附近呼啸而过时，他躲开了，并咒骂着射手。\n\n经过大量的练习，这些箭越来越接近靶心，由于战团部署了训练有素的弓箭手，你的前排呼吸更轻松，存活时间也更长，至少在一定程度上更长。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_10.png[/img]一有机会，你就会让你的人射上几箭。每个人都要参与，哪怕是那些笨手笨脚，穿着盔甲都能睡着的家伙也不例外。什么东西都能当成标靶来用：一段小树的树干，一头赶早吃草的母鹿，或是一个逃命的地精侦察兵。%SPEECH_ON%没错，我们就是全世界干草捆的公敌！%SPEECH_OFF%%randombrother%说道，他说的是你们常用练习目标中的一种。他忽然闪了下头，原来是战友的箭从他头边上呼啸而过，他继而骂骂咧咧起来。\n\n经过大量练习，箭支的落点离靶心越来越近。战团里有了训练有素的弓箭手，前排也能松一口气，至少能活得久一点。";
 		this.m.SuccessButtonText = "这对我们很有帮助。";
 	}
 
