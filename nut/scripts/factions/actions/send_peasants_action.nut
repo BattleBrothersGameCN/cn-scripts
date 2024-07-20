@@ -88,13 +88,13 @@ this.send_peasants_action <- this.inherit("scripts/factions/faction_action", {
 		{
 			party = _faction.spawnEntity(this.m.Start.getTile(), "市民", false, this.Const.World.Spawn.PeasantsSouthern, this.Math.rand(30, 60));
 			party.getSprite("body").setBrush("figure_civilian_06");
-			party.setDescription("农夫、工匠、朝圣者或其他在定居点之间奔波的大城市市民。");
+			party.setDescription("农夫、工匠、朝圣者等在定居点间奔波的城邦市民。");
 		}
 		else
 		{
 			party = _faction.spawnEntity(this.m.Start.getTile(), "乡下人", false, this.Const.World.Spawn.Peasants, this.Math.rand(30, 60));
 			party.getSprite("body").setBrush("figure_civilian_0" + this.Math.rand(1, 5));
-			party.setDescription("农夫、工匠、朝圣者或其他在定居点之间奔波的乡下人。");
+			party.setDescription("农夫、工匠、朝圣者等在定居点间奔波的乡下人。");
 		}
 
 		party.setFootprintType(this.Const.World.FootprintsType.Peasants);

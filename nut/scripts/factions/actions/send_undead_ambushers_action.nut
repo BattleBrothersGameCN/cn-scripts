@@ -86,7 +86,7 @@ this.send_undead_ambushers_action <- this.inherit("scripts/factions/faction_acti
 		local mult = this.World.FactionManager.isUndeadScourge() ? 1.1 : 1.0;
 		local party = _faction.spawnEntity(settlement.getTile(), "亡灵", false, this.Const.World.Spawn.UndeadScourge, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");
+		party.setDescription("一大群行尸，向活人索取曾属于他们的东西。");
 		party.setFootprintType(this.Const.World.FootprintsType.Undead);
 		party.setSlowerAtNight(false);
 		party.setUsingGlobalVision(false);

@@ -82,7 +82,7 @@ this.send_bandit_roamers_action <- this.inherit("scripts/factions/faction_action
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "强盗猎人", false, this.Const.World.Spawn.BanditRoamers, this.Math.min(settlement.getResources(), this.Math.rand(60, 110)));
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一伙为了食物外出打猎的强壮强盗。");
+		party.setDescription("一伙外出觅食的粗野强盗。");
 		party.setFootprintType(this.Const.World.FootprintsType.Brigands);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().Money = this.Math.rand(0, 100);

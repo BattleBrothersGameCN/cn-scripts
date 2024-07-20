@@ -77,7 +77,7 @@ this.move_undead_action <- this.inherit("scripts/factions/faction_action", {
 		{
 			local party = _faction.spawnEntity(this.m.Start.getTile(), "亡灵", false, this.Const.World.Spawn.UndeadScourge, this.Math.rand(70, 130) * this.getReputationToDifficultyLightMult());
 			party.getSprite("banner").setBrush(this.m.Start.getBanner());
-			party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");
+			party.setDescription("一大群行尸，向活人索取曾属于他们的东西。");
 			party.setFootprintType(this.Const.World.FootprintsType.Undead);
 			party.setSlowerAtNight(false);
 			party.setUsingGlobalVision(false);

@@ -579,7 +579,7 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 		}
 		else
 		{
-			this.logInfo("已经放置了所有唯一位置。");
+			this.logInfo("所有特殊地点放置完毕。");
 			this.m.CooldownUntil = 1000000000.0;
 			this.m.IsRunOnNewCampaign = false;
 		}

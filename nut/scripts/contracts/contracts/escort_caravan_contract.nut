@@ -1117,7 +1117,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 		party.getSprite("banner").Visible = false;
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
-		party.setDescription("一支来自" + this.m.Home.getName() + "的贸易商队，在定居点之间运输各种各样的货物。");
+		party.setDescription("一支来自" + this.m.Home.getName() + "的贸易商队，在定居点间运送各种货物。");
 		party.setMovementSpeed(this.Const.World.MovementSettings.Speed * 0.6);
 		party.setLeaveFootprints(false);
 
@@ -1185,7 +1185,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			if (bandits_dist <= goblins_dist && bandits_dist <= orcs_dist && bandits_dist <= barbarians_dist && bandits_dist <= nomads_dist)
 			{
 				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "强盗", false, this.Const.World.Spawn.BanditRaiders, this.Math.rand(80, 100) * this.getDifficultyMult() * this.getScaledDifficultyMult());
-				party.setDescription("一支粗暴而强悍的强盗队伍在捕食弱者。");
+				party.setDescription("一伙粗野强盗，专挑弱者下手。");
 				party.setFootprintType(this.Const.World.FootprintsType.Brigands);
 				party.getLoot().Money = this.Math.rand(50, 100);
 				party.getLoot().ArmorParts = this.Math.rand(0, 10);
@@ -1315,7 +1315,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			else
 			{
 				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, this.Math.rand(80, 100) * this.getDifficultyMult() * this.getScaledDifficultyMult());
-				party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
+				party.setDescription("一群凶狠的兽人，绿皮肤，远高过所有人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Orcs);
 				party.getLoot().ArmorParts = this.Math.rand(0, 25);
 				party.getLoot().Ammo = this.Math.rand(0, 10);

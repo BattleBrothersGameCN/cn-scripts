@@ -695,7 +695,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.UnitsSpawned.push(party.getID());
 		party.getLoot().ArmorParts = this.Math.rand(0, 15);
 		party.getSprite("banner").setBrush(undeadBase.getBanner());
-		party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");
+		party.setDescription("一大群行尸，向活人索取曾属于他们的东西。");
 		party.setFootprintType(this.Const.World.FootprintsType.Undead);
 		party.setSlowerAtNight(false);
 		party.setUsingGlobalVision(false);
@@ -726,7 +726,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.UnitsSpawned.push(party.getID());
 		party.getLoot().ArmorParts = this.Math.rand(0, 15);
 		party.getSprite("banner").setBrush(undeadBase.getBanner());
-		party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");
+		party.setDescription("一大群行尸，向活人索取曾属于他们的东西。");
 		party.setFootprintType(this.Const.World.FootprintsType.Undead);
 		party.setSlowerAtNight(false);
 		party.setUsingGlobalVision(false);

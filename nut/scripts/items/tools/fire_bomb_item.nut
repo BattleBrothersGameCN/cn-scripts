@@ -4,7 +4,7 @@ this.fire_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.fire_bomb";
-		this.m.Name = "火焰罐";
+		this.m.Name = "火油罐";
 		this.m.Description = "一种装满高度易燃液体的罐子，当投掷时会引燃一片区域。";
 		this.m.IconLarge = "tools/fire_pot_01.png";
 		this.m.Icon = "tools/fire_pot_01_70x70.png";

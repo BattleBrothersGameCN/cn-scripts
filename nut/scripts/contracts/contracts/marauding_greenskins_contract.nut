@@ -151,7 +151,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 				if (this.Flags.get("IsOrcs"))
 				{
 					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
-					party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
+					party.setDescription("一群凶狠的兽人，绿皮肤，远高过所有人。");
 					party.getLoot().ArmorParts = this.Math.rand(0, 25);
 					party.getLoot().Ammo = this.Math.rand(0, 10);
 					party.addToInventory("supplies/strange_meat_item");

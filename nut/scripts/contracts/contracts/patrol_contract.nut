@@ -1010,7 +1010,7 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "强盗猎人", false, this.Const.World.Spawn.BanditRoamers, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult());
 				}
 
-				party.setDescription("一支粗暴而强悍的强盗队伍在捕食弱者。");
+				party.setDescription("一伙粗野强盗，专挑弱者下手。");
 				party.setFootprintType(this.Const.World.FootprintsType.Brigands);
 				party.getLoot().Money = this.Math.rand(50, 100);
 				party.getLoot().ArmorParts = this.Math.rand(0, 10);
@@ -1162,7 +1162,7 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "兽人侦察兵", false, this.Const.World.Spawn.OrcScouts, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult());
 				}
 
-				party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
+				party.setDescription("一群凶狠的兽人，绿皮肤，远高过所有人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Orcs);
 				party.getLoot().ArmorParts = this.Math.rand(0, 25);
 				party.getLoot().Ammo = this.Math.rand(0, 10);

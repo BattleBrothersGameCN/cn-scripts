@@ -3,7 +3,7 @@ this.throw_fire_bomb_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.throw_fire_bomb";
-		this.m.Name = "投掷火油壶";
+		this.m.Name = "投掷火油罐";
 		this.m.Description = "点燃一个装满高度易燃液体的罐子朝目标扔去，它会粉碎并引燃整个区域。任何在燃烧区域内结束回合的角色都会着火并受到伤害，不分敌我。";
 		this.m.Icon = "skills/active_209.png";
 		this.m.IconDisabled = "skills/active_209_sw.png";

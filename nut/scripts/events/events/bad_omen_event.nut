@@ -33,7 +33,7 @@ this.bad_omen_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = _event.m.Superstitious.getName() + "是害怕的"
+					text = _event.m.Superstitious.getName() + "害怕了"
 				});
 
 				if (_event.m.Superstitious.getMoodState() < this.Const.MoodState.Neutral)

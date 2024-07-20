@@ -45,7 +45,7 @@ this.additional_padding_upgrade <- this.inherit("scripts/items/armor_upgrades/ar
 			id = 15,
 			type = "text",
 			icon = "ui/icons/direct_damage.png",
-			text = "只保留 [color=" + this.Const.UI.Color.NegativeValue + "]66%[/color] 伤害(无视护甲)"
+			text = "只受 [color=" + this.Const.UI.Color.NegativeValue + "]66%[/color] 穿甲伤害"
 		});
 	}
 

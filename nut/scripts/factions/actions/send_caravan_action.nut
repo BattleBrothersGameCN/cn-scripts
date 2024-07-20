@@ -83,7 +83,7 @@ this.send_caravan_action <- this.inherit("scripts/factions/faction_action", {
 		party.getSprite("banner").Visible = false;
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
-		party.setDescription("一支来自" + this.m.Start.getName() + "的贸易商队，在定居点之间运输各种各样的货物。");
+		party.setDescription("一支来自" + this.m.Start.getName() + "的贸易商队，在定居点间运送各种货物。");
 		party.setFootprintType(this.Const.World.FootprintsType.Caravan);
 		party.getFlags().set("IsCaravan", true);
 		party.getFlags().set("IsRandomlySpawned", true);

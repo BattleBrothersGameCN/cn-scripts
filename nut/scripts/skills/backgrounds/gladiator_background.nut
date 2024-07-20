@@ -7,7 +7,7 @@ this.gladiator_background <- this.inherit("scripts/skills/backgrounds/character_
 		this.m.Name = "角斗士";
 		this.m.Icon = "ui/backgrounds/background_61.png";
 		this.m.BackgroundDescription = "角斗士身价不菲，但竞技场的生活将他们塑造成了技艺精湛的斗士。";
-		this.m.GoodEnding = "你以为角斗士%name%会像你想象的那样重返竞技场，然而，来自南方的消息说，负债者和角斗士们一同发动了起义。与以往的起义不同，这次维齐尔被吊上屋顶、奴隶贩子不经审判当街处决。这场大规模动荡让这位曾经的斗士成了当地合法的权力代理人。";
+		this.m.GoodEnding = "你以为角斗士%name%会像你想象的那样重返竞技场，然而，来自南方的消息说，负债者和角斗士们一同发动了起义。与以往的起义不同，这次维齐尔被吊上屋顶、奴隶贩子则不经审判当街处决。这场大规模动荡让这位曾经的斗士成了当地权力的合法代理人。";
 		this.m.BadEnding = "人群的呼声对角斗士%name%来说太过嘈杂。在你从走向失败的%companyname%草草退休后，这位斗士回到了南方王国的竞技场。不幸的是，佣兵生活的疲损使他慢了一步，被一个半饿的奴隶用草叉和网杀死。";
 		this.m.HiringCost = 200;
 		this.m.DailyCost = 35;

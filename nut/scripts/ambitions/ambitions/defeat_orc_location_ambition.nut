@@ -8,7 +8,7 @@ this.defeat_orc_location_ambition <- this.inherit("scripts/ambitions/ambition", 
 		this.m.ID = "ambition.defeat_orc_location";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "在战斗中击败兽人，烧毁它们的营地\n能让人们认识到战团的能力。就这么干吧。";
-		this.m.RewardTooltip = "你将获得一件特殊的配饰，它能使佩戴者免疫昏迷。";
+		this.m.RewardTooltip = "你将获得一件独特配饰，它能使佩戴者免疫昏迷。";
 		this.m.UIText = "摧毁兽人营地";
 		this.m.TooltipText = "摧毁四个兽人营地来证明战团的实力，通过合同或自己寻找均可。你还需要在仓库中留出存放一件新物品的空间。";
 		this.m.SuccessText = "[img]gfx/ui/events/event_81.png[/img]%recently_destroyed%仍在你身后阴烧，一群人从他们藏身的灌木丛附近钻了出来，他们刚刚从远处观看了战斗。一个老妇人走上前来。%SPEECH_ON%那些绿皮肤的恶魔把我们从%nearesttown%郊外的农场赶出来，但多亏了你们这些壮实的小伙子，我们能再次繁荣起来。这是给你们的。%SPEECH_OFF%她递过来一袋苹果。虽然这算不上什么奖励，但随着兽人毁灭的消息传开，这种情绪会一次又一次地重复。%highestexperience_brother%吠笑着咬着其中一个多汁的苹果%SPEECH_ON%兽人这种东西，大的太慢了，小的太笨了。谋略每次都能战胜暴力。那些大个的绿皮畜生利用恐惧来行事。只要有勇气，他们就能像其他人一样被打败！%SPEECH_OFF%农民们对%highestexperience_brother%的演讲、技巧和力量大为赞叹，拍着他的后背，一时间鼓掌声称赞声不绝于耳。虽然这些话都是真话，但并不适用于这些观众。你把手放在%highestexperience_brother%的肩膀上，好像在说要低调一些，以免农民下次看到绿皮时逞英雄。";

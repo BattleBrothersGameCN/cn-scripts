@@ -481,7 +481,7 @@ this.hunting_hexen_contract <- this.inherit("scripts/contracts/contract", {
 				this.List.push({
 					id = 10,
 					icon = effect.getIcon(),
-					text = this.Contract.m.Dude.getName() + "是害怕的"
+					text = this.Contract.m.Dude.getName() + "害怕了"
 				});
 				this.Contract.m.Dude.worsenMood(1.5, "被女巫诅咒了");
 

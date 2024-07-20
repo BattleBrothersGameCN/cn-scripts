@@ -1243,7 +1243,7 @@ this.decisive_battle_contract <- this.inherit("scripts/contracts/contract", {
 				party.setVisibleInFogOfWar(true);
 				party.setImportant(true);
 				party.setDiscovered(true);
-				party.setDescription("一支在定居点之间运送给养、补给和装备的有武装护卫的商队。");
+				party.setDescription("一支有武装护卫的商队，在定居点间运送给养、物资和装备。");
 				party.setFootprintType(this.Const.World.FootprintsType.Caravan);
 				party.getFlags().set("IsCaravan", true);
 				party.setAttackableByAI(false);

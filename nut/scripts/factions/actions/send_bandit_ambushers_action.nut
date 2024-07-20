@@ -93,7 +93,7 @@ this.send_bandit_ambushers_action <- this.inherit("scripts/factions/faction_acti
 		local mult = this.World.FactionManager.isCivilWar() ? 1.1 : 1.0;
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "强盗", false, this.Const.World.Spawn.BanditRaiders, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一支粗暴而强悍的强盗队伍在捕食弱者。");
+		party.setDescription("一伙粗野强盗，专挑弱者下手。");
 		party.setFootprintType(this.Const.World.FootprintsType.Brigands);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().Money = this.Math.rand(50, 200);

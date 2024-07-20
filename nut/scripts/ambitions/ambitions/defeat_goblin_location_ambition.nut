@@ -8,7 +8,7 @@ this.defeat_goblin_location_ambition <- this.inherit("scripts/ambitions/ambition
 		this.m.ID = "ambition.defeat_goblin_location";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "只有最勇敢的人才敢对抗大规模的地精。\n我们要把他们的一些臭气熏天的营地夷为平地，让消息传出去！";
-		this.m.RewardTooltip = "你将获得一件独特的配饰，它能使佩戴者免疫定身。";
+		this.m.RewardTooltip = "你将获得一件独特配饰，它能使佩戴者免疫定身。";
 		this.m.UIText = "摧毁地精营地";
 		this.m.TooltipText = "摧毁四个地精营地来证明战团的实力，通过合同或自己寻找均可。你还需要在仓库中留出存放一件新物品的空间。";
 		this.m.SuccessText = "[img]gfx/ui/events/event_83.png[/img]你的人零零散散地分布在战场上，一场恶战之后，人们气踹嘘嘘。你打扫战场的时候，%randombrother%和%randombrother2%也正在地面上搜寻贵重物品。%SPEECH_ON%我们前进，他们就后退。我们后退，他们就骚扰我们。用弓箭齐射，他们就躲藏起来。架起盾墙，它们就用浸毒的刀锋刺穿。发起冲锋，他们就四散开来。他们朝你扔的那些该死东西肯定会出现在我今晚的梦里。%SPEECH_OFF%%randombrother2%用他的武器戳穿一个死去的地精，确信他已经死了，跪下来仔细查看他的东西。%SPEECH_ON%但是战斗越激烈，胜利就更让人舒坦。%SPEECH_OFF%他站起来，撞上了%randombrother%的目光。%SPEECH_ON%战斗越激烈，我感觉越带劲。尽管来吧。%SPEECH_OFF%他们逐渐和其他人会合，在这里或那里驻足，寻找能在战团的下一站卖上一两个克朗的物件。";

@@ -86,7 +86,7 @@ this.send_orc_marauders_action <- this.inherit("scripts/factions/faction_action"
 		local mult = this.World.FactionManager.isGreenskinInvasion() ? 1.1 : 1.0;
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
+		party.setDescription("一群凶狠的兽人，绿皮肤，远高过所有人。");
 		party.setFootprintType(this.Const.World.FootprintsType.Orcs);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().ArmorParts = this.Math.rand(0, 15);

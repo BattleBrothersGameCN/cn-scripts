@@ -73,7 +73,7 @@ this.send_supplies_action <- this.inherit("scripts/factions/faction_action", {
 		local party = _faction.spawnEntity(this.m.Start.getTile(), "补给商队", false, this.Const.World.Spawn.NobleCaravan, r * 100);
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
-		party.setDescription("一支在定居点之间运送给养、补给和装备的有武装护卫的商队。");
+		party.setDescription("一支有武装护卫的商队，在定居点间运送给养、物资和装备。");
 		party.setFootprintType(this.Const.World.FootprintsType.Caravan);
 		party.getFlags().set("IsCaravan", true);
 		party.getFlags().set("IsRandomlySpawned", true);
