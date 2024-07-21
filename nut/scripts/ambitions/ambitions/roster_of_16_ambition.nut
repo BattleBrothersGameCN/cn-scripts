@@ -5,10 +5,10 @@ this.roster_of_16_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.roster_of_16";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "让我们把战团人数提升到 16 人！ 它将使我们成为\n一支强大的力量，使我们能够从事更有利可图的工作。";
+		this.m.ButtonText = "我们要把战团提升到 16 个人！这能\n壮大我们的力量，接到更赚钱的工作。";
 		this.m.UIText = "花名册人数至少达到16人";
-		this.m.TooltipText = "雇佣足够多的人来拥有至少16人的花名册。访问各地的定居点，寻找适合你需要的新兵。充足的人员能使你接受更危险更高报酬的合同。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_80.png[/img]终于凑齐了足够的金币和装备，你设法组建了一支由十六个健壮男子组成的队伍。当下次你走在%currenttown%的主街上，这些人开始高唱起了一首军歌。一些城镇居民低声抱怨着肮脏的雇佣军占领了这个城镇，但也有些人与你并肩行走，高声喊着这些歌词。%SPEECH_ON%站的高高的，兄弟们。人们现在可以看到这是一支真正的雇佣军了，而不是一群乌合之众。%SPEECH_OFF%%highestexperience_brother%宣布道。%SPEECH_ON%我们以力量为交易，现在我们的人数增加了，我们的价格也会提高。%SPEECH_OFF% 看来他是对的。你注意到一个特别肥胖的商人正在评估这支团队，好像他已经有了一个任务的想法。%companyname%现在是一个不容小觑的力量。当这些人被安置下来，庆祝喝的高兴时，也许你应该再去城里走走，看看是否还有更有利可图的合同可以得到。";
+		this.m.TooltipText = "雇佣足够的人，让名册上的人数达到16名。访问各地的定居点，寻找符合要求的新兵。充足的人员能让你接到更危险、报酬更高的合同。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_80.png[/img]你终于攒够了钱和装备，武装了十六名健壮的战士，拉起了一支完整的队伍。当你再次走在%currenttown%的主干道上的时候，你的部下们高声唱起了一首行军歌。一小撮镇民低声抱怨说，肮脏的佣兵占据了他们的镇子，但其他人跟着你们走了起来，和你们一起放声歌唱。%SPEECH_ON%挺胸抬头兄弟们，给大伙看看，我们是一支货真价实的佣兵团，而不是什么乌合之众。%SPEECH_OFF%%highestexperience_brother%宣布道。%SPEECH_ON%我们凭实力赚钱，现在人数增加了，价钱也可以有所提高。%SPEECH_OFF%看来他说的没错。有位相当胖的商人正打量着你的战团，似乎已经想好要给你的任务了。%companyname%已经成为了一股不能忽视的力量。或许等战士们喝起了庆功酒，你应该再到镇子里逛逛，看看有没有更好赚的合同。";
 		this.m.SuccessButtonText = "我们做到了。";
 	}
 

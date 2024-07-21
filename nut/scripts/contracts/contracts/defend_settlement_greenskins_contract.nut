@@ -547,7 +547,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 						local home = this.Contract.m.Home;
 						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.7);
 						party.getSprite("banner").setBrush(home.getBanner());
-						party.setDescription("勇敢的人用生命保卫家园。农夫、工匠、技工，但没有一个真正的士兵。");
+						party.setDescription("用生命保卫家园的勇士。农夫、工匠、手艺人，唯独没有真正的士兵。");
 						party.setFootprintType(this.Const.World.FootprintsType.Militia);
 						this.Contract.m.Militia = this.WeakTableRef(party);
 						local c = party.getController();
@@ -568,7 +568,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 						local home = this.Contract.m.Home;
 						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.7);
 						party.getSprite("banner").setBrush(home.getBanner());
-						party.setDescription("勇敢的人用生命保卫家园。农夫、工匠、技工，但没有一个真正的士兵。");
+						party.setDescription("用生命保卫家园的勇士。农夫、工匠、手艺人，唯独没有真正的士兵。");
 						party.setFootprintType(this.Const.World.FootprintsType.Militia);
 						this.Contract.m.Militia = this.WeakTableRef(party);
 						local c = party.getController();

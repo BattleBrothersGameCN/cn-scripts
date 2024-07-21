@@ -1482,7 +1482,7 @@ this.contract <- {
 		else if (_factionType == this.Const.FactionType.Orcs)
 		{
 			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(enemyBase.getTile(), "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, _resources);
-			party.setDescription("一群凶狠的兽人，绿皮肤，高过所有人。");
+			party.setDescription("一群凶狠的兽人，绿皮肤，远高过所有人。");
 			party.setFootprintType(this.Const.World.FootprintsType.Orcs);
 			party.getLoot().ArmorParts = this.Math.rand(0, 25);
 			party.getLoot().Ammo = this.Math.rand(0, 10);
@@ -1491,7 +1491,7 @@ this.contract <- {
 		else if (_factionType == this.Const.FactionType.Undead)
 		{
 			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).spawnEntity(enemyBase.getTile(), "亡灵", false, this.Const.World.Spawn.UndeadArmy, _resources);
-			party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");
+			party.setDescription("一大群行尸，向活人索取曾属于他们的东西。");
 			party.setFootprintType(this.Const.World.FootprintsType.Undead);
 			party.getLoot().ArmorParts = this.Math.rand(0, 10);
 			party.getLoot().Ammo = this.Math.rand(0, 5);

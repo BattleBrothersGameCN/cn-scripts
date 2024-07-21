@@ -124,7 +124,7 @@ this.defend_militia_action <- this.inherit("scripts/factions/faction_action", {
 
 			local party = _faction.spawnEntity(spawnpoints[i], this.m.Settlement.getName() + "民兵(Militia)", false, this.Const.World.Spawn.Militia, this.m.Settlement.getResources());
 			party.getSprite("banner").setBrush(this.m.Settlement.getBanner());
-			party.setDescription("勇敢的人用生命保卫家园。农夫、工匠、技工，但没有一个真正的士兵。");
+			party.setDescription("用生命保卫家园的勇士。农夫、工匠、手艺人，唯独没有真正的士兵。");
 			party.setFootprintType(this.Const.World.FootprintsType.Militia);
 			party.getFlags().set("IsRandomlySpawned", true);
 			local c = party.getController();

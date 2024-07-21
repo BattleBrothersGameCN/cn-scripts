@@ -504,7 +504,7 @@ this.barbarian_king_contract <- this.inherit("scripts/contracts/contract", {
 				local tile = this.Contract.getTileToSpawnLocation(playerTile, 9, 15);
 				local party = this.World.FactionManager.getFaction(nearest_undead.getFaction()).spawnEntity(tile, "不往生者", false, this.Const.World.Spawn.UndeadArmy, 260 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
 				party.getSprite("banner").setBrush(nearest_undead.getBanner());
-				party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");
+				party.setDescription("一大群行尸，向活人索取曾属于他们的东西。");
 				party.setSlowerAtNight(false);
 				party.setUsingGlobalVision(false);
 				party.setLooting(false);

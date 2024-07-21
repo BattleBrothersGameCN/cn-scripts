@@ -123,7 +123,7 @@ this.bad_curse_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = effect.getIcon(),
-						text = _event.m.Cursed.getName() + "是害怕的"
+						text = _event.m.Cursed.getName() + "害怕了"
 					}
 				];
 				_event.m.Cursed.worsenMood(2.0, "为你感到失望");

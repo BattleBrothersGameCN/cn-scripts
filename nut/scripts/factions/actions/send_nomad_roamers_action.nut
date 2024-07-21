@@ -75,7 +75,7 @@ this.send_nomad_roamers_action <- this.inherit("scripts/factions/faction_action"
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "游牧民", false, this.Const.World.Spawn.NomadRoamers, this.Math.min(settlement.getResources(), this.Math.rand(60, 110)));
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一个游牧民族正在侦查这个地区。");
+		party.setDescription("一群正在该地区侦察的游牧民。");
 		party.setFootprintType(this.Const.World.FootprintsType.Nomads);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().Money = this.Math.rand(0, 100);

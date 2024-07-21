@@ -34,7 +34,7 @@ this.oath_ambition <- this.inherit("scripts/ambitions/ambition", {
 		ret.push({
 			id = 4,
 			type = "header",
-			text = "誓言恩赐"
+			text = "誓言之赐"
 		});
 		ret.push({
 			id = 5,
@@ -81,7 +81,7 @@ this.oath_ambition <- this.inherit("scripts/ambitions/ambition", {
 	function getUIText()
 	{
 		local timeRemaining = this.m.OathDuration - this.Math.floor((this.Time.getVirtualTimeF() - this.m.StartTime) / this.World.getTime().SecondsPerDay);
-		return "当前立下 " + this.m.OathName + "为期尚余" + (timeRemaining > 1 ? "共" + timeRemaining + "天" : " 1天");
+		return "当前立下" + this.m.OathName + "为期尚余" + (timeRemaining > 1 ? "共" + timeRemaining + "天" : "1天");
 	}
 
 	function getRenownOnSuccess()

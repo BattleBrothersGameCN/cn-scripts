@@ -120,7 +120,7 @@ this.send_undead_army_action <- this.inherit("scripts/factions/faction_action", 
 		local nearestUndead = this.getNearestLocationTo(origin, this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).getSettlements());
 		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).spawnEntity(myTile, "亡灵", false, this.Const.World.Spawn.UndeadScourge, this.Math.rand(80, 120) * this.getScaledDifficultyMult());
 		party.getSprite("banner").setBrush(nearestUndead.getBanner());
-		party.setDescription("一大群行尸，向活着的人索取曾经属于他们的东西。");
+		party.setDescription("一大群行尸，向活人索取曾属于他们的东西。");
 		party.setFootprintType(this.Const.World.FootprintsType.Undead);
 		party.setSlowerAtNight(false);
 		party.setUsingGlobalVision(false);

@@ -2,7 +2,7 @@ this.ancient_statue_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "一座巨大的雕像在阳光下闪闪发光，耸立在周围的风景之上。";
+		return "一座巨大的雕像在阳光下闪闪发亮，俯瞰着周围的风光。";
 	}
 
 	function create()

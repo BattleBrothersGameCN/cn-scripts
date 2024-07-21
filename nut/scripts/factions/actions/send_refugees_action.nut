@@ -59,7 +59,7 @@ this.send_refugees_action <- this.inherit("scripts/factions/faction_action", {
 		local party = _faction.spawnEntity(this.m.Start.getTile(), "难民", false, this.Const.World.Spawn.Peasants, this.Math.rand(30, 60));
 		party.getSprite("banner").Visible = false;
 		party.getSprite("body").setBrush("figure_civilian_0" + this.Math.rand(1, 2));
-		party.setDescription("逃离战争恐怖的难民，被打倒、疲惫和绝望。");
+		party.setDescription("逃离战祸的难民，消沉、疲惫而绝望。");
 		party.setFootprintType(this.Const.World.FootprintsType.Refugees);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().Money = this.Math.rand(0, 50);

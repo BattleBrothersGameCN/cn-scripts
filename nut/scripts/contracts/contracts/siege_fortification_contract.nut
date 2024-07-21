@@ -1761,7 +1761,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 		local party = enemyFaction.spawnEntity(tile, "供应商队", false, this.Const.World.Spawn.NobleCaravan, this.Math.rand(100, 150));
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
-		party.setDescription("一支在定居点之间运送给养、补给和装备的有武装护卫的商队。");
+		party.setDescription("一支有武装护卫的商队，在定居点间运送给养、物资和装备。");
 		party.addToInventory("supplies/ground_grains_item");
 		party.addToInventory("supplies/ground_grains_item");
 		party.addToInventory("supplies/ground_grains_item");
