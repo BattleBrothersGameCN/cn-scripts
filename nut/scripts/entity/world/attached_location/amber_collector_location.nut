@@ -5,7 +5,7 @@ this.amber_collector_location <- this.inherit("scripts/entity/world/attached_loc
 		this.attached_location.create();
 		this.m.Name = "琥珀收集处";
 		this.m.ID = "attached_location.amber_collector";
-		this.m.Description = "住在这些棚屋里的收集者们会沿着海岸搜寻有价值的琥珀碎片。";
+		this.m.Description = "住在这些棚屋里的收集者们，会沿着海岸搜寻有价值的琥珀碎片。";
 		this.m.Sprite = "world_amber_collector_01";
 		this.m.SpriteDestroyed = "world_amber_collector_01_ruins";
 		this.m.IsConnected = false;

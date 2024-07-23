@@ -5,7 +5,7 @@ this.hunters_cabin_location <- this.inherit("scripts/entity/world/attached_locat
 		this.attached_location.create();
 		this.m.Name = "猎人小屋";
 		this.m.ID = "attached_location.hunters_cabin";
-		this.m.Description = "猎人在狩猎时会住在这些小茅屋里。剁碎的野味、鹿肉和兽皮被挂在小屋周围晒干。";
+		this.m.Description = "猎人狩猎时的临时居所。剁碎的野味、鹿肉和兽皮被挂在小屋周围晒干。";
 		this.m.Sprite = "world_hunter_01";
 		this.m.SpriteDestroyed = "world_hunter_01_ruins";
 	}

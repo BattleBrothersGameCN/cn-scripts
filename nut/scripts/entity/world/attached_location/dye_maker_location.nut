@@ -5,7 +5,7 @@ this.dye_maker_location <- this.inherit("scripts/entity/world/attached_location"
 		this.attached_location.create();
 		this.m.Name = "染料作坊";
 		this.m.ID = "attached_location.dye_maker";
-		this.m.Description = "这间染料作坊用各种原料制作出珍贵的染料。这些名贵商品的配方是保密的。";
+		this.m.Description = "这间染料作坊用各种原料制作出珍贵的染料。这些名贵商品的配方被严格保密。";
 		this.m.Sprite = "world_dye_maker_01";
 		this.m.SpriteDestroyed = "world_dye_maker_01_ruins";
 	}

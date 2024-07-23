@@ -7,7 +7,7 @@ this.militia_trainingcamp_location <- this.inherit("scripts/entity/world/attache
 		this.attached_location.create();
 		this.m.Name = "民兵兵营";
 		this.m.ID = "attached_location.militia_trainingcamp";
-		this.m.Description = "一个由民兵兵营组成的大院。这个营地将把普通农民变成有能力保卫家园和亲人的士兵。";
+		this.m.Description = "一座大型民兵兵营。普通贫民会在这座营地里受训，成为差强人意的士兵，保护家园和亲人。";
 		this.m.Sprite = "world_militia_trainingcamp_01";
 		this.m.SpriteDestroyed = "world_militia_trainingcamp_01_ruins";
 		this.m.IsMilitary = true;

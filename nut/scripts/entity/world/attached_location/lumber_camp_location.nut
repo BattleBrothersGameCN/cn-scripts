@@ -5,7 +5,7 @@ this.lumber_camp_location <- this.inherit("scripts/entity/world/attached_locatio
 		this.attached_location.create();
 		this.m.Name = "伐木营地";
 		this.m.ID = "attached_location.lumber_camp";
-		this.m.Description = "这个伐木营地是伐木工们在附近树林里寻找最珍贵、最耐用材料的基地。";
+		this.m.Description = "这座伐木营地是伐木工人探索附近树林，寻找珍贵耐用材料的基地。";
 		this.m.Sprite = "world_lumber_camp_01";
 		this.m.SpriteDestroyed = "world_lumber_camp_01_ruins";
 	}

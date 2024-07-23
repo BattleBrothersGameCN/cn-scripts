@@ -5,7 +5,7 @@ this.herbalists_grove_location <- this.inherit("scripts/entity/world/attached_lo
 		this.attached_location.create();
 		this.m.Name = "草药师的小树林";
 		this.m.ID = "attached_location.herbalists_grove";
-		this.m.Description = "在这片偏僻的小树林里，博学的草药师收集各种药用植物和根茎。";
+		this.m.Description = "这片偏僻的树林是独具慧眼的草药师采集各种药用植物和根茎的地方。";
 		this.m.Sprite = "world_herbalists_grove_01";
 		this.m.SpriteDestroyed = "world_herbalists_grove_01_ruins";
 		this.m.IsConnected = false;

@@ -7,7 +7,7 @@ this.blast_furnace_location <- this.inherit("scripts/entity/world/attached_locat
 		this.attached_location.create();
 		this.m.Name = "鼓风高炉";
 		this.m.ID = "attached_location.blast_furnace";
-		this.m.Description = "鼓风高炉能为制造最耐用的合金提供必要的高温。手巧的盔甲匠会在最近的定居点使用这些合金制造坚固的盔甲。";
+		this.m.Description = "鼓风高炉所能提供的炽热高温，是制造最结实合金的必要条件。手巧的盔甲匠会在最近的定居点里，使用这些合金制造坚固的盔甲。";
 		this.m.Sprite = "world_blast_furnace_01";
 		this.m.SpriteDestroyed = "world_blast_furnace_01_ruins";
 	}
