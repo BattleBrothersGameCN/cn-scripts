@@ -5,7 +5,7 @@ this.gem_mine_location <- this.inherit("scripts/entity/world/attached_location",
 		this.attached_location.create();
 		this.m.Name = "宝石矿";
 		this.m.ID = "attached_location.gem_mine";
-		this.m.Description = "在这个矿中发现的闪亮宝石通常由戒备森严的商队直接运到下一个定居点进行进一步精制。";
+		this.m.Description = "这座矿井中采掘出的闪亮宝石往往直接由戒备森严的商队运到下个定居点进一步精制。";
 		this.m.Sprite = "world_gem_mine_01";
 		this.m.SpriteDestroyed = "world_gem_mine_01_ruins";
 	}

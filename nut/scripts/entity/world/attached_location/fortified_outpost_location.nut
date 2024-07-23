@@ -7,7 +7,7 @@ this.fortified_outpost_location <- this.inherit("scripts/entity/world/attached_l
 		this.attached_location.create();
 		this.m.Name = "兵营";
 		this.m.ID = "attached_location.fortified_outpost";
-		this.m.Description = "容纳大量职业士兵的大型兵营。";
+		this.m.Description = "居住着大量职业士兵的大型兵营。";
 		this.m.Sprite = "world_fortified_outpost_01";
 		this.m.SpriteDestroyed = "world_fortified_outpost_01_ruins";
 		this.m.IsMilitary = true;

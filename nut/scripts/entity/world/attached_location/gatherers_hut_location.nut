@@ -3,9 +3,9 @@ this.gatherers_hut_location <- this.inherit("scripts/entity/world/attached_locat
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "采集者的小屋";
+		this.m.Name = "采集者小屋";
 		this.m.ID = "attached_location.gatherers_hut";
-		this.m.Description = "即使在植被稀少的环境中，经验丰富的采集者也能找到浆果、树根和其他可食用的东西。虽然不是最美味的，但也能让人吃饱。";
+		this.m.Description = "即使在植被稀少的环境中，经验丰富的采集者也能找到浆果、树根等可食用的东西。不算多美味，但却可以饱腹。";
 		this.m.Sprite = "world_gatherers_hut_01";
 		this.m.SpriteDestroyed = "world_gatherers_hut_01_ruins";
 	}

@@ -3,9 +3,9 @@ this.leather_tanner_location <- this.inherit("scripts/entity/world/attached_loca
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "制革厂";
+		this.m.Name = "制革工坊";
 		this.m.ID = "attached_location.leather_tanner";
-		this.m.Description = "这个制革车间用皮革生产耐用的皮革制品。这种皮革制品将被投放市场，增加附近定居点轻型护甲的供应。";
+		this.m.Description = "这间制革工坊把生皮加工成耐用的皮革制品。这会增加最近定居点的轻型护甲供应。";
 		this.m.Sprite = "world_leather_tanner_01";
 		this.m.SpriteDestroyed = "world_leather_tanner_01_ruins";
 	}

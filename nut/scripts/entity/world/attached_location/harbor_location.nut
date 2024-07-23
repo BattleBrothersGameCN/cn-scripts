@@ -5,7 +5,7 @@ this.harbor_location <- this.inherit("scripts/entity/world/attached_location", {
 		this.attached_location.create();
 		this.m.Name = "港口";
 		this.m.ID = "attached_location.harbor";
-		this.m.Description = "一个为外来商船和当地渔民服务的港口。";
+		this.m.Description = "一座为外来商船和当地渔民服务的港口。";
 		this.m.Sprite = "";
 		this.m.SpriteDestroyed = "";
 		this.m.IsUsable = true;

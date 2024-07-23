@@ -5,7 +5,7 @@ this.goat_herd_location <- this.inherit("scripts/entity/world/attached_location"
 		this.attached_location.create();
 		this.m.Name = "山羊圈";
 		this.m.ID = "attached_location.goat_herd";
-		this.m.Description = "这里饲养的山羊主要用来产奶，然后再把奶制成奶酪这样的耐储食品。";
+		this.m.Description = "这里饲养的山羊主要用于产奶，制成奶酪这样的耐储食品。";
 		this.m.Sprite = "world_goat_herd_01";
 		this.m.SpriteDestroyed = "world_goat_herd_01_ruins";
 	}
