@@ -5,7 +5,7 @@ this.mushroom_grove_location <- this.inherit("scripts/entity/world/attached_loca
 		this.attached_location.create();
 		this.m.Name = "蘑菇林";
 		this.m.ID = "attached_location.mushroom_grove";
-		this.m.Description = "在泥土和芦苇中，专家采集者可以找到像这样充满珍贵蘑菇的林子和洞穴。";
+		this.m.Description = "专家采集者能从烂泥塘和芦苇荡中，找到这种长满珍稀蘑菇的林子和洞穴。";
 		this.m.Sprite = "world_mushroom_grove_01";
 		this.m.SpriteDestroyed = "world_mushroom_grove_01_ruins";
 	}

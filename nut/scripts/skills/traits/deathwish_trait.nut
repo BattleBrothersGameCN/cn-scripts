@@ -8,9 +8,9 @@ this.deathwish_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_13.png";
 		this.m.Description = "我还没死呢！这个角色不在乎受伤，无论如何都会继续战斗。";
 		this.m.Titles = [
-			"疯子(the Mad)",
-			"怪人(the Odd)",
-			"无畏者(the Fearless)"
+			"疯子",
+			"怪人",
+			"无畏者"
 		];
 		this.m.Excluded = [
 			"trait.weasel",

@@ -8,7 +8,7 @@ this.quick_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_18.png";
 		this.m.Description = "已经到了！这个角色行动迅速，通常比他的对手更快。";
 		this.m.Titles = [
-			"快人(the Quick)"
+			"快人一步"
 		];
 		this.m.Excluded = [
 			"trait.huge",

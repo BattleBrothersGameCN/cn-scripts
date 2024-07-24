@@ -5,7 +5,7 @@ this.peat_pit_location <- this.inherit("scripts/entity/world/attached_location",
 		this.attached_location.create();
 		this.m.Name = "泥炭坑";
 		this.m.ID = "attached_location.peat_pit";
-		this.m.Description = "这些泥炭坑产出的泥炭在挖起并晒干后可以变成有价值的燃料。";
+		this.m.Description = "泥炭坑里采挖出的泥炭，在晒干后就成了一种珍贵的燃料。";
 		this.m.Sprite = "world_peat_pit_01";
 		this.m.SpriteDestroyed = "world_peat_pit_01_ruins";
 		this.m.IsConnected = false;

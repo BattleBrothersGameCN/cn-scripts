@@ -8,10 +8,10 @@ this.bright_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_11.png";
 		this.m.Description = "这个角色比大多数人更善于掌握新概念和适应形势。";
 		this.m.Titles = [
-			"快人(the Quick)",
-			"狐狸(the Fox)",
-			"捷思(Quickmind)",
-			"明日之星(the Bright)",
+			"快人一步",
+			"老狐狸",
+			"捷思",
+			"聪明人",
 			"智者"
 		];
 		this.m.Excluded = [

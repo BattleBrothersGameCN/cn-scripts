@@ -8,9 +8,9 @@ this.brute_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_01.png";
 		this.m.Description = "不太擅长精准攻击，在近战中，这个角色会全力击打对手的头部，以准头为代价造成额外伤害。";
 		this.m.Titles = [
-			"公牛(the Bull)",
-			"壮牛(the Ox)",
-			"大锤(the Hammer)"
+			"公牛",
+			"壮牛",
+			"大锤"
 		];
 		this.m.Excluded = [
 			"trait.tiny",
@@ -37,7 +37,7 @@ this.brute_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/chance_to_hit_head.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15%[/color] 伤害于击中头部时"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15%[/color] 爆头伤害"
 			},
 			{
 				id = 11,

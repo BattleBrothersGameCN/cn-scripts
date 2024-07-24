@@ -8,9 +8,9 @@ this.ailing_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_59.png";
 		this.m.Description = "这个人总是面色苍白，处于病态，这使他特别容易受毒物的影响。";
 		this.m.Titles = [
-			"苍白者(the Pale)",
-			"病弱者(the Sickly)",
-			"衰弱者(the Ailing)"
+			"苍白者",
+			"病弱者",
+			"衰弱者"
 		];
 		this.m.Excluded = [
 			"trait.tough",

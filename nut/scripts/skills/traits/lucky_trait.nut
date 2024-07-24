@@ -8,8 +8,8 @@ this.lucky_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_54.png";
 		this.m.Description = "这个角色有在最后关头摆脱伤害的天赋。";
 		this.m.Titles = [
-			"幸运星(the Lucky)",
-			"蒙福者(the Blessed)"
+			"幸运星",
+			"蒙福者"
 		];
 		this.m.Excluded = [
 			"trait.pessimist",

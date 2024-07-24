@@ -5,7 +5,7 @@ this.alp_trophy_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.accessory.create();
 		this.m.ID = "accessory.alp_trophy";
 		this.m.Name = "梦魇雕饰项链";
-		this.m.Description = "这条项链用梦魇身上的各类战利品制成，穿戴它的人会被视作针对超自然夜间捕食者的老手，不会轻易害怕。";
+		this.m.Description = "这条项链用梦魇身上的各类战利品制成，穿戴它的人会被视作应对超自然夜间捕食者的老手，不容易被吓到。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

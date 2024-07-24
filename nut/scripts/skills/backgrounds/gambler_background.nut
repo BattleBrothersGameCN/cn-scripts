@@ -37,7 +37,7 @@ this.gambler_background <- this.inherit("scripts/skills/backgrounds/character_ba
 			"二点牌(Deuces)",
 			"百搭牌(the Wild Card)",
 			"幸运制造者(the Luck Maker)",
-			"幸运星(the Lucky)",
+			"幸运星",
 			"牌术大师(the Cardsharper)",
 			"赌徒(the Gambler)"
 		];

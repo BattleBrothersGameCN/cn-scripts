@@ -8,7 +8,7 @@ this.disloyal_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_35.png";
 		this.m.Description = "我必须把自己放在第一位！这个角色相当不忠诚，一旦你的克朗或食物用完，他会很快离开。";
 		this.m.Titles = [
-			"骗子(the Liar)"
+			"骗子"
 		];
 		this.m.Excluded = [
 			"trait.loyal",

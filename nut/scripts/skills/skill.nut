@@ -460,7 +460,7 @@ this.skill <- {
 				id = 9,
 				type = "hint",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]不能使用，因为这个角色已经宣誓禁止使用远程武器或工具[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]不能使用，这个角色已经立下禁止使用远程武器或道具的誓言[/color]"
 			});
 		}
 
@@ -469,7 +469,7 @@ this.skill <- {
 
 	function getCostString()
 	{
-		return "[i]消耗 " + (this.isAffordableBasedOnAPPreview() ? "[b][color=" + this.Const.UI.Color.PositiveValue + "]" + this.getActionPointCost() : "[b][color=" + this.Const.UI.Color.NegativeValue + "]" + this.getActionPointCost()) + " AP[/color][/b] 并产生 " + (this.isAffordableBasedOnFatiguePreview() ? "[b][color=" + this.Const.UI.Color.PositiveValue + "]" + this.getFatigueCost() : "[b][color=" + this.Const.UI.Color.NegativeValue + "]" + this.getFatigueCost()) + " 疲劳值[/color][/b][/i]\n";
+		return "[i]消耗 " + (this.isAffordableBasedOnAPPreview() ? "[b][color=" + this.Const.UI.Color.PositiveValue + "]" + this.getActionPointCost() : "[b][color=" + this.Const.UI.Color.NegativeValue + "]" + this.getActionPointCost()) + " AP[/color][/b] 并积累 " + (this.isAffordableBasedOnFatiguePreview() ? "[b][color=" + this.Const.UI.Color.PositiveValue + "]" + this.getFatigueCost() : "[b][color=" + this.Const.UI.Color.NegativeValue + "]" + this.getFatigueCost()) + " 疲劳值[/color][/b][/i]\n";
 	}
 
 	function getCursorForTile( _tile )
@@ -1435,32 +1435,32 @@ this.skill <- {
 				{
 					if (isHit)
 					{
-						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使用" + this.getName() + "，虽然偏离了目标，但打中了" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
+						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "，攻击偏离了目标，打中了" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
 					}
 					else
 					{
-						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使用" + this.getName() + "，不仅偏离了目标，也未命中" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
+						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "，攻击偏离了目标，擦过了" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
 					}
 				}
 				else
 				{
-					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使用" + this.getName() + "，虽然偏离了目标，但打中了" + this.Const.UI.getColorizedEntityName(_targetEntity));
+					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "，攻击偏离了目标，打中了" + this.Const.UI.getColorizedEntityName(_targetEntity));
 				}
 			}
 			else if (this.isUsingHitchance())
 			{
 				if (isHit)
 				{
-					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使用" + this.getName() + "并命中" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
+					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "命中了" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
 				}
 				else
 				{
-					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使用" + this.getName() + "但没命中" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
+					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "但没命中" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
 				}
 			}
 			else
 			{
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使用" + this.getName() + "并命中" + this.Const.UI.getColorizedEntityName(_targetEntity));
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "命中了" + this.Const.UI.getColorizedEntityName(_targetEntity));
 			}
 		}
 

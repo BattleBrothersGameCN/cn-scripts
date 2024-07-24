@@ -34,7 +34,7 @@ this.beggar_background <- this.inherit("scripts/skills/backgrounds/character_bac
 			"穷鬼(the Poor)",
 			"衣衫褴褛者(the Ragged)",
 			"病人(the Sick)",
-			"骗子(the Liar)",
+			"骗子",
 			"懒鬼(the Idle)",
 			"懒汉(the Sloth)",
 			"无用之人(the Useless)",

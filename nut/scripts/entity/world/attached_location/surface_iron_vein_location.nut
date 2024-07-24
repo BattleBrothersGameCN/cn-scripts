@@ -3,9 +3,9 @@ this.surface_iron_vein_location <- this.inherit("scripts/entity/world/attached_l
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "露天铁矿脉";
+		this.m.Name = "露天铁矿";
 		this.m.ID = "attached_location.surface_iron_vein";
-		this.m.Description = "这条露天的铁矿脉聚集起了一个收集贵重金属的小型采矿营地。近在咫尺的资源使附近的定居点能提供各种各样的武器。";
+		this.m.Description = "这条露天的铁矿脉引来了一座收集贵重金属的小型采矿营地。近在咫尺的资源使附近的定居点能提供各种各样的武器。";
 		this.m.Sprite = "world_iron_mine_01";
 		this.m.SpriteDestroyed = "world_iron_mine_01_ruins";
 	}

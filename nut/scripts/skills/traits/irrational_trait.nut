@@ -6,7 +6,7 @@ this.irrational_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.irrational";
 		this.m.Name = "不理性";
 		this.m.Icon = "ui/traits/trait_icon_28.png";
-		this.m.Description = "刚刚这杯子还是半满的，怎么现在有半空了。";
+		this.m.Description = "杯子现在是半空的，刚刚是半满的。";
 		this.m.Excluded = [
 			"trait.pessimist",
 			"trait.optimist",

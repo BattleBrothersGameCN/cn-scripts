@@ -8,7 +8,7 @@ this.fearless_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_30.png";
 		this.m.Description = "有许多老朋友在死后世界等着我呢。这个人并不害怕死亡。";
 		this.m.Titles = [
-			"无畏者(the Fearless)"
+			"无畏者"
 		];
 		this.m.Excluded = [
 			"trait.weasel",

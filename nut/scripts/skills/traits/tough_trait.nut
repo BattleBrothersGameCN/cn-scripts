@@ -6,12 +6,12 @@ this.tough_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.tough";
 		this.m.Name = "坚韧";
 		this.m.Icon = "ui/traits/trait_icon_14.png";
-		this.m.Description = "这个角色像钉子一样坚韧，被击中就像挠痒痒。";
+		this.m.Description = "这个角色硬得像钉子，挨打就像挠痒痒。";
 		this.m.Titles = [
-			"岩石(the Rock)",
-			"公牛(the Bull)",
-			"壮牛(the Ox)",
-			"大熊(the Bear)"
+			"岩石",
+			"公牛",
+			"壮牛",
+			"大熊"
 		];
 		this.m.Excluded = [
 			"trait.tiny",

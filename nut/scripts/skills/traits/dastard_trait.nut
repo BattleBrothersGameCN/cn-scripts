@@ -4,13 +4,13 @@ this.dastard_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.dastard";
-		this.m.Name = "懦夫";
+		this.m.Name = "畏缩";
 		this.m.Icon = "ui/traits/trait_icon_38.png";
 		this.m.Description = "这个角色一有可能就会逃跑。最好看着点他！";
 		this.m.Titles = [
-			"胆小鬼(the Coward)",
-			"懦夫(the Craven)",
-			"鸡仔(the Chicken)"
+			"胆小鬼",
+			"懦夫",
+			"鸡仔"
 		];
 		this.m.Excluded = [
 			"trait.determined",

@@ -3,9 +3,9 @@ this.trapper_location <- this.inherit("scripts/entity/world/attached_location", 
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "陷阱捕猎者";
+		this.m.Name = "陷狩者";
 		this.m.ID = "attached_location.trapper";
-		this.m.Description = "小茅屋为住在这里的陷阱捕猎者提供了栖身之所，他们设陷捕猎有珍贵毛皮的动物。";
+		this.m.Description = "小茅屋为陷阱捕猎者提供了栖身之所，他们设置陷阱，捕猎有珍贵毛皮的动物。";
 		this.m.Sprite = "world_trapper_01";
 		this.m.SpriteDestroyed = "world_trapper_01_ruins";
 	}

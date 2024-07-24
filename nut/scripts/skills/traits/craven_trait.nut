@@ -8,10 +8,10 @@ this.craven_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_40.png";
 		this.m.Description = "逃命吧！这个角色是个懦夫，只要有一点不利的迹象，他就会逃跑。";
 		this.m.Titles = [
-			"胆小鬼(the Coward)",
-			"懦夫(the Craven)",
+			"胆小鬼",
+			"懦夫",
 			"墙头草",
-			"没骨气(the Spineless)"
+			"没骨气"
 		];
 		this.m.Excluded = [
 			"trait.fearless",

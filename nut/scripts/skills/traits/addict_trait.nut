@@ -6,7 +6,7 @@ this.addict_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.addict";
 		this.m.Name = "药物成瘾";
 		this.m.Icon = "ui/traits/trait_icon_62.png";
-		this.m.Description = "这个角色染上了毒瘾。如果不定期提供，他可能会出现戒断症状。";
+		this.m.Description = "这个角色对某种物质上瘾了。如不定期提供，可能会出现戒断反应。";
 		this.m.Excluded = [];
 	}
 
@@ -76,7 +76,7 @@ this.addict_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "暂不生效，过去5天内服用了药物"
+				text = "过去5天内服用了药物，暂不生效"
 			});
 		}
 

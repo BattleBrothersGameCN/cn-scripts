@@ -46,7 +46,7 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Fisherman.getTitle() == "")
 				{
 					local titles = [
-						"大壮(the Strong)",
+						"壮士",
 						"骄傲者(the Proud)",
 						"渔夫(the Fisherman)",
 						"臂力选手(the Armwrestler)",
@@ -100,7 +100,7 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 				if (_event.m.Farmer.getTitle() == "")
 				{
 					local titles = [
-						"大壮(the Strong)",
+						"壮士",
 						"骄傲者(the Proud)",
 						"雇农(the Farmhand)",
 						"臂力选手(the Armwrestler)",

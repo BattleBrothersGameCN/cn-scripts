@@ -23,14 +23,14 @@ this.apprentice_background <- this.inherit("scripts/skills/backgrounds/character
 		];
 		this.m.Titles = [
 			"学徒(the Learner)",
-			"捷思(Quickmind)",
+			"捷思",
 			"学徒(the Apprentice)",
 			"替补(the Understudy)",
 			"能手(Goodhand)",
 			"学生(the Student)",
 			"年轻人(the Young)",
 			"孩子(the Kid)",
-			"明日之星(the Bright)"
+			"聪明人"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.YoungMale;
