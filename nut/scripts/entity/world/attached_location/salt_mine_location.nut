@@ -5,7 +5,7 @@ this.salt_mine_location <- this.inherit("scripts/entity/world/attached_location"
 		this.attached_location.create();
 		this.m.Name = "盐矿";
 		this.m.ID = "attached_location.salt_mine";
-		this.m.Description = "一座开采和输送岩盐的矿山，开采出的盐会被运到最负盛名的商人那里。";
+		this.m.Description = "一座开采岩盐的矿山，开采出的盐会被运给最可靠的商人。";
 		this.m.Sprite = "world_salt_mine_01";
 		this.m.SpriteDestroyed = "world_salt_mine_01_ruins";
 	}

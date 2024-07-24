@@ -5,7 +5,7 @@ this.plantation_location <- this.inherit("scripts/entity/world/attached_location
 		this.attached_location.create();
 		this.m.Name = "种植园";
 		this.m.ID = "attached_location.plantation";
-		this.m.Description = "这个种植园培育各种各样的香料和草药。荒漠中的一个小而罕见的丰收之地。";
+		this.m.Description = "这片种植园培育着各种奇异的香料和药草。贫瘠沙漠中少有的一小块丰饶之地。";
 		this.m.Sprite = "world_spice_01";
 		this.m.SpriteDestroyed = "world_spice_01_ruins";
 	}

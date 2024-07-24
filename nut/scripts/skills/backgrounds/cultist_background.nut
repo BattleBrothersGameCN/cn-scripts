@@ -35,13 +35,13 @@ this.cultist_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		];
 		this.m.Titles = [
 			"邪教徒(the Cultist)",
-			"疯子(the Mad)",
+			"疯子",
 			"信徒",
 			"神秘学者(the Occultist)",
 			"疯狂者(the Insane)",
-			"追随者(The Follower)",
+			"The Follower",
 			"迷失者(the Lost)",
-			"怪人(the Odd)",
+			"怪人",
 			"歧途者(the Misguided)",
 			"狂热者(the Fanatic)",
 			"狂信者(the Zealot)"

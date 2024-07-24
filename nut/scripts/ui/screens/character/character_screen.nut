@@ -333,7 +333,7 @@ this.character_screen <- {
 
 						if (other.getBackground().getID() == "background.slave")
 						{
-							other.improveMood(this.Const.MoodChange.SlaveCompensated, "看到" + bro.getName() + "根据他在战团里的时间获得了补偿而高兴");
+							other.improveMood(this.Const.MoodChange.SlaveCompensated, "高兴" + bro.getName() + "根据服役时间获得了补偿");
 						}
 					}
 				}

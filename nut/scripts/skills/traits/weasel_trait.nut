@@ -8,10 +8,10 @@ this.weasel_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_60.png";
 		this.m.Description = "这个人物像黄鼠狼一样敏捷。不幸的是，他似乎只有在逃命时才能用上这种本领。";
 		this.m.Titles = [
-			"胆小鬼(the Coward)",
+			"胆小鬼",
 			"鼬鼠",
-			"鸡仔(the Chicken)",
-			"鳗鱼 (the Eel)"
+			"鸡仔",
+			"鳗鱼"
 		];
 		this.m.Excluded = [
 			"trait.clubfooted",

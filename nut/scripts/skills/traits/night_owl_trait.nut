@@ -6,10 +6,10 @@ this.night_owl_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.night_owl";
 		this.m.Name = "夜猫子";
 		this.m.Icon = "ui/traits/trait_icon_57.png";
-		this.m.Description = "有些角色比其他人更适应弱光环境，而这个人尤其擅长。";
+		this.m.Description = "有些角色比其他人更适应弱光环境，这个人更是其中的佼佼者。";
 		this.m.Titles = [
 			"夜猫子",
-			"鹰眼(Eagle Eyes)"
+			"鹰眼"
 		];
 		this.m.Excluded = [
 			"trait.short_sighted",

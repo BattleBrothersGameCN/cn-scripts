@@ -43,7 +43,7 @@ this.accessory <- this.inherit("scripts/items/item", {
 			result.push({
 				id = 64,
 				type = "text",
-				text = "放在配饰位置"
+				text = "穿戴在配饰栏中"
 			});
 		}
 		else

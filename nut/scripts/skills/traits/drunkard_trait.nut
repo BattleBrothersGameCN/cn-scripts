@@ -8,8 +8,8 @@ this.drunkard_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_29.png";
 		this.m.Description = "不用猜就知道他把钱花在哪了。可以预料到他每场战斗前都会使劲喝酒，必要情况下会悄悄喝。";
 		this.m.Titles = [
-			"醉汉(the Drunk)",
-			"酒鬼(the Drunkard)"
+			"醉汉",
+			"酒鬼"
 		];
 		this.m.Excluded = [
 			"trait.teamplayer"

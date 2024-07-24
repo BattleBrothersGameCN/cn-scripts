@@ -25,7 +25,7 @@ this.converted_cultist_background <- this.inherit("scripts/skills/backgrounds/ch
 		];
 		this.m.Titles = [
 			"邪教徒(the Cultist)",
-			"疯子(the Mad)",
+			"疯子",
 			"信徒",
 			"疯狂者(the Insane)"
 		];

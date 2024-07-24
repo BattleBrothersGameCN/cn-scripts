@@ -6,7 +6,7 @@ this.cultist_acolyte_trait <- this.inherit("scripts/skills/traits/character_trai
 		this.m.ID = "trait.cultist_acolyte";
 		this.m.Name = "达库尔侍僧";
 		this.m.Icon = "ui/traits/trait_icon_66.png";
-		this.m.Description = "这个角色是一名达库尔侍僧，一个对古老神明的教义有着密切了解的人。将接纳身体上的痛苦和危难视为救赎之道。";
+		this.m.Description = "这个角色是一名达库尔侍僧，一个对上古神明教义有着密切了解的人。将接纳身体上的痛苦和危难视为救赎之道。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 

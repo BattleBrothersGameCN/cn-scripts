@@ -6,7 +6,7 @@ this.glorious_resolve_trait <- this.inherit("scripts/skills/traits/character_tra
 		this.m.ID = "trait.glorious";
 		this.m.Name = "决心之誉";
 		this.m.Icon = "ui/traits/trait_icon_72.png";
-		this.m.Description = "这个角色在南方的竞技场上由各种敌人锻炼而成，有人类，也有野兽。要打破他的决心需要付出很多。 他奢华的生活方式需要高薪来维持，但他永远不会抛弃你，也不能被解雇。 如果三个初始成员都死了，你的战役就结束了。";
+		this.m.Description = "这个角色在南方的竞技场上由各种敌人锻炼而成，有人类，也有野兽。打垮他的决心需要付出很多。他奢靡的生活需要高薪来维持，但他永远不会抛弃你，也不能被解雇。 如果三个初始成员都死了，你的战役就结束了。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 

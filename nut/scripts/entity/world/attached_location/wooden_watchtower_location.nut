@@ -5,7 +5,7 @@ this.wooden_watchtower_location <- this.inherit("scripts/entity/world/attached_l
 		this.attached_location.create();
 		this.m.Name = "木制岗楼";
 		this.m.ID = "attached_location.wooden_watchtower";
-		this.m.Description = "一个木制的岗楼，一支执行守望任务的小队驻守在此地。";
+		this.m.Description = "一座驻扎着值守驻军的木制岗楼。";
 		this.m.Sprite = "world_wooden_watchtower_01";
 		this.m.SpriteDestroyed = "world_wooden_watchtower_01_ruins";
 		this.m.IsMilitary = true;

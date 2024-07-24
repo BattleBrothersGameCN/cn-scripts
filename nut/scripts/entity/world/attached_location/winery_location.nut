@@ -3,9 +3,9 @@ this.winery_location <- this.inherit("scripts/entity/world/attached_location", {
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "葡萄酒厂";
+		this.m.Name = "葡萄酒庄";
 		this.m.ID = "attached_location.winery";
-		this.m.Description = "这个葡萄酒厂被一个大葡萄园所环绕。这里出产的葡萄酒在富裕阶层中是一种高价的商品。";
+		this.m.Description = "大片葡萄园围绕在这家葡萄酒庄周围。这里出产的葡萄酒是富人圈子里的一种高价商品。";
 		this.m.Sprite = "world_winery_01";
 		this.m.SpriteDestroyed = "world_winery_01_ruins";
 	}

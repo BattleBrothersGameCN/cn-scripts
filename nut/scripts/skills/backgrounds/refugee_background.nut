@@ -30,7 +30,7 @@ this.refugee_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		];
 		this.m.Titles = [
 			"难民(the Refugee)",
-			"幸存者(the Survivor)",
+			"幸存者",
 			"远跑(Runsfar)",
 			"弃儿(the Derelict)",
 			"痛脚(the Surbated)"

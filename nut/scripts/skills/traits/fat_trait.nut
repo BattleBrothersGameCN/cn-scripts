@@ -8,11 +8,11 @@ this.fat_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_10.png";
 		this.m.Description = "这个角色比起运动更喜欢猪排，很容易就会喘不上气。";
 		this.m.Titles = [
-			"胖子 (the Fat)",
-			"壮牛(the Ox)",
-			"大山(The Mountain)",
-			"猪(the Pig)",
-			"猪人(the Swine)"
+			"胖子",
+			"壮牛",
+			"大山",
+			"肥猪",
+			"猪猡"
 		];
 		this.m.Excluded = [
 			"trait.athletic",

@@ -8,7 +8,7 @@ this.hesitant_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_25.png";
 		this.m.Description = "嗯……好……也许吧。这个角色对行动很犹豫。";
 		this.m.Titles = [
-			"缓慢者(the Slow)"
+			"缓慢者"
 		];
 		this.m.Excluded = [
 			"trait.fearless",

@@ -8,8 +8,8 @@ this.impatient_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_46.png";
 		this.m.Description = "我们赶紧走吧！怎么还拖拖拉拉的？这个人物希望现在就开始做事。";
 		this.m.Titles = [
-			"快人(the Quick)",
-			"渴望者(the Eager)",
+			"快人一步",
+			"渴望者",
 			"急性子"
 		];
 		this.m.Excluded = [

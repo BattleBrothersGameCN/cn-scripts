@@ -160,7 +160,7 @@ this.spartan_should_eat_more_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/traits/trait_icon_08.png",
-						text = _event.m.Spartan.getName() + "不再是斯巴达人"
+						text = _event.m.Spartan.getName() + "不再清苦"
 					}
 				];
 			}

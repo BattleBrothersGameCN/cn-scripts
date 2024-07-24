@@ -4,7 +4,7 @@ this.insecure_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.insecure";
-		this.m.Name = "缺乏信心";
+		this.m.Name = "不安";
 		this.m.Icon = "ui/traits/trait_icon_03.png";
 		this.m.Description = "我做不到！这个角色需要更多的自信。";
 		this.m.Excluded = [

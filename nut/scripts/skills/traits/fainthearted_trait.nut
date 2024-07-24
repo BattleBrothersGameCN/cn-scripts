@@ -8,8 +8,8 @@ this.fainthearted_trait <- this.inherit("scripts/skills/traits/character_trait",
 		this.m.Icon = "ui/traits/trait_icon_41.png";
 		this.m.Description = "这个角色需要一些温暖的话语和不时的鼓励。";
 		this.m.Titles = [
-			"鸡仔(the Chicken)",
-			"温顺者(the Meek)"
+			"鸡仔",
+			"温驯者"
 		];
 		this.m.Excluded = [
 			"trait.fearless",

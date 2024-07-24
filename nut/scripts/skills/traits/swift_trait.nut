@@ -8,8 +8,8 @@ this.swift_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_53.png";
 		this.m.Description = "这个角色天生迅捷灵巧，更容易躲避飞来的投射物。";
 		this.m.Titles = [
-			"迅捷者(the Swift)",
-			"敏足 (Quickfeet)"
+			"迅捷者",
+			"敏足"
 		];
 		this.m.Excluded = [
 			"trait.clumsy",

@@ -18,7 +18,7 @@ this.arena_pit_fighter_trait <- this.inherit("scripts/skills/traits/character_tr
 
 		if (matches == 1)
 		{
-			text = " 到目前为止，这个角色只打过一场比赛";
+			text = "目前为止，这个角色只打过一场比赛";
 
 			if (won == 1)
 			{

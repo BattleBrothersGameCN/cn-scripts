@@ -34,7 +34,7 @@ this.deserter_background <- this.inherit("scripts/skills/backgrounds/character_b
 			"叛徒(Turncloak)",
 			"背叛者(the Betrayer)",
 			"跑手(the Runner)",
-			"狗(the Dog)",
+			"狗",
 			"蠕虫(the Worm)"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;

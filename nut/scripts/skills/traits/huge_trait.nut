@@ -8,12 +8,12 @@ this.huge_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_61.png";
 		this.m.Description = "这个角色出奇地又高又壮，造成的伤害相当可观，但他也是一个比大多数人更大的目标。";
 		this.m.Titles = [
-			"大山(The Mountain)",
-			"壮牛(the Ox)",
-			"大熊(the Bear)",
-			"巨人(the Giant)",
-			"高塔(the Tower)",
-			"公牛(the Bull)"
+			"大山",
+			"壮牛",
+			"大熊",
+			"巨人",
+			"高塔",
+			"公牛"
 		];
 		this.m.Excluded = [
 			"trait.tiny",

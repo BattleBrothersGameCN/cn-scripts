@@ -44,7 +44,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Flags.set("DestinationName", this.m.Destination.getName());
 		local nemesisNames = [
 			"乌鸦",
-			"狐狸",
+			"老狐狸",
 			"私生子",
 			"猫",
 			"狮子",

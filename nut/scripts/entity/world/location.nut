@@ -297,7 +297,7 @@ this.location <- this.inherit("scripts/entity/world/world_entity", {
 					id = 20,
 					type = "hint",
 					icon = "ui/orientation/palisade_01_orientation.png",
-					text = "地点巩固有防御工事"
+					text = "地点有防御工事"
 				});
 			}
 		}

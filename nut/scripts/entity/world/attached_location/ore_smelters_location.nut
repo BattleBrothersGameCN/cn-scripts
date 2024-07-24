@@ -7,7 +7,7 @@ this.ore_smelters_location <- this.inherit("scripts/entity/world/attached_locati
 		this.attached_location.create();
 		this.m.Name = "矿石冶炼厂";
 		this.m.ID = "attached_location.ore_smelters";
-		this.m.Description = "高温矿石冶炼厂能够制造出高质量的金属锭，供有能力的武器匠铸造最复杂精致的武器。";
+		this.m.Description = "火热的矿石冶炼厂能产出高质量的金属锭，供有能力的武器匠打造最复杂精致的武器。";
 		this.m.Sprite = "world_ore_smelters_01";
 		this.m.SpriteDestroyed = "world_ore_smelters_01_ruins";
 	}
