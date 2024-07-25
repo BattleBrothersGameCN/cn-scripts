@@ -469,7 +469,7 @@ this.skill <- {
 
 	function getCostString()
 	{
-		return "[i]消耗 " + (this.isAffordableBasedOnAPPreview() ? "[b][color=" + this.Const.UI.Color.PositiveValue + "]" + this.getActionPointCost() : "[b][color=" + this.Const.UI.Color.NegativeValue + "]" + this.getActionPointCost()) + " AP[/color][/b] 并积累 " + (this.isAffordableBasedOnFatiguePreview() ? "[b][color=" + this.Const.UI.Color.PositiveValue + "]" + this.getFatigueCost() : "[b][color=" + this.Const.UI.Color.NegativeValue + "]" + this.getFatigueCost()) + " 疲劳值[/color][/b][/i]\n";
+		return "[i]消耗 " + (this.isAffordableBasedOnAPPreview() ? "[b][color=" + this.Const.UI.Color.PositiveValue + "]" + this.getActionPointCost() : "[b][color=" + this.Const.UI.Color.NegativeValue + "]" + this.getActionPointCost()) + " 行动点数[/color][/b] 并积累 " + (this.isAffordableBasedOnFatiguePreview() ? "[b][color=" + this.Const.UI.Color.PositiveValue + "]" + this.getFatigueCost() : "[b][color=" + this.Const.UI.Color.NegativeValue + "]" + this.getFatigueCost()) + " 疲劳值[/color][/b][/i]\n";
 	}
 
 	function getCursorForTile( _tile )
@@ -1201,7 +1201,7 @@ this.skill <- {
 		{
 			ret.push({
 				icon = "ui/tooltips/negative.png",
-				text = "夜间"
+				text = "黑夜"
 			});
 		}
 

@@ -315,7 +315,7 @@ this.contract_manager <- {
 
 	function showContract( _c )
 	{
-		this.logInfo("展示合约：" + _c.getName() + " (id: " + _c.getID() + ")");
+		this.logInfo("正显示合同：" + _c.getName() + " (id: " + _c.getID() + ")");
 		this.m.LastShown = _c;
 
 		if (!_c.isStarted())

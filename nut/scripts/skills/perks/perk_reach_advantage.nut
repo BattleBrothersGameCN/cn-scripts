@@ -18,7 +18,7 @@ this.perk_reach_advantage <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色正使用他的近战武器的距离优势来阻止对手靠近，近战防御增加 [color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Stacks * 5 + "[/color] 持续到此角色的下一回合。";
+		return "这名角色正利用他近战武器的长度优势，阻止对手靠近，近战防御增加 [color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.Stacks * 5 + "[/color] 持续到此角色的下一回合。";
 	}
 
 	function onTargetHit( _skill, _targetEntity, _bodyPart, _damageInflictedHitpoints, _damageInflictedArmor )

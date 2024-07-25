@@ -21,7 +21,7 @@ this.acid_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的盔甲被喷溅了林德蠕龙的酸液，现在酸液正在慢慢地腐蚀盔甲。(剩余 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "这个角色的盔甲溅上了林德蠕龙的酸液，正在慢慢地腐蚀盔甲。(剩余 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
 	}
 
 	function getTooltip()

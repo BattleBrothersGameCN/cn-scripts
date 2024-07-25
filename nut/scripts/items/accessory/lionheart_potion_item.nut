@@ -4,7 +4,7 @@ this.lionheart_potion_item <- this.inherit("scripts/items/item", {
 	{
 		this.m.ID = "accessory.lionheart_potion";
 		this.m.Name = "狮心药剂";
-		this.m.Description = "像狮子一样勇敢！ 这种药水抑制恐惧，促进勇气，甚至包括对自己能力的严重高估。 可信赖的饮品。 持续到下一场战斗。";
+		this.m.Description = "勇敢如狮！这种药水能抑制恐惧，增进勇气，直到对自我能力的严重高估的程度。谨慎服用。效果持续到下一场战斗。";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
 		this.m.IsDroppedAsLoot = true;
@@ -62,7 +62,7 @@ this.lionheart_potion_item <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前选定的角色上进行饮用。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前选定的角色上进行饮用。此物品会在使用过程中消耗掉。"
 		});
 		result.push({
 			id = 65,

@@ -4,8 +4,8 @@ this.ghoul_trophy_item <- this.inherit("scripts/items/accessory/accessory", {
 	{
 		this.accessory.create();
 		this.m.ID = "accessory.ghoul_trophy";
-		this.m.Name = "食尸鬼雕饰项链";
-		this.m.Description = "这个项链是从多个食尸鬼身上取来的雕饰制作而成，穿戴它的人会被视作针对野蛮凶兽的老手，不容易畏惧。";
+		this.m.Name = "食尸鬼战利品项链";
+		this.m.Description = "这条项链由多只食尸鬼身上的战利品制成，穿戴它的人会被视作应对野蛮凶兽的老手，不容易被吓到。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

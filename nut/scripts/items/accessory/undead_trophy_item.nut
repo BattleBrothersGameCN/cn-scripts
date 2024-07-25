@@ -4,8 +4,8 @@ this.undead_trophy_item <- this.inherit("scripts/items/accessory/accessory", {
 	{
 		this.accessory.create();
 		this.m.ID = "accessory.undead_trophy";
-		this.m.Name = "亡灵雕饰";
-		this.m.Description = "这条从一堆骨头上取下的古老项链表明戴着它的人是与亡灵天灾进行过多次战斗的老兵，并且在他们的恐怖面前不会轻易动摇。";
+		this.m.Name = "亡灵战利品";
+		this.m.Description = "这条从骨堆里取得的古代项链表明，穿戴它的人是应对亡灵天灾的历战老手，不会因它们的恐怖而动摇。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

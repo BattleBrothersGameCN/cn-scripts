@@ -30,7 +30,7 @@ this.falcon_item <- this.inherit("scripts/items/accessory/accessory", {
 	{
 		if (this.m.IsReleased)
 		{
-			return this.item.getName() + "（已释放）";
+			return this.item.getName() + "（已放飞）";
 		}
 		else
 		{
@@ -43,7 +43,7 @@ this.falcon_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.accessory.create();
 		this.m.ID = "accessory.falcon";
 		this.m.Name = "猎鹰";
-		this.m.Description = "一只训练有素的猎鹰。可在战斗中释放来寻找隐藏的敌人。";
+		this.m.Description = "一只训练有素的猎鹰。可在战斗中放出，寻找隐藏的敌人。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = false;

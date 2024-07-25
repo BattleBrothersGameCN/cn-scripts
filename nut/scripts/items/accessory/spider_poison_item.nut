@@ -5,7 +5,7 @@ this.spider_poison_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.accessory.create();
 		this.m.ID = "accessory.spider_poison";
 		this.m.Name = "毒油";
-		this.m.Description = "一瓶加入了浓缩蜘蛛毒液的油，可以涂在你的武器和箭头上。";
+		this.m.Description = "一瓶混合了浓缩蜘蛛毒液的油，可以涂在你的武器和箭头上。";
 		this.m.SlotType = this.Const.ItemSlot.Bag;
 		this.m.IsAllowedInBag = true;
 		this.m.IsDroppedAsLoot = true;

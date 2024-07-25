@@ -5,7 +5,7 @@ this.broken_elbow_joint_injury <- this.inherit("scripts/skills/injury_permanent/
 		this.permanent_injury.create();
 		this.m.ID = "injury.broken_elbow_joint";
 		this.m.Name = "肘关节骨折";
-		this.m.Description = "无法完全愈合的肘关节拖累了手臂的各方向运动从而严重降低了战斗力。";
+		this.m.Description = "无法完全愈合的肘关节拖累了手臂的各向运动，严重降低了战斗力。";
 		this.m.Icon = "ui/injury/injury_permanent_icon_08.png";
 	}
 

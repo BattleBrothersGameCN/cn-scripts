@@ -4,7 +4,7 @@ this.double_grip <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "special.double_grip";
 		this.m.Name = "双手持握";
-		this.m.Description = "当副手空闲时，这个角色可以牢牢抓住他的武器并造成额外的伤害。";
+		this.m.Description = "副手空空，这个角色可以两手紧握他的武器，造成额外伤害。";
 		this.m.Icon = "skills/passive_07.png";
 		this.m.IconMini = "passive_07_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect | this.Const.SkillType.Special;

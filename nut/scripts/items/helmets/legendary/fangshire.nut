@@ -30,7 +30,7 @@ this.fangshire <- this.inherit("scripts/items/helmets/helmet", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/vision.png",
-			text = "允许佩戴者在夜间观看，并抵消任何因夜间造成的惩罚。"
+			text = "允许穿戴者在夜间视物，抵消一切黑夜惩罚。"
 		});
 		return result;
 	}

@@ -4,7 +4,7 @@ this.perk_quick_hands <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "perk.quick_hands";
 		this.m.Name = this.Const.Strings.PerkName.QuickHands;
-		this.m.Description = "换这个试试？这个角色有拥有快手特技，并且此回合仍可以免费切换一个物品。";
+		this.m.Description = "换这个试试？这个角色有拥有快手特技，还可以在此回合中免费切换一个物品。";
 		this.m.Icon = "ui/perks/perk_39.png";
 		this.m.Type = this.Const.SkillType.Perk | this.Const.SkillType.StatusEffect;
 		this.m.Order = this.Const.SkillOrder.Perk | this.Const.SkillOrder.Any;

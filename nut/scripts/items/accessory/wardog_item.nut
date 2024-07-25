@@ -67,7 +67,7 @@ this.wardog_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.updateVariant();
 		this.m.ID = "accessory.wardog";
 		this.m.Name = this.Const.Strings.WardogNames[this.Math.rand(0, this.Const.Strings.WardogNames.len() - 1)] + "·战犬";
-		this.m.Description = "忠诚而强壮的狗，为战争而饲养。可以在战斗中释放用以侦查，追踪或追捕逃跑的敌人。";
+		this.m.Description = "一条为战争而生，强壮而忠诚的战犬。可在战斗中释放，用以侦查、追踪或猎杀逃跑的敌人。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = false;

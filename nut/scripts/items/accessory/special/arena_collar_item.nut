@@ -5,7 +5,7 @@ this.arena_collar_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.accessory.create();
 		this.m.ID = "accessory.arena_collar";
 		this.m.Name = "竞技场项圈";
-		this.m.Description = "南方竞技场上，战斗人员佩戴的项圈。";
+		this.m.Description = "南方竞技场上，参战者佩戴的项圈。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = false;
 		this.m.ShowOnCharacter = true;

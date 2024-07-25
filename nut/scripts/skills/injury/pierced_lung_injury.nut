@@ -5,7 +5,7 @@ this.pierced_lung_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.pierced_lung";
 		this.m.Name = "肺穿孔";
-		this.m.Description = "很明显第二个通气孔没有什么用，只会让你听起来像个风笛。";
+		this.m.Description = "看来再开个通气孔没什么用，只会让你听起来像个风笛。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_36";
 		this.m.Icon = "ui/injury/injury_icon_36.png";

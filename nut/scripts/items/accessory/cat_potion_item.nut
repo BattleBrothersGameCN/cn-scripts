@@ -3,8 +3,8 @@ this.cat_potion_item <- this.inherit("scripts/items/item", {
 	function create()
 	{
 		this.m.ID = "accessory.cat_potion";
-		this.m.Name = "猫咪药剂";
-		this.m.Description = "像猫一样敏捷！这种药水能增强你的感官，使你更加敏锐。谨慎服用，持续到下一场战斗。";
+		this.m.Name = "灵猫药剂";
+		this.m.Description = "敏捷如猫！这种药水能增强你的感官，提高反应能力。谨慎服用。效果持续到下一场战斗。";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
 		this.m.IsDroppedAsLoot = true;
@@ -62,7 +62,7 @@ this.cat_potion_item <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前选定的角色上进行饮用。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前选定的角色上进行饮用。此物品会在使用过程中消耗掉。"
 		});
 		result.push({
 			id = 65,

@@ -4,7 +4,7 @@ this.iron_will_potion_item <- this.inherit("scripts/items/item", {
 	{
 		this.m.ID = "accessory.iron_will_potion";
 		this.m.Name = "钢铁意志药剂";
-		this.m.Description = "除了喉咙有烧灼感之外，能让人感受不到痛苦并充满力量的饮料。 可信赖的饮品。 持续到下一场战斗。";
+		this.m.Description = "能让人感觉无视痛苦，充满力量的饮品。会带来严重的喉咙烧灼感。谨慎服用。效果持续到下一场战斗。";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
 		this.m.IsDroppedAsLoot = true;
@@ -57,12 +57,12 @@ this.iron_will_potion_item <- this.inherit("scripts/items/item", {
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "不受非永久性损伤的影响，无论是新的还是旧的"
+			text = "不受非永久性损伤的影响，无论新旧"
 		});
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前选定的角色上进行饮用。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前选定的角色上进行饮用。此物品会在使用过程中消耗掉。"
 		});
 		result.push({
 			id = 65,

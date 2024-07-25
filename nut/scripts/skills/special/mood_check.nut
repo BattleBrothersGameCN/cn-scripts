@@ -30,7 +30,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "这个角色满足于事情的发展。可能会更好，也可能更糟。\n\n随着时间的推移，情绪总是倾向于这种状态。"
+					text = "这名角色满足于现状。情绪还能提升，也还有恶化的空间。\n\n情绪总会随时间逐渐回归这种状态。"
 				}
 			];
 			break;
@@ -45,7 +45,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "对于一个过着艰难的雇佣兵生活的人而言并不少见，这个角色并不是很满意并且希望事情有所改善。"
+					text = "这名角色不算满意，希望事情能有所改善 —— 这对过着艰苦佣兵生活的人来说并不罕见。"
 				},
 				{
 					id = 11,
@@ -66,7 +66,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "最近的事件让这个角色对目前的进展感到失望和不满。这心情可能会消散，但如果有其它事件雪上加霜则可能变得更糟。"
+					text = "最近的事件让这名角色对现状感到失望和不满。这种心情可能会消散，也可能因其他事件而雪上加霜。"
 				},
 				{
 					id = 11,
@@ -87,7 +87,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "最近的事件让这个角色对周围的人愤怒和报复心。如果事情没有很快改善，这个角色可能决定离开战团！"
+					text = "最近的事件让这名角色对周围的人感到愤怒，意图报复。如果情况没有很快改善，该角色可能会决定离开战团！"
 				},
 				{
 					id = 11,
@@ -108,7 +108,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "最近的事件使这个角色心情愉快。随着现实再次掌控局面，这种局面可能会过去，但就目前而言，情况看起来不错。"
+					text = "最近的事件使这名角色心情愉快。这种情绪或许会因现实掣肘而消失，但就目前而言，情况还不错。"
 				},
 				{
 					id = 11,
@@ -129,7 +129,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "最近的事件让这个角色渴望为战队战斗，对目前的进展感到高兴并激励他周围的人。"
+					text = "最近的事件让这名角色渴望为战团而战，对现状感到高兴，激励着他周围的人。"
 				},
 				{
 					id = 11,
@@ -150,7 +150,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "最近的事件使这个角色处于一种兴奋的状态，他乐于投入时间为战队服务，并确信能战胜任何敌人。说真的，已经开始有点烦人了。"
+					text = "最近的事件使这名角色处于一种兴奋状态，他为把时间花在战团里感到高兴，确信能战胜任何敌人。说真的，这样有点烦人。"
 				},
 				{
 					id = 11,

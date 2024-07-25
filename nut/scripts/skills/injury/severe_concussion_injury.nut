@@ -5,7 +5,7 @@ this.severe_concussion_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.severe_concussion";
 		this.m.Name = "重度脑震荡";
-		this.m.Description = "严重的脑震荡使人很难集中注意力和看东西，甚至走直线。更不用说恶心，在某些情况下还有失忆。";
+		this.m.Description = "重度脑震荡让人注意力涣散，视物困难，甚至走不了直线。更何况恶心和偶然出现的失忆症状。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_17";
 		this.m.Icon = "ui/injury/injury_icon_17.png";

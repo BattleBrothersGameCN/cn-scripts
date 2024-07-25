@@ -64,7 +64,7 @@ this.goblin_grunt_potion_item <- this.inherit("scripts/items/misc/anatomist/anat
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前选定的角色上进行饮用。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前选定的角色上进行饮用。此物品会在使用过程中消耗掉。"
 		});
 		result.push({
 			id = 65,

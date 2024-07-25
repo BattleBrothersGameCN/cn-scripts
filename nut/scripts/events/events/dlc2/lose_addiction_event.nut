@@ -31,7 +31,7 @@ this.lose_addiction_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Addict.getName() + "再也不是上瘾者了"
+					text = _event.m.Addict.getName() + "不再药物成瘾"
 				});
 				_event.m.Addict.getSkills().remove(trait);
 			}

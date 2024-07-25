@@ -20,7 +20,7 @@ this.perk_nimble <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "像猫一样轻灵！这个角色能够在最后时刻部分地躲闪或偏转攻击，从而避免受到直击。你的盔甲和头盔越轻，你的收益就越大。";
+		return "像猫一样轻灵！这名角色能在最后时刻部分躲闪或偏转攻击，从而避免受到直击。盔甲和头盔越轻，收益就越大。";
 	}
 
 	function getTooltip()
@@ -34,7 +34,7 @@ this.perk_nimble <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "只受到 [color=" + this.Const.UI.Color.PositiveValue + "]" + fm + "%[/color]的生命值伤害(对且仅对所有攻击生效)"
+				text = "只受到 [color=" + this.Const.UI.Color.PositiveValue + "]" + fm + "%[/color] 的生命值伤害(对且仅对所有攻击生效)"
 			});
 		}
 		else
@@ -43,7 +43,7 @@ this.perk_nimble <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]这个角色的身体和头部盔甲太重，无法从轻灵中获得任何好处[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]这名角色的身体和头部盔甲太重，无法从轻灵中获得任何好处[/color]"
 			});
 		}
 

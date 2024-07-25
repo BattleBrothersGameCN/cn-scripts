@@ -5,7 +5,7 @@ this.smashed_hand_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.smashed_hand";
 		this.m.Name = "手粉碎性骨折";
-		this.m.Description = "手部被蛮力砸的稀碎使得紧握任何武器都几乎不可能。";
+		this.m.Description = "手部被蛮力砸的稀碎，丧失了握紧武器的可能。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_19";
 		this.m.Icon = "ui/injury/injury_icon_19.png";

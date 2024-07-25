@@ -4,8 +4,8 @@ this.hexen_trophy_item <- this.inherit("scripts/items/accessory/accessory", {
 	{
 		this.accessory.create();
 		this.m.ID = "accessory.hexen_trophy";
-		this.m.Name = "女巫雕饰项链";
-		this.m.Description = "这个项链是从多个女巫身上取来的雕饰制作而成，穿戴它的人会被视作针对卑鄙的巫术的老手，不容易畏惧。";
+		this.m.Name = "女巫战利品项链";
+		this.m.Description = "这条项链由多名女巫身上的战利品制成，穿戴它的人会被视作应对卑劣巫术的老手，不容易被吓到。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

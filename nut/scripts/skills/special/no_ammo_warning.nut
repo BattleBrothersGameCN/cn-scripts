@@ -5,7 +5,7 @@ this.no_ammo_warning <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "没有弹药！";
 		this.m.Icon = "skills/status_effect_63.png";
 		this.m.IconMini = "status_effect_63_mini";
-		this.m.Description = "这个角色目前装备的远程武器没有弹药！";
+		this.m.Description = "这名角色没有适合当前远程武器的弹药！";
 		this.m.Type = this.Const.SkillType.Special | this.Const.SkillType.StatusEffect | this.Const.SkillType.Alert;
 		this.m.Order = this.Const.SkillOrder.Last;
 		this.m.IsActive = false;
