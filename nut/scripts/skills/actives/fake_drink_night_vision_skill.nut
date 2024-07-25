@@ -49,7 +49,7 @@ this.fake_drink_night_vision_skill <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "移除夜间效果"
+				text = "移除黑夜影响"
 			}
 		];
 

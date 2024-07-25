@@ -4,7 +4,7 @@ this.night_vision_elixir_item <- this.inherit("scripts/items/item", {
 	{
 		this.m.ID = "accessory.night_vision_elixir";
 		this.m.Name = "夜枭药剂";
-		this.m.Description = "饮用这瓶药剂之后，夜晚也似中午一样明亮。理性饮用，后果自负。持续到下一场战斗。";
+		this.m.Description = "饮用这瓶药剂之后，连夜晚也亮如白昼。谨慎服用。效果持续到下一场战斗。";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
 		this.m.IsDroppedAsLoot = true;
@@ -57,12 +57,12 @@ this.night_vision_elixir_item <- this.inherit("scripts/items/item", {
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "不受夜间影响"
+			text = "不受黑夜影响"
 		});
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前选定的角色上进行饮用。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前选定的角色上进行饮用。此物品会在使用过程中消耗掉。"
 		});
 		result.push({
 			id = 65,

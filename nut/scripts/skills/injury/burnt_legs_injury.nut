@@ -31,7 +31,7 @@ this.burnt_legs_injury <- this.inherit("scripts/skills/injury/injury", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/action_points.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]+1[/color] 移动AP消耗（每格）"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]+1[/color] 每移动一格的行动点消耗"
 			},
 			{
 				id = 7,

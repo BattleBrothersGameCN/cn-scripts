@@ -5,7 +5,7 @@ this.broken_knee_injury <- this.inherit("scripts/skills/injury_permanent/permane
 		this.permanent_injury.create();
 		this.m.ID = "injury.broken_knee";
 		this.m.Name = "膝盖骨折";
-		this.m.Description = "这个角色的膝盖受到了创伤，无法完全康复。前进或躲闪都十分痛苦，动作也显得扭曲。";
+		this.m.Description = "这个角色的膝盖受到了创伤，无法完全康复。前进或躲闪都十分痛苦，动作也显得别扭。";
 		this.m.Icon = "ui/injury/injury_permanent_icon_11.png";
 	}
 

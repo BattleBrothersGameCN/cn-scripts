@@ -98,7 +98,7 @@ this.addict_steals_potion_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/traits/trait_icon_29.png",
-					text = _event.m.Addict.getName() + "不再上瘾"
+					text = _event.m.Addict.getName() + "不再药物成瘾"
 				});
 				_event.m.Addict.worsenMood(2.5, "被你命令鞭打了");
 				this.List.push({
@@ -157,7 +157,7 @@ this.addict_steals_potion_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/traits/trait_icon_62.png",
-					text = _event.m.Addict.getName() + "不再上瘾"
+					text = _event.m.Addict.getName() + "不再药物成瘾"
 				});
 			}
 

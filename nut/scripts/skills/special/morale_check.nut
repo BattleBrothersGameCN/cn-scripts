@@ -26,7 +26,7 @@ this.morale_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "胜利属于我们！这个角色相信他能取胜。"
+					text = "我们赢定了！这个角色相信他能取胜。"
 				},
 				{
 					id = 11,
@@ -110,7 +110,7 @@ this.morale_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "我军败了！这个角色的士气降至崩溃，一点风吹草动就能吓跑他。"
+					text = "我军败了！这个角色的士气崩溃，一点风吹草动就能吓跑他。"
 				},
 				{
 					id = 11,
@@ -155,7 +155,7 @@ this.morale_check <- this.inherit("scripts/skills/skill", {
 				{
 					id = 2,
 					type = "description",
-					text = "逃命吧！这个角色失去理智了，正在恐慌地逃离战场。"
+					text = "逃命吧！这个角色已经失去理智，惊慌失措地逃离战场。"
 				},
 				{
 					id = 11,

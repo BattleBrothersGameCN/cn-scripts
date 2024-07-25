@@ -585,7 +585,7 @@ this.item_container <- {
 		}
 		else
 		{
-			this.logWarning("无法交换，没有装备任何物品！");
+			this.logWarning("无法交换，两物品均未装备！");
 			return false;
 		}
 

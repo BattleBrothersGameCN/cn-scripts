@@ -4,8 +4,8 @@ this.orc_trophy_item <- this.inherit("scripts/items/accessory/accessory", {
 	{
 		this.accessory.create();
 		this.m.ID = "accessory.orc_trophy";
-		this.m.Name = "兽人的雕饰";
-		this.m.Description = "这条项链表明了一个穿着它身经百战的老兵对抗兽人的威胁，没人会屈服于蛮力。";
+		this.m.Name = "兽人战利品";
+		this.m.Description = "这条取自发狂兽人的骨制项链表明，穿戴它的人是应对绿色野兽的历战老手，不会向它们的蛮力屈服。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

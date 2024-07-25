@@ -5,7 +5,7 @@ this.pierced_cheek_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.pierced_cheek";
 		this.m.Name = "面颊穿孔";
-		this.m.Description = "事实上，与某些猜测相反，在脸颊上多一个洞对呼吸并没有帮助。";
+		this.m.Description = "与某些猜测相反，在脸颊上开个洞对呼吸并没有帮助。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_45";
 		this.m.Icon = "ui/injury/injury_icon_45.png";

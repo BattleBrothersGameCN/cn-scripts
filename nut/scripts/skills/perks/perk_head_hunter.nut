@@ -18,7 +18,7 @@ this.perk_head_hunter <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色下一次命中必定会击中头部。";
+		return "该角色的下次命中必定会落在头部。";
 	}
 
 	function onUpdate( _properties )

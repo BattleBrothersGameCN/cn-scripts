@@ -32,7 +32,7 @@ this.gain_addiction_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = trait.getIcon(),
-					text = _event.m.Addict.getName() + "现在是上瘾者"
+					text = _event.m.Addict.getName() + "药物成瘾"
 				});
 			}
 

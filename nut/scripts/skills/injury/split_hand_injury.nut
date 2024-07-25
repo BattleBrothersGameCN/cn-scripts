@@ -5,7 +5,7 @@ this.split_hand_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.split_hand";
 		this.m.Name = "手劈裂";
-		this.m.Description = "一记锋利的划伤将手从中间划开。在愈合之前，它几乎不能再使用了。";
+		this.m.Description = "一记锋利的斩击将手从中间劈开。愈合之前不能再使用了。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_08";
 		this.m.Icon = "ui/injury/injury_icon_08.png";

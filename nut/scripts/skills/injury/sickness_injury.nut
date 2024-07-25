@@ -5,7 +5,7 @@ this.sickness_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.sickness";
 		this.m.Name = "生病";
-		this.m.Description = "为疾病所侵袭，这个角色感觉糟糕极了，并非处于能够战斗的状态。如果发烧没有带走他，疾病可能会随时间消退。";
+		this.m.Description = "为疾病所侵袭，这名角色感觉糟糕极了，远非能够战斗的状态。如果发烧没有带走他，疾病可能会随时间消退。";
 		this.m.Type = this.m.Type | this.Const.SkillType.StatusEffect | this.Const.SkillType.SemiInjury;
 		this.m.DropIcon = "injury_icon_25";
 		this.m.Icon = "ui/injury/injury_icon_25.png";

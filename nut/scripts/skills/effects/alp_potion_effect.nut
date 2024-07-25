@@ -36,7 +36,7 @@ this.alp_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "不受夜间惩罚影响"
+				text = "不受黑夜惩罚影响"
 			},
 			{
 				id = 12,

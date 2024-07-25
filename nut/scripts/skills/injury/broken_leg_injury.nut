@@ -4,7 +4,7 @@ this.broken_leg_injury <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		this.m.ID = "injury.broken_leg";
-		this.m.Name = "腿部骨折";
+		this.m.Name = "腿骨骨折";
 		this.m.Description = "腿骨断裂极大的限制了活动性，并且需要很长时间才能痊愈。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_04";
@@ -31,7 +31,7 @@ this.broken_leg_injury <- this.inherit("scripts/skills/injury/injury", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/action_points.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]+2[/color] 移动AP消耗（每格）"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]+2[/color] 每移动一格的行动点消耗"
 			},
 			{
 				id = 7,

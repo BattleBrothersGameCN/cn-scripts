@@ -46,7 +46,7 @@ this.perk_battle_forged <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]这个角色的盔甲没有足够的保护，无法从战斗锻造特技中获得任何好处[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]这名角色的盔甲没有足够的保护，无法从战斗锻造特技中获得任何好处[/color]"
 			});
 		}
 

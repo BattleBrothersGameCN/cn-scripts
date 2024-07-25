@@ -5,7 +5,7 @@ this.deep_face_cut_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.deep_face_cut";
 		this.m.Name = "脸部深切口";
-		this.m.Description = "脸上有一道锯齿状的深切口，眼睛、鼻子和嘴巴都在大量流血。";
+		this.m.Description = "脸上的一道锯齿状的深切口，大量的血流得眼睛、鼻子和嘴巴里都是。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_10";
 		this.m.Icon = "ui/injury/injury_icon_10.png";

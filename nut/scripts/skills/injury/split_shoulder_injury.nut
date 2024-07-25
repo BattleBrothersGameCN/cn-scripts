@@ -5,7 +5,7 @@ this.split_shoulder_injury <- this.inherit("scripts/skills/injury/injury", {
 		this.injury.create();
 		this.m.ID = "injury.split_shoulder";
 		this.m.Name = "肩部劈裂";
-		this.m.Description = "一处深割伤劈开了这个角色的肩膀，损伤了肌肉组织并极大的限制了手臂的活动能力。";
+		this.m.Description = "一处深割伤劈开了这个角色的肩膀，损伤了肌肉组织，极大的限制了手臂的活动能力。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_29";
 		this.m.Icon = "ui/injury/injury_icon_29.png";
