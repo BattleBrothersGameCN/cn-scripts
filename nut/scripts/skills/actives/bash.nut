@@ -4,7 +4,7 @@ this.bash <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.bash";
 		this.m.Name = "重击";
-		this.m.Description = "一种蛮力攻击，每次击中都会给对手施加额外的疲劳值。";
+		this.m.Description = "一种蛮力攻击，只要命中，就会让目标积累额外疲劳值。";
 		this.m.KilledString = "棍棒打死";
 		this.m.Icon = "skills/active_02.png";
 		this.m.IconDisabled = "skills/active_02_sw.png";

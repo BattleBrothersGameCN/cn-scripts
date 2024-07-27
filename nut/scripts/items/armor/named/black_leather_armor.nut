@@ -4,7 +4,7 @@ this.black_leather_armor <- this.inherit("scripts/items/armor/named/named_armor"
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.black_leather";
-		this.m.Description = "一种精心制作的硬化皮革盔甲，由加垫的软甲和链甲支撑。穿起来很轻，但是很结实。";
+		this.m.Description = "一件穿在填充软甲和链甲外的精制硬化皮甲。穿着虽轻但非常结实。";
 		this.m.NameList = [
 			"皮胸甲",
 			"链甲衫",
@@ -14,7 +14,7 @@ this.black_leather_armor <- this.inherit("scripts/items/armor/named/named_armor"
 			"守卫",
 			"外衣",
 			"夜斗篷",
-			"黑色",
+			"黑甲",
 			"黑暗预兆"
 		];
 		this.m.Variant = 42;

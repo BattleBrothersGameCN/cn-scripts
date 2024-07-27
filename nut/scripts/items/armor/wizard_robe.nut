@@ -4,7 +4,7 @@ this.wizard_robe <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.wizard_robe";
-		this.m.Name = "术士长袍";
+		this.m.Name = "巫师长袍";
 		this.m.Description = "一件布满了神秘饰品与符号的长袍。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

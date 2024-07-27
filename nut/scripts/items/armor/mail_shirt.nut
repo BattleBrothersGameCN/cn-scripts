@@ -5,7 +5,7 @@ this.mail_shirt <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.mail_shirt";
 		this.m.Name = "链甲衫";
-		this.m.Description = "一件带护肩的链甲衫，能很好地抵御大多数武器。";
+		this.m.Description = "一件带护肩的链甲衫，对大多数武器提供了极好的防护。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

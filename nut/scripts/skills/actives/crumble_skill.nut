@@ -4,7 +4,7 @@ this.crumble_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.crumble";
 		this.m.Name = "崩裂";
-		this.m.Description = "使敌人阵形崩裂的猛烈打击。它可以覆盖2格的距离，可以从前线后方使用，超出大多数其他近战武器的范围。";
+		this.m.Description = "能使敌人阵形崩裂的猛烈打击。它能覆盖2格距离，能从前线后方使用，范围超过大多数其他近战武器。";
 		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_205.png";
 		this.m.IconDisabled = "skills/active_205_sw.png";
@@ -57,7 +57,7 @@ this.crumble_skill <- this.inherit("scripts/skills/skill", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "造成 [color=" + this.Const.UI.Color.DamageValue + "]" + this.Const.Combat.FatigueReceivedPerHit * 2 + "[/color] 额外疲劳值"
+			text = "额外施加 [color=" + this.Const.UI.Color.DamageValue + "]" + this.Const.Combat.FatigueReceivedPerHit * 2 + "[/color] 点疲劳值"
 		});
 
 		if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInMaces)

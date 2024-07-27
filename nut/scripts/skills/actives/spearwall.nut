@@ -59,7 +59,7 @@ this.spearwall <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

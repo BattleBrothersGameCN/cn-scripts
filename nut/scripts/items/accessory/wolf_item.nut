@@ -50,7 +50,7 @@ this.wolf_item <- this.inherit("scripts/items/accessory/accessory", {
 		}
 		else
 		{
-			return "被释放到战场上的狼的项圈。";
+			return "一条项圈，拴着的狼被放到了战场上。";
 		}
 	}
 
@@ -60,8 +60,8 @@ this.wolf_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.m.Variant = this.Math.rand(1, 4);
 		this.updateVariant();
 		this.m.ID = "accessory.warwolf";
-		this.m.Name = this.Const.Strings.WardogNames[this.Math.rand(0, this.Const.Strings.WardogNames.len() - 1)] + "狼";
-		this.m.Description = "一只强壮的野狼，被驯化成了忠诚的战友。可以在战斗中释放用以侦查，追踪或追捕逃跑的敌人。";
+		this.m.Name = this.Const.Strings.WardogNames[this.Math.rand(0, this.Const.Strings.WardogNames.len() - 1)] + "·狼";
+		this.m.Description = "一条被驯化为忠诚战友的强壮野狼。可在战斗中释放，用以侦查、追踪或猎杀逃跑的敌人。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = false;

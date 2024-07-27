@@ -611,7 +611,7 @@ gt.Const.Strings.Tactical.TerrainName <- [
 	"无",
 	"泥路",
 	"粘土路",
-	"鹅卵石路",
+	"卵石路",
 	"草原",
 	"泥地",
 	"森林",
@@ -632,7 +632,7 @@ gt.Const.Strings.Tactical.TerrainDescription <- [
 	"无",
 	"源于人类和动物不断使用的土路。",
 	"一条由夯实粘土组成的原始道路。",
-	"用于马车和大型车辆的鹅卵石道路。",
+	"供马车等大型车辆通行的鹅卵石道路。",
 	"平坦坚实的地面上长着短草。",
 	"裸露而平坦的土地，几乎没有任何植被。",
 	"森林地面覆盖着一层又厚又软的苔藓层。",
@@ -1386,7 +1386,7 @@ gt.Const.Strings.PerkDescription <- {
 	SpecSword = "精通剑术，利用对手的失误把握优势。剑技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“还击”不再有命中率惩罚。\n\n“拖割”造成伤残的阈值降低 [color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]\n\n剑技能“裂盾”和“挥斩”不再有命中率惩罚，并且命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]",
 	SpecSpear = "精通长矛，御敌于外。矛技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“矛墙”不再因敌人成功进入控制区域而立即失效。此外，“矛墙”仍可主动启用，并继续对其他试图进入控制区域的敌人进行免费攻击。\n\n使用三叉矛和战叉攻击近身敌人不再有命中率惩罚。",
 	SpecPolearm = "精通长柄，御敌于外。长柄技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n长柄武器技能的行动点消耗降低至 [color=" + this.Const.UI.Color.NegativeValue + "]5[/color]，并且使用长柄武器攻击近身敌人不再有命中率惩罚。",
-	SpecHammer = "精通锤子，对抗重甲对手。锤技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“摧毁盔甲”和“粉碎盔甲”造成的护甲伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]33%[/color]\n\n“震碎”的命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]\n\n使用长锤攻击近身敌人不再有命中率惩罚。",
+	SpecHammer = "精通锤子，对抗重甲对手。锤技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“摧甲击”和“碎甲击”造成的护甲伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]33%[/color]\n\n“震碎”的命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]\n\n使用长锤攻击近身敌人不再有命中率惩罚。",
 	SpecMace = "精通骨朵，不论护甲一通暴打。骨朵技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n如果目标不免疫，“锤倒”、“撞倒”和“击倒”有 [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] 的几率使其昏迷。\n\n使用长棍攻击近身敌人不再有命中率惩罚。",
 	SpecFlail = "精通链枷，绕过对手的盾牌。链枷技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n\'当头一击\'和\'劈头盖脸\'无视盾牌加成。\n\n\'重磅打击\'在击中头部时忽略[color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 护甲。\n\n\'狂舞挥打\'的命中率提高[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]"
 };

@@ -5,7 +5,7 @@ this.adorned_heavy_mail_hauberk <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.adorned_heavy_mail_hauberk";
 		this.m.Name = "装饰重链铠";
-		this.m.Description = "加强了手臂防护，穿在厚重铆接外套下的重型链甲。虽然用得很多，却受到了精心维护和装饰，它的主人是个真正的冒险骑士。";
+		this.m.Description = "加强有臂甲，外部铆接了厚重夹克的重型链甲。虽然使用频繁，却受到了精心维护和装饰，它的主人称得上真正的冒险骑士。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

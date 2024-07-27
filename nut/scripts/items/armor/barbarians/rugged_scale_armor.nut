@@ -4,8 +4,8 @@ this.rugged_scale_armor <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.rugged_scale_armor";
-		this.m.Name = "粗糙的鳞甲";
-		this.m.Description = "用厚铁鳞片制成的重型护身甲。";
+		this.m.Name = "粗制鳞甲";
+		this.m.Description = "用厚重铁制鳞片制成的重型护身甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

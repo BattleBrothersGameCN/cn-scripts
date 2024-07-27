@@ -4,8 +4,8 @@ this.padded_vest <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.padded_vest";
-		this.m.Name = "软垫背心";
-		this.m.Description = "一种厚的布背心，里面垫着厚厚的羊毛，以防受到钝器的攻击。";
+		this.m.Name = "填充坎肩";
+		this.m.Description = "一件填充有厚羊毛，用以防护钝击的的厚布坎肩。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

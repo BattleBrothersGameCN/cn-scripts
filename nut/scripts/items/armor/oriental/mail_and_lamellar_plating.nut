@@ -5,7 +5,7 @@ this.mail_and_lamellar_plating <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.mail_and_lamellar_plating";
 		this.m.Name = "札链甲";
-		this.m.Description = "一种由金属板交织而成的片状衬衫穿在盔甲衫上。";
+		this.m.Description = "一件由层叠甲片制成，套在链甲衫外的札甲衫。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

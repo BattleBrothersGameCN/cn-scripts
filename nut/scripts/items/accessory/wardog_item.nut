@@ -56,7 +56,7 @@ this.wardog_item <- this.inherit("scripts/items/accessory/accessory", {
 		}
 		else
 		{
-			return "被释放到战场上的战犬的项圈。";
+			return "一条项圈，拴着的战犬被放到了战场上。";
 		}
 	}
 

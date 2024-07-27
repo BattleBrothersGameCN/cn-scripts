@@ -76,7 +76,7 @@ this.insect_swarm_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "非自然的生理功能使他逼退了虫群");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "靠他的后天生理机能逼退了虫群");
 			}
 
 			return;
@@ -110,7 +110,7 @@ this.insect_swarm_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "非自然的生理功能使他逼退了虫群");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "靠他的后天生理机能逼退了虫群");
 			}
 
 			this.removeSelf();

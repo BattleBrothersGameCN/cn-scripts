@@ -35,7 +35,7 @@ this.direwolf_pelt_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 			id = 15,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "减少任何近战对手的决心 [color=" + this.Const.UI.Color.NegativeValue + "]-5[/color]"
+			text = "将所有近战对手的决心减少[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color]"
 		});
 		return result;
 	}
@@ -46,7 +46,7 @@ this.direwolf_pelt_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 			id = 15,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "减少任何近战对手的决心 [color=" + this.Const.UI.Color.NegativeValue + "]-5[/color]"
+			text = "将所有近战对手的决心减少[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color]"
 		});
 	}
 

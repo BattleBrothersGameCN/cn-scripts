@@ -11,7 +11,7 @@ this.drink_antidote_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.drink_antidote";
 		this.m.Name = "饮用或给予解毒剂";
-		this.m.Description = "将解毒剂给予附近的盟友或自己饮用，以消除任意中毒效果。无法在卷入近战时使用，任何接受此物品的人都需要一个背包空位。";
+		this.m.Description = "将解毒剂给予附近的盟友或自己饮用，以消除任意中毒效果。无法在陷入近战时使用，任何接受此物品的人都需要一个背包空位。";
 		this.m.Icon = "skills/active_96.png";
 		this.m.IconDisabled = "skills/active_96_sw.png";
 		this.m.Overlay = "active_96";
@@ -72,7 +72,7 @@ this.drink_antidote_skill <- this.inherit("scripts/skills/skill", {
 				id = 5,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

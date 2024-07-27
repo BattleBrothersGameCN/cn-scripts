@@ -5,7 +5,7 @@ this.nomad_robe <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.nomad_robe";
 		this.m.Name = "游牧长袍";
-		this.m.Description = "一种游牧民族的布长袍，用来防暑、防割伤和擦伤。";
+		this.m.Description = "一件游牧布制长袍，用于抵御暑热、割伤和擦伤。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

@@ -4,8 +4,8 @@ this.gladiator_harness <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.gladiator_harness";
-		this.m.Name = "角斗士甲胄";
-		this.m.Description = "在南方城邦的竞技场上，斗士通常戴的一种皮制甲胄。";
+		this.m.Name = "角斗士甲";
+		this.m.Description = "南方城邦竞技场里，角斗士常穿的一种皮制甲胄。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

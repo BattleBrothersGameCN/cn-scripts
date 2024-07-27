@@ -4,7 +4,7 @@ this.batter_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.batter";
 		this.m.Name = "锤击";
-		this.m.Description = "一种可以覆盖2格距离的打击。它的效果即便穿着最厚的盔甲也能感受到。";
+		this.m.Description = "一种可以覆盖2格距离的打击。穿着最厚的盔甲也不能无动于衷。";
 		this.m.KilledString = "锤打致死";
 		this.m.Icon = "skills/active_136.png";
 		this.m.IconDisabled = "skills/active_136_sw.png";

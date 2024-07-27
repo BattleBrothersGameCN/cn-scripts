@@ -4,7 +4,7 @@ this.chop <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.chop";
 		this.m.Name = "劈剁";
-		this.m.Description = "一次强力的斩击，将用尽全力打击目标。";
+		this.m.Description = "一记强力斩击，用尽全力打击任何目标。";
 		this.m.KilledString = "剁碎";
 		this.m.Icon = "skills/active_25.png";
 		this.m.IconDisabled = "skills/active_25_sw.png";

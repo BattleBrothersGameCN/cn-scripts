@@ -145,7 +145,7 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "非自然的生理功能帮助他免受酸液影响");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "靠他的后天生理机能免受酸液影响");
 			}
 
 			this.removeSelf();

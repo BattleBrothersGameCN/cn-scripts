@@ -11,7 +11,7 @@ this.first_aid_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.first_aid";
 		this.m.Name = "急救";
-		this.m.Description = "通过对伤口施加压力并进行临时包扎防止自己流血致死。不能恢复生命值。无法在卷入近战时使用。";
+		this.m.Description = "通过对伤口施加压力并进行临时包扎防止自己流血致死。不能恢复生命值。无法在陷入近战时使用。";
 		this.m.Icon = "ui/perks/perk_55_active.png";
 		this.m.IconDisabled = "ui/perks/perk_55_active_sw.png";
 		this.m.Overlay = "perk_55_active";
@@ -71,7 +71,7 @@ this.first_aid_skill <- this.inherit("scripts/skills/skill", {
 				id = 5,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

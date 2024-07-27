@@ -23,7 +23,7 @@ this.break_free_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.break_free";
 		this.m.Name = "挣脱束缚";
-		this.m.Description = "利用你所能用上的一切，把你自己从束缚你的东西中解放出来。如果需要，可以砍、劈、割或啃！";
+		this.m.Description = "用上手头的一切，把自己从束缚中解放出来。砍它、劈它、割它、实在不行就啃！";
 		this.m.Icon = "skills/active_15.png";
 		this.m.IconDisabled = "skills/active_15_sw.png";
 		this.m.Overlay = "active_15";
@@ -65,7 +65,7 @@ this.break_free_skill <- this.inherit("scripts/skills/skill", {
 				id = 4,
 				type = "text",
 				icon = "ui/icons/melee_skill.png",
-				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]" + chance + "%[/color] 几率成功，基于近战技能。每次失败的尝试都将增加后续尝试成功的几率。"
+				text = "基于近战技能，成功率为 [color=" + this.Const.UI.Color.PositiveValue + "]" + chance + "%[/color] 。每次失败尝试都将提高后续成功率。"
 			}
 		];
 	}

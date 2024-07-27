@@ -5,7 +5,7 @@ this.sergeant_badge_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.accessory.create();
 		this.m.ID = "accessory.sergeant_badge";
 		this.m.Name = "军士绶带";
-		this.m.Description = "由战团军士穿戴的绶带，他是你在战场上的副手。";
+		this.m.Description = "战场上战团军士佩戴的绶带，是他作为你副官的身份象征。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

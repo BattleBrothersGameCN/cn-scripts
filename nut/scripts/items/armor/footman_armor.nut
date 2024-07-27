@@ -5,7 +5,7 @@ this.footman_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.footman_armor";
 		this.m.Name = "步兵甲";
-		this.m.Description = "一件长身链甲和皮革软甲铆接而成的过渡期铠甲。";
+		this.m.Description = "一件长身链甲和皮革软甲铆接而成的过渡型铠甲。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 84;

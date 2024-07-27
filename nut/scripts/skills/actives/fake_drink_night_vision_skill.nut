@@ -4,7 +4,7 @@ this.fake_drink_night_vision_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.fake_drink_night_vision";
 		this.m.Name = "饮用夜枭药剂";
-		this.m.Description = "饮用一瓶炼金术的精华，使得黑夜就跟中午一样明亮。无法在卷入近战时使用。";
+		this.m.Description = "饮用一瓶炼金术的精华，使得黑夜就跟中午一样明亮。无法在陷入近战时使用。";
 		this.m.Icon = "skills/active_142.png";
 		this.m.IconDisabled = "skills/active_142_sw.png";
 		this.m.Overlay = "active_142";
@@ -59,7 +59,7 @@ this.fake_drink_night_vision_skill <- this.inherit("scripts/skills/skill", {
 				id = 5,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

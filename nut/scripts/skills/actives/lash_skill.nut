@@ -59,7 +59,7 @@ this.lash_skill <- this.inherit("scripts/skills/skill", {
 				id = 8,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "忽视盾牌提供的近战防御加成"
+				text = "无视盾牌提供的近战防御加成"
 			});
 		}
 
