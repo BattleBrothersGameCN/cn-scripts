@@ -4,13 +4,13 @@ this.named_skull_and_chain_armor <- this.inherit("scripts/items/armor/named/name
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.named_skull_and_chain_armor";
-		this.m.Description = "一种粗制的野蛮人盔甲，经过调整后可以保护，但又不太笨重。 它带有北方野蛮部落的典型标志。";
+		this.m.Description = "一件经过调整的粗制蛮人甲，既有保护能力又不太笨重。带有北方野蛮部落的典型标志。";
 		this.m.NameList = [
-			"部落兽皮(Tribal Hide)",
-			"蛮族外套 (Barbarian Coat)",
-			"扫气装甲",
-			"蛮族皮毛(Barbarian Pelt)",
-			"原始马具(Primitive Harness)"
+			"部落兽皮甲",
+			"蛮族外衣",
+			"重铸战甲",
+			"蛮族披挂",
+			"原始甲胄"
 		];
 		this.m.PrefixList = this.Const.Strings.BarbarianPrefix;
 		this.m.UseRandomName = false;

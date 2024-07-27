@@ -5,7 +5,7 @@ this.ancient_double_layer_mail <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.ancient_double_layer_mail";
 		this.m.Name = "古代双层链甲";
-		this.m.Description = "一件沉重又腐朽的双层链甲，穿起来不舒服但仍然可用。";
+		this.m.Description = "一件沉重又腐朽的双层链甲，穿起来不算舒服，但仍然可以使用。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

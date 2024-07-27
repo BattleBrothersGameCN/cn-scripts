@@ -4,7 +4,7 @@ this.blue_studded_mail_armor <- this.inherit("scripts/items/armor/named/named_ar
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.blue_studded_mail";
-		this.m.Description = "这件特殊的锁子甲由厚实的软甲铆接皮夹克制成，质量轻但能提供很好的防护作用。";
+		this.m.Description = "这件特殊的链甲内附一套软甲，外铆一件皮夹克，在保证防护能力的同时减轻了重量。";
 		this.m.NameList = [
 			"填充链甲",
 			"蟾蜍皮",

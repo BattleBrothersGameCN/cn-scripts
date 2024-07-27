@@ -4,7 +4,7 @@ this.black_and_gold_armor <- this.inherit("scripts/items/armor/named/named_armor
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.black_and_gold";
-		this.m.Description = "古老的知识被用来锻造这套独特的盔甲。 它的轻甲片与黄金夹板重叠提供高保护和易于操控进而减轻负担。";
+		this.m.Description = "锻制这套甲用上了古代的智识。它由轻质链甲与金色夹板层叠而成，提供较高保护能力的同时把负重控制在了合理范围之内。";
 		this.m.NameList = [
 			"镀金者的光辉守护",
 			"镀金者之肤",

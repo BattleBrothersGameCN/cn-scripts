@@ -53,7 +53,7 @@ this.unleash_wardog <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.unleash_wardog";
 		this.m.Name = "释放战犬";
-		this.m.Description = "释放你的战犬，让其冲向敌人。需要有一个空着的相邻格子。";
+		this.m.Description = "释放你的战犬，让其冲向敌人。需要一个空着的相邻格子。";
 		this.m.Icon = "skills/active_83.png";
 		this.m.IconDisabled = "skills/active_83_sw.png";
 		this.m.Overlay = "active_83";

@@ -64,7 +64,7 @@ this.dazed_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!actor.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "非自然的生理功能帮助他摆脱茫然");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "靠他的后天生理机能摆脱了茫然");
 			}
 
 			this.removeSelf();

@@ -5,7 +5,7 @@ this.thick_furs_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.thick_furs";
 		this.m.Name = "厚皮衣";
-		this.m.Description = "由脱水干燥的毛皮制成，能同时抵御寒冷和冲击。";
+		this.m.Description = "由脱水干燥的毛皮厚拼接而成，既能抵御寒冷，又能防护打击。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

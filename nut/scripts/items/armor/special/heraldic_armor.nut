@@ -7,7 +7,7 @@ this.heraldic_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.heraldic_armor";
 		this.m.Name = "纹章链铠";
-		this.m.Description = "一种用肩甲加固的锁子甲，额外附加了金属镀层和铆接的皮革盔甲，上面镶嵌着贵族家族的纹章。";
+		this.m.Description = "一件加强有肩甲、附加金属板和铆接皮甲的长身链甲，外罩一件贵族家族代表色的罩衣。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

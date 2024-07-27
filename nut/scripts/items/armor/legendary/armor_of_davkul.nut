@@ -5,7 +5,7 @@ this.armor_of_davkul <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.armor_of_davkul";
 		this.m.Name = "达库尔的神体";
-		this.m.Description = "达库尔(Davkul)骇人的一面，这是来自异界的古老力量，以及 %sacrifice% 身体最后的遗留和重塑。它永远不会破裂，而是在原地不断地再生它那伤痕累累的皮肤。";
+		this.m.Description = "骇人的达库尔神体，是来自异界的古老力量，也是%sacrifice%身体最后的遗留和重塑。它永远不会破裂，而是在原地不断地再生它那伤痕累累的皮肤。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

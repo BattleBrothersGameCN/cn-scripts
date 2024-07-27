@@ -113,7 +113,7 @@ this.charm_skill <- this.inherit("scripts/skills/skill", {
 			{
 				if (!_user.isHiddenToPlayer() && !target.isHiddenToPlayer())
 				{
-					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(target) + "因为他的决心抵抗了魅惑");
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(target) + "靠决心抵抗了魅惑");
 				}
 
 				return false;
@@ -123,7 +123,7 @@ this.charm_skill <- this.inherit("scripts/skills/skill", {
 			{
 				if (!_user.isHiddenToPlayer() && !target.isHiddenToPlayer())
 				{
-					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(target) + "因为他的决心抵抗了魅惑");
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(target) + "靠决心抵抗了魅惑");
 				}
 
 				return false;
@@ -133,7 +133,7 @@ this.charm_skill <- this.inherit("scripts/skills/skill", {
 			{
 				if (!_user.isHiddenToPlayer() && !target.isHiddenToPlayer())
 				{
-					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(target) + "因为他不自然的生理机能抵抗了魅惑");
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(target) + "靠他的后天生理机能抵抗了魅惑");
 				}
 
 				return false;

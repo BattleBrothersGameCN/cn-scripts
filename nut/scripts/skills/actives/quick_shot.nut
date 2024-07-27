@@ -7,7 +7,7 @@ this.quick_shot <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.quick_shot";
 		this.m.Name = "急速射击";
-		this.m.Description = "一次并没有花多少时间去拉弓瞄准的快速射击。准确度随着距离急剧下降。无法在卷入近战时使用。";
+		this.m.Description = "一次并没有花多少时间去拉弓瞄准的快速射击。准确度随着距离急剧下降。无法在陷入近战时使用。";
 		this.m.KilledString = "射杀";
 		this.m.Icon = "skills/active_05.png";
 		this.m.IconDisabled = "skills/active_05_sw.png";
@@ -114,7 +114,7 @@ this.quick_shot <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

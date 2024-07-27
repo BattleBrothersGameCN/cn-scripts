@@ -30,7 +30,7 @@ this.horrified_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.actor) + "非自然的生理功能帮助他免受惊骇");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.actor) + "靠他的后天生理机能免受惊骇");
 			}
 
 			this.removeSelf();

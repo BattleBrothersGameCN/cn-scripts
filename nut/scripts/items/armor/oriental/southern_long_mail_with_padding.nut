@@ -4,8 +4,8 @@ this.southern_long_mail_with_padding <- this.inherit("scripts/items/armor/armor"
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.southern_long_mail_with_padding";
-		this.m.Name = "内衬南方长链甲衫";
-		this.m.Description = "一种又长又重的链甲衫，有厚厚的软垫外套。";
+		this.m.Name = "衬垫南方链甲长衫";
+		this.m.Description = "一件带有厚实填充大衣的长而重的链甲衫。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

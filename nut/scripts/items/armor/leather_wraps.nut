@@ -5,7 +5,7 @@ this.leather_wraps <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.leather_wraps";
 		this.m.Name = "皮革外衣";
-		this.m.Description = "一块块粗糙的皮革缝在一起。";
+		this.m.Description = "块块粗糙皮革缝在一起。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 18;

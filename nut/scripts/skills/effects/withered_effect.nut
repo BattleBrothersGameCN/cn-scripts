@@ -70,7 +70,7 @@ this.withered_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!actor.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "非自然的生理功能帮助他迅速从凋零中恢复");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "靠他的后天生理机能迅速从凋零中恢复");
 			}
 
 			this.removeSelf();

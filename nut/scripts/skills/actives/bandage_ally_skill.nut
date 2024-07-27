@@ -11,7 +11,7 @@ this.bandage_ally_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.bandage_ally";
 		this.m.Name = "使用绷带";
-		this.m.Description = "通过对伤口施压进行临时包扎，防止自己或其他角色失血而死。无法恢复生命值。使用者和救治对象均不能卷入近战。";
+		this.m.Description = "通过对伤口施压进行临时包扎，防止自己或其他角色失血而死。无法恢复生命值。使用者和救治对象均未陷入近战方能使用。";
 		this.m.Icon = "skills/active_105.png";
 		this.m.IconDisabled = "skills/active_105_sw.png";
 		this.m.Overlay = "active_105";
@@ -72,7 +72,7 @@ this.bandage_ally_skill <- this.inherit("scripts/skills/skill", {
 				id = 5,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

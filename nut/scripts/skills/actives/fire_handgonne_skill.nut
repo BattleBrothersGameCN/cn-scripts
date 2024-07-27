@@ -13,7 +13,7 @@ this.fire_handgonne_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.fire_handgonne";
 		this.m.Name = "火铳开火";
-		this.m.Description = "点燃火铳的导火索。可以同时击中多个目标，但距离较远的目标不太可能被击中。无法在卷入近战时使用。";
+		this.m.Description = "点燃火铳的导火索。可以同时击中多个目标，但距离较远的目标不太可能被击中。无法在陷入近战时使用。";
 		this.m.Icon = "skills/active_203.png";
 		this.m.IconDisabled = "skills/active_203_sw.png";
 		this.m.Overlay = "active_203";
@@ -129,7 +129,7 @@ this.fire_handgonne_skill <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

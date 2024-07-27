@@ -28,7 +28,7 @@ this.additional_padding_upgrade <- this.inherit("scripts/items/armor_upgrades/ar
 			id = 15,
 			type = "text",
 			icon = "ui/icons/direct_damage.png",
-			text = "使忽视盔甲的伤害减少 [color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]"
+			text = "所受穿甲伤害减少 [color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]"
 		});
 		result.push({
 			id = 14,

@@ -7,7 +7,7 @@ this.sling_stone_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.sling_stone";
 		this.m.Name = "抛射石块";
-		this.m.Description = "用你投石杖向目标抛射石块。准确度随着距离急剧下降。无法在卷入近战时使用。";
+		this.m.Description = "用你投石杖向目标抛射石块。准确度随着距离急剧下降。无法在陷入近战时使用。";
 		this.m.KilledString = "乱石砸死";
 		this.m.Icon = "skills/active_12.png";
 		this.m.IconDisabled = "skills/active_12_sw.png";
@@ -121,7 +121,7 @@ this.sling_stone_skill <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

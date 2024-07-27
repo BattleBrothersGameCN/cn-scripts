@@ -4,7 +4,7 @@ this.named_golden_lamellar_armor <- this.inherit("scripts/items/armor/named/name
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.named_golden_lamellar_armor";
-		this.m.Description = "精心制作的薄片状盔甲。 它上面覆盖着金箔，这使它真正与众不同。";
+		this.m.Description = "一件制作尤为精良的札甲。上面覆盖的金箔让它真正地脱颖而出。";
 		this.m.NameList = [
 			"甲胄",
 			"守护",

@@ -93,7 +93,7 @@ this.hex_skill <- this.inherit("scripts/skills/skill", {
 		{
 			if (!_user.isHiddenToPlayer() && !target.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(target) + "非自然的生理功能帮助他抵抗了诅咒");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(target) + "靠他的后天生理机能抵抗了诅咒");
 			}
 
 			return false;

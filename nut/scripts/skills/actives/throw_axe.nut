@@ -7,7 +7,7 @@ this.throw_axe <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.throw_axe";
 		this.m.Name = "掷斧";
-		this.m.Description = "向目标投掷投斧。无法在卷入近战时使用。";
+		this.m.Description = "向目标投掷投斧。无法在陷入近战时使用。";
 		this.m.Icon = "skills/active_87.png";
 		this.m.IconDisabled = "skills/active_87_sw.png";
 		this.m.Overlay = "active_87";
@@ -104,7 +104,7 @@ this.throw_axe <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

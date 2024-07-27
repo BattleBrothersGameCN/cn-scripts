@@ -52,7 +52,7 @@ this.staggered_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!actor.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "非自然的生理功能帮助他免受趔趄");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "靠他的后天生理机能免受趔趄");
 			}
 
 			this.removeSelf();

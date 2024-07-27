@@ -4,7 +4,7 @@ this.break_ally_free_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.break_ally_free";
 		this.m.Name = "解救盟友";
-		this.m.Description = "利用你所能用上的一切，把附近的盟友从束缚他们的东西中解放出来。如果需要，可以砍、劈、割或啃！";
+		this.m.Description = "用上手头的一切，把邻近的盟友从束缚中解救出来。砍它、劈它、割它、实在不行就啃！";
 		this.m.Icon = "skills/active_151.png";
 		this.m.IconDisabled = "skills/active_151_sw.png";
 		this.m.Overlay = "active_151";
@@ -48,7 +48,7 @@ this.break_ally_free_skill <- this.inherit("scripts/skills/skill", {
 				id = 4,
 				type = "text",
 				icon = "ui/icons/melee_skill.png",
-				text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]" + chance + "%[/color] 几率成功，基于近战技能。如果之前已经有救援队友的尝试则更高。"
+				text = "基于近战技能，成功率为 [color=" + this.Const.UI.Color.PositiveValue + "]" + chance + "%[/color] 。如果已经尝试过解救盟友则会更高。"
 			}
 		];
 	}

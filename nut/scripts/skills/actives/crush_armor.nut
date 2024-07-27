@@ -3,7 +3,7 @@ this.crush_armor <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.crush_armor";
-		this.m.Name = "摧毁盔甲";
+		this.m.Name = "摧甲击";
 		this.m.Description = "使用武器以极高的效率的方式捶打、弯折、撕裂等方式使目标的盔甲失去作用。 尽管最厚的盔甲也能感受到冲击力，但这并不会对穿戴者造成太大伤害。";
 		this.m.Icon = "skills/active_36.png";
 		this.m.IconDisabled = "skills/active_36_sw.png";

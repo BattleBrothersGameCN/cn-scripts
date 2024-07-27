@@ -56,7 +56,7 @@ this.warhound_item <- this.inherit("scripts/items/accessory/accessory", {
 		}
 		else
 		{
-			return "被释放到战场上的战獒项圈。";
+			return "一条项圈，拴着的战獒被放到了战场上。";
 		}
 	}
 
@@ -67,7 +67,7 @@ this.warhound_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.updateVariant();
 		this.m.ID = "accessory.warhound";
 		this.m.Name = this.Const.Strings.WardogNames[this.Math.rand(0, this.Const.Strings.WardogNames.len() - 1)] + "·战獒";
-		this.m.Description = "忠诚而强壮的北方獒犬，为战争而饲养。可以在战斗中释放用以侦查，追踪或追捕逃跑的敌人。";
+		this.m.Description = "一条为战争而生，强壮而忠诚的北方战獒。可在战斗中释放，用以侦查、追踪或猎杀逃跑的敌人。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = false;
@@ -105,7 +105,7 @@ this.warhound_item <- this.inherit("scripts/items/accessory/accessory", {
 		local unleash = this.new("scripts/skills/actives/unleash_wardog");
 		unleash.setItem(this);
 		unleash.m.Name = "释放战獒";
-		unleash.m.Description = "释放你的战獒，让其冲向敌人。需要有一个空着的相邻格子。";
+		unleash.m.Description = "释放你的战獒，让其冲向敌人。需要一个空着的相邻格子。";
 		unleash.m.Icon = "skills/active_165.png";
 		unleash.m.IconDisabled = "skills/active_165_sw.png";
 		unleash.m.Overlay = "active_165";

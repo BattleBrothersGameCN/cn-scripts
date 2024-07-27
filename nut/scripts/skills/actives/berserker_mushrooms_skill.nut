@@ -11,7 +11,7 @@ this.berserker_mushrooms_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.berserker_mushrooms";
 		this.m.Name = "吃下或给出怪异蘑菇";
-		this.m.Description = "给邻近的盟友或自己吃奇怪的蘑菇，进入一种恍惚般的愤怒状态，而不考虑你的安全。 可能会导致疾病。 效果将在4回合内慢慢消失。 不能在近战中使用，任何收到物品的人都需要有一个空的背包位置。";
+		this.m.Description = "吃下怪异蘑菇或递给接邻盟友。吃下会让人进入一种不顾自身安危的迷幻愤怒状态。可能导致疾病。效果会用4回合慢慢消退。陷入近战后无法使用，接受物品的人需要有一个空的背包栏位。";
 		this.m.Icon = "skills/active_98.png";
 		this.m.IconDisabled = "skills/active_98_sw.png";
 		this.m.Overlay = "active_98";
@@ -82,7 +82,7 @@ this.berserker_mushrooms_skill <- this.inherit("scripts/skills/skill", {
 				id = 5,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

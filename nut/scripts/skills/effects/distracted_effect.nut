@@ -58,7 +58,7 @@ this.distracted_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!actor.isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "非自然的生理功能帮助他恢复集中");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "靠他的后天生理机能恢复了集中");
 			}
 
 			this.removeSelf();

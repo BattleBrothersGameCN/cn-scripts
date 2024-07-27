@@ -5,7 +5,7 @@ this.southern_mail_shirt <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.southern_mail_shirt";
 		this.m.Name = "南方链甲衫";
-		this.m.Description = "一种链甲衫，由比北方使用的稍薄、更轻的金属环制成。";
+		this.m.Description = "一件用比北方更细更的链环制成的链甲衫。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

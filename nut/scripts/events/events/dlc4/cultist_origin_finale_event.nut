@@ -99,7 +99,7 @@ this.cultist_origin_finale_event <- this.inherit("scripts/events/event", {
 				this.World.getPlayerRoster().remove(_event.m.Sacrifice);
 				this.World.Assets.getStash().makeEmptySlots(1);
 				local item = this.new("scripts/items/armor/legendary/armor_of_davkul");
-				item.m.Description = "达库尔(Davkul)骇人的一面，这是来自异界的古老力量，以及" + _event.m.Sacrifice.getName() + "身体最后的遗留和重塑。它永远不会破裂，而是在原地不断地再生它那伤痕累累的皮肤。";
+				item.m.Description = "骇人的达库尔神体，是来自异界的古老力量，也是" + _event.m.Sacrifice.getName() + "身体最后的遗留和重塑。它永远不会破裂，而是在原地不断地再生它那伤痕累累的皮肤。";
 				this.World.Assets.getStash().add(item);
 				this.List.push({
 					id = 10,

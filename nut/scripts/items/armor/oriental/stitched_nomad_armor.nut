@@ -4,8 +4,8 @@ this.stitched_nomad_armor <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.stitched_nomad_armor";
-		this.m.Name = "缝纫游牧甲";
-		this.m.Description = "一种由各种皮革和碎片缝合而成的游牧民族的皮革盔甲。";
+		this.m.Name = "缝制游牧甲";
+		this.m.Description = "一件由各式皮革和布片缝制而成的游牧皮甲。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

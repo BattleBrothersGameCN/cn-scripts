@@ -5,7 +5,7 @@ this.werewolf_hide_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.werewolf_hide";
 		this.m.Name = "恐狼皮甲";
-		this.m.Description = "一件巨狼毛皮制成精巧皮甲。这种兽皮加身，可谓威风凛凛。";
+		this.m.Description = "一件巨狼毛皮制成精巧皮甲。有这种兽皮加身可谓威风凛凛。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

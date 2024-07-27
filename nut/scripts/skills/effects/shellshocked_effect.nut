@@ -89,7 +89,7 @@ this.shellshocked_effect <- this.inherit("scripts/skills/skill", {
 		{
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "因为他不自然的生理机能抵抗了炮火震撼");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "靠他的后天生理机能抵抗了炮火震撼");
 			}
 
 			this.removeSelf();

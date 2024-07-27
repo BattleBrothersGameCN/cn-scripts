@@ -4,12 +4,12 @@ this.named_noble_mail_armor <- this.inherit("scripts/items/armor/named/named_arm
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.named_noble_mail_armor";
-		this.m.Description = "这件轻甲曾经是一位著名刺剑高手的私人物品。 它和束腰外衣一样轻，但能保护身体所有重要部位。";
+		this.m.Description = "这件轻型链甲曾是一位著名剑斗大师的私人物品。轻似一件束腰外衣，却护住了身上的全部要害。";
 		this.m.NameList = [
-			"强化甲",
+			"加固链甲",
 			"夜斗篷",
 			"贵族链甲",
-			"刺剑链甲"
+			"击剑链甲"
 		];
 		this.m.Variant = 99;
 		this.updateVariant();

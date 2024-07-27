@@ -63,7 +63,7 @@ this.large_powder_bag <- this.inherit("scripts/items/ammo/ammo", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/ammo.png",
-				text = "装有[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Ammo + "[/color]个药包"
+				text = "药量够用[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Ammo + "[/color]次"
 			});
 		}
 		else

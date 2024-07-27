@@ -11,7 +11,7 @@ this.coat_with_poison_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.coat_with_poison";
 		this.m.Name = "使用毒药";
-		this.m.Description = "把你的武器和箭头涂上毒药。 不能在近战中使用。";
+		this.m.Description = "给你的武器和箭头涂上毒药。无法在陷入近战时使用。";
 		this.m.Icon = "skills/active_95.png";
 		this.m.IconDisabled = "skills/active_95_sw.png";
 		this.m.Overlay = "active_95";
@@ -66,7 +66,7 @@ this.coat_with_poison_skill <- this.inherit("scripts/skills/skill", {
 				id = 5,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

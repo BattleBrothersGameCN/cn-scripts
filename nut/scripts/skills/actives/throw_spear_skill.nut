@@ -4,7 +4,7 @@ this.throw_spear_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.throw_spear";
 		this.m.Name = "投矛";
-		this.m.Description = "向目标投掷投矛以使目标的盾牌无法使用。装备盾牌的目标总是会被命中，相反没有装备盾牌的目标不一定会被命中，但如果命中可以造成大量伤害。无法在卷入近战时使用。";
+		this.m.Description = "向目标投掷投矛以使目标的盾牌无法使用。装备盾牌的目标总是会被命中，相反没有装备盾牌的目标不一定会被命中，但如果命中可以造成大量伤害。无法在陷入近战时使用。";
 		this.m.KilledString = "刺穿";
 		this.m.Icon = "skills/active_138.png";
 		this.m.IconDisabled = "skills/active_138_sw.png";
@@ -88,7 +88,7 @@ this.throw_spear_skill <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

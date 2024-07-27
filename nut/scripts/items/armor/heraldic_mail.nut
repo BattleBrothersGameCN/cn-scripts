@@ -5,7 +5,7 @@ this.heraldic_mail <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.heraldic_mail";
 		this.m.Name = "纹章链甲";
-		this.m.Description = "一件附有联指手套和软垫衬底的重型精制全身链甲。只有真正的大师才能制作出这样的盔甲。";
+		this.m.Description = "一件附有联指手套和软垫衬底的重型精制长身链甲。只有真正的大师才能制作出这样的盔甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

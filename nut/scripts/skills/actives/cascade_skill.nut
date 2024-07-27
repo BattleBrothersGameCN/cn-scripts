@@ -4,7 +4,7 @@ this.cascade_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.cascade";
 		this.m.Name = "连环打击";
-		this.m.Description = "向你的对手倾泻你链枷的三个头。会绕过盾牌的掩护。";
+		this.m.Description = "把链枷的三个头倾泻向对手。能绕过盾牌掩护。";
 		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_125.png";
 		this.m.IconDisabled = "skills/active_125_sw.png";
@@ -55,7 +55,7 @@ this.cascade_skill <- this.inherit("scripts/skills/skill", {
 				id = 8,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "忽视盾牌提供的近战防御加成"
+				text = "无视盾牌提供的近战防御加成"
 			}
 		]);
 		return ret;

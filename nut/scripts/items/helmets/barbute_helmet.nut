@@ -5,7 +5,7 @@ this.barbute_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.barbute_helmet";
 		this.m.Name = "开面盔";
-		this.m.Description = "一种坚固而轻便的开面盔，在这些地区是一种不常见的设计，由特别轻而耐用的钢材制成。";
+		this.m.Description = "一顶坚固而轻便的开面盔，由特别轻巧耐用的钢材制成，并非此地的常见款式。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

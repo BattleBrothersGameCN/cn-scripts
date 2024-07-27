@@ -4,8 +4,8 @@ this.plated_nomad_mail <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.plated_nomad_mail";
-		this.m.Name = "镀金游牧链甲";
-		this.m.Description = "一种稍微磨损的、薄而轻的链甲，上面有额外的金属板。";
+		this.m.Name = "覆板游牧链甲";
+		this.m.Description = "一件略微磨损，装有额外金属板的轻薄链甲。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

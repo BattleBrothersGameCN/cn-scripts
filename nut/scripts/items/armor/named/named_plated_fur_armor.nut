@@ -4,12 +4,12 @@ this.named_plated_fur_armor <- this.inherit("scripts/items/armor/named/named_arm
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.named_plated_fur_armor";
-		this.m.Description = "一个简单的毛皮和皮革装甲与厚层金属板铆接在一起。 一个非常简单和沉重的设计，但在战斗中相当有效。";
+		this.m.Description = "一件在外侧铆接了厚重金属板状甲片的简单毛皮甲。简单又沉重，在战斗中却非常有效。";
 		this.m.NameList = [
-			"镀毛皮铠甲",
+			"毛皮板甲",
 			"钢板甲胄",
-			"板盖皮",
-			"铆接毛皮"
+			"覆板皮甲",
+			"毛铆甲"
 		];
 		this.m.PrefixList = this.Const.Strings.BarbarianPrefix;
 		this.m.UseRandomName = false;

@@ -4,15 +4,15 @@ this.brown_coat_of_plates_armor <- this.inherit("scripts/items/armor/named/named
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.brown_coat_of_plates";
-		this.m.Description = "一种用结实金属板组成的厚链锁子甲。即使是最激烈的战斗也能保护其穿戴者。";
+		this.m.Description = "一件复合了扎实金属板的厚重长身链甲。能在最激烈的战斗重保护其穿戴者。";
 		this.m.NameList = [
 			"甲胄",
 			"守护",
 			"防卫",
 			"阻截者",
 			"板甲",
-			"护板背心",
-			"救生者"
+			"无袖板甲",
+			"护命甲"
 		];
 		this.m.Variant = 45;
 		this.updateVariant();

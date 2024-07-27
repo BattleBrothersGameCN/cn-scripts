@@ -4,12 +4,12 @@ this.named_sellswords_armor <- this.inherit("scripts/items/armor/named/named_arm
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.named_sellswords_armor";
-		this.m.Description = "这件多层盔甲曾经属于一个著名的雇佣兵。 它的高弹性和灵活性使它成为一项非凡的工艺。 它甚至还有附加的口袋！";
+		this.m.Description = "这件多层护甲曾属于一位著名的雇佣兵。它的高弹性和柔韧性使它成为了一件杰出的工艺品。它甚至还带着额外的口袋！";
 		this.m.NameList = [
-			"雇佣兵外套",
+			"佣兵外套",
 			"佣兵的遮挡",
 			"复层装甲",
-			"护板外套"
+			"板甲衣"
 		];
 		this.m.Variant = 101;
 		this.updateVariant();

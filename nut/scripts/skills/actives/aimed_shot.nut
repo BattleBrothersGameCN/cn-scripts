@@ -11,7 +11,7 @@ this.aimed_shot <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.aimed_shot";
 		this.m.Name = "瞄准射击";
-		this.m.Description = "一种集中注意力仔细瞄准的射击，即使在远距离也相对容易命中预期目标。无法在卷入近战时使用。";
+		this.m.Description = "集中注意，仔细瞄准。即使预设目标较远也相对容易命中。陷入近战后无法使用。";
 		this.m.KilledString = "射杀";
 		this.m.Icon = "skills/active_18.png";
 		this.m.IconDisabled = "skills/active_18_sw.png";
@@ -118,7 +118,7 @@ this.aimed_shot <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]无法使用，因为此角色已卷入近战[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]角色陷入近战，无法使用[/color]"
 			});
 		}
 

@@ -15,7 +15,7 @@ this.cleave <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.cleave";
 		this.m.Name = "劈砍";
-		this.m.Description = "一种蛮力的劈砍攻击，如果没有盔甲吸收打击则可以造成流血的伤口，当然前提是目标有血可流。";
+		this.m.Description = "一记暴力劈斩攻击，如果没有护甲吸收则会造成流血伤口，当然，前提是目标有血可流。";
 		this.m.KilledString = "劈开";
 		this.m.Icon = "skills/active_19.png";
 		this.m.IconDisabled = "skills/active_19_sw.png";
@@ -66,7 +66,7 @@ this.cleave <- this.inherit("scripts/skills/skill", {
 			id = 8,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "造成额外的 [color=" + this.Const.UI.Color.DamageValue + "]" + dmg + "[/color] 每回合流血伤害，持续 2 回合"
+			text = "每回合额外造成 [color=" + this.Const.UI.Color.DamageValue + "]" + dmg + "[/color] 点流血伤害，持续 2 回合"
 		});
 		return ret;
 	}
