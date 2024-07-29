@@ -503,7 +503,7 @@ gt.Const.Strings.MercenaryCompanyNames <- [
 	"战斗之选",
 	"和平使者",
 	"黑夜之盾",
-	"杂种团",
+	"野子团",
 	"白骨守卫",
 	"失落军团"
 ];

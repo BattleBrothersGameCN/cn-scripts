@@ -2309,7 +2309,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 
 			if (!_isPlayerInitiated)
 			{
-				text = "来不及分辨是谁了。<br/>保护好自己！";
+				text = "来不及辨别了。<br/>保护好自己！";
 			}
 			else
 			{

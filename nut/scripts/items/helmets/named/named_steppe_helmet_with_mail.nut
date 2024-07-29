@@ -9,7 +9,7 @@ this.named_steppe_helmet_with_mail <- this.inherit("scripts/items/helmets/named/
 			"草原头盔",
 			"装饰的性鼻头盔",
 			"头翼盔",
-			"马毛头盔"
+			"马鬃盔"
 		];
 		this.m.ShowOnCharacter = true;
 		this.m.HideHair = true;

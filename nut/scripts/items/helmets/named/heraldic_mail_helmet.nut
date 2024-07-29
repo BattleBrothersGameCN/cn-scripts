@@ -6,7 +6,7 @@ this.heraldic_mail_helmet <- this.inherit("scripts/items/helmets/named/named_hel
 		this.m.ID = "armor.head.heraldic_mail";
 		this.m.Description = "在链甲上面附有活动面罩的重型头盔。 它适合真正的骑士。";
 		this.m.NameList = [
-			"覆面式链甲盔",
+			"链甲中盔",
 			"骑士中型盔",
 			"纹章中头盔",
 			"帽檐中头盔",
