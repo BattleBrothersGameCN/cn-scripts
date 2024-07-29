@@ -42,7 +42,7 @@ gt.Const.World.LocationNames.VillageWestern <- [
 	"隐士丘",
 	"留居垦",
 	"丽景丘",
-	"铁石",
+	"铁石山",
 	"斑瑕丘",
 	"矿锤坪",
 	"帆扬野",

@@ -5,7 +5,7 @@ this.bascinet_with_mail <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.bascinet_with_mail";
 		this.m.Name = "链甲中盔";
-		this.m.Description = "一种金属头罩和链甲护面所结合的头盔。";
+		this.m.Description = "一顶配有链甲头肩巾的中盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;
