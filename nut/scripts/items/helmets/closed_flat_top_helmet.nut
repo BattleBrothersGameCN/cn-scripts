@@ -4,8 +4,8 @@ this.closed_flat_top_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.closed_flat_top_helmet";
-		this.m.Name = "覆面平顶盔";
-		this.m.Description = "拥有完整面罩的封闭式头盔。 影响呼吸和限制视野。";
+		this.m.Name = "闭面平顶盔";
+		this.m.Description = "一顶带有整块面甲的封闭头盔。令人呼吸困难，视野受限。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

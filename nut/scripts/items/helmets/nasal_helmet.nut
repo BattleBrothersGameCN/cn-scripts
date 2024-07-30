@@ -4,8 +4,8 @@ this.nasal_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.nasal_helmet";
-		this.m.Name = "鼻翼盔";
-		this.m.Description = "一顶加了鼻护板的金属头盔。";
+		this.m.Name = "护鼻盔";
+		this.m.Description = "一顶装有护鼻的金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

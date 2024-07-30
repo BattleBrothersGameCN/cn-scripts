@@ -4,8 +4,8 @@ this.decayed_closed_flat_top_with_mail <- this.inherit("scripts/items/helmets/he
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.decayed_closed_flat_top_with_mail";
-		this.m.Name = "腐朽的覆面链甲平顶盔";
-		this.m.Description = "一个破旧的封闭式头盔，有一个完整的脸罩和一个包裹着脖子的链甲。 显然，它已经在户外凉了一段时间了。";
+		this.m.Name = "腐朽闭面链甲平顶盔";
+		this.m.Description = "一顶带有整块面甲和链甲护颈头肩巾的破旧封闭头盔。肯定没少受风吹日晒。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

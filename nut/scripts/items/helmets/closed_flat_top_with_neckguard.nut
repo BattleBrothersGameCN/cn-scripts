@@ -4,8 +4,8 @@ this.closed_flat_top_with_neckguard <- this.inherit("scripts/items/helmets/helme
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.closed_flat_top_with_neckguard";
-		this.m.Name = "覆面内衬平顶盔";
-		this.m.Description = "一顶封闭式的头盔，里面有完整的内衬护面。 影响呼吸和限制视野。";
+		this.m.Name = "闭面衬帽平顶盔";
+		this.m.Description = "一顶带有整块面甲和棉甲衬帽的封闭头盔。令人呼吸困难，视野受限。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

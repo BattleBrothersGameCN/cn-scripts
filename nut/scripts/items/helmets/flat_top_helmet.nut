@@ -5,7 +5,7 @@ this.flat_top_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.flat_top_helmet";
 		this.m.Name = "平顶盔";
-		this.m.Description = "一种带有鼻翼的全金属头盔。";
+		this.m.Description = "一顶带有护鼻的平顶全金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

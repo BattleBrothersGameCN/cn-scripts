@@ -4,8 +4,8 @@ this.hunters_hat <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.hunters_hat";
-		this.m.Name = "皮猎帽";
-		this.m.Description = "一顶用羽毛装饰的厚毡帽，作为猎人的战利品。";
+		this.m.Name = "猎人帽";
+		this.m.Description = "一顶用战利品羽毛装饰的厚毡帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

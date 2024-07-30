@@ -5,7 +5,7 @@ this.bear_headpiece <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.bear_headpiece";
 		this.m.Name = "熊头帽";
-		this.m.Description = "经过干燥处理的熊头帽。 提供了一定的防护，但主要还是为了好看。";
+		this.m.Description = "经过烘干预处理的大熊头。提供了一定防护，但主要是为了好看。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

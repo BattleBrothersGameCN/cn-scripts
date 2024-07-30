@@ -10,7 +10,7 @@ this.orc_warrior_heavy_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		this.m.Variant = variants[this.Math.rand(0, variants.len() - 1)];
 		this.updateVariant();
 		this.m.ID = "armor.head.orc_warrior_heavy_helmet";
-		this.m.Name = "金属板头盔";
+		this.m.Name = "金属板片盔";
 		this.m.Description = "";
 		this.m.ShowOnCharacter = true;
 		this.m.IconLarge = "";

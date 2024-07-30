@@ -4,8 +4,8 @@ this.open_leather_cap <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.open_leather_cap";
-		this.m.Name = "皮帽";
-		this.m.Description = "一顶不覆盖耳朵和脖子的结实皮帽。";
+		this.m.Name = "开面皮帽";
+		this.m.Description = "一顶露出耳朵和脖子的结实皮帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

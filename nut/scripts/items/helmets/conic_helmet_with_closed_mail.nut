@@ -4,8 +4,8 @@ this.conic_helmet_with_closed_mail <- this.inherit("scripts/items/helmets/helmet
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.conic_helmet_with_closed_mail";
-		this.m.Name = "全密闭链甲圆锥盔";
-		this.m.Description = "一种厚重的圆锥形头盔，带有一条全封闭的链甲网以提供额外的保护。";
+		this.m.Name = "覆面链甲锥形盔";
+		this.m.Description = "一顶为加强防护安装了全覆面链甲下摆的沉重锥形头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

@@ -5,7 +5,7 @@ this.ijirok_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.ijirok_armor";
 		this.m.Name = "伊吉罗克铠甲";
-		this.m.Description = "曾在战斗中破损的野蛮人铠甲，在传说中伊吉罗克的鲜血里浴血重生。超越你理解的力量再次修复了它，也将修复穿戴者的任何创伤。";
+		this.m.Description = "曾在战斗中破损的野蛮人铠甲，在传说中伊吉罗克的鲜血中重生。超越你理解的力量再次修复了它，也将修复穿戴者的任何创伤。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

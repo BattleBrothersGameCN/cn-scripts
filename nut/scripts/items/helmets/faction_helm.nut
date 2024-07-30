@@ -4,8 +4,8 @@ this.faction_helm <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.faction_helm";
-		this.m.Name = "装饰的全密封头盔";
-		this.m.Description = "一种全密封的金属头盔，上面有呼吸孔和复杂的装饰。在保护的方式上面这是一件伟大的艺术品，但影响呼吸和限制视野。";
+		this.m.Name = "装饰全盔";
+		this.m.Description = "一顶上有繁复装饰，带有呼吸孔的封闭金属头盔。从防护来说堪称艺术品，但会让人呼吸困难，视野受限。";
 		this.m.ShowOnCharacter = true;
 		this.m.HideCharacterHead = true;
 		this.m.HideCorpseHead = true;

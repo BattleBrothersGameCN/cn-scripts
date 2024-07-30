@@ -5,7 +5,7 @@ this.gladiator_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.gladiator_helmet";
 		this.m.Name = "角斗士头盔";
-		this.m.Description = "一种令人印象深刻的金属头盔，在南方城邦的竞技场上用来恐吓角斗士的对手。";
+		this.m.Description = "一顶常见于南方城邦的竞技场中，角斗士为威吓对手而定做的金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideCharacterHead = true;

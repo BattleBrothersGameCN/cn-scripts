@@ -4,8 +4,8 @@ this.crude_metal_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.crude_metal_helmet";
-		this.m.Name = "粗糙金属头盔";
-		this.m.Description = "尽管这头盔既粗糙还生锈，但还是一顶坚固耐用的盔甲。";
+		this.m.Name = "粗制金属盔";
+		this.m.Description = "尽管制作粗糙，锈迹斑斑，这倒算得上是顶坚固耐用的金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

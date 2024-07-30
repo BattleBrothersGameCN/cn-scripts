@@ -5,7 +5,7 @@ this.kettle_hat_with_mail <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.kettle_hat_with_mail";
 		this.m.Name = "链甲锅盔";
-		this.m.Description = "一个带宽边和链甲的全金属头盔。";
+		this.m.Description = "一顶下有链甲头肩巾的宽檐全金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

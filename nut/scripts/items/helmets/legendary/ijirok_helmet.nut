@@ -5,7 +5,7 @@ this.ijirok_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.ijirok_helmet";
 		this.m.Name = "伊吉罗克头盔";
-		this.m.Description = "曾经有一件野蛮人的头盔在战斗中折断，盔甲的碎片沐浴在传说中的伊吉罗克的鲜血里。 超越你理解的力量再次修复了它，同样也会修复穿戴者的任何创伤。";
+		this.m.Description = "曾在战斗中破损的野蛮人头盔，在传说中伊吉罗克的鲜血中重生。超越你理解的力量再次修复了它，也将修复穿戴者的任何创伤。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

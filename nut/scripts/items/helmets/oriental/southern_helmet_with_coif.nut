@@ -4,8 +4,8 @@ this.southern_helmet_with_coif <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.southern_helmet_with_coif";
-		this.m.Name = "南方带巾头盔";
-		this.m.Description = "一种南方的金属头盔，有一个链甲巾保护脖子。";
+		this.m.Name = "带巾南方盔";
+		this.m.Description = "一顶带有护颈链甲头肩巾的南方金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

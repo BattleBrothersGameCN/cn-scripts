@@ -5,7 +5,7 @@ this.feathered_hat <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.feathered_hat";
 		this.m.Name = "飞羽帽";
-		this.m.Description = "一顶有着奇特羽毛的帽子，通常穿戴在诗人与贵族身上。";
+		this.m.Description = "一顶诗人和贵族常戴的时髦飞羽帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

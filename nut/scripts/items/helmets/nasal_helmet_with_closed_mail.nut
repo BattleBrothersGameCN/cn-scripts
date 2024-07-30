@@ -4,8 +4,8 @@ this.nasal_helmet_with_closed_mail <- this.inherit("scripts/items/helmets/helmet
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.nasal_helmet_with_closed_mail";
-		this.m.Name = "密封式链甲鼻翼盔";
-		this.m.Description = "一种金属头盔，由一个保护用的鼻翼和一个封闭式的链甲头罩构成。";
+		this.m.Name = "覆面链甲护鼻盔";
+		this.m.Description = "一顶带有护鼻，下有覆面链甲头肩巾的金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

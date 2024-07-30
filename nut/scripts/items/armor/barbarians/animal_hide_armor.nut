@@ -5,7 +5,7 @@ this.animal_hide_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.animal_hide_armor";
 		this.m.Name = "兽皮甲";
-		this.m.Description = "厚重的兽皮拼接在一起，形成一件像样的临时盔甲。";
+		this.m.Description = "厚重的兽皮拼接在一起，形成一件像样的简易盔甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

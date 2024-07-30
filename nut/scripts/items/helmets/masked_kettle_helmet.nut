@@ -4,8 +4,8 @@ this.masked_kettle_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.masked_kettle_helmet";
-		this.m.Name = "带面具的锅盔";
-		this.m.Description = "一种有帽檐的金属头盔，戴着一个不祥的黑色口罩遮住脸。";
+		this.m.Name = "面罩锅盔";
+		this.m.Description = "一顶配遮脸黑色面罩的带檐金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

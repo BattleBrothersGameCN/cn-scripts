@@ -4,8 +4,8 @@ this.heavy_horned_plate_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.heavy_horned_plate_helmet";
-		this.m.Name = "重型角板头盔";
-		this.m.Description = "这个沉重的头盔上有着角状型的装饰。 这是在野蛮人军团中享有崇高地位和声誉的标志。";
+		this.m.Name = "重型角饰板盔";
+		this.m.Description = "装有角状装饰的重型头盔。是野蛮人战团中崇高地位和声誉的标志。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

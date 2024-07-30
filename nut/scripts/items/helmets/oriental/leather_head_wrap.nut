@@ -4,8 +4,8 @@ this.leather_head_wrap <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.leather_head_wrap";
-		this.m.Name = "皮革头套";
-		this.m.Description = "一顶用来防止割伤和擦伤的厚皮头套。";
+		this.m.Name = "缠头皮帽";
+		this.m.Description = "一条用来防止割伤和擦伤的缠头皮帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

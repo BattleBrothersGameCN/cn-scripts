@@ -4,8 +4,8 @@ this.closed_scrap_metal_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.closed_scrap_metal_helmet";
-		this.m.Name = "封闭式废金属头盔";
-		this.m.Description = "这种重型头盔能够很好的保护穿戴者的脸部，尽管它影响了视线。";
+		this.m.Name = "闭面废金属盔";
+		this.m.Description = "兼顾保护了穿戴者面部的重型金属头盔，以视野为代价。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

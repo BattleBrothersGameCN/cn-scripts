@@ -4,8 +4,8 @@ this.wrapped_southern_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.wrapped_southern_helmet";
-		this.m.Name = "包裹的南方头盔";
-		this.m.Description = "这顶金属头盔用布包着，以抵御南方沙漠酷热的太阳。";
+		this.m.Name = "南方缠裹盔";
+		this.m.Description = "一顶为抵御南方沙漠炽阳，用布包裹的金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

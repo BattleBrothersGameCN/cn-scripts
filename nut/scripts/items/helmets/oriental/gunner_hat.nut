@@ -4,8 +4,8 @@ this.gunner_hat <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.gunner_hat";
-		this.m.Name = "枪手帽";
-		this.m.Description = "在城邦军队中练习使用精细火药武器的人所戴的一种裹得很好的布头巾。";
+		this.m.Name = "火铳射手帽";
+		this.m.Description = "一条城邦军队中的机巧火器使用者所戴的精绕布制包头巾。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

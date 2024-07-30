@@ -4,8 +4,8 @@ this.leather_headband <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.leather_headband";
-		this.m.Name = "皮革头巾";
-		this.m.Description = "一种用来保护额头的风干折叠式头巾。";
+		this.m.Name = "皮革头带";
+		this.m.Description = "一条用于保护额头的折制风干皮革头带。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = false;

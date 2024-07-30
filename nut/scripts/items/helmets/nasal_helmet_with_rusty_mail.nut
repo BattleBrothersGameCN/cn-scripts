@@ -4,8 +4,8 @@ this.nasal_helmet_with_rusty_mail <- this.inherit("scripts/items/helmets/helmet"
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.nasal_helmet_with_rusty_mail";
-		this.m.Name = "带生锈链甲鼻翼盔";
-		this.m.Description = "一顶破旧头盔带着生锈的链甲科伊夫帽。";
+		this.m.Name = "生锈链甲护鼻盔";
+		this.m.Description = "一顶带有生锈链甲头肩巾的旧头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

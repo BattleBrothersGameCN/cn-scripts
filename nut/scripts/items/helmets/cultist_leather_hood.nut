@@ -5,7 +5,7 @@ this.cultist_leather_hood <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.cultist_leather_hood";
 		this.m.Name = "邪教徒皮兜帽";
-		this.m.Description = "一顶覆盖头部和颈部但限制视力的厚皮兜帽。";
+		this.m.Description = "一顶遮住了头颈部却限制了视野的厚皮兜帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

@@ -5,7 +5,7 @@ this.emperors_countenance <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.emperors_countenance";
 		this.m.Name = "帝王威仪";
-		this.m.Description = "金制的头盔和面具，展示着远古皇帝的容貌，充满了神秘力量。放到光下仔细打量，那面部似乎会动，还会露出鄙夷之情。";
+		this.m.Description = "金制的头盔和面具，展示着远古皇帝的容貌，充满了神秘力量。放到光下仔细打量，那面部似乎在动，流露出鄙夷之情。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

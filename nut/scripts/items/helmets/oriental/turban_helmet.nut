@@ -4,8 +4,8 @@ this.turban_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.turban_helmet";
-		this.m.Name = "头巾头盔";
-		this.m.Description = "由重叠的长金属夹板制成的一种完整的头盔，形状类似于传统的南方头巾。";
+		this.m.Name = "头巾盔";
+		this.m.Description = "一顶形似南方传统头巾，由层叠长金属条制成的全覆头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideCharacterHead = true;

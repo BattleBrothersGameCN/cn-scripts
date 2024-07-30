@@ -5,7 +5,7 @@ this.undertaker_hat <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.undertaker_hat";
 		this.m.Name = "送葬者帽";
-		this.m.Description = "一种宽边羽毛帽，用围巾遮住嘴。 经久耐用，可抵御御恶天气和划伤。";
+		this.m.Description = "一顶配以围面围巾的宽檐羽毛帽。经久耐用，能抵御天气和擦伤。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

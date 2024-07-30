@@ -4,8 +4,8 @@ this.witchhunter_hat <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.witchhunter_hat";
-		this.m.Name = "女巫猎人的帽子";
-		this.m.Description = "一顶能够有效预防受伤的皮帽。";
+		this.m.Name = "女巫猎人帽";
+		this.m.Description = "一顶能有效预防擦伤的结实皮帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

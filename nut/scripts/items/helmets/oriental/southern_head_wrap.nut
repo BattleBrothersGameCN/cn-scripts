@@ -5,7 +5,7 @@ this.southern_head_wrap <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.southern_head_wrap";
 		this.m.Name = "南方头巾";
-		this.m.Description = "适合沙漠气候的南方传统头巾。";
+		this.m.Description = "一条适合沙漠气候的传统南方头巾。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

@@ -4,8 +4,8 @@ this.closed_flat_top_with_mail <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.closed_flat_top_with_mail";
-		this.m.Name = "覆面链甲平顶盔";
-		this.m.Description = "一顶封闭式的头盔，有可以遮住脸部的面罩和可以包裹住脖子的链甲。 有着良好的防护但影响呼吸和限制视野。";
+		this.m.Name = "闭面链甲平顶盔";
+		this.m.Description = "一顶带有整块面甲和链甲护颈头肩巾的封闭头盔。防护力非常不错，但会让人呼吸困难，视野受限。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

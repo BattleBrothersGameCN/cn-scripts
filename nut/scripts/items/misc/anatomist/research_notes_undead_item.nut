@@ -64,7 +64,7 @@ this.research_notes_undead_item <- this.inherit("scripts/items/item", {
 			},
 			{
 				flag = "isHonorGuardPotionDiscovered",
-				creatureName = "古代仪仗队",
+				creatureName = "古代仪仗兵",
 				potionName = "血肉化骨药剂"
 			},
 			{

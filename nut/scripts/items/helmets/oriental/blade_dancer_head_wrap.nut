@@ -5,7 +5,7 @@ this.blade_dancer_head_wrap <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.blade_dancer_head_wrap";
 		this.m.Name = "刀锋舞者头巾";
-		this.m.Description = "这种独特的红黑相间的头巾传统上是游牧部落中最熟练的战士所戴的。";
+		this.m.Description = "惹眼的红黑拼色头巾，传统上，游牧部落中最娴熟勇士才能佩戴。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

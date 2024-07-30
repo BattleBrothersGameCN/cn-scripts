@@ -4,8 +4,8 @@ this.conic_helmet_with_faceguard <- this.inherit("scripts/items/helmets/helmet",
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.conic_helmet_with_faceguard";
-		this.m.Name = "护面圆锥盔";
-		this.m.Description = "这种锥形头盔配有链邮，带有金属面罩。它重量沉重，视线有点受限，但提供极好的保护。";
+		this.m.Name = "面具锥形盔";
+		this.m.Description = "一顶加装了金属面甲的链甲锥形盔。虽然沉重且影响视线，但防护能力十分出众。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

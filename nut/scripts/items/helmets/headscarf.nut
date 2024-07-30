@@ -5,7 +5,7 @@ this.headscarf <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.headscarf";
 		this.m.Name = "头巾";
-		this.m.Description = "裹在头上的一块厚布。";
+		this.m.Description = "一块裹在头上的厚布。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

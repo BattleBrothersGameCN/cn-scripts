@@ -4,7 +4,7 @@ this.decayed_reinforced_mail_hauberk <- this.inherit("scripts/items/armor/armor"
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.decayed_reinforced_mail_hauberk";
-		this.m.Name = "腐朽的加固链铠";
+		this.m.Name = "腐朽加固链铠";
 		this.m.Description = "一件破烂的长身链甲衫。部分链环缺失，覆盖着泥土，还有一股怪味。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;

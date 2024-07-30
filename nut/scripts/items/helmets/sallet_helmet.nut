@@ -5,7 +5,7 @@ this.sallet_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.sallet_helmet";
 		this.m.Name = "轻便头盔";
-		this.m.Description = "一种带加长护颈的金属轻便头盔，像这样的设计在这些地区很少见。这种良好的设计能用最小的重量提供最大的防护作用，并且不会阻碍视野。";
+		this.m.Description = "一顶带加长护颈的金属轻便头盔，这种款式在本地并不多见。它制作精良，用最小的重量在不遮挡视野的同时提供了最好的防护效果。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

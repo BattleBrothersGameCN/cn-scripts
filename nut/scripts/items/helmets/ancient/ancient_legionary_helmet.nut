@@ -4,8 +4,8 @@ this.ancient_legionary_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.ancient_legionary_helmet";
-		this.m.Name = "古代军盔";
-		this.m.Description = "一顶有着古代图案的做工精巧但部分磨损的头盔。";
+		this.m.Name = "古代军团兵盔";
+		this.m.Description = "一顶做工精良，略有朽坏的古代款头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

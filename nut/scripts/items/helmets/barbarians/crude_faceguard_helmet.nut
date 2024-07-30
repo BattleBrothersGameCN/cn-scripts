@@ -4,8 +4,8 @@ this.crude_faceguard_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.crude_faceguard_helmet";
-		this.m.Name = "粗糙的防护面罩";
-		this.m.Description = "粗糙生锈的野蛮人头盔。 其厚度弥补了制作技巧的不足。";
+		this.m.Name = "粗制护面盔";
+		this.m.Description = "一顶粗糙生锈的野蛮人头盔。其厚度弥补了制作工艺的不足。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

@@ -4,8 +4,8 @@ this.full_helm <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.full_helm";
-		this.m.Name = "全密封头盔";
-		this.m.Description = "一个带有呼吸孔的全密封金属头盔。 有着良好的防护但影响呼吸和限制视野。";
+		this.m.Name = "全盔";
+		this.m.Description = "一顶带有呼吸孔的封闭金属头盔。从防护来说堪称艺术品，但会让人呼吸困难，视野受限。";
 		this.m.ShowOnCharacter = true;
 		this.m.HideCharacterHead = true;
 		this.m.HideCorpseHead = true;
