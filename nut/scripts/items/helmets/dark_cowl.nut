@@ -4,8 +4,8 @@ this.dark_cowl <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.dark_cowl";
-		this.m.Name = "暗色斗篷";
-		this.m.Description = "用皮革和布料做成的结实的帽子。";
+		this.m.Name = "暗色围帽";
+		this.m.Description = "一顶用皮革和布料制成的结实围头帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

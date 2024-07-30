@@ -4,8 +4,8 @@ this.engineer_hat <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.engineer_hat";
-		this.m.Name = "技师帽子";
-		this.m.Description = "一种包装精美的头巾，上面印有徽章，表明佩戴者是来自城邦的博学工程师。";
+		this.m.Name = "工程师帽";
+		this.m.Description = "一条精心缠绕的布制包头巾，上面的徽章彰显着穿戴者城邦博学工程师身份。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

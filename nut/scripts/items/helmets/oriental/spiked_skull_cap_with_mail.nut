@@ -4,8 +4,8 @@ this.spiked_skull_cap_with_mail <- this.inherit("scripts/items/helmets/helmet", 
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.spiked_skull_cap_with_mail";
-		this.m.Name = "链甲尖顶帽";
-		this.m.Description = "一种金属帽，链甲巾上有着一个时髦的尖顶。";
+		this.m.Name = "链甲尖顶颅盔";
+		this.m.Description = "一顶上有时髦尖顶，下有链甲头肩巾的金属颅盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

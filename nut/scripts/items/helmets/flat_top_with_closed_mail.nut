@@ -4,8 +4,8 @@ this.flat_top_with_closed_mail <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.flat_top_with_closed_mail";
-		this.m.Name = "全密闭链甲平顶盔";
-		this.m.Description = "一种带面罩的扁平全金属头盔，覆盖脖子和脸部。";
+		this.m.Name = "覆面链甲平顶盔";
+		this.m.Description = "一顶有链甲头肩巾保护面颈的平顶全金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

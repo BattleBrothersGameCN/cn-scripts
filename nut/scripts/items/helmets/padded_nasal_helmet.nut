@@ -4,8 +4,8 @@ this.padded_nasal_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.padded_nasal_helmet";
-		this.m.Name = "棉内衬鼻翼盔";
-		this.m.Description = "一种鼻翼里面带有棉内衬的金属头盔。";
+		this.m.Name = "衬帽护鼻盔";
+		this.m.Description = "一顶带有护鼻，下有棉甲衬帽的金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

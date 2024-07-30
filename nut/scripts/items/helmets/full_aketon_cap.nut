@@ -4,8 +4,8 @@ this.full_aketon_cap <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.full_aketon_cap";
-		this.m.Name = "全衬垫帽";
-		this.m.Description = "带有内衬且可以覆盖住脖子的皮帽。";
+		this.m.Name = "全包棉甲衬帽";
+		this.m.Description = "一顶盖至颈部的填充布帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

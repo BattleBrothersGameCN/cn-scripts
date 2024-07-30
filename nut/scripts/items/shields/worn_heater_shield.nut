@@ -4,7 +4,7 @@ this.worn_heater_shield <- this.inherit("scripts/items/shields/shield", {
 	{
 		this.shield.create();
 		this.m.ID = "shield.worn_heater_shield";
-		this.m.Name = "腐朽的扇形盾";
+		this.m.Name = "腐朽扇形盾";
 		this.m.Description = "一面被皮革，帆布和苔藓覆盖的腐烂三角形木制盾牌。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;

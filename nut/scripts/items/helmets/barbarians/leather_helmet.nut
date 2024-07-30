@@ -4,8 +4,8 @@ this.leather_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.leather_helmet";
-		this.m.Name = "皮革头盔";
-		this.m.Description = "经过加工处理的兽皮制作的厚实皮革盔。 当然了，这些皮革曾经肯定属于某些危险的动物。";
+		this.m.Name = "皮盔";
+		this.m.Description = "一顶用硬化皮革制成的厚皮盔。这些皮革显然来自某种危险猎物。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

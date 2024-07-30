@@ -5,7 +5,7 @@ this.mouth_piece <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.witchhunter_hat";
 		this.m.Name = "面巾";
-		this.m.Description = "遮住下脸以防止吸入灰尘或隐藏身份的一块布。";
+		this.m.Description = "一块遮挡下脸的布，用以防尘或者隐藏身份。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = false;

@@ -4,7 +4,7 @@ this.adorned_full_helm <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.adorned_full_helm";
-		this.m.Name = "装饰全盔";
+		this.m.Name = "圣饰全盔";
 		this.m.Description = "一顶带有呼吸孔的全封闭金属头盔。虽然使用频繁，却受到了精心维护和装饰，它的主人称得上真正的冒险骑士。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;

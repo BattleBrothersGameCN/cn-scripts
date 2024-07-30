@@ -44,7 +44,7 @@ this.anatomist_background <- this.inherit("scripts/skills/backgrounds/character_
 			"乌鸦(The Crow)",
 			"判官(the Magistrate)",
 			"殡葬业者(the Mortician)",
-			"葬礼承办人(the Undertaker)",
+			"送葬者",
 			"阴郁者(the Grim)",
 			"解剖学家(the Anatomist)",
 			"好奇者(the Curious)",

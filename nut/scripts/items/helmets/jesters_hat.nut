@@ -5,7 +5,7 @@ this.jesters_hat <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.jesters_hat";
 		this.m.Name = "小丑帽";
-		this.m.Description = "这是一个五颜六色的，由小丑、艺人和其他旅游者使用的标志性头饰。";
+		this.m.Description = "小丑、艺人之类的旅行者标志性的多彩头饰。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

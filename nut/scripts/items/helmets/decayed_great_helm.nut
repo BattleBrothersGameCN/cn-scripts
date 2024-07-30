@@ -4,8 +4,8 @@ this.decayed_great_helm <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.decayed_great_helm";
-		this.m.Name = "腐朽的卓越头盔";
-		this.m.Description = "一顶装饰品已经被撕破和腐烂的大头盔。它曾经肯定属于一位著名的骑士。";
+		this.m.Name = "腐朽巨盔";
+		this.m.Description = "一顶饰物破碎腐坏的巨盔。它必定曾为一位著名骑士所有。";
 		this.m.ShowOnCharacter = true;
 		this.m.HideCharacterHead = true;
 		this.m.HideCorpseHead = true;

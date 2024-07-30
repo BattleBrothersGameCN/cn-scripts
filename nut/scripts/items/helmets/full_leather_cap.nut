@@ -4,8 +4,8 @@ this.full_leather_cap <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.full_leather_cap";
-		this.m.Name = "全包裹皮帽";
-		this.m.Description = "一种可以保护头部和颈部的封闭式皮帽。并且有内衬提供附加的防护。";
+		this.m.Name = "全包皮帽";
+		this.m.Description = "一顶保护了头颈部的全包裹皮帽。为增强防护进行了填充。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

@@ -4,8 +4,8 @@ this.padded_flat_top_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.padded_flat_top_helmet";
-		this.m.Name = "棉内衬平顶盔";
-		this.m.Description = "一种扁平的全金属头盔，鼻子下面有棉做的内衬。";
+		this.m.Name = "衬帽平顶盔";
+		this.m.Description = "一顶带有护鼻，下有棉甲衬帽的平顶全金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

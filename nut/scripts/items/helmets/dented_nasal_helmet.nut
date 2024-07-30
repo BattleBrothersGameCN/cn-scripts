@@ -4,8 +4,8 @@ this.dented_nasal_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.dented_nasal_helmet";
-		this.m.Name = "有凹痕的棉内衬鼻翼盔";
-		this.m.Description = "一顶有着撞击痕迹的金属鼻翼盔。";
+		this.m.Name = "凹损衬垫护鼻盔";
+		this.m.Description = "一顶上过战场的战损金属护鼻盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

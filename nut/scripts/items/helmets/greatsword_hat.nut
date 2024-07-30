@@ -4,8 +4,8 @@ this.greatsword_hat <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.greatsword_hat";
-		this.m.Name = "决斗皮帽";
-		this.m.Description = "一顶饰有装饰品和羽毛的厚皮帽。";
+		this.m.Name = "决斗帽";
+		this.m.Description = "一顶带有饰物和羽毛的厚皮帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

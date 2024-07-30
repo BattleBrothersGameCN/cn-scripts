@@ -4,8 +4,8 @@ this.nordic_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.nordic_helmet";
-		this.m.Name = "北欧头盔(Nordic Helmet)";
-		this.m.Description = "一个北欧头盔，用额外的金属板保护面部和颈部。";
+		this.m.Name = "北欧盔";
+		this.m.Description = "一顶加装有金属板，加强了防护面颈部防护的北欧式头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

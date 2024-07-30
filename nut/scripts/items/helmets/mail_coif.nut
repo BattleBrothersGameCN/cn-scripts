@@ -4,8 +4,8 @@ this.mail_coif <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.mail_coif";
-		this.m.Name = "链甲头巾";
-		this.m.Description = "一个可以保护颈部的链甲头巾。";
+		this.m.Name = "链甲头肩巾";
+		this.m.Description = "一件保护至颈部的链甲头肩巾。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

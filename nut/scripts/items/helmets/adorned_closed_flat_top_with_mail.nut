@@ -4,8 +4,8 @@ this.adorned_closed_flat_top_with_mail <- this.inherit("scripts/items/helmets/he
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.adorned_closed_flat_top_with_mail";
-		this.m.Name = "装饰平顶覆面盔";
-		this.m.Description = "一顶带有全面罩和链甲护颈的封闭头盔。因频繁使用而磨损严重，但饰有圣物，保养良好。";
+		this.m.Name = "圣饰闭面平顶盔";
+		this.m.Description = "一顶带有整块面甲和链甲护颈的封闭头盔。因频繁使用而磨损严重，但饰有圣物，保养良好。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

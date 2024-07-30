@@ -5,7 +5,7 @@ this.physician_mask <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.physician_mask";
 		this.m.Name = "医生面具";
-		this.m.Description = "一顶带有独特鸟状面具的厚皮兜帽。鸟喙就像一个呼吸器，填充有香甜的草药以抵御疾病。";
+		this.m.Description = "一顶带有独特喙状面具的厚皮兜帽。鸟喙内填有芳香药草，用作抵御疾病传播的呼吸器。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

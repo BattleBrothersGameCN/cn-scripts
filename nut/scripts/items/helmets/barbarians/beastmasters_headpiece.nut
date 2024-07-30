@@ -4,8 +4,8 @@ this.beastmasters_headpiece <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.beastmasters_headpiece";
-		this.m.Name = "兽王帽";
-		this.m.Description = "一种有着长角装饰的头帽，沿袭了几代野蛮人兽王的传统。";
+		this.m.Name = "兽王角冠";
+		this.m.Description = "一种饰有长角的头冠，是野蛮人兽王世代传承的传统造型。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

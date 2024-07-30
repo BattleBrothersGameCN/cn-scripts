@@ -4,8 +4,8 @@ this.rusty_mail_coif <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.rusty_mail_coif";
-		this.m.Name = "生锈的链甲头巾";
-		this.m.Description = "一顶仍然提供了很好保护的生锈链甲头巾－尽管它会留下可怕的污渍。";
+		this.m.Name = "生锈链甲头肩巾";
+		this.m.Description = "一件仍能提供良好防护的生锈链甲头肩巾，不过它会留下顽固的污渍。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

@@ -4,8 +4,8 @@ this.nordic_helmet_with_closed_mail <- this.inherit("scripts/items/helmets/helme
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.nordic_helmet_with_closed_mail";
-		this.m.Name = "封闭邮件的北欧头盔。";
-		this.m.Description = "一个带有封闭邮件颈护的金属北欧头盔。";
+		this.m.Name = "覆面链甲北欧盔";
+		this.m.Description = "一顶加装了覆面链甲护颈的金属北欧式头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

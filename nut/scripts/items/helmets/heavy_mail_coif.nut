@@ -4,8 +4,8 @@ this.heavy_mail_coif <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.heavy_mail_coif";
-		this.m.Name = "沉重的链甲头巾";
-		this.m.Description = "一顶完整的链甲头巾，比大多数同类都要重和结实。 用多彩的辫子装饰。";
+		this.m.Name = "重型链甲头肩巾";
+		this.m.Description = "一顶比大多同类重且坚固的完全版链甲头肩巾。饰有多彩绳辫。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

@@ -4,8 +4,8 @@ this.desert_stalker_head_wrap <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.desert_stalker_head_wrap";
-		this.m.Name = "沙漠追踪者头巾";
-		this.m.Description = "一种厚厚的头巾，带有隐藏的小皮革绳以增加保护，饰有青铜蝎子。";
+		this.m.Name = "沙漠追猎者头巾";
+		this.m.Description = "一条内缝细皮革护条，外饰青铜蝎子的厚头巾。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

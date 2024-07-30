@@ -4,7 +4,7 @@ this.aketon_cap <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.aketon_cap";
-		this.m.Name = "棉衬帽";
+		this.m.Name = "棉甲衬帽";
 		this.m.Description = "一顶填充布帽。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;

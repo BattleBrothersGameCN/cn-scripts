@@ -5,7 +5,7 @@ this.cultist_hood <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.cultist_hood";
 		this.m.Name = "邪教徒兜帽";
-		this.m.Description = "一个粗糙的带两个洞的布袋。";
+		this.m.Description = "一件开有两个洞的粗纺布袋。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

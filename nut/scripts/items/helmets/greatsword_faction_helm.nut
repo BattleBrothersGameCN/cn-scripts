@@ -4,8 +4,8 @@ this.greatsword_faction_helm <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.greatsword_faction_helm";
-		this.m.Name = "双手剑士的头盔";
-		this.m.Description = "一个结实的金属头盔，上面盖着一顶大羽毛帽子。";
+		this.m.Name = "双手剑士盔";
+		this.m.Description = "套在一顶大飞羽帽下，带有额外填充的结实金属头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;

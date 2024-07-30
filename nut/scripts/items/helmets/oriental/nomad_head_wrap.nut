@@ -5,7 +5,7 @@ this.nomad_head_wrap <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.nomad_head_wrap";
 		this.m.Name = "游牧头巾";
-		this.m.Description = "一条游牧风格的头巾，适合用来抵御太阳和热量。";
+		this.m.Description = "一条适于抵御暑热的游牧风格头巾。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = true;
