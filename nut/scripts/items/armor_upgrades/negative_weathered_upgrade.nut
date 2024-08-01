@@ -6,7 +6,7 @@ this.negative_weathered_upgrade <- this.inherit("scripts/items/armor_upgrades/ar
 		this.m.ID = "armor_upgrade.negative_weathered";
 		this.m.Name = "风化";
 		this.m.Description = "";
-		this.m.ArmorDescription = "这件盔甲由于尘土和雨水的侵蚀而稍微风化，使得金属变得暗淡，皮革变得脆弱。";
+		this.m.ArmorDescription = "这件盔甲因尘土和雨水而轻度风化，金属失去光泽，皮革硬化变脆。";
 		this.m.Icon = null;
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_downgrade_04.png";
@@ -26,7 +26,7 @@ this.negative_weathered_upgrade <- this.inherit("scripts/items/armor_upgrades/ar
 			id = 6,
 			type = "text",
 			icon = "ui/icons/warning.png",
-			text = "无盔甲附件位置"
+			text = "无盔甲附件槽位"
 		});
 	}
 

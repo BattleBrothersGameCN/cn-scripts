@@ -6,9 +6,9 @@ this.light_padding_replacement_upgrade <- this.inherit("scripts/items/armor_upgr
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.light_padding_replacement";
-		this.m.Name = "置换轻内垫";
-		this.m.Description = "由异国的材料制成，这种替代填料可以提供与普通填料相同的保护量，而重量较轻。";
-		this.m.ArmorDescription = "这件盔甲的衬垫被一种更轻但同样耐用的衬垫所取代。";
+		this.m.Name = "替换轻衬垫";
+		this.m.Description = "这种奇异材料制成的替换衬垫以更轻的重量提供了和常规衬垫相当的防护性能。";
+		this.m.ArmorDescription = "这件盔甲在不影响耐久的同时，换用了一种更为轻便的衬垫。";
 		this.m.Icon = "armor_upgrades/upgrade_05.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_05.png";
@@ -29,7 +29,7 @@ this.light_padding_replacement_upgrade <- this.inherit("scripts/items/armor_upgr
 			id = 14,
 			type = "text",
 			icon = "ui/icons/fatigue.png",
-			text = "减少一件盔甲的疲劳值上限惩罚 [color=" + this.Const.UI.Color.NegativeValue + "]20%[/color]"
+			text = "减低盔甲的疲劳值上限惩罚 [color=" + this.Const.UI.Color.NegativeValue + "]20%[/color]"
 		});
 		return result;
 	}

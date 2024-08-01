@@ -6,9 +6,9 @@ this.bone_platings_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.bone_platings";
-		this.m.Name = "骨头板";
-		this.m.Description = "用强悍而非常轻的骨头制作而成，这些华丽的护甲板做成的一个特制装甲，套在护甲上面。";
-		this.m.ArmorDescription = "一层华丽的骨板附着在这个盔甲上。";
+		this.m.Name = "骨质甲板";
+		this.m.Description = "这层精巧的外板由强悍但异常轻质的骨头制成，作为穿戴在常规盔甲外的崩落装甲使用。";
+		this.m.ArmorDescription = "一层精巧的骨板安装在这件盔甲上。";
 		this.m.Icon = "armor_upgrades/upgrade_06.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_06.png";
@@ -30,7 +30,7 @@ this.bone_platings_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 			id = 14,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "完全吸收每一次战斗中不忽视盔甲的第一次命中"
+			text = "完全吸收每场战斗中不能无视护甲的第一次命中伤害"
 		});
 		result.push({
 			id = 14,
@@ -47,7 +47,7 @@ this.bone_platings_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 			id = 14,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "完全吸收每一次战斗中不忽视盔甲的第一次命中"
+			text = "完全吸收每场战斗中不能无视护甲的第一次命中伤害"
 		});
 	}
 

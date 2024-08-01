@@ -96,7 +96,7 @@ this.armor_upgrade <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前选定角色携带的盔甲上，进行永久融合。此物品将在使用过程中消耗掉，产生以下效果："
+			text = "右键单击或拖动到当前所选角色携带的盔甲上进行安装。一经安装永久有效。物品会在该过程中消耗，并为盔甲附加以下效果："
 		});
 		return result;
 	}
@@ -108,7 +108,7 @@ this.armor_upgrade <- this.inherit("scripts/items/item", {
 			id = 15,
 			type = "text",
 			icon = "ui/icons/plus.png",
-			text = "拥有一块可替代的盔甲附件，但会在使用过程中被摧毁"
+			text = "装有一件可替换的盔甲附件，替换附件会导该附件损毁"
 		});
 	}
 

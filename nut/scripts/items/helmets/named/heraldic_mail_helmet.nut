@@ -4,14 +4,14 @@ this.heraldic_mail_helmet <- this.inherit("scripts/items/helmets/named/named_hel
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.heraldic_mail";
-		this.m.Description = "在链甲上面附有活动面罩的重型头盔。 它适合真正的骑士。";
+		this.m.Description = "一顶配有活动面罩，下有链甲头肩巾的重型中盔。对正牌骑士来说张扬得恰到好处。";
 		this.m.NameList = [
 			"链甲中盔",
-			"骑士中型盔",
-			"纹章中头盔",
-			"帽檐中头盔",
-			"纹章头盔",
-			"骑士头盔"
+			"骑士中盔",
+			"纹章中盔",
+			"护面中盔",
+			"纹章盔",
+			"骑士盔"
 		];
 		this.m.ShowOnCharacter = true;
 		this.m.HideHair = true;

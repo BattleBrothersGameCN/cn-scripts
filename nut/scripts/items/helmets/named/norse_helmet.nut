@@ -4,14 +4,14 @@ this.norse_helmet <- this.inherit("scripts/items/helmets/named/named_helmet", {
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.norse";
-		this.m.Description = "一种华丽的北欧头盔，一定是属于一个高级贵族或高级战士的。";
+		this.m.Description = "一顶华贵的北欧头盔，要么是出身高贵的贵族所有，要么是德高望重的战士所戴。";
 		this.m.NameList = [
-			"氏族头盔",
-			"高地头盔",
-			"挪威人头盔",
-			"护面罩",
-			"加垫挪威头盔",
-			"猫头鹰头盔"
+			"氏族盔",
+			"高地盔",
+			"北地护鼻盔",
+			"护面",
+			"衬帽北地盔",
+			"枭盔"
 		];
 		this.m.ShowOnCharacter = true;
 		this.m.HideHair = true;

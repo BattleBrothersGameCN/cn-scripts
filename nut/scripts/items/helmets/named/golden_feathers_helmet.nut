@@ -4,13 +4,13 @@ this.golden_feathers_helmet <- this.inherit("scripts/items/helmets/named/named_h
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.golden_feathers";
-		this.m.Description = "国外设计的一款带有完整链甲面罩的坚固合金头盔，可以给予佩戴者最大限度的保护。";
+		this.m.Description = "一顶外来款式的结实合金盔，加装了链甲头肩巾，防护力极佳。";
 		this.m.NameList = [
-			"头饰",
-			"金头盖",
-			"羽毛头盔",
-			"闪闪发光的头盔",
-			"带头巾的头盔"
+			"头冠",
+			"金颅",
+			"羽饰盔",
+			"熠光盔",
+			"衬链盔"
 		];
 		this.m.ShowOnCharacter = true;
 		this.m.HideHair = true;

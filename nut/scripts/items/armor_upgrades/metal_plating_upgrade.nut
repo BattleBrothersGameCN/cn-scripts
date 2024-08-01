@@ -4,9 +4,9 @@ this.metal_plating_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.metal_plating";
-		this.m.Name = "金属板与铆钉";
-		this.m.Description = "与下层装甲铆接的厚金属板。非常粗糙，但毕竟是一种快速增加防护的简单方法。";
-		this.m.ArmorDescription = "这件装甲有一层粗糙的铆接金属板，用于提供额外的防护。";
+		this.m.Name = "金属甲片配铆钉";
+		this.m.Description = "用来铆接在基甲上的厚重金属甲片。粗放但简捷的防护增强手段。";
+		this.m.ArmorDescription = "这件盔甲粗放地铆接着一些金属甲片，提供了额外的防护。";
 		this.m.Icon = "armor_upgrades/upgrade_12.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_12.png";

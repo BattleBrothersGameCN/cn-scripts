@@ -4,9 +4,9 @@ this.negative_falling_apart_upgrade <- this.inherit("scripts/items/armor_upgrade
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.negative_falling_apart";
-		this.m.Name = "支离破碎";
+		this.m.Name = "散架";
 		this.m.Description = "";
-		this.m.ArmorDescription = "这盔甲快散架了。 长期的使用和疏于维护使它处于一种无法修理的可悲状态。";
+		this.m.ArmorDescription = "这件盔甲快散架了。长期使用，疏于维护，使它处于一副远不能完全修复的惨状。";
 		this.m.Icon = null;
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_downgrade_01.png";
@@ -26,7 +26,7 @@ this.negative_falling_apart_upgrade <- this.inherit("scripts/items/armor_upgrade
 			id = 6,
 			type = "text",
 			icon = "ui/icons/warning.png",
-			text = "无盔甲附件位置"
+			text = "无盔甲附件槽位"
 		});
 	}
 

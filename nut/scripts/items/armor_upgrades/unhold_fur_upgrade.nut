@@ -5,8 +5,8 @@ this.unhold_fur_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgr
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.unhold_fur";
 		this.m.Name = "巨魔毛皮斗篷";
-		this.m.Description = "一种厚厚的斗篷，由霜冻、未经雕琢的高贵巨魔毛皮制成。可以穿在任何盔甲上，使穿戴者对远程武器有更高的抗性。";
-		this.m.ArmorDescription = "一件厚厚的白色毛皮斗篷被附在这件盔甲上，使它对远程武器有更高的抗性。";
+		this.m.Description = "一件用霜巨魔雄伟白色毛皮制成的厚斗篷。可穿在任何盔甲外，提高穿戴者的远程武器抗性。";
+		this.m.ArmorDescription = "一件厚实白色毛皮斗篷附在这件盔甲上，让它更耐远程武器攻击。";
 		this.m.Icon = "armor_upgrades/upgrade_02.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_02.png";

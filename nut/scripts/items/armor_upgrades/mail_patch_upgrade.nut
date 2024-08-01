@@ -5,8 +5,8 @@ this.mail_patch_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgr
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.mail_patch";
 		this.m.Name = "链甲护肩";
-		this.m.Description = "一大片链甲，可以加到任何盔甲上，以进一步保护最脆弱的区域。";
-		this.m.ArmorDescription = "一大片的链甲被添加到这个装甲上，以进一步保护最脆弱的区域。";
+		this.m.Description = "一块大型链甲护肩，能附加到任何盔甲上，更好地保护其弱点。";
+		this.m.ArmorDescription = "这件盔甲上装有一块大型链甲护肩，以求对其弱点的进一步保护。";
 		this.m.Icon = "armor_upgrades/upgrade_09.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_09.png";

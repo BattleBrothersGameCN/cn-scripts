@@ -4,12 +4,12 @@ this.lindwurm_helmet <- this.inherit("scripts/items/helmets/named/named_helmet",
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.lindwurm_helmet";
-		this.m.Description = "这顶头盔曾经肯定属于一个勇敢而熟练的猎人，因为它覆盖着可怕的林德蠕龙的鳞片。 鳞片不仅可以阻止攻击和击打，而且它们还不会受到酸性林德蠕龙血液的伤害。";
+		this.m.Description = "其余其上覆盖着的可怖林德蠕龙鳞片，这顶头盔的原主人肯定是一位勇敢而熟练的猎人。鳞片不仅能抵御攻击，还能免受林德蠕龙酸性血液的腐蚀。";
 		this.m.NameList = [
-			"林德蠕龙的头",
-			"蜥蜴头饰",
-			"龙穹",
-			"林德蠕龙监护",
+			"林德蠕龙之头",
+			"蜥蜴头冠",
+			"龙之顶",
+			"林德蠕龙之守护",
 			"蠕龙鳞盔",
 			"林德蠕龙面罩"
 		];

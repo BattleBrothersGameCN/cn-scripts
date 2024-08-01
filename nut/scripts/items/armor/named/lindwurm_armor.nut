@@ -4,7 +4,7 @@ this.lindwurm_armor <- this.inherit("scripts/items/armor/named/named_armor", {
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.lindwurm_armor";
-		this.m.Description = "一件缝上了凶猛林德蠕龙坚固鳞片的重型链甲。不仅是伟大猎人的战利品，还能挡开最猛烈的打击，其闪光鳞片还能免受林德蠕龙酸性血液的腐蚀。";
+		this.m.Description = "一件缝上了凶猛林德蠕龙坚固鳞片的重型链甲。不仅是伟大猎人的战利品，还能挡开最猛烈的打击，甚至能凭借其闪光鳞片，免受林德蠕龙血液的腐蚀。";
 		this.m.NameList = [
 			"林德蠕龙鳞片",
 			"龙皮",

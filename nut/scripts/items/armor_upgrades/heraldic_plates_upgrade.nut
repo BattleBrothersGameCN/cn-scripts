@@ -5,8 +5,8 @@ this.heraldic_plates_upgrade <- this.inherit("scripts/items/armor_upgrades/armor
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.heraldic_plates";
 		this.m.Name = "纹章护肩";
-		this.m.Description = "盔甲肩部的大型防护板。";
-		this.m.ArmorDescription = "这种盔甲的肩部装有大型防护板。";
+		this.m.Description = "安装在盔甲肩部的大型护板。";
+		this.m.ArmorDescription = "盔甲肩部安装了一对大型护板。";
 		this.m.Variant = this.Math.rand(14, 18);
 		this.updateVariant();
 		this.m.Value = 500;

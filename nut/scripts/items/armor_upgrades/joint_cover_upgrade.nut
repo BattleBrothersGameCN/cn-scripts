@@ -5,8 +5,8 @@ this.joint_cover_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upg
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.joint_cover";
 		this.m.Name = "金属护肩";
-		this.m.Description = "能覆盖肩膀脆弱关节的大型金属护肩。";
-		this.m.ArmorDescription = "附加了保护肩膀脆弱关节的大型金属护肩。";
+		this.m.Description = "一对大型金属护肩，用来保护脆弱的肩关节。";
+		this.m.ArmorDescription = "装有一对大型金属护肩，为脆弱的肩关节增加了保护。";
 		this.m.Icon = "armor_upgrades/upgrade_10.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_10.png";

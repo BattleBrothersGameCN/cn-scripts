@@ -4,13 +4,13 @@ this.named_conic_helmet_with_faceguard <- this.inherit("scripts/items/helmets/na
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.named_conic_helmet_with_faceguard";
-		this.m.Description = "这顶圆锥形头盔有一个面罩和一个很好的鳞片来保护颈部。 面罩像一个即将攻击敌人的可怖的战士。";
+		this.m.Description = "这顶锥形盔安装了一具护面，以及一块细密鳞状甲片排列成的护颈。护面上的雕饰神似一位磨刀霍霍的战士。";
 		this.m.NameList = [
-			"圆锥形羽毛头盔",
+			"羽饰锥形盔",
 			"铁面具",
-			"军阀的头盔",
+			"军阀盔",
 			"铁面",
-			"钢制面"
+			"钢之貌"
 		];
 		this.m.ShowOnCharacter = true;
 		this.m.HideHair = true;
