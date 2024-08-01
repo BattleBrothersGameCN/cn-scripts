@@ -4,8 +4,8 @@ this.horn_plate_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgr
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.horn_plate";
-		this.m.Name = "角板";
-		this.m.Description = "由最坚硬又柔韧的材料制作的数块角板。套在普通盔甲上，可以帮助转移来袭的打击。";
+		this.m.Name = "角质甲板";
+		this.m.Description = "这些角板由自然界最坚硬而兼具柔韧的材料制成。穿在常规盔甲外侧，用来偏转来袭的攻击。";
 		this.m.ArmorDescription = "数块角板提供了额外的防护。";
 		this.m.Icon = "armor_upgrades/upgrade_22.png";
 		this.m.IconLarge = this.m.Icon;

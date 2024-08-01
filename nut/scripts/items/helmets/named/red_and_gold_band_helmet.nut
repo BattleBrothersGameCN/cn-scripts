@@ -4,14 +4,14 @@ this.red_and_gold_band_helmet <- this.inherit("scripts/items/helmets/named/named
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.red_and_gold_band_helmet";
-		this.m.Description = "这种南方风格的头盔不仅装饰丰富，而且平衡良好，由非常优质的金属制成。";
+		this.m.Description = "这顶南方风头盔可不只是看着气派，其重量分布合理，所用材料更是优中选优。";
 		this.m.NameList = [
-			"夹板头盔",
-			"分段头盔",
+			"板条盔",
+			"多层盔",
 			"沙王之冠",
-			"炽热的穹顶",
-			"游牧者的王冠",
-			"夹板羽毛头盔"
+			"炽穹",
+			"游牧王冠",
+			"羽饰板条盔"
 		];
 		this.m.ShowOnCharacter = true;
 		this.m.HideHair = true;

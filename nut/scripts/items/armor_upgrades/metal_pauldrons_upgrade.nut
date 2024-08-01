@@ -5,8 +5,8 @@ this.metal_pauldrons_upgrade <- this.inherit("scripts/items/armor_upgrades/armor
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.metal_pauldrons";
 		this.m.Name = "金属肩铠";
-		this.m.Description = "坚固的金属肩铠能附加到任何盔甲上，能加强肩膀部位与上半身的防护。当然了，这也使得盔甲有些笨重。";
-		this.m.ArmorDescription = "这件盔甲已经附加了金属肩铠来加强肩膀部位与上半身的防护，但这是以增加额外的重量为代价的。";
+		this.m.Description = "可以安装到任何盔甲上，增强上身防护的坚固金属肩铠。当然了，这也会使盔甲稍有加重。";
+		this.m.ArmorDescription = "这件盔甲加装有一套金属肩铠，以额外重量为代价，加强了肩部和上身的防护能力。";
 		this.m.Icon = "armor_upgrades/upgrade_11.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_11.png";

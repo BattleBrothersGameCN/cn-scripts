@@ -4,9 +4,9 @@ this.hyena_fur_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgra
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.hyena_fur";
-		this.m.Name = "鬣狗毛皮披风";
-		this.m.Description = "从凶猛的鬣狗身上取下的毛皮，缝在一起，作为猎兽者的战利品戴在脖子上。 像这样穿上野兽的皮能增强你行动的动力。";
-		this.m.ArmorDescription = "披着鬣狗毛皮的外套附在这件盔甲上，增强了穿戴者行动的动力。";
+		this.m.Name = "鬣狗毛皮斗篷";
+		this.m.Description = "由凶恶鬣狗经过鞣制的毛皮缝合而成，常被野兽猎手作为战利品戴在脖子上。穿上这样一件兽皮能让穿戴者充满干劲。";
+		this.m.ArmorDescription = "一件鬣狗毛皮斗篷附在盔甲上，让穿戴者充满干劲。";
 		this.m.Icon = "armor_upgrades/upgrade_26.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_26.png";

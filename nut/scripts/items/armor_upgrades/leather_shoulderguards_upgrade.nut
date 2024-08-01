@@ -5,8 +5,8 @@ this.leather_shoulderguards_upgrade <- this.inherit("scripts/items/armor_upgrade
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.leather_shoulderguards";
 		this.m.Name = "皮革护肩";
-		this.m.Description = "镶上皮护肩可以让轻型盔甲更有弹性。";
-		this.m.ArmorDescription = "这件盔甲已经装上皮革护肩提高了额外的防护。";
+		this.m.Description = "一对镶钉皮护肩能让轻甲在内的盔甲更容易从形变中恢复。";
+		this.m.ArmorDescription = "这件盔甲加装了一件镶钉皮护肩，防护性能略有提高。";
 		this.m.Icon = "armor_upgrades/upgrade_08.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_08.png";

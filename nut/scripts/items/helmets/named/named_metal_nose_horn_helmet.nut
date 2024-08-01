@@ -6,11 +6,11 @@ this.named_metal_nose_horn_helmet <- this.inherit("scripts/items/helmets/named/n
 		this.m.ID = "armor.head.named_metal_nose_horn_helmet";
 		this.m.Description = "这顶头盔一定是属于一个野蛮人的战士。 它的大小和设计对所有南方人来说都是陌生的。";
 		this.m.NameList = [
-			"封闭式头盔",
-			"钉头",
-			"刃头护板",
-			"笨重的护面",
-			"战壕战士头盔"
+			"闭面盔",
+			"尖刺盔",
+			"护头刃",
+			"粗大护面",
+			"斗士盔"
 		];
 		this.m.PrefixList = this.Const.Strings.BarbarianPrefix;
 		this.m.UseRandomName = false;

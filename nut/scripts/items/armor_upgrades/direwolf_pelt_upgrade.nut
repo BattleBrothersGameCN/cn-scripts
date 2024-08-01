@@ -5,8 +5,8 @@ this.direwolf_pelt_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_u
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.direwolf_pelt";
 		this.m.Name = "恐狼皮斗篷";
-		this.m.Description = "由凶猛的恐狼皮毛制成，经过处理和缝合，可佩戴在猎兽人的脖子上作为战利品。穿戴像这样的野兽皮毛可以使一个人变成一个令人敬畏的形象。";
-		this.m.ArmorDescription = "恐狼狼皮披风附在盔甲上，可以将穿戴者变成一个威风凛凛的人物。";
+		this.m.Description = "由凶恶恐狼经过鞣制的毛皮缝合而成，常被野兽猎手作为战利品戴在脖子上。穿上这样一件兽皮显得穿戴者杀气腾腾。";
+		this.m.ArmorDescription = "一件恐狼狼皮斗篷附在盔甲上，显得穿戴者杀气腾腾。";
 		this.m.Icon = "armor_upgrades/upgrade_01.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_01.png";

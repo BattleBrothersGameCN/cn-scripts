@@ -4,14 +4,14 @@ this.named_nordic_helmet_with_closed_mail <- this.inherit("scripts/items/helmets
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.named_nordic_helmet_with_closed_mail";
-		this.m.Description = "这顶带护面的北欧头盔是特别制作的，它的保护性和令人印象深刻的外观一样。";
+		this.m.Description = "这顶护面北欧盔工艺出众，外观和防护能力俱佳，令人久久不能忘怀。";
 		this.m.NameList = [
-			"海上掠袭者头盔",
-			"猫头鹰头盔",
-			"装饰的北欧头盔",
-			"酋长头盔",
-			"北欧雕刻头盔",
-			"北欧贵族头盔"
+			"海寇盔",
+			"枭盔",
+			"装饰北欧盔",
+			"酋长盔",
+			"蚀刻北欧盔",
+			"贵族北欧盔"
 		];
 		this.m.ShowOnCharacter = true;
 		this.m.HideHair = true;

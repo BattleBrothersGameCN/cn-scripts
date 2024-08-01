@@ -4,9 +4,9 @@ this.protective_runes_upgrade <- this.inherit("scripts/items/armor_upgrades/armo
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.protective_runes";
-		this.m.Name = "防护符文和标志";
-		this.m.Description = "写在干枯皮肤上的防护符文和标志，散发出令人不安的气息。";
-		this.m.ArmorDescription = "写在干枯皮肤上的防护符文和符号被附着到这件盔甲上。";
+		this.m.Name = "驱灵符咒";
+		this.m.Description = "写在干瘪皮肤上的驱灵符咒，散发出令人不安的气息。";
+		this.m.ArmorDescription = "写在干瘪皮肤上的驱灵符咒贴在这件盔甲上。";
 		this.m.Icon = "armor_upgrades/upgrade_07.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_07.png";

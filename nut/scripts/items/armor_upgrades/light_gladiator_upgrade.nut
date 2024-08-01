@@ -4,9 +4,9 @@ this.light_gladiator_upgrade <- this.inherit("scripts/items/armor_upgrades/armor
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.light_gladiator_upgrade";
-		this.m.Name = "内衬盔甲片";
-		this.m.Description = "内衬盔甲片提供额外防护。";
-		this.m.ArmorDescription = "这件甲胄加了内衬护甲片可以提供额外的防护。";
+		this.m.Name = "填充护甲片";
+		this.m.Description = "提供了额外防护的填充护甲片。";
+		this.m.ArmorDescription = "这件盔甲安装了一块填充护甲片，提供了额外的防护。";
 		this.m.Icon = "armor_upgrades/upgrade_24.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_24.png";

@@ -4,13 +4,13 @@ this.named_metal_bull_helmet <- this.inherit("scripts/items/helmets/named/named_
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.named_metal_bull_helmet";
-		this.m.Description = "由非常坚固的合金制成的强化头盔。 它装饰华丽，重量沉重，但提供了非凡的保护。";
+		this.m.Description = "一顶由极为坚固的合金制成的加强头盔。它装饰华丽，分量沉重，却并非华而不实，提供了绝佳的防护性能。";
 		this.m.NameList = [
-			"带角头盔",
-			"合金机头",
-			"古老的萨莱特",
+			"角盔",
+			"合金头冠",
+			"古代轻盔",
 			"保护者",
-			"有角的冠"
+			"角冠"
 		];
 		this.m.PrefixList = this.Const.Strings.BarbarianPrefix;
 		this.m.UseRandomName = false;

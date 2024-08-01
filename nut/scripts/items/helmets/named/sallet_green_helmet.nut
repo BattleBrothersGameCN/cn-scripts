@@ -4,11 +4,11 @@ this.sallet_green_helmet <- this.inherit("scripts/items/helmets/named/named_helm
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.sallet_green";
-		this.m.Description = "这是一个精心制作的带有彩色绶带的链甲头盔。";
+		this.m.Description = "一顶上饰彩色缎带，下有链甲头肩巾的精造轻盔。";
 		this.m.NameList = [
-			"装饰的轻盔",
-			"轻质链盔",
-			"开敞式轻盔",
+			"装饰轻盔",
+			"衬链轻盔",
+			"开面轻盔",
 			"缎带轻盔"
 		];
 		this.m.ShowOnCharacter = true;

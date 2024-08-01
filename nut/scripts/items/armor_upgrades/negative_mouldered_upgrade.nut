@@ -6,7 +6,7 @@ this.negative_mouldered_upgrade <- this.inherit("scripts/items/armor_upgrades/ar
 		this.m.ID = "armor_upgrade.negative_moulderedd";
 		this.m.Name = "腐朽";
 		this.m.Description = "";
-		this.m.ArmorDescription = "这件盔甲已经暴露在自然环境中很长时间了。皮革正在脱落，布料腐烂，金属生锈穿孔。";
+		this.m.ArmorDescription = "这件盔甲长时间暴露在自然环境中。皮革碎裂，布料腐坏，连金属件都锈穿了。";
 		this.m.Icon = null;
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_downgrade_03.png";
@@ -26,7 +26,7 @@ this.negative_mouldered_upgrade <- this.inherit("scripts/items/armor_upgrades/ar
 			id = 6,
 			type = "text",
 			icon = "ui/icons/warning.png",
-			text = "无盔甲附件位置"
+			text = "无盔甲附件槽位"
 		});
 	}
 

@@ -4,12 +4,12 @@ this.nasal_feather_helmet <- this.inherit("scripts/items/helmets/named/named_hel
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.nasal_feather";
-		this.m.Description = "一种用皮革鳞片制成的可以保护颈部和鼻子的独特鼻翼盔。";
+		this.m.Description = "一顶带有特制皮鳞甲护颈的加硬护鼻盔。";
 		this.m.NameList = [
 			"羽饰护鼻盔",
 			"加强头盔",
 			"守护",
-			"护头板",
+			"护头",
 			"保护者"
 		];
 		this.m.ShowOnCharacter = true;

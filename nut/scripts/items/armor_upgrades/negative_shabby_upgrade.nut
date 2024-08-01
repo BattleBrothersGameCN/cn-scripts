@@ -6,7 +6,7 @@ this.negative_shabby_upgrade <- this.inherit("scripts/items/armor_upgrades/armor
 		this.m.ID = "armor_upgrade.negative_shabby";
 		this.m.Name = "破旧";
 		this.m.Description = "";
-		this.m.ArmorDescription = "看来以前的主人根本就没有维护过它；部分零件缺失或者被临时拼凑的东西取代了。";
+		this.m.ArmorDescription = "看来前任主人根本没把它当回事。有些零件彻底丢了，有些则是拿别的什么顶上了。";
 		this.m.Icon = null;
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_downgrade_02.png";
@@ -26,7 +26,7 @@ this.negative_shabby_upgrade <- this.inherit("scripts/items/armor_upgrades/armor
 			id = 6,
 			type = "text",
 			icon = "ui/icons/warning.png",
-			text = "无盔甲附件位置"
+			text = "无盔甲附件槽位"
 		});
 	}
 

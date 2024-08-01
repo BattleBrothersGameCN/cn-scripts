@@ -4,18 +4,18 @@ this.gold_and_black_turban <- this.inherit("scripts/items/helmets/named/named_he
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.gold_and_black_turban";
-		this.m.Description = "这种南方风格的头盔不仅装饰丰富，而且平衡良好，由最高质量的材料制成。";
+		this.m.Description = "这顶南方风头盔可不只是看着气派，其重量分布合理，所用材料也是一流。";
 		this.m.NameList = [
-			"南方王冠",
-			"沙漠冠",
-			"太阳头巾",
-			"金冠",
-			"维齐尔的骄傲",
-			"沙王之舵",
-			"太阳面纱",
-			"太阳斗篷",
-			"镀金者的骄傲",
-			"镀金者的面容"
+			"南方之冠",
+			"沙漠羽冠",
+			"赤日缠头",
+			"金羽冠",
+			"维齐尔之傲",
+			"沙王之盔",
+			"蝎之盔",
+			"庇日者",
+			"镀金者之傲",
+			"镀金者之容"
 		];
 		this.m.ShowOnCharacter = true;
 		this.m.HideHair = true;

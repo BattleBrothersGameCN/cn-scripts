@@ -4,16 +4,16 @@ this.named_metal_skull_helmet <- this.inherit("scripts/items/helmets/named/named
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.named_metal_skull_helmet";
-		this.m.Description = "一种典型的北方野蛮人的重型头盔，有颅骨状的面罩。 这件作品的质量令人印象深刻。";
+		this.m.Description = "一顶安装了颅状面具的典型北方野蛮人重头盔。它带给人的震撼足以和其重量相称。";
 		this.m.NameList = [
-			"北方面甲",
-			"金属颅骨",
+			"北地之貌",
+			"铁颅",
 			"面罩",
-			"宗族外表",
+			"氏族之面",
 			"面具",
-			"钢铁面罩",
-			"部落面貌",
-			"抢劫者凝视"
+			"铁面",
+			"部落之容",
+			"劫掠之凝"
 		];
 		this.m.PrefixList = this.Const.Strings.BarbarianPrefix;
 		this.m.UseRandomName = false;

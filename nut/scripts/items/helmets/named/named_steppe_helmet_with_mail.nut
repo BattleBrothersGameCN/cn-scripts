@@ -4,11 +4,11 @@ this.named_steppe_helmet_with_mail <- this.inherit("scripts/items/helmets/named/
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.named_steppe_helmet_with_mail";
-		this.m.Description = "一个精心制作的头盔，像草原上的人们一样。 用金色装饰，并配备额外的护面。";
+		this.m.Description = "一顶匠心独运的草原风头盔。头盔上饰有金漆，加装护颊。";
 		this.m.NameList = [
-			"草原头盔",
-			"装饰的性鼻头盔",
-			"头翼盔",
+			"草原盔",
+			"装饰护鼻盔",
+			"垂巾盔",
 			"马鬃盔"
 		];
 		this.m.ShowOnCharacter = true;

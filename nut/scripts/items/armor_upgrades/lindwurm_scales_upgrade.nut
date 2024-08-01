@@ -5,8 +5,8 @@ this.lindwurm_scales_upgrade <- this.inherit("scripts/items/armor_upgrades/armor
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.lindwurm_scales";
 		this.m.Name = "林德蠕龙鳞片披风";
-		this.m.Description = "用林德蠕龙鳞片制成的披风。不仅是罕见又惊艳的战利品，还提供了额外的防护并且免疫林德蠕龙的血液腐蚀。";
-		this.m.ArmorDescription = "这件盔甲附加了林德蠕龙鳞片披风，提供额外的防护，还能免疫林德蠕龙的血液腐蚀。";
+		this.m.Description = "一件由林德蠕龙鳞片制成的披风。不仅是罕见又惊艳的战利品，还提供了额外的防护，甚至能免受林德蠕龙的血液腐蚀。";
+		this.m.ArmorDescription = "一件林德蠕龙鳞片制成的披风套在盔甲之外，提供了额外的防护，还使盔甲免于林德蠕龙的血液腐蚀。";
 		this.m.Icon = "armor_upgrades/upgrade_04.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_04.png";

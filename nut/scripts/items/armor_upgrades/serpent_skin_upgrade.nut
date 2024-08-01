@@ -4,9 +4,9 @@ this.serpent_skin_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_up
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.serpent_skin";
-		this.m.Name = "大蛇皮披风";
-		this.m.Description = "用沙漠大蛇的薄而闪亮的鳞片制成的一种披风，尤其更耐高温和火焰。";
-		this.m.ArmorDescription = "一层大蛇皮披风附在这件盔甲上，使它更耐高温和火焰。";
+		this.m.Name = "蛇皮斗篷";
+		this.m.Description = "一件用薄而闪亮的沙漠大蛇蛇皮制成的斗篷，尤其能经受高温和火烧。";
+		this.m.ArmorDescription = "一件大蛇蛇皮斗篷附在盔甲上，让它更耐高温和火烧。";
 		this.m.Icon = "armor_upgrades/upgrade_27.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_27.png";
@@ -41,7 +41,7 @@ this.serpent_skin_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_up
 			id = 15,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "减少来自火和火器的伤害 [color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]"
+			text = "来自火和火器的伤害减少 [color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]"
 		});
 		return result;
 	}
@@ -52,7 +52,7 @@ this.serpent_skin_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_up
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "减少来自火和火器的伤害 [color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]"
+			text = "来自火和火器的伤害减少 [color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]"
 		});
 	}
 

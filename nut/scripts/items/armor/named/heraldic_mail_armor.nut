@@ -4,7 +4,7 @@ this.heraldic_mail_armor <- this.inherit("scripts/items/armor/named/named_armor"
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.heraldic_mail";
-		this.m.Description = "用最好的材料制成，最华贵的饰品装点，这件长身链甲配得上一位真正的骑士。";
+		this.m.Description = "用最好的材料制成，最华贵的饰品装点，这件长身链甲配得上一位正牌骑士。";
 		this.m.NameList = [
 			"纹章链甲",
 			"辉煌",

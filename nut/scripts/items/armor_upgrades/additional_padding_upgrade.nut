@@ -4,9 +4,9 @@ this.additional_padding_upgrade <- this.inherit("scripts/items/armor_upgrades/ar
 	{
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.additional_padding";
-		this.m.Name = "额外的毛皮填充物";
-		this.m.Description = "由厚毛皮所制作，这种额外的护垫有助于减弱所有攻击的冲击。";
-		this.m.ArmorDescription = "额外的毛皮护垫有助于进一步减弱任何打击的影响。";
+		this.m.Name = "附加毛护垫";
+		this.m.Description = "这种由厚毛皮制成的附加毛皮护垫能为打击提供缓冲。";
+		this.m.ArmorDescription = "附加了毛皮护垫来进一步缓冲冲击力。";
 		this.m.Icon = "armor_upgrades/upgrade_03.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_03.png";
