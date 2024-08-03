@@ -5,7 +5,7 @@ this.spiritual_reward_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.spiritual_reward";
 		this.m.Name = "深蓝小瓶";
-		this.m.Description = "用另一个人的生命为代价与恶毒女巫交换而来的，这种神秘的混合液可给精神带来奇妙的变化，能够赋予智慧与悟性，就像经历了无数的战斗一样。";
+		this.m.Description = "用他人的生命与女巫交易而来，这瓶神秘合剂许诺能和精神共鸣，带来经历十几场战斗才能获得的智慧和启发。";
 		this.m.Icon = "consumables/vial_blue_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -57,7 +57,7 @@ this.spiritual_reward_item <- this.inherit("scripts/items/item", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "授予老兵训练"
+			text = "授予一次老兵升级"
 		});
 		result.push({
 			id = 65,

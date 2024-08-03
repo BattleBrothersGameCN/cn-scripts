@@ -4,8 +4,8 @@ this.falchion <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.falchion";
-		this.m.Name = "弯形大刀";
-		this.m.Description = "一种弯曲的剑，最适合砍杀没有装甲的对手。";
+		this.m.Name = "弯刃剑";
+		this.m.Description = "一把适合砍杀无甲对手的弯刃剑。";
 		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/sword_04.png";
 		this.m.Icon = "weapons/melee/sword_04_70x70.png";

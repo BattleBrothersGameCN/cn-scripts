@@ -5,7 +5,7 @@ this.billhook <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.billhook";
 		this.m.Name = "钩镰";
-		this.m.Description = "一种类似长枪的武器，带有用于在一定距离上劈击的刀片，也装有用于拉近目标的钩子。";
+		this.m.Description = "一种类似长枪的武器，既有用于远距离挥击的刃，又有用于拉近目标的钩。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.IconLarge = "weapons/melee/bill_01.png";
 		this.m.Icon = "weapons/melee/bill_01_70x70.png";

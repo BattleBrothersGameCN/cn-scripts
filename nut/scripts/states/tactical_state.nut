@@ -1926,7 +1926,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 							if (bro.getLifetimeStats().BattlesWithoutMe > this.Math.max(2, 6 - bro.getLevel()))
 							{
-								bro.worsenMood(this.Const.MoodChange.BattleWithoutMe, "在后备中无所事事");
+								bro.worsenMood(this.Const.MoodChange.BattleWithoutMe, "在预备队中无所事事");
 							}
 						}
 					}
@@ -1978,7 +1978,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 						if (bro.getLifetimeStats().BattlesWithoutMe > this.Math.max(2, 6 - bro.getLevel()))
 						{
-							bro.worsenMood(this.Const.MoodChange.BattleWithoutMe, "在后备中无所事事");
+							bro.worsenMood(this.Const.MoodChange.BattleWithoutMe, "在预备队中无所事事");
 						}
 					}
 				}

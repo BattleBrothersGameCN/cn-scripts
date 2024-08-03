@@ -5,7 +5,7 @@ this.glittering_rock_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.glittering_rock";
 		this.m.Name = "闪光岩石";
-		this.m.Description = "闪着金光的石头偶尔也会散落在被击败的伊夫利特周围。 值钱的战利品。";
+		this.m.Description = "被击败的伊夫利特周围偶尔会散落着闪闪发光的石头。值钱的战利品。";
 		this.m.Icon = "loot/southern_04.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

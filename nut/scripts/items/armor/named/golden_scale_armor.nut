@@ -4,7 +4,7 @@ this.golden_scale_armor <- this.inherit("scripts/items/armor/named/named_armor",
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.golden_scale";
-		this.m.Description = "一种由细小的连锁鳞片打造的盔甲。这种风格和工艺暗示着盔甲来自遥远的地区。";
+		this.m.Description = "一件细密层叠鳞状金属甲片制成的铠甲。这种风格和工艺暗示这件盔甲来自遥远的国度。";
 		this.m.NameList = [
 			"鳞甲衫",
 			"鳞甲",

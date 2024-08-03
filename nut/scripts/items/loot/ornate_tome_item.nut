@@ -5,7 +5,7 @@ this.ornate_tome_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.ornate_tome";
 		this.m.Name = "华丽巨著";
-		this.m.Description = "有着巨大黄金封面，保存完好的巨著。能在专研尘封古书的人那儿卖个好价。";
+		this.m.Description = "有着大开版黄金封面，保存完好的巨著。能在专研尘封古书的人那儿卖个好价。";
 		this.m.Icon = "loot/inventory_loot_08.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

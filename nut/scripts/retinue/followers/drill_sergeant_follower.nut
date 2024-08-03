@@ -10,7 +10,7 @@ this.drill_sergeant_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Cost = 3500;
 		this.m.Effects = [
 			"使你的人在1级时获得20%更多的经验，每提高一级就减少2%",
-			"使处于后备队的人不会因不参加战斗而降低心情"
+			"使预备队中的角色不会因不能参战而降低心情"
 		];
 		this.m.Requirements = [
 			{

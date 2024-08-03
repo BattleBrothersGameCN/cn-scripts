@@ -5,7 +5,7 @@ this.smoked_ham_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.smoked_ham";
 		this.m.Name = "熏火腿";
-		this.m.Description = "食物。保存食物的方法有很多。这块火腿是在熏制屋里处理的。";
+		this.m.Description = "食物。保存食物的方法很多。把火腿送到熏肉坊里也是其中一个。";
 		this.m.Icon = "supplies/inventory_provisions_11.png";
 		this.m.Value = 95;
 		this.m.GoodForDays = 12;

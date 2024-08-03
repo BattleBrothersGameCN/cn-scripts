@@ -4,8 +4,8 @@ this.worn_kite_shield <- this.inherit("scripts/items/shields/shield", {
 	{
 		this.shield.create();
 		this.m.ID = "shield.worn_kite_shield";
-		this.m.Name = "破旧的筝形盾";
-		this.m.Description = "一种细长的木制盾牌，甚至能为下半身提供良好的防御。 但在近距离作战中显得有些笨重。";
+		this.m.Name = "破旧筝形盾";
+		this.m.Description = "一面能护住下半身的细长木制盾牌。在近身战斗中稍显笨重。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.updateVariant();

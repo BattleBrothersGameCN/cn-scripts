@@ -5,7 +5,7 @@ this.incense_item <- this.inherit("scripts/items/trade/trading_good_item", {
 		this.trading_good_item.create();
 		this.m.ID = "misc.incense";
 		this.m.Name = "熏香";
-		this.m.Description = "这些干燥的树液碎片会产生一种充满神秘和异国情调的浓烟。会卖个好价钱，尤其是在北方。";
+		this.m.Description = "这些干燥的树液碎片能发出一种充满神秘异国情调的浓烟。在北方尤其能卖个好价钱。";
 		this.m.Icon = "trade/inventory_trade_12.png";
 		this.m.Culture = this.Const.World.Culture.Southern;
 		this.m.ProducingBuildings = [

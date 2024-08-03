@@ -5,7 +5,7 @@ this.manhunters_ledger_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.manhunters_ledger";
 		this.m.Name = "战团账簿";
-		this.m.Description = "一本详细介绍战团成员和合同条款的账簿。";
+		this.m.Description = "一本详细记录了战团成员和合同条款的账簿。";
 		this.m.Icon = "misc/inventory_ledger_item.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc;
@@ -81,7 +81,7 @@ this.manhunters_ledger_item <- this.inherit("scripts/items/item", {
 				id = 65,
 				type = "hint",
 				icon = "ui/tooltips/warning.png",
-				text = "战团里的负债者太少了！ 如果这种情况继续下去，猎奴者会感到不满意！"
+				text = "战团里的负债者太少了！如果情况继续下去，猎奴者会感到不满！"
 			});
 		}
 

@@ -35,7 +35,7 @@ this.throwing_spear <- this.inherit("scripts/items/weapons/weapon", {
 			id = 4,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "使用后摧毁"
+			text = "使用即摧毁"
 		});
 		return result;
 	}

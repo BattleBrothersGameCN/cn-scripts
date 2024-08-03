@@ -4,7 +4,7 @@ this.paint_orange_red_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.paint_orange_red";
-		this.m.Name = "橘红色油漆";
+		this.m.Name = "橘红色涂料";
 		this.m.Description = "红色和黄色涂料。可以涂在常见的头盔上。";
 		this.m.Icon = "consumables/paint_yellow_red.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
@@ -56,7 +56,7 @@ this.paint_orange_red_item <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前所选角色携带的头盔上，以为其上色。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前所选角色携带的头盔上，以为其上色。此物品会在使用过程中消耗掉。"
 		});
 		return result;
 	}

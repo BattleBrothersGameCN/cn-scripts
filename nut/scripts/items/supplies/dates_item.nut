@@ -5,7 +5,7 @@ this.dates_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.dates";
 		this.m.Name = "枣子";
-		this.m.Description = "食物。干枣在南方很常见。这些香甜的干果富含能量、便于保存。";
+		this.m.Description = "食物。南方常见的干枣。这些香甜的干果富含能量、便于保存。";
 		this.m.Icon = "supplies/inventory_provisions_20.png";
 		this.m.Value = 80;
 		this.m.GoodForDays = 10;

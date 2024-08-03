@@ -5,7 +5,7 @@ this.player_banner <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.player_banner";
 		this.m.Name = "战旗";
-		this.m.Description = "一面带入战斗的战团旗帜。高举战旗能激励周围友军的决心，并且还能让敌人知道是谁击溃了他们。";
+		this.m.Description = "一面带入战斗的战团旗帜。高举战旗能激励周围友军的决心，让敌人知道是谁击溃了他们。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;
@@ -46,7 +46,7 @@ this.player_banner <- this.inherit("scripts/items/weapons/weapon", {
 			id = 10,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "距离4格及以内的盟友得到持举旗帜角色决心的[color=" + this.Const.UI.Color.PositiveValue + "]10%[/color]作为加成，但最高不能超过掌旗者的决心。"
+			text = "4格内的盟友获得掌旗者决心的 [color=" + this.Const.UI.Color.PositiveValue + "]10%[/color] 作为加成，最高加成至与掌旗者决心等同。"
 		});
 		return result;
 	}

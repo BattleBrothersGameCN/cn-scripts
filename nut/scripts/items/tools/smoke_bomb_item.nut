@@ -4,8 +4,8 @@ this.smoke_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.smoke_bomb";
-		this.m.Name = "烟雾罐";
-		this.m.Description = "一个摔在地面上以后会迅速产生浓厚烟雾的小罐子。适合用来掩护移动。";
+		this.m.Name = "发烟罐";
+		this.m.Description = "一个摔在地面上以后会迅速产生浓重烟雾的小罐子。适合用来掩护移动。";
 		this.m.IconLarge = "tools/smoke_bomb_01.png";
 		this.m.Icon = "tools/smoke_bomb_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Offhand;
@@ -66,19 +66,19 @@ this.smoke_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 			id = 7,
 			type = "text",
 			icon = "ui/icons/vision.png",
-			text = "使用范围为[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格"
+			text = "能投出 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格远"
 		});
 		result.push({
 			id = 5,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "用烟雾覆盖[color=" + this.Const.UI.Color.DamageValue + "]7[/color]个格子的区域，持续1回合，其中的人可以无视控制区域自由移动"
+			text = "将烟雾布满 [color=" + this.Const.UI.Color.DamageValue + "]7[/color] 个格子，持续1回合，让其中的人能无视控制区域自由移动"
 		});
 		result.push({
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "使用后摧毁"
+			text = "使用即摧毁"
 		});
 		return result;
 	}

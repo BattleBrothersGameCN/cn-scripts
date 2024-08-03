@@ -7,7 +7,7 @@ this.named_wing_shield <- this.inherit("scripts/items/shields/named/named_shield
 		this.updateVariant();
 		this.m.ID = "shield.named_wing";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "一种用最好的材料制成的强化木质扇形盾,很明显是由盾牌大师制作而成。";
+		this.m.Description = "一面使用顶级材料制成的化木质扇形盾，显然是大师之作。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Value = 1000;

@@ -5,7 +5,7 @@ this.craftable_lindwurm_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.craftable_lindwurm";
 		this.m.Name = "林德蠕龙之盾";
-		this.m.Description = "这个坚固的盾牌由闪闪发光的林德蠕龙鳞片制成，几乎是坚不可摧的。";
+		this.m.Description = "这面盾牌用林德蠕龙的闪亮鳞片制成，堪称坚不可摧。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 7;

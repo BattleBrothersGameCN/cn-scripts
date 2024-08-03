@@ -5,7 +5,7 @@ this.roots_and_berries_item <- this.inherit("scripts/items/supplies/food_item", 
 		this.food_item.create();
 		this.m.ID = "supplies.roots_and_berries";
 		this.m.Name = "根茎和浆果";
-		this.m.Description = "食物。干根和浆果不是最令人兴奋的口粮，但很容易获得，也保存得很久。";
+		this.m.Description = "食物。晒干的根茎和浆果并不能激起人们的食欲，却容易获得也很好保存。";
 		this.m.Icon = "supplies/inventory_provisions_04.png";
 		this.m.Value = 60;
 		this.m.GoodForDays = 8;

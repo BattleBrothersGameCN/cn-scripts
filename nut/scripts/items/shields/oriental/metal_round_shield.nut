@@ -5,7 +5,7 @@ this.metal_round_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.metal_round_shield";
 		this.m.Name = "斯帕尔盾";
-		this.m.Description = "一面南方设计的全金属圆形盾牌。相当重，但也很耐用。";
+		this.m.Description = "一面南方款式的全金属圆形盾牌。相当重，但也很耐用。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.SoundOnHit = this.Const.Sound.ShieldHitMetal;

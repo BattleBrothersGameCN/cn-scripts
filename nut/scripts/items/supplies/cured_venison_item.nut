@@ -5,7 +5,7 @@ this.cured_venison_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.cured_venison";
 		this.m.Name = "腌鹿肉";
-		this.m.Description = "食物。用盐腌制的鹿肉块。佣兵们的旅行美食。";
+		this.m.Description = "食物。用盐腌制的大块鹿肉。佣兵旅途中的美味。";
 		this.m.Icon = "supplies/inventory_provisions_10.png";
 		this.m.Value = 95;
 		this.m.GoodForDays = 12;

@@ -5,7 +5,7 @@ this.cured_rations_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.cured_rations";
 		this.m.Name = "精制口粮";
-		this.m.Description = "食物。这些口粮由各式各样精工腌制的肉和蔬菜混合而成，被密封在小盒子里。这是你长途旅行和探险的理想食物。";
+		this.m.Description = "食物。密封分装在小盒子里，囊括了精腌肉类和蔬菜的套装口粮。是长途旅行和探险的理想食品。";
 		this.m.Icon = "supplies/inventory_provisions_16.png";
 		this.m.Value = 150;
 		this.m.GoodForDays = 16;

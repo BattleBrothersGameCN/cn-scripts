@@ -4,8 +4,8 @@ this.greataxe <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.greataxe";
-		this.m.Name = "双手大斧";
-		this.m.Description = "一把又重又长的战斗用双手斧，每一次挥动都能造成沉重的打击，而且可以轻易地将人一分为二。";
+		this.m.Name = "大斧";
+		this.m.Description = "一把又重又长的战斗用双手斧，每次挥动都能造成沉重打击，轻易地将人一分为二。";
 		this.m.Categories = "斧，双手持";
 		this.m.IconLarge = "weapons/melee/axe_two_handed_01.png";
 		this.m.Icon = "weapons/melee/axe_two_handed_01_70x70.png";

@@ -7,7 +7,7 @@ this.greatsword <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.greatsword";
 		this.m.Name = "大剑";
-		this.m.Description = "一种很长的双手利刃，既能切割又能斩破敌人。";
+		this.m.Description = "一把既能用于斩击又能砸向对手的双手利刃。";
 		this.m.Categories = "剑，双手持";
 		this.m.IconLarge = "weapons/melee/sword_two_hand_02.png";
 		this.m.Icon = "weapons/melee/sword_two_hand_02_70x70.png";

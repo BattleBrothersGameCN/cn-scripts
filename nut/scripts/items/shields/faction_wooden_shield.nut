@@ -5,7 +5,7 @@ this.faction_wooden_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.faction_wooden_shield";
 		this.m.Name = "木盾";
-		this.m.Description = "一面圆形的木制盾牌。";
+		this.m.Description = "一面圆形木制盾牌。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 1;

@@ -7,7 +7,7 @@ this.named_rider_on_horse_shield <- this.inherit("scripts/items/shields/named/na
 		this.updateVariant();
 		this.m.ID = "shield.named_rider_on_horse";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "这面陈旧的扇形盾牌上雕刻着一些古老的图案。 它看起来历史悠久，但依旧好使且耐用。";
+		this.m.Description = "一面布满了圣像图画的古董扇形盾。样子老旧，却容易操作，经久耐用。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Value = 1000;

@@ -4,7 +4,7 @@ this.reinforced_leather_tunic <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.reinforced_leather_tunic";
-		this.m.Name = "加固皮甲";
+		this.m.Name = "强化皮甲";
 		this.m.Description = "一件套在不祥黑色外套之上的结实束腰衣，加强有厚皮甲和铁护腕。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

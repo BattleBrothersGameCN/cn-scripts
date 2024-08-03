@@ -4,8 +4,8 @@ this.black_marsh_stew_item <- this.inherit("scripts/items/supplies/food_item", {
 	{
 		this.food_item.create();
 		this.m.ID = "supplies.black_marsh_stew";
-		this.m.Name = "黑沼泽炖";
-		this.m.Description = "食物。来自沼泽的黑暗料理，这道与美味不沾边的恐怖炖汤能保存很长时间。可能刚做出来的时候就已经变质了。";
+		this.m.Name = "黑沼炖菜";
+		this.m.Description = "食物。来自黑暗沼泽的黑暗料理，这道与美味不沾边的恐怖炖汤能保存很长时间。可能是因为它早就变质了。";
 		this.m.Icon = "supplies/inventory_provisions_17.png";
 		this.m.Value = 85;
 		this.m.GoodForDays = 12;

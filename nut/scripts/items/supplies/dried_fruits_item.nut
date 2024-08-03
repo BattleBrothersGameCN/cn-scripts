@@ -5,7 +5,7 @@ this.dried_fruits_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.dried_fruits";
 		this.m.Name = "果脯";
-		this.m.Description = "食物。果园里的水果既可口又营养。它们被晒干以保存更长时间。";
+		this.m.Description = "食物。果园里可口又营养的水果，被晒干以后可以保存更久。";
 		this.m.Icon = "supplies/inventory_provisions_08.png";
 		this.m.Value = 80;
 		this.m.GoodForDays = 10;

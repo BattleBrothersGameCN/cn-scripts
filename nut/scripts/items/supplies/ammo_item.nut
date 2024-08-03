@@ -61,7 +61,7 @@ this.ammo_item <- this.inherit("scripts/items/item", {
 			{
 				id = 2,
 				type = "description",
-				text = "不错的[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Amount + "[/color]单位弹药——弓箭、弩箭、标枪，用于在战斗后自动补充箭袋。一旦你重新进入世界地图，将被添加到你的全局库存中。"
+				text = "品相良好的各类弹药[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Amount + "[/color]单位，包括弓箭、弩箭、标枪等，用于在战后自动补充弹药。返回世界地图即会加入全局库存。"
 			}
 		];
 

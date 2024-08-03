@@ -17,7 +17,7 @@ this.light_crossbow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.light_crossbow";
 		this.m.Name = "轻弩";
-		this.m.Description = "一把轻型的拉杆式弩，可以在中等距离上射击弩矢。即使是在门外汉的手上也极为有效，但需要几乎整回合的时间来重新装载。";
+		this.m.Description = "一把中等射程的轻型版拉杆式弩。在门外汉手上也极为有效，但几乎要装填上一整个回合。";
 		this.m.Categories = "弩, 双手持";
 		this.m.IconLarge = "weapons/ranged/crossbow_02.png";
 		this.m.Icon = "weapons/ranged/crossbow_02_70x70.png";
@@ -57,7 +57,7 @@ this.light_crossbow <- this.inherit("scripts/items/weapons/weapon", {
 				id = 10,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]必须重新装填才能再次发射[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]射击前须装填[/color]"
 			});
 		}
 

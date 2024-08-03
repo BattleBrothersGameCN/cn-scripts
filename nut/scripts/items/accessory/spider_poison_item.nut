@@ -23,7 +23,7 @@ this.spider_poison_item <- this.inherit("scripts/items/accessory/accessory", {
 			id = 4,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "使用后摧毁"
+			text = "使用即摧毁"
 		});
 		return result;
 	}

@@ -5,7 +5,7 @@ this.craftable_kraken_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.craftable_kraken";
 		this.m.Name = "克拉肯之盾";
-		this.m.Description = "这面盾牌是由克拉肯的角盘制作而成，比任何普通的盾牌都要坚固。";
+		this.m.Description = "这面盾牌由巨怪克拉肯的角板制成，比所有常规盾牌都要坚固。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 9;

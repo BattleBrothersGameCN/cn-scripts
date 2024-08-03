@@ -4,8 +4,8 @@ this.wooden_shield_old <- this.inherit("scripts/items/shields/shield", {
 	{
 		this.shield.create();
 		this.m.ID = "shield.wooden_shield_old";
-		this.m.Name = "破旧木盾";
-		this.m.Description = "一面破旧的圆形木盾。";
+		this.m.Name = "旧木盾";
+		this.m.Description = "一面破旧的木制圆盾。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.updateVariant();

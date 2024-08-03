@@ -5,7 +5,7 @@ this.pickled_mushrooms_item <- this.inherit("scripts/items/supplies/food_item", 
 		this.food_item.create();
 		this.m.ID = "supplies.pickled_mushrooms";
 		this.m.Name = "蘑菇";
-		this.m.Description = "食物。沼泽地区提供的食物很少，但腌蘑菇是那里的旅客最受欢迎的食物。";
+		this.m.Description = "食物。沼泽产出的食物很少，可腌蘑菇还是得到了往来旅客的喜爱。";
 		this.m.Icon = "supplies/inventory_provisions_07.png";
 		this.m.Value = 70;
 		this.m.GoodForDays = 9;

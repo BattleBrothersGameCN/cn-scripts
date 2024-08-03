@@ -5,7 +5,7 @@ this.fire_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.fire_bomb";
 		this.m.Name = "火油罐";
-		this.m.Description = "一种装满高度易燃液体的罐子，当投掷时会引燃一片区域。";
+		this.m.Description = "一个装满高度易燃液体的罐子，投出时能点燃一片区域。";
 		this.m.IconLarge = "tools/fire_pot_01.png";
 		this.m.Icon = "tools/fire_pot_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Offhand;
@@ -66,19 +66,19 @@ this.fire_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 			id = 7,
 			type = "text",
 			icon = "ui/icons/vision.png",
-			text = "使用范围为[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格"
+			text = "能投出 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格远"
 		});
 		result.push({
 			id = 5,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "可点燃[color=" + this.Const.UI.Color.DamageValue + "]7[/color]个格子的区域，持续2回合。"
+			text = "能点燃 [color=" + this.Const.UI.Color.DamageValue + "]7[/color] 个格子，持续2回合。"
 		});
 		result.push({
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "使用后摧毁"
+			text = "使用即摧毁"
 		});
 		return result;
 	}

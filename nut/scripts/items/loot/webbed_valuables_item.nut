@@ -5,7 +5,7 @@ this.webbed_valuables_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.webbed_valuables";
 		this.m.Name = "网缚珍宝";
-		this.m.Description = "蛛魔网的深处，偶尔能找到倒霉鬼留下的贵重物品 —— 你敢以身犯险伸手去找的话。";
+		this.m.Description = "蛛魔网的深处，偶尔能找到倒霉鬼留下的贵重物品，前提是你敢把手摸到毒巢里去。";
 		this.m.Icon = "loot/southern_08.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

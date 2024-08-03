@@ -5,7 +5,7 @@ this.ground_grains_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.ground_grains";
 		this.m.Name = "谷粉";
-		this.m.Description = "食物。各种磨碎的谷物，可以和水或牛奶一起煮，作为日常的一餐。它能充饥，但没什么味道。";
+		this.m.Description = "食物。日常加水或牛奶一起煮来吃的各类碾碎谷物。足以充饥但没什么滋味。";
 		this.m.Icon = "supplies/inventory_provisions_03.png";
 		this.m.Value = 50;
 		this.m.GoodForDays = 7;

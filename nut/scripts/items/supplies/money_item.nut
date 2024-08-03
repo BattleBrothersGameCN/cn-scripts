@@ -46,7 +46,7 @@ this.money_item <- this.inherit("scripts/items/item", {
 			{
 				id = 2,
 				type = "description",
-				text = "数量为[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Amount + "[/color]的克朗，这片土地上的货币。一旦你重新进入世界地图，将被添加到你的全局库存中。"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Amount + "[/color] 枚流通在这片土地上的货币 —— 克朗。返回世界地图即会加入全局库存。"
 			}
 		];
 

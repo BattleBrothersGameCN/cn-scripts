@@ -5,7 +5,7 @@ this.cloth_sash <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.cloth_sash";
 		this.m.Name = "布饰带";
-		this.m.Description = "一种由厚布制成，围穿在身上的双重饰带。";
+		this.m.Description = "一条由厚布制成，围穿在身上的双重饰带。";
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.VariantString = "body_southern";

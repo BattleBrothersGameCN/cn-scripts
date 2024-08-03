@@ -142,14 +142,14 @@ this.food_item <- this.inherit("scripts/items/item", {
 			result.push({
 				id = 7,
 				type = "text",
-				text = "当时购入价格为 [img]gfx/ui/tooltips/money.png[/img]" + this.m.BoughtAtPrice
+				text = "买入花了 [img]gfx/ui/tooltips/money.png[/img]" + this.m.BoughtAtPrice
 			});
 		}
 
 		result.push({
 			id = 67,
 			type = "text",
-			text = "损坏于 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.getSpoilInDays() + "[/color] 天后。"
+			text = "会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.getSpoilInDays() + "[/color] 天后腐坏。"
 		});
 		return result;
 	}

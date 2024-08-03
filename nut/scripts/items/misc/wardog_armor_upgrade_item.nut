@@ -5,7 +5,7 @@ this.wardog_armor_upgrade_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.wardog_armor_upgrade";
 		this.m.Name = "战犬盔甲";
-		this.m.Description = "简单的皮革外套，可披在战犬身上，在战斗时提供保护。";
+		this.m.Description = "简单的皮革外套，可披在战犬身上，在战斗中提供保护。";
 		this.m.Icon = "armor_upgrades/upgrade_21.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -56,7 +56,7 @@ this.wardog_armor_upgrade_item <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前选定的角色装备的战犬上进行使用。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前选定的角色装备的战犬上进行使用。此物品会在使用过程中消耗掉。"
 		});
 		return result;
 	}

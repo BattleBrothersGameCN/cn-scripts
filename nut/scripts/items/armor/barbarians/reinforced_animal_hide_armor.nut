@@ -4,7 +4,7 @@ this.reinforced_animal_hide_armor <- this.inherit("scripts/items/armor/armor", {
 	{
 		this.armor.create();
 		this.m.ID = "armor.body.reinforced_animal_hide_armor";
-		this.m.Name = "加固兽皮甲";
+		this.m.Name = "强化兽皮甲";
 		this.m.Description = "一件在厚皮革上加强有链甲和金属鳞片的兽皮甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;

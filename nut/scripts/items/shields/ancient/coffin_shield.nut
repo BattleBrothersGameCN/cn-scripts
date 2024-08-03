@@ -4,8 +4,8 @@ this.coffin_shield <- this.inherit("scripts/items/shields/shield", {
 	{
 		this.shield.create();
 		this.m.ID = "shield.coffin_shield";
-		this.m.Name = "古代棺材盾";
-		this.m.Description = "用硬木做的八角形盾牌，并用青铜进行了加固。由于年代过于久远，木材已经变得非常脆弱。";
+		this.m.Name = "古代棺盖盾";
+		this.m.Description = "一面用青铜加固的八角形木制盾牌。由于年代久远，木质已经变脆。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = this.Math.rand(1, 4);

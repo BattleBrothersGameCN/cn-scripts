@@ -7,7 +7,7 @@ this.named_undead_heater_shield <- this.inherit("scripts/items/shields/named/nam
 		this.updateVariant();
 		this.m.ID = "shield.named_undead_heater_shield";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "一个由皮革和帆布覆盖的三角形盾牌，已经有很长的使用时间了，但是仍然有非常好的平衡。";
+		this.m.Description = "一面蒙着皮革和帆布的三角形木制盾牌。虽然老旧却十分平衡。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Value = 600;

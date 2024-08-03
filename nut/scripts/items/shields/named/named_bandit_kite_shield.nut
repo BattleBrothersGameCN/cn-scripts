@@ -7,7 +7,7 @@ this.named_bandit_kite_shield <- this.inherit("scripts/items/shields/named/named
 		this.updateVariant();
 		this.m.ID = "shield.named_bandit_kite_shield";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "一种可以保护整个身体的木制长盾牌，可以用来抵挡远程攻击。这种特殊的盾牌由一种特殊的工艺制成，非常罕见。";
+		this.m.Description = "一面可以遮住整个身体，善于防护远程攻击的长条形木盾。这面盾牌用上了一些特殊工艺，非常罕见。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Value = 700;

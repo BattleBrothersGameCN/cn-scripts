@@ -264,7 +264,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 				id = 64,
 				type = "text",
 				icon = "ui/icons/direct_damage.png",
-				text = "[color=" + this.Const.UI.Color.DamageValue + "]" + this.Math.floor((this.m.DirectDamageMult + this.m.DirectDamageAdd) * 100) + "%[/color] 伤害忽略护甲"
+				text = "[color=" + this.Const.UI.Color.DamageValue + "]" + this.Math.floor((this.m.DirectDamageMult + this.m.DirectDamageAdd) * 100) + "%[/color] 伤害无视护甲"
 			});
 		}
 

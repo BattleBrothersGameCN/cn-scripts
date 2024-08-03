@@ -7,7 +7,7 @@ this.named_lindwurm_shield <- this.inherit("scripts/items/shields/named/named_sh
 		this.updateVariant();
 		this.m.ID = "shield.named_lindwurm";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "一面用坚固木材框架与罕见的林德蠕龙鳞片制成的闪耀盾牌，几乎无法穿透。";
+		this.m.Description = "坚固木框基底上排满了稀有的林德蠕龙鳞片，这样一面闪亮盾牌堪称坚不可摧。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Value = 1300;
@@ -31,14 +31,14 @@ this.named_lindwurm_shield <- this.inherit("scripts/items/shields/named/named_sh
 	function createRandomName()
 	{
 		local prefixes = [
-			"林德蠕龙的",
-			"蜥蜴的",
-			"龙鳞甲",
+			"林德蠕龙之",
+			"蜥蜴之",
+			"龙鳞",
 			"蠕龙鳞",
-			"鳞片覆盖的",
+			"覆鳞",
 			"蛇皮",
 			"蠕龙皮",
-			"有鳞的"
+			"鳞片"
 		];
 		return prefixes[this.Math.rand(0, prefixes.len() - 1)] + " ";
 	}
