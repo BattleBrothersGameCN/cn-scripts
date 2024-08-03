@@ -5,7 +5,7 @@ this.daze_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.daze_bomb";
 		this.m.Name = "闪光罐";
-		this.m.Description = "一个可用于投掷的装满神秘粉末的罐子。这些粉末在遭受冲击后会剧烈反应并产生强烈的闪光和声响。会使周围的人茫然。";
+		this.m.Description = "一个装满神秘粉末的投掷用罐子。这些粉末受到冲击会剧烈反应，发出强烈闪光和巨大声响。使周围的人茫然。";
 		this.m.IconLarge = "tools/daze_bomb_01.png";
 		this.m.Icon = "tools/daze_bomb_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Offhand;
@@ -66,7 +66,7 @@ this.daze_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 			id = 7,
 			type = "text",
 			icon = "ui/icons/vision.png",
-			text = "使用范围为[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格"
+			text = "能投出 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格远"
 		});
 		result.push({
 			id = 5,
@@ -78,7 +78,7 @@ this.daze_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "使用后摧毁"
+			text = "使用即摧毁"
 		});
 		return result;
 	}

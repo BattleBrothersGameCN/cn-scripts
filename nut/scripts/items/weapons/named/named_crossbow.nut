@@ -64,7 +64,7 @@ this.named_crossbow <- this.inherit("scripts/items/weapons/named/named_weapon", 
 				id = 10,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]必须重新装填才能再次发射[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]射击前须装填[/color]"
 			});
 		}
 

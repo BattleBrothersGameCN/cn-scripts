@@ -10,7 +10,7 @@ this.blue_studded_mail_armor <- this.inherit("scripts/items/armor/named/named_ar
 			"蟾蜍皮",
 			"食人魔之皮",
 			"复层装甲",
-			"加固链甲"
+			"强化链甲"
 		];
 		this.m.Variant = 46;
 		this.updateVariant();

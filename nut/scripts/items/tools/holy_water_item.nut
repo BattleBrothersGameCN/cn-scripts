@@ -5,7 +5,7 @@ this.holy_water_item <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.holy Water";
 		this.m.Name = "圣水瓶";
-		this.m.Description = "一瓶由神职人员赐福的圣水。可在短距离内投掷。";
+		this.m.Description = "一瓶经神职人员赐福的圣水。可以短距离投掷。";
 		this.m.IconLarge = "tools/holy_water_01.png";
 		this.m.Icon = "tools/holy_water_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Offhand;
@@ -66,19 +66,19 @@ this.holy_water_item <- this.inherit("scripts/items/weapons/weapon", {
 			id = 7,
 			type = "text",
 			icon = "ui/icons/vision.png",
-			text = "使用范围为[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格"
+			text = "能投出 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格远"
 		});
 		result.push({
 			id = 4,
 			type = "text",
 			icon = "ui/icons/regular_damage.png",
-			text = "每回合对击中的亡灵目标造成 [color=" + this.Const.UI.Color.DamageValue + "]20[/color] 生命值伤害，持续 [color=" + this.Const.UI.Color.DamageValue + "]3[/color]回合"
+			text = "每回合对击中的亡灵目标造成 [color=" + this.Const.UI.Color.DamageValue + "]20[/color] 生命值伤害，持续 [color=" + this.Const.UI.Color.DamageValue + "]3[/color] 回合"
 		});
 		result.push({
 			id = 9,
 			type = "text",
 			icon = "ui/icons/direct_damage.png",
-			text = "[color=" + this.Const.UI.Color.DamageValue + "]100%[/color] 伤害忽略护甲"
+			text = "[color=" + this.Const.UI.Color.DamageValue + "]100%[/color] 伤害无视护甲"
 		});
 		result.push({
 			id = 5,
@@ -90,7 +90,7 @@ this.holy_water_item <- this.inherit("scripts/items/weapons/weapon", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "使用后摧毁"
+			text = "使用即摧毁"
 		});
 		return result;
 	}

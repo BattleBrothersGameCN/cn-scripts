@@ -6,7 +6,7 @@ this.named_noble_mail_armor <- this.inherit("scripts/items/armor/named/named_arm
 		this.m.ID = "armor.body.named_noble_mail_armor";
 		this.m.Description = "这件轻型链甲曾是一位著名剑斗大师的私人物品。轻似一件束腰外衣，却护住了身上的全部要害。";
 		this.m.NameList = [
-			"加固链甲",
+			"强化链甲",
 			"夜斗篷",
 			"贵族链甲",
 			"击剑链甲"

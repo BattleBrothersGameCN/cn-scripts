@@ -5,7 +5,7 @@ this.acid_flask_item <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.acid_flask";
 		this.m.Name = "酸瓶";
-		this.m.Description = "一瓶装满林德蠕龙血液的酸性液体。它对很多材质都有极高的腐蚀性，能够很快烧穿盔甲。可在短距离内投掷。";
+		this.m.Description = "一瓶浓缩的林德虫酸血。对很多材料都有极高的腐蚀性，能在短时间内烧穿盔甲。可以短距离投掷。";
 		this.m.IconLarge = "tools/acid_flask_01.png";
 		this.m.Icon = "tools/acid_flask_01_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Offhand;
@@ -66,25 +66,25 @@ this.acid_flask_item <- this.inherit("scripts/items/weapons/weapon", {
 			id = 7,
 			type = "text",
 			icon = "ui/icons/vision.png",
-			text = "使用范围为[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格"
+			text = "能投出 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格远"
 		});
 		result.push({
 			id = 4,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "每回合减少目标[color=" + this.Const.UI.Color.DamageValue + "]20%[/color]护甲，持续3回合。"
+			text = "每回合削减目标护甲的 [color=" + this.Const.UI.Color.DamageValue + "]20%[/color] ，持续3回合。"
 		});
 		result.push({
 			id = 5,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "有 [color=" + this.Const.UI.Color.DamageValue + "]33%[/color]几率波及四周相同或更低高度的单位。"
+			text = "有 [color=" + this.Const.UI.Color.DamageValue + "]33%[/color] 几率波及四周相同或更低高度的单位。"
 		});
 		result.push({
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "使用后摧毁"
+			text = "使用即摧毁"
 		});
 		return result;
 	}

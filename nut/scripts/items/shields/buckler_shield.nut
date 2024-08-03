@@ -5,7 +5,7 @@ this.buckler_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.buckler";
 		this.m.Name = "小圆盾";
-		this.m.Description = "一种可以紧握的小而坚固的盾牌。对远程攻击的防护较差，但在近战中可以有效地偏转打击。";
+		this.m.Description = "一面可以用拳头握住的结实小盾。对远程攻击的防护较差，偏转近战攻击却不遑多让。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.SoundOnHit = this.Const.Sound.ShieldHitMetal;

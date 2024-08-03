@@ -3,7 +3,7 @@ this.throw_smoke_bomb_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.throw_smoke_bomb";
-		this.m.Name = "投掷烟雾罐";
+		this.m.Name = "投掷发烟罐";
 		this.m.Description = "扔出一个装满特殊物质的罐子，这种物质在遭受冲击后会迅速产生浓厚的烟雾。";
 		this.m.Icon = "skills/active_208.png";
 		this.m.IconDisabled = "skills/active_208_sw.png";

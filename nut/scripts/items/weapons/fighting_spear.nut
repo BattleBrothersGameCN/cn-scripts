@@ -5,7 +5,7 @@ this.fighting_spear <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.fighting_spear";
 		this.m.Name = "战矛";
-		this.m.Description = "一把为战斗特制的长而可靠耐用的矛。";
+		this.m.Description = "一把为战斗特制的耐用长矛。";
 		this.m.Categories = "矛，单手持";
 		this.m.IconLarge = "weapons/melee/spear_03.png";
 		this.m.Icon = "weapons/melee/spear_03_70x70.png";

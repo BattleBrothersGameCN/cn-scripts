@@ -17,7 +17,7 @@ this.heavy_crossbow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.heavy_crossbow";
 		this.m.Name = "重弩";
-		this.m.Description = "一把有曲柄绞盘的重型弩，可以在中等距离射击弩矢，即使对重装甲目标也非常有效。 需要几乎整回合的时间来重新装弹。";
+		this.m.Description = "一把中等射程的曲柄绞盘重弩，即使对重装甲目标也非常有效。几乎要装填上一整个回合。";
 		this.m.Categories = "弩, 双手持";
 		this.m.IconLarge = "weapons/ranged/crossbow_03.png";
 		this.m.Icon = "weapons/ranged/crossbow_03_70x70.png";
@@ -57,7 +57,7 @@ this.heavy_crossbow <- this.inherit("scripts/items/weapons/weapon", {
 				id = 10,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]必须重新装填才能再次发射[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]射击前须装填[/color]"
 			});
 		}
 

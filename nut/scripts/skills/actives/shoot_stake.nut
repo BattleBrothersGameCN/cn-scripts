@@ -119,7 +119,7 @@ this.shoot_stake <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]必须重新装填才能再次发射[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]射击前须装填[/color]"
 			});
 		}
 

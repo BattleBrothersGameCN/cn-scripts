@@ -7,7 +7,7 @@ this.named_bandit_heater_shield <- this.inherit("scripts/items/shields/named/nam
 		this.updateVariant();
 		this.m.ID = "shield.named_bandit_heater";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "坚固的三角形盾牌，非常适合近距离战斗。这是精心设计的平衡典范。";
+		this.m.Description = "一面非常适合近身搏杀的坚固三角形盾牌。是制作精良、重心平衡的典范。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Value = 600;

@@ -5,7 +5,7 @@ this.reinforced_throwing_net <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "tool.reinforced_throwing_net";
 		this.m.Name = "强化投网";
-		this.m.Description = "一张用来投掷的网，为了阻碍目标的移动和有效地保护自己。 使用蛛丝强化后，它更难以挣脱。";
+		this.m.Description = "一张用来投向目标，通过阻止目标移动来有效保护自己的网。使用蛛丝加强，更加难以挣脱。";
 		this.m.IconLarge = "tools/inventory_throwing_net_02.png";
 		this.m.Icon = "tools/throwing_net_02_70x70.png";
 		this.m.SlotType = this.Const.ItemSlot.Offhand;
@@ -66,7 +66,7 @@ this.reinforced_throwing_net <- this.inherit("scripts/items/weapons/weapon", {
 			id = 7,
 			type = "text",
 			icon = "ui/icons/vision.png",
-			text = "使用范围为[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格"
+			text = "能投出 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] 格远"
 		});
 
 		if (this.m.StaminaModifier < 0)
@@ -83,19 +83,19 @@ this.reinforced_throwing_net <- this.inherit("scripts/items/weapons/weapon", {
 			id = 4,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "会使目标定身并减少他们的防御"
+			text = "会使目标定身并降低其防御"
 		});
 		result.push({
 			id = 4,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "使用后摧毁"
+			text = "使用即摧毁"
 		});
 		result.push({
 			id = 4,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "挣脱的几率降低[color=" + this.Const.UI.Color.NegativeValue + "]-15[/color]"
+			text = "挣脱几率降低 [color=" + this.Const.UI.Color.NegativeValue + "]-15[/color]"
 		});
 		return result;
 	}

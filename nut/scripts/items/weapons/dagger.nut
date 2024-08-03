@@ -5,7 +5,7 @@ this.dagger <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.dagger";
 		this.m.Name = "匕首";
-		this.m.Description = "一把为近身格斗而制造的尖匕首。";
+		this.m.Description = "一把为近身搏杀设计的尖匕首。";
 		this.m.Categories = "匕首，单手持";
 		this.m.IconLarge = "weapons/melee/dagger_01.png";
 		this.m.Icon = "weapons/melee/dagger_01_70x70.png";

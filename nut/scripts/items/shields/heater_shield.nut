@@ -5,7 +5,7 @@ this.heater_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.heater_shield";
 		this.m.Name = "扇形盾";
-		this.m.Description = "一面由皮革与帆布覆盖的三角形木制盾牌。";
+		this.m.Description = "一面蒙着皮革和帆布的三角形木制盾牌。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = this.Math.rand(1, 11);

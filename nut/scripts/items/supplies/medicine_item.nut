@@ -61,7 +61,7 @@ this.medicine_item <- this.inherit("scripts/items/item", {
 			{
 				id = 2,
 				type = "description",
-				text = "不错的[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Amount + "[/color]单位草药、纱布、绷带等物品，用来帮助您的佣兵从战斗中受到的伤势中恢复。一旦你重新进入世界地图，将被添加到你的全局库存中。"
+				text = "品相良好的医疗用品[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Amount + "[/color]单位，包括药草、药膏、绷带等，用于帮佣兵从伤势中恢复。返回世界地图即会加入全局库存。"
 			}
 		];
 

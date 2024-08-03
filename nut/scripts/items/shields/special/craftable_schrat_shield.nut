@@ -5,7 +5,7 @@ this.craftable_schrat_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.craftable_schrat";
 		this.m.Name = "树精之盾";
-		this.m.Description = "这面盾牌是用一棵活树的残骸雕刻而成的，如果受到任何伤害，它会慢慢再生。 乍一看，它那怪诞的脸似乎还在动。";
+		this.m.Description = "这面盾牌用一棵活树的遗骸加工而成，会在受伤时再生。乍看之下，那张怪脸似乎依然会动。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = 8;
@@ -34,7 +34,7 @@ this.craftable_schrat_shield <- this.inherit("scripts/items/shields/shield", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "回复自身 [color=" + this.Const.UI.Color.PositiveValue + "]20[/color] 点耐久(每回合)。"
+			text = "每回合回复自身 [color=" + this.Const.UI.Color.PositiveValue + "]20[/color] 点耐久。"
 		});
 		return result;
 	}

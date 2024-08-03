@@ -4,8 +4,8 @@ this.white_pearls_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.white_pearls";
-		this.m.Name = "白色珍珠";
-		this.m.Description = "罕见的白珍珠大小各异。能在城里卖个好价钱。";
+		this.m.Name = "洁白珍珠";
+		this.m.Description = "大小各异的罕见白珍珠。能在城里卖个好价钱。";
 		this.m.Icon = "loot/inventory_loot_07.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

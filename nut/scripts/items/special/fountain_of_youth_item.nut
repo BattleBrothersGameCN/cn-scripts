@@ -4,8 +4,8 @@ this.fountain_of_youth_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.bodily_reward";
-		this.m.Name = "愈合圣水";
-		this.m.Description = "从一颗奇怪的人型树中得到的一皮袋圣水。总在你耳边低语着让你喝了它来治愈。";
+		this.m.Name = "水袋";
+		this.m.Description = "一个皮水袋，灌满了那棵奇异人形树下的液体。它常在脑海里低语，催促你饮水疗伤。";
 		this.m.Icon = "consumables/youth_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -57,7 +57,7 @@ this.fountain_of_youth_item <- this.inherit("scripts/items/item", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "将消除所有临时或永久性伤害，以及老的、上瘾、精疲力竭和宿醉的特性和状态影响。"
+			text = "将会移除所有临时或永久伤残，及年迈、药物成瘾、精疲力竭和宿醉等特性和状态效果"
 		});
 		result.push({
 			id = 65,

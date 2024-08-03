@@ -5,7 +5,7 @@ this.battle_whip <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.battle_whip";
 		this.m.Name = "战鞭";
-		this.m.Description = "一条尖端有倒刺的长鞭子，能在相当远的距离外造成可怕的出血伤口，但对抗护甲非常低效。";
+		this.m.Description = "一条鞭头带钩的长鞭，可以在较远距离造成撕裂性的严重流血，但对抗盔甲效果很差。";
 		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/whip_01.png";
 		this.m.Icon = "weapons/melee/whip_01_70x70.png";

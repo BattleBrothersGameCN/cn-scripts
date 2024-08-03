@@ -5,7 +5,7 @@ this.goblin_rank_insignia_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.goblin_rank_insignia";
 		this.m.Name = "金质军阶徽章";
-		this.m.Description = "地精高级军官佩戴的金质军阶徽章。收藏家应该会花上个把钱。";
+		this.m.Description = "地精高级军官佩戴的金质军阶徽章。收藏家会愿意掏上个把钱。";
 		this.m.Icon = "loot/inventory_goblins_03.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

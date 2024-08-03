@@ -5,7 +5,7 @@ this.wine_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.wine";
 		this.m.Name = "葡萄酒";
-		this.m.Description = "食物。由压榨和发酵的葡萄酿制而成的酒。制作的材料都是精心挑选的所以十分昂贵。";
+		this.m.Description = "食物。葡萄经过压榨和发酵制成的酒。工艺复杂，价格也昂贵。";
 		this.m.Icon = "supplies/inventory_provisions_13.png";
 		this.m.Value = 110;
 		this.m.GoodForDays = 14;

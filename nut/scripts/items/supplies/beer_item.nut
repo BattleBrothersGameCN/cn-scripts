@@ -5,7 +5,7 @@ this.beer_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.beer";
 		this.m.Name = "啤酒";
-		this.m.Description = "食物。这种发酵的啤酒花或大麦饮料比水喝起来更安全、保存更持久。";
+		this.m.Description = "食物。这种啤酒花或大麦发酵成的饮料比水更好保存，喝起来也更安全。";
 		this.m.Icon = "supplies/inventory_provisions_14.png";
 		this.m.Value = 75;
 		this.m.GoodForDays = 10;

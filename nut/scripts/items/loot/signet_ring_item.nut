@@ -5,7 +5,7 @@ this.signet_ring_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.signet_ring";
 		this.m.Name = "纹章戒指";
-		this.m.Description = "一个镶嵌有宝石的纹章戒指。能在城里卖个好价钱。";
+		this.m.Description = "一枚嵌有宝石的纹章戒指。能在城里卖个好价钱。";
 		this.m.Icon = "loot/inventory_loot_09.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

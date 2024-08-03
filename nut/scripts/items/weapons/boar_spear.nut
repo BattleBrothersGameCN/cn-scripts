@@ -5,7 +5,7 @@ this.boar_spear <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.boar_spear";
 		this.m.Name = "野猪矛";
-		this.m.Description = "一杆在其开刃矛头后附有两个翅翼的重型短矛。";
+		this.m.Description = "一杆在其刃状矛尖后附有一对凸耳的重型短矛。";
 		this.m.Categories = "矛，单手持";
 		this.m.IconLarge = "weapons/melee/spear_01.png";
 		this.m.Icon = "weapons/melee/spear_01_70x70.png";

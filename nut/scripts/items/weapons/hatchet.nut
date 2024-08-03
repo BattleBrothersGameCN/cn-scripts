@@ -5,7 +5,7 @@ this.hatchet <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.hatchet";
 		this.m.Name = "小斧";
-		this.m.Description = "一把短柄并带有铁质头部的简易小斧。";
+		this.m.Description = "一把短斧柄和铁质斧头组合成的简易小斧。";
 		this.m.Categories = "斧，单手持";
 		this.m.IconLarge = "weapons/melee/axe_01.png";
 		this.m.Icon = "weapons/melee/axe_01_70x70.png";

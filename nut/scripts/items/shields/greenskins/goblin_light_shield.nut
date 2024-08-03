@@ -5,7 +5,7 @@ this.goblin_light_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.goblin_light_shield";
 		this.m.Name = "木制散兵盾";
-		this.m.Description = "地精制作的木制盾牌。小又轻，对使用它的人几乎没有什么保护作用也抵御不了什么攻击。";
+		this.m.Description = "一面地精制作的木盾。轻便却太小，保护不了人类。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = this.Math.rand(1, 2);

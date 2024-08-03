@@ -5,7 +5,7 @@ this.rice_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.rice";
 		this.m.Name = "大米";
-		this.m.Description = "食物。大米价格便宜，在南方很容易买到。 加上各种各样的香草，就成了一道美味的菜。";
+		this.m.Description = "食物。大米在南方价格低廉，来源广泛。加入各种香草就是美味的一餐。";
 		this.m.Icon = "supplies/inventory_provisions_21.png";
 		this.m.Value = 60;
 		this.m.GoodForDays = 8;

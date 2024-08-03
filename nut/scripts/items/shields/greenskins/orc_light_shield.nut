@@ -5,7 +5,7 @@ this.orc_light_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.orc_light_shield";
 		this.m.Name = "野性盾牌";
-		this.m.Description = "一个用皮革覆盖的轻木盾。它的尺寸对远程攻击提供了很好的保护，但十分脆弱。";
+		this.m.Description = "一面用皮革包覆的轻质木盾。凭借其尺寸提供了良好的远程防护，可惜不够坚固。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.updateVariant();

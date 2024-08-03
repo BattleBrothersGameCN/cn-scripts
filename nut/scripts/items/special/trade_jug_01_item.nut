@@ -4,8 +4,8 @@ this.trade_jug_01_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.trade_jug";
-		this.m.Name = "神秘的水罐(Mysterious Jug)";
-		this.m.Description = "这个壶是与一个名叫尉迟的神秘旅行者交换而来，里面装的据说是一种魔法饮料，能赋予无比强大的力量。";
+		this.m.Name = "神秘水罐";
+		this.m.Description = "与一位名叫尉迟的神秘旅行者交易而来，这水罐的内容物许诺有神奇魔力，能赋予饮用者无法想象的力量。";
 		this.m.Icon = "consumables/jug_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -57,7 +57,7 @@ this.trade_jug_01_item <- this.inherit("scripts/items/item", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "获得一个特殊技能点。"
+			text = "授予一点特技点数"
 		});
 		result.push({
 			id = 65,

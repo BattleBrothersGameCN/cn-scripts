@@ -7,7 +7,7 @@ this.bludgeon <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.bludgeon";
 		this.m.Name = "棍棒";
-		this.m.Description = "木柄上套着带尖刺的金属头，工艺粗糙但能有效重击头部。";
+		this.m.Description = "装在木制手柄上的带尖金属锤头，粗枝大叶但砸头很管用。";
 		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/mace_02.png";
 		this.m.Icon = "weapons/melee/mace_02_70x70.png";

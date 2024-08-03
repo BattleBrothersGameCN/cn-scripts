@@ -5,7 +5,7 @@ this.dried_lamb_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.dried_lamb";
 		this.m.Name = "羊肉干";
-		this.m.Description = "食物。羊肉干在南方是一种特产，也是很受欢迎的食物。 对任何饥渴的雇佣兵来说都是一种真正的享受。";
+		this.m.Description = "食物。羊肉干是南方的特产，也是种抢手货。饥肠辘辘的佣兵们难得的享受。";
 		this.m.Icon = "supplies/inventory_provisions_22.png";
 		this.m.Value = 105;
 		this.m.GoodForDays = 13;

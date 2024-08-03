@@ -5,7 +5,7 @@ this.acidic_saliva_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.acidic_saliva";
 		this.m.Name = "酸性唾液";
-		this.m.Description = "野生沙漠鬣狗的唾液因其独特的特性受到南方炼金术士追捧。";
+		this.m.Description = "野生沙漠鬣狗的唾液因其独特的化学性质受到南方炼金术士追捧。";
 		this.m.Icon = "loot/southern_12.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Crafting;

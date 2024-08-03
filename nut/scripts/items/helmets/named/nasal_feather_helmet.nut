@@ -7,7 +7,7 @@ this.nasal_feather_helmet <- this.inherit("scripts/items/helmets/named/named_hel
 		this.m.Description = "一顶带有特制皮鳞甲护颈的加硬护鼻盔。";
 		this.m.NameList = [
 			"羽饰护鼻盔",
-			"加强头盔",
+			"强化盔",
 			"守护",
 			"护头",
 			"保护者"

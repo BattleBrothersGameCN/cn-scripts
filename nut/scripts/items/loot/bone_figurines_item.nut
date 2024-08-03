@@ -5,7 +5,7 @@ this.bone_figurines_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.bone_figurines";
 		this.m.Name = "骨雕人俑";
-		this.m.Description = "各色稀有骨头雕成的小人俑。 收藏家会为此付不少钱。";
+		this.m.Description = "各色稀有骨头雕成的小人俑。收藏家愿意为此付不少钱。";
 		this.m.Icon = "loot/wildmen_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;

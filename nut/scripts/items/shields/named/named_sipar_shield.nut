@@ -7,7 +7,7 @@ this.named_sipar_shield <- this.inherit("scripts/items/shields/named/named_shiel
 		this.m.NameList = this.Const.Strings.ShieldNames;
 		this.m.PrefixList = this.Const.Strings.SouthernPrefix;
 		this.m.SuffixList = this.Const.Strings.SouthernSuffix;
-		this.m.Description = "一种南方设计的全金属圆形盾牌，装饰精美。 很重，但也很耐用。";
+		this.m.Description = "一面装饰精美的南方款式全金属圆盾。相当重，但也很耐用。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.SoundOnHit = this.Const.Sound.ShieldHitMetal;

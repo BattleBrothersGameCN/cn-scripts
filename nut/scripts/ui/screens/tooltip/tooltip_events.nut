@@ -1286,7 +1286,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "整理好的各种箭矢、弩矢、投掷武器，用于在战后自动重装弹药。补充一支箭矢或弩矢消耗一点弹药，补充一发火铳弹消耗两点弹药，补充一支/把投掷武器或是替换火矛上的药包消耗三点弹药。弹药耗尽会使你的箭袋空空荡荡，你的人将无法射击。你最多能携带" + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].Ammo + this.World.Assets.m.AmmoMaxAdditional) + "个单位。"
+						text = "整理好的各种箭矢、弩矢、投掷武器，用于在战后自动补充弹药。补充一支箭矢或弩矢消耗一点弹药，补充一发火铳弹消耗两点弹药，补充一支/把投掷武器或是替换火矛上的药包消耗三点弹药。弹药耗尽会使你的人箭袋空空，无法射击。你最多能携带" + (this.Const.Difficulty.MaxResources[this.World.Assets.getEconomicDifficulty()].Ammo + this.World.Assets.m.AmmoMaxAdditional) + "个单位。"
 					}
 				];
 
@@ -1468,7 +1468,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "显示了战斗序列中的当前人数和人数上限，他们会在接下来的战斗里参战。\n\n你可以任意拖拽、放置人物；最上面一排是面对敌人的前排，第二排是后排，最下面一排是不参战的后备角色。"
+						text = "显示了战斗序列中的当前人数和人数上限，他们会在接下来的战斗里参战。\n\n你可以任意拖拽、放置人物；最上面一排是面对敌人的前排，第二排是后排，最下面一排是不参加战斗，用于保存角色的预备队。"
 					}
 				];
 
@@ -3009,7 +3009,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "只显示在仓库模式下可用的物品，如油漆或盔甲升级。"
+						text = "只显示在仓库模式下可用的物品，如涂料或盔甲升级。"
 					}
 				];
 

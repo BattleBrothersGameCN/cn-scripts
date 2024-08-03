@@ -5,7 +5,7 @@ this.golden_goose_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.golden_goose";
 		this.m.Name = "金鹅";
-		this.m.Description = "一个用纯金制作的小鹅雕像。每天有一个小小的金蛋神秘地从雕像上冒出来。";
+		this.m.Description = "一尊纯金制成的小鹅像。每天，雕像里都会神秘地冒出一枚小小的金蛋。";
 		this.m.Icon = "loot/golden_goose.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Legendary;
@@ -57,7 +57,7 @@ this.golden_goose_item <- this.inherit("scripts/items/item", {
 			id = 15,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "生成[color=" + this.Const.UI.Color.PositiveValue + "]15[/color] 克朗每天"
+			text = "每天产出 [color=" + this.Const.UI.Color.PositiveValue + "]15[/color] 克朗"
 		});
 		return result;
 	}

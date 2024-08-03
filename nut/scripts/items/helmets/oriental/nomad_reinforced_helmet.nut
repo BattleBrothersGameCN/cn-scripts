@@ -4,7 +4,7 @@ this.nomad_reinforced_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	{
 		this.helmet.create();
 		this.m.ID = "armor.head.nomad_reinforced_helmet";
-		this.m.Name = "加强游牧盔";
+		this.m.Name = "强化游牧盔";
 		this.m.Description = "一顶加强有链甲的游牧头盔。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;

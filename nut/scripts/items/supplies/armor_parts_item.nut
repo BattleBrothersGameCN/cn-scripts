@@ -62,7 +62,7 @@ this.armor_parts_item <- this.inherit("scripts/items/item", {
 			{
 				id = 2,
 				type = "description",
-				text = "不错的[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Amount + "[/color]单位各种工具，用于在战后修复武器、盔甲、头盔和盾牌。一旦你重新进入世界地图，将被添加到你的全局库存中。"
+				text = "品相良好的各类工具耗材[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Amount + "[/color]单位，用于在战后修补武器、盔甲、头盔和盾牌等。返回世界地图即会加入全局库存。"
 			}
 		];
 

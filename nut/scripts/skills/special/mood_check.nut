@@ -114,7 +114,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 					id = 11,
 					type = "text",
 					icon = "ui/icons/special.png",
-					text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]几率自信的士气开始战斗"
+					text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]几率以自信士气开始战斗"
 				}
 			];
 			break;
@@ -135,7 +135,7 @@ this.mood_check <- this.inherit("scripts/skills/skill", {
 					id = 11,
 					type = "text",
 					icon = "ui/icons/special.png",
-					text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]几率自信的士气开始战斗"
+					text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]几率以自信士气开始战斗"
 				}
 			];
 			break;

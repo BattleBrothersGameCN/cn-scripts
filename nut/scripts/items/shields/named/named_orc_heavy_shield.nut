@@ -8,7 +8,7 @@ this.named_orc_heavy_shield <- this.inherit("scripts/items/shields/named/named_s
 		this.m.ID = "shield.named_orc_heavy_shield";
 		this.m.NameList = this.Const.Strings.ShieldNames;
 		this.m.UseRandomName = false;
-		this.m.Description = "一面巨大的金属盾牌几乎不可能被摧毁但却非常沉重，人类装备会疲惫不堪。";
+		this.m.Description = "一面难以摧毁的巨大金属盾，可惜人用着太重了，用起来容易累。";
 		this.m.SoundOnHit = this.Const.Sound.ShieldHitMetal;
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;

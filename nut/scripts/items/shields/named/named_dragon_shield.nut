@@ -7,7 +7,7 @@ this.named_dragon_shield <- this.inherit("scripts/items/shields/named/named_shie
 		this.updateVariant();
 		this.m.ID = "shield.named_dragon";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "这面筝形盾上雕刻有一些精美的图案，制造这面盾牌需要精湛的技艺。";
+		this.m.Description = "一面布满了图案的筝形大盾。展现出的工艺非比寻常。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Value = 800;

@@ -5,7 +5,7 @@ this.orc_heavy_shield <- this.inherit("scripts/items/shields/shield", {
 		this.shield.create();
 		this.m.ID = "shield.orc_heavy_shield";
 		this.m.Name = "重型金属盾";
-		this.m.Description = "一面巨大的金属盾牌几乎不可能被摧毁但却非常沉重，人类装备会疲惫不堪。";
+		this.m.Description = "一面难以摧毁的巨大金属盾，可惜人用着太重了，用起来容易累。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.SoundOnHit = this.Const.Sound.ShieldHitMetal;

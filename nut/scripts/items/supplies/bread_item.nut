@@ -5,7 +5,7 @@ this.bread_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.bread";
 		this.m.Name = "面包";
-		this.m.Description = "食物。用小麦做的面包可以填饱肚子。";
+		this.m.Description = "食物。小麦制成的白面包十分顶饿。";
 		this.m.Icon = "supplies/inventory_provisions_05.png";
 		this.m.Value = 65;
 		this.m.GoodForDays = 8;

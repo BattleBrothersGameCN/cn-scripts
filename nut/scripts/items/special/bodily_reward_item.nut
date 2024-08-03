@@ -5,7 +5,7 @@ this.bodily_reward_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.bodily_reward";
 		this.m.Name = "幽绿小瓶";
-		this.m.Description = "用另一个人的生命为代价与恶毒女巫交换而来的，这种神秘的混合液可给身体带来奇妙的变化，能够立即治愈自身所有的不良状态。";
+		this.m.Description = "用他人的生命与女巫交易而来，这瓶神秘合剂许诺能和身体共鸣，立即治愈所有能自愈的伤残。";
 		this.m.Icon = "consumables/vial_green_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -57,7 +57,7 @@ this.bodily_reward_item <- this.inherit("scripts/items/item", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "立即治愈所有临时伤害，以及宿醉和精疲力竭状态的影响"
+			text = "立即治愈所有临时伤残，消除宿醉和精疲力竭状态"
 		});
 		result.push({
 			id = 65,

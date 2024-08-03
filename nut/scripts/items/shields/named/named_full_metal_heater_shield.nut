@@ -7,7 +7,7 @@ this.named_full_metal_heater_shield <- this.inherit("scripts/items/shields/named
 		this.updateVariant();
 		this.m.ID = "shield.named_full_metal_heater";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "一个精心制作的扇形盾牌几乎完全由金属制成。沉重而又经久耐用，但使用起来却很轻。制造这种盾牌必须要大师级工匠才能胜任。";
+		this.m.Description = "一面几乎完全由金属制成的精制扇形盾。沉重而耐用，比看起来还轻一些。非大师级工匠所不能造。";
 		this.m.SoundOnHit = this.Const.Sound.ShieldHitMetal;
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;

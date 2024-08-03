@@ -5,7 +5,7 @@ this.dried_fish_item <- this.inherit("scripts/items/supplies/food_item", {
 		this.food_item.create();
 		this.m.ID = "supplies.dried_fish";
 		this.m.Name = "鱼干";
-		this.m.Description = "食物。在沿海地区，鱼是一种常见的食物。通过腌制以便于保存。";
+		this.m.Description = "食物。在沿海地区，鱼是一种常见的饱腹食物。晒干以后更好保存。";
 		this.m.Icon = "supplies/inventory_provisions_06.png";
 		this.m.Value = 70;
 		this.m.GoodForDays = 8;

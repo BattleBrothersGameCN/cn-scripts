@@ -5,7 +5,7 @@ this.black_book_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.black_book";
 		this.m.Name = "黑书";
-		this.m.Description = "一本外表诡异的旧书，是血肉封皮。 它的页面充满了你无法理解的难以捉摸的文字和神秘的图画。 你看这本书看得越久，你就越感到不安。 也许对古代语言有更多了解的人能理解它。";
+		this.m.Description = "一本用血肉做封皮的诡异旧书。书页间写满了难以理解的高深文字和神秘图画。看的越久，你就越是心烦意乱。要是谁懂点古代语言兴许能读出什么来。";
 		this.m.Icon = "misc/inventory_necronomicon.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc;

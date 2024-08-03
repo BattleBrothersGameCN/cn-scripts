@@ -5,7 +5,7 @@ this.cloth_rolls_item <- this.inherit("scripts/items/trade/trading_good_item", {
 		this.trading_good_item.create();
 		this.m.ID = "misc.cloth_rolls";
 		this.m.Name = "布匹";
-		this.m.Description = "用羊毛纺织而成的布匹。商人会为此付个好价钱。";
+		this.m.Description = "用羊毛纺织成的布匹。商人会为此付个好价钱。";
 		this.m.Icon = "trade/inventory_trade_09.png";
 		this.m.Culture = this.Const.World.Culture.Neutral;
 		this.m.ProducingBuildings = [

@@ -5,7 +5,7 @@ this.paint_set_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.paint_set_shields";
 		this.m.Name = "颜料套装";
-		this.m.Description = "由几种鲜艳的颜料和一套刷子组成的调色板，可以给常见盾牌涂上你战团的代表色。";
+		this.m.Description = "由几种鲜艳的颜料和一套画笔组成的调色板，可以给常见盾牌涂上你战团的代表色。";
 		this.m.Icon = "consumables/paint_set_shields.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
@@ -56,7 +56,7 @@ this.paint_set_item <- this.inherit("scripts/items/item", {
 		result.push({
 			id = 65,
 			type = "text",
-			text = "右键单击或拖动到当前所选角色携带的盾牌上，以对其上色。 此物品会在使用过程中消耗掉。"
+			text = "右键单击或拖动到当前所选角色携带的盾牌上，以对其上色。此物品会在使用过程中消耗掉。"
 		});
 		return result;
 	}

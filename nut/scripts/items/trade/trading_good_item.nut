@@ -56,7 +56,7 @@ this.trading_good_item <- this.inherit("scripts/items/item", {
 			result.push({
 				id = 7,
 				type = "text",
-				text = "当时购入价格为 [img]gfx/ui/tooltips/money.png[/img]" + this.m.BoughtAtPrice
+				text = "买入花了 [img]gfx/ui/tooltips/money.png[/img]" + this.m.BoughtAtPrice
 			});
 		}
 

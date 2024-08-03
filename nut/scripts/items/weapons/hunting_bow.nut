@@ -5,7 +5,7 @@ this.hunting_bow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.hunting_bow";
 		this.m.Name = "猎弓";
-		this.m.Description = "一张精制的弓，通常用来猎杀动物。对无甲目标极其致命，但需要一些专业知识才能有效地使用。";
+		this.m.Description = "一张猎动物用的精制弓。对无甲目标堪称致命，但需要一些经验才能有效运用。";
 		this.m.Categories = "弓，双手持";
 		this.m.IconLarge = "weapons/ranged/bow_01.png";
 		this.m.Icon = "weapons/ranged/bow_01_70x70.png";

@@ -4,8 +4,8 @@ this.auxiliary_shield <- this.inherit("scripts/items/shields/shield", {
 	{
 		this.shield.create();
 		this.m.ID = "shield.auxiliary_shield";
-		this.m.Name = "古代辅助盾";
-		this.m.Description = "椭圆形的木制盾牌。木头看起来又脆又老，已经不那么耐用了。";
+		this.m.Name = "古代辅兵盾";
+		this.m.Description = "一面椭圆形木制轻盾。木质又脆又旧，不再耐用了。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Variant = this.Math.rand(1, 4);

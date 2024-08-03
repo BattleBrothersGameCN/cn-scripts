@@ -4,8 +4,8 @@ this.gilders_embrace_shield <- this.inherit("scripts/items/shields/shield", {
 	{
 		this.shield.create();
 		this.m.ID = "shield.gilders_embrace";
-		this.m.Name = "镀金者的拥抱";
-		this.m.Description = "一种华丽的金属盾牌，有明亮的镀金光泽，用太阳本身的力量反射哪怕是最微弱的光线。";
+		this.m.Name = "镀金者之拥";
+		this.m.Description = "一面有着明亮镀金光泽的华丽金属盾牌，凭借着太阳的力量反射着最微弱的光线。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.SoundOnHit = this.Const.Sound.ShieldHitMetal;
@@ -78,7 +78,7 @@ this.gilders_embrace_shield <- this.inherit("scripts/items/shields/shield", {
 			id = 5,
 			type = "text",
 			icon = "ui/icons/melee_defense.png",
-			text = "近战防御[color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.MeleeDefense + "[/color]"
+			text = "近战防御 [color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.MeleeDefense + "[/color]"
 		});
 		result.push({
 			id = 6,
@@ -96,13 +96,13 @@ this.gilders_embrace_shield <- this.inherit("scripts/items/shields/shield", {
 			id = 8,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "是坚不可摧的"
+			text = "坚不可摧"
 		});
 		result.push({
 			id = 8,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "每个击打此盾牌的人都会受到“茫然”效果"
+			text = "攻击这面盾牌的人会被赋予“茫然”效果"
 		});
 		return result;
 	}
@@ -122,7 +122,7 @@ this.gilders_embrace_shield <- this.inherit("scripts/items/shields/shield", {
 
 			if (_attacker.getTile().IsVisibleForPlayer)
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_attacker) + "被镀金者的拥抱茫然了");
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_attacker) + "被镀金者之拥茫然了");
 			}
 		}
 	}
