@@ -5,7 +5,7 @@ this.orc_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.orc_axe";
 		this.m.Name = "劈头斧";
-		this.m.Description = "一块沉重的金属上面有一个锋利的金属头。 不是为人的手做的。";
+		this.m.Description = "一大块带锋的沉重金属。并非为人手所作。";
 		this.m.Categories = "斧，单手持";
 		this.m.IconLarge = "weapons/melee/orc_axe.png";
 		this.m.Icon = "weapons/melee/orc_axe_70x70.png";

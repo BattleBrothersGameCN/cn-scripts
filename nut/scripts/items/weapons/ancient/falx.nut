@@ -5,7 +5,7 @@ this.falx <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.falx";
 		this.m.Name = "镰型刀";
-		this.m.Description = "一种短而重的刀，刀刃弯曲用来切出流血的伤口。岁月太久变钝了。";
+		this.m.Description = "一把带有弯曲刀刃，用来撕扯出流血伤口的重刃短刀。岁月带走了它的光泽。";
 		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/falx_01.png";
 		this.m.Icon = "weapons/melee/falx_01_70x70.png";

@@ -4,8 +4,8 @@ this.broken_bladed_pike <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.broken_bladed_pike";
-		this.m.Name = "破损的古代长矛";
-		this.m.Description = "一把尖头折断的古代长矛。 并非所有的武器都能经受住时间的考验。曾用于在一定距离外攻击并且与敌人保持距离。";
+		this.m.Name = "断刃古代刃枪";
+		this.m.Description = "一杆枪尖折断的古代刃枪。并非所有武器能经受住时间的考验。曾经用来从远处戳击敌人，使之无法近身。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.IconLarge = "weapons/melee/broken_pike_01.png";
 		this.m.Icon = "weapons/melee/broken_pike_01_70x70.png";

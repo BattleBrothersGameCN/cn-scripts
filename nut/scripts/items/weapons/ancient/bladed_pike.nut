@@ -4,8 +4,8 @@ this.bladed_pike <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.bladed_pike";
-		this.m.Name = "古代矛";
-		this.m.Description = "一杆长而古老的长枪，用于在一定距离外攻击并且与敌人保持距离。";
+		this.m.Name = "古代刃枪";
+		this.m.Description = "一杆古代长枪，可以远远地戳击敌人，使之无法近身。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.IconLarge = "weapons/melee/bladed_pike_01.png";
 		this.m.Icon = "weapons/melee/bladed_pike_01_70x70.png";

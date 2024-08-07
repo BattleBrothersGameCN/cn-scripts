@@ -6,8 +6,8 @@ this.heavy_southern_mace <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.heavy_southern_mace";
-		this.m.Name = "重型南方狼牙棒";
-		this.m.Description = "一根南方装备精良的士兵常用的重型狼牙棒。";
+		this.m.Name = "重型南方杖";
+		this.m.Description = "一把南方精兵常用的重型凸缘杖。";
 		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/heavy_southern_mace_01.png";
 		this.m.Icon = "weapons/melee/heavy_southern_mace_01_70x70.png";

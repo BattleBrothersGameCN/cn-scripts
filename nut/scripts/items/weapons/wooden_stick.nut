@@ -7,7 +7,7 @@ this.wooden_stick <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.wooden_stick";
 		this.m.Name = "木棍";
-		this.m.Description = "一根简单的木棍，通常充当临时武器。";
+		this.m.Description = "一根木棍罢了，临时充作武器。";
 		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/club_01.png";
 		this.m.Icon = "weapons/melee/club_01_70x70.png";

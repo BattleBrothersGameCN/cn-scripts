@@ -4,8 +4,8 @@ this.orc_wooden_club <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.orc_wooden_club";
-		this.m.Name = "树枝";
-		this.m.Description = "从树上扯下来的又大又重的树枝。不太适合人手。";
+		this.m.Name = "树杈";
+		this.m.Description = "一条树上扯来的粗重树杈。不太适合人手。";
 		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/orc_club_01_140x70.png";
 		this.m.Icon = "weapons/melee/orc_club_01_70x70.png";

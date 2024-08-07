@@ -5,7 +5,7 @@ this.two_handed_flail <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.two_handed_flail";
 		this.m.Name = "双手链枷";
-		this.m.Description = "一种需要双手才能使用的大型重金属链枷。适合绕过盾牌打击敌人。";
+		this.m.Description = "一种需要双手使用，又重又大的金属链枷。适合绕过盾牌打击敌人。";
 		this.m.Categories = "链枷, 双手持";
 		this.m.IconLarge = "weapons/melee/flail_two_handed_02.png";
 		this.m.Icon = "weapons/melee/flail_two_handed_02_70x70.png";

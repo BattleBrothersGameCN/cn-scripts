@@ -5,7 +5,7 @@ this.polemace <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.polemace";
 		this.m.Name = "长棍";
-		this.m.Description = "一种长棍，可以用来在一定距离外击晕对手。";
+		this.m.Description = "一把用于从远处击晕敌人的长把骨朵。";
 		this.m.Categories = "骨朵, 双手持";
 		this.m.IconLarge = "weapons/melee/polemace_01.png";
 		this.m.Icon = "weapons/melee/polemace_01_70x70.png";

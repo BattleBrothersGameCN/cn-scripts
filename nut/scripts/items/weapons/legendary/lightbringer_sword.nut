@@ -33,7 +33,7 @@ this.lightbringer_sword <- this.inherit("scripts/items/weapons/weapon", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "对最多三个目标造成额外[color=" + this.Const.UI.Color.DamageValue + "]10[/color] - [color=" + this.Const.UI.Color.DamageValue + "]20[/color] 无视护甲的伤害"
+			text = "额外对最多三个目标造成 [color=" + this.Const.UI.Color.DamageValue + "]10[/color] - [color=" + this.Const.UI.Color.DamageValue + "]20[/color] 点无视护甲的伤害"
 		});
 		return result;
 	}

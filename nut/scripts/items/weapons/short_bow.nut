@@ -5,7 +5,7 @@ this.short_bow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.short_bow";
 		this.m.Name = "短弓";
-		this.m.Description = "一张中等射程的简单木制短弓。需要一些专业知识才能有效地使用。";
+		this.m.Description = "一张中等射程的简单木制短弓。需要一些经验才能有效运用。";
 		this.m.Categories = "弓，双手持";
 		this.m.IconLarge = "weapons/ranged/bow_02.png";
 		this.m.Icon = "weapons/ranged/bow_02_70x70.png";

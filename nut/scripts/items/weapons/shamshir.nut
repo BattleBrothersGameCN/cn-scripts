@@ -5,7 +5,7 @@ this.shamshir <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.shamshir";
 		this.m.Name = "狮尾弯刀";
-		this.m.Description = "这把来自南方异域的精制的弯刀，它有一个弯曲的刀刃可以轻松地切出深深的伤口，但不适合插入和穿透盔甲。 在这片陆地上很稀有。";
+		this.m.Description = "这把南方异域精制弯刀的弯曲刀刃，牺牲了一些刺击和穿甲，换来了割出深伤口的能力。是件这片大陆上少有的武器。";
 		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/scimitar_01.png";
 		this.m.Icon = "weapons/melee/scimitar_01_70x70.png";

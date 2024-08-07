@@ -4,8 +4,8 @@ this.goblin_pike <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.goblin_pike";
-		this.m.Name = "锯齿长矛";
-		this.m.Description = "一把锯齿状的长矛，可以撕裂出流血伤口，并利用其长度与敌人保持距离。";
+		this.m.Name = "锯齿长枪";
+		this.m.Description = "一杆锯齿状长枪，既能撕裂出流血伤口，又能利用长度优势阻止敌人靠近。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.IconLarge = "weapons/melee/goblin_weapon_04.png";
 		this.m.Icon = "weapons/melee/goblin_weapon_04_70x70.png";

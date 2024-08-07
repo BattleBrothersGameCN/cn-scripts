@@ -5,7 +5,7 @@ this.rusty_warblade <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.rusty_warblade";
 		this.m.Name = "生锈战刀";
-		this.m.Description = "一把末端带有弧线，兼具剑和斧子特点的强力双手砍刀。";
+		this.m.Description = "一把刃尖呈弧形，兼有剑和斧头特性的强力双手砍刀。";
 		this.m.Categories = "砍刀，双手持";
 		this.m.IconLarge = "weapons/melee/wildmen_08.png";
 		this.m.Icon = "weapons/melee/wildmen_08_70x70.png";

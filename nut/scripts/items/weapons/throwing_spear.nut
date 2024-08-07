@@ -5,7 +5,7 @@ this.throwing_spear <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.throwing_spear";
 		this.m.Name = "投矛";
-		this.m.Description = "一根可用于短距离投掷的矛，比一般的矛要轻但又比标枪重。矛尖受到冲击时会弯曲，但能破坏盾牌。 也可以用来对付无盾牌的对手，效果非常好。";
+		this.m.Description = "一根用于短距离投掷的矛，重过标枪，又比常见的矛轻。矛尖会在受冲击时弯曲，能一定程度上破坏盾牌。对付无盾牌的对手效果也非常好。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.IconLarge = "weapons/ranged/throwing_spear_01.png";
 		this.m.Icon = "weapons/ranged/throwing_spear_01_70x70.png";

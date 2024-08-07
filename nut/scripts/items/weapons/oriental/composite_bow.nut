@@ -5,7 +5,7 @@ this.composite_bow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.composite_bow";
 		this.m.Name = "复合弓";
-		this.m.Description = "一张使用多层复合材料制作以增加拉力的短弓。";
+		this.m.Description = "一张为提升拉力用多层复合原料制成的短弓。";
 		this.m.Categories = "弓，双手持";
 		this.m.IconLarge = "weapons/ranged/composite_bow_01.png";
 		this.m.Icon = "weapons/ranged/composite_bow_01_70x70.png";

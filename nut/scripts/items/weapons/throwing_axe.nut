@@ -15,7 +15,7 @@ this.throwing_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.throwing_axe";
 		this.m.Name = "一捆投斧";
-		this.m.Description = "需要用过肩姿势投掷的小斧。有足够重量从远距离对盔甲和盾牌造成严重伤害。";
+		this.m.Description = "需要用过肩姿势投掷的小斧。重量足以从远距离对盔甲和盾牌造成严重伤害。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.IconLarge = "weapons/ranged/throwing_axes_01.png";
 		this.m.Icon = "weapons/ranged/throwing_axes_01_70x70.png";

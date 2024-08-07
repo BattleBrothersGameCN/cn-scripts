@@ -5,7 +5,7 @@ this.orc_flail_2h <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.orc_flail_2h";
 		this.m.Name = "狂战链";
-		this.m.Description = "末端有附尖刺全金属锤头的大铁链，太沉重以至于普通人无法有效使用。";
+		this.m.Description = "末端连着带尖全金属锤头的大铁链，沉到了一般人用不好的地步。";
 		this.m.Categories = "链枷, 双手持";
 		this.m.IconLarge = "weapons/melee/orc_flail_two_handed.png";
 		this.m.Icon = "weapons/melee/orc_flail_two_handed_70x70.png";

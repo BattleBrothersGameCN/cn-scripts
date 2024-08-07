@@ -28,7 +28,7 @@ this.handgonne <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.handgonne";
 		this.m.Name = "火铳";
-		this.m.Description = "有长木柄的铁桶。 它发射锥形弹片，可以一次击中多个目标。 不能在近战中使用。";
+		this.m.Description = "一条装有长木柄的铁管。发射出的弹片会飞向一片锥形区域，一次能命中多个目标。无法在陷入近战时使用。";
 		this.m.Categories = "火器, 双手持";
 		this.m.IconLarge = "weapons/ranged/handgonne_01.png";
 		this.m.Icon = "weapons/ranged/handgonne_01_70x70.png";

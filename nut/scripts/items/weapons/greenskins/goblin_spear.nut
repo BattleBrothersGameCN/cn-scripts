@@ -5,7 +5,7 @@ this.goblin_spear <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.goblin_spear";
 		this.m.Name = "地精穿刺矛";
-		this.m.Description = "一个拥有锋利金属尖头的长杆。";
+		this.m.Description = "一条装有尖利金属矛尖的长杆子。";
 		this.m.Categories = "矛，单手持";
 		this.m.IconLarge = "weapons/melee/goblin_weapon_03.png";
 		this.m.Icon = "weapons/melee/goblin_weapon_03_70x70.png";

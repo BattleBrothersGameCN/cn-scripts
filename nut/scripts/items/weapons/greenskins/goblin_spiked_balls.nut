@@ -15,7 +15,7 @@ this.goblin_spiked_balls <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.goblin_spiked_balls";
 		this.m.Name = "一捆尖刺流星锤";
-		this.m.Description = "有金属钉的小而重的铁球，可用于投掷。";
+		this.m.Description = "用于投向目标的沉重带刺小铁球。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.IconLarge = "weapons/ranged/goblin_weapon_07.png";
 		this.m.Icon = "weapons/ranged/goblin_weapon_07_70x70.png";

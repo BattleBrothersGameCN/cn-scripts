@@ -5,7 +5,7 @@ this.military_pick <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.military_pick";
 		this.m.Name = "军用镐";
-		this.m.Description = "一个木柄上安装有长而尖锐的金属头，用来凿穿最坚固的盔甲。";
+		this.m.Description = "装在木柄上的长尖金属锤头，用来凿穿最坚固的盔甲。";
 		this.m.Categories = "锤，单手持";
 		this.m.IconLarge = "weapons/melee/military_pick_01.png";
 		this.m.Icon = "weapons/melee/military_pick_01_70x70.png";

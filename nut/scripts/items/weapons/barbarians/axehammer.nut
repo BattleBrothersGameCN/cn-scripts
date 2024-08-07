@@ -5,7 +5,7 @@ this.axehammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.axehammer";
 		this.m.Name = "斧锤";
-		this.m.Description = "一柄大且生锈的锤子和斧头的混合体。 由于其不锋利的刀锋，使其更趋向于前者更多于后者。";
+		this.m.Description = "一把生锈的大块头锤斧混合体。鉴于其锋利程度，称为前者更为合适。";
 		this.m.Categories = "锤/斧，单手持";
 		this.m.IconLarge = "weapons/melee/wildmen_03.png";
 		this.m.Icon = "weapons/melee/wildmen_03_70x70.png";

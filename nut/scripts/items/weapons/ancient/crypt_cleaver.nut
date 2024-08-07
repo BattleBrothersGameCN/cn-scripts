@@ -5,7 +5,7 @@ this.crypt_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.crypt_cleaver";
 		this.m.Name = "古墓砍刀";
-		this.m.Description = "一种末端奇怪弯曲的重型武器，将剑和斧头的特性结合形成一把强力双手砍刀。";
+		this.m.Description = "一把刃尖呈奇特弧形，兼有剑和斧头特性的强力双手砍刀。";
 		this.m.Categories = "砍刀，双手持";
 		this.m.IconLarge = "weapons/melee/cryptcleaver_01.png";
 		this.m.Icon = "weapons/melee/cryptcleaver_01_70x70.png";

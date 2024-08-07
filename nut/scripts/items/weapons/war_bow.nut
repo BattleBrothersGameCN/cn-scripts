@@ -5,7 +5,7 @@ this.war_bow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.war_bow";
 		this.m.Name = "战弓";
-		this.m.Description = "一张有着巨大拉力的长弓，专为战斗而设计。";
+		this.m.Description = "一张专为战斗设计，拉力巨大的长弓。";
 		this.m.Categories = "弓，双手持";
 		this.m.IconLarge = "weapons/ranged/bow_05.png";
 		this.m.Icon = "weapons/ranged/bow_05_70x70.png";

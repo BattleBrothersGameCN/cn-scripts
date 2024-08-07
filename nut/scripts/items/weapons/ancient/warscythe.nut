@@ -5,7 +5,7 @@ this.warscythe <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.warscythe";
 		this.m.Name = "战镰";
-		this.m.Description = "一个附有锋利弯刃的长柄，用于在一定距离上进行强力的横扫劈击。";
+		this.m.Description = "一条装有锋利弯刃的长杆，用于从远处横扫敌人的纵深。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.IconLarge = "weapons/melee/warscythe_01.png";
 		this.m.Icon = "weapons/melee/warscythe_01_70x70.png";

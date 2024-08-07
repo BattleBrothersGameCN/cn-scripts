@@ -5,7 +5,7 @@ this.staff_sling <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.staff_sling";
 		this.m.Name = "投石杖";
-		this.m.Description = "一种系在手杖上的皮制投石器，用来向敌人投掷石头。由于石头到处都是，弹药永远不会用完。";
+		this.m.Description = "一条系在长棍上的皮制投石索。鉴于石头遍地都是，永远都不会缺弹药。";
 		this.m.Categories = "投掷武器，双手持";
 		this.m.IconLarge = "weapons/ranged/sling_01.png";
 		this.m.Icon = "weapons/ranged/sling_01_70x70.png";

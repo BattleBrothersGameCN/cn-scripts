@@ -4,8 +4,8 @@ this.scramasax <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.scramasax";
-		this.m.Name = "撒克逊大刀";
-		this.m.Description = "一把长而重的单刃刀，多用于挥砍而不是削划。";
+		this.m.Name = "撒克逊短刀";
+		this.m.Description = "一把长而重的单刃刀，多用于劈剁而非斩击。";
 		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/sax_01.png";
 		this.m.Icon = "weapons/melee/sax_01_70x70.png";

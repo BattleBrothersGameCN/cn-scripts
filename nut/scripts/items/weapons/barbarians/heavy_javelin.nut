@@ -15,7 +15,7 @@ this.heavy_javelin <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.heavy_javelin";
 		this.m.Name = "一捆重标枪";
-		this.m.Description = "一组看起来沉重且坚固的标枪。 投掷困难且难以命中，但伤害很高。";
+		this.m.Description = "一捆沉重而粗犷的标枪。投掷和瞄准更难，却更富冲击力。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.IconLarge = "weapons/ranged/javelins_heavy_01.png";
 		this.m.Icon = "weapons/ranged/javelins_heavy_01_70x70.png";

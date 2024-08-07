@@ -5,7 +5,7 @@ this.firelance <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.firelance";
 		this.m.Name = "火矛";
-		this.m.Description = "一种南方设计的长矛，装有火药，点燃后会在两个格子距离内喷火。每次战斗只能使用一次，但战斗结束后自动补充。";
+		this.m.Description = "一柄南方设计的矛，上装有一包火药，能在点燃后喷火，火焰能喷出两格远。药包在每场战斗只能使用一次，但会在战斗后自动补充。";
 		this.m.Categories = "矛/火器, 单手持";
 		this.m.IconLarge = "weapons/ranged/firelance_01.png";
 		this.m.Icon = "weapons/ranged/firelance_01_70x70.png";

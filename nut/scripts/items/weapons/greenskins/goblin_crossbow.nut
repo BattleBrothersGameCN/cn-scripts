@@ -17,7 +17,7 @@ this.goblin_crossbow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.goblin_crossbow";
 		this.m.Name = "穿刺弩";
-		this.m.Description = "前端带有恶毒尖刺的巨大且沉重的弩。更像一个小型投石机，它发射的木桩力道足以击退命中的目标。";
+		this.m.Description = "一把前端带有恶毒尖刺的巨大重弩。它更像一把微型弩炮，射出的木桩足以击退命中的目标。";
 		this.m.Categories = "弩, 双手持";
 		this.m.IconLarge = "weapons/ranged/crossbow_goblin_01.png";
 		this.m.Icon = "weapons/ranged/crossbow_goblin_01_70x70.png";

@@ -5,7 +5,7 @@ this.two_handed_flanged_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.two_handed_flanged_mace";
 		this.m.Name = "双手凸缘杖";
-		this.m.Description = "一种需要双手使用又大又重的双翼狼牙棒。无论敌人穿什么样的盔甲，受到这种武器的打击会让其神志不清，陷入茫然。";
+		this.m.Description = "一把需要双手握持，又重又大的页锤。不管穿了什么盔甲，挨上一下都会神志不清，陷入茫然。";
 		this.m.Categories = "骨朵, 双手持";
 		this.m.IconLarge = "weapons/melee/mace_two_handed_02.png";
 		this.m.Icon = "weapons/melee/mace_two_handed_02_70x70.png";

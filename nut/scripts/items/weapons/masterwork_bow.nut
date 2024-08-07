@@ -5,7 +5,7 @@ this.masterwork_bow <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.masterwork_bow";
 		this.m.Name = "大师弓";
-		this.m.Description = "一张精雕细琢的弓，轻盈而又精确平衡。由多种木材打造而成，螺旋式的花纹混合着树的颜色横贯整把武器。不愧是弓匠大师的杰作。";
+		this.m.Description = "一张握感轻盈，平衡精准，精雕细琢而成的弓。这把弓由多种木材复合而成，螺旋花纹混合了树木本身的颜色，贯穿了整把武器，在木头上做出了大马士革花纹。不愧是弓匠大师的杰作。";
 		this.m.Categories = "弓，双手持";
 		this.m.IconLarge = "weapons/ranged/bow_03.png";
 		this.m.Icon = "weapons/ranged/bow_03_70x70.png";

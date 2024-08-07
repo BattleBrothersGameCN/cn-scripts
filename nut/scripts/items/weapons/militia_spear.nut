@@ -5,7 +5,7 @@ this.militia_spear <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.militia_spear";
 		this.m.Name = "民兵矛";
-		this.m.Description = "一根带有金属枪尖的简易木矛。";
+		this.m.Description = "一条装有金属矛尖的简易木矛。";
 		this.m.Categories = "矛，单手持";
 		this.m.IconLarge = "weapons/melee/spear_02.png";
 		this.m.Icon = "weapons/melee/spear_02_70x70.png";

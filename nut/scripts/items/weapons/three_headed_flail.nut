@@ -7,7 +7,7 @@ this.three_headed_flail <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.three_headed_flail";
 		this.m.Name = "三头链枷";
-		this.m.Description = "分别用链条连接在手柄上的三个独立的锤头。每个头可以分别击中或或击空一个目标，能绕过盾牌掩护进行打击。";
+		this.m.Description = "三个分体锤头不直接连接，而是通过锁链固定在了手柄上。每个锤头的命中分开，适合绕过盾牌打击敌人。";
 		this.m.Categories = "链枷, 单手持";
 		this.m.IconLarge = "weapons/melee/flail_three_headed_01.png";
 		this.m.Icon = "weapons/melee/flail_three_headed_01_70x70.png";
