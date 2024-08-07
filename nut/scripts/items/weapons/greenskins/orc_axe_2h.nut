@@ -5,7 +5,7 @@ this.orc_axe_2h <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.orc_axe_2h";
 		this.m.Name = "劈人斧";
-		this.m.Description = "一把巨大而粗糙的双头战斧，太沉重以至于普通人无法有效使用。";
+		this.m.Description = "一把巨大的粗制双头手战斧，沉到了一般人用不好的地步。";
 		this.m.Categories = "斧，双手持";
 		this.m.IconLarge = "weapons/melee/orc_axe_two_handed.png";
 		this.m.Icon = "weapons/melee/orc_axe_two_handed_70x70.png";

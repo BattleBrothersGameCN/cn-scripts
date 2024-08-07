@@ -274,7 +274,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 				id = 5,
 				type = "text",
 				icon = "ui/icons/armor_damage.png",
-				text = "[color=" + this.Const.UI.Color.DamageValue + "]" + this.Math.floor(this.m.ArmorDamageMult * 100) + "%[/color] 效果作用于护甲"
+				text = "[color=" + this.Const.UI.Color.DamageValue + "]" + this.Math.floor(this.m.ArmorDamageMult * 100) + "%[/color] 破甲效果"
 			});
 		}
 
@@ -284,7 +284,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/shield_damage.png",
-				text = "对盾牌的伤害 [color=" + this.Const.UI.Color.DamageValue + "]" + this.m.ShieldDamage + "[/color]"
+				text = "破盾伤害 [color=" + this.Const.UI.Color.DamageValue + "]" + this.m.ShieldDamage + "[/color]"
 			});
 		}
 
@@ -304,7 +304,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/hitchance.png",
-				text = "有额外的[color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.AdditionalAccuracy + "%[/color] 命中几率"
+				text = "命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]+" + this.m.AdditionalAccuracy + "%[/color]"
 			});
 		}
 		else if (this.m.AdditionalAccuracy < 0)
@@ -313,7 +313,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/hitchance.png",
-				text = "有额外的[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.AdditionalAccuracy + "%[/color] 命中几率"
+				text = "命中率提高 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.AdditionalAccuracy + "%[/color]"
 			});
 		}
 
@@ -323,7 +323,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/vision.png",
-				text = "使用范围为[color=" + this.Const.UI.Color.PositiveValue + "]" + this.getRangeMax() + "[/color] 格"
+				text = "攻击范围有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.getRangeMax() + "[/color] 格远"
 			});
 		}
 
@@ -364,7 +364,7 @@ this.weapon <- this.inherit("scripts/items/item", {
 					id = 10,
 					type = "text",
 					icon = "ui/icons/ammo.png",
-					text = "包含弹药[color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Ammo + "[/color] 发"
+					text = "装有 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.Ammo + "[/color] 发弹药"
 				});
 			}
 			else

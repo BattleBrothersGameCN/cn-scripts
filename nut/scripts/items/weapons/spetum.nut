@@ -5,7 +5,7 @@ this.spetum <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.spetum";
 		this.m.Name = "三叉矛";
-		this.m.Description = "一种介于矛与枪之间的优秀防御性武器。可在一定距离外戳击并与敌人保持距离。";
+		this.m.Description = "一种介于矛与枪之间的优秀防御性武器。可以远远地戳击敌人，使之无法近身。";
 		this.m.Categories = "矛，双手持";
 		this.m.IconLarge = "weapons/melee/spetum_01.png";
 		this.m.Icon = "weapons/melee/spetum_01_70x70.png";

@@ -4,8 +4,8 @@ this.wonky_bow <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.wonky_bow";
-		this.m.Name = "糟糕的弓";
-		this.m.Description = "一把设计不良的弓，亲眼看到就更为明白。木头在弯曲时会咯噔作响和出现裂纹，每次你拉动弓弦时，弓弦会起毛并变得卷曲。";
+		this.m.Name = "乱抖的弓";
+		this.m.Description = "一把一看就知道设计得有问题的弓。一弯弓把就会噼啪作响，一拉弓弦就会卷曲起毛。";
 		this.m.Categories = "弓，双手持";
 		this.m.IconLarge = "weapons/ranged/bow_04.png";
 		this.m.Icon = "weapons/ranged/bow_04_70x70.png";

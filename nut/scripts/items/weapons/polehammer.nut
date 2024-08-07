@@ -5,7 +5,7 @@ this.polehammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.polehammer";
 		this.m.Name = "长锤";
-		this.m.Description = "一把安装在长柄上的战锤，用于对付重甲单位和前排后面的敌人。";
+		this.m.Description = "一把安装在长柄上的战锤，可以从后排远远地对重甲敌人进行打击。";
 		this.m.Categories = "锤，双手持";
 		this.m.IconLarge = "weapons/melee/polehammer_01.png";
 		this.m.Icon = "weapons/melee/polehammer_01_70x70.png";

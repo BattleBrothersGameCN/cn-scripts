@@ -4,8 +4,8 @@ this.pike <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.pike";
-		this.m.Name = "矛";
-		this.m.Description = "一根长矛，可以在一定距离外戳刺，使敌人无法靠近。";
+		this.m.Name = "长枪";
+		this.m.Description = "一杆长枪，可以远远地戳击敌人，使之无法近身。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.IconLarge = "weapons/melee/pike_01.png";
 		this.m.Icon = "weapons/melee/pike_01_70x70.png";

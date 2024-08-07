@@ -4,8 +4,8 @@ this.ancient_sword <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.ancient_sword";
-		this.m.Name = "古代刃剑";
-		this.m.Description = "一把起源于古代的直刃。握把上覆盖着奇怪的装饰物，这可能使它对历史学家和其他有学术头脑的人有价值。";
+		this.m.Name = "古代剑";
+		this.m.Description = "一把源于古代的直剑。剑柄上满是奇异的装饰，可能对历史学家等研究者有价值。";
 		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/ancient_sword_01.png";
 		this.m.Icon = "weapons/melee/ancient_sword_01_70x70.png";

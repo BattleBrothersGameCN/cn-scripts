@@ -5,7 +5,7 @@ this.pickaxe <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.pickaxe";
 		this.m.Name = "鹤嘴镐";
-		this.m.Description = "一把木柄上安装坚硬金属头的镐，鹤嘴镐是矿工用来破碎岩石的工具。作为一种临时武器它不是很趁手，但一样可穿透盔甲造成致命伤。";
+		this.m.Description = "鹤嘴镐是一种工具，把坚硬的金属锤头装在木柄上，就能用来破碎岩石。作为一种临时武器不算趁手，却可以穿透盔甲造成致命伤。";
 		this.m.Categories = "锤，单手持";
 		this.m.IconLarge = "weapons/melee/miners_pick_01.png";
 		this.m.Icon = "weapons/melee/miners_pick_01_70x70.png";

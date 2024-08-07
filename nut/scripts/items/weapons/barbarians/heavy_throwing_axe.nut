@@ -15,7 +15,7 @@ this.heavy_throwing_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.heavy_throwing_axe";
 		this.m.Name = "一捆重投斧";
-		this.m.Description = "北方野蛮人使用的笨重投斧。 投掷困难且难以命中，但十分致命。";
+		this.m.Description = "北方野蛮人使用的笨重投斧。投掷和瞄准更难，却相当致命。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.IconLarge = "weapons/ranged/throwing_axes_heavy_01.png";
 		this.m.Icon = "weapons/ranged/throwing_axes_heavy_01_70x70.png";

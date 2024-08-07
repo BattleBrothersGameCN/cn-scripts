@@ -5,7 +5,7 @@ this.heavy_rusty_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.heavy_rusty_axe";
 		this.m.Name = "生锈重斧";
-		this.m.Description = "这把生锈的重型斧头更多的依赖于它的重量而不是其锋利度，但不管怎样还是能用的。";
+		this.m.Description = "这把生锈重斧更多是仰仗其重量而非锋利程度，但不管怎样都能把事情搞定。";
 		this.m.Categories = "斧，双手持";
 		this.m.IconLarge = "weapons/melee/wildmen_09.png";
 		this.m.Icon = "weapons/melee/wildmen_09_70x70.png";

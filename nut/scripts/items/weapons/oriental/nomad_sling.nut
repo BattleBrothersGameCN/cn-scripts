@@ -4,8 +4,8 @@ this.nomad_sling <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.nomad_sling";
-		this.m.Name = "游牧投石索";
-		this.m.Description = "一根投石索装在用金属加固的手杖上，用来向敌人投掷石块。 由于到处都是石头，弹药永远不会用完。";
+		this.m.Name = "游牧投石杖";
+		this.m.Description = "一条系在金属加固长棍上，用于向敌人投掷石块的皮制投石索。鉴于石头遍地都是，永远都不会缺弹药。";
 		this.m.Categories = "投掷武器，双手持";
 		this.m.IconLarge = "weapons/ranged/warriors_sling_01.png";
 		this.m.Icon = "weapons/ranged/warriors_sling_01_70x70.png";

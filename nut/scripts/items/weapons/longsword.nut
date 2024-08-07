@@ -7,7 +7,7 @@ this.longsword <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.longsword";
 		this.m.Name = "长剑";
-		this.m.Description = "一种适应各种战斗环境的修长双手剑。";
+		this.m.Description = "一把适应各种战斗环境的修长双手剑。";
 		this.m.Categories = "剑，双手持";
 		this.m.IconLarge = "weapons/melee/longsword_01.png";
 		this.m.Icon = "weapons/melee/longsword_01_70x70.png";

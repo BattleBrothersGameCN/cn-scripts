@@ -4,8 +4,8 @@ this.goblin_notched_blade <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.goblin_notched_blade";
-		this.m.Name = "缺口刀";
-		this.m.Description = "一把单侧开锋的长而弯曲的刀，用于砍、劈和刺击薄弱部位。";
+		this.m.Name = "凹刃刀";
+		this.m.Description = "一把长而弯曲的单锋小刀，能砍，能劈又能朝要害刺击。";
 		this.m.Categories = "剑/匕首，单手持";
 		this.m.IconLarge = "weapons/melee/goblin_weapon_01.png";
 		this.m.Icon = "weapons/melee/goblin_weapon_01_70x70.png";

@@ -4,8 +4,8 @@ this.orc_cleaver <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.orc_cleaver";
-		this.m.Name = "斩首刀";
-		this.m.Description = "一片锋利而粗糙的金属碎片，握柄被包裹，类似于剑，但重了很多。不适合人类手持。";
+		this.m.Name = "剁头刀";
+		this.m.Description = "一块只是缠出了握把的锋利金属片，类似于剑，但要重了许多。并非为人手所作。";
 		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/orc_cleaver.png";
 		this.m.Icon = "weapons/melee/orc_cleaver_70x70.png";

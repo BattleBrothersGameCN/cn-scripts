@@ -4,8 +4,8 @@ this.warbrand <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.warbrand";
-		this.m.Name = "布兰德战刃";
-		this.m.Description = "一把双手剑的变体型号，有着长而薄的锋刃，单侧开锋且没有护手。既可用于快速挥砍，也可用于横扫打击。";
+		this.m.Name = "大战剑";
+		this.m.Description = "一把刃部长薄，单面开刃，没有护手的变种双手剑。既可用于快速挥斩，也可用于横扫打击。";
 		this.m.Categories = "剑，双手持";
 		this.m.IconLarge = "weapons/melee/warbrand_01.png";
 		this.m.Icon = "weapons/melee/warbrand_01_70x70.png";

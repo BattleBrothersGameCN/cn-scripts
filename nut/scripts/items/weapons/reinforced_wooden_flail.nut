@@ -5,7 +5,7 @@ this.reinforced_wooden_flail <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.reinforced_wooden_flail";
 		this.m.Name = "强化木链枷";
-		this.m.Description = "两根用短链连接的用金属加固的大木棍，强化木连枷是一种农具衍生出的武器。它的攻击有些难以预测，但如果结实的命中头部一下就能击倒大部分人，同时它还很适合攻击在盾牌掩护下的敌人。";
+		this.m.Description = "强化木链枷是一种农具，把两大根金属加固的木棍用一小段铁链连接起来，作敲打谷堆打散谷壳之用。其攻击叫人拿捏不准，结实地往头上来一下却能击倒大多数人，适合绕过盾牌打击敌人。";
 		this.m.Categories = "链枷, 单手持";
 		this.m.IconLarge = "weapons/melee/flail_03.png";
 		this.m.Icon = "weapons/melee/flail_03_70x70.png";

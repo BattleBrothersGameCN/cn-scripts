@@ -5,7 +5,7 @@ this.rhomphaia <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.rhomphaia";
 		this.m.Name = "长柄逆刃剑";
-		this.m.Description = "一种长而弯曲单侧开锋的刀，安装在一个大手柄上。既可用于快速挥砍，也可用于横扫打击。";
+		this.m.Description = "一把安装在大型手柄上，单面开刃的长弯刃剑。既可用于快速挥斩，也可用于横扫打击。";
 		this.m.Categories = "剑，双手持";
 		this.m.IconLarge = "weapons/melee/romphaia_01.png";
 		this.m.Icon = "weapons/melee/romphaia_01_70x70.png";

@@ -5,7 +5,7 @@ this.flail <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.flail";
 		this.m.Name = "链枷";
-		this.m.Description = "一个通过锁链固定在手柄上的分体锤头。其攻击路线难以预测，反倒适合绕过盾牌打击对手。";
+		this.m.Description = "一个分体锤头不直接连接，而是通过锁链固定在了手柄上。其攻击叫人拿捏不准，倒是适合绕过盾牌打击敌人。";
 		this.m.Categories = "链枷, 单手持";
 		this.m.IconLarge = "weapons/melee/flail_01.png";
 		this.m.Icon = "weapons/melee/flail_01_70x70.png";

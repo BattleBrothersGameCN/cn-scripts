@@ -5,7 +5,7 @@ this.shortsword <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.shortsword";
 		this.m.Name = "短剑";
-		this.m.Description = "一柄带有些许凹痕和锯齿的生铁短剑，可以轻易的单手使用。";
+		this.m.Description = "一柄稍有崩刃卷刃的生铁短剑，可以轻易单手使用。";
 		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/sword_01.png";
 		this.m.Icon = "weapons/melee/sword_01_70x70.png";

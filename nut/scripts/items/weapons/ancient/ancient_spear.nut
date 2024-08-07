@@ -4,8 +4,8 @@ this.ancient_spear <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.ancient_spear";
-		this.m.Name = "古代长矛";
-		this.m.Description = "设计简单的古代木制矛。长久的岁月对它造成了不可修复的损害。";
+		this.m.Name = "古代矛";
+		this.m.Description = "一杆简单的古代木制矛。这件武器上布满了岁月的痕迹。";
 		this.m.Categories = "矛，单手持";
 		this.m.IconLarge = "weapons/melee/ancient_spear_01.png";
 		this.m.Icon = "weapons/melee/ancient_spear_01_70x70.png";

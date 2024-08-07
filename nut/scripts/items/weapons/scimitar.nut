@@ -5,7 +5,7 @@ this.scimitar <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.scimitar";
 		this.m.Name = "短弯刀";
-		this.m.Description = "南方的一种奇特的弯曲剑，非常适合砍，但不适合戳刺或穿透盔甲。";
+		this.m.Description = "一把来自南方的异域弯刃剑，非常适合挥砍，但刺击和穿甲能力稍逊。";
 		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/scimitar_02.png";
 		this.m.Icon = "weapons/melee/scimitar_02_70x70.png";

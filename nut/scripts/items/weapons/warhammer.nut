@@ -5,7 +5,7 @@ this.warhammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.warhammer";
 		this.m.Name = "战锤";
-		this.m.Description = "一把短柄铁战锤，能轻易地击穿盔甲板。";
+		this.m.Description = "一把短柄铁战锤，能轻易地击穿盔甲。";
 		this.m.Categories = "锤，单手持";
 		this.m.IconLarge = "weapons/melee/warhammer_01.png";
 		this.m.Icon = "weapons/melee/warhammer_01_70x70.png";

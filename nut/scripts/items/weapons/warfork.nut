@@ -5,7 +5,7 @@ this.warfork <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.warfork";
 		this.m.Name = "战叉";
-		this.m.Description = "一把被重新锻造成战场武器的干草叉，介于矛和枪之间。可在一定距离外戳击并与敌人保持距离。";
+		this.m.Description = "一把重铸成战阵武器的干草叉，介于矛和枪之间。可以远远地戳击敌人，使之无法近身。";
 		this.m.Categories = "矛，双手持";
 		this.m.IconLarge = "weapons/melee/warfork_01.png";
 		this.m.Icon = "weapons/melee/warfork_01_70x70.png";

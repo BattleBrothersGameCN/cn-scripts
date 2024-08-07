@@ -5,7 +5,7 @@ this.thorned_whip <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.thorned_whip";
 		this.m.Name = "刺鞭";
-		this.m.Description = "一条结实的刺鞭。 被野蛮人用于战斗和放牧野兽，即使是最大的野兽也会畏缩它的抽打。";
+		this.m.Description = "一条野蛮人用于战斗和放牧野兽的结实刺鞭，即使是最大的野兽也会因它的抽打而畏缩。";
 		this.m.Categories = "砍刀，单手持";
 		this.m.IconLarge = "weapons/melee/wildmen_11.png";
 		this.m.Icon = "weapons/melee/wildmen_11_70x70.png";

@@ -7,7 +7,7 @@ this.claw_club <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.claw_club";
 		this.m.Name = "爪棒";
-		this.m.Description = "某种野生动物的巨大爪子固定在这根大棒上";
+		this.m.Description = "这条大棒上绑着某种野生动物的巨爪。";
 		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/wildmen_02.png";
 		this.m.Icon = "weapons/melee/wildmen_02_70x70.png";

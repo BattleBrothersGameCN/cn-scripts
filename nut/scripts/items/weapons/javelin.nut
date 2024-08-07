@@ -15,7 +15,7 @@ this.javelin <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.javelin";
 		this.m.Name = "一捆标枪";
-		this.m.Description = "一些通常配备给散兵的投掷用矛。射程有限，耗费体力，却能造成毁灭新的伤害。";
+		this.m.Description = "一些通常配备给散兵的投掷用矛。射程有限，耗费体力，却能造成毁灭性的伤害。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.IconLarge = "weapons/ranged/javelins_01.png";
 		this.m.Icon = "weapons/ranged/javelins_01_70x70.png";

@@ -14,8 +14,8 @@ this.orc_javelin <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.orc_javelin";
-		this.m.Name = "一捆粗糙的标枪";
-		this.m.Description = "一堆粗制滥造用来投向目标的标枪。射程有限，且十分消耗体力，但能造成毁灭性的伤害。如果被盾牌格挡，也会对盾牌造成轻微伤害。";
+		this.m.Name = "一捆粗制标枪";
+		this.m.Description = "一捆用来投向目标的粗制标枪。射程有限，耗费体力，却能造成毁灭性的伤害。也能对盾牌造成些许伤害。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.IconLarge = "weapons/ranged/orc_javelins.png";
 		this.m.Icon = "weapons/ranged/orc_javelins_70x70.png";
@@ -52,14 +52,14 @@ this.orc_javelin <- this.inherit("scripts/items/weapons/weapon", {
 
 		if (this.m.Ammo > 0)
 		{
-			this.m.Name = "一捆粗糙的标枪";
+			this.m.Name = "一捆粗制标枪";
 			this.m.IconLarge = "weapons/ranged/orc_javelins.png";
 			this.m.Icon = "weapons/ranged/orc_javelins_70x70.png";
 			this.m.ShowArmamentIcon = true;
 		}
 		else
 		{
-			this.m.Name = "一捆粗糙的标枪（空）";
+			this.m.Name = "一捆粗制标枪（空）";
 			this.m.IconLarge = "weapons/ranged/orc_javelins_bag_140x70.png";
 			this.m.Icon = "weapons/ranged/orc_javelins_bag_70x70.png";
 			this.m.ShowArmamentIcon = false;
