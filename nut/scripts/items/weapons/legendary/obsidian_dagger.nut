@@ -5,7 +5,7 @@ this.obsidian_dagger <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.obsidian_dagger";
 		this.m.Name = "黑曜石匕首";
-		this.m.Description = "一个隐居女巫用你的血炼制的石刀。镜子里的倒影似乎会自己移动，但这显然只是眼睛的把戏。然而非常奇怪的是，如果血滴落在黑曜石上，它似乎永远不会干涸。";
+		this.m.Description = "一位隐居女巫用你的血回火了这把匕首，又将它赠与了你。匕首镜面般光洁的表面上映出了一个个会自行活动的倒影，不用说，这肯定又是什么利用了视错觉的障眼法罢了。然而出乎你意料的是，沾染在黑曜石上的血液似乎都永远不会干涸，这可真是奇怪。";
 		this.m.Categories = "匕首，单手持";
 		this.m.IconLarge = "weapons/melee/obsidian_dagger_01.png";
 		this.m.Icon = "weapons/melee/obsidian_dagger_70x70.png";

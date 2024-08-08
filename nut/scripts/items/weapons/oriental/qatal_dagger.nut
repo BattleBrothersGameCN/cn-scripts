@@ -5,7 +5,7 @@ this.qatal_dagger <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.qatal_dagger";
 		this.m.Name = "刺杀匕首";
-		this.m.Description = "一把弯刃，在南方沙漠刺客手中臭名昭著。对已遭削弱的目标尤为致命。";
+		this.m.Description = "一把常见于南方沙漠刺客手中，并因此恶名远播的弯匕首。对已遭削弱的目标尤为致命。";
 		this.m.Categories = "匕首，单手持";
 		this.m.IconLarge = "weapons/melee/qatal_dagger_01.png";
 		this.m.Icon = "weapons/melee/qatal_dagger_01_70x70.png";

@@ -9,7 +9,7 @@ this.named_crypt_cleaver <- this.inherit("scripts/items/weapons/named/named_weap
 		this.m.NameList = this.Const.Strings.CleaverNames;
 		this.m.PrefixList = this.Const.Strings.OldWeaponPrefix;
 		this.m.UseRandomName = false;
-		this.m.Description = "一把巨大的砍刀，切开盔甲和切肉差不多。这一把尽管年代久远，依旧状态良好。";
+		this.m.Description = "一把削铁如泥的巨大砍刀。尽管年代久远，依旧状态良好。";
 		this.m.Categories = "砍刀，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

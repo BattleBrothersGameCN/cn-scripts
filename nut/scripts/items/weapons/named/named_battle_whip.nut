@@ -7,7 +7,7 @@ this.named_battle_whip <- this.inherit("scripts/items/weapons/named/named_weapon
 		this.updateVariant();
 		this.m.ID = "weapon.named_battle_whip";
 		this.m.NameList = this.Const.Strings.WhipNames;
-		this.m.Description = "鞭子是很奇特的武器，而这一条是由一位真正的大师制作的。 它比你见过的任何一个更耐用、更平衡。";
+		this.m.Description = "鞭子并不是什么常见武器，而这条却是真正的大师之作。它比你见过的任何一条鞭子都要耐用和平衡。";
 		this.m.Categories = "砍刀，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

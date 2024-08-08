@@ -7,7 +7,7 @@ this.named_axe <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_axe";
 		this.m.NameList = this.Const.Strings.AxeNames;
-		this.m.Description = "一把精心制作且造型独特的为对抗重装敌人而设计的斧子。";
+		this.m.Description = "一把精心制作，款式独特，专为对抗重装敌人设计的斧子。";
 		this.m.Categories = "斧，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

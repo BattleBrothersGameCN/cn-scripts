@@ -10,7 +10,7 @@ this.named_skullhammer <- this.inherit("scripts/items/weapons/named/named_weapon
 		this.m.PrefixList = this.Const.Strings.BarbarianPrefix;
 		this.m.SuffixList = this.Const.Strings.BarbarianSuffix;
 		this.m.UseRandomName = false;
-		this.m.Description = "这把粗糙而沉重的锤子上装饰着额外的动物头骨，仿佛锤子本身还不够令人印象深刻一样。 就如公羊的头一般，它会击碎它的目标。";
+		this.m.Description = "似乎还嫌不够震撼，这把粗野重锤上又额外装饰了动物头骨。就如同一往无前的公羊一般，它会撞碎它的目标。";
 		this.m.Categories = "锤，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

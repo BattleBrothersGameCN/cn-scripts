@@ -7,7 +7,7 @@ this.named_two_handed_mace <- this.inherit("scripts/items/weapons/named/named_we
 		this.updateVariant();
 		this.m.ID = "weapon.named_two_handed_mace";
 		this.m.NameList = this.Const.Strings.TwoHandedMaceNames;
-		this.m.Description = "一把巨大的双手大棒，诞生于一个真正的大师级铁匠之手。尽管它有巨大的头部，但对于一个有经验的人来说，它的平衡性很好且相当容易操作。";
+		this.m.Description = "一把出自名副其实大师之手的巨大双手大棒。尽管其头部巨大，但对有经验的人来说，它的平衡极佳且相当趁手。";
 		this.m.Categories = "骨朵, 双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

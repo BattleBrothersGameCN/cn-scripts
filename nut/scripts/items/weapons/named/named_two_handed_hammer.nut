@@ -7,7 +7,7 @@ this.named_two_handed_hammer <- this.inherit("scripts/items/weapons/named/named_
 		this.updateVariant();
 		this.m.ID = "weapon.named_two_handed_hammer";
 		this.m.NameList = this.Const.Strings.HammerNames;
-		this.m.Description = "一把沉重但出奇平衡的巨锤。虽然不够优雅，但一点也不缺乏原始的破坏力，因此它被用来粉碎重装甲敌人的防线，通常靠的是把人锤到一边去或者锤倒在地。";
+		this.m.Description = "一把沉重却出奇平衡的巨锤。虽然不够优雅，却一点不乏力量，能把重甲敌人击飞锤倒，把敌人防线砸得粉碎。";
 		this.m.Categories = "锤，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

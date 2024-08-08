@@ -6,7 +6,7 @@ this.anatomist_background <- this.inherit("scripts/skills/backgrounds/character_
 		this.m.ID = "background.anatomist";
 		this.m.Name = "解剖学家";
 		this.m.Icon = "ui/backgrounds/background_70.png";
-		this.m.BackgroundDescription = "解剖学家既是科学家又是外科医生，他们不习惯于战斗，但他们的手很稳。";
+		this.m.BackgroundDescription = "介于科学家和外科医生之间，解剖学家不习惯于战斗，却有着一双沉稳的双手。";
 		this.m.GoodEnding = "所有你在%companyname%认识的人中，解剖学家%name%或许是最难忘的一个。源源不断的来信更是让你深信不疑。你粗读了他最新的单向通讯：“队长！我已经成功地……”略过，略过，“……最伟大的发明！最……”略过，略过，“我将会出名！我的大脑会被研究，它的重量……”没有什么新鲜的，不过你很高兴他仍然健康，尽管身体比精神健康得多。";
 		this.m.BadEnding = "逃离%companyname%后，解剖学家%name%在其他地方继续他的研究。他因粗鲁的方式受到同行们的谴责，并发觉自己在知识上的平庸。过了几年，在为甲虫研究做出一些微小贡献之后，他立即跳下了海边的悬崖，把自己的大脑捐献给了岩石，身体则归于海洋。";
 		this.m.HiringCost = 130;

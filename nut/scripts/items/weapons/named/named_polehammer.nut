@@ -7,7 +7,7 @@ this.named_polehammer <- this.inherit("scripts/items/weapons/named/named_weapon"
 		this.updateVariant();
 		this.m.ID = "weapon.named_polehammer";
 		this.m.NameList = this.Const.Strings.PolehammerNames;
-		this.m.Description = "像长枪这样的简陋武器，只要有激情、技巧和注重细节，也能打造出如此出色的杰作。";
+		this.m.Description = "即使是长锤这样的简单武器，只要有激情、技巧和对细节的专注，也能打造出如此出色的杰作。";
 		this.m.Categories = "锤，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

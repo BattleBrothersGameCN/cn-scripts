@@ -19,7 +19,7 @@ this.named_throwing_axe <- this.inherit("scripts/items/weapons/named/named_weapo
 		this.updateVariant();
 		this.m.ID = "weapon.named_throwing_axe";
 		this.m.NameList = this.Const.Strings.ThrowingAxeNames;
-		this.m.Description = "需要用过肩姿势投掷的小斧。这些斧头特别平衡且足够坚硬，足以对远距离的盔甲和盾牌造成严重伤害。";
+		this.m.Description = "需要用过肩姿势投掷的小斧。这些斧头足够平衡坚利，足以从远距离对盔甲和盾牌造成严重伤害。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.RangedWeapon | this.Const.Items.ItemType.Ammo | this.Const.Items.ItemType.Defensive;

@@ -32,7 +32,7 @@ this.named_handgonne <- this.inherit("scripts/items/weapons/named/named_weapon",
 		this.m.NameList = this.Const.Strings.HandgonneNames;
 		this.m.PrefixList = this.Const.Strings.SouthernPrefix;
 		this.m.SuffixList = this.Const.Strings.SouthernSuffix;
-		this.m.Description = "有长木柄的熟铁铸桶。 它发射锥形弹片，可以一次击中多个目标。 不能在近战中使用。";
+		this.m.Description = "一条装有长木柄的精铸铁管。发射出的弹片会飞向一片锥形区域，一次能命中多个目标。无法在陷入近战时使用。";
 		this.m.Categories = "火器, 双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

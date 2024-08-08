@@ -7,7 +7,7 @@ this.named_cleaver <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_cleaver";
 		this.m.NameList = this.Const.Strings.CleaverNames;
-		this.m.Description = "一名大师级铁匠成功地制造出了这种用于战争的砍刀，它握起来就像普通的剑一样趁手，但却没有失去它毁灭性的力量。";
+		this.m.Description = "一名大师级铁匠设法成功制造出了这把用于战争的砍刀，它握起来就像普通的剑一样趁手，却没有失去它毁灭性的力量。";
 		this.m.Categories = "砍刀，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

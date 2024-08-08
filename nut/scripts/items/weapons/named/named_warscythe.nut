@@ -9,7 +9,7 @@ this.named_warscythe <- this.inherit("scripts/items/weapons/named/named_weapon",
 		this.m.NameList = this.Const.Strings.WarscytheNames;
 		this.m.PrefixList = this.Const.Strings.OldWeaponPrefix;
 		this.m.UseRandomName = false;
-		this.m.Description = "一个附有锋利弯刃的长柄，用于在一定距离上进行强力的横扫劈击。这件杰作尤为精良。";
+		this.m.Description = "一条装有锋利弯刃的长杆，用于从远处横扫敌人的纵深。这件杰作尤为精良。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

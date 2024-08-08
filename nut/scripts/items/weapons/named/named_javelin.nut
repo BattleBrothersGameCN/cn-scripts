@@ -19,7 +19,7 @@ this.named_javelin <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_javelin";
 		this.m.NameList = this.Const.Strings.JavelinNames;
-		this.m.Description = "一组轻投矛，能够飞的笔直并且巧妙地保持平衡。射程有限，且十分消耗体力，但能造成毁灭性的伤害。";
+		this.m.Description = "一组轻投矛，重心经过了巧妙的调整，飞得堪称笔直。射程有限，耗费体力，却能造成毁灭性的伤害。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.RangedWeapon | this.Const.Items.ItemType.Ammo | this.Const.Items.ItemType.Defensive;

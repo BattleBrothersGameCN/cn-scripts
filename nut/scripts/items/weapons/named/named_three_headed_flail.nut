@@ -9,7 +9,7 @@ this.named_three_headed_flail <- this.inherit("scripts/items/weapons/named/named
 		this.updateVariant();
 		this.m.ID = "weapon.named_three_headed_flail";
 		this.m.NameList = this.Const.Strings.ThreeHeadedFlailNames;
-		this.m.Description = "一件由珍贵而坚固的材料制成的稀有武器。尽管看上去像是仪仗武器，实际上它是一种可怕的毁灭工具。";
+		this.m.Description = "一件由珍贵而坚固材料制成的极其稀有的武器。抛却其仪仗武器一样的外表，它实际上是一件可怕的毁灭工具。";
 		this.m.Categories = "链枷, 单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

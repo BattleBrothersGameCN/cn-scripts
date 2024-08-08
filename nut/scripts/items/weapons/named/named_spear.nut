@@ -7,7 +7,7 @@ this.named_spear <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_spear";
 		this.m.NameList = this.Const.Strings.SpearNames;
-		this.m.Description = "这是一支制作精良的矛，重量很轻，但很结实。";
+		this.m.Description = "这是一支制作精良的矛，出奇轻盈，却很结实。";
 		this.m.Categories = "矛，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded | this.Const.Items.ItemType.Defensive;

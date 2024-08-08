@@ -5,7 +5,7 @@ this.saif <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.saif";
 		this.m.Name = "赛义夫弯刀";
-		this.m.Description = "一种弯曲的剑，通常只在南方地区发现。很适合挥砍，但不适合戳刺或穿透装甲。";
+		this.m.Description = "一柄只能在南方见到的弯剑。非常适合挥砍，但刺击和穿甲能力稍逊。";
 		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/southern_short_sword_01.png";
 		this.m.Icon = "weapons/melee/southern_short_sword_01_70x70.png";

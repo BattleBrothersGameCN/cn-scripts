@@ -5,7 +5,7 @@ this.two_handed_scimitar <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.two_handed_scimitar";
 		this.m.Name = "双手弯刀";
-		this.m.Description = "双手挥舞的大弯刀，弯曲的刀锋能够劈开任何敌人。";
+		this.m.Description = "一把需要用双手握持的大弯刀，弯曲的刀锋能够劈开任何敌人。";
 		this.m.Categories = "刀，双手持";
 		this.m.IconLarge = "weapons/melee/two_handed_scimitar_01.png";
 		this.m.Icon = "weapons/melee/two_handed_scimitar_01_70x70.png";

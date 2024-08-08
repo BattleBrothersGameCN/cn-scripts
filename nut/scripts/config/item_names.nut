@@ -183,7 +183,7 @@ gt.Const.Strings.SpearNames <- [
 ];
 gt.Const.Strings.PikeNames <- [
 	"投枪",
-	"极",
+	"长柄",
 	"责杖",
 	"尖桩",
 	"穿刺者",

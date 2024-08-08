@@ -10,7 +10,7 @@ this.named_heavy_rusty_axe <- this.inherit("scripts/items/weapons/named/named_we
 		this.m.PrefixList = this.Const.Strings.BarbarianPrefix;
 		this.m.SuffixList = this.Const.Strings.BarbarianSuffix;
 		this.m.UseRandomName = false;
-		this.m.Description = "这把又重又华丽的斧头属于一个野蛮部落的尊贵成员。它的装饰和较高的工艺水平在北方的勇士中是罕见的。";
+		this.m.Description = "这把重而华丽的斧头曾属于一名野蛮部落的尊贵成员。它的装饰和较高的工艺水平为北方勇士中所罕见。";
 		this.m.Categories = "斧，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

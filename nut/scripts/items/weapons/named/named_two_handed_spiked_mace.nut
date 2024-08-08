@@ -10,7 +10,7 @@ this.named_two_handed_spiked_mace <- this.inherit("scripts/items/weapons/named/n
 		this.m.PrefixList = this.Const.Strings.BarbarianPrefix;
 		this.m.SuffixList = this.Const.Strings.BarbarianSuffix;
 		this.m.UseRandomName = false;
-		this.m.Description = "一种制作得像人类头骨的尖刺重棒。尽管外表粗糙，这是一种平衡良好的致命的武器。";
+		this.m.Description = "一把制作得像人类头骨的尖刺重棒。在其粗野的外表之是一件平衡良好的致命武器。";
 		this.m.Categories = "骨朵, 双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

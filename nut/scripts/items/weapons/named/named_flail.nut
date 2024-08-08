@@ -7,7 +7,7 @@ this.named_flail <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_flail";
 		this.m.NameList = this.Const.Strings.FlailNames;
-		this.m.Description = "一个单独的锤头被锁链连接在握把上。它的攻击有些难以预测，但很适合绕过盾牌的掩护。由于其独特的构造，这件特别的链枷显得尤其可怕。";
+		this.m.Description = "一个分体锤头不直接连接，而是通过锁链固定在了手柄上。其攻击叫人拿捏不准，倒是适合绕过盾牌打击敌人。由于其独特的构造，这件特别的链枷显得尤其可怕。";
 		this.m.Categories = "链枷, 单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

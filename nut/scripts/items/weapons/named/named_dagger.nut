@@ -7,7 +7,7 @@ this.named_dagger <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_dagger";
 		this.m.NameList = this.Const.Strings.DaggerNames;
-		this.m.Description = "一把短而坚硬的匕首，它锋利的匕刃可以用来刺穿盔甲上的弱点。";
+		this.m.Description = "一把经过硬化的短匕首，它精心打造的锋利尖刃可以刺穿盔甲上最微小的弱点。";
 		this.m.Categories = "匕首，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;
