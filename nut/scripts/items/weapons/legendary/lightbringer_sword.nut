@@ -5,7 +5,7 @@ this.lightbringer_sword <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.lightbringer_sword";
 		this.m.Name = "旧神之叱";
-		this.m.Description = "这把泛着紫黄微光的剑就如黄昏的晚霞。轻轻一碰，冰凉之中还带着灼热的触感。无论它是魔法淬炼还是精心打造的，随意间的挥舞都能感觉到其蕴含的无尽力量与强大电流。";
+		this.m.Description = "每当黄昏时分，这把剑都会吸引来黄紫色的光芒，直到它将来自黄昏的精华凝聚，自身的光芒到达巅峰为止。当你把它握在手中时，那种冰冷与灼热交织的触感让人难以分辨。且不管它是魔法淬炼的天地精华还是匠心独运的惊世巨作，这把武器总是在嗡鸣振动，抗拒着封印在其中的无穷能量，只消稍稍一挥，便能激发出剑身上的真正力量，释放出强大而纯粹的电流。";
 		this.m.Categories = "剑，单手持";
 		this.m.IconLarge = "weapons/melee/sword_legendary_01.png";
 		this.m.Icon = "weapons/melee/sword_legendary_01_70x70.png";

@@ -7,7 +7,7 @@ this.winged_mace <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.winged_mace";
 		this.m.Name = "页锤";
-		this.m.Description = "一把附有凸缘的短柄全金属骨朵。";
+		this.m.Description = "一把附有凸缘的短柄全金属战棒。";
 		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/mace_01.png";
 		this.m.Icon = "weapons/melee/mace_01_70x70.png";

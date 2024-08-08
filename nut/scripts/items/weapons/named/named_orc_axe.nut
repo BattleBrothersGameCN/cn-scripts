@@ -8,7 +8,7 @@ this.named_orc_axe <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.m.ID = "weapon.named_orc_axe";
 		this.m.NameList = this.Const.Strings.AxeNames;
 		this.m.UseRandomName = false;
-		this.m.Description = "一块沉重的金属上面有一个锋利的金属头。不是为人的手制作的。";
+		this.m.Description = "一大块带锋的沉重金属。并非为人手所作。";
 		this.m.Categories = "短斧，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

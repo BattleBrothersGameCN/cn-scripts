@@ -8,7 +8,7 @@ this.named_goblin_heavy_bow <- this.inherit("scripts/items/weapons/named/named_w
 		this.m.ID = "weapon.named_goblin_heavy_bow";
 		this.m.NameList = this.Const.Strings.BowNames;
 		this.m.UseRandomName = false;
-		this.m.Description = "地精知道如何制作高效的轻型弓。这一张由一些不知名的浅色木材制成，体积虽小却依旧有着惊人的拉力。";
+		this.m.Description = "地精是制作高效轻弓的行家。这张弓由一些不知名的浅色木材制成，体积虽小却有着惊人的拉力。";
 		this.m.Categories = "弓，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

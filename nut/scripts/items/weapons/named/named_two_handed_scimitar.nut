@@ -9,8 +9,8 @@ this.named_two_handed_scimitar <- this.inherit("scripts/items/weapons/named/name
 		this.m.NameList = this.Const.Strings.CleaverNames;
 		this.m.PrefixList = this.Const.Strings.SouthernPrefix;
 		this.m.SuffixList = this.Const.Strings.SouthernSuffix;
-		this.m.Description = "一把双手持用的特大弯刀。弯曲的刀锋可以穿透任何敌人，而且就其尺寸而言刀刃的平衡性好得令人惊讶。";
-		this.m.Categories = "刀，双手持";
+		this.m.Description = "一把需要用双手握持的巨大弯刀，弯曲的刀锋能够劈开任何敌人。就其尺寸而言，刀刃的平衡性好得令人惊讶。";
+		this.m.Categories = "砍刀，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.TwoHanded;

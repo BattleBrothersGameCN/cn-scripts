@@ -7,7 +7,7 @@ this.named_greataxe <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.updateVariant();
 		this.m.ID = "weapon.named_greataxe";
 		this.m.NameList = this.Const.Strings.AxeNames;
-		this.m.Description = "一把沉重而长的双手战斧，每一次挥动都能造成沉重的打击，而且可以轻易地将人一分为二";
+		this.m.Description = "一把长长的战斗用双手斧，每次挥动都能造成沉重打击，轻易地将人一分为二。";
 		this.m.Categories = "斧，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

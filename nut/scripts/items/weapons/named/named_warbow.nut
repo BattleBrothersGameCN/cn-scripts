@@ -7,7 +7,7 @@ this.named_warbow <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_warbow";
 		this.m.NameList = this.Const.Strings.BowNames;
-		this.m.Description = "这张战弓由非常坚固而又柔韧的木头制成，具有强大的拉力，是一件稀有的高超工艺的结晶。";
+		this.m.Description = "这张战弓由既坚固又柔韧的木料制成，具有强大的拉力，是一件稀有的高超工艺代表作。";
 		this.m.Categories = "弓，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

@@ -7,7 +7,7 @@ this.named_pike <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_pike";
 		this.m.NameList = this.Const.Strings.PikeNames;
-		this.m.Description = "一杆可以在一定距离外戳刺并且与敌人保持距离的长枪。这杆特别的长枪由柔韧的木头巧妙制成，可以弯曲但从不折断，而它的枪尖则由一种附近地区极为罕见的合金制成。";
+		this.m.Description = "一杆长枪，可以远远地戳击敌人，使之无法近身。这件特别的长枪枪杆用一种弯而不折的柔韧木料制成，枪尖则铸造自一种本地区极为罕见的合金。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

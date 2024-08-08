@@ -9,7 +9,7 @@ this.named_mace <- this.inherit("scripts/items/weapons/named/named_weapon", {
 		this.updateVariant();
 		this.m.ID = "weapon.named_mace";
 		this.m.NameList = this.Const.Strings.MaceNames;
-		this.m.Description = "一种全金属的棒槌，上面附有锋刃。锻造这种武器的铁匠很清楚他在做什么。";
+		this.m.Description = "一把附有凸缘的短柄全金属战棒。锻造这种武器的铁匠很清楚他在做什么。";
 		this.m.Categories = "骨朵, 单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

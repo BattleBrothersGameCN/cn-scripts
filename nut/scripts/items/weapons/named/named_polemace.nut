@@ -9,7 +9,7 @@ this.named_polemace <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.m.NameList = this.Const.Strings.MaceNames;
 		this.m.PrefixList = this.Const.Strings.SouthernPrefix;
 		this.m.SuffixList = this.Const.Strings.SouthernSuffix;
-		this.m.Description = "像长棒这样的简陋武器，只要有激情、技巧和注重细节，也能打造出如此出色的杰作。";
+		this.m.Description = "即使是长棒这样的简单武器，只要有激情、技巧和对细节的专注，也能打造出如此出色的杰作。";
 		this.m.Categories = "骨朵, 双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

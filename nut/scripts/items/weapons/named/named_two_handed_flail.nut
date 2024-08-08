@@ -7,7 +7,7 @@ this.named_two_handed_flail <- this.inherit("scripts/items/weapons/named/named_w
 		this.updateVariant();
 		this.m.ID = "weapon.named_two_handed_flail";
 		this.m.NameList = this.Const.Strings.TwoHandedFlailNames;
-		this.m.Description = "这件令人印象深刻的双手链枷与它所起源的农具几乎没有什么共同之处。它看上去由一位经验丰富的战士设计，并由一位技艺高超的工匠所打造。";
+		this.m.Description = "这件震撼人心的双手链枷与它所起源的农具几乎没有共同之处。看来它是由一线战士设计，顶级匠人打造。";
 		this.m.Categories = "链枷, 双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

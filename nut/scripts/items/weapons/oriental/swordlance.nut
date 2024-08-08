@@ -5,7 +5,7 @@ this.swordlance <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.swordlance";
 		this.m.Name = "长柄刀";
-		this.m.Description = "一种附有锋利弯曲的刀刃的长杆，用于在一定距离内进行强力的横扫劈击。";
+		this.m.Description = "一条装有锋利弯刃的长杆，用于从远处横扫敌人的纵深。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.IconLarge = "weapons/melee/swordlance_01.png";
 		this.m.Icon = "weapons/melee/swordlance_01_70x70.png";

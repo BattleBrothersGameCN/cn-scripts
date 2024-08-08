@@ -7,7 +7,7 @@ this.named_billhook <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.updateVariant();
 		this.m.ID = "weapon.named_billhook";
 		this.m.NameList = this.Const.Strings.BillNames;
-		this.m.Description = "一种类似长枪的武器，带有用于在一定距离上劈击的刀片，也装有用于拉近目标的钩子。锻造这件武器的铁匠很清楚他在做什么。";
+		this.m.Description = "一把类似长枪的武器，既有用于远距离挥击的刃，又有用于拉近目标的钩。锻造这件武器的铁匠很清楚他在做什么。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

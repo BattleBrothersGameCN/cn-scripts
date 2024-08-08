@@ -9,7 +9,7 @@ this.named_goblin_spear <- this.inherit("scripts/items/weapons/named/named_weapo
 		this.m.NameList = this.Const.Strings.SpearNames;
 		this.m.PrefixList = this.Const.Strings.GoblinWeaponPrefix;
 		this.m.UseRandomName = false;
-		this.m.Description = "精心制作的地精长矛。在任何有经验的战士手中都很准确，迅速，并且致命。";
+		this.m.Description = "一把精心制作的地精长矛。但凡操作它的战士有一点经验，这都会是一件精准、迅速而致命的武器。";
 		this.m.Categories = "矛，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded | this.Const.Items.ItemType.Defensive;

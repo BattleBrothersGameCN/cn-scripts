@@ -9,7 +9,7 @@ this.named_bladed_pike <- this.inherit("scripts/items/weapons/named/named_weapon
 		this.m.NameList = this.Const.Strings.PikeNames;
 		this.m.PrefixList = this.Const.Strings.OldWeaponPrefix;
 		this.m.UseRandomName = false;
-		this.m.Description = "这杆有着波状锋刃的长枪源自古代帝国的军团。很少有武器能像这件一样保存良好。";
+		this.m.Description = "这杆有着波状锋刃的长枪源自古代帝国的军团。很少有武器能像这件一样完好地保存下来。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

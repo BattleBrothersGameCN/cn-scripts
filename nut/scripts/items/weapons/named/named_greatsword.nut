@@ -9,7 +9,7 @@ this.named_greatsword <- this.inherit("scripts/items/weapons/named/named_weapon"
 		this.updateVariant();
 		this.m.ID = "weapon.named_greatsword";
 		this.m.NameList = this.Const.Strings.GreatswordNames;
-		this.m.Description = "这把巨剑是一个真正的杰作，它的锋刃既灵活又非常耐用。";
+		this.m.Description = "这把巨剑是一件真正的杰作，它的锋刃相当耐用又不失灵活。";
 		this.m.Categories = "剑，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

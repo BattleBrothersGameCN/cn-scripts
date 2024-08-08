@@ -7,7 +7,7 @@ this.named_warbrand <- this.inherit("scripts/items/weapons/named/named_weapon", 
 		this.updateVariant();
 		this.m.ID = "weapon.named_warbrand";
 		this.m.NameList = this.Const.Strings.WarbrandNames;
-		this.m.Description = "一把精心制作的双手剑的变体型号，有着长而薄的锋刃，单侧开锋且没有护手。既可用于快速挥砍，也可用于横扫打击。";
+		this.m.Description = "一把精心制作，刃部长薄，单面开刃，没有护手的少见变种双手剑。既可用于快速挥斩，也可用于横扫打击。";
 		this.m.Categories = "剑，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

@@ -9,7 +9,7 @@ this.named_qatal_dagger <- this.inherit("scripts/items/weapons/named/named_weapo
 		this.m.NameList = this.Const.Strings.DaggerNames;
 		this.m.PrefixList = this.Const.Strings.SouthernPrefix;
 		this.m.SuffixList = this.Const.Strings.SouthernSuffix;
-		this.m.Description = "一把精致打造的弯刃，在南方沙漠刺客手中臭名昭著。对已遭削弱的目标尤为致命。";
+		this.m.Description = "一把常见于南方沙漠刺客手中，并因此恶名远播的精制弯匕首。对已遭削弱的目标尤为致命。";
 		this.m.Categories = "匕首，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

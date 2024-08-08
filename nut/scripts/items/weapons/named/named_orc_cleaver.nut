@@ -8,7 +8,7 @@ this.named_orc_cleaver <- this.inherit("scripts/items/weapons/named/named_weapon
 		this.m.ID = "weapon.named_orc_cleaver";
 		this.m.NameList = this.Const.Strings.CleaverNames;
 		this.m.UseRandomName = false;
-		this.m.Description = "一块锋利而粗糙的金属碎片，有一个像剑一样的握把，但要重很多。不是为人的手制作的。";
+		this.m.Description = "一块只是缠出了握把的锋利金属片，类似于剑，但要重了许多。并非为人手所作。";
 		this.m.Categories = "砍刀，单手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Named | this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;
