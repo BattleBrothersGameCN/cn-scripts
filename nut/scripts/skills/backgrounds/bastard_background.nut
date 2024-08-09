@@ -6,9 +6,9 @@ this.bastard_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.ID = "background.bastard";
 		this.m.Name = "私生子";
 		this.m.Icon = "ui/backgrounds/background_37.png";
-		this.m.BackgroundDescription = "私生子们经常从近身格斗的训练中获益。";
+		this.m.BackgroundDescription = "私生子往往从格斗训练中受益良多";
 		this.m.GoodEnding = "{%name%，作为一个不为他人着想的贵族的私生子。离开了%companyname%以试图开创自己的家族血统。据你最后一次听到的消息，他已经成功地获得了一块好土地，并在上面建起了一座简陋的石头城堡。虽然他取得了成功，但是他仍然对他的家庭心怀怨恨。 | 作为贵族的私生子，%name%总有一种觉得自己并不属于这个世界的困惑。但%companyname%赋予了他兄弟组建的家庭。据你所知，他至今仍然在为这个战团战斗着。}";
-		this.m.BadEnding = "像%name%这样的私生子通常在这个世界上走不远。他们被所生存的上流社会所憎恨，也被下层社会所憎恨 —— 下层人民不理解为何私生子比贵族更为常见的政治原则。在你离开战团后不久，你听说%name%去世了。很明显，一个年轻而残酷的领主接管了他的贵族家庭，并将这个私生子视为他王位的威胁。尽管这个私生子不再想跟那种生活有任何牵连，但事情还是找上了他。他在一个旅店的床上被刺杀，在睡梦中被割开了喉咙。";
+		this.m.BadEnding = "像%name%这样的私生子通常在这个世界上走不远。他们被所生存的上流社会所憎恨，也被下层社会所憎恨 —— 因为他们不懂政治，对平民来说太过平常。在你离开战团后不久，你听说%name%去世了。据说，一位年轻而残酷的领主接管了他的家族，并将这名私生子视为他王位的威胁。尽管这名私生子不再想跟那种生活有任何牵连，但事情还是找上了他。他在一张旅店的床上被刺杀，在睡梦中被割开了喉咙。";
 		this.m.HiringCost = 110;
 		this.m.DailyCost = 14;
 		this.m.Excluded = [

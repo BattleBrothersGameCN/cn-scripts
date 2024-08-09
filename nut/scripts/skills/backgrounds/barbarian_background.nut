@@ -9,7 +9,7 @@ this.barbarian_background <- this.inherit("scripts/skills/backgrounds/character_
 		this.m.Name = "野蛮人";
 		this.m.Icon = "ui/backgrounds/background_58.png";
 		this.m.BackgroundDescription = "";
-		this.m.GoodEnding = "野蛮人%name%带着他在战团挣到的钱，前往北方冒险。他用他的钱召集了一群战士，征服了许多部落，据你上次听到的消息，他已成了“北方之王”。";
+		this.m.GoodEnding = "野蛮人%name%带着他在战团挣到的钱，前往北方冒险。他用他的钱召集了一群战士，征服了许多部落，据你上次听到的消息，他被拥立为了“北方之王”。";
 		this.m.BadEnding = "鉴于事态的变化，%name%离开了。最后，你听说他在向北旅行。他身无分文，只有一把斧头，长得不像当地人，更不会说他们的语言，你认为这个野蛮人走不远。根据你见过他同类的遭遇来看，他要么被杀身死，要么沦为奴隶。";
 		this.m.HiringCost = 200;
 		this.m.DailyCost = 20;

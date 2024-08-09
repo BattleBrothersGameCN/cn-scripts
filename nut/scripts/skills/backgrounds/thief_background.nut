@@ -35,7 +35,7 @@ this.thief_background <- this.inherit("scripts/skills/backgrounds/character_back
 			"trait.bloodthirsty"
 		];
 		this.m.Titles = [
-			"影子(the Shadow)",
+			"影子",
 			"掏包儿(the Cutpurse)",
 			"蛇(the Snake)",
 			"乌鸦(the Raven)",
