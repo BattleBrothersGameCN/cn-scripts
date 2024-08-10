@@ -35,7 +35,7 @@ this.killer_on_the_run_background <- this.inherit("scripts/skills/backgrounds/ch
 			"割喉(Throatslash)",
 			"在逃者(on the Run)",
 			"通缉犯(the Wanted)",
-			"凶手(the Murderer)"
+			"杀手"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;

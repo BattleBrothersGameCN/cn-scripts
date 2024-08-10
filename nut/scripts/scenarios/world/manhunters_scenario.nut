@@ -117,7 +117,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[5].setStartValuesEx([
 			"slave_southern_background"
 		]);
-		bros[5].setTitle("乞丐(the Beggar)");
+		bros[5].setTitle("要饭的");
 		bros[5].getBackground().m.RawDescription = "{在街上发现的，%name% 根本没机会。 作为一个乞丐，在身体上很容易给他戴上镣铐，在社会上没有人会在意。 镀金者不关心那些不工作的人，他们每天浪费金钱，不付出汗水，只会欠下债务。 现在必须付出代价，以免他永远尝到沙漠之火的滋味。 他现在看起来比你找到他的时候更健康，尽管他似乎从来没有为此感谢过你。}";
 		bros[5].setPlaceInFormation(5);
 		bros[5].getSprite("miniboss").setBrush("bust_miniboss_indebted");

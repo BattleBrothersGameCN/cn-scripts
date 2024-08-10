@@ -4,11 +4,11 @@ this.vagabond_background <- this.inherit("scripts/skills/backgrounds/character_b
 	{
 		this.character_background.create();
 		this.m.ID = "background.vagabond";
-		this.m.Name = "流浪汉";
+		this.m.Name = "流民";
 		this.m.Icon = "ui/backgrounds/background_32.png";
-		this.m.BackgroundDescription = "流浪汉习惯于长途旅行，但没有任何擅长的特定领域。";
-		this.m.GoodEnding = "有些人注定要漂泊。虽然他与%companyname%在一起的时光很愉快，但流浪汉%name%最终还是离开了战团，重新踏上了漫漫征程。你不知道他去了哪里，你只知道他对旅行充满了兴趣。";
-		this.m.BadEnding = "随着战团分崩离析，像%name%这样的流浪汉选择离开它并回到路上并不奇怪。不幸的是，由于世界处在如此糟糕的状态，他很快就遇到了麻烦。他的尸体在一个小村外被发现。被挂在树上的他胸前钉着一块牌子，上面写着:“不接受流浪汉”。";
+		this.m.BackgroundDescription = "流民惯于长途旅行，没有什么具体特长";
+		this.m.GoodEnding = "有些人注定要漂泊。虽然与%companyname%在一起的时光很愉快，但流民%name%最终还是离开了战团，重新踏上了漫漫征程。你不知道他去了哪里，只知道他对旅行充满了兴趣。";
+		this.m.BadEnding = "随着战团分崩离析，流民%name%会选择离开战团重新上路并不奇怪。不幸的是，由于世道艰辛，他很快就遇到了麻烦。他的尸体在一个小村外被发现。被挂在树上的他胸前钉着一块牌子，上面写着:“流浪汉勿入”。";
 		this.m.HiringCost = 70;
 		this.m.DailyCost = 6;
 		this.m.Excluded = [
@@ -22,12 +22,12 @@ this.vagabond_background <- this.inherit("scripts/skills/backgrounds/character_b
 			"trait.asthmatic"
 		];
 		this.m.Titles = [
-			"流浪汉(the Vagabond)",
+			"流民",
 			"流浪者(the Wanderer)",
 			"三只脚(Threefeet)",
 			"背包客(Bindlestiff)",
 			"褴褛汉(Tatterdemalion)",
-			"无家可归者(the Homeless)",
+			"流浪汉",
 			"不得安歇者(the Restless)",
 			"旅行者(the Traveller)",
 			"乌鸦(the Raven)"
