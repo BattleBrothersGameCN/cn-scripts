@@ -4,7 +4,7 @@ this.beggar_background <- this.inherit("scripts/skills/backgrounds/character_bac
 	{
 		this.character_background.create();
 		this.m.ID = "background.beggar";
-		this.m.Name = "乞丐(Beggar)";
+		this.m.Name = "乞丐";
 		this.m.Icon = "ui/backgrounds/background_18.png";
 		this.m.BackgroundDescription = "乞丐可说不上有什么决心，流落街头也损害了他们的健康。";
 		this.m.GoodEnding = "厌倦了打打杀杀，曾经的乞丐%name%从%companyname%退休了。据你所知，他在战团里赚了不少钱，可是前几天，你又看到他在乞讨。你问他是不是把钱挥霍光了，他大笑道他买了块地并且过得很好。然后他拿出他的小罐子，讨要一枚克朗。你给了他俩。";
@@ -31,18 +31,18 @@ this.beggar_background <- this.inherit("scripts/skills/backgrounds/character_bac
 		];
 		this.m.Titles = [
 			"肮脏之人(the Dirty)",
-			"穷鬼(the Poor)",
+			"穷光蛋",
 			"衣衫褴褛者(the Ragged)",
-			"病人(the Sick)",
+			"病秧子",
 			"骗子",
-			"懒鬼(the Idle)",
-			"懒汉(the Sloth)",
-			"无用之人(the Useless)",
-			"乞丐(the Beggar)",
+			"无业游民",
+			"懒汉",
+			"白吃饱",
+			"要饭的",
 			"黄鼠狼",
-			"臭鼬(the Skunk)",
-			"懒汉(the Sluggard)",
-			"无家可归者(the Homeless)"
+			"臭鼬",
+			"懒蛋",
+			"流浪汉"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;
