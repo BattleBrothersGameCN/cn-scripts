@@ -42,7 +42,7 @@ this.beggar_background <- this.inherit("scripts/skills/backgrounds/character_bac
 			"黄鼠狼",
 			"臭鼬",
 			"懒蛋",
-			"流浪汉"
+			"流民"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;
