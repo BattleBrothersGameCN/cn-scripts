@@ -7,7 +7,7 @@ this.orc_camp_idol <- this.inherit("scripts/entity/tactical/entity", {
 
 	function getDescription()
 	{
-		return "绿皮立起来的雕像。";
+		return "绿皮立起来的造像。";
 	}
 
 	function onInit()
