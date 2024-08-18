@@ -20,7 +20,7 @@ this.sunken_library_location <- this.inherit("scripts/entity/world/location", {
 
 	function onSpawned()
 	{
-		this.m.Name = "下陷的图书馆";
+		this.m.Name = "陷没的图书馆";
 		this.location.onSpawned();
 	}
 
