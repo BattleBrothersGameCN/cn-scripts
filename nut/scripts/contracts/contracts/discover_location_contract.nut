@@ -558,7 +558,7 @@ this.discover_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{%employer%对你的归来表示欢迎。你把新近绘制的地图递给他，他仔细看了看，用手背拍打着上面的标记。%SPEECH_ON%当然是在那里了！%SPEECH_OFF%他咧嘴笑了笑，付了你应得的报酬。 | 你手里拿着新地图走进了%employer%的房间。他接过地图仔细看了一遍。%SPEECH_ON%好吧，我会想这也太容易了，但协议就是协议。%SPEECH_OFF%他递给你一个小背包，里面装着你应得的报酬。 | 你向%employer%汇报了%location%的位置。他点了点头，拿出纸笔把你地图上的笔记抄了下来。出于好奇，你问他怎么知道你没有说谎。那人坐下靠好，双手合十放在肚子上。%SPEECH_ON%我雇了一位跟随你们战团的追踪者。他比你来得早，你只是确认了我已经知道的事情。希望你不介意我们采取的措施。%SPEECH_OFF%你点了点头，认为这是明智的做法，拿了钱就走了。}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{%employer%对你的归来表示欢迎。你把新近绘制的地图递给他，他仔细看了看，用手背拍打着上面的标记。%SPEECH_ON%果然在那儿！%SPEECH_OFF%他咧嘴笑了笑，付了你应得的报酬。 | 你手里拿着新地图走进了%employer%的房间。他接过地图仔细看了一遍。%SPEECH_ON%好吧，我会想这也太容易了，但协议就是协议。%SPEECH_OFF%他递给你一个小背包，里面装着你应得的报酬。 | 你向%employer%汇报了%location%的位置。他点了点头，拿出纸笔把你地图上的笔记抄了下来。出于好奇，你问他怎么知道你没有说谎。那人坐下靠好，双手合十放在肚子上。%SPEECH_ON%我雇了一位跟随你们战团的追踪者。他比你来得早，你只是确认了我已经知道的事情。希望你不介意我们采取的措施。%SPEECH_OFF%你点了点头，认为这是明智的做法，拿了钱就走了。}",
 			Image = "",
 			Characters = [],
 			List = [],
