@@ -581,7 +581,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "IntroAftermath",
 			Title = "结果",
-			Text = "[img]gfx/ui/events/event_22.png[/img]你还活着。你们赢了。\n\n肾上腺素逐渐褪去，你控制不住自己的身体，倒在了地面上。你咬紧牙关，折断了箭杆。你的胸膛起伏着，呼吸带痛，一切都变得模糊起来。\n\n战团遭受了重创，只剩下了几个人。霍加特那个混蛋名不虚传，像黄鼠狼一样溜走了。%SPEECH_ON%现在怎么办，队长？%SPEECH_OFF%一个声音在后面说道。 是坐在你边上的%bro2%，他沾满血的斧子被平放在他的腿上。你转向他想要回话，但你还没来得及回答，他就继续说下去。%SPEECH_ON%伯恩哈德死了。他们割断了他的喉咙。他是个好人，也是个相当好的领袖，但一个错误就足以要了他的命。现在你管事了，对吧？%SPEECH_OFF%%bro3%加入了你们的对话，仍然重重的喘着。然后是%bro1%。%SPEECH_ON%把葬礼和涂油留到其他时候吧。让我们好好安葬这些人，回%townname%拿我们的报酬。不管怎样，黄鼠狼的手下们确确实实被杀了。另外，队长，你那伤口也得抓紧处理，别等你死了。没人想让%bro3%来管事，对吧？%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_22.png[/img]你还活着。你们赢了。\n\n肾上腺素逐渐褪去，你控制不住自己的身体，倒在了地面上。你咬紧牙关，折断了箭杆。你的胸膛起伏着，呼吸带痛，一切都变得模糊起来。\n\n战团遭受了重创，只剩下了几个人。霍加特那个混蛋名不虚传，像黄鼠狼一样溜走了。%SPEECH_ON%现在怎么办，队长？%SPEECH_OFF%一个声音在后面说道。 是坐在你边上的%bro2%，他沾满血的斧子被平放在他的腿上。你转向他想要回话，但你还没来得及回答，他就继续说下去。%SPEECH_ON%伯恩哈德死了。他们割断了他的喉咙。他是个好人，也是个相当好的领袖，但一个错误就足以要了他的命。现在你管事了，对吧？%SPEECH_OFF%%bro3%加入了你们的对话，仍然重重的喘着。然后是%bro1%。%SPEECH_ON%把葬礼和涂油留到其他时候吧。让我们好好安葬这些人，回%townname%拿我们的报酬。不管怎样，黄鼠狼的手下们确确实实被杀了。另外，队长，你那伤口也得抓紧处理，等你死了就来不及了。没人想让%bro3%来管事，对吧？%SPEECH_OFF%",
 			List = [],
 			Characters = [],
 			Options = [
@@ -685,7 +685,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "MarketplaceTip",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_77.png[/img]当%bigcity%的轮廓出现在地平线上时，%bro3% 找你搭话。%SPEECH_ON%我之前从没去过%bigcity%，但去过很多类似的。这样的城市很适合卖货，这些斤斤计较，傲慢自大的混蛋喜欢让他们的货物流通。商人多了，买不到的东西也就少了。看好便宜货，别被奸商给骗了。%SPEECH_OFF%%bro2%认为有必要对你该做的事提出自己的意见。%SPEECH_ON%如果哪儿有一家好的酒馆，那就是我们最该去的地方。没什么比一品脱酒更能给人带来好运的了。诸神知道，这是我们应得的！%SPEECH_OFF%%bro3%摇了摇头。%SPEECH_ON%每次进城你都这么说！喝醉了也没个够！%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_77.png[/img]当%bigcity%的轮廓出现在地平线上时，%bro3% 找你搭话。%SPEECH_ON%我之前从没去过%bigcity%，但去过很多类似的。这样的城市很适合卖货，这些斤斤计较，傲慢自大的混蛋喜欢让他们的货物流通。商人多了，买不到的东西也就少了。看好便宜货，别被奸商给骗了。%SPEECH_OFF%%bro2%认为有必要对你该做的事提出自己的意见。%SPEECH_ON%如果哪儿有一家好的酒馆，那就是我们最该去的地方。没什么比一品脱酒更能给人带来好运的了。诸神知道，这是我们应得的！%SPEECH_OFF%%bro3%摇了摇头。%SPEECH_ON%哪次进城你不这么说！喝醉了也没个够！%SPEECH_OFF%",
 			List = [],
 			Characters = [],
 			Options = [
@@ -812,7 +812,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (bro.getBackground().getID() == "background.companion")
 					{
-						bro.improveMood(1.0, "为战团报仇");
+						bro.improveMood(1.0, "为战团报了仇");
 					}
 					else
 					{
