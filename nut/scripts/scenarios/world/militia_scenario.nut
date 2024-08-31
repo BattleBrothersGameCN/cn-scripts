@@ -68,7 +68,7 @@ this.militia_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 			"gambler_background"
 		]);
 		bros[3].getBackground().m.RawDescription = "你注意到 %name% 对某些贵族有些躲闪。 他很可能是一个普通的罪犯，因为犯了一些小罪而逍遥法外，但只要他打得好，对你来说就没什么大不了的。";
-		bros[3].improveMood(1.5, "偷了别人的撒克逊大刀");
+		bros[3].improveMood(1.5, "偷了别人的撒克逊短刀");
 		items = bros[3].getItems();
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.equip(this.new("scripts/items/weapons/scramasax"));
@@ -110,7 +110,7 @@ this.militia_scenario <- this.inherit("scripts/scenarios/world/starting_scenario
 			"daytaler_background"
 		]);
 		bros[9].getBackground().m.RawDescription = "日结工、工人、商队队员、水手、民兵，%name%都做过一段时间。希望这次对雇佣兵工作的新尝试能让他坚持下去。";
-		bros[9].worsenMood(1.0, "偷了信赖他的人的撒克逊大刀");
+		bros[9].worsenMood(1.0, "他可靠的撒克逊短刀被偷走了");
 		bros[10].setStartValuesEx([
 			"militia_background"
 		]);
