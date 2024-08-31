@@ -16,7 +16,7 @@ this.witchhut_destroyed_event <- this.inherit("scripts/events/event", {
 		this.m.Texts[2] = "谁是古人？";
 		this.m.Texts[3] = "什么是达库尔？";
 		this.m.Texts[4] = "绿皮是人类吗？";
-		this.m.Texts[5] = "你为什么叫我假国王？";
+		this.m.Texts[5] = "你为什么要叫我伪王？";
 		this.m.Texts[6] = "我梦想的是什么？";
 		this.m.Screens.push({
 			ID = "A",

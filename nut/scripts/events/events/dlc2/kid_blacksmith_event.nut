@@ -111,7 +111,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "干好的。",
+					Text = "干的好。",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(1);

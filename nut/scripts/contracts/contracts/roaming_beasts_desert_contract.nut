@@ -358,7 +358,7 @@ this.roaming_beasts_desert_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Success3",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_162.png[/img]{你在花园里见到了你的雇主。 他拿着一双剪刀看着你。%SPEECH_ON%我想任务完成了？%SPEECH_OFF%点头，你拿出大蛇头并丢到地上。 它低沉的落地并滚到维齐尔的脚边慢慢的滚开。%employer% 坚定的看着你。%SPEECH_ON%没有必要搞戏剧性，逐币者，好好完成任务才会给我留下好印象。 My guards will furnish your purse a weight of %reward% 克朗，我们谈好的。%SPEECH_OFF% | 你拖着大蛇皮走向 %employer%，但是一个穿着羽毛头巾的人阻止了你。 他说话听起来像胡言乱语，偶尔也会漏掉一些词。 看起来他受雇于维齐尔，而且他要拿走大蛇的残骸。 你看向 %employer%，他点头确认这是他的意思。 他同时还注意到了你脸上在担心报酬的表情。 他骄傲的大声说。%SPEECH_ON%不用担心，逐币者，这里只有你带过来的蛇。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_162.png[/img]{你在花园里见到了你的雇主。 他拿着一双剪刀看着你。%SPEECH_ON%我想任务完成了？%SPEECH_OFF%点头，你拿出大蛇头并丢到地上。 它低沉的落地并滚到维齐尔的脚边慢慢的滚开。%employer% 坚定的看着你。%SPEECH_ON%没有必要搞戏剧性，逐币者，好好完成任务才会给我留下好印象。 我的守卫会付给你我们之前谈好的 %reward% 克朗。%SPEECH_OFF% | 你拖着大蛇皮走向 %employer%，但是一个穿着羽毛头巾的人阻止了你。 他说话听起来像胡言乱语，偶尔也会漏掉一些词。 看起来他受雇于维齐尔，而且他要拿走大蛇的残骸。 你看向 %employer%，他点头确认这是他的意思。 他同时还注意到了你脸上在担心报酬的表情。 他骄傲的大声说。%SPEECH_ON%不用担心，逐币者，这里只有你带过来的蛇。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
