@@ -11,7 +11,7 @@ this.kennel_building <- this.inherit("scripts/entity/world/settlements/buildings
 	{
 		this.building.create();
 		this.m.ID = "building.kennel";
-		this.m.Name = "狗舍";
+		this.m.Name = "驯犬屋";
 		this.m.Description = "强壮和快速的战犬在这个狗舍里繁殖和饲养";
 		this.m.UIImage = "ui/settlements/building_10";
 		this.m.UIImageNight = "ui/settlements/building_10_night";

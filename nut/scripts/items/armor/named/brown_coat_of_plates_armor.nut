@@ -4,7 +4,7 @@ this.brown_coat_of_plates_armor <- this.inherit("scripts/items/armor/named/named
 	{
 		this.named_armor.create();
 		this.m.ID = "armor.body.brown_coat_of_plates";
-		this.m.Description = "一件复合了扎实金属板的厚重长身链甲。能在最激烈的战斗重保护其穿戴者。";
+		this.m.Description = "一件复合了扎实金属板的厚重长身链甲。能在最激烈的战斗中保护其穿戴者。";
 		this.m.NameList = [
 			"甲胄",
 			"守护",
