@@ -77,7 +77,7 @@ this.slave_background <- this.inherit("scripts/skills/backgrounds/character_back
 			id = 19,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "非负债者盟友死亡时不会触发士气检查"
+			text = "非负债者队友死亡时不会触发士气检查"
 		});
 		ret.push({
 			id = 20,

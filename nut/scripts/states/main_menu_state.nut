@@ -452,7 +452,7 @@ this.main_menu_state <- this.inherit("scripts/states/state", {
 			{
 				id = 15,
 				name = "保卫山丘",
-				description = "[p=c][img]gfx/ui/events/event_22.png[/img][/p]\n[p=c]在山顶上对抗多数敌人，以求一线生机。非常适合学习高地优势，测试视野和高低差交互细节。困难。[/p]"
+				description = "[p=c][img]gfx/ui/events/event_22.png[/img][/p]\n[p=c]在山顶上对抗多数敌人，以求一线生机。非常适合学习高度优势，测试视野和高低差交互细节。困难。[/p]"
 			},
 			{
 				id = 6,
