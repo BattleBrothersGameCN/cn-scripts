@@ -9,8 +9,8 @@ this.surgeon_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Image = "ui/campfire/surgeon_01";
 		this.m.Cost = 3500;
 		this.m.Effects = [
-			"使每一个没有永久性损伤的人都能在致命的打击中幸存下来",
-			"使每一个损伤的治愈时间都减少一天"
+			"使每个没有永久创伤的人都能在致命打击中幸存下来",
+			"使所有创伤的治愈时间减少一天"
 		];
 		this.m.Requirements = [
 			{

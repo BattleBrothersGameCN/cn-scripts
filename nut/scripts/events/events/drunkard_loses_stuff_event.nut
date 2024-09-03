@@ -120,7 +120,7 @@ this.drunkard_loses_stuff_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Drunkard.getName() + "受到损伤"
+						text = _event.m.Drunkard.getName() + "受到一处创伤"
 					}
 				];
 				_event.m.Drunkard.getSkills().removeByID("trait.drunkard");
@@ -187,7 +187,7 @@ this.drunkard_loses_stuff_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Drunkard.getName() + "受到损伤"
+						text = _event.m.Drunkard.getName() + "受到一处创伤"
 					}
 				];
 				_event.m.Drunkard.worsenMood(2.5, "被你命令鞭打了");

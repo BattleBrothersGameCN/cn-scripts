@@ -5,7 +5,7 @@ this.wiederganger_potion_item <- this.inherit("scripts/items/misc/anatomist/anat
 		this.anatomist_potion_item.create();
 		this.m.ID = "misc.wiederganger_potion";
 		this.m.Name = "厚皮药剂";
-		this.m.Description = "饮用后，这种强大的混合物会改变你的肌肉，对突然的打击立即做出反应，保护身体免受严重伤害！别介意它的气味，那只是它效力的一个标志。";
+		this.m.Description = "饮用后，这种强大的混合物会改变你的肌肉，对突然的打击立即做出反应，保护身体免受严重创伤！别介意它的气味，那只是它效力的一个标志。";
 		this.m.IconLarge = "";
 		this.m.Icon = "consumables/potion_22.png";
 		this.m.Value = 0;

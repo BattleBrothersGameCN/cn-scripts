@@ -806,7 +806,7 @@ gt.Const.Strings.TerrainRegionNames <- [
 		"风袭之地",
 		"阔望原",
 		"碧蓝域",
-		"丰甸草",
+		"丰饶甸",
 		"边境地",
 		"流云郊",
 		"绝景谷",

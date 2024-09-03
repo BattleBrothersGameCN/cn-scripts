@@ -91,7 +91,7 @@ this.addict_steals_potion_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/days_wounded.png",
-						text = _event.m.Addict.getName() + "受到损伤"
+						text = _event.m.Addict.getName() + "受到一处创伤"
 					}
 				];
 				_event.m.Addict.getSkills().removeByID("trait.addict");

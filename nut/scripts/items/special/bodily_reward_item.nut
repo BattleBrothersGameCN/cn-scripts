@@ -5,7 +5,7 @@ this.bodily_reward_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.bodily_reward";
 		this.m.Name = "幽绿小瓶";
-		this.m.Description = "用他人的生命与女巫交易而来，这瓶神秘合剂许诺能和身体共鸣，立即治愈所有能自愈的伤残。";
+		this.m.Description = "用他人的生命与女巫交易而来，这瓶神秘合剂许诺能和身体共鸣，立即治愈所有能自愈的创伤。";
 		this.m.Icon = "consumables/vial_green_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;
