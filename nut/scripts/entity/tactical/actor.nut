@@ -1677,7 +1677,7 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 
 						if (this.isPlayerControlled() && this.isKindOf(this, "player"))
 						{
-							this.worsenMood(this.Const.MoodChange.Injury, "受伤了");
+							this.worsenMood(this.Const.MoodChange.Injury, "身负一处创伤");
 
 							if (("State" in this.World) && this.World.State != null && this.World.Ambitions.hasActiveAmbition() && this.World.Ambitions.getActiveAmbition().getID() == "ambition.oath_of_sacrifice")
 							{

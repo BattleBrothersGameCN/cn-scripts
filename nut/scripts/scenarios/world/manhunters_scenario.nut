@@ -298,7 +298,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 				id = 18,
 				type = "text",
 				icon = "ui/icons/days_wounded.png",
-				text = "如果被击倒会永久性死亡，并且会因永久性损伤而无法存活"
+				text = "如果被击倒就会永久死亡，且不会带着永久性创伤存活"
 			});
 		}
 	}

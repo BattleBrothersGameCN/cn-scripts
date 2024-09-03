@@ -4,7 +4,7 @@ this.preserved_mead_item <- this.inherit("scripts/items/supplies/food_item", {
 	{
 		this.food_item.create();
 		this.m.ID = "supplies.preserved_mead";
-		this.m.Name = "特制蜂蜜酒";
+		this.m.Name = "防腐蜜酒";
 		this.m.Description = "食物。一种闪着银光的灰白色液体。味道很差，但几乎不会变质。";
 		this.m.Icon = "supplies/inventory_provisions_18.png";
 		this.m.Value = 120;

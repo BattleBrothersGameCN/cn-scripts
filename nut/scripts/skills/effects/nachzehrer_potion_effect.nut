@@ -36,7 +36,7 @@ this.nachzehrer_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/days_wounded.png",
-				text = "所有伤残的恢复时长减少一天，最短一天"
+				text = "所有创伤的恢复时长减少一天，最短一天"
 			},
 			{
 				id = 12,

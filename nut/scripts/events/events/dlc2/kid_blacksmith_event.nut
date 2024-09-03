@@ -13,7 +13,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_97.png[/img]{你正在%townname%的商店间闲逛，忽觉有人在扯你的袖子。转过身来，只见一个孩子，脸上抹得黢黑，两只白亮的眼睛直愣愣地看着你。他问你懂不懂剑。你指了指你腰间的剑鞘。他拍着手说道。%SPEECH_ON%太好了！我为那边的一位铁匠工作，但他去取铁锭了。他要我看守这把特别的剑，但它，嗯，它掉下来了。然后就断了。它自己掉下来的，也自己碎的。你能帮我把它修好吗？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_97.png[/img]{你正在%townname%的商店间闲逛，忽觉有人在扯你的袖子。转过身来，只见一个孩子，脸上抹得黢黑，两只白亮的眼睛直愣愣地看着你。他问你懂不懂剑。你指了指你腰间的剑鞘。他拍着手说道。%SPEECH_ON%太好了！我为那边的一位铁匠工作，但他去取铁锭了。他要我看守这把特别的剑，但它，嗯，它掉下来了。然后就断了。它自己掉下来，自己断的。你能帮我把它修好吗？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -167,7 +167,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				this.Characters.push(_event.m.Other.getImagePath());
-				_event.m.Other.worsenMood(1.5, "不小心把小男孩弄残废了");
+				_event.m.Other.worsenMood(1.5, "不小心弄残了个小男孩");
 
 				if (_event.m.Other.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -228,7 +228,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "我还以为你是专研究篮子的呢。",
+					Text = "我还以为你是专门研究编篮子的呢。",
 					function getResult( _event )
 					{
 						this.World.Assets.addMoralReputation(1);
@@ -269,7 +269,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "你是一个孩子的杀人犯，%killer%。",
+					Text = "你杀死了他的童心，%killer%。",
 					function getResult( _event )
 					{
 						return 0;

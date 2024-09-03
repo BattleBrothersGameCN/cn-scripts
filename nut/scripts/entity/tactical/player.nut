@@ -849,7 +849,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 				this.m.Skills.add(skill);
 				this.Tactical.getSurvivorRoster().add(this);
 				this.m.IsDying = false;
-				this.worsenMood(this.Const.MoodChange.PermanentInjury, "身负永久伤残");
+				this.worsenMood(this.Const.MoodChange.PermanentInjury, "身负永久创伤");
 				this.updateAchievement("ScarsForLife", 1, 1);
 
 				if (numPermInjuries + 1 >= 3)
@@ -2197,7 +2197,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 		}
 		else
 		{
-			this.worsenMood(this.Const.MoodChange.Injury, "受伤了");
+			this.worsenMood(this.Const.MoodChange.Injury, "身负一处创伤");
 		}
 
 		this.m.Skills.add(injury);

@@ -361,7 +361,7 @@ this.lindwurm_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 					if (this.isPlayerControlled() && this.isKindOf(this, "player"))
 					{
-						this.worsenMood(this.Const.MoodChange.Injury, "受伤了");
+						this.worsenMood(this.Const.MoodChange.Injury, "身负一处创伤");
 					}
 
 					if (this.isPlayerControlled() || !this.isHiddenToPlayer())

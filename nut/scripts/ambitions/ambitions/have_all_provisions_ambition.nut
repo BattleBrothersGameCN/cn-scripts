@@ -149,7 +149,7 @@ this.have_all_provisions_ambition <- this.inherit("scripts/ambitions/ambition", 
 
 		if (!mead)
 		{
-			ret = ret + "\n- 蜂蜜酒";
+			ret = ret + "\n- 蜜酒";
 		}
 
 		if (!mushrooms)

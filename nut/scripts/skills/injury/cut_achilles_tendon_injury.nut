@@ -5,7 +5,7 @@ this.cut_achilles_tendon_injury <- this.inherit("scripts/skills/injury/injury", 
 		this.injury.create();
 		this.m.ID = "injury.cut_achilles_tendon";
 		this.m.Name = "跟腱割伤";
-		this.m.Description = "一处这样的伤势能使最快的人在战场上只能蹒跚而行。";
+		this.m.Description = "一处这样的创伤能使最快的人在战场上只能蹒跚而行。";
 		this.m.Type = this.m.Type | this.Const.SkillType.TemporaryInjury;
 		this.m.DropIcon = "injury_icon_28";
 		this.m.Icon = "ui/injury/injury_icon_28.png";
