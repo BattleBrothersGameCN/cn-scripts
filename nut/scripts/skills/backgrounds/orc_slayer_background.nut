@@ -69,7 +69,7 @@ this.orc_slayer_background <- this.inherit("scripts/skills/backgrounds/character
 
 	function onBuildDescription()
 	{
-		return "%name%不怎么谈论自己。他只是想杀死兽人和地精，考虑到目前的情况，他是战团的完美人选。如果他言行一致，他在入侵问题解决后就会立刻离开。";
+		return "%name%很少说起他自己，只想着杀死更多的兽人和地精。考虑到现在的形势，战团最需要的就是他这种人。如果他说的是认真的，入侵一旦结束，他就会离开战团。";
 	}
 
 	function onSetAppearance()
