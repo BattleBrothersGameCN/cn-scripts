@@ -166,7 +166,7 @@ this.lindwurm_acid_effect <- this.inherit("scripts/skills/skill", {
 
 			if (!this.getContainer().getActor().isHiddenToPlayer())
 			{
-				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "的身体被喷溅了酸液");
+				this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "的身体溅上了酸液");
 			}
 		}
 	}

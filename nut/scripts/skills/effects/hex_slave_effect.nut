@@ -56,7 +56,7 @@ this.hex_slave_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色遭到了诅咒，会与另一个角色感受相同的痛苦并遭受相同的伤害。小心点，这效果能杀了他。此效果还将持续 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 回合。";
+		return "这个角色遭到了诅咒，会受到和另一角色相同的痛苦和伤害。小心点，这可会要了他的命。此效果还将持续 [color=" + this.Const.UI.Color.NegativeValue + "]1[/color] 回合。";
 	}
 
 	function applyDamage( _damage )

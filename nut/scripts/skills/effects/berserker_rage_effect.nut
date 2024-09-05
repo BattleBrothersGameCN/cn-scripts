@@ -40,7 +40,7 @@ this.berserker_rage_effect <- this.inherit("scripts/skills/skill", {
 				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * (this.Math.rand(75, 100) * 0.01), actor.getPos(), this.Math.rand(75, 100) * 0.01);
 			}
 
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + " 获得愤怒！");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "狂怒了！");
 		}
 
 		this.getContainer().getActor().updateRageVisuals(this.m.RageStacks);

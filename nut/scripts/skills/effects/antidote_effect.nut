@@ -17,7 +17,7 @@ this.antidote_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色已经服用解毒剂，免疫任何毒素 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "该角色服下了解毒剂，在[color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color]回合内免疫任何毒素。";
 	}
 
 	function onAdded()

@@ -16,7 +16,7 @@ this.adrenaline_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "上啊！这个角色肾上腺素奔涌，并会在下个回合先于他的对手行动。";
+		return "上啊！该角色肾上腺素飙升，会在下个回合中先于对手行动。";
 	}
 
 	function onUpdate( _properties )
