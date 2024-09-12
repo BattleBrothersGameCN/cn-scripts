@@ -5,11 +5,11 @@ this.cartographer_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.cartographer";
 		this.m.Name = "制图师";
-		this.m.Description = "制图师是一位有着深厚文化底蕴和知识储备的人，但他也明白，与一群装备精良的雇佣军一起旅行是安全地探索前人未曾涉足之地的最佳方式。";
+		this.m.Description = "制图师是个有知识的文化人，但他也明白，与一群装备精良的佣兵一起旅行才是安全探索前人未曾涉足之地的最佳方式。";
 		this.m.Image = "ui/campfire/cartographer_01";
 		this.m.Cost = 2500;
 		this.m.Effects = [
-			"为你独自发现的每个地点支付100到400克朗。 离文明越远，你得到的报酬就越多。 传奇地点双倍报酬。"
+			"为每个自主发现的地点支付100到400克朗。离文明越远，你得到的报酬就越多。传奇地点报酬翻倍。"
 		];
 		this.m.Requirements = [
 			{

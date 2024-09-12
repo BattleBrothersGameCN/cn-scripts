@@ -5,7 +5,7 @@ this.blacksmith_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.blacksmith";
 		this.m.Name = "铁匠";
-		this.m.Description = "雇佣军很擅长破坏武器和盔甲，但并不擅长维护它们。铁匠能够快速高效地完成这项繁琐的任务，甚至可以修复其他被认为已经损坏的装备。";
+		this.m.Description = "佣兵擅长破坏武器摧毁铠甲，论起维修保养却是外行。铁匠可以高效快速地完成这些繁琐工作，甚至能修复一些本要报废的装备。";
 		this.m.Image = "ui/campfire/blacksmith_01";
 		this.m.Cost = 3000;
 		this.m.Effects = [

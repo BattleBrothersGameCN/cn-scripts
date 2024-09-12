@@ -5,11 +5,11 @@ this.bounty_hunter_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.bounty_hunter";
 		this.m.Name = "赏金猎人";
-		this.m.Description = "这个穿着花哨的赏金猎人口袋里装满了最危险的人的合同。 他知道如何找到他们的藏身处，并会为任何完成的悬赏支付丰厚的报酬。";
+		this.m.Description = "这位穿着花哨的赏金猎人有个专装合同的口袋，合同上尽是那些最危险的人。他知道如何找到他们的藏身处，还会为所有完成的悬赏付上一大笔钱。";
 		this.m.Image = "ui/campfire/bounty_hunter_01";
 		this.m.Cost = 4000;
 		this.m.Effects = [
-			"显著增加了遇到冠军的机会",
+			"显著增加遇到冠军的机会",
 			"为每一个被杀的冠军支付300到750克朗"
 		];
 		this.m.Requirements = [

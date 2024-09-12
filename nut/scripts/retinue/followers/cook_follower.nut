@@ -5,11 +5,11 @@ this.cook_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.cook";
 		this.m.Name = "厨师";
-		this.m.Description = "一顿热腾腾的饭菜对于恢复身心健康有很大帮助。 队长会确保没有粮食浪费，并为士兵们提供有力的补给。";
+		this.m.Description = "一顿热腾腾的饭菜对于恢复身心健康有很大帮助。厨师会确保粮食不被浪费，并用良好的膳食使你的人焕发精神。";
 		this.m.Image = "ui/campfire/cook_01";
 		this.m.Cost = 2000;
 		this.m.Effects = [
-			"使所有的食物能多维持3天",
+			"使所有食物能多保存3天",
 			"增加33%的生命值治愈速度"
 		];
 		this.m.Requirements = [

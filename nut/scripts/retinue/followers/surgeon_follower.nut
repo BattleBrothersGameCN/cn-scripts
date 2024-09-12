@@ -5,7 +5,7 @@ this.surgeon_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.surgeon";
 		this.m.Name = "外科医生";
-		this.m.Description = "外科医生是一位行走的解剖学百科全书。雇佣兵战团算是他的最佳去处，既能运用这些知识来治疗伤员，又能更深入地了解人体的构造。";
+		this.m.Description = "这位外科医生是人体解剖结构的活百科。在佣兵团里，他既能学以致用救治伤员，又能更深入地了解人体的构造，实在是再理想不过了。";
 		this.m.Image = "ui/campfire/surgeon_01";
 		this.m.Cost = 3500;
 		this.m.Effects = [

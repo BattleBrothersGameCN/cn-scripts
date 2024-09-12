@@ -270,7 +270,7 @@ this.tavern_building <- this.inherit("scripts/entity/world/settlements/buildings
 			}
 			else
 			{
-				return "客人在那里聊天。";
+				return "客人们谈天说地。";
 			}
 		}
 		else
@@ -293,7 +293,7 @@ this.tavern_building <- this.inherit("scripts/entity/world/settlements/buildings
 			}
 			else
 			{
-				rumor = rumor + "客人在那里聊天。";
+				rumor = rumor + "客人们谈天说地。";
 			}
 
 			local candidates = [];

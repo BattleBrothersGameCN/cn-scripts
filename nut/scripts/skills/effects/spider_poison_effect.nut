@@ -33,7 +33,7 @@ this.spider_poison_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色的血管中流淌着剧毒，其在战斗中将每回合失去 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.Damage + "[/color] 生命值，持续 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "该角色的血管中流淌着剧毒，每回合失去 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.Damage + "[/color] 生命值，持续 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
 	}
 
 	function resetTime()

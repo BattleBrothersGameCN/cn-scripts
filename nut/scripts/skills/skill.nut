@@ -1439,7 +1439,7 @@ this.skill <- {
 					}
 					else
 					{
-						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "，攻击偏离了目标，擦过了" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
+						this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "，攻击偏离了目标，没能命中" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
 					}
 				}
 				else
@@ -1455,7 +1455,7 @@ this.skill <- {
 				}
 				else
 				{
-					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "但没命中" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
+					this.Tactical.EventLog.logEx(this.Const.UI.getColorizedEntityName(_user) + "使出" + this.getName() + "没能命中" + this.Const.UI.getColorizedEntityName(_targetEntity) + "(几率:" + this.Math.min(95, this.Math.max(5, toHit)) + ", 掷出:" + rolled + ")");
 				}
 			}
 			else

@@ -14,7 +14,7 @@ this.indomitable_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色已经聚集了他所有的体力和意志力，变得不屈不挠，直到下一个回合。";
+		return "这个角色聚集了他所有的体力和意志，变得不屈不挠，直到下回合为止。";
 	}
 
 	function getTooltip()

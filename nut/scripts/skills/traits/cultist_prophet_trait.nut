@@ -6,7 +6,7 @@ this.cultist_prophet_trait <- this.inherit("scripts/skills/traits/character_trai
 		this.m.ID = "trait.cultist_prophet";
 		this.m.Name = "达库尔先知";
 		this.m.Icon = "ui/traits/trait_icon_69.png";
-		this.m.Description = "这个人物是一名达库尔先知，是其意志的血肉信道、其真理的尘世之声。其他的信徒听取他的每一句话，在他的强令威压下超越他们身体的极限。";
+		this.m.Description = "该角色是一名达库尔先知，是其意志的血肉信道、其真理的尘世之声。其他的信徒听取他的每一句话，在他的训谕下超越他们身体的极限。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 
@@ -69,7 +69,7 @@ this.cultist_prophet_trait <- this.inherit("scripts/skills/traits/character_trai
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "不会受到当前战斗中新产生的损伤的影响"
+				text = "不会受到当前战斗中新产生的创伤的影响"
 			}
 		];
 	}

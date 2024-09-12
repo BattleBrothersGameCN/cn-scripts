@@ -66,7 +66,7 @@ this.cleave <- this.inherit("scripts/skills/skill", {
 			id = 8,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "每回合额外造成 [color=" + this.Const.UI.Color.DamageValue + "]" + dmg + "[/color] 点流血伤害，持续 2 回合"
+			text = "每回合额外造成可叠加的 [color=" + this.Const.UI.Color.DamageValue + "]" + dmg + "[/color] 点流血伤害，持续 2 回合"
 		});
 		return ret;
 	}

@@ -6,7 +6,7 @@ this.overwhelmed_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.overwhelmed";
 		this.m.Name = "被压制";
-		this.m.Description = "这个角色已经被一系列的攻击所压制，无法有效地进行攻击。";
+		this.m.Description = "该角色被一连串攻击压制，难以抽身，攻击效率下降。";
 		this.m.Icon = "skills/status_effect_74.png";
 		this.m.IconMini = "status_effect_74_mini";
 		this.m.Overlay = "status_effect_74";

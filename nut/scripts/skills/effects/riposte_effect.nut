@@ -14,7 +14,7 @@ this.riposte_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色准备立即反击任何在近战中攻击他未命中的角色。";
+		return "该角色已经做好准备，会立即还击所有失败的近战攻击。";
 	}
 
 	function onUpdate( _properties )

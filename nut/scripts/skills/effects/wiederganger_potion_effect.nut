@@ -36,7 +36,7 @@ this.wiederganger_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "被命中时遭受伤残的伤害阈值提高 [color=" + this.Const.UI.Color.PositiveValue + "]33%[/color]"
+				text = "被命中时遭受创伤的伤害阈值提高 [color=" + this.Const.UI.Color.PositiveValue + "]33%[/color]"
 			},
 			{
 				id = 12,

@@ -10,7 +10,7 @@ this.gash_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.gash";
 		this.m.Name = "拖割";
-		this.m.Description = "一种瞄准要害的划砍攻击，更容易使对手受伤。";
+		this.m.Description = "一种瞄准要害的划砍攻击，更容易使对手受创伤。";
 		this.m.KilledString = "砍倒";
 		this.m.Icon = "skills/active_189.png";
 		this.m.IconDisabled = "skills/active_189_sw.png";

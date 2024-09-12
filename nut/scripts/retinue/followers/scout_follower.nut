@@ -5,12 +5,12 @@ this.scout_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.scout";
 		this.m.Name = "侦察员";
-		this.m.Description = "侦察兵是在寻找山口、穿越险恶沼泽和引导任何人安全通过最黑暗的森林方面的专家。";
+		this.m.Description = "侦察员是寻找隐蔽山口、穿越凶险沼泽和引导人们安全通过茂密森林的专家。";
 		this.m.Image = "ui/campfire/scout_01";
 		this.m.Cost = 2500;
 		this.m.Effects = [
 			"使战团在任何地形上的旅行速度提高15%",
-			"阻止因地形引起的疾病和意外遭遇"
+			"防止地形引起的疾病和意外"
 		];
 		this.m.Requirements = [
 			{

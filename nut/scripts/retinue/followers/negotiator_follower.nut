@@ -4,8 +4,8 @@ this.negotiator_follower <- this.inherit("scripts/retinue/follower", {
 	{
 		this.follower.create();
 		this.m.ID = "follower.negotiator";
-		this.m.Name = "谈判者";
-		this.m.Description = "谈判家的家是高贵的法院和华丽的大厅，并不习惯与一群身穿泥泞靴的佣兵一起旅行，但他是社交关系和合同谈判的专家。";
+		this.m.Name = "谈判家";
+		this.m.Description = "谈判家以贵族宫廷和华丽大厅为家，并不习惯和一群泥腿子佣兵一起旅行，却是人情世故和合同谈判的专家。";
 		this.m.Image = "ui/campfire/negotiator_01";
 		this.m.Cost = 3000;
 		this.m.Effects = [

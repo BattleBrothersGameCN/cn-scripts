@@ -78,7 +78,7 @@ this.holy_water_effect <- this.inherit("scripts/skills/skill", {
 
 		if (!this.getContainer().getActor().isHiddenToPlayer())
 		{
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "的身体被溅洒了圣水");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getContainer().getActor()) + "的身体溅上了圣水");
 		}
 
 		this.applyDamage(false);

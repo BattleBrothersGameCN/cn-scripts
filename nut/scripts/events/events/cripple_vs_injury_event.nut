@@ -10,7 +10,7 @@ this.cripple_vs_injury_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]最近的战斗在%injured%身上留下了可怕的永久性创伤。当他闷闷不乐地坐在营火旁时，%cripple%坐到了他的身旁。%SPEECH_ON%原来你在这儿坐着，为一些无关紧要的事情烦恼。看着我。看我就行了！看看我的处境！我失去了很多无法挽回的东西，但你看我深陷其中了吗？不。我挺过去了。我加入了%companyname%。正因如此，这儿的这些伤，就算是过去了。至于……%SPEECH_OFF%瘸子轻轻敲着他的头。%SPEECH_ON%这儿，这儿的一切都可以重来。这才是决定了你的想法的地方，没错，不幸的事确实发生了，但我还是个男子汉，我还活在这个世界上。如果这个世界想要置我于死地，它就必须一点一点的带走我，直到我消失到最后一丁点为止，我都绝对不会放弃！%SPEECH_OFF%%injured%点了点头，似乎他的心情好了很多。",
+			Text = "[img]gfx/ui/events/event_26.png[/img]最近的战斗在%injured%身上留下了可怕的永久创伤。当他闷闷不乐地坐在营火旁时，%cripple%坐到了他的身旁。%SPEECH_ON%原来你在这儿坐着，为一些无关紧要的事情烦恼。看着我。看我就行了！看看我的处境！我失去了很多无法挽回的东西，但你看我深陷其中了吗？不。我挺过去了。我加入了%companyname%。正因如此，这儿的这些伤，就算是过去了。至于……%SPEECH_OFF%瘸子轻轻敲着他的头。%SPEECH_ON%这儿，这儿的一切都可以重来。这才是决定了你的想法的地方，没错，不幸的事确实发生了，但我还是个男子汉，我还活在这个世界上。如果这个世界想要置我于死地，它就必须一点一点的带走我，直到我消失到最后一丁点为止，我都绝对不会放弃！%SPEECH_OFF%%injured%点了点头，似乎他的心情好了很多。",
 			Image = "",
 			List = [],
 			Characters = [],
