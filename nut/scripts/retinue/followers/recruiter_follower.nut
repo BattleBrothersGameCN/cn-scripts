@@ -9,8 +9,8 @@ this.recruiter_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Image = "ui/campfire/recruiter_01";
 		this.m.Cost = 3000;
 		this.m.Effects = [
-			"让你在雇佣新人时少支付10%，测验费少50%",
-			"让每个定居点可以招募的新兵额外增加2到4人"
+			"使新人雇佣费减少10%，测验费减少50%",
+			"每个定居点待招募的新兵增加2到4人"
 		];
 		this.m.Requirements = [
 			{

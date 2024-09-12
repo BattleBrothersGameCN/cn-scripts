@@ -38,7 +38,7 @@ this.iron_jaw_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "被命中时遭受伤残的伤害阈值提高 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]"
+				text = "被命中时遭受创伤的伤害阈值提高 [color=" + this.Const.UI.Color.PositiveValue + "]25%[/color]"
 			}
 		];
 	}

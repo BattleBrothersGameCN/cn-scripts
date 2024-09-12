@@ -11,7 +11,7 @@ this.knock_over_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.knock_over";
-		this.m.Name = "撞倒";
+		this.m.Name = "锤翻";
 		this.m.Description = "一记重击，意在击晕或失能任何不幸被命中的家伙 1 回合，但不会造成很大伤害。被击晕的目标无法保持盾墙、矛墙或类似的防御技能。";
 		this.m.Icon = "skills/active_206.png";
 		this.m.IconDisabled = "skills/active_206_sw.png";

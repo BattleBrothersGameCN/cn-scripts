@@ -150,7 +150,7 @@ gt.Const.Contracts.NegotiationDefault <- [
 			if (this.Contract.m.Payment.Completion < 1.0)
 			{
 				this.Options.push({
-					Text = this.Contract.m.Payment.Completion == 0 ? "我们需要在工作完成后马上拿到报酬。" : "我们需要在工作完成后拿到更多的报酬。",
+					Text = this.Contract.m.Payment.Completion == 0 ? "我们要在工作完成后拿到报酬。" : "我们要在工作完成后拿到更多报酬。",
 					function getResult()
 					{
 						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
@@ -224,7 +224,7 @@ gt.Const.Contracts.NegotiationDefault <- [
 	{
 		ID = "Negotiation.Fail",
 		Title = "谈判",
-		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_ON%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
+		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不和贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_ON%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
 		Image = "",
 		List = [],
 		ShowEmployer = true,
@@ -403,7 +403,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 			if (this.Contract.m.Payment.Completion < 1.0)
 			{
 				this.Options.push({
-					Text = this.Contract.m.Payment.Completion == 0 ? "我们需要在工作完成后马上拿到报酬。" : "我们需要在工作完成后拿到更多的报酬。",
+					Text = this.Contract.m.Payment.Completion == 0 ? "我们要在工作完成后拿到报酬。" : "我们要在工作完成后拿到更多报酬。",
 					function getResult()
 					{
 						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
@@ -507,7 +507,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 	{
 		ID = "Negotiation.Fail",
 		Title = "谈判",
-		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_START%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
+		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不和贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_START%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
 		Image = "",
 		List = [],
 		ShowEmployer = true,
@@ -686,7 +686,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 			if (this.Contract.m.Payment.Completion < 1.0)
 			{
 				this.Options.push({
-					Text = this.Contract.m.Payment.Completion == 0 ? "我们需要在工作完成后马上拿到报酬。" : "我们需要在工作完成后拿到更多的报酬。",
+					Text = this.Contract.m.Payment.Completion == 0 ? "我们要在工作完成后拿到报酬。" : "我们要在工作完成后拿到更多报酬。",
 					function getResult()
 					{
 						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
@@ -790,7 +790,7 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 	{
 		ID = "Negotiation.Fail",
 		Title = "谈判",
-		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_START%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
+		Text = "[img]gfx/ui/events/event_74.png[/img]{%SPEECH_START%别以为只有你们在出卖武力。我要另找别人了，祝你好运。%SPEECH_OFF% | %SPEECH_START%我的耐心也是有限的，看来我的时间白费了。%SPEECH_OFF% | %SPEECH_START%我受够了！我决定找到其他人来做这项工作！%SPEECH_OFF% | %SPEECH_START%别侮辱我的智商！这份合同跟你没关系了。咱们到此为止。%SPEECH_OFF% | 他的脸气得通红。%SPEECH_ON%滚出去，我不和贪鬼打交道！%SPEECH_OFF% | 他叹了口气。%SPEECH_ON%就……算了吧。我一开始就不该相信你。你走吧，我好去找其他更明事理的人。%SPEECH_OFF% | %SPEECH_START%我当真还以为咱俩关系还不错。但这已经超出我的极限了。我觉得这不行，告辞。%SPEECH_OFF% | %SPEECH_START%这完全是浪费时间。想不明白就别再来找我了。%SPEECH_OFF%}",
 		Image = "",
 		List = [],
 		ShowEmployer = true,

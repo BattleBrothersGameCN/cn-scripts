@@ -69,7 +69,7 @@ this.cultist_chosen_trait <- this.inherit("scripts/skills/traits/character_trait
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "不会受到当前战斗中新产生的损伤的影响"
+				text = "不会受到当前战斗中新产生的创伤的影响"
 			}
 		];
 	}

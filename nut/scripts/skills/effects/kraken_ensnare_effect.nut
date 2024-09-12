@@ -27,7 +27,7 @@ this.kraken_ensnare_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.kraken_ensnare";
 		this.m.Name = "被缠住";
-		this.m.Description = "这个角色被一条巨大的触手缠住了，正被不断拉近一个准备将其整个吞下的血盆大口。";
+		this.m.Description = "该角色被一条巨大的触须缠住，拖近一张足以将其囫囵生吞的血盆大口。";
 		this.m.Icon = "skills/status_effect_95.png";
 		this.m.IconMini = "status_effect_95_mini";
 		this.m.Overlay = "status_effect_95";
@@ -54,7 +54,7 @@ this.kraken_ensnare_effect <- this.inherit("scripts/skills/skill", {
 			{
 				id = 2,
 				type = "description",
-				text = this.m.Mode == 0 ? this.getDescription() : "这个角色被一条巨大的触须缠住，拖近一张足以将其生吞的血盆大口。这条触须缠绕地越来越紧，仿佛要将人勒断。受害者每回合失去[color=" + this.Const.UI.Color.NegativeValue + "]10[/color] 点生命值"
+				text = this.m.Mode == 0 ? this.getDescription() : "该角色被一条巨大的触须缠住，拖近一张足以将其囫囵生吞的血盆大口。这条触须缠绕地越来越紧，仿佛要将人勒断。受害者每回合失去[color=" + this.Const.UI.Color.NegativeValue + "]10[/color] 点生命值"
 			},
 			{
 				id = 9,

@@ -11,7 +11,7 @@ this.oath_of_sacrifice_ambition <- this.inherit("scripts/ambitions/oaths/oath_am
 		this.m.SuccessButtonText = "{为了小安瑟姆！ | 宣誓者万岁！ | 誓约使者去死吧！}";
 		this.m.OathName = "牺牲誓言";
 		this.m.OathBoonText = "你的所有战团成员不再需要工资。";
-		this.m.OathBurdenText = "你的所有战团成员无法从伤残中恢复。";
+		this.m.OathBurdenText = "你的所有战团成员无法从创伤中恢复。";
 	}
 
 	function getRenownOnSuccess()
@@ -22,7 +22,7 @@ this.oath_of_sacrifice_ambition <- this.inherit("scripts/ambitions/oaths/oath_am
 
 	function getRewardTooltip()
 	{
-		return "誓言目标: 誓言期间承受不多于" + this.getBonusObjectiveGoal() + "的伤残次数(已承受" + this.getBonusObjectiveProgress() + (this.getBonusObjectiveProgress() == 1 ? "次" : "次") + ")。";
+		return "誓言目标: 誓言期间承受不多于" + this.getBonusObjectiveGoal() + "的创伤次数(已承受" + this.getBonusObjectiveProgress() + (this.getBonusObjectiveProgress() == 1 ? "次" : "次") + ")。";
 	}
 
 	function getBonusObjectiveProgress()

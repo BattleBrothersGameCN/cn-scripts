@@ -5,11 +5,11 @@ this.minstrel_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.minstrel";
 		this.m.Name = "吟游诗人";
-		this.m.Description = "好的歌曲和故事在塑造一个公司的声誉中扮演着重要的角色。 吟游诗人是这些技能的大师，并将帮助传播你的事迹，无论听到它们的耳朵是否乐意。";
+		this.m.Description = "好的歌曲和故事在塑造战团声誉的过程中扮演着重要角色。而吟游诗人正是这方面的行家，他能帮你把事迹传到所有人的耳朵里 —— 管它们愿不愿意呢。";
 		this.m.Image = "ui/campfire/minstrel_01";
 		this.m.Cost = 2000;
 		this.m.Effects = [
-			"所有行动都会获得额外 15% 的名望",
+			"所有行动获得的名望增加15%",
 			"使酒馆谣言更有可能包含有用的信息"
 		];
 		this.m.Requirements = [

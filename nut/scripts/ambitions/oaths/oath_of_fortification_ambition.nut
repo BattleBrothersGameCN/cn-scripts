@@ -10,7 +10,7 @@ this.oath_of_fortification_ambition <- this.inherit("scripts/ambitions/oaths/oat
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{古帝国的文献记载了军事编队之间的关系是如此之紧密和紧凑，以至于就像是脚下漫步的城堡：数百个盾牌像蛇鳞或乌龟壳一样紧密结合。%companyname%尽力复制这些理论，总需要一些时间来整合这些要素，但您从未打算将其变成一个卓越的演练。古人拥有帝国，而你是一群不和谐的人和宣誓者。但根据你的估计，毕竟团队仍在坚持，因此这个誓言是一个杰出的成功。\n\n现在是时候放下盾牌和古代帝国的热情，并接受新的誓言了！}";
 		this.m.SuccessButtonText = "{为了小安瑟姆！ | 宣誓者万岁！ | 誓约使者去死吧！}";
 		this.m.OathName = "壁垒誓言";
-		this.m.OathBoonText = "你的所有战团成员中使用盾牌技能时减少 [color=" + this.Const.UI.Color.NegativeValue + "25%疲劳值积累。”盾墙“技能提供额外 [color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 近战防御和 [color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 远程防御。 “撞退”技能在成功命中时会对目标施加踉跄效果。";
+		this.m.OathBoonText = "你的所有战团成员中使用盾牌技能时减少 [color=" + this.Const.UI.Color.NegativeValue + "25%疲劳值积累。”盾墙“技能提供额外 [color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 近战防御和 [color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 远程防御。“击退”技能在成功命中时会对目标施加踉跄效果。";
 		this.m.OathBurdenText = "你的所有战团成员在战斗的第一个回合无法移动。";
 	}
 

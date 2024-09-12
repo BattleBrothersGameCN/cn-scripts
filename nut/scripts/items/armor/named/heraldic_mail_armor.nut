@@ -15,7 +15,7 @@ this.heraldic_mail_armor <- this.inherit("scripts/items/armor/named/named_armor"
 			"全身链铠",
 			"锁甲",
 			"荣誉",
-			"荣誉",
+			"荣耀",
 			"贵族链甲"
 		];
 		this.m.Variant = 36;

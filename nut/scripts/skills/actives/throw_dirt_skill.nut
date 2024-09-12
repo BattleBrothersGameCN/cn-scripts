@@ -3,7 +3,7 @@ this.throw_dirt_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.throw_dirt";
-		this.m.Name = "扬尘";
+		this.m.Name = "抛沙";
 		this.m.Description = "";
 		this.m.Icon = "skills/active_215.png";
 		this.m.IconDisabled = "skills/active_215.png";
@@ -163,7 +163,7 @@ this.throw_dirt_skill <- this.inherit("scripts/skills/skill", {
 
 		if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
 		{
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "将尘土撒向" + this.Const.UI.getColorizedEntityName(_targetTile.getEntity()) + "的脸以分散他的注意力");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "将沙土直冲" + this.Const.UI.getColorizedEntityName(_targetTile.getEntity()) + "脸上撒去，试图分散他的注意力");
 		}
 
 		return true;

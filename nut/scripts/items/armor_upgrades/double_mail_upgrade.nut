@@ -6,7 +6,7 @@ this.double_mail_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upg
 		this.m.ID = "armor_upgrade.double_mail";
 		this.m.Name = "双层链甲";
 		this.m.Description = "一块厚重的双层链甲。重，但有效地进一步提高了盔甲的防护性能。";
-		this.m.ArmorDescription = "一块厚重的双层链甲被安装在这件盔甲上，进一步提高了防护性能。";
+		this.m.ArmorDescription = "这件盔甲上装有一块厚重的双层链甲，进一步提高了防护性能。";
 		this.m.Icon = "armor_upgrades/upgrade_19.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = "armor_upgrades/icon_upgrade_19.png";

@@ -10,7 +10,7 @@ this.alchemist_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Cost = 2500;
 		this.m.Effects = [
 			"有25%的几率不消耗你使用的原料",
-			"解锁“蛇油”配方，通过制作各种低层组件来赚钱"
+			"解锁“蛇油”配方，该物品可用多种低级原料制成，可以拿来卖钱"
 		];
 		this.m.Requirements = [
 			{

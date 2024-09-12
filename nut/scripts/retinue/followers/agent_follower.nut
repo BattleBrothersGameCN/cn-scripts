@@ -5,16 +5,16 @@ this.agent_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.agent";
 		this.m.Name = "事务官";
-		this.m.Description = "特工眼观六路，耳听八方，精通时事，以此找到机会并签订高薪合同。";
+		this.m.Description = "事务官眼观六路，耳听八方，精通时事，既能用于利用各地事件，也更方便接到高薪合同。";
 		this.m.Image = "ui/campfire/agent_01";
 		this.m.Cost = 4000;
 		this.m.Effects = [
-			"在定居点提示栏中显示可用的合同和活动情况，无论你在哪里"
+			"在定居点提示栏中显示可用合同和定居点形势，无论你是否在该定居点附近"
 		];
 		this.m.Requirements = [
 			{
 				IsSatisfied = false,
-				Text = "与贵族家族或城邦达到同盟关系"
+				Text = "与贵族家族或城邦达到盟友关系"
 			}
 		];
 	}

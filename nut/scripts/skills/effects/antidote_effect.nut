@@ -5,7 +5,7 @@ this.antidote_effect <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "effects.immune_to_poison";
-		this.m.Name = "毒素免疫";
+		this.m.Name = "免疫毒素";
 		this.m.Icon = "skills/status_effect_118.png";
 		this.m.IconMini = "status_effect_118_mini";
 		this.m.Overlay = "status_effect_118";

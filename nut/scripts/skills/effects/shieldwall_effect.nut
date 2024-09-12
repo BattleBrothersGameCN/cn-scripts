@@ -4,7 +4,7 @@ this.shieldwall_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.shieldwall";
 		this.m.Name = "盾墙";
-		this.m.Description = "在将盾牌举起到了防护姿态后，这个角色获得了更高的防御。";
+		this.m.Description = "将盾牌高举到防御架势，该角色获得了更高的防御。";
 		this.m.Icon = "skills/status_effect_03.png";
 		this.m.IconMini = "status_effect_03_mini";
 		this.m.Overlay = "status_effect_03";
@@ -75,7 +75,7 @@ this.shieldwall_effect <- this.inherit("scripts/skills/skill", {
 			{
 				id = 2,
 				type = "description",
-				text = this.getDescription() + (bonus > 0 ? "因与附近的盟友一同组成坚固的盾墙，防御得到进一步提升。" : "")
+				text = this.getDescription() + (bonus > 0 ? "与附近的盟友形成了坚固的盾墙，防御得到了进一步提升。" : "")
 			},
 			{
 				id = 10,

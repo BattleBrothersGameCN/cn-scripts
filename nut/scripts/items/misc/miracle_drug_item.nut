@@ -5,7 +5,7 @@ this.miracle_drug_item <- this.inherit("scripts/items/item", {
 		this.item.create();
 		this.m.ID = "misc.miracle_drug";
 		this.m.Name = "药剂师的奇迹";
-		this.m.Description = "治疗诸多常见疾病的良药，能抑制炎症反应、提升自愈能力。\n\n用此药品治疗的角色受伤后康复得更快，和神殿治疗的效果等同。";
+		this.m.Description = "治疗诸多常见疾病的良药，能抑制炎症反应、提升自愈能力。\n\n用此药品治疗的角色受创伤后康复得更快，和神殿治疗的效果等同。";
 		this.m.Icon = "consumables/pills_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Usable;

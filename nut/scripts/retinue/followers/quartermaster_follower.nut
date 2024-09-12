@@ -9,8 +9,8 @@ this.quartermaster_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Image = "ui/campfire/quartermaster_01";
 		this.m.Cost = 3000;
 		this.m.Effects = [
-			"增加你可以携带的弹药量100",
-			"增加你可以携带的医疗用品和工具数量各50个"
+			"增加100的弹药携带量",
+			"增加各50的医疗用品和工具补给携带量"
 		];
 		this.m.Requirements = [
 			{

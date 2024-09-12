@@ -57,7 +57,7 @@ this.fountain_of_youth_item <- this.inherit("scripts/items/item", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "将会移除所有临时或永久伤残，及年迈、药物成瘾、精疲力竭和宿醉等特性和状态效果"
+			text = "将会移除所有临时或永久创伤，及年迈、药物成瘾、精疲力竭和宿醉等特性和状态效果"
 		});
 		result.push({
 			id = 65,

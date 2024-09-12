@@ -21,7 +21,7 @@ this.insect_swarm_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "上千个黑苍蝇绕着这个角色嗡嗡作响，试图从盔甲上的每个小缝隙里爬进去，再钻进人体上每个可能的孔里。这个可怕的诅咒使他基本不能战斗，效果还会持续 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
+		return "成千只黑苍蝇绕着这个角色嗡嗡作响，试图爬进盔甲上的每个小缝，再钻进人体上每个能钻的孔里。这个可怕的诅咒使他基本不能战斗，效果还会持续 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合。";
 	}
 
 	function getTooltip()

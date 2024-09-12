@@ -57,7 +57,7 @@ this.iron_will_potion_item <- this.inherit("scripts/items/item", {
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "不受非永久性损伤的影响，无论新旧"
+			text = "不受非永久性创伤的影响，无论新旧"
 		});
 		result.push({
 			id = 65,

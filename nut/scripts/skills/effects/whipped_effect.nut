@@ -19,7 +19,7 @@ this.whipped_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色刚刚通过一个苦痛的提醒想起了他应该为自己的主人做些什么。这还会持续" + this.m.TurnsLeft + " 回合。";
+		return "该角色刚刚遭受的皮肉之苦，提醒了他该为主人做些什么。还会持续" + this.m.TurnsLeft + " 回合。";
 	}
 
 	function getTooltip()

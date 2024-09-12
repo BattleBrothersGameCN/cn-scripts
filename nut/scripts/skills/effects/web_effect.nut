@@ -4,7 +4,7 @@ this.web_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.web";
 		this.m.Name = "蛛网缠身";
-		this.m.Description = "一张又大又粘的蛛网将这个角色固定在了原地，阻碍了他自我保护或全力攻击的能力，力。只有割开蛛网才能挣脱。";
+		this.m.Description = "一张又大又粘的蛛网将这个角色固定在了原地，限制了他自我保护和全力攻击的能力。只有割开蛛网才能挣脱。";
 		this.m.Icon = "skills/status_effect_80.png";
 		this.m.IconMini = "status_effect_80_mini";
 		this.m.Overlay = "status_effect_80";
@@ -36,7 +36,7 @@ this.web_effect <- this.inherit("scripts/skills/skill", {
 				id = 13,
 				type = "text",
 				icon = "ui/icons/direct_damage.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]蛛魔对此角色造成的忽略护甲伤害翻倍[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]蛛魔对此角色造成的穿甲伤害翻倍[/color]"
 			},
 			{
 				id = 7,

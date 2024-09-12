@@ -17,7 +17,7 @@ this.chilled_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "这个角色已经冻僵了。由于四肢都被冻得僵硬，需要大量的努力才能协调地移动。效果会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合中慢慢消退。";
+		return "该角色被冻了个透心凉。四肢冻得发僵，行动要花好大力气才能协调。效果会在 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.m.TurnsLeft + "[/color] 回合中慢慢消退。";
 	}
 
 	function getTooltip()

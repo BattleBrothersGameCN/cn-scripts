@@ -4,7 +4,7 @@ this.lone_wolf_effect <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "effects.lone_wolf";
 		this.m.Name = "独狼";
-		this.m.Description = "我擅长单独行动。";
+		this.m.Description = "我最好单独行动。";
 		this.m.Icon = "ui/perks/perk_61.png";
 		this.m.IconMini = "perk_61_mini";
 		this.m.Type = this.Const.SkillType.StatusEffect;

@@ -18,7 +18,7 @@ this.iron_will_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "我觉得战无不胜！ 好吧，感觉可能会背叛这个角色，但因为他没有感受到任何伤害，无论是旧的还是新的，他也不会受到它们的影响，直到战斗结束，肾上腺素消退。";
+		return "我觉得战无不胜！好吧，感觉可能会背叛这个角色，但不论新伤旧伤，既然他没感受到任何创伤，他也不会受到它们的影响，直到战斗结束，肾上腺素消退。";
 	}
 
 	function getTooltip()
@@ -38,7 +38,7 @@ this.iron_will_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "不受非永久性损伤的影响"
+				text = "不受非永久创伤的影响"
 			},
 			{
 				id = 7,

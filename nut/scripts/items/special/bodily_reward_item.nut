@@ -57,7 +57,7 @@ this.bodily_reward_item <- this.inherit("scripts/items/item", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "立即治愈所有临时伤残，消除宿醉和精疲力竭状态"
+			text = "立即治愈所有临时创伤，消除宿醉和精疲力竭状态"
 		});
 		result.push({
 			id = 65,

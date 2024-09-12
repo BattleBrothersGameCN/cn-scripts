@@ -188,7 +188,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "真是场精彩的表演。",
+					Text = "为了表演而表演。",
 					function getResult( _event )
 					{
 						return 0;

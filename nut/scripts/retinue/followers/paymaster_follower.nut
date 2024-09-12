@@ -5,7 +5,7 @@ this.paymaster_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.paymaster";
 		this.m.Name = "出纳员";
-		this.m.Description = "出纳员负责所有日常财务和组织方面的事务, 如支付工资。";
+		this.m.Description = "出纳员负责所有日常财务和组织运营方面的事务，如支付工资。";
 		this.m.Image = "ui/campfire/paymaster_01";
 		this.m.Cost = 3500;
 		this.m.Effects = [

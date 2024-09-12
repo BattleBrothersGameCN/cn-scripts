@@ -10,7 +10,7 @@ this.scavenger_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Cost = 3000;
 		this.m.Effects = [
 			"回收一部分你在战斗中使用的弹药",
-			"从战斗中你摧毁的每一件盔甲中回收工具和补给"
+			"从你在战斗中摧毁的盔甲上回收工具和补给"
 		];
 		this.m.Requirements = [
 			{
