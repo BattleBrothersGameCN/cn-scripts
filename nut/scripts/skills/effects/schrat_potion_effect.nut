@@ -16,7 +16,7 @@ this.schrat_potion_effect <- this.inherit("scripts/skills/skill", {
 
 	function getDescription()
 	{
-		return "该角色的腿已经突变，可以更快、更强力地响应外部力量。实用点说，他们可以保持平衡，并对任何试图把他们推来勾去的尝试做出反应。";
+		return "该角色的腿已经突变，可以更快、更强力地响应外部力量。实用点说，他们可以保持平衡，并对任何试图把他们推来钩去的尝试做出反应。";
 	}
 
 	function getTooltip()
@@ -36,7 +36,7 @@ this.schrat_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "免疫击退和勾拽技能"
+				text = "免疫击退和钩拽技能"
 			},
 			{
 				id = 12,

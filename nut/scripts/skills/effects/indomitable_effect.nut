@@ -46,7 +46,7 @@ this.indomitable_effect <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "免疫击退和勾拽技能"
+				text = "免疫击退和钩拽技能"
 			}
 		];
 	}

@@ -53,7 +53,7 @@ this.schrat_potion_item <- this.inherit("scripts/items/misc/anatomist/anatomist_
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "免疫击退和勾拽技能"
+			text = "免疫击退和钩拽技能"
 		});
 		result.push({
 			id = 65,
