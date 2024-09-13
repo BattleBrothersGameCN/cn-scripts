@@ -90,7 +90,7 @@ this.orc_berserker_potion_effect <- this.inherit("scripts/skills/skill", {
 		if (!actor.isHiddenToPlayer())
 		{
 			this.spawnIcon("status_effect_143", actor.getTile());
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + " 获得狂暴！");
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + "狂怒了！");
 		}
 	}
 
