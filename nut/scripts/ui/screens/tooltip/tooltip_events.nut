@@ -184,7 +184,7 @@ this.tooltip_events <- {
 						tooltipContent.push({
 							id = 90,
 							type = "text",
-							text = "移动消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "+" + actor.getLevelActionPointCost() + "[/color][/b] 行动点数并 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "+" + actor.getLevelFatigueCost() + "[/color][/b] 点疲劳（高度落差）"
+							text = "移动消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "+" + actor.getLevelActionPointCost() + "[/color][/b] 行动点数，积累 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "+" + actor.getLevelFatigueCost() + "[/color][/b] 点疲劳（高度落差）"
 						});
 					}
 					else
@@ -192,7 +192,7 @@ this.tooltip_events <- {
 						tooltipContent.push({
 							id = 90,
 							type = "text",
-							text = "移动消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "[/color][/b] 行动点数并 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "[/color][/b] 点疲劳"
+							text = "移动消耗 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getActionPointCosts()[lastTileHovered.Type] + "[/color][/b] 行动点数，积累 [b][color=" + this.Const.UI.Color.PositiveValue + "]" + actor.getFatigueCosts()[lastTileHovered.Type] + "[/color][/b] 点疲劳"
 						});
 					}
 				}

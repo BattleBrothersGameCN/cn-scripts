@@ -565,7 +565,7 @@ this.tutorial_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "坚持到底！",
+					Text = "战至最后一刻！",
 					function getResult()
 					{
 						return 0;
