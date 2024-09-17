@@ -48,7 +48,7 @@ this.monolith_enter_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "坚持到底！",
+					Text = "战至最后一刻！",
 					function getResult( _event )
 					{
 						if (this.World.State.getLastLocation() != null)
