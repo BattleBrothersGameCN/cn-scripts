@@ -64,7 +64,7 @@ this.lunge_skill <- this.inherit("scripts/skills/skill", {
 				id = 6,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "使用者当前的主动值越高，造成额外的伤害越高"
+				text = "使用者当前的主动值越高，造成的额外伤害越高"
 			}
 		]);
 
