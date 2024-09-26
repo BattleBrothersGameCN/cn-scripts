@@ -9,7 +9,7 @@ this.well_supplied_situation <- this.inherit("scripts/entity/world/settlements/s
 		this.m.Icon = "ui/settlement_status/settlement_effect_03.png";
 		this.m.Rumors = [
 			"跟 %settlement% 的贸易很繁荣，我的朋友！安全的道路和充足的库存，我们希望它保持这样…",
-			"我在 %settlement% 的表哥一直在吹嘘那里有多好。存货充足的市场摊位等等。不像这个烂地方。"
+			"我在%settlement%的表哥一直在吹嘘那儿有多好。市场上的货要多少有多少，不像这个烂地方。"
 		];
 		this.m.IsStacking = false;
 	}
