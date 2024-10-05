@@ -5,7 +5,7 @@ this.gold_mine_location <- this.inherit("scripts/entity/world/attached_location"
 		this.attached_location.create();
 		this.m.Name = "金矿";
 		this.m.ID = "attached_location.gold_mine";
-		this.m.Description = "建在金矿矿脉上的深矿井。这种稀有的金属往往会激发出人最坏的一面。";
+		this.m.Description = "建在金矿矿脉上的深矿井。这种稀有的金属往往会激发出人性最丑恶的一面。";
 		this.m.Sprite = "world_gold_mine_01";
 		this.m.SpriteDestroyed = "world_gold_mine_01_ruins";
 	}
