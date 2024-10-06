@@ -106,7 +106,7 @@ this.tooltip_events <- {
 				{
 					id = 1,
 					type = "title",
-					text = "空余座位"
+					text = "空闲席位"
 				},
 				{
 					id = 4,
@@ -3487,7 +3487,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "一间驯犬屋，为战争繁殖和训练强壮而敏捷的战犬。"
+						text = "一间驯犬屋，为战争繁育训练强壮而敏捷的战犬。"
 					}
 				];
 
@@ -3529,7 +3529,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "炼金术士提供异国情调和相当危险的装置，需要一笔可观的费用。"
+						text = "炼金术士能以一笔可观的费用，为你提供各种奇异而危险的合剂。"
 					}
 				];
 
@@ -3651,7 +3651,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这间盔甲店是寻找制作精良、经久耐用的防护用品的理想场所。损坏的装备也可以在这里以一定的价格修理。"
+						text = "这间盔甲店是寻找制作精良、经久耐用的防护用品的理想场所。损坏的装备也可以在这里修好，给钱就行。"
 					}
 				];
 

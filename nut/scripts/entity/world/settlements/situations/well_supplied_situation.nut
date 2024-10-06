@@ -8,7 +8,7 @@ this.well_supplied_situation <- this.inherit("scripts/entity/world/settlements/s
 		this.m.Description = "这个地方最近被供应了新鲜的商品，其中许多现在可以用合适的价格买到。";
 		this.m.Icon = "ui/settlement_status/settlement_effect_03.png";
 		this.m.Rumors = [
-			"跟 %settlement% 的贸易很繁荣，我的朋友！安全的道路和充足的库存，我们希望它保持这样…",
+			"%settlement%的生意越做越好了，我的朋友！路上又安全货色又齐，要是能一直这样就好了...",
 			"我在%settlement%的表哥一直在吹嘘那儿有多好。市场上的货要多少有多少，不像这个烂地方。"
 		];
 		this.m.IsStacking = false;
