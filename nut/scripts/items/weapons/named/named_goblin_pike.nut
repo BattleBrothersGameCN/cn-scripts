@@ -9,7 +9,7 @@ this.named_goblin_pike <- this.inherit("scripts/items/weapons/named/named_weapon
 		this.m.NameList = this.Const.Strings.PikeNames;
 		this.m.PrefixList = this.Const.Strings.GoblinWeaponPrefix;
 		this.m.UseRandomName = false;
-		this.m.Description = "一杆装有锯齿尖头，可以造成可怕流血伤口的的地精长枪。这件物品做工精良。";
+		this.m.Description = "一杆装有锯齿尖头，可以造成可怕流血伤口的的地精长枪。这件的制作尤其精良。";
 		this.m.Categories = "长柄武器，双手持";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

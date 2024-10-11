@@ -64,7 +64,7 @@ this.research_notes_greenskins_item <- this.inherit("scripts/items/item", {
 			},
 			{
 				flag = "isGoblinOverseerPotionDiscovered",
-				creatureName = "地精监督者",
+				creatureName = "地精督军",
 				potionName = "死神之眼药剂"
 			},
 			{
