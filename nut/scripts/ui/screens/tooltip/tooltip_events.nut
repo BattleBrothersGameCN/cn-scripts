@@ -95,7 +95,7 @@ this.tooltip_events <- {
 				{
 					id = 4,
 					type = "description",
-					text = "你战团的名望不够，无法雇佣更多的非战斗随从。至少需要获得 " + renown + "名望以解锁此席位。通过完成野心和合同以及赢得战斗而获得名望。"
+					text = "你战团的名望不够，无法雇佣更多的非战斗随从。解锁该席位至少还需要" + renown + "点名望。名望可以通过达成野心、完成合同以及赢得战斗获得。"
 				}
 			];
 			return ret;
@@ -209,7 +209,7 @@ this.tooltip_events <- {
 					id = 98,
 					type = "text",
 					icon = "ui/icons/vision.png",
-					text = "[color=" + this.Const.UI.Color.NegativeValue + "]远处的人无法看到这里是否有人躲藏在内。[/color]"
+					text = "[color=" + this.Const.UI.Color.NegativeValue + "]能把人藏在里面，免得被从远处看到。[/color]"
 				});
 			}
 
@@ -230,7 +230,7 @@ this.tooltip_events <- {
 					id = 99,
 					type = "text",
 					icon = "ui/tooltips/warning.png",
-					text = "[color=" + this.Const.UI.Color.NegativeValue + "]处于敌方的控制区域[/color]"
+					text = "[color=" + this.Const.UI.Color.NegativeValue + "]位于敌方控制区内。[/color]"
 				});
 			}
 
@@ -564,7 +564,7 @@ this.tooltip_events <- {
 						id = 1,
 						type = "hint",
 						icon = "ui/icons/mouse_right_button.png",
-						text = "将物品放入背包中"
+						text = "将物品放入背包"
 					});
 				}
 
@@ -638,7 +638,7 @@ this.tooltip_events <- {
 					id = 2,
 					type = "hint",
 					icon = "ui/icons/mouse_right_button_ctrl.png",
-					text = "将物品放入背包中"
+					text = "将物品放入背包"
 				});
 			}
 
@@ -690,7 +690,7 @@ this.tooltip_events <- {
 				id = 1,
 				type = "hint",
 				icon = "ui/icons/mouse_right_button.png",
-				text = "售出这件物品将获得 [img]gfx/ui/tooltips/money.png[/img]" + _item.getSellPrice()
+				text = "售出物品获得 [img]gfx/ui/tooltips/money.png[/img]" + _item.getSellPrice()
 			});
 
 			if (this.World.State.getCurrentTown() != null && this.World.State.getCurrentTown().getCurrentBuilding() != null && this.World.State.getCurrentTown().getCurrentBuilding().isRepairOffered() && _item.getConditionMax() > 1 && _item.getCondition() < _item.getConditionMax())

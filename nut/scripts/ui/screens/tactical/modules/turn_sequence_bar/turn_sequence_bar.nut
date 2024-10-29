@@ -905,7 +905,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 			return;
 		}
 
-		this.Tactical.State.showDialogPopup("结束回合", "确认让你所有角色跳过回合，直到下轮开始再行动？", function ()
+		this.Tactical.State.showDialogPopup("结束回合", "确认让你的所有角色跳过回合，直到下轮开始再行动？", function ()
 		{
 			this.m.IsSkippingRound = true;
 			this.m.JSHandle.call("setEndTurnAllButtonVisible", false);

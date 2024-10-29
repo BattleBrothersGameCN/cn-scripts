@@ -460,7 +460,7 @@ this.skill <- {
 				id = 9,
 				type = "hint",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]不能使用，这个角色已经立下禁止使用远程武器或道具的誓言[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]不能使用，该角色已经立下誓言，不使用远程武器或道具[/color]"
 			});
 		}
 
