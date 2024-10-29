@@ -1137,7 +1137,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 				break;
 
 			case this.Const.Tactical.ActionState.TravelPath:
-				this.logInfo("实体正在移动中！");
+				this.logInfo("实体正在移动！");
 				return;
 
 			case this.Const.Tactical.ActionState.ExecuteSkill:
@@ -1314,7 +1314,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 					if (this.isKindOf(targetEntity, "actor"))
 					{
-						this.logDebug("[" + _activeEntity.getName() + "]执行技能 [" + skill.getName() + "] 准确命中 [" + targetEntity.getName() + "]");
+						this.logDebug("[" + _activeEntity.getName() + "] 正在执行技能： [" + skill.getName() + "] ，目标是： [" + targetEntity.getName() + "]");
 					}
 				}
 
