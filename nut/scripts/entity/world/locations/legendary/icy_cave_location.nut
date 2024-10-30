@@ -2,7 +2,7 @@ this.icy_cave_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "雪岩之海中的一座洞穴。由厚实冰柱构成的大门牢牢守护着你的入口。";
+		return "雪岩之海中的一座洞穴。厚实冰柱撑起了洞穴的入口，确保其安然无虞。";
 	}
 
 	function create()
