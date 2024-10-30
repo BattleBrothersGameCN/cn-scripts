@@ -2,7 +2,7 @@ this.barbarian_camp_nithing_pole <- this.inherit("scripts/entity/tactical/entity
 	m = {},
 	function getName()
 	{
-		return "诅咒长杖";
+		return "诅咒立杆";
 	}
 
 	function getDescription()

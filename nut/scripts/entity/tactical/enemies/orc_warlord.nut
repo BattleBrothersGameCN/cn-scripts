@@ -192,7 +192,7 @@ this.orc_warlord <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一个兽人军阀(An Orc Warlord)";
+			corpse.CorpseName = "一个兽人军阀";
 			corpse.Tile = _tile;
 			corpse.IsResurrectable = false;
 			corpse.IsConsumable = true;

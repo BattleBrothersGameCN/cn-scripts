@@ -2,7 +2,7 @@ this.waterwheel_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "旁边有石头房子的小水磨。 好像有某种强大的人物住在这里。";
+		return "旁边有座石头房子的小水磨。好像有人住在这里。";
 	}
 
 	function create()

@@ -74,7 +74,7 @@ this.research_notes_greenskins_item <- this.inherit("scripts/items/item", {
 			},
 			{
 				flag = "isOrcYoungPotionDiscovered",
-				creatureName = "兽人幼崽",
+				creatureName = "兽人青年",
 				potionName = "动力学家药剂"
 			},
 			{

@@ -5,7 +5,7 @@ this.drill_sergeant_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.drill_sergeant";
 		this.m.Name = "教官";
-		this.m.Description = "这位教官曾经也是一名雇佣兵，直到伤病过早的结束了他的职业生涯。现在，他会把纪律灌输给你的人，吼叫着确保所有人都能从错误中吸取教训。";
+		this.m.Description = "这位教官曾经也是一名雇佣兵，直到伤病提早结束了他的职业生涯。现在，他会把纪律灌输给你的人，吼叫着确保所有人都能从错误中吸取教训。";
 		this.m.Image = "ui/campfire/drill_01";
 		this.m.Cost = 3500;
 		this.m.Effects = [

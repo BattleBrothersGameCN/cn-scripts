@@ -28,7 +28,7 @@ this.lookout_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onEvaluate()
 	{
-		this.m.Requirements[0].Text = "独自发现" + this.Math.min(10, this.World.Statistics.getFlags().getAsInt("LocationsDiscovered")) + "/10个地点";
+		this.m.Requirements[0].Text = "自行发现" + this.Math.min(10, this.World.Statistics.getFlags().getAsInt("LocationsDiscovered")) + "/10个地点";
 
 		if (this.World.Statistics.getFlags().getAsInt("LocationsDiscovered") >= 10)
 		{
