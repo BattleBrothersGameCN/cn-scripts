@@ -976,7 +976,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "但是……",
+					Text = "可是……",
 					function getResult()
 					{
 						this.Contract.getHome().getBuilding("building.arena").refreshCooldown();
