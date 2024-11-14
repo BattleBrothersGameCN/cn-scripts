@@ -218,7 +218,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 				}
 
 				this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype%区域或其他地区猎杀目标");
-				this.Contract.m.BulletpointsObjectives.push("随时返回 %townname% 领取报酬");
+				this.Contract.m.BulletpointsObjectives.push("随时返回%townname%领取报酬");
 
 				if (this.Contract.m.Size == 0)
 				{
@@ -305,7 +305,7 @@ this.big_game_hunt_contract <- this.inherit("scripts/contracts/contract", {
 					this.Contract.m.BulletpointsObjectives.push("在%worldmapregion%的%regiontype%区域猎杀树人和林德蠕龙(%killcount%/%maxcount%)");
 				}
 
-				this.Contract.m.BulletpointsObjectives.push("随时返回 %townname% 领取报酬");
+				this.Contract.m.BulletpointsObjectives.push("随时返回%townname%领取报酬");
 			}
 
 			function update()
