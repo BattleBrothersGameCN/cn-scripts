@@ -146,7 +146,7 @@ this.throw_fire_bomb_skill <- this.inherit("scripts/skills/skill", {
 		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, _data.TargetTile.Pos);
 		local p = {
 			Type = "fire",
-			Tooltip = "火焰在这里肆虐，熔化了盔甲和血肉",
+			Tooltip = "火焰在这里肆虐，熔化盔甲和血肉",
 			IsPositive = false,
 			IsAppliedAtRoundStart = false,
 			IsAppliedAtTurnEnd = true,
