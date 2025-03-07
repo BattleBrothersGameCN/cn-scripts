@@ -635,7 +635,7 @@ gt.Const.Strings.SellswordTitles <- [
 gt.Const.Strings.SwordmasterTitles <- [
 	"·传奇",
 	"·大师",
-	"·击剑手",
+	"·剑客",
 	"·神速",
 	"快刀",
 	"·大蛇",
