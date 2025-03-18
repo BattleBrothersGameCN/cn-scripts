@@ -59,7 +59,7 @@ this.find_artifact_contract <- this.inherit("scripts/contracts/contract", {
 			"猫",
 			"狮子",
 			"将军 ",
-			"强盗 男爵",
+			"强盗男爵",
 			"车(Caption)"
 		];
 		local nemesisNamesS = [
