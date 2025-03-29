@@ -238,7 +238,12 @@ gt.Const.Strings.EntityName <- [
 	"护命匣",
 	"失落的宝藏猎人",
 	"尖叫骷髅",
-	"守誓者"
+	"守誓者",
+	"Flesh Golem",
+	"Greater Flesh Golem",
+	"Fault Finder",
+	"The Grand Diviner",
+	"Flesh Cradle"
 ];
 gt.Const.Strings.EntityNamePlural <- [
 	"死灵法师",
@@ -347,7 +352,12 @@ gt.Const.Strings.EntityNamePlural <- [
 	"护命匣",
 	"失落的宝藏猎人",
 	"尖啸颅骨",
-	"誓约使者"
+	"誓约使者",
+	"Flesh Golems",
+	"Greater Flesh Golems",
+	"Fault Finders",
+	"The Grand Diviner",
+	"Flesh Cradles"
 ];
 gt.Const.Strings.Tactical.EntityName <- {
 	Boulder = "巨石",
@@ -1206,7 +1216,7 @@ gt.Const.Strings.TerrainRegionNames <- [
 	[
 		"失落的绿洲",
 		"绿色浅滩",
-		"翡翠盆地",
+		"Emerald Basin",
 		"南地明珠",
 		"丰美滩",
 		"生命之泉",
@@ -1333,7 +1343,7 @@ gt.Const.Strings.PerkDescription <- {
 	Indomitable = "解锁 “不屈” 技能，该技能提供[color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]的伤害减免，以及对昏迷、击退或钩拽的免疫，持续一回合。",
 	RallyTheTroops = "解锁“集结”技能，可以集结逃跑的队友，并将附近所有队友的士气到相对稳定的等级。使用技能的角色决心越高，成功的几率就越高。",
 	Adrenaline = "解锁“肾上腺素”技能，让你在下一轮中最先行动，在敌人行动之前进行回合。感受肾上腺素在血管中奔涌！",
-	Fearsome = "打得他们四散奔逃！任何攻击，只要造成了至少1点伤害，就会触发对手的士气检查，并施以[color=" + this.Const.UI.Color.NegativeValue + "]你的决心*20%-10[/color]的士气惩罚，而非仅在造成15点或以上伤害时进行无惩罚的士气检查。",
+	Fearsome = "打得他们四散奔逃！任何攻击，只要造成了至少1点伤害，就会触发对手的士气检查，并施以[color=" + this.Const.UI.Color.NegativeValue + "]15%[/color] of your Resolve, as opposed to with no penalty and only if at or above 15 points of damage.",
 	HeadHunter = "照头打！击中目标头部将使确保下次命中时也能击中头部。效果会在命中后重置。",
 	SunderingStrikes = "无论使用任何武器，对盔甲的伤害均会增加[color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color]。",
 	FastAdaption = "适应对手的动作！每次攻击落空后，提高[color=" + this.Const.UI.Color.PositiveValue + "]10%[/color]命中率。效果可以叠加，命中后重置。",

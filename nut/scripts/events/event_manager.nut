@@ -287,6 +287,7 @@ this.event_manager <- {
 		local score = 0;
 		local eventToFire;
 		local isNewsReady = this.World.Statistics.isNewsReady();
+		local limit = this.Math.max(1, this.World.getSpeedMult()) * 3;
 
 		for( local i = 0; i < this.m.Events.len(); i = ++i )
 		{
@@ -299,7 +300,7 @@ this.event_manager <- {
 				this.m.Events[i].update();
 			}
 
-			if (i % 3 == 0)
+			if (i % limit == 0)
 			{
 				yield false;
 			}

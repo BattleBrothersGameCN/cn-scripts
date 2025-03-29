@@ -163,11 +163,12 @@ this.gore_skill <- this.inherit("scripts/skills/skill", {
 			return;
 		}
 
-		_target.getSkills().add(this.new("scripts/skills/effects/staggered_effect"));
+		local stagger = this.new("scripts/skills/effects/staggered_effect");
+		_target.getSkills().add(stagger);
 
 		if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
 		{
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "趔趄" + this.Const.UI.getColorizedEntityName(_target) + "持续 1 回合");
+			this.Tactical.EventLog.log(stagger.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(_target)));
 		}
 
 		if (!_target.getCurrentProperties().IsImmuneToKnockBackAndGrab && !_target.getCurrentProperties().IsRooted)

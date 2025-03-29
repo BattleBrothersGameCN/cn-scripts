@@ -16,7 +16,9 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 		BuildSunkenLibrary = true,
 		BuildHolySite1 = true,
 		BuildHolySite2 = true,
-		BuildHolySite3 = true
+		BuildHolySite3 = true,
+		BuildGolemLocation1 = true,
+		BuildGolemLocation2 = true
 	},
 	function create()
 	{
@@ -113,6 +115,16 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 			if (!this.Const.DLC.Desert || v.getTypeID() == "location.holy_site.vulcano")
 			{
 				this.m.BuildHolySite3 = false;
+			}
+
+			if (v.getTypeID() == "location.abandoned_village")
+			{
+				this.m.BuildGolemLocation1 = false;
+			}
+
+			if (v.getTypeID() == "location.artifact_reliquary")
+			{
+				this.m.BuildGolemLocation2 = false;
 			}
 		}
 	}
@@ -575,6 +587,62 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 			if (camp != null)
 			{
 				camp.onSpawned();
+			}
+		}
+		else if (this.m.BuildGolemLocation1)
+		{
+			local disallowedTerrain = [];
+
+			for( local i = 0; i < this.Const.World.TerrainType.COUNT; i = ++i )
+			{
+				if (i == this.Const.World.TerrainType.Plains || i == this.Const.World.TerrainType.Tundra)
+				{
+				}
+				else
+				{
+					disallowedTerrain.push(i);
+				}
+			}
+
+			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 6, 21, 1001, 8, 8);
+
+			if (tile != null)
+			{
+				camp = this.World.spawnLocation("scripts/entity/world/locations/legendary/abandoned_village_location", tile.Coords);
+			}
+
+			if (camp != null)
+			{
+				camp.onSpawned();
+				this.logInfo("Abandoned Village spawned");
+			}
+		}
+		else if (this.m.BuildGolemLocation2)
+		{
+			local disallowedTerrain = [];
+
+			for( local i = 0; i < this.Const.World.TerrainType.COUNT; i = ++i )
+			{
+				if (i == this.Const.World.TerrainType.Plains || i == this.Const.World.TerrainType.Steppe || i == this.Const.World.TerrainType.Tundra)
+				{
+				}
+				else
+				{
+					disallowedTerrain.push(i);
+				}
+			}
+
+			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 12, 25, 1001, distanceToOthers, distanceToOthers);
+
+			if (tile != null)
+			{
+				camp = this.World.spawnLocation("scripts/entity/world/locations/legendary/artifact_reliquary_location", tile.Coords);
+			}
+
+			if (camp != null)
+			{
+				camp.onSpawned();
+				this.logInfo("Artifact Reliquary spawned");
 			}
 		}
 		else

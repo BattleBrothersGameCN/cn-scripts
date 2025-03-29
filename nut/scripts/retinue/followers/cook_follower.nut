@@ -10,7 +10,7 @@ this.cook_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Cost = 2000;
 		this.m.Effects = [
 			"使所有食物能多保存3天",
-			"增加33%的生命值治愈速度"
+			"Increases hitpoint recovery by 1 per hour"
 		];
 		this.m.Requirements = [
 			{
@@ -23,7 +23,7 @@ this.cook_follower <- this.inherit("scripts/retinue/follower", {
 	function onUpdate()
 	{
 		this.World.Assets.m.FoodAdditionalDays = 3;
-		this.World.Assets.m.HitpointsPerHourMult = 1.33;
+		this.World.Assets.m.AdditionalHitpointsPerHour += 1;
 	}
 
 	function onEvaluate()

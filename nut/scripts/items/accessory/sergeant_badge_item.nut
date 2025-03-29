@@ -13,6 +13,7 @@ this.sergeant_badge_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.m.Icon = "accessory/sergeant_trophy.png";
 		this.m.Sprite = "sergeant_trophy";
 		this.m.Value = 250;
+		this.m.IsPrecious = true;
 	}
 
 	function getTooltip()

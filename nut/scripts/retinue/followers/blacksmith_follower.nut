@@ -9,8 +9,9 @@ this.blacksmith_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Image = "ui/campfire/blacksmith_01";
 		this.m.Cost = 3000;
 		this.m.Effects = [
-			"修理你手下所有的盔甲、头盔、武器和盾牌，即使它们因为你手下的死亡而破损或丢失",
-			"修复速度提高33%"
+			"Recovers all equipment worn by your men even if broken or lost because of death",
+			"Increases repair speed by 20%",
+			"Reduces tool consumption by 20%"
 		];
 		this.m.Requirements = [
 			{
@@ -22,7 +23,8 @@ this.blacksmith_follower <- this.inherit("scripts/retinue/follower", {
 
 	function onUpdate()
 	{
-		this.World.Assets.m.RepairSpeedMult *= 1.33;
+		this.World.Assets.m.RepairSpeedMult *= 1.2;
+		this.World.Assets.m.ArmorPartsPerArmor *= 0.8;
 		this.World.Assets.m.IsBlacksmithed = true;
 	}
 
