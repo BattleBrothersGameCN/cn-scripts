@@ -42,6 +42,27 @@ this.staggered_effect <- this.inherit("scripts/skills/skill", {
 		];
 	}
 
+	function getEffectDurationString()
+	{
+		local ret = "";
+
+		if (this.m.TurnsLeft == 2)
+		{
+			ret = "two turns";
+		}
+		else
+		{
+			ret = "one turn";
+		}
+
+		return ret;
+	}
+
+	function getLogEntryOnAdded( _user, _victim )
+	{
+		return _user + " has staggered " + _victim + " for " + this.getEffectDurationString();
+	}
+
 	function onAdded()
 	{
 		local actor = this.getContainer().getActor();

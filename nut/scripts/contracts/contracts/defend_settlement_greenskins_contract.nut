@@ -545,7 +545,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					function getResult()
 					{
 						local home = this.Contract.m.Home;
-						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.7);
+						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.7, this.Contract.getMinibossModifier());
 						party.getSprite("banner").setBrush(home.getBanner());
 						party.setDescription("用生命保卫家园的勇士。农夫、工匠、手艺人，唯独没有真正的士兵。");
 						party.setFootprintType(this.Const.World.FootprintsType.Militia);
@@ -566,7 +566,7 @@ this.defend_settlement_greenskins_contract <- this.inherit("scripts/contracts/co
 					function getResult()
 					{
 						local home = this.Contract.m.Home;
-						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.7);
+						local party = this.World.FactionManager.getFaction(this.Contract.getFaction()).spawnEntity(home.getTile(), home.getName() + "的民兵", false, this.Const.World.Spawn.Militia, home.getResources() * 0.7, this.Contract.getMinibossModifier());
 						party.getSprite("banner").setBrush(home.getBanner());
 						party.setDescription("用生命保卫家园的勇士。农夫、工匠、手艺人，唯独没有真正的士兵。");
 						party.setFootprintType(this.Const.World.FootprintsType.Militia);

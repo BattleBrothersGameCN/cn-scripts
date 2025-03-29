@@ -33,6 +33,27 @@ this.disarmed_effect <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
+	function getEffectDurationString()
+	{
+		local ret = "";
+
+		if (this.m.TurnsLeft == 2)
+		{
+			ret = "two turns";
+		}
+		else
+		{
+			ret = "one turn";
+		}
+
+		return ret;
+	}
+
+	function getLogEntryOnAdded( _user, _victim )
+	{
+		return _user + " has disarmed " + _victim + " for " + this.getEffectDurationString();
+	}
+
 	function onAdded()
 	{
 		if (this.getContainer().getActor().getCurrentProperties().IsResistantToAnyStatuses && this.Math.rand(1, 100) <= 50)

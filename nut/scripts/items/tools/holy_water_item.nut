@@ -3,7 +3,7 @@ this.holy_water_item <- this.inherit("scripts/items/weapons/weapon", {
 	function create()
 	{
 		this.weapon.create();
-		this.m.ID = "weapon.holy Water";
+		this.m.ID = "weapon.holy_water";
 		this.m.Name = "圣水瓶";
 		this.m.Description = "一瓶经神职人员赐福的圣水。可以短距离投掷。";
 		this.m.IconLarge = "tools/holy_water_01.png";

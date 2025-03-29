@@ -2,6 +2,7 @@ this.berserker_mushrooms_item <- this.inherit("scripts/items/item", {
 	m = {},
 	function create()
 	{
+		this.item.create();
 		this.m.ID = "accessory.berserker_mushrooms";
 		this.m.Name = "怪异蘑菇";
 		this.m.Description = "奇怪的蘑菇，迫使咀嚼它的人进入一种恍惚的愤怒状态，他们会感不到任何痛苦，并表现出显着增加的侵略性。谨慎食用。效果持续到下一场战斗。";

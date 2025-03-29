@@ -7,6 +7,7 @@ this.oathtaker_skull_01_item <- this.inherit("scripts/items/accessory/accessory"
 		this.m.Name = "小安瑟姆的颅骨";
 		this.m.Description = "第一位执誓者，小安瑟姆的颅骨。佩戴这样一件饰物，能让任何人充满荣誉和勇气。";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
+		this.m.ItemType = this.Const.Items.ItemType.Accessory | this.Const.Items.ItemType.Quest;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
 		this.m.IconLarge = "";

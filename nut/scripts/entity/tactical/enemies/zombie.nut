@@ -84,7 +84,6 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		local flip = this.Math.rand(0, 100) < 50;
 		this.m.IsCorpseFlipped = flip;
-		local isResurrectable = this.m.IsResurrectingOnFatality || _fatalityType != this.Const.FatalityType.Decapitated && _fatalityType != this.Const.FatalityType.Smashed;
 		local appearance = this.getItems().getAppearance();
 		local sprite_body = this.getSprite("body");
 		local sprite_head = this.getSprite("head");
@@ -337,54 +336,82 @@ this.zombie <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local custom = {
-				IsZombified = true,
-				InjuryType = this.m.InjuryType,
-				Face = sprite_head.getBrush().Name,
-				Body = sprite_body.getBrush().Name,
-				TattooBody = tattoo_body.HasBrush ? tattoo_body.getBrush().Name : null,
-				TattooHead = tattoo_head.HasBrush ? tattoo_head.getBrush().Name : null,
-				Hair = sprite_hair.HasBrush ? sprite_hair.getBrush().Name : null,
-				HairColor = sprite_hair.Color,
-				HairSaturation = sprite_hair.Saturation,
-				Beard = sprite_beard.HasBrush ? sprite_beard.getBrush().Name : null,
-				Surcoat = this.m.Surcoat,
-				Ethnicity = 0
-			};
-			local corpse = clone this.Const.Corpse;
-			corpse.Type = this.m.ResurrectWithScript;
-			corpse.Faction = this.getFaction();
-			corpse.CorpseName = "一个" + this.getName();
-			corpse.Tile = _tile;
-			corpse.Value = this.m.ResurrectionValue;
-			corpse.Armor = this.m.BaseProperties.Armor;
-			corpse.Items = this.getItems();
-			corpse.Color = sprite_body.Color;
-			corpse.Saturation = sprite_body.Saturation;
-			corpse.Custom = custom;
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated && !this.m.IsHeadless;
+		}
 
-			if (isResurrectable)
-			{
-				if (!this.m.IsResurrected && this.Math.rand(1, 100) <= this.m.ResurrectionChance)
-				{
-					corpse.IsConsumable = false;
-					corpse.IsResurrectable = false;
-					this.Time.scheduleEvent(this.TimeUnit.Rounds, this.Math.rand(1, 2), this.Tactical.Entities.resurrect, corpse);
-				}
-				else
-				{
-					corpse.IsResurrectable = true;
-					corpse.IsConsumable = true;
-				}
-			}
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
 
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
 		}
 
-		this.getItems().dropAll(_tile, _killer, !flip);
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local isResurrectable = this.m.IsResurrectingOnFatality || _fatalityType != this.Const.FatalityType.Decapitated && _fatalityType != this.Const.FatalityType.Smashed;
+		local sprite_body = this.getSprite("body");
+		local sprite_head = this.getSprite("head");
+		local sprite_hair = this.getSprite("hair");
+		local sprite_beard = this.getSprite("beard");
+		local tattoo_body = this.getSprite("tattoo_body");
+		local tattoo_head = this.getSprite("tattoo_head");
+		local custom = {
+			IsZombified = true,
+			InjuryType = this.m.InjuryType,
+			Face = sprite_head.getBrush().Name,
+			Body = sprite_body.getBrush().Name,
+			TattooBody = tattoo_body.HasBrush ? tattoo_body.getBrush().Name : null,
+			TattooHead = tattoo_head.HasBrush ? tattoo_head.getBrush().Name : null,
+			Hair = sprite_hair.HasBrush ? sprite_hair.getBrush().Name : null,
+			HairColor = sprite_hair.Color,
+			HairSaturation = sprite_hair.Saturation,
+			Beard = sprite_beard.HasBrush ? sprite_beard.getBrush().Name : null,
+			Surcoat = this.m.Surcoat,
+			Ethnicity = 0
+		};
+		local corpse = clone this.Const.Corpse;
+		corpse.Type = this.m.ResurrectWithScript;
+		corpse.Faction = this.getFaction();
+		corpse.CorpseName = "一个" + this.getName();
+		corpse.Value = this.m.ResurrectionValue;
+		corpse.Armor = this.m.BaseProperties.Armor;
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.Color = sprite_body.Color;
+		corpse.Saturation = sprite_body.Saturation;
+		corpse.Custom = custom;
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated && !this.m.IsHeadless;
+
+		if (isResurrectable)
+		{
+			if (!this.m.IsResurrected && this.Math.rand(1, 100) <= this.m.ResurrectionChance)
+			{
+				corpse.IsConsumable = false;
+				corpse.IsResurrectable = false;
+				this.Time.scheduleEvent(this.TimeUnit.Rounds, this.Math.rand(1, 2), this.Tactical.Entities.resurrect, corpse);
+			}
+			else
+			{
+				corpse.IsResurrectable = true;
+				corpse.IsConsumable = true;
+			}
+		}
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onBeforeCombatResult()

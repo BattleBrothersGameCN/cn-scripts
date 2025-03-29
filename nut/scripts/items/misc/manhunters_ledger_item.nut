@@ -8,7 +8,7 @@ this.manhunters_ledger_item <- this.inherit("scripts/items/item", {
 		this.m.Description = "一本详细记录了战团成员和合同条款的账簿。";
 		this.m.Icon = "misc/inventory_ledger_item.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
-		this.m.ItemType = this.Const.Items.ItemType.Misc;
+		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Quest;
 		this.m.Value = 0;
 	}
 

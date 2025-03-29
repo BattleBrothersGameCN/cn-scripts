@@ -260,16 +260,6 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 			return;
 		}
 
-		if (this.m.StunTime > this.Time.getVirtualTimeF())
-		{
-			return;
-		}
-
-		if (this.m.Controller != null)
-		{
-			this.m.Controller.think();
-		}
-
 		if (this.m.Flags.get("IsAlps"))
 		{
 			this.m.IsLeavingFootprints = false;
@@ -284,6 +274,16 @@ this.party <- this.inherit("scripts/entity/world/world_entity", {
 				this.m.VisibilityMult = 1.0;
 				this.getController().getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(true);
 			}
+		}
+
+		if (this.m.StunTime > this.Time.getVirtualTimeF())
+		{
+			return;
+		}
+
+		if (this.m.Controller != null)
+		{
+			this.m.Controller.think();
 		}
 
 		if (this.m.Path != null)

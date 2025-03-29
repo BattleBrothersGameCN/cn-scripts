@@ -1468,7 +1468,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "显示了战斗序列中的当前人数和人数上限，他们会在接下来的战斗里参战。\n\n你可以任意拖拽、放置人物；最上面一排是面对敌人的前排，第二排是后排，最下面一排是不参加战斗，用于保存角色的预备队。"
+						text = "Shows the current and maximum number of men placed in formation to fight in the next battle.\n\nDrag and drop your men to where you want them to be; the top row is the front facing the enemy, the second row is your back row, and the bottom row is your reserves of characters not taking part in battle."
 					}
 				];
 
