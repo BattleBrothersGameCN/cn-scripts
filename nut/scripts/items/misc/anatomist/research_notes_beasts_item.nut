@@ -8,7 +8,7 @@ this.research_notes_beasts_item <- this.inherit("scripts/items/item", {
 		this.m.Description = "一篇关于世界上所存在的各种怪兽的论文。书中关于那些最有趣——而且确实存在的生物的段落附近所有的空白都被笔记和注释填满了。";
 		this.m.Icon = "misc/inventory_anatomists_book_03.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
-		this.m.ItemType = this.Const.Items.ItemType.Misc;
+		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Quest;
 		this.m.Value = 0;
 	}
 

@@ -2,6 +2,7 @@ this.night_vision_elixir_item <- this.inherit("scripts/items/item", {
 	m = {},
 	function create()
 	{
+		this.item.create();
 		this.m.ID = "accessory.night_vision_elixir";
 		this.m.Name = "夜枭药剂";
 		this.m.Description = "饮用这瓶药剂之后，连夜晚也亮如白昼。谨慎服用。效果持续到下一场战斗。";
