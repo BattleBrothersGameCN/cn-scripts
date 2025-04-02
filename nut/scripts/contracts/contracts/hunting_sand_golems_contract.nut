@@ -74,7 +74,7 @@ this.hunting_sand_golems_contract <- this.inherit("scripts/contracts/contract", 
 				local mapSize = this.World.getMapSize();
 				local tile = this.Contract.getTileToSpawnLocation(playerTile, 8, 12, disallowedTerrain);
 				local party;
-				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "伊夫利特", false, this.Const.World.Spawn.SandGolems, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "伊夫利特", false, this.Const.World.Spawn.SandGolems, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.setDescription("活生生的石头制成的生物，由南方烈日的酷热和烈火塑造而成。");
 				party.setFootprintType(this.Const.World.FootprintsType.SandGolems);
 				party.setAttackableByAI(false);

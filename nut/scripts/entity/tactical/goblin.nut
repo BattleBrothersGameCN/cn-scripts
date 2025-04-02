@@ -134,19 +134,41 @@ this.goblin <- this.inherit("scripts/entity/tactical/actor", {
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一个" + this.getName();
-			corpse.Tile = _tile;
-			corpse.IsResurrectable = false;
-			corpse.IsConsumable = true;
-			corpse.Items = this.getItems();
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+		}
+
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
 		}
 
-		this.getItems().dropAll(_tile, _killer, flip);
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一个" + this.getName();
+		corpse.IsResurrectable = false;
+		corpse.IsConsumable = true;
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onAppearanceChanged( _appearance, _setDirty = true )

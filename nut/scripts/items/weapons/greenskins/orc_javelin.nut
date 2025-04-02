@@ -15,7 +15,7 @@ this.orc_javelin <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.orc_javelin";
 		this.m.Name = "一捆粗制标枪";
-		this.m.Description = "一捆用来投向目标的粗制标枪。射程有限，耗费体力，却能造成毁灭性的伤害。也能对盾牌造成些许伤害。";
+		this.m.Description = "一堆制作粗糙的标枪，用于投掷目标。射程有限且投掷起来颇为费力，但可能造成毁灭性的伤害。";
 		this.m.Categories = "投掷武器，单手持";
 		this.m.IconLarge = "weapons/ranged/orc_javelins.png";
 		this.m.Icon = "weapons/ranged/orc_javelins_70x70.png";

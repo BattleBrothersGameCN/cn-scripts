@@ -421,9 +421,10 @@ this.lindwurm_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
+		local flip = this.Math.rand(0, 100) < 50;
+
 		if (_tile != null)
 		{
-			local flip = this.Math.rand(0, 100) < 50;
 			local decal;
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
@@ -432,14 +433,37 @@ this.lindwurm_tail <- this.inherit("scripts/entity/tactical/actor", {
 			decal.Saturation = body.Saturation;
 			decal.Scale = 0.95;
 			this.spawnTerrainDropdownEffect(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一条林德蠕龙";
-			corpse.IsHeadAttached = true;
+		}
+
+		local tileLoot = this.getLootForTile(_killer, []);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
 		}
 
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一条林德蠕龙";
+		corpse.IsHeadAttached = true;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function checkMorale( _change, _difficulty, _type = this.Const.MoraleCheckType.Default, _showIconBeforeMoraleIcon = "", _noNewLine = false )
@@ -475,6 +499,7 @@ this.lindwurm_tail <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsMovable = false;
 		b.IsImmuneToDisarm = true;
 		b.IsImmuneToRoot = true;
+		b.IsImmuneToHeadshots = true;
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 180)
 		{

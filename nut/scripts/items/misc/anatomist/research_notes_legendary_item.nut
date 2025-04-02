@@ -8,7 +8,7 @@ this.research_notes_legendary_item <- this.inherit("scripts/items/item", {
 		this.m.Description = "这是一本薄薄的日志，用精致的皮革装订而成，里面记载着那些一度被认为只存在于神话和传说中的生物的寥寥数页研究笔记。";
 		this.m.Icon = "misc/inventory_anatomists_book_04.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
-		this.m.ItemType = this.Const.Items.ItemType.Misc;
+		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Quest;
 		this.m.Value = 0;
 	}
 
@@ -76,6 +76,21 @@ this.research_notes_legendary_item <- this.inherit("scripts/items/item", {
 				flag = "isLorekeeperPotionDiscovered",
 				creatureName = "博学者(Lorekeeper)",
 				potionName = "内部护符药水(Potion of Inner Phylactery)"
+			},
+			{
+				flag = "isLesserFleshGolemPotionAcquired",
+				creatureName = "小型血肉魔像",
+				potionName = "变身药水"
+			},
+			{
+				flag = "isGreaterFleshGolemPotionAcquired",
+				creatureName = "巨型血肉魔像",
+				potionName = "进步药水"
+			},
+			{
+				flag = "isGrandDivinerPotionAcquired",
+				creatureName = "大占卜师",
+				potionName = "启蒙之药"
 			}
 		];
 

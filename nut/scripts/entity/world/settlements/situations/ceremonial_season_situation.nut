@@ -3,7 +3,7 @@ this.ceremonial_season_situation <- this.inherit("scripts/entity/world/settlemen
 	function create()
 	{
 		this.situation.create();
-		this.m.ID = "situation.ceremonial_seasonn";
+		this.m.ID = "situation.ceremonial_season";
 		this.m.Name = "仪祭时节";
 		this.m.Description = "在祭典时节，神殿会消耗大量的熏香。对熏香的需求和价格都处于历史最高水平。";
 		this.m.Icon = "ui/settlement_status/settlement_effect_44.png";

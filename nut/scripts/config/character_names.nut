@@ -695,7 +695,6 @@ gt.Const.Strings.OathbringerNames <- [
 	"安瑟姆之锤",
 	"安瑟姆之盾",
 	"安瑟姆之剑",
-	"冒牌安瑟姆",
 	"缚誓者%randomname%",
 	"十字军%randomname%",
 	"狂信者%randomname%",

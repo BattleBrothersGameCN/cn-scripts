@@ -168,58 +168,82 @@ this.ghoul <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一个" + this.getName();
-			corpse.Tile = _tile;
-			corpse.Value = 2.0;
-			corpse.IsResurrectable = false;
-			corpse.Armor = this.m.BaseProperties.Armor;
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+		}
+
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
-
-			if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(1, 100) <= 50)
-			{
-				local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
-
-				for( local i = 0; i < n; i = ++i )
-				{
-					if (this.Const.DLC.Unhold)
-					{
-						local r = this.Math.rand(1, 100);
-						local loot;
-
-						if (r <= 35)
-						{
-							loot = this.new("scripts/items/misc/ghoul_teeth_item");
-						}
-						else if (r <= 70)
-						{
-							loot = this.new("scripts/items/misc/ghoul_horn_item");
-						}
-						else
-						{
-							loot = this.new("scripts/items/misc/ghoul_brain_item");
-						}
-
-						loot.drop(_tile);
-					}
-					else
-					{
-						local loot = this.new("scripts/items/misc/ghoul_teeth_item");
-						loot.drop(_tile);
-					}
-				}
-
-				if (this.Math.rand(1, 100) <= (this.m.Size - 1) * 15)
-				{
-					local loot = this.new("scripts/items/loot/growth_pearls_item");
-					loot.drop(_tile);
-				}
-			}
 		}
 
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function getLootForTile( _killer, _loot )
+	{
+		if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(1, 100) <= 50)
+		{
+			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+
+			for( local i = 0; i < n; i = ++i )
+			{
+				if (this.Const.DLC.Unhold)
+				{
+					local r = this.Math.rand(1, 100);
+
+					if (r <= 35)
+					{
+						_loot.push(this.new("scripts/items/misc/ghoul_teeth_item"));
+					}
+					else if (r <= 70)
+					{
+						_loot.push(this.new("scripts/items/misc/ghoul_horn_item"));
+					}
+					else
+					{
+						_loot.push(this.new("scripts/items/misc/ghoul_brain_item"));
+					}
+				}
+				else
+				{
+					_loot.push(this.new("scripts/items/misc/ghoul_teeth_item"));
+				}
+			}
+
+			if (this.Math.rand(1, 100) <= (this.m.Size - 1) * 15)
+			{
+				_loot.push(this.new("scripts/items/loot/growth_pearls_item"));
+			}
+		}
+
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一个" + this.getName();
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.Value = 2.0;
+		corpse.IsResurrectable = false;
+		corpse.Armor = this.m.BaseProperties.Armor;
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onAfterDeath( _tile )

@@ -770,6 +770,11 @@ this.world_state <- this.inherit("scripts/states/state", {
 			{
 				this.enterLocation(this.m.AutoEnterLocation.get());
 			}
+			else
+			{
+				this.m.Events.update();
+				this.m.Ambitions.update();
+			}
 		}
 		else if (this.m.AutoAttack != null && !this.m.AutoAttack.isNull() && this.m.AutoAttack.isAlive() && !this.m.AutoAttack.isHiddenToPlayer())
 		{
@@ -814,6 +819,8 @@ this.world_state <- this.inherit("scripts/states/state", {
 				}
 
 				this.m.LastAutoAttackPath = this.Time.getVirtualTimeF();
+				this.m.Events.update();
+				this.m.Ambitions.update();
 			}
 		}
 		else if (!this.m.IsGamePaused && !this.m.IsGameAutoPaused)
@@ -3154,6 +3161,15 @@ this.world_state <- this.inherit("scripts/states/state", {
 			this.logInfo("类型：" + this.m.LastTileHovered.Type);
 			return true;
 
+		case 20:
+			if (!this.m.IsDeveloperModeEnabled)
+			{
+				break;
+			}
+
+			this.World.State.getPlayer().setPos(this.World.getCamera().screenToWorld(this.Cursor.getX(), this.Cursor.getY()));
+			break;
+
 		case 21:
 			if (!this.m.IsDeveloperModeEnabled)
 			{
@@ -3268,6 +3284,40 @@ this.world_state <- this.inherit("scripts/states/state", {
 		return false;
 	}
 
+	function helper_handleCharacterScreenKeyInput( _key )
+	{
+		switch(_key.getKey())
+		{
+		case 11:
+		case 48:
+			this.m.CharacterScreen.switchToPreviousBrother();
+			break;
+
+		case 38:
+		case 14:
+		case 50:
+			this.m.CharacterScreen.switchToNextBrother();
+			break;
+
+		case 19:
+		case 13:
+		case 41:
+			this.toggleCharacterScreen();
+			break;
+		}
+	}
+
+	function helper_handleCampfireScreenKeyInput( _key )
+	{
+		switch(_key.getKey())
+		{
+		case 41:
+		case 26:
+			this.m.CampfireScreen.onModuleClosed();
+			break;
+		}
+	}
+
 	function helper_handleContextualKeyInput( _key )
 	{
 		if (this.isInLoadingScreen())
@@ -3282,38 +3332,13 @@ this.world_state <- this.inherit("scripts/states/state", {
 
 		if (this.isInCharacterScreen() && _key.getState() == 0)
 		{
-			switch(_key.getKey())
-			{
-			case 11:
-			case 48:
-				this.m.CharacterScreen.switchToPreviousBrother();
-				break;
-
-			case 38:
-			case 14:
-			case 50:
-				this.m.CharacterScreen.switchToNextBrother();
-				break;
-
-			case 19:
-			case 13:
-			case 41:
-				this.toggleCharacterScreen();
-				break;
-			}
-
+			this.helper_handleCharacterScreenKeyInput(_key);
 			return true;
 		}
 
 		if (this.m.CampfireScreen != null && this.m.CampfireScreen.isVisible() && _key.getState() == 0)
 		{
-			switch(_key.getKey())
-			{
-			case 41:
-			case 26:
-				this.m.CampfireScreen.onModuleClosed();
-				break;
-			}
+			this.helper_handleCampfireScreenKeyInput(_key);
 		}
 		else if (_key.getState() == 0)
 		{
@@ -3407,12 +3432,64 @@ this.world_state <- this.inherit("scripts/states/state", {
 					break;
 				}
 
+				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating() || this.m.EventScreen.isJustShown())
+				{
+					break;
+				}
+
+				this.m.EventScreen.onButtonPressed(0);
+				return true;
+
 			case 2:
 				if (!this.m.MenuStack.hasBacksteps())
 				{
 					this.setFastTime();
 					break;
 				}
+
+				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating() || this.m.EventScreen.isJustShown())
+				{
+					break;
+				}
+
+				this.m.EventScreen.onButtonPressed(1);
+				return true;
+
+			case 3:
+				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating() || this.m.EventScreen.isJustShown())
+				{
+					break;
+				}
+
+				this.m.EventScreen.onButtonPressed(2);
+				return true;
+
+			case 4:
+				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating() || this.m.EventScreen.isJustShown())
+				{
+					break;
+				}
+
+				this.m.EventScreen.onButtonPressed(3);
+				return true;
+
+			case 5:
+				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating() || this.m.EventScreen.isJustShown())
+				{
+					break;
+				}
+
+				this.m.EventScreen.onButtonPressed(4);
+				return true;
+
+			case 6:
+				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating() || this.m.EventScreen.isJustShown())
+				{
+					break;
+				}
+
+				this.m.EventScreen.onButtonPressed(5);
+				return true;
 
 			case 16:
 				if (!this.m.MenuStack.hasBacksteps())
@@ -3463,42 +3540,6 @@ this.world_state <- this.inherit("scripts/states/state", {
 				}
 
 				break;
-
-			case 1:
-				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating())
-				{
-					break;
-				}
-
-				this.m.EventScreen.onButtonPressed(0);
-				return true;
-
-			case 2:
-				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating())
-				{
-					break;
-				}
-
-				this.m.EventScreen.onButtonPressed(1);
-				return true;
-
-			case 3:
-				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating())
-				{
-					break;
-				}
-
-				this.m.EventScreen.onButtonPressed(2);
-				return true;
-
-			case 4:
-				if (!this.m.EventScreen.isVisible() || this.m.EventScreen.isAnimating())
-				{
-					break;
-				}
-
-				this.m.EventScreen.onButtonPressed(3);
-				return true;
 
 			case 95:
 				this.m.IsForcingAttack = false;

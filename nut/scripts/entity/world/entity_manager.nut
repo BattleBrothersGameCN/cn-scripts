@@ -495,7 +495,7 @@ this.entity_manager <- {
 			}
 
 			local r = this.Math.min(330, 150 + this.World.getTime().Days);
-			this.Const.World.Common.assignTroops(party, this.Const.World.Spawn.Mercenaries, this.Math.rand(r * 0.8, r));
+			this.Const.World.Common.assignTroops(party, this.Const.World.Spawn.Mercenaries, this.Math.rand(r * 0.8, r), 0);
 			party.getLoot().Money = this.Math.rand(300, 600);
 			party.getLoot().ArmorParts = this.Math.rand(0, 25);
 			party.getLoot().Medicine = this.Math.rand(0, 10);

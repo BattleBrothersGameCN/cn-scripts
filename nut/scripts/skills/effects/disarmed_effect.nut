@@ -33,6 +33,27 @@ this.disarmed_effect <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
+	function getEffectDurationString()
+	{
+		local ret = "";
+
+		if (this.m.TurnsLeft == 2)
+		{
+			ret = "两回合";
+		}
+		else
+		{
+			ret = "一回合";
+		}
+
+		return ret;
+	}
+
+	function getLogEntryOnAdded( _user, _victim )
+	{
+		return _user + "使" + _victim + "缴械了" + this.getEffectDurationString();
+	}
+
 	function onAdded()
 	{
 		if (this.getContainer().getActor().getCurrentProperties().IsResistantToAnyStatuses && this.Math.rand(1, 100) <= 50)

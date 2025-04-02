@@ -1003,11 +1003,11 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				if (this.Math.rand(1, 100) <= 50)
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "强盗", false, this.Const.World.Spawn.BanditRaiders, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "强盗", false, this.Const.World.Spawn.BanditRaiders, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 				}
 				else
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "强盗猎人", false, this.Const.World.Spawn.BanditRoamers, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(tile, "强盗猎人", false, this.Const.World.Spawn.BanditRoamers, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 				}
 
 				party.setDescription("一伙粗野强盗，专挑弱者下手。");
@@ -1045,11 +1045,11 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				if (this.Math.rand(1, 100) <= 50)
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "地精掠袭者", false, this.Const.World.Spawn.GoblinRaiders, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "地精掠袭者", false, this.Const.World.Spawn.GoblinRaiders, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 				}
 				else
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "地精侦察兵", false, this.Const.World.Spawn.GoblinScouts, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "地精侦察兵", false, this.Const.World.Spawn.GoblinScouts, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 				}
 
 				party.setDescription("一群捣蛋的地精，小而狡猾，不可低估。");
@@ -1082,7 +1082,7 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 			}
 			else if (barbarians_dist <= goblins_dist && barbarians_dist <= bandits_dist && barbarians_dist <= orcs_dist && barbarians_dist <= nomads_dist)
 			{
-				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Barbarians).spawnEntity(tile, "野蛮人", false, this.Const.World.Spawn.Barbarians, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Barbarians).spawnEntity(tile, "野蛮人", false, this.Const.World.Spawn.Barbarians, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 				party.setDescription("一支野蛮部落的战团。");
 				party.setFootprintType(this.Const.World.FootprintsType.Barbarians);
 				party.getLoot().Money = this.Math.rand(0, 50);
@@ -1123,7 +1123,7 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 			}
 			else if (nomads_dist <= barbarians_dist && nomads_dist <= goblins_dist && nomads_dist <= bandits_dist && nomads_dist <= orcs_dist)
 			{
-				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.OrientalBandits).spawnEntity(tile, "游牧民", false, this.Const.World.Spawn.NomadRaiders, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.OrientalBandits).spawnEntity(tile, "游牧民", false, this.Const.World.Spawn.NomadRaiders, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 				party.setDescription("一群沙漠掠袭者，狩猎任何试图穿越沙海的人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Nomads);
 				party.getLoot().Money = this.Math.rand(50, 200);
@@ -1155,11 +1155,11 @@ this.patrol_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				if (this.Math.rand(1, 100) <= 50)
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 				}
 				else
 				{
-					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "兽人侦察兵", false, this.Const.World.Spawn.OrcScouts, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "兽人侦察兵", false, this.Const.World.Spawn.OrcScouts, 80 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 				}
 
 				party.setDescription("一群凶狠的兽人，绿皮肤，远高过所有人。");

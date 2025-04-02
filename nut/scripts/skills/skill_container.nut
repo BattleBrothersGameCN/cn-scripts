@@ -78,6 +78,7 @@ this.skill_container <- {
 		if (!this.m.IsUpdating)
 		{
 			this.m.IsUpdating = true;
+			local isRemoved = false;
 
 			foreach( i, skill in this.m.Skills )
 			{
@@ -86,12 +87,17 @@ this.skill_container <- {
 					skill.onRemoved();
 					skill.setContainer(null);
 					this.m.Skills.remove(i);
-					this.update();
+					isRemoved = true;
 					break;
 				}
 			}
 
 			this.m.IsUpdating = false;
+
+			if (isRemoved)
+			{
+				this.update();
+			}
 		}
 		else
 		{
@@ -113,7 +119,6 @@ this.skill_container <- {
 					skill.onRemoved();
 					skill.setContainer(null);
 					this.m.Skills.remove(i);
-					this.logDebug("技能 [" + skill.getName() + "] 移除自 [" + this.m.Actor.getName() + "].");
 					isRemoved = true;
 					break;
 				}
@@ -195,7 +200,6 @@ this.skill_container <- {
 		{
 			this.m.Skills[i].onRemoved();
 			this.m.Skills[i].setContainer(null);
-			this.logDebug("技能 [" + this.m.Skills[i].getName() + "] 移除自 [" + this.m.Actor.getName() + "].");
 			this.m.Skills.remove(i);
 		}
 
@@ -270,7 +274,7 @@ this.skill_container <- {
 		{
 			if (!skill.isGarbage() && skill.isType(_filter) && !skill.isType(_notFilter) && !skill.isHidden())
 			{
-				if (skill.getItem() != null)
+				if (skill.getItem() != null && !skill.getItem().isNull())
 				{
 					ret[skill.getItem().getCurrentSlotType()].push(this.WeakTableRef(skill));
 				}
@@ -940,6 +944,26 @@ this.skill_container <- {
 			}
 
 			skill.onDismiss();
+		}
+
+		this.m.IsUpdating = false;
+		this.update();
+	}
+
+	function onMovementFinished()
+	{
+		this.m.IsUpdating = true;
+		this.m.IsBusy = false;
+		this.m.BusyStack = 0;
+
+		foreach( skill in this.m.Skills )
+		{
+			if (skill.isGarbage())
+			{
+				continue;
+			}
+
+			skill.onMovementFinished();
 		}
 
 		this.m.IsUpdating = false;
