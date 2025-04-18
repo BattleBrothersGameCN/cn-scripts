@@ -282,7 +282,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 
 							return 0;
 						});
-						local party = enemyNobleHouse.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getName() + " 战团", true, this.Const.World.Spawn.Noble, (this.Math.rand(100, 120) + this.Flags.get("Wave") * 10 + (this.Flags.get("IsAlliedReinforcements") ? 50 : 0)) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+						local party = enemyNobleHouse.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getName() + " 战团", true, this.Const.World.Spawn.Noble, (this.Math.rand(100, 120) + this.Flags.get("Wave") * 10 + (this.Flags.get("IsAlliedReinforcements") ? 50 : 0)) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 						party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + enemyNobleHouse.getBannerString());
 						party.setDescription("听命于当地领主的职业军人。");
 						party.getLoot().Money = this.Math.rand(50, 200);
@@ -906,7 +906,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 
 			return 0;
 		});
-		local party = cityState.spawnEntity(tiles[0].Tile, "团" + cityState.getNameOnly(), true, this.Const.World.Spawn.Southern, this.Math.rand(100, 150) * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = cityState.spawnEntity(tiles[0].Tile, "团" + cityState.getNameOnly(), true, this.Const.World.Spawn.Southern, this.Math.rand(100, 150) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + cityState.getBannerString());
 		party.setDescription("忠于城邦的应征士兵。");
 		party.getLoot().Money = this.Math.rand(50, 200);

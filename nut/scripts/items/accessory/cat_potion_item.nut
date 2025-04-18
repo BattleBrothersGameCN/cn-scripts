@@ -2,6 +2,7 @@ this.cat_potion_item <- this.inherit("scripts/items/item", {
 	m = {},
 	function create()
 	{
+		this.item.create();
 		this.m.ID = "accessory.cat_potion";
 		this.m.Name = "灵猫药剂";
 		this.m.Description = "敏捷如猫！这种药水能增强你的感官，提高反应能力。谨慎服用。效果持续到下一场战斗。";

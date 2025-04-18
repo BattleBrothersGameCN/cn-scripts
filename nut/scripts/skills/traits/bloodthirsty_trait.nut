@@ -44,7 +44,7 @@ this.bloodthirsty_trait <- this.inherit("scripts/skills/traits/character_trait",
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "所有的击杀都是必死击杀(如果武器允许)。"
+				text = "所有的击杀都是必死击杀(如果武器允许)"
 			}
 		];
 	}

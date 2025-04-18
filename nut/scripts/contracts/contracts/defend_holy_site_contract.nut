@@ -130,7 +130,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 				if (this.Contract.getDifficultyMult() >= 0.95)
 				{
 					local cityState = cityStates[this.Math.rand(0, cityStates.len() - 1)];
-					local party = cityState.spawnEntity(this.Contract.m.Destination.getTile(), "团" + cityState.getNameOnly(), true, this.Const.World.Spawn.Southern, this.Math.rand(100, 150) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+					local party = cityState.spawnEntity(this.Contract.m.Destination.getTile(), "团" + cityState.getNameOnly(), true, this.Const.World.Spawn.Southern, this.Math.rand(100, 150) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 					party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + cityState.getBannerString());
 					party.setDescription("忠于城邦的应征士兵。");
 					party.getLoot().Money = this.Math.rand(50, 200);
@@ -1174,7 +1174,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 			}
 		}
 
-		local party = f.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + " 战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 150) * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = f.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + " 战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 150) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
 		party.setDescription("听命于当地领主的职业军人。");
 		party.getLoot().Money = this.Math.rand(50, 200);
@@ -1275,7 +1275,7 @@ this.defend_holy_site_contract <- this.inherit("scripts/contracts/contract", {
 			candidates.push(s);
 		}
 
-		local party = f.spawnEntity(tiles[0].Tile, "团" + candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly(), true, this.Const.World.Spawn.Southern, (this.m.Flags.get("IsEnemyLuredAway") ? 130 : 160) * this.getScaledDifficultyMult());
+		local party = f.spawnEntity(tiles[0].Tile, "团" + candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly(), true, this.Const.World.Spawn.Southern, (this.m.Flags.get("IsEnemyLuredAway") ? 130 : 160) * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
 		party.setDescription("忠于城邦的应征士兵。");
 		party.setAttackableByAI(false);

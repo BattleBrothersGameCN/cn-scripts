@@ -351,7 +351,7 @@ this.confront_warlord_contract <- this.inherit("scripts/contracts/contract", {
 				local playerTile = this.World.State.getPlayer().getTile();
 				local nearest_orcs = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).getNearestSettlement(playerTile);
 				local tile = this.Contract.getTileToSpawnLocation(playerTile, 9, 15);
-				local party = this.World.FactionManager.getFaction(nearest_orcs.getFaction()).spawnEntity(tile, "绿皮军团", false, this.Const.World.Spawn.GreenskinHorde, 130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				local party = this.World.FactionManager.getFaction(nearest_orcs.getFaction()).spawnEntity(tile, "绿皮军团", false, this.Const.World.Spawn.GreenskinHorde, 130 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.getSprite("banner").setBrush(nearest_orcs.getBanner());
 				party.getSprite("body").setBrush("figure_orc_05");
 				party.setDescription("可怖的兽人军阀领导绿皮军团。");

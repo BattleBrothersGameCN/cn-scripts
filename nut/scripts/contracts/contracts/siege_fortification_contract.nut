@@ -1686,7 +1686,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 		}
 
 		local enemyFaction = this.m.Origin.getOwner();
-		local party = enemyFaction.spawnEntity(tile, this.m.Origin.getOwner().getName() + "军队(Army)", true, this.Const.World.Spawn.Noble, 200 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = enemyFaction.spawnEntity(tile, this.m.Origin.getOwner().getName() + "军队(Army)", true, this.Const.World.Spawn.Noble, 200 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + enemyFaction.getBannerString());
 		party.getSprite("banner").setBrush(enemyFaction.getBannerSmall());
 		party.setDescription("听命于当地领主的职业军人。");
@@ -1758,7 +1758,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 		}
 
 		local enemyFaction = this.m.Origin.getOwner();
-		local party = enemyFaction.spawnEntity(tile, "供应商队", false, this.Const.World.Spawn.NobleCaravan, this.Math.rand(100, 150));
+		local party = enemyFaction.spawnEntity(tile, "供应商队", false, this.Const.World.Spawn.NobleCaravan, this.Math.rand(100, 150), this.getMinibossModifier());
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
 		party.setDescription("一支有武装护卫的商队，在定居点间运送给养、物资和装备。");
@@ -1850,7 +1850,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 			}
 
 			lastTile = tile;
-			local party = f.spawnEntity(tile, castles[this.Math.rand(0, castles.len() - 1)].getName() + " 战团", true, this.Const.World.Spawn.Noble, castles[this.Math.rand(0, castles.len() - 1)].getResources());
+			local party = f.spawnEntity(tile, castles[this.Math.rand(0, castles.len() - 1)].getName() + " 战团", true, this.Const.World.Spawn.Noble, castles[this.Math.rand(0, castles.len() - 1)].getResources(), this.getMinibossModifier());
 			party.setDescription("听命于当地领主的职业军人。");
 			party.setVisibilityMult(2.5);
 

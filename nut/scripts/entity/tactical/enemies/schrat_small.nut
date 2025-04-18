@@ -62,9 +62,10 @@ this.schrat_small <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
+		local flip = this.Math.rand(0, 100) < 50;
+
 		if (_tile != null)
 		{
-			local flip = this.Math.rand(0, 100) < 50;
 			local decal;
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
@@ -73,14 +74,39 @@ this.schrat_small <- this.inherit("scripts/entity/tactical/actor", {
 			decal.Saturation = body.Saturation;
 			decal.Scale = 0.95;
 			this.spawnTerrainDropdownEffect(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一个" + this.getName();
-			corpse.IsHeadAttached = true;
+		}
+
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
 		}
 
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一个" + this.getName();
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsHeadAttached = true;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onInit()
@@ -93,6 +119,7 @@ this.schrat_small <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsImmuneToKnockBackAndGrab = true;
 		b.IsImmuneToStun = true;
 		b.IsImmuneToRoot = true;
+		b.IsImmuneToHeadshots = true;
 		b.IsIgnoringArmorOnAttack = true;
 		b.IsAffectedByNight = false;
 		b.IsAffectedByInjuries = false;

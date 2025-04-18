@@ -2,6 +2,7 @@ this.quiver_of_bolts <- this.inherit("scripts/items/ammo/ammo", {
 	m = {},
 	function create()
 	{
+		this.ammo.create();
 		this.m.ID = "ammo.bolts";
 		this.m.Name = "弩矢袋";
 		this.m.Description = "一整袋弩矢，适用于弩。弹药充足时，会在战斗后自动补充。";

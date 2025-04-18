@@ -42,6 +42,27 @@ this.staggered_effect <- this.inherit("scripts/skills/skill", {
 		];
 	}
 
+	function getEffectDurationString()
+	{
+		local ret = "";
+
+		if (this.m.TurnsLeft == 2)
+		{
+			ret = "两回合";
+		}
+		else
+		{
+			ret = "一回合";
+		}
+
+		return ret;
+	}
+
+	function getLogEntryOnAdded( _user, _victim )
+	{
+		return _user + "使" + _victim + "趔趄了" + this.getEffectDurationString();
+	}
+
 	function onAdded()
 	{
 		local actor = this.getContainer().getActor();

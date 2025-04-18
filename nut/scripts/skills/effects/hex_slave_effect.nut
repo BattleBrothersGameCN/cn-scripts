@@ -32,7 +32,7 @@ this.hex_slave_effect <- this.inherit("scripts/skills/skill", {
 
 	function isAlive()
 	{
-		return this.getContainer() != null && !this.getContainer().isNull() && this.getContainer().getActor() != null && this.getContainer().getActor().isAlive() && this.getContainer().getActor().getHitpoints() > 0;
+		return this.getContainer() != null && !this.getContainer().isNull() && this.getContainer().getActor() != null && !this.getContainer().getActor().isNull() && this.getContainer().getActor().isAlive() && this.getContainer().getActor().getHitpoints() > 0;
 	}
 
 	function create()

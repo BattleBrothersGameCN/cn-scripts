@@ -8,7 +8,7 @@ this.research_notes_greenskins_item <- this.inherit("scripts/items/item", {
 		this.m.Description = "一系列的目击者报告、实验日志和研究笔记，里面详细介绍了各种绿皮的躯体构造以及对样本的解剖记录。";
 		this.m.Icon = "misc/inventory_anatomists_book_01.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
-		this.m.ItemType = this.Const.Items.ItemType.Misc;
+		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Quest;
 		this.m.Value = 0;
 	}
 

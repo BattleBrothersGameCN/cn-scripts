@@ -193,36 +193,63 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 			decal.Scale = 0.9;
 			decal.setBrightness(0.9);
 			this.spawnTerrainDropdownEffect(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一个" + this.getName();
-			corpse.Tile = _tile;
-			corpse.Value = 2.0;
-			corpse.IsResurrectable = false;
-			corpse.IsConsumable = false;
-			corpse.Armor = this.m.BaseProperties.Armor;
-			corpse.IsHeadAttached = true;
+		}
+
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
+		}
 
-			if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(1, 100) <= 40)
+		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function getLootForTile( _killer, _loot )
+	{
+		if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(1, 100) <= 40)
+		{
+			local n = 0 + this.Math.rand(0, 1) + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+
+			for( local i = 0; i < n; i = ++i )
 			{
-				local n = 0 + this.Math.rand(0, 1) + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
-
-				for( local i = 0; i < n; i = ++i )
-				{
-					local loot = this.new("scripts/items/misc/sulfurous_rocks_item");
-					loot.drop(_tile);
-				}
-
-				if (this.Math.rand(1, 100) <= 10)
-				{
-					local loot = this.new("scripts/items/loot/glittering_rock_item");
-					loot.drop(_tile);
-				}
+				_loot.push(this.new("scripts/items/misc/sulfurous_rocks_item"));
 			}
 
-			this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+			if (this.Math.rand(1, 100) <= 10)
+			{
+				_loot.push(this.new("scripts/items/loot/glittering_rock_item"));
+			}
 		}
+
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一个" + this.getName();
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.Value = 2.0;
+		corpse.IsResurrectable = false;
+		corpse.IsConsumable = false;
+		corpse.Armor = this.m.BaseProperties.Armor;
+		corpse.IsHeadAttached = true;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onAfterDeath( _tile )
@@ -277,6 +304,7 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsImmuneToPoison = true;
 		b.IsImmuneToStun = true;
 		b.IsImmuneToFire = true;
+		b.IsImmuneToHeadshots = true;
 		b.IsAffectedByInjuries = false;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
@@ -340,6 +368,11 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.WorldTroop.Script = this.Const.World.Spawn.Troops.SandGolemMEDIUM.Script;
 				this.m.WorldTroop.Strength = this.Const.World.Spawn.Troops.SandGolemMEDIUM.Strength;
 			}
+
+			b.Armor[0] = 110;
+			b.Armor[1] = 110;
+			b.ArmorMax[0] = 110;
+			b.ArmorMax[1] = 110;
 		}
 		else if (this.m.Size == 3)
 		{
@@ -362,6 +395,11 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.WorldTroop.Script = this.Const.World.Spawn.Troops.SandGolemHIGH.Script;
 				this.m.WorldTroop.Strength = this.Const.World.Spawn.Troops.SandGolemHIGH.Strength;
 			}
+
+			b.Armor[0] = 110;
+			b.Armor[1] = 110;
+			b.ArmorMax[0] = 110;
+			b.ArmorMax[1] = 110;
 		}
 
 		this.m.SoundPitch = 1.2 - this.m.Size * 0.1;
@@ -406,6 +444,11 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.WorldTroop.Script = this.Const.World.Spawn.Troops.SandGolemMEDIUM.Script;
 				this.m.WorldTroop.Strength = this.Const.World.Spawn.Troops.SandGolemMEDIUM.Strength;
 			}
+
+			b.Armor[0] = 110;
+			b.Armor[1] = 110;
+			b.ArmorMax[0] = 110;
+			b.ArmorMax[1] = 110;
 		}
 		else if (this.m.Size == 1)
 		{
@@ -427,6 +470,11 @@ this.sand_golem <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.WorldTroop.Script = this.Const.World.Spawn.Troops.SandGolem.Script;
 				this.m.WorldTroop.Strength = this.Const.World.Spawn.Troops.SandGolem.Strength;
 			}
+
+			b.Armor[0] = 110;
+			b.Armor[1] = 110;
+			b.ArmorMax[0] = 110;
+			b.ArmorMax[1] = 110;
 		}
 
 		this.m.SoundPitch = 1.2 - this.m.Size * 0.1;

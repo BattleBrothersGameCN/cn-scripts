@@ -98,7 +98,6 @@ this.human <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
-		local isResurrectable = _fatalityType == this.Const.FatalityType.None || _fatalityType == this.Const.FatalityType.Disemboweled;
 		local appearance = this.getItems().getAppearance();
 		local flip = this.Math.rand(0, 100) < 50;
 		this.m.IsCorpseFlipped = flip;
@@ -358,57 +357,82 @@ this.human <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local custom = {
-				IsZombified = false,
-				InjuryType = 4,
-				Face = sprite_head.getBrush().Name,
-				Body = sprite_body.getBrush().Name,
-				TattooBody = null,
-				TattooHead = null,
-				Hair = sprite_hair.HasBrush ? sprite_hair.getBrush().Name : null,
-				HairColor = sprite_hair.Color,
-				HairSaturation = sprite_hair.Saturation,
-				Beard = sprite_beard.HasBrush ? sprite_beard.getBrush().Name : null,
-				Surcoat = this.m.Surcoat,
-				Ethnicity = this.m.Ethnicity
-			};
-			local corpse = clone this.Const.Corpse;
-			corpse.Type = "scripts/entity/tactical/enemies/zombie_player";
-			corpse.Faction = this.getFaction();
-			corpse.CorpseName = this.getName();
-			corpse.Tile = _tile;
-			corpse.Value = 8.0;
-			corpse.Hitpoints = 1.0;
-			corpse.IsResurrectable = isResurrectable;
-			corpse.IsConsumable = _fatalityType != this.Const.FatalityType.Unconscious;
-			corpse.Armor = this.m.BaseProperties.Armor;
-			corpse.Name = "僵尸" + this.getName();
-			corpse.Items = _fatalityType != this.Const.FatalityType.Unconscious ? this.getItems() : null;
-			corpse.Color = sprite_head.Color;
-			corpse.Saturation = sprite_head.Saturation;
-			corpse.Custom = custom;
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+		}
+
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+
+		if (_fatalityType != this.Const.FatalityType.Unconscious)
+		{
+			this.dropLoot(_tile, tileLoot, !flip);
+		}
+
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
 		}
 
-		if (_fatalityType != this.Const.FatalityType.Unconscious)
-		{
-			this.getItems().dropAll(_tile, _killer, !flip);
-		}
-
-		if (_tile != null && !this.Tactical.State.isScenarioMode() && !this.Tactical.State.getStrategicProperties().IsArenaMode && this.World.FactionManager.isUndeadScourge() && isResurrectable && this.Math.rand(1, 100) <= 33)
-		{
-			local corpse = _tile.Properties.get("Corpse");
-			corpse.Faction = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).getID();
-			corpse.Hitpoints = 1.0;
-			corpse.Items = this.getItems();
-			corpse.IsConsumable = false;
-			corpse.IsResurrectable = false;
-			this.Time.scheduleEvent(this.TimeUnit.Rounds, this.Math.rand(2, 3), this.Tactical.Entities.resurrect, corpse);
-		}
-
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local isResurrectable = _fatalityType == this.Const.FatalityType.None || _fatalityType == this.Const.FatalityType.Disemboweled;
+		local sprite_body = this.getSprite("body");
+		local sprite_head = this.getSprite("head");
+		local sprite_hair = this.getSprite("hair");
+		local sprite_beard = this.getSprite("beard");
+		local custom = {
+			IsZombified = false,
+			InjuryType = 4,
+			Face = sprite_head.getBrush().Name,
+			Body = sprite_body.getBrush().Name,
+			TattooBody = null,
+			TattooHead = null,
+			Hair = sprite_hair.HasBrush ? sprite_hair.getBrush().Name : null,
+			HairColor = sprite_hair.Color,
+			HairSaturation = sprite_hair.Saturation,
+			Beard = sprite_beard.HasBrush ? sprite_beard.getBrush().Name : null,
+			Surcoat = this.m.Surcoat,
+			Ethnicity = this.m.Ethnicity
+		};
+		local corpse = clone this.Const.Corpse;
+		corpse.Type = "scripts/entity/tactical/enemies/zombie_player";
+		corpse.Faction = this.getFaction();
+		corpse.CorpseName = this.getName();
+		corpse.Value = 8.0;
+		corpse.Hitpoints = 1.0;
+		corpse.IsResurrectable = isResurrectable;
+		corpse.IsConsumable = _fatalityType != this.Const.FatalityType.Unconscious;
+		corpse.Armor = this.m.BaseProperties.Armor;
+		corpse.Name = "僵尸" + this.getName();
+		corpse.Items = _fatalityType != this.Const.FatalityType.Unconscious ? this.getItems().prepareItemsForCorpse(_killer) : null;
+		corpse.Color = sprite_head.Color;
+		corpse.Saturation = sprite_head.Saturation;
+		corpse.Custom = custom;
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+
+			if (!this.Tactical.State.isScenarioMode() && !this.Tactical.State.getStrategicProperties().IsArenaMode && this.World.FactionManager.isUndeadScourge() && isResurrectable && this.Math.rand(1, 100) <= 33)
+			{
+				corpse.Faction = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).getID();
+				corpse.IsConsumable = false;
+				corpse.IsResurrectable = false;
+				this.Time.scheduleEvent(this.TimeUnit.Rounds, this.Math.rand(2, 3), this.Tactical.Entities.resurrect, corpse);
+			}
+		}
+
+		return corpse;
 	}
 
 	function onFactionChanged()

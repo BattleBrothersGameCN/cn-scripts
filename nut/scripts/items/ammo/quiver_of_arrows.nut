@@ -2,6 +2,7 @@ this.quiver_of_arrows <- this.inherit("scripts/items/ammo/ammo", {
 	m = {},
 	function create()
 	{
+		this.ammo.create();
 		this.m.ID = "ammo.arrows";
 		this.m.Name = "弓箭袋";
 		this.m.Description = "一整袋箭支，适用于各式弓。弹药充足时，会在战斗后自动补充。";

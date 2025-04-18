@@ -27,7 +27,6 @@ this.break_ally_free_skill <- this.inherit("scripts/skills/skill", {
 
 	function getTooltip()
 	{
-		local chance = this.Math.min(100, this.getContainer().getActor().getCurrentProperties().getMeleeSkill() - 10);
 		return [
 			{
 				id = 1,
@@ -48,7 +47,7 @@ this.break_ally_free_skill <- this.inherit("scripts/skills/skill", {
 				id = 4,
 				type = "text",
 				icon = "ui/icons/melee_skill.png",
-				text = "基于近战技能，成功率为 [color=" + this.Const.UI.Color.PositiveValue + "]" + chance + "%[/color] 。如果已经尝试过解救盟友则会更高。"
+				text = "基于近战技能，成功率为 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.getChance() + "%[/color] 。如果已经尝试过解救盟友则会更高。"
 			}
 		];
 	}
