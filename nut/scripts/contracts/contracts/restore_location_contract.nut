@@ -595,7 +595,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 	function spawnCaravan()
 	{
 		local faction = this.World.FactionManager.getFaction(this.getFaction());
-		local party = faction.spawnEntity(this.m.Home.getTile(), "工人商队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.4);
+		local party = faction.spawnEntity(this.m.Home.getTile(), "工人商队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.4, this.getMinibossModifier());
 		party.getSprite("banner").Visible = false;
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);

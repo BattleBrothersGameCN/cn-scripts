@@ -113,7 +113,7 @@ this.hunting_schrats_contract <- this.inherit("scripts/contracts/contract", {
 
 				local tile = this.Contract.getTileToSpawnLocation(playerTile, numWoods >= 12 ? 6 : 3, 11, disallowedTerrain);
 				local party;
-				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "树人", false, this.Const.World.Spawn.Schrats, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "树人", false, this.Const.World.Spawn.Schrats, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.setDescription("一种树皮和木头的生物，混迹于树间，缓慢地蹒跚而行，它的根在土壤中挖掘。");
 				party.setFootprintType(this.Const.World.FootprintsType.Schrats);
 				party.setAttackableByAI(false);

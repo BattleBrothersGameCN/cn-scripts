@@ -8,7 +8,7 @@ this.research_notes_undead_item <- this.inherit("scripts/items/item", {
 		this.m.Description = "一本写满了民间故事、验尸记录、尸检笔记和一个所谓的亡灵巫师的疯狂涂鸦的笔记簿，你们对不死亡灵所知的一切尽数记载其中。";
 		this.m.Icon = "misc/inventory_anatomists_book_02.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
-		this.m.ItemType = this.Const.Items.ItemType.Misc;
+		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Quest;
 		this.m.Value = 0;
 	}
 

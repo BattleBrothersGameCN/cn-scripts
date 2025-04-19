@@ -30,7 +30,11 @@ this.item <- {
 		IsAllowedInBag = true,
 		IsUsable = false,
 		IsSold = false,
-		IsBought = false
+		IsBought = false,
+		IsPrecious = false,
+		IsUnique = false,
+		IsSellable = true,
+		Flags = null
 	},
 	function setContainer( _c )
 	{
@@ -112,6 +116,11 @@ this.item <- {
 	function getLastEquippedByFaction()
 	{
 		return this.m.LastEquippedByFaction;
+	}
+
+	function getFlags()
+	{
+		return this.m.Flags;
 	}
 
 	function setCurrentSlotType( _t )
@@ -264,6 +273,12 @@ this.item <- {
 		this.updateAppearance();
 	}
 
+	function improveCondition( _a )
+	{
+		this.m.Condition = this.Math.minf(this.m.Condition + _a, this.m.ConditionMax);
+		this.updateAppearance();
+	}
+
 	function setMagicNumber( _m )
 	{
 		this.m.MagicNumber = _m;
@@ -296,6 +311,21 @@ this.item <- {
 	function getStaminaModifier()
 	{
 		return 0;
+	}
+
+	function isSellable()
+	{
+		return this.m.IsSellable;
+	}
+
+	function isUnique()
+	{
+		return this.isItemType(this.Const.Items.ItemType.Legendary) || this.isItemType(this.Const.Items.ItemType.Named) || this.isItemType(this.Const.Items.ItemType.Quest) || this.m.IsUnique;
+	}
+
+	function isPrecious()
+	{
+		return this.isItemType(this.Const.Items.ItemType.Legendary) || this.isItemType(this.Const.Items.ItemType.Named) || this.isItemType(this.Const.Items.ItemType.Quest) || this.m.IsPrecious;
 	}
 
 	function isAllowedInBag()
@@ -500,7 +530,7 @@ this.item <- {
 
 		if (this.m.Container != null)
 		{
-			if (_tile == null && this.m.Container.getActor() != null && this.m.Container.getActor().isPlacedOnMap())
+			if (_tile == null && this.m.Container.getActor() != null && !this.m.Container.getActor().isNull() && this.m.Container.getActor().isPlacedOnMap())
 			{
 				_tile = this.m.Container.getActor().getTile();
 			}
@@ -573,6 +603,7 @@ this.item <- {
 	function create()
 	{
 		this.m.MagicNumber = this.Math.rand(1, 100);
+		this.m.Flags = this.new("scripts/tools/tag_collection");
 	}
 
 	function onFactionChanged( _faction )
@@ -582,7 +613,7 @@ this.item <- {
 
 	function onEquip()
 	{
-		if (this.m.Container != null && this.m.Container.getActor() != null)
+		if (this.m.Container != null && this.m.Container.getActor() != null && !this.m.Container.getActor().isNull())
 		{
 			this.m.LastEquippedByFaction = this.m.Container.getActor().getFaction();
 		}
@@ -677,6 +708,7 @@ this.item <- {
 		_out.writeF32(this.m.Condition);
 		_out.writeF32(this.m.PriceMult);
 		_out.writeU8(this.m.MagicNumber);
+		this.m.Flags.onSerialize(_out);
 	}
 
 	function onDeserialize( _in )
@@ -689,6 +721,11 @@ this.item <- {
 		if (_in.getMetaData().getVersion() >= 58)
 		{
 			this.m.MagicNumber = _in.readU8();
+		}
+
+		if (_in.getMetaData().getVersion() >= 65)
+		{
+			this.m.Flags.onDeserialize(_in, false);
 		}
 
 		this.updateVariant();

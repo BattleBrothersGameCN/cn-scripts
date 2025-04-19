@@ -1067,6 +1067,38 @@ gt.Const.World.Spawn.Troops <- {
 		Script = "scripts/entity/tactical/humans/oathbringer",
 		NameList = this.Const.Strings.OathbringerNames,
 		TitleList = null
+	},
+	LesserFleshGolem = {
+		ID = this.Const.EntityType.LesserFleshGolem,
+		Variant = 0,
+		Strength = 25,
+		Cost = 30,
+		Row = 0,
+		Script = "scripts/entity/tactical/enemies/lesser_flesh_golem"
+	},
+	GreaterFleshGolem = {
+		ID = this.Const.EntityType.GreaterFleshGolem,
+		Variant = 0,
+		Strength = 60,
+		Cost = 50,
+		Row = 1,
+		Script = "scripts/entity/tactical/enemies/greater_flesh_golem"
+	},
+	GrandDiviner = {
+		ID = this.Const.EntityType.GrandDiviner,
+		Variant = 0,
+		Strength = 80,
+		Cost = 80,
+		Row = 2,
+		Script = "scripts/entity/tactical/enemies/grand_diviner"
+	},
+	FaultFinder = {
+		ID = this.Const.EntityType.FaultFinder,
+		Variant = 0,
+		Strength = 30,
+		Cost = 30,
+		Row = 2,
+		Script = "scripts/entity/tactical/enemies/fault_finder"
 	}
 };
 gt.Const.World.Spawn.Caravan <- [

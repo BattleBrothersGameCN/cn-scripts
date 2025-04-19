@@ -53,7 +53,7 @@ this.unhold_potion_item <- this.inherit("scripts/items/misc/anatomist/anatomist_
 			id = 11,
 			type = "text",
 			icon = "ui/icons/health.png",
-			text = "复原[color=" + this.Const.UI.Color.PositiveValue + "]10[/color] 生命值每回合"
+			text = "每回合回复 [color=" + this.Const.UI.Color.PositiveValue + "]10[/color] 点生命值"
 		});
 		result.push({
 			id = 65,

@@ -113,11 +113,12 @@ this.thresh <- this.inherit("scripts/skills/skill", {
 					{
 						if (success && tile.IsOccupiedByActor && this.Math.rand(1, 100) <= this.m.StunChance && !tile.getEntity().getCurrentProperties().IsImmuneToStun && !tile.getEntity().getSkills().hasSkill("effects.stunned"))
 						{
-							tile.getEntity().getSkills().add(this.new("scripts/skills/effects/stunned_effect"));
+							local stun = this.new("scripts/skills/effects/stunned_effect");
+							tile.getEntity().getSkills().add(stun);
 
 							if (!_user.isHiddenToPlayer() && tile.IsVisibleForPlayer)
 							{
-								this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "击晕了" + this.Const.UI.getColorizedEntityName(tile.getEntity()) + "，持续 1 回合");
+								this.Tactical.EventLog.log(stun.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(tile.getEntity())));
 							}
 						}
 					}

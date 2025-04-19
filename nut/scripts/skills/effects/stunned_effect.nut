@@ -32,6 +32,32 @@ this.stunned_effect <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
+	function getTurns()
+	{
+		return this.m.TurnsLeft;
+	}
+
+	function getEffectDurationString()
+	{
+		local ret = "";
+
+		if (this.m.TurnsLeft == 2)
+		{
+			ret = "两回合";
+		}
+		else
+		{
+			ret = "一回合";
+		}
+
+		return ret;
+	}
+
+	function getLogEntryOnAdded( _user, _victim )
+	{
+		return _user + "击晕了" + _victim + "持续" + this.getEffectDurationString();
+	}
+
 	function onAdded()
 	{
 		local statusResisted = this.getContainer().getActor().getCurrentProperties().IsResistantToAnyStatuses ? this.Math.rand(1, 100) <= 50 : false;

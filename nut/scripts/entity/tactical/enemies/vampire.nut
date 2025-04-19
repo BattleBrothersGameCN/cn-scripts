@@ -47,28 +47,53 @@ this.vampire <- this.inherit("scripts/entity/tactical/actor", {
 			decal.Scale = 0.9;
 			decal.setBrightness(0.9);
 			this.spawnTerrainDropdownEffect(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.Faction = this.getFaction();
-			corpse.CorpseName = "一个" + this.getName();
-			corpse.Tile = _tile;
-			corpse.Armor = this.m.BaseProperties.Armor;
-			corpse.Items = this.getItems();
-			corpse.IsHeadAttached = true;
-			corpse.IsConsumable = false;
-			corpse.IsResurrectable = false;
+		}
+
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
 		}
 
-		this.getItems().dropAll(_tile, _killer, !flip);
+		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
 
+	function getLootForTile( _killer, _loot )
+	{
 		if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(0, 1) == 1)
 		{
-			local loot = this.new("scripts/items/misc/vampire_dust_item");
-			loot.drop(_tile);
+			_loot.push(this.new("scripts/items/misc/vampire_dust_item"));
 		}
 
-		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.Faction = this.getFaction();
+		corpse.CorpseName = "一个" + this.getName();
+		corpse.Armor = this.m.BaseProperties.Armor;
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsHeadAttached = true;
+		corpse.IsConsumable = false;
+		corpse.IsResurrectable = false;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onFactionChanged()

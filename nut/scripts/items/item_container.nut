@@ -592,26 +592,33 @@ this.item_container <- {
 		return true;
 	}
 
-	function dropAll( _tile, _killer, _flip = false )
+	function canDropItems( _killer )
 	{
-		local IsDroppingLoot = true;
+		local isDroppingItems = true;
 		local isPlayer = this.m.Actor.getFaction() == this.Const.Faction.Player || this.isKindOf(this.m.Actor.get(), "player");
-		local emergency = false;
 
 		if (_killer != null && !_killer.isPlayerControlled() && !this.m.Actor.isPlayerControlled() && _killer.getID() != this.m.Actor.getID() && _killer.getFaction() != this.Const.Faction.PlayerAnimals)
 		{
-			IsDroppingLoot = false;
+			isDroppingItems = false;
 		}
 
 		if (!this.m.Actor.isPlayerControlled() && this.m.Actor.isAlliedWithPlayer())
 		{
-			IsDroppingLoot = false;
+			isDroppingItems = false;
 		}
 
 		if (_killer != null && _killer.isPlayerControlled() && !isPlayer && _killer.isAlliedWith(this.m.Actor))
 		{
-			IsDroppingLoot = false;
+			isDroppingItems = false;
 		}
+
+		return isDroppingItems;
+	}
+
+	function dropAll( _tile, _killer, _flip = false )
+	{
+		local IsDroppingLoot = this.canDropItems(_killer);
+		local emergency = false;
 
 		if (_tile == null)
 		{
@@ -652,6 +659,52 @@ this.item_container <- {
 		}
 
 		_tile.IsContainingItemsFlipped = _flip;
+	}
+
+	function getDroppableLoot( _killer )
+	{
+		local droppableItems = [];
+		local isDroppingLoot = this.canDropItems(_killer);
+
+		for( local i = 0; i < this.Const.ItemSlot.COUNT; i = ++i )
+		{
+			for( local j = 0; j < this.m.Items[i].len(); j = ++j )
+			{
+				if (this.m.Items[i][j] == null || this.m.Items[i][j] == -1)
+				{
+				}
+				else if (isDroppingLoot || this.m.Items[i][j].isItemType(this.Const.Items.ItemType.Legendary))
+				{
+					if (this.m.Items[i][j].isChangeableInBattle())
+					{
+						droppableItems.push(this.m.Items[i][j]);
+					}
+				}
+			}
+		}
+
+		return droppableItems;
+	}
+
+	function prepareItemsForCorpse( _killer )
+	{
+		local isDroppingLoot = this.canDropItems(_killer);
+
+		for( local i = 0; i < this.Const.ItemSlot.COUNT; i = ++i )
+		{
+			for( local j = 0; j < this.m.Items[i].len(); j = ++j )
+			{
+				if (this.m.Items[i][j] == null || this.m.Items[i][j] == -1)
+				{
+				}
+				else if (this.m.Items[i][j].isChangeableInBattle() || !(isDroppingLoot || this.m.Items[i][j].isItemType(this.Const.Items.ItemType.Legendary)))
+				{
+					this.m.Items[i][j].m.IsDroppedAsLoot = false;
+				}
+			}
+		}
+
+		return this;
 	}
 
 	function transferToStash( _stash )
@@ -894,15 +947,18 @@ this.item_container <- {
 	{
 		this.m.IsUpdating = true;
 
-		for( local i = 0; i < this.m.Items[this.Const.ItemSlot.Mainhand].len(); i = ++i )
+		for( local s = 0; s < this.Const.ItemSlot.Bag; s = ++s )
 		{
-			if (this.m.Items[this.Const.ItemSlot.Mainhand][i] != null && this.m.Items[this.Const.ItemSlot.Mainhand][i] != -1)
+			for( local i = 0; i < this.m.Items[s].len(); i = ++i )
 			{
-				this.m.Items[this.Const.ItemSlot.Mainhand][i].onDamageDealt(_target, _skill, _hitInfo);
-
-				if (this.m.Items[this.Const.ItemSlot.Mainhand][i].isGarbage())
+				if (this.m.Items[s][i] != null && this.m.Items[s][i] != -1)
 				{
-					this.unequip(this.m.Items[this.Const.ItemSlot.Mainhand][i]);
+					this.m.Items[s][i].onDamageDealt(_target, _skill, _hitInfo);
+
+					if (this.m.Items[s][i].isGarbage())
+					{
+						this.unequip(this.m.Items[s][i]);
+					}
 				}
 			}
 		}

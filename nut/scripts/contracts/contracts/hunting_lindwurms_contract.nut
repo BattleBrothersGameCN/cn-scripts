@@ -7,7 +7,7 @@ this.hunting_lindwurms_contract <- this.inherit("scripts/contracts/contract", {
 	function create()
 	{
 		this.contract.create();
-		this.m.Type = "contract.hunting_unholds";
+		this.m.Type = "contract.hunting_lindwurms";
 		this.m.Name = "狩猎林德蠕龙";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 		this.m.DifficultyMult = this.Math.rand(95, 135) * 0.01;
@@ -81,7 +81,7 @@ this.hunting_lindwurms_contract <- this.inherit("scripts/contracts/contract", {
 					this.Const.World.TerrainType.Mountains
 				]);
 				local nearTile = this.Contract.getTileToSpawnLocation(playerTile, 4, 7);
-				local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "Lindwurm", false, this.Const.World.Spawn.Lindwurm, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "Lindwurm", false, this.Const.World.Spawn.Lindwurm, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("林德蠕龙，一种无翼双足龙，形似巨蛇。");
 				party.setFootprintType(this.Const.World.FootprintsType.Lindwurms);

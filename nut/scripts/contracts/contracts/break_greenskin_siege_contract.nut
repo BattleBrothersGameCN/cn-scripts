@@ -108,7 +108,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 				}
 
 				local faction = this.World.FactionManager.getFaction(this.Contract.getFaction());
-				local party = faction.spawnEntity(this.Contract.getHome().getTile(), this.Contract.getHome().getName() + " 战团", true, this.Const.World.Spawn.Noble, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				local party = faction.spawnEntity(this.Contract.getHome().getTile(), this.Contract.getHome().getName() + " 战团", true, this.Const.World.Spawn.Noble, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.getSprite("banner").setBrush(faction.getBannerSmall());
 				party.setDescription("听命于当地领主的职业军人。");
 				this.Contract.m.Troops = this.WeakTableRef(party);
@@ -650,7 +650,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 				break;
 			}
 
-			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "攻城器", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(100, 120) * this.getDifficultyMult() * this.getScaledDifficultyMult());
+			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "攻城器", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(100, 120) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 			this.m.UnitsSpawned.push(party.getID());
 			party.setDescription("绿皮军团和他们的攻城器。");
 			local numSiegeUnits = this.Math.rand(3, 4);
@@ -731,7 +731,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 				break;
 			}
 
-			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "绿皮军团", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(90, 110) * this.getDifficultyMult() * this.getScaledDifficultyMult());
+			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "绿皮军团", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(90, 110) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 			this.m.UnitsSpawned.push(party.getID());
 			party.setDescription("奔赴战场的绿皮军团。");
 			party.getLoot().ArmorParts = this.Math.rand(0, 15);

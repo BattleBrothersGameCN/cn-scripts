@@ -597,7 +597,7 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 		if (this.getHitpoints() < this.getHitpointsMax())
 		{
-			local ht = this.Math.ceil((this.getHitpointsMax() - this.getHitpoints()) / (this.Const.World.Assets.HitpointsPerHour * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.HitpointsPerHourMult : 1.0)) / 24.0);
+			local ht = this.Math.ceil((this.getHitpointsMax() - this.getHitpoints()) / ((this.Const.World.Assets.HitpointsPerHour + this.World.Assets.m.AdditionalHitpointsPerHour) * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.HitpointsPerHourMult : 1.0)) / 24.0);
 
 			if (ht > 1)
 			{
@@ -649,9 +649,14 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 	function getDaysWounded()
 	{
+		if (("State" in this.Tactical) && this.Tactical.State != null && this.Tactical.State.isScenarioMode())
+		{
+			return 0;
+		}
+
 		if (this.getHitpoints() < this.getHitpointsMax())
 		{
-			return this.Math.ceil((this.getHitpointsMax() - this.getHitpoints()) / (this.Const.World.Assets.HitpointsPerHour * (("State" in this.World) && this.World.State != null ? this.World.Assets.m.HitpointsPerHourMult : 1.0)) / 24.0);
+			return this.Math.ceil((this.getHitpointsMax() - this.getHitpoints()) / ((this.Const.World.Assets.HitpointsPerHour + this.World.Assets.m.AdditionalHitpointsPerHour) * this.World.Assets.m.HitpointsPerHourMult) / 24.0);
 		}
 		else
 		{
@@ -1072,9 +1077,10 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 			}
 		}
 
+		this.human.onDeath(_killer, _skill, _tile, _fatalityType);
+
 		if (_tile != null)
 		{
-			this.human.onDeath(_killer, _skill, _tile, _fatalityType);
 			local corpse = _tile.Properties.get("Corpse");
 			corpse.IsPlayer = true;
 			corpse.Value = 10.0;
@@ -1087,64 +1093,69 @@ this.player <- this.inherit("scripts/entity/tactical/human", {
 
 		if (!this.m.IsGuest && !this.Tactical.State.isScenarioMode() && _fatalityType != this.Const.FatalityType.Unconscious && (_skill != null && _killer != null || _fatalityType == this.Const.FatalityType.Devoured || _fatalityType == this.Const.FatalityType.Kraken))
 		{
-			local killedBy;
+			this.World.Statistics.addFallen(this.getObituaryInfo(_skill, _killer, _fatalityType));
+		}
+	}
 
-			if (_fatalityType == this.Const.FatalityType.Devoured)
+	function getObituaryInfo( _skill, _killer, _fatalityType )
+	{
+		local killedBy;
+
+		if (_fatalityType == this.Const.FatalityType.Devoured)
+		{
+			killedBy = "被食尸鬼吞噬";
+		}
+		else if (_fatalityType == this.Const.FatalityType.Kraken)
+		{
+			killedBy = "被克拉肯吞噬了";
+		}
+		else if (_fatalityType == this.Const.FatalityType.Suicide)
+		{
+			killedBy = "自杀身亡";
+		}
+		else if (_skill.isType(this.Const.SkillType.StatusEffect))
+		{
+			killedBy = _skill.getKilledString();
+		}
+		else if (_killer.getID() == this.getID())
+		{
+			killedBy = "在战斗中丧生";
+		}
+		else
+		{
+			if (_fatalityType == this.Const.FatalityType.Decapitated)
 			{
-				killedBy = "被食尸鬼吞噬";
+				killedBy = "斩首";
 			}
-			else if (_fatalityType == this.Const.FatalityType.Kraken)
+			else if (_fatalityType == this.Const.FatalityType.Disemboweled)
 			{
-				killedBy = "被克拉肯吞噬了";
-			}
-			else if (_fatalityType == this.Const.FatalityType.Suicide)
-			{
-				killedBy = "自杀身亡";
-			}
-			else if (_skill.isType(this.Const.SkillType.StatusEffect))
-			{
-				killedBy = _skill.getKilledString();
-			}
-			else if (_killer.getID() == this.getID())
-			{
-				killedBy = "在战斗中丧生";
-			}
-			else
-			{
-				if (_fatalityType == this.Const.FatalityType.Decapitated)
+				if (this.Math.rand(1, 2) == 1)
 				{
-					killedBy = "斩首";
-				}
-				else if (_fatalityType == this.Const.FatalityType.Disemboweled)
-				{
-					if (this.Math.rand(1, 2) == 1)
-					{
-						killedBy = "开膛";
-					}
-					else
-					{
-						killedBy = "破腹";
-					}
+					killedBy = "开膛";
 				}
 				else
 				{
-					killedBy = _skill.getKilledString();
+					killedBy = "破腹";
 				}
-
-				killedBy = "被" + _killer.getKilledName() + killedBy;
+			}
+			else
+			{
+				killedBy = _skill.getKilledString();
 			}
 
-			local fallen = {
-				Name = this.getName(),
-				Time = this.World.getTime().Days,
-				TimeWithCompany = this.Math.max(1, this.getDaysWithCompany()),
-				Kills = this.m.LifetimeStats.Kills,
-				Battles = this.m.LifetimeStats.Battles + 1,
-				KilledBy = killedBy,
-				Expendable = this.getBackground().getID() == "background.slave"
-			};
-			this.World.Statistics.addFallen(fallen);
+			killedBy = killedBy + ("被" + _killer.getKilledName());
 		}
+
+		local fallen = {
+			Name = this.getName(),
+			Time = this.World.getTime().Days,
+			TimeWithCompany = this.Math.max(1, this.getDaysWithCompany()),
+			Kills = this.m.LifetimeStats.Kills,
+			Battles = this.m.LifetimeStats.Battles + 1,
+			KilledBy = killedBy,
+			Expendable = this.getBackground().getID() == "background.slave"
+		};
+		return fallen;
 	}
 
 	function onInit()

@@ -13,6 +13,7 @@ this.arena_collar_item <- this.inherit("scripts/items/accessory/accessory", {
 		this.m.Icon = "accessory/gladiator_necklace.png";
 		this.m.Sprite = "gladiator_necklace_01";
 		this.m.Value = 0;
+		this.m.IsSellable = false;
 	}
 
 	function getTooltip()

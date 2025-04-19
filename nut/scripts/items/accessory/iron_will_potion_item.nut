@@ -2,6 +2,7 @@ this.iron_will_potion_item <- this.inherit("scripts/items/item", {
 	m = {},
 	function create()
 	{
+		this.item.create();
 		this.m.ID = "accessory.iron_will_potion";
 		this.m.Name = "钢铁意志药剂";
 		this.m.Description = "能让人感觉无视痛苦，充满力量的饮品。会带来严重的喉咙烧灼感。谨慎服用。效果持续到下一场战斗。";
