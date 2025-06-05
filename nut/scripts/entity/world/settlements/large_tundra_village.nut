@@ -67,8 +67,8 @@ this.large_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"swordmaster_background",
 			"anatomist_background"
 		];
-		this.m.UIDescription = "一个被贫瘠苔原包围的大城市和贸易中心";
-		this.m.Description = "这座被贫瘠的苔原包围的大城市一直是一个重要的贸易中心，也是思想家和艺术的家园。";
+		this.m.UIDescription = "一座被荒芜苔原包围的大城市兼贸易中心";
+		this.m.Description = "这座被荒芜苔原包围的大型城市，不仅长期都是重要的贸易枢纽，还是思想家、艺术家的家园。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";
 		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
 		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";

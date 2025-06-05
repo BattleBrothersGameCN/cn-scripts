@@ -24,6 +24,7 @@ this.armor_parts_item <- this.inherit("scripts/items/item", {
 
 	function create()
 	{
+		this.item.create();
 		this.m.ID = "supplies.armor_parts";
 		this.m.Name = "工具和补给";
 		this.m.Icon = "supplies/armor_parts.png";

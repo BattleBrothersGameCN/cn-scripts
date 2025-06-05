@@ -106,9 +106,10 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 			this.updateAchievement("BagAHag", 1, 1);
 		}
 
+		local flip = this.Math.rand(0, 100) < 50;
+
 		if (_tile != null)
 		{
-			local flip = this.Math.rand(0, 100) < 50;
 			local decal;
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
@@ -157,54 +158,81 @@ this.hexe <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一名女巫";
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+		}
+
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
+		}
 
-			if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
+		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function getLootForTile( _killer, _loot )
+	{
+		if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
+		{
+			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+
+			for( local i = 0; i < n; i = ++i )
 			{
-				local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+				local r = this.Math.rand(1, 100);
+				local loot;
 
-				for( local i = 0; i < n; i = ++i )
+				if (r <= 35)
 				{
-					local r = this.Math.rand(1, 100);
-					local loot;
+					_loot.push(this.new("scripts/items/misc/witch_hair_item"));
+				}
+				else if (r <= 70)
+				{
+					_loot.push(this.new("scripts/items/misc/mysterious_herbs_item"));
+				}
+				else
+				{
+					_loot.push(this.new("scripts/items/misc/poisoned_apple_item"));
+				}
 
-					if (r <= 35)
-					{
-						loot = this.new("scripts/items/misc/witch_hair_item");
-					}
-					else if (r <= 70)
-					{
-						loot = this.new("scripts/items/misc/mysterious_herbs_item");
-					}
-					else
-					{
-						loot = this.new("scripts/items/misc/poisoned_apple_item");
-					}
+				if (this.Math.rand(1, 100) <= 20)
+				{
+					local food = this.new("scripts/items/supplies/black_marsh_stew_item");
+					food.randomizeAmount();
+					food.randomizeBestBefore();
+					_loot.push(food);
+				}
 
-					loot.drop(_tile);
-
-					if (this.Math.rand(1, 100) <= 20)
-					{
-						local food = this.new("scripts/items/supplies/black_marsh_stew_item");
-						food.randomizeAmount();
-						food.randomizeBestBefore();
-						food.drop(_tile);
-					}
-
-					if (this.Math.rand(1, 100) <= 30)
-					{
-						local loot = this.new("scripts/items/loot/jade_broche_item");
-						loot.drop(_tile);
-					}
+				if (this.Math.rand(1, 100) <= 30)
+				{
+					_loot.push(this.new("scripts/items/loot/jade_broche_item"));
 				}
 			}
 		}
 
-		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一名女巫";
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onFactionChanged()

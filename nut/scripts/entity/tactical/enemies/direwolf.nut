@@ -112,9 +112,10 @@ this.direwolf <- this.inherit("scripts/entity/tactical/actor", {
 			this.updateAchievement("Ulfhednar", 1, 1);
 		}
 
+		local flip = this.Math.rand(0, 100) < 50;
+
 		if (_tile != null)
 		{
-			local flip = this.Math.rand(0, 100) < 50;
 			local decal;
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
@@ -173,58 +174,82 @@ this.direwolf <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一头恐狼";
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+		}
+
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
+		}
 
-			if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
+		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function getLootForTile( _killer, _loot )
+	{
+		if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
+		{
+			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+
+			for( local i = 0; i < n; i = ++i )
 			{
-				local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
-
-				for( local i = 0; i < n; i = ++i )
+				if (this.Math.rand(1, 100) <= 50)
 				{
-					if (this.Math.rand(1, 100) <= 50)
+					if (this.Const.DLC.Unhold)
 					{
-						if (this.Const.DLC.Unhold)
+						local r = this.Math.rand(1, 100);
+
+						if (r <= 70)
 						{
-							local r = this.Math.rand(1, 100);
-							local loot;
-
-							if (r <= 70)
-							{
-								loot = this.new("scripts/items/misc/werewolf_pelt_item");
-							}
-							else
-							{
-								loot = this.new("scripts/items/misc/adrenaline_gland_item");
-							}
-
-							loot.drop(_tile);
+							_loot.push(this.new("scripts/items/misc/werewolf_pelt_item"));
 						}
 						else
 						{
-							local loot = this.new("scripts/items/misc/werewolf_pelt_item");
-							loot.drop(_tile);
+							_loot.push(this.new("scripts/items/misc/adrenaline_gland_item"));
 						}
 					}
-					else if (this.Math.rand(1, 100) <= 33)
+					else
 					{
-						local loot = this.new("scripts/items/supplies/strange_meat_item");
-						loot.drop(_tile);
+						_loot.push(this.new("scripts/items/misc/werewolf_pelt_item"));
 					}
+				}
+				else if (this.Math.rand(1, 100) <= 33)
+				{
+					_loot.push(this.new("scripts/items/supplies/strange_meat_item"));
+				}
 
-					if (this.isKindOf(this, "direwolf_high") && this.Math.rand(1, 100) <= 20)
-					{
-						local loot = this.new("scripts/items/loot/sabertooth_item");
-						loot.drop(_tile);
-					}
+				if (this.isKindOf(this, "direwolf_high") && this.Math.rand(1, 100) <= 20)
+				{
+					_loot.push(this.new("scripts/items/loot/sabertooth_item"));
 				}
 			}
 		}
 
-		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一头恐狼";
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onInit()

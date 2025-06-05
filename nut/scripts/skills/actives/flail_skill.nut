@@ -4,7 +4,7 @@ this.flail_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.flail";
 		this.m.Name = "链枷打击";
-		this.m.Description = "向对手甩击。伤害有点难以预测，但能够绕过盾牌的掩护。";
+		this.m.Description = "甩出链枷攻击对手。其伤害不定，却可以从上方或侧方绕过盾牌的防御。";
 		this.m.KilledString = "砸碎";
 		this.m.Icon = "skills/active_39.png";
 		this.m.IconDisabled = "skills/active_39_sw.png";

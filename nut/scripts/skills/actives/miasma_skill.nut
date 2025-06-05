@@ -80,7 +80,7 @@ this.miasma_skill <- this.inherit("scripts/skills/skill", {
 
 		local p = {
 			Type = "miasma",
-			Tooltip = "瘴气在此处弥漫，对任何活着的东西都有害",
+			Tooltip = "瘴气弥漫此处，毒害所有活物",
 			IsPositive = false,
 			IsAppliedAtRoundStart = false,
 			IsAppliedAtTurnEnd = true,

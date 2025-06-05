@@ -98,6 +98,7 @@ this.smite_skill <- this.inherit("scripts/skills/skill", {
 
 	function onUse( _user, _targetTile )
 	{
+		local target = _targetTile.getEntity();
 		this.spawnAttackEffect(_targetTile, this.Const.Tactical.AttackEffectBash);
 		local success = this.attackEntity(_user, _targetTile.getEntity());
 
@@ -106,13 +107,14 @@ this.smite_skill <- this.inherit("scripts/skills/skill", {
 			return success;
 		}
 
-		if (success && _targetTile.IsOccupiedByActor && !_targetTile.getEntity().isNonCombatant())
+		if (success && target.isAlive() && !_targetTile.getEntity().isNonCombatant())
 		{
-			_targetTile.getEntity().getSkills().add(this.new("scripts/skills/effects/staggered_effect"));
+			local stagger = this.new("scripts/skills/effects/staggered_effect");
+			target.getSkills().add(stagger);
 
 			if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "趔趄了" + this.Const.UI.getColorizedEntityName(_targetTile.getEntity()) + "，持续 1 回合");
+				this.Tactical.EventLog.log(stagger.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(target)));
 			}
 		}
 

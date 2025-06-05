@@ -194,7 +194,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 					"militia_spear",
 					"militia_spear",
 					"militia_spear",
-					"短剑(shortsword)",
+					"短剑",
 					"弯刀(falchion)",
 					"light_crossbow"
 				];

@@ -63,7 +63,7 @@ this.medium_tundra_fort <- this.inherit("scripts/entity/world/settlement", {
 			"sellsword_background",
 			"paladin_background"
 		];
-		this.m.UIDescription = "一座石堡不断地保护着周围的苔原";
+		this.m.UIDescription = "一座守护着周围苔原的石头堡垒";
 		this.m.Description = "一座石堡，它是周围冻土带的权力所在地。它是一个规模可观的驻军的行动基地。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
 		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";

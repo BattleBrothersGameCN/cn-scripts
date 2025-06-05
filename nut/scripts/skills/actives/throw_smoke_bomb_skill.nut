@@ -63,7 +63,7 @@ this.throw_smoke_bomb_skill <- this.inherit("scripts/skills/skill", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "熄灭所有已有的格子效果，如火焰或瘴气"
+			text = "清除现有的火焰或瘴气等地格效果"
 		});
 		return ret;
 	}

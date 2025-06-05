@@ -44,7 +44,6 @@ this.break_free_skill <- this.inherit("scripts/skills/skill", {
 
 	function getTooltip()
 	{
-		local chance = this.Math.min(100, this.getContainer().getActor().getCurrentProperties().getMeleeSkill() - 10 + this.m.ChanceBonus + (this.getContainer().getActor().getSkills().hasSkill("effects.goblin_shaman_potion") ? 100 : 0));
 		return [
 			{
 				id = 1,
@@ -65,14 +64,15 @@ this.break_free_skill <- this.inherit("scripts/skills/skill", {
 				id = 4,
 				type = "text",
 				icon = "ui/icons/melee_skill.png",
-				text = "基于近战技能，成功率为 [color=" + this.Const.UI.Color.PositiveValue + "]" + chance + "%[/color] 。每次失败尝试都将提高后续成功率。"
+				text = "基于近战技能，成功率为 [color=" + this.Const.UI.Color.PositiveValue + "]" + this.getChance() + "%[/color] 。每次失败尝试都将提高后续成功率。"
 			}
 		];
 	}
 
 	function getChance()
 	{
-		return this.Math.min(100, this.getContainer().getActor().getCurrentProperties().getMeleeSkill() - 10 + this.m.ChanceBonus);
+		local skill = this.m.SkillBonus == null ? this.getContainer().getActor().getCurrentProperties().getMeleeSkill() : this.m.SkillBonus;
+		return this.Math.min(100, skill - 10 + this.m.ChanceBonus) + (this.getContainer().getActor().getSkills().hasSkill("effects.goblin_shaman_potion") ? 100 : 0);
 	}
 
 	function isUsable()
@@ -87,8 +87,7 @@ this.break_free_skill <- this.inherit("scripts/skills/skill", {
 
 	function onUse( _user, _targetTile )
 	{
-		local skill = this.m.SkillBonus == null ? _user.getCurrentProperties().getMeleeSkill() : this.m.SkillBonus;
-		local toHit = this.Math.min(100, skill - 10 + this.m.ChanceBonus + (_user.getSkills().hasSkill("effects.goblin_shaman_potion") ? 100 : 0));
+		local toHit = this.getChance();
 		local rolled = this.Math.rand(1, 100);
 		this.m.SkillBonus = null;
 		this.Tactical.EventLog.log_newline();

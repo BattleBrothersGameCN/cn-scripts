@@ -9,7 +9,7 @@ this.brigand_follower <- this.inherit("scripts/retinue/follower", {
 		this.m.Image = "ui/campfire/brigand_01";
 		this.m.Cost = 2500;
 		this.m.Effects = [
-			"使你能随时看到一些商队的位置，即便它们在你的视野范围之外"
+			"使你能随时看到一些车队的位置，即便它们在你的视野范围之外"
 		];
 		this.m.Requirements = [
 			{

@@ -187,7 +187,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 				}
 
 				local origin = nonIsolatedSettlements[this.Math.rand(0, nonIsolatedSettlements.len() - 1)];
-				local party = f.spawnEntity(origin.getTile(), origin.getName() + " 战团", true, this.Const.World.Spawn.Noble, 190 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				local party = f.spawnEntity(origin.getTile(), origin.getName() + " 战团", true, this.Const.World.Spawn.Noble, 190 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
 				party.setDescription("听命于当地领主的职业军人。");
 				this.Contract.m.UnitsSpawned.push(party.getID());

@@ -63,8 +63,8 @@ this.medium_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"vagabond_background",
 			"wildman_background"
 		];
-		this.m.UIDescription = "一座在崎岖的苔原上建立的村庄";
-		this.m.Description = "一座在崎岖的苔原上建立的村庄，也是该地区的一个交汇点。";
+		this.m.UIDescription = "一座建立在崎岖苔原上的古老村庄";
+		this.m.Description = "一座建立在崎岖苔原上的古老村庄，附近的河流在此处会合。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
 		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
 		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";

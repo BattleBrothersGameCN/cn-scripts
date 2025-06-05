@@ -85,9 +85,10 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
+		local flip = this.Math.rand(0, 100) < 50;
+
 		if (_tile != null)
 		{
-			local flip = this.Math.rand(0, 100) < 50;
 			local decal;
 			local body_decal;
 			local head_decal;
@@ -120,44 +121,73 @@ this.serpent <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一条大蛇";
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
-			corpse.IsConsumable = false;
-			_tile.Properties.set("Corpse", corpse);
-			this.Tactical.Entities.addCorpse(_tile);
-
-			if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(1, 100) <= 75)
-			{
-				local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
-
-				for( local i = 0; i < n; i = ++i )
-				{
-					local r = this.Math.rand(1, 100);
-					local loot;
-
-					if (r <= 60)
-					{
-						loot = this.new("scripts/items/misc/serpent_skin_item");
-					}
-					else
-					{
-						loot = this.new("scripts/items/misc/glistening_scales_item");
-					}
-
-					loot.drop(_tile);
-				}
-
-				if (this.Math.rand(1, 100) <= 15)
-				{
-					local loot = this.new("scripts/items/loot/rainbow_scale_item");
-					loot.drop(_tile);
-				}
-			}
 		}
 
 		this.Tactical.getTemporaryRoster().remove(this);
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
+			_tile.Properties.set("Corpse", corpse);
+			this.Tactical.Entities.addCorpse(_tile);
+		}
+
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function getLootForTile( _killer, _loot )
+	{
+		if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(1, 100) <= 75)
+		{
+			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+
+			for( local i = 0; i < n; i = ++i )
+			{
+				local r = this.Math.rand(1, 100);
+				local loot;
+
+				if (r <= 60)
+				{
+					loot = this.new("scripts/items/misc/serpent_skin_item");
+				}
+				else
+				{
+					loot = this.new("scripts/items/misc/glistening_scales_item");
+				}
+
+				_loot.push(loot);
+			}
+
+			if (this.Math.rand(1, 100) <= 15)
+			{
+				_loot.push(this.new("scripts/items/loot/rainbow_scale_item"));
+			}
+		}
+
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一条大蛇";
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+		corpse.IsConsumable = false;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onInit()

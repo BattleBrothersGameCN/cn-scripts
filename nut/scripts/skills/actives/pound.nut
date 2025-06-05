@@ -6,7 +6,7 @@ this.pound <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.pound";
 		this.m.Name = "重磅打击";
-		this.m.Description = "用链条和敲击头将目标敲入地面。有点难以估计，但如果运气好的话，可以越过或绕过盾牌的掩护。一个被强力击中的目标可能会昏迷一个回合。";
+		this.m.Description = "用链条和锤头把目标砸倒在地。其伤害不定，但只要一点点运气，就可以从上方或侧方绕过盾牌的防御。这样大的力道或许足以击晕目标一回合。";
 		this.m.KilledString = "砸击致死";
 		this.m.Icon = "skills/active_50.png";
 		this.m.IconDisabled = "skills/active_50_sw.png";
@@ -125,21 +125,23 @@ this.pound <- this.inherit("scripts/skills/skill", {
 
 	function onUse( _user, _targetTile )
 	{
+		local target = _targetTile.getEntity();
 		this.spawnAttackEffect(_targetTile, this.Const.Tactical.AttackEffectBash);
-		local success = this.attackEntity(_user, _targetTile.getEntity());
+		local success = this.attackEntity(_user, target);
 
 		if (!_user.isAlive() || _user.isDying())
 		{
 			return success;
 		}
 
-		if (success && _targetTile.IsOccupiedByActor && this.Math.rand(1, 100) <= this.m.StunChance && !_targetTile.getEntity().getCurrentProperties().IsImmuneToStun && !_targetTile.getEntity().getSkills().hasSkill("effects.stunned"))
+		if (success && target.isAlive() && this.Math.rand(1, 100) <= this.m.StunChance && !target.getCurrentProperties().IsImmuneToStun && !target.getSkills().hasSkill("effects.stunned"))
 		{
-			_targetTile.getEntity().getSkills().add(this.new("scripts/skills/effects/stunned_effect"));
+			local stun = this.new("scripts/skills/effects/stunned_effect");
+			target.getSkills().add(stun);
 
 			if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "被击晕" + this.Const.UI.getColorizedEntityName(_targetTile.getEntity()) + "持续 1 回合");
+				this.Tactical.EventLog.log(stun.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(target)));
 			}
 		}
 
@@ -148,7 +150,7 @@ this.pound <- this.inherit("scripts/skills/skill", {
 
 	function onBeforeTargetHit( _skill, _targetEntity, _hitInfo )
 	{
-		if (_skill == this && _hitInfo.BodyPart == this.Const.BodyPart.Head)
+		if (_skill == this && _hitInfo.BodyPart == this.Const.BodyPart.Head && !_targetEntity.getCurrentProperties().IsImmuneToHeadshots)
 		{
 			if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInFlails)
 			{

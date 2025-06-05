@@ -26,6 +26,7 @@ this.asset_manager <- {
 		ContractPaymentMult = 1.0,
 		ArmorPartsPerArmor = 0.067,
 		HitpointsPerHourMult = 1.0,
+		AdditionalHitpointsPerHour = 0,
 		RepairSpeedMult = 1.0,
 		HiringCostMult = 1.0,
 		CampingMult = 1.5,
@@ -294,7 +295,7 @@ this.asset_manager <- {
 
 	function addArmorParts( _f )
 	{
-		this.m.ArmorParts = this.Math.min(this.Math.max(0, this.m.ArmorParts + _f), this.Const.Difficulty.MaxResources[this.m.EconomicDifficulty].ArmorParts + this.m.ArmorPartsMaxAdditional);
+		this.m.ArmorParts = this.Math.minf(this.Math.maxf(0, this.m.ArmorParts + _f), this.Const.Difficulty.MaxResources[this.m.EconomicDifficulty].ArmorParts + this.m.ArmorPartsMaxAdditional);
 	}
 
 	function addMedicine( _f )
@@ -640,6 +641,7 @@ this.asset_manager <- {
 		this.m.ContractPaymentMult = 1.0;
 		this.m.ArmorPartsPerArmor = this.Const.World.Assets.ArmorPartsPerArmor;
 		this.m.HitpointsPerHourMult = 1.0;
+		this.m.AdditionalHitpointsPerHour = 0;
 		this.m.RepairSpeedMult = 1.0;
 		this.m.HiringCostMult = 1.0;
 		this.m.CampingMult = 1.5;
@@ -924,7 +926,7 @@ this.asset_manager <- {
 
 				if (bro.getHitpoints() < bro.getHitpointsMax())
 				{
-					bro.setHitpoints(this.Math.minf(bro.getHitpointsMax(), bro.getHitpoints() + this.Const.World.Assets.HitpointsPerHour * campMultiplier * this.m.HitpointsPerHourMult));
+					bro.setHitpoints(this.Math.minf(bro.getHitpointsMax(), bro.getHitpoints() + (this.Const.World.Assets.HitpointsPerHour + this.m.AdditionalHitpointsPerHour) * campMultiplier * this.m.HitpointsPerHourMult));
 				}
 			}
 
@@ -943,7 +945,7 @@ this.asset_manager <- {
 					if (item.getCondition() < item.getConditionMax())
 					{
 						local d = this.Math.minf(this.Const.World.Assets.ArmorPerHour * campMultiplier * this.m.RepairSpeedMult, item.getConditionMax() - item.getCondition());
-						item.setCondition(item.getCondition() + d);
+						item.improveCondition(d);
 						this.m.ArmorParts = this.Math.maxf(0, this.m.ArmorParts - d * this.m.ArmorPartsPerArmor);
 						updateBro = true;
 					}
@@ -984,7 +986,7 @@ this.asset_manager <- {
 					if (item.getCondition() < item.getConditionMax())
 					{
 						local d = this.Math.minf(this.Const.World.Assets.ArmorPerHour * campMultiplier * this.m.RepairSpeedMult, item.getConditionMax() - item.getCondition());
-						item.setCondition(item.getCondition() + d);
+						item.improveCondition(d);
 						this.m.ArmorParts = this.Math.maxf(0, this.m.ArmorParts - d * this.m.ArmorPartsPerArmor);
 					}
 

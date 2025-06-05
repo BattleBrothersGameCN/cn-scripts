@@ -73,9 +73,10 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
+		local flip = this.Math.rand(0, 100) < 50;
+
 		if (_tile != null)
 		{
-			local flip = this.Math.rand(0, 100) < 50;
 			local appearance = this.getItems().getAppearance();
 			local decal;
 			this.m.IsCorpseFlipped = flip;
@@ -117,19 +118,13 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = this.getName();
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
-			corpse.IsResurrectable = false;
-			_tile.Properties.set("Corpse", corpse);
-			this.Tactical.Entities.addCorpse(_tile);
 		}
 
 		if (this.m.Item != null && !this.m.Item.isNull())
 		{
 			this.m.Item.setEntity(null);
 
-			if (this.m.Item.getContainer() != null)
+			if (this.m.Item.getContainer() != null && !this.m.Item.getContainer().isNull())
 			{
 				if (this.m.Item.getCurrentSlotType() == this.Const.ItemSlot.Bag)
 				{
@@ -144,7 +139,35 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Item = null;
 		}
 
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
+			_tile.Properties.set("Corpse", corpse);
+			this.Tactical.Entities.addCorpse(_tile);
+		}
+
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = this.getName();
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+		corpse.IsResurrectable = false;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onFactionChanged()

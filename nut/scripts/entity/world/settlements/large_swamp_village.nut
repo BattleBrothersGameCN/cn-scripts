@@ -88,8 +88,8 @@ this.large_swamp_village <- this.inherit("scripts/entity/world/settlement", {
 			this.m.DraftList.push("beast_hunter_background");
 		}
 
-		this.m.UIDescription = "一个规模适中的城市在沼泽地区的干旱地区";
-		this.m.Description = "许多较小的定居点分布在沼泽地区的干旱地区，形成了一个中等规模的城市。";
+		this.m.UIDescription = "一座建立在沼泽干燥地带的中型城市";
+		this.m.Description = "一系列分布在沼泽干燥地带的小型定居点，共同形成了一座中等规模的城市。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";
 		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_03_left";
 		this.m.UIBackgroundRight = "ui/settlements/bg_houses_03_right";

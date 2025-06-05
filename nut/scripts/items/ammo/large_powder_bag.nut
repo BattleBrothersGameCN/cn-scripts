@@ -2,6 +2,7 @@ this.large_powder_bag <- this.inherit("scripts/items/ammo/ammo", {
 	m = {},
 	function create()
 	{
+		this.ammo.create();
 		this.m.ID = "ammo.powder";
 		this.m.Name = "大火药包";
 		this.m.Description = "一大包黑火药，用来装填异国火器。弹药充足时，会在战斗后自动补充。";
