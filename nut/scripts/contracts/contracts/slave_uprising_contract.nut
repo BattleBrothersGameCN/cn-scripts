@@ -359,7 +359,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 				local cityTile = this.Contract.m.Home.getTile();
 				local nearest_nomads = this.World.FactionManager.getFactionOfType(this.Const.FactionType.OrientalBandits).getNearestSettlement(cityTile);
 				local tile = this.Contract.getTileToSpawnLocation(this.Contract.m.Home.getTile(), 9, 15);
-				local party = this.World.FactionManager.getFaction(nearest_nomads.getFaction()).spawnEntity(tile, "负债者", false, this.Const.World.Spawn.NomadRaiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+				local party = this.World.FactionManager.getFaction(nearest_nomads.getFaction()).spawnEntity(tile, "负债者", false, this.Const.World.Spawn.NomadRaiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.setDescription("一群因债务而转向了抢劫的人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Nomads);
 				party.getSprite("banner").setBrush(nearest_nomads.getBanner());

@@ -138,7 +138,7 @@ gt.Const.Strings.LongaxeNames <- [
 	"长柄战斧",
 	"斩首者",
 	"开膛者",
-	"分裂者",
+	"纤刃",
 	"劈斩者",
 	"唤雷者",
 	"破坏者",
@@ -260,7 +260,7 @@ gt.Const.Strings.WarbrandNames <- [
 	"绞肉者"
 ];
 gt.Const.Strings.DaggerNames <- [
-	"分裂者",
+	"纤刃",
 	"棘刺",
 	"楔子",
 	"凿子",
@@ -354,7 +354,7 @@ gt.Const.Strings.FlailNames <- [
 	"惩击者",
 	"决胜",
 	"死神",
-	"谴责",
+	"鞭笞者",
 	"惩罚者",
 	"流星",
 	"突袭者",

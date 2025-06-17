@@ -52,11 +52,12 @@ this.tail_slam_zoc_skill <- this.inherit("scripts/skills/skill", {
 				return;
 			}
 
-			_target.getSkills().add(this.new("scripts/skills/effects/stunned_effect"));
+			local stun = this.new("scripts/skills/effects/stunned_effect");
+			_target.getSkills().add(stun);
 
 			if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "击晕了" + this.Const.UI.getColorizedEntityName(_target) + "，持续 1 回合");
+				this.Tactical.EventLog.log(stun.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(_target)));
 			}
 		}
 		else
@@ -66,11 +67,12 @@ this.tail_slam_zoc_skill <- this.inherit("scripts/skills/skill", {
 				return;
 			}
 
-			_target.getSkills().add(this.new("scripts/skills/effects/dazed_effect"));
+			local daze = this.new("scripts/skills/effects/dazed_effect");
+			_target.getSkills().add(daze);
 
 			if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + "茫然了" + this.Const.UI.getColorizedEntityName(_target) + "，持续 2 回合");
+				this.Tactical.EventLog.log(daze.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(_target)));
 			}
 		}
 	}

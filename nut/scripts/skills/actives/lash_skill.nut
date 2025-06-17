@@ -4,7 +4,7 @@ this.lash_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.lash";
 		this.m.Name = "当头一击";
-		this.m.Description = "瞄准对手的头。 伤害有点难以估计，但有一点运气能够绕过盾牌的掩护。";
+		this.m.Description = "朝着对手的脑袋攻击。其伤害不定，却可以从上方或侧方绕过盾牌的防御。";
 		this.m.Icon = "skills/active_91.png";
 		this.m.IconDisabled = "skills/active_91_sw.png";
 		this.m.Overlay = "active_91";

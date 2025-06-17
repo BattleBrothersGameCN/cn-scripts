@@ -115,7 +115,6 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 		}
 
 		local flip = this.Math.rand(0, 100) < 50;
-		local isResurrectable = _fatalityType != this.Const.FatalityType.Decapitated;
 		local sprite_body = this.getSprite("body");
 		local sprite_head = this.getSprite("head");
 
@@ -182,46 +181,6 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一个" + this.getName();
-			corpse.Tile = _tile;
-			corpse.Value = 2.0;
-			corpse.IsResurrectable = false;
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
-			_tile.Properties.set("Corpse", corpse);
-			this.Tactical.Entities.addCorpse(_tile);
-
-			if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
-			{
-				local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
-
-				for( local i = 0; i < n; i = ++i )
-				{
-					local r = this.Math.rand(1, 100);
-					local loot;
-
-					if (r <= 40)
-					{
-						loot = this.new("scripts/items/misc/parched_skin_item");
-					}
-					else if (r <= 80)
-					{
-						loot = this.new("scripts/items/misc/third_eye_item");
-					}
-					else
-					{
-						loot = this.new("scripts/items/misc/petrified_scream_item");
-					}
-
-					loot.drop(_tile);
-				}
-
-				if (this.Math.rand(1, 100) <= 20)
-				{
-					local loot = this.new("scripts/items/loot/soul_splinter_item");
-					loot.drop(_tile);
-				}
-			}
 		}
 
 		local allies = this.Tactical.Entities.getInstancesOfFaction(this.getFaction());
@@ -247,7 +206,72 @@ this.alp <- this.inherit("scripts/entity/tactical/actor", {
 			}
 		}
 
+		local deathLoot = this.getItems().getDroppableLoot(_killer);
+		local tileLoot = this.getLootForTile(_killer, deathLoot);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
+			_tile.Properties.set("Corpse", corpse);
+			this.Tactical.Entities.addCorpse(_tile);
+		}
+
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function getLootForTile( _killer, _loot )
+	{
+		if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
+		{
+			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+
+			for( local i = 0; i < n; i = ++i )
+			{
+				local r = this.Math.rand(1, 100);
+
+				if (r <= 40)
+				{
+					_loot.push(this.new("scripts/items/misc/parched_skin_item"));
+				}
+				else if (r <= 80)
+				{
+					_loot.push(this.new("scripts/items/misc/third_eye_item"));
+				}
+				else
+				{
+					_loot.push(this.new("scripts/items/misc/petrified_scream_item"));
+				}
+			}
+
+			if (this.Math.rand(1, 100) <= 20)
+			{
+				_loot.push(this.new("scripts/items/loot/soul_splinter_item"));
+			}
+		}
+
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一个" + this.getName();
+		corpse.Value = 2.0;
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsResurrectable = false;
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function onInit()

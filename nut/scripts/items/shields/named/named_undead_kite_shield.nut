@@ -7,7 +7,7 @@ this.named_undead_kite_shield <- this.inherit("scripts/items/shields/named/named
 		this.updateVariant();
 		this.m.ID = "shield.named_undead_kite_shield";
 		this.m.NameList = this.Const.Strings.ShieldNames;
-		this.m.Description = "一面年代久远，却依然能护住下半身的细长木制盾牌。在近身战斗中稍显笨重。";
+		this.m.Description = "一面能护住下半身的细长木制盾牌。在近身战斗中稍显笨重。一看就有年头了。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.Value = 700;

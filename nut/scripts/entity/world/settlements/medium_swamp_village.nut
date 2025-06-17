@@ -72,8 +72,8 @@ this.medium_swamp_village <- this.inherit("scripts/entity/world/settlement", {
 			this.m.DraftList.push("beast_hunter_background");
 		}
 
-		this.m.UIDescription = "被肮脏的沼泽包围的更大的定居点";
-		this.m.Description = "一个稍大的定居点散布在沼泽地中干燥和坚实的地方。";
+		this.m.UIDescription = "一座被污浊沼泽包围的较大定居点";
+		this.m.Description = "一座分散在沼泽干燥坚实地带的较大定居点。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
 		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
 		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";

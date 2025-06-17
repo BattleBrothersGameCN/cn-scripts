@@ -58,7 +58,7 @@ this.throw_fire_bomb_skill <- this.inherit("scripts/skills/skill", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "烧除所有已有的格子效果，如烟雾或瘴气"
+			text = "烧除现有的烟雾或瘴气等地格效果"
 		});
 		return ret;
 	}

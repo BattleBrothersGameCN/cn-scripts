@@ -2,6 +2,7 @@ this.lionheart_potion_item <- this.inherit("scripts/items/item", {
 	m = {},
 	function create()
 	{
+		this.item.create();
 		this.m.ID = "accessory.lionheart_potion";
 		this.m.Name = "狮心药剂";
 		this.m.Description = "勇敢如狮！这种药水能抑制恐惧，增进勇气，直到对自我能力的严重高估的程度。谨慎服用。效果持续到下一场战斗。";

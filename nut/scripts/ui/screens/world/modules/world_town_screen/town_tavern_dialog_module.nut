@@ -59,7 +59,7 @@ this.town_tavern_dialog_module <- this.inherit("scripts/ui/screens/ui_module", {
 			RumorPrice = this.m.Tavern.getRumorPrice(),
 			Drink = null,
 			DrinkPrice = this.m.Tavern.getDrinkPrice(),
-			LeftInfo = "付钱为顾客们买轮酒，让顾客分享更多的新闻和谣言 ([img]gfx/ui/tooltips/money.png[/img]" + this.Math.round(20 * this.m.Tavern.getSettlement().getBuyPriceMult()) + ").",
+			LeftInfo = "请酒客们喝上一轮，让他们多分享些新鲜事 ([img]gfx/ui/tooltips/money.png[/img]" + this.Math.round(20 * this.m.Tavern.getSettlement().getBuyPriceMult()) + ").",
 			RightInfo = "为你的人付钱买酒，让他们振作起来 ([img]gfx/ui/tooltips/money.png[/img]" + this.Math.round(this.World.getPlayerRoster().getSize() * 5 * this.m.Tavern.getSettlement().getBuyPriceMult()) + ").",
 			Assets = this.m.Parent.queryAssetsInformation()
 		};

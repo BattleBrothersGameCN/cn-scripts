@@ -19,6 +19,7 @@ this.zombie_knight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 		if (this.m.IsHeadless)
 		{
 			_hitInfo.BodyPart = this.Const.BodyPart.Body;
+			_hitInfo.BodyDamageMult = 1.0;
 		}
 
 		return this.actor.onDamageReceived(_attacker, _skill, _hitInfo);

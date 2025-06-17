@@ -3,7 +3,7 @@ this.mouth_piece <- this.inherit("scripts/items/helmets/helmet", {
 	function create()
 	{
 		this.helmet.create();
-		this.m.ID = "armor.head.witchhunter_hat";
+		this.m.ID = "armor.head.mouth_piece";
 		this.m.Name = "面巾";
 		this.m.Description = "一块遮挡下脸的布，用以防尘或者隐藏身份。";
 		this.m.ShowOnCharacter = true;

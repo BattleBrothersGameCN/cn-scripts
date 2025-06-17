@@ -57,7 +57,7 @@ this.medium_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"paladin_background"
 		];
 		this.m.UIDescription = "一座被沃土包围的石堡";
-		this.m.Description = "一座石头城堡，周围是肥沃的土地，是该地区的据点和行动基地。";
+		this.m.Description = "一座被肥沃土地包围的石头城堡，是扼守此地的重要支点，也是当地军事行动的前哨站。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
 		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
 		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";

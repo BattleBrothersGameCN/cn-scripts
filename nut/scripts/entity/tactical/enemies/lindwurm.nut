@@ -79,9 +79,10 @@ this.lindwurm <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
+		local flip = this.Math.rand(0, 100) < 50;
+
 		if (_tile != null)
 		{
-			local flip = this.Math.rand(0, 100) < 50;
 			local decal;
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
@@ -122,54 +123,81 @@ this.lindwurm <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "一条林德蠕龙";
-			corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+		}
+
+		local tileLoot = this.getLootForTile(_killer, []);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
-
-			if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
-			{
-				local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
-
-				for( local i = 0; i < n; i = ++i )
-				{
-					if (this.Const.DLC.Unhold)
-					{
-						local r = this.Math.rand(1, 100);
-						local loot;
-
-						if (r <= 35)
-						{
-							loot = this.new("scripts/items/misc/lindwurm_blood_item");
-						}
-						else if (r <= 70)
-						{
-							loot = this.new("scripts/items/misc/lindwurm_scales_item");
-						}
-						else
-						{
-							loot = this.new("scripts/items/misc/lindwurm_bones_item");
-						}
-
-						loot.drop(_tile);
-					}
-					else
-					{
-						local loot = this.new("scripts/items/tools/acid_flask_item");
-						loot.drop(_tile);
-					}
-				}
-
-				if (!this.Const.DLC.Unhold || this.Math.rand(1, 100) <= 33)
-				{
-					local loot = this.new("scripts/items/loot/lindwurm_hoard_item");
-					loot.drop(_tile);
-				}
-			}
 		}
 
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function getLootForTile( _killer, _loot )
+	{
+		if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
+		{
+			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+
+			for( local i = 0; i < n; i = ++i )
+			{
+				if (this.Const.DLC.Unhold)
+				{
+					local r = this.Math.rand(1, 100);
+					local loot;
+
+					if (r <= 35)
+					{
+						loot = this.new("scripts/items/misc/lindwurm_blood_item");
+					}
+					else if (r <= 70)
+					{
+						loot = this.new("scripts/items/misc/lindwurm_scales_item");
+					}
+					else
+					{
+						loot = this.new("scripts/items/misc/lindwurm_bones_item");
+					}
+
+					_loot.push(loot);
+				}
+				else
+				{
+					_loot.push(this.new("scripts/items/tools/acid_flask_item"));
+				}
+			}
+
+			if (!this.Const.DLC.Unhold || this.Math.rand(1, 100) <= 33)
+			{
+				_loot.push(this.new("scripts/items/loot/lindwurm_hoard_item"));
+			}
+		}
+
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = "一条林德蠕龙";
+		corpse.Items = this.getItems();
+		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function kill( _killer = null, _skill = null, _fatalityType = this.Const.FatalityType.None, _silent = false )

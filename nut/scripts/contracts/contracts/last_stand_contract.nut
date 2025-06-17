@@ -691,7 +691,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 			}
 		}
 
-		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).spawnEntity(tile, "亡灵军团", false, this.Const.World.Spawn.UndeadArmy, (80 + this.m.Flags.get("Wave") * 10) * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).spawnEntity(tile, "亡灵军团", false, this.Const.World.Spawn.UndeadArmy, (80 + this.m.Flags.get("Wave") * 10) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		this.m.UnitsSpawned.push(party.getID());
 		party.getLoot().ArmorParts = this.Math.rand(0, 15);
 		party.getSprite("banner").setBrush(undeadBase.getBanner());
@@ -721,7 +721,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 	function spawnUndeadAtTheWalls()
 	{
 		local undeadBase = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).getNearestSettlement(this.m.Origin.getTile());
-		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).spawnEntity(this.m.Origin.getTile(), "亡灵军团", false, this.Const.World.Spawn.ZombiesOrZombiesAndGhosts, 100 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Zombies).spawnEntity(this.m.Origin.getTile(), "亡灵军团", false, this.Const.World.Spawn.ZombiesOrZombiesAndGhosts, 100 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		party.setPos(this.createVec(party.getPos().X - 50, party.getPos().Y - 50));
 		this.m.UnitsSpawned.push(party.getID());
 		party.getLoot().ArmorParts = this.Math.rand(0, 15);
@@ -782,7 +782,7 @@ this.last_stand_contract <- this.inherit("scripts/contracts/contract", {
 			}
 		}
 
-		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).spawnEntity(tile, "食尸鬼", false, this.Const.World.Spawn.Ghouls, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).spawnEntity(tile, "食尸鬼", false, this.Const.World.Spawn.Ghouls, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		this.m.UnitsSpawned.push(party.getID());
 		party.getSprite("banner").setBrush("banner_beasts_01");
 		party.setDescription("一群寻觅的食尸鬼");

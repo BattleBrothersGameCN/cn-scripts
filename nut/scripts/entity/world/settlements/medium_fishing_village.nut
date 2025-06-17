@@ -69,8 +69,8 @@ this.medium_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"sellsword_background",
 			"anatomist_background"
 		];
-		this.m.UIDescription = "一个分散而开的大村庄，依靠渔业和少量的贸易为生。";
-		this.m.Description = "一个分散而开的大村庄，依靠渔业和少量的贸易为生。";
+		this.m.UIDescription = "一座分散而居的大型村庄，依靠渔业和少量的贸易为生。";
+		this.m.Description = "一座分散而居的大型村庄，依靠渔业和少量的贸易为生。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";
 		this.m.UIBackgroundLeft = "ui/settlements/water_01";
 		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";

@@ -170,6 +170,11 @@ this.main_menu_screen <- {
 
 			this.m.JSHandle.asyncCall("setDLC", dlc);
 			this.m.JSHandle.asyncCall("setMOTD", "战场兄弟是一个具有挑战性的游戏。失败和重来是游戏的一部分。\n\n建议你从“初学者”难度和教程开始！");
+
+			if (this.isSteamBuild())
+			{
+				this.m.JSHandle.asyncCall("addCrossMarketing", null);
+			}
 		};
 		local suffix = function ( context )
 		{

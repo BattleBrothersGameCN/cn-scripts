@@ -19,7 +19,7 @@ this.whip_skill <- this.inherit("scripts/skills/skill", {
 		this.m.Description = "于相当远的距离外进行鞭击，同时造成两层流血伤害。对盔甲效果很差。";
 		this.m.KilledString = "鞭打致死";
 		this.m.Icon = "skills/active_161.png";
-		this.m.IconDisabled = "skills/active_161.png";
+		this.m.IconDisabled = "skills/active_161_sw.png";
 		this.m.Overlay = "active_161";
 		this.m.SoundOnUse = [
 			"sounds/combat/whip_01.wav",
@@ -86,7 +86,7 @@ this.whip_skill <- this.inherit("scripts/skills/skill", {
 	{
 		local target = _targetTile.getEntity();
 		local hp = target.getHitpoints();
-		local success = this.attackEntity(_user, _targetTile.getEntity());
+		local success = this.attackEntity(_user, target);
 
 		if (!_user.isAlive() || _user.isDying())
 		{

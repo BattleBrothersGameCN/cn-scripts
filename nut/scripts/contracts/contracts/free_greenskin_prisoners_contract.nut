@@ -373,7 +373,7 @@ this.free_greenskin_prisoners_contract <- this.inherit("scripts/contracts/contra
 						if (this.Flags.get("IsEnemyParty"))
 						{
 							local tile = this.Contract.getTileToSpawnLocation(playerTile, 10, 15);
-							local party = this.World.FactionManager.getFaction(camp.getFaction()).spawnEntity(tile, "绿皮军团", false, this.Const.World.Spawn.GreenskinHorde, 120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
+							local party = this.World.FactionManager.getFaction(camp.getFaction()).spawnEntity(tile, "绿皮军团", false, this.Const.World.Spawn.GreenskinHorde, 120 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 							party.getSprite("banner").setBrush(camp.getBanner());
 							party.setDescription("奔赴战场的绿皮军团。");
 							party.setFootprintType(this.Const.World.FootprintsType.Orcs);

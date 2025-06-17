@@ -59,7 +59,7 @@ this.medium_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"sellsword_background"
 		];
 		this.m.UIDescription = "高耸于周围山脉之上的一座石堡";
-		this.m.Description = "一座高耸于周围群山之上的石堡。塔楼上的哨兵可以在数英里之外侦查敌军。";
+		this.m.Description = "一座高耸于周围群山之上的石堡。塔楼上的哨兵可以看到数英里外接近的敌军。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
 		this.m.UIBackgroundLeft = "ui/settlements/bg_houses_02_left";
 		this.m.UIBackgroundRight = "ui/settlements/bg_houses_02_right";

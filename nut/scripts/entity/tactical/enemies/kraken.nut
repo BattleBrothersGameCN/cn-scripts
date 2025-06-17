@@ -69,9 +69,10 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 			this.updateAchievement("BeastOfBeasts", 1, 1);
 		}
 
+		local flip = false;
+
 		if (_tile != null)
 		{
-			local flip = false;
 			local decal;
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
@@ -81,11 +82,6 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 			decal.Scale = 0.95;
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
-			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = this.getName();
-			corpse.IsHeadAttached = true;
-			_tile.Properties.set("Corpse", corpse);
-			this.Tactical.Entities.addCorpse(_tile);
 
 			foreach( t in this.m.Tentacles )
 			{
@@ -103,22 +99,52 @@ this.kraken <- this.inherit("scripts/entity/tactical/actor", {
 			}
 
 			this.m.Tentacles = [];
-			local loot;
-			loot = this.new("scripts/items/misc/kraken_horn_plate_item");
-			loot.drop(_tile);
-			loot = this.new("scripts/items/misc/kraken_horn_plate_item");
-			loot.drop(_tile);
-			loot = this.new("scripts/items/misc/kraken_tentacle_item");
-			loot.drop(_tile);
+		}
 
-			if (!this.Tactical.State.isScenarioMode() && this.World.Assets.getExtraLootChance() > 0)
-			{
-				loot = this.new("scripts/items/misc/kraken_horn_plate_item");
-				loot.drop(_tile);
-			}
+		local tileLoot = this.getLootForTile(_killer, []);
+		this.dropLoot(_tile, tileLoot, !flip);
+		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
+
+		if (_tile == null)
+		{
+			this.Tactical.Entities.addUnplacedCorpse(corpse);
+		}
+		else
+		{
+			_tile.Properties.set("Corpse", corpse);
+			this.Tactical.Entities.addCorpse(_tile);
 		}
 
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+	function getLootForTile( _killer, _loot )
+	{
+		_loot.push(this.new("scripts/items/misc/kraken_horn_plate_item"));
+		_loot.push(this.new("scripts/items/misc/kraken_horn_plate_item"));
+		_loot.push(this.new("scripts/items/misc/kraken_tentacle_item"));
+
+		if (!this.Tactical.State.isScenarioMode() && this.World.Assets.getExtraLootChance() > 0)
+		{
+			_loot.push(this.new("scripts/items/misc/kraken_horn_plate_item"));
+		}
+
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+	function generateCorpse( _tile, _fatalityType, _killer )
+	{
+		local corpse = clone this.Const.Corpse;
+		corpse.CorpseName = this.getName();
+		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
+		corpse.IsHeadAttached = true;
+
+		if (_tile != null)
+		{
+			corpse.Tile = _tile;
+		}
+
+		return corpse;
 	}
 
 	function kill( _killer = null, _skill = null, _fatalityType = this.Const.FatalityType.None, _silent = false )
