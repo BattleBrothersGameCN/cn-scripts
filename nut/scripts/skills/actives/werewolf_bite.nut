@@ -3,7 +3,7 @@ this.werewolf_bite <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.werewolf_bite";
-		this.m.Name = "恶狼咬击";
+		this.m.Name = "恐狼咬击";
 		this.m.Description = "";
 		this.m.KilledString = "撕成碎片";
 		this.m.Icon = "skills/active_71.png";

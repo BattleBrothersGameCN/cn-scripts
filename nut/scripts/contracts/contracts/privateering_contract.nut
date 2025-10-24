@@ -91,7 +91,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 				this.Flags.set("StartDay", this.World.getTime().Days);
 				this.Contract.m.BulletpointsObjectives = [
 					"前往%feudfamily%的领地",
-					"掠夺和焚毁地点",
+					"劫掠和焚毁地点",
 					"摧毁商队或巡逻队",
 					"在5天后返回"
 				];
@@ -110,7 +110,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 			{
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
 				local f = this.World.FactionManager.getFaction(this.Flags.get("FeudingHouseID"));
-				f.addPlayerRelation(-99.0, "在战争选择了阵营");
+				f.addPlayerRelation(-99.0, "在战争中选择了阵营");
 				this.Flags.set("StartDay", this.World.getTime().Days);
 				local nonIsolatedSettlements = [];
 
@@ -187,7 +187,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 				}
 
 				local origin = nonIsolatedSettlements[this.Math.rand(0, nonIsolatedSettlements.len() - 1)];
-				local party = f.spawnEntity(origin.getTile(), origin.getName() + " 战团", true, this.Const.World.Spawn.Noble, 190 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
+				local party = f.spawnEntity(origin.getTile(), origin.getName() + "战团", true, this.Const.World.Spawn.Noble, 190 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
 				party.setDescription("听命于当地领主的职业军人。");
 				this.Contract.m.UnitsSpawned.push(party.getID());
@@ -330,8 +330,8 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 					}
 				}
 
-				this.Contract.m.BulletpointsObjectives.push("摧毁任何 %feudfamily% 的商队或巡逻队");
-				this.Contract.m.BulletpointsObjectives.push("在%days%天后返回");
+				this.Contract.m.BulletpointsObjectives.push("摧毁%feudfamily%的任何商队或巡逻队");
+				this.Contract.m.BulletpointsObjectives.push("在%days%后返回");
 				this.Contract.m.CurrentObjective = null;
 			}
 
@@ -560,14 +560,14 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{你走进%employer%的房间，他立刻开始说话。%SPEECH_ON%{很高兴见到你，雇佣兵。我需要一个掠夺小队去把%feudfamily%的锅碗瓢盆弄得一塌糊涂，你懂我的意思吧？嗯，简单说我需要你进入他们的领地，烧毁你能找到的一切东西。我想持续这样%days%时间会对他们的战争资源造成真正的伤害。但是一定要小心敌人巡逻队。 | 啊，雇佣军。听着，我需要一些勇敢的人穿越%feudfamily%的领地，烧毁他们遇到所有商队和庄稼。这工作不光彩，但有助于结束战争。我需要你在那里呆%days%时间，然后回来。 | 我需要一个掠夺小队潜入%feudfamily%领地%days%，尽可能多地摧毁他们的资源。你们会被憎恨的，敌人会紧追不舍，但是如果你能避开他们的巡逻，这项工作应该会很快很容易完成。你觉得怎么样？ | 我们正在与%feudfamily%开战，但战争需要的不仅仅是军队间的激烈冲突。有时候，战争也需要一些隐秘行动。雇佣兵，我需要你去袭击%feudfamily%的领地，持续%days%。摧毁商队，烧毁庄园，任何有助于我方的行为都行。当然，你应该警惕敌方巡逻队。如果是我知道你要来侵犯我的土地和人民，我会以双倍的力量反击你。那么，你怎么说？ | 我直接说白了，我需要有人去袭击%feudfamily%的领地%days%。当然，他们会对和你类似的人有所准备，所以你要尽力避免任何巡逻队。你有兴趣吗？ | 雇佣兵，我有一份适合你的工作。我要你去袭击%feudfamily%的领地，尽可能地摧毁他们的一切，大约%days%。这种行动可以帮助结束战争。当然，他们也会明白这个道理，并会竭尽全力阻止你。}%SPEECH_OFF% | %employer%欢迎你进入他的房间，指着桌子上铺开的地图。%SPEECH_ON%你是否知道对抗一个人最好的方式是确保他根本无法战斗？我在一本旧书上读到过这个观点。%SPEECH_OFF%这是非常艺术化的战争观，但却是真实的。你点了点头，那人继续说道。%SPEECH_ON%我想让你前往%feudfamily%的领地，尽可能地破坏他们的领地，摧毁商队，烧毁农场等等。在%days%内尽可能地造成更多的损失，然后返回。哦，最后一件事。要警惕敌方巡逻队，他们不会善待你的那些特别行动的。%SPEECH_OFF% | 你发现%employer%正在看一本书，他正在用羽毛笔做笔记。%SPEECH_ON%我爷爷曾经打败了比己方大十倍的军队，他是怎么做到的？那些受我的家族雇佣和供养的历史学家和文书讲述了战场上的宏伟故事，但那不是真相。你知道真相吗？%SPEECH_OFF%你耸了耸肩，猜测他的祖父使用了某种诡计。这位贵族把书狠狠地合上，简短竖了下手指。%SPEECH_ON%正是如此！他带着一小撮人烧了他们所有的农场、谷仓和食物仓库。如果你不能喂饱庞大的军队，那么多的士兵有什么用呢？雇佣兵，我需要你完成同样的事情。进入%feudfamily%领地%days%，尽可能多地摧毁他们的财产。当然，要避开巡逻队。如果他们抓到你，他们肯定会恶战一场来要你项上人头。%SPEECH_OFF% | 你走进%employer%的房间，发现他正在与一位年迈的将军争吵。这个将军站直了身子。%SPEECH_ON%我不会用这样卑鄙的行为来玷污我家族的名誉。如果你想采取这种方式，就找一个出身卑微的人来做吧！%SPEECH_OFF%将军拿起他的东西愤怒地离开，几乎撞到你。当你走进来时，%employer%微笑着。他张开双臂说道。%SPEECH_ON%好啊，说恶魔，恶魔到。雇佣兵，我需要有人去袭击%feudfamily%的领地，为期%days%。我的贵族指挥官认为这件事情太低贱了，但我认为你一样能把事情办好。当然，我们的敌人也会认为这太低贱了，所以如果他们找到你，你要做好准备，因为他们不会手下留情。%SPEECH_OFF% | %employer%盯着洒了的牛奶流过桌面滴下桌边。%SPEECH_ON%你有没有过因为类似这样的小事而毁了一天啊？%SPEECH_OFF%你点了点头，谁没有过呢？他接着说。%SPEECH_ON%我本来打算做奶酪，可现在做不了了，材料都被毁了。雇佣兵，这句话同样适用于战争。我需要你去突袭%feudfamily%的领地，把他们的“牛奶”给扬了，摧毁上回、烧毁农场、弄塌矿井，不惜一切代价。这样做%days%，应该就能达到目的。当然，在你外出期间，要小心他们的巡逻队，如果你在我领地做这些勾当，我一定会把你的脑袋插在木桩上！%SPEECH_OFF% | 一个卫兵领你去见%employer%，他正在花园里修剪一些作物。植物都倒了下来，它们的叶子被侵害的昆虫啃得参差不齐。%employer%拿起一株死亡的植物讲道。%SPEECH_ON%这些作物本来在这个季节很强势，现在却被最小的虫子击败了。我相信对于那些微小的家伙来说，这是一个伟大的时刻。%SPEECH_OFF%他扔掉植物，拍了拍你的肩膀。%SPEECH_ON%雇佣兵，我需要你成为敌人花园里跟恶魔一样的昆虫。至少要袭击%feudfamily%的领地%days%。当然，如果他们抓住你，他们会像对待虫子一样对待你，把你压扁。所以要避开敌人，你知道，就像虫子一样。%SPEECH_OFF% | 在你走进雇主房间的时候，%employer%正在和一个妇女说笑。她迅速收拾好自己的东西，匆匆离开，视线没有正视你。这位相当得意的贵族给自己倒了一杯酒。%SPEECH_ON%不用理她，她是我太太的朋友，仅此而已。%SPEECH_OFF%他把酒瓶放回书桌上。%SPEECH_ON%说到朋友，你能否去掠夺一下%feudfamily%的领地呢？%SPEECH_OFF%这个人在往前迈步的时候踉跄了一下，最终坐在了桌子边缘。他闻了闻自己的手指，耸了耸肩，喝了一口酒。%SPEECH_ON%前往他们的领地，摧毁尽可能多的东西，持续%days%，然后就可以回来了。当然你也可以一直留在那里，但我强烈建议你回来，因为他们的军队不会对你的行为坐视不管。贵族们很少喜欢侵略者，我相信你知道那里面的政治利害。%SPEECH_OFF% | %employer%正被他的指挥官们环绕着。他招手让你走过来，并指着手指，好像在指责你犯下了你根本不知道的罪行。%SPEECH_ON%就是他了! 这个人将会去做这件事情! 佣兵! 我需要老练的战士去掠夺%feudfamily%的土地%days%的时间。摧毁尽可能多的东西，伤害他们进行战争的能力。当然，要保持灵活，他们会迅速粉碎他们发现的一切袭击。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{你刚踏进%employer%的房间，他就立即说道。%SPEECH_ON%{佣兵，来得正好。我需要一支突击队去把%feudfamily%的锅碗瓢盆砸个稀烂——你懂我意思吧？不明白？说白了就是冲进他们地盘，能烧的全烧光。干个%days%足够重创他们的战争储备。但千万要提防敌方巡逻队。 | 啊，佣兵。听着，我需要些硬汉深入%feudfamily%领地，见商队就劫，见庄稼就烧。这活儿不太光彩，但能加速结束战争。我需要你在那里呆%days%时间，然后回来。 | 我需要有支劫掠队伍潜入%feudfamily%领地%days%，最大限度摧毁他们的物资。你会成为他们的死敌并被疯狂追捕，但只要避开巡逻队，这任务其实轻松简单。意下如何？ | 我们正与%feudfamily%交战，但战争不止是两军对垒。有时候需要点特殊手段。佣兵，我要你突袭他们领地%days%——摧毁商队、焚烧农场，一切有助于战局的事。当然要警惕巡逻队，换我被人这么搞地盘，追捕力度只会加倍。你怎么说？ | 长话短说：我需要有人去%feudfamily%地盘骚扰%days%。他们肯定防着你们这号人，行动时务必避开巡逻队。有兴趣吗？ | 有桩美差给你，佣兵。去%feudfamily%领地破坏%days%，能毁多少毁多少。这种手段最能提前结束战争。当然他们也明白这个道理，所以会拼命阻止你。}%SPEECH_OFF% | %employer%手指点向铺满桌面的地图。%SPEECH_ON%知道吗？击败对手最好的方式，就是让他根本无力作战——某本古籍上读到的。%SPEECH_OFF%这战争观很文艺，但没错。你点头附和。他继续道：%SPEECH_ON%我要你深入%feudfamily%领地，能破坏多少就破坏多少。劫商队、烧农场，你都懂的。全力破坏%days%后撤回。哦，最后提醒你一句：警惕巡逻队，他们可不会善待你的……远征。%SPEECH_OFF% | %employer%正在翻阅典籍，用羽毛笔做着批注。%SPEECH_ON%我祖父曾击败十倍于己的敌军。知道怎么做到的吗？那些拿我家俸禄的史官只会歌颂战场荣光——但真相并非如此。%SPEECH_OFF%你耸肩猜测他祖父用了计谋。贵族啪地合上书，指尖轻点：%SPEECH_ON%正是！他只带少量人马烧光了敌方的农场、粮仓和补给。再庞大的军队饿着肚子又能如何？佣兵，我要你如法炮制。去%feudfamily%领地破坏%days%，当然要避开巡逻队。要是被逮到，他们绝对会往死里收拾你。%SPEECH_OFF% | 你进门时撞见%employer%与一位老将军争执。将军挺直腰板：%SPEECH_ON%这种卑劣行径会玷污我家族的声誉！非要这么干就找底层贱民去！%SPEECH_OFF%他抓起自己的东西拂袖而去，经过你时还嗤之以鼻。%employer%笑着张开双臂：%SPEECH_ON%真是说魔鬼魔鬼就到。佣兵，我需要有人劫掠%feudfamily%领地%days%。我那些贵族指挥官觉得掉价，但你正合适。当然敌人也会觉得这种行径令人鄙夷，所以要是被发现了——做好被往死里打的准备。%SPEECH_OFF% | %employer%盯着桌上漫延的牛奶正从边缘滴落。%SPEECH_ON%有过被这种小事毁了一整天的经历吗？%SPEECH_OFF%你点头——谁没有呢？他继续道：%SPEECH_ON%我本想做奶酪，现在原料毁了全泡汤。佣兵，这现成的寓言正好对应战争。我要你去劫掠%feudfamily%的领地，打个比方就是“打翻他们的牛奶”：劫商队、烧农场、炸矿洞，不择手段。干满%days%就能成事。当然要提防巡逻队，换你在我地盘这么搞，我绝对把你脑袋插木桩上！%SPEECH_OFF% | 卫兵引你到花园，%employer%正在照料作物。植株倒伏在地，叶片被虫啃得斑驳残缺。他拾起枯枝说道：%SPEECH_ON%这本该是最丰饶的一季，却被肆虐的小虫子毁了。那些小混蛋肯定快活极了。%SPEECH_OFF%他扔下枯枝拍你肩膀：%SPEECH_ON%佣兵，我要你当敌人园子里的害虫。去%feudfamily%领地骚扰至少%days%。如果被抓住，他们绝对会像碾虫子那样对付你。所以学聪明点——像虫子躲鞋底那样避开巡逻队。%SPEECH_OFF% | 你进屋时%employer%正与女郎调情。她匆忙收拾物品避开视线离去。这位得意的贵族自斟一杯葡萄酒：%SPEECH_ON%别在意，她只是我妻子的朋友。%SPEECH_OFF%他将酒瓶放回桌面：%SPEECH_ON%既然说到朋友，不如你去%feudfamily%领地杀人发火一阵，就当你我交个朋友？%SPEECH_OFF%他晃悠着坐到桌沿，嗅嗅手指耸耸肩，抿了口酒：%SPEECH_ON%去他们地盘破坏%days%再回来。当然你想留那儿也行，但我建议撤回——他们的军队可不会一直容忍你。贵族最恨搅局的，这道理你懂。%SPEECH_OFF% | %employer%被指挥官们簇拥着。他招手让你上前，伸手指着你像在指控一桩你毫不知情的罪行：%SPEECH_ON%就是他了！这人肯定能胜任！佣兵！我需要硬点子去劫掠%feudfamily%领地%days%。尽你所能去破坏，凡是削弱他们战力的都不放过。记住保持机动，他们会全力扑杀发现的任何袭击者。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{五天的工期可不便宜。 | 这是 %companyname% 可以解决的事。 | 报酬呢？}",
+					Text = "{五天的工期可不便宜。 | 这事%companyname%能办。 | 报酬呢？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -575,7 +575,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这不值得。 | 我们还有别的地方要去。 | 对战团而言太耗时间了。}",
+					Text = "{这事不划算。 | 我们还有别的地方要去。 | 对战团而言太耗时间了。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -592,7 +592,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SearchParty",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_90.png[/img]{你接近了一个农场，突然其中一个百叶窗嘭地打开。 一个老妇人用沙哑的声音喊叫着同时摇着一面白旗。%randombrother% 前去检查了一番，听她说了一会后快速赶了回来。%SPEECH_ON%先生，她说 %feudfamily% 知道我们的位置而且一大股敌军正向我们而来。 而且是的，她用了“股”这个词。%SPEECH_OFF% | 在你经过一个农舍时一个小男孩从中跑出来。%SPEECH_ON%噢，你是要去杀强盗的人吗？%SPEECH_OFF%你问他谁说的。他耸耸肩。%SPEECH_ON%我在酒馆晃荡时听说 %feudfamily% 知道了强盗的位置并派出大家伙们去好好揍他们一顿！%SPEECH_OFF%男孩像在碾虫子般拍了下手。 你搓了搓这小子的头发。%SPEECH_ON%当然，那就是我们。现在回家吧。%SPEECH_OFF%你快速向 %companyname% 转告了消息。 | %randombrother% 从山坡上跑下来。 他跑到你边上，大口哈着气。%SPEECH_ON%先生，我…他们…%SPEECH_OFF%他挺起身。%SPEECH_ON%我需要点锻炼。但那不是我过来要告诉你的！ 有一支非常大的部队正向我们靠近。 我想他们知道我们的具体位置，先生。%SPEECH_OFF%你点头并告诉伙计们做好准备。 | 一份侦查任务的报告说有一支巨大的地方巡逻队看起来知晓你的位置并正在靠近！ %companyname% 应该做好准备，不论是要逃还是准备接战。 | 你被发现了并且 %feudfamily% 的一支大部队正在靠近！ 尽可能让伙计们做好准备，因为报告说这些敌人武装精良。 | %randombrother% 向你报告道他从一些当地人打听到的消息。 他们说一大批士兵带着面旗子正在靠近。 你让雇佣兵描述上面的纹章而他细致的描述了出来：它属于 %feudfamily%的人。 他们不知怎么但肯定追上你了。 %companyname% 应该为一场硬仗做好准备！ | 一群正在溪流里洗衣服的女人问你还在这里干什么。 你问她们在说什么。 其中一个笑了起来，似乎有点粗鲁。%SPEECH_ON%再说一遍？我们问你还在这里干什么。 你知道 %feudfamily% 正严厉打击你这样的人。 我听说，他们很快就要追上你了。%SPEECH_OFF%你问她们怎么知道的。 其中另一个女士把一件衣服拍在溪流里。%SPEECH_ON%先生，你可真够笨的。 谣言比任何马跑得都快。 别问怎么。事情就这样。%SPEECH_OFF%如果这些女人说的是实话，那很显然 %companyname% 有场硬仗要打了！ | 你走上丘顶并尽量详细的环顾了四周的状况。 没什么特别的，除了一大群人扛着 %feudfamily% 的旗帜并且看起来正向你靠近。 那可真是番绝景而且很快你就能面对面地看着它了。\n\n 敌人追上了 %companyname%！烧了他们的宝贝的你最好准备面对场硬仗。}",
+			Text = "[img]gfx/ui/events/event_90.png[/img]{你接近了一处农庄，突然其中一个百叶窗嘭地打开。一个老妇人挥舞着白旗，用沙哑的嗓音叫喊。%randombrother%前去查看，听她说了几句就匆忙返回。%SPEECH_ON%长官，她说%feudfamily%知道我们的位置，正有大队敌军朝我们杀来。没错，她用的词就是\"大队\"。%SPEECH_OFF% | 你们经过一处农舍时，有个小男孩跑了出来。%SPEECH_ON%哇，你们就是要去杀强盗的人吗？%SPEECH_OFF%你问他是谁说的。男孩耸耸肩。%SPEECH_ON%我在酒馆瞎转悠时听说%feudfamily%知道强盗在哪儿，正派大个子去把他们揍扁呢！%SPEECH_OFF%孩子像拍虫子似的双手一拍。你揉揉他的脑袋：%SPEECH_ON%对，就是我们。快回家去吧。%SPEECH_OFF%你立刻将消息告知了%companyname%。 | %randombrother%从山坡上跑下来，瘫在你身边大口喘气。%SPEECH_ON%长官，我……他们……%SPEECH_OFF%他直起身子：%SPEECH_ON%我得练练体力了。但我要说的是——有大批敌军正在朝我们赶来！他们肯定清楚我们的位置，长官。%SPEECH_OFF%你点头下令全员戒备。 | 侦察发现：大批敌军巡逻队似乎已掌握你们的位置，正在逼近！%companyname%必须立即准备——无论是撤退还是坚守阵地决一死战。 | 你们已经暴露，%feudfamily%的大批士兵正在杀来！尽可能让兄弟们做好准备，据报这批敌军装备精良。 | %randombrother%向你汇报从当地人口中听到的消息：据说打着旗号的大批士兵正朝你们而来。你让佣兵描述纹章细节，确认是%feudfamily%的部队。他们必定已追踪到你们的行踪。%companyname%必须准备迎接一场恶战！ | 一群在溪边洗衣的妇人问你们怎么还待在这儿。你反问何出此言。其中一人发出粗野的笑声：%SPEECH_ON%听不清吗？我们是问你们怎么还在这儿晃悠。%feudfamily%正全力搜捕你们这号人。照我听说的，他们转眼就能摸到你们屁股后头。%SPEECH_OFF%你问她们从何得知。另一个妇人把衬衫摔进溪水：%SPEECH_ON%老爷，你怕是蠢得不行。谣言跑得比任何马都快。别问为啥，世道就是这样。%SPEECH_OFF%若这些村妇所言不虚，%companyname%必将面临一场苦战！ | 你登上山坡极目远眺，只见高举%feudfamily%旗帜的大队人马正朝你们逼近。这景象可真够瞧的，而且很快就能面对面见识了。\n\n敌军已追上%companyname%！既然烧光了他们的家当，你们就得准备迎接一场血战。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -609,12 +609,12 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "TimeIsUp",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_36.png[/img]{差不多 %maxdays% 了。 战团应该准备回头找 %employer% 拿报酬了。 | 战团已经呆了 %maxdays%。%employer% 现在应该正等着你回去。 | 用了 %maxdays% 掠夺，你达到了时间要求并该回去找 %employer% 领报酬了。 不需要再花一秒钟干你拿不到报酬的事。 | %employer% 雇佣你 %maxdays%。战团不应在不必要的情况下继续待在这里。 该回去找他拿报酬了。 | %companyname% 已经用了 %maxdays% 替 %employer% 办事了。 他付的钱也只要求你干这么久所以你最好现在就回去找他。 | %employer% 付了 %maxdays% 的钱，你也干了这么长时间。 %companyname% 应该快点回去找他拿报酬。 | 尽管你逐渐适应起在这片土地上肆虐的日子，%employer% 只付了 %maxdays% 的钱。 你最好现在就回去找他。 | 你做的很好，但是时候回去找 %employer% 了，因为他只会给你 %maxdays% 的钱。}",
+			Text = "[img]gfx/ui/events/event_36.png[/img]{已经快满%maxdays%了。兄弟们该动身回去找%employer%领赏钱了。 | 战队在外面已经活动%maxdays%了。%employer%应该正等着我们回去。 | 劫掠了%maxdays%便满足了合同的要求，现在是时候回去找%employer%拿钱了。没必要再打白工。 | %employer%就雇了%maxdays%。兄弟们没必要在外面多待，回去找他拿钱吧。 | %companyname%已经给%employer%干了%maxdays%。他就付这么多天的钱，现在最好赶紧回去。 | %employer%付的是%maxdays%的钱，你也已经干满了。%companyname%得赶紧回去领报酬了。 | 尽管你逐渐适应起在这片土地上肆虐的日子，但%employer%只付%maxdays%的钱。你最好现在回去找他。 | 你做的很好，但是时候回去找%employer%了，因为他只会给你%maxdays%的钱。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "是时候回 %townname%。",
+					Text = "是时候回去%townname%了。",
 					function getResult()
 					{
 						this.Contract.setState("Return");
@@ -627,12 +627,12 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "ChangingSides",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{路上，一个披着黑色斗篷的人缓慢靠近。 他的面容藏在兜帽厚重的阴影中。 他在你面前停下并露出双手。%SPEECH_ON%欢迎。我是 %rivalhouse% 的信使。我们有一个提案。 为 %noblehouse% 放下武器，加入我们。 这边工作少不了你的，而且你的战团永远会优先拿到最好的单子。 作为见面礼，我受命给与你这把极品的武器 %nameditem%。%SPEECH_OFF%你仔细考虑这个主意。 临阵换边是雇佣兵生活的常态。 哪一边的贵族家族对战团更好？ 哪边的家族更有可能赢？ | 你离开路上撒个尿。 在你放松着的时候，一个人突然从湿漉漉的草丛中冒出来，尽管看起来挺干的。 你后跳拔出了匕首，但他举起了双手。%SPEECH_ON%喔噢，佣兵。我是 %rivalhouse% 的信使。我来提议，并且只是提议，给你一份交易。 加入我们。你会优先获得我们发布的单子，意味着最好的任务和最好的报酬，并且听我说，我们永远有活给你。 为表达诚意，我受命向你展示这个。%SPEECH_OFF%他慢慢的掏出一把精工武器。 你告诉他等会，让你把尿撒完。 思绪从你头中涌出同时别的东西从你的另一个头涌出。 | 在侦查地形时，一个披着黑斗篷的人靠近过来。%randombrother% 抓住他的兜帽并把利刃抵在他的脖子上。 这个人举起双手并说他是给 %rivalhouse% 来带个口信的。你点头示意他说，他继续道。%SPEECH_ON%我们有一个提案：加入我们。 抛弃那些你在服侍的落魄贵族并来为我们工作。 你会拿到最好的任务和最好的报酬，并且最好的是，你会站在胜利者这边！ 如果你同意，作为好意，你会得到这把被称作 %nameditem% 的精美武器。如果你同意，当然。%SPEECH_OFF%你仔细考虑了这个提议，因为反边不应该轻描淡写。 | 一个阴暗的人影从小路上走来，一只手拿着一个卷轴。%SPEECH_ON%晚上好，%companyname%。我来自 %rivalhouse% 提供服务。 抛弃你的雇主加入我们。 你会找到更好更丰富的合同，更好的是，你会站在这场战争的胜利一边！ 如果你同意，作为诚意的象征，你将收到一个武器名为 %nameditem%。%SPEECH_OFF%%randombrother% 看着你耸耸肩。%SPEECH_ON%不想越级发表意见，但我想着值得衡量。%SPEECH_OFF%确实是。 | 你从队伍里离开去侦查地形。 在观察着你面前的空地时，一个披着斗篷的人突然冒出来带着什么突出的东西。%randombrother% 出现并把他按在地上并用利刃抵好了他的脖子。 陌生人举起手，手里拿着一张卷起的卷轴。 你告诉他站起来自报身份。 他声称他来自 %rivalhouse% 并且他有个提案给 %companyname%。%SPEECH_ON%换边。作为雇佣兵，这么做也没有什么荣誉可以丢的，而且这会是完全意料之中的。 逐利，对吧？ 那么，我们有最多的任务和最好的报酬。 那就是你想要的，不是吗？%SPEECH_OFF%信使整理了他的服装，像一个稍受尴尬的使节一样挺直身子。%SPEECH_ON%额外的，如果你决定接受，我受命给予你这把被称为 %nameditem% 的武器，以示善意。 那么，怎么样？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{行军途中，一个披暗色斗篷的男子缓步走近。兜帽的阴影遮住了他的面容。他在你面前停步，双手摊开。%SPEECH_ON%幸会。我是%rivalhouse%的信使。我们有个提议：请停止为%noblehouse%效力，加入我们。与我们合作绝不愁生计，贵战团将始终优先获得最优质的合约。为表诚意，我将献上这把名为%nameditem%的精良武器。%SPEECH_OFF%你仔细斟酌着这个提议。阵前倒戈本是佣兵的家常便饭。哪个贵族家族待你们更厚道？哪个家族更可能赢得战争？ | 你离开道路去小解。正放松时，一名男子竟从滴水的灌木丛中现身——身上却未见湿痕。你后跃拔出匕首，对方却摊开双手：%SPEECH_ON%且慢，佣兵。我是%rivalhouse%的信使，仅向你提出一项建议。加入我们。以后只要有雇佣需求，贵方始终享有最高优先级——意味着最优厚的合约与酬金。而且我不妨直言，我们的需求永无止境。为表诚意，我受命献上此物。%SPEECH_OFF%他缓缓捧出一柄工艺精湛的武器。你让他稍候，回去继续解手。当某处奔流不止时，万千思绪也已涌上心头。 | 你正在勘察地形，一个披暗色斗篷的男子悄然接近。%randombrother%揪住他兜帽，刀刃已架上脖颈。此人只是举起双手，自称是%rivalhouse%的信使。你点头示意他开口。%SPEECH_ON%我们有个提议：加入我们。抛弃你效忠的那些贵族败类，为我们效力。你将获得最优质的合约与最丰厚的报酬，最重要的是——你将站在胜利者这边！为表诚意，我奉命献上这柄名为%nameditem%的武器。当然，前提是你同意我们的提议。%SPEECH_OFF%你慎重权衡着，毕竟改换门庭可不是什么儿戏。 | 一道黑影沿路走来，手中握着一卷羊皮纸。%SPEECH_ON%夜安，%companyname%。我奉%rivalhouse%之命前来提出雇佣邀请。请背弃你现在的雇主，加入我们。你将获得更优渥的合约，更重要的是——您将站在这场战争的胜利方！如果你同意，同时也为了展示我们的诚意，我们愿意赠予你这柄名为%nameditem%的武器。%SPEECH_OFF%%randombrother%看向你耸耸肩：%SPEECH_ON%虽然我没资格说这话，但这事值得琢磨。%SPEECH_OFF%确实如此。 | 你离开队伍去勘察地形。正观察前方田野时，一个披斗篷的身影突然出现，手里捧着什么东西。%randombrother%猛地扑倒他，刀刃作势就要捅穿他的脸。陌生人举起双手，手里攥着一卷羊皮纸。你命他站起来表明身份。他自称来自%rivalhouse%，要给%companyname%带个提议。%SPEECH_ON%跳槽吧。你们佣兵跳槽又不丢人，大家本来就觉得你们会这么干。不就是为了钱吗？我们这儿合同最多，报酬最高。这不正是你们想要的？%SPEECH_OFF%信使整理着衣物，像个一时窘迫的使节般挺直身子。%SPEECH_ON%要是答应的话，我们还会送上这把叫%nameditem%的武器，以表诚意。你觉得怎么样？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "有趣的提议。我接受。",
+					Text = "诱人的提议。我接受。",
 					function getResult()
 					{
 						return "AcceptChangingSides";
@@ -640,7 +640,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "你在浪费时间。 滚，不然你就挂在那棵树上。",
+					Text = "你在浪费时间。滚，不然就把你挂在那棵树上。",
 					function getResult()
 					{
 						return 0;
@@ -652,20 +652,20 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "AcceptChangingSides",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_51.png[/img]{你接受这个提议。 神秘的信使带你到一片隐秘的矮林并在草丛后挖出了武器交给你。%SPEECH_ON%交易愉快，佣兵。%SPEECH_OFF%%employer% 和他的家族现在肯定相当恨你了。 | 在你接受交易后，信使带你离开路上去从些灌木丛后取出武器。 将它交给你时，他与你握了握手。%SPEECH_ON%你做了正确的决定，佣兵。%SPEECH_OFF%%employer% 现在无疑会生气所以不用回去找他了，当然，除非你的新雇主要求这么做。}",
+			Text = "[img]gfx/ui/events/event_51.png[/img]{你接受了提议。神秘信使带你到一处隐蔽树丛，从灌木后挖出武器交给你。%SPEECH_ON%合作愉快，佣兵。%SPEECH_OFF%可以肯定地说，%employer%和他的整个家族现在都恨透了你。 | 你接受提议后，信使带你离开道路，从灌木丛后捞出武器。交货时他还与你握手。%SPEECH_ON%你做了正确选择，佣兵。%SPEECH_OFF%%employer%无疑已视你为敌，没必要回去找他了——除非你的新雇主有此要求。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "%companyname% 从此将为 %rivalhouse% 工作！",
+					Text = "%companyname%从此将为%rivalhouse%工作！",
 					function getResult()
 					{
 						this.Contract.m.Item = null;
 						local f = this.World.FactionManager.getFaction(this.Contract.getFaction());
-						f.addPlayerRelation(-f.getPlayerRelation(), "在战争中改变了立场");
+						f.addPlayerRelation(-f.getPlayerRelation(), "在战争中改变了阵营");
 						f.getFlags().set("Betrayed", true);
 						local a = this.World.FactionManager.getFaction(this.Flags.get("RivalHouseID"));
-						a.addPlayerRelationEx(50.0 - a.getPlayerRelation(), "在战争中改变了立场");
+						a.addPlayerRelationEx(50.0 - a.getPlayerRelation(), "在战争中改变了阵营");
 						a.makeSettlementsFriendlyToPlayer();
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractBetrayal);
 						this.World.Contracts.finishActiveContract(true);
@@ -690,19 +690,19 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer% welcomes you into his room. 他给你装着 %reward_completion% 克朗的袋子。%SPEECH_ON%在那边做得好，佣兵。 你几乎做到了我能要求的一切。%SPEECH_OFF% | %employer% 被找到时正照顾着一群鸡。 你驱赶着从鸡群中开出一条路靠近他以向他报告。他积极地回应道。%SPEECH_ON%啊是吗？那很好。 你想以鸡食还是克朗结算？%SPEECH_OFF%贵族一本正经地看着你直到嘴角背叛了他。%SPEECH_ON%你可以在那边站着的卫兵那里找到 %reward_completion% 克朗。 他会知道要交给你的。%SPEECH_OFF% | %employer% 没空见你，但他的一个卫兵交给你的 %reward_completion% 克朗看起来足够丰满以证明他对你工作的满意。 | %employer% 把一根手指插入酒杯。%SPEECH_ON%掠夺是脏活，但你在那边干的不错。 得承认，我有点希望你给我的敌人带来末日，但我想你做的够好了。%SPEECH_OFF%他收回手指舔了一下丢给你装着 %reward_completion% 克朗的袋子。 | %employer% 坐在他的椅子上，手耷拉在扶手上，翘着脚。%SPEECH_ON%你 %reward_completion% 的报酬就在那。%SPEECH_OFF%他向房间角落里点头，那里一个包裹抵着墙。 你走过去拿上它，同时他继续说道。%SPEECH_ON%我得说你干的不错。 那袋子的重量代表着我的满意。%SPEECH_OFF% | 你发现 %employer% 在狗笼喂着它的狗。%SPEECH_ON%做得好，佣兵。如果我们的士兵们都有你的体质和意志，这场战争会在第一次见到月亮前结束。 真遗憾，不是吗？%SPEECH_OFF%他突然转向你，眼神很认真。 你想这是一种委婉的试图招募你加入他的军队。 你礼貌的给出了一个非常正式的拒绝后询问起报酬的事。 他继续说起来，用耷拉着的培根指着路另一边站着的一个人。%SPEECH_ON%那个卫兵手里。总共 %reward_completion% 克朗。%SPEECH_OFF% | %employer% 感谢你的服务。 那就是他所说的全部内容，然后交给了你 %reward_completion% 克朗。 | 你看到 %employer% 被他的指挥官们围了起来。 他们在根据你的工作结果调整战略地图。 贵族起身看着结果。%SPEECH_ON%这不是我所能要求的一切，但不错。非常好。 我那边站着的卫兵会给你取来 %reward_completion% 克朗。%SPEECH_OFF% | %employer% 站在墙上的地图前。 他用一支毛笔记笔记而且你意识到这些标记跟着 %companyname% 在 %feudfamily%的领地内的行动路线。 贵族哼了一声并点了点头。他没有看向你就这么说道。%SPEECH_ON%这不是最好的结果，但是还不错。%reward_completion% 克朗就在角落里等着你。%SPEECH_OFF% | %employer%的一个指挥官阻止了你进入他的房间。 He hands over a satchel of %reward_completion% crowns.%SPEECH_ON%大人很忙。 请拿上你的报酬然后离开。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer%将你迎进房间，递给你一袋%reward_completion%克朗。%SPEECH_ON%干得不错，佣兵。你几乎完成了我要求的所有任务。%SPEECH_OFF% | 你发现%employer%正在喂鸡。你拨开鸡群走到他面前汇报消息，他积极地回应道。%SPEECH_ON%是吗？很好。你是想要鸡饲料当报酬，还是克朗？%SPEECH_OFF%这位贵族板着脸看你，最后还是没憋住笑。%SPEECH_ON%那边站着的护卫拿着%reward_completion%克朗。他知道该交给谁。%SPEECH_OFF% | %employer%忙得没空见你，但他护卫递来的%reward_completion%克朗足以说明他对你的工作相当满意。 | %employer%用手指搅着酒杯。%SPEECH_ON%劫掠是脏活，但你干得不错。说实话，我本来指望你能给敌人带去灭顶之灾，不过现在这样也还行吧。%SPEECH_OFF%他舔掉手指上的酒液，扔给你一装有%reward_completion%克朗的袋子。 | %employer%瘫坐在椅子里，双手垂在扶手上，两腿伸直。%SPEECH_ON%你的%reward_completion%克朗报酬在那边。%SPEECH_OFF%他朝墙角扬了扬下巴，有个钱袋靠墙放着。你去取钱时他继续说道：%SPEECH_ON%算你干得不错。那袋钱的分量就是我的满意程度。%SPEECH_OFF% | 你在狗舍找到正在喂狗的%employer%。%SPEECH_ON%干得好，佣兵。要是我的士兵都有你这样的素质和干劲，这场战争撑不过第一个月。真是可惜啊。%SPEECH_OFF%他突然转身紧盯你，你以为这是在暗示招揽。你礼貌地打了个官腔婉拒，然后询问报酬。他晃着半截培根指向对面站着的护卫：%SPEECH_ON%钱在他那儿。总共%reward_completion%克朗。%SPEECH_OFF% | %employer%感谢你的服务。他说完这句就递给你%reward_completion%克朗。 | 你见到%employer%被指挥官们围着。他们正根据你的战果调整作战地图。这位贵族直起身端详着成果：%SPEECH_ON%虽然没达到最理想效果，但已经很好。非常好了。那边站着的护卫会给你%reward_completion%克朗。%SPEECH_OFF% | %employer%站在墙挂地图前用羽毛笔做标记，你发现这些记号是沿着%companyname%穿越%feudfamily%领地的路线放置的。贵族自顾自地哼着点头，头也不回地说：%SPEECH_ON%不算完美，但还不错。墙角有你的%reward_completion%克朗。%SPEECH_OFF% | %employer%的一名指挥官拦住你不让进房间，他递来一袋%reward_completion%克朗。%SPEECH_ON%大人正忙。请拿好报酬离开。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "诚实的工作得到诚实的报酬。",
+					Text = "干活拿钱，天经地义。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "掠夺敌人的土地");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "劫掠敌人的土地");
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isCivilWar())
@@ -728,19 +728,19 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success2",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer% 和他的指挥官们在你进入他们的房间时都喝醉了。 其中一个高大的将军拍了拍你的肩膀，看起来想说什么，然后转身开始呕吐。 你赶快走开并找到了 %employer% 本人。%SPEECH_ON%啊，佣兵！我－嗝－好吧，这。%reward_completion% 克朗。%SPEECH_OFF%他举起一个袋子，你快速的拿上了它以免它遭遇仍在你背后呕吐的指挥官相似的命运。%employer% 软绵绵的往后晃荡到倚在他的办公桌上。%SPEECH_ON%你他妈的几乎在 %feudfamily%的战争能力上一拳打出了个大洞。 干的－嗝－真他妈的好！ 我听过的最他妈的工作，好的，好工作。%SPEECH_OFF%你从房间里撤出，在活动与呕吐物的城市中来回躲闪。 | %employer% 把酒杯拍下，把里面的酒大部分都撒到了他的身上。%SPEECH_ON%好极了！太棒了！完美！这是我得对你的表现说的，佣兵。天啊，我们甚至抓到了几个从 %feudfamily%的军队里跑来的逃兵，他们很担心他们那一边已经输了！ 这，拿上 %reward_completion% 克朗。算我的。%SPEECH_OFF%这人爆笑起来并长饮一口。 | 你走进 %employer%的房间发现他正在研究这一张战略地图。 他用笔挠着它的下巴，自言自语并时不时的点着头。%SPEECH_ON%你知道的，我刚刚为了记录你穿越 %feudfamily% 领土的路线而用光了墨水。 你干的太他妈好了，佣兵。 你能在那边的角落里找到 %reward_completion% 克朗。%SPEECH_OFF% | 一个人拿着沉重的袋子在 %employer%的房门外迎接你。%SPEECH_ON%%reward_completion% 克朗，为你的服务。 我的殿下很忙，但非常高兴。 希望这能表达他对你工作成果的满意程度。%SPEECH_OFF%这可真是份沉重的满意，确实。 | 一个卫兵领你到 %employer%，他在一面上锁的门后面。 里面有个女人和他在一起而且他看起来状态有点…喜庆。 卫兵想了想要不要敲门，然后决定不这么做。%SPEECH_ON%我受命来通知他你来了，但他不喜欢被打扰。 不是这种时候。 你懂的。好时候。%SPEECH_OFF%你点头并问你的报酬在哪。 卫兵带你到了账房。 你见了一个坐在成堆的纸和硬币后长着鹰钩鼻的人。 他向你推过来 %reward_completion% 克朗然后在一张卷轴上记录下这逼交易。 | %employer% 在他的花园会见了你。 他在视察着一些仆人在沃土中的栽培工作。%SPEECH_ON%你的花园里有些什么，佣兵？%SPEECH_OFF%你客气的告诉他你不是会搞园艺的类型。 他点头好像这对他而言很有趣。%SPEECH_ON%我在思考要不要种点蔓菁给下个季度。 不论如何，闲话少说。 看到那边流着汗的仆人了吗？ 他带着那个沉重的袋子。 它重是因为装着 %reward_completion% 克朗。 作为你很出色的完成了工作的报酬，佣兵。 或许你可以给自己买个院子了！%SPEECH_OFF% | %employer% 和他的指挥官们挤在一张战略地图前。 其中一人推着一颗带有你战团纹章的代币。 他追踪着那枚代币越过整张地图，用一张带墨的木棍不时的点下标记。 你叉起手大声说道。%SPEECH_ON%享受着我的工作，是吗？%SPEECH_OFF%贵族和他的指挥官们抬头看向你。%employer% 笑起来快速走过房间。%SPEECH_ON%你不知道吗！ 你做的非常棒，雇佣兵。真的。 那边那个卫兵拿着你的 %reward_completion% 克朗的报酬。%SPEECH_OFF% | %employer% 站在他的指挥官们中间。 他在你进入房间时高喊。%SPEECH_ON%天，啊，小伙子！你几乎摧毁了他们有的一切！ 像我这样的人，除了从天上射出一道霹雳，还能要求什么呢？ 你会拿到 %reward_completion% 克朗的报酬，我觉得这对于这样一份高质量的工作来说是绰绰有余的！%SPEECH_OFF% | 你看到 %employer% 坐在他的房间里。 他看起来和你在一起很高兴。%SPEECH_ON%{好家伙，这不是今天的天选之人吗。 我听了一大群小鸟从我窗中飞过来向我叙述你的成果。 当你做的那么好时消息传得可快了！%feudfamily% 受到重挫而且战争向结束迈出了许多步！ 我准备好了 %reward_completion% 克朗的袋子，就在那边的角落里。 | 你应该更喜庆点，佣兵。 你对 %feudfamily% 的成果超出了我所要求的一切。 我很惊讶你没有就那么再进一步就那么杀光他们整条血脉。 啊，一切会有时候的。 现在，你有 %reward_completion% 克朗就在那边的角落里等着你呢。}%SPEECH_OFF% | 你发现 %employer% 蹲在一张摆着战略地图的桌子前。 他的眼睛沿着边缘，扫描这一条代币组成的地平线。%SPEECH_ON%欢迎，佣兵。%SPEECH_OFF%他跃起身, 用一只手，他缓慢地拿起代表着 %feudfamily% 的代币并开始把它们丢到一边。%SPEECH_ON%好好享受你的手艺吧，佣兵。 你毫不费力地成功重创了我的敌人！ 我为自己发声，但你做的远超任何大型战役的效果！%reward_completion% 就在那边角落里等着你。 我希望那份报酬足够，因为你的成果显然够好。%SPEECH_OFF% | 你发现 %employer% 和他的指挥官们以及一群女人穿着不太适合任何你所知的战斗的衣服。%SPEECH_ON%佣兵！快进来%SPEECH_OFF%%employer% 向后倒，一边抱着一个女人。 你尽力跟着他。 一个女人试图把你拽进排队，但一个将军征用了她。%employer% 倒在椅子上，女人坐在他的大腿上。%SPEECH_ON%你是这场庆典的缘由，雇佣兵。 你在 %feudfamily%的领地掠夺，好到我想你做的比起任何大战都更让我们接近了结这场战争！干杯！%SPEECH_OFF%你看了看四周。%SPEECH_ON%活动不错，但我不用为了女人和酒去战斗。 你欠我钱。%SPEECH_OFF%你的雇主点头。%SPEECH_ON%当然，当然！ 去见我的司库，给他看看你的印章。 他那里有 %reward_completion% 克朗等着你呢。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{你进屋时%employer%正和指挥官们喝得烂醉。一个魁梧将军拍你肩膀想说话，却扭头吐了起来。你快步躲开找到%employer%本人。%SPEECH_ON%哈，佣兵！我——嗝——给，%reward_completion%克朗。%SPEECH_OFF%你赶紧接过他递来的钱袋，免得被某人浇上一层呕吐物。%employer%晃悠着靠住桌子支撑身体：%SPEECH_ON%你差点把%feudfamily%的战争储备烧干净了！干得真他妈——嗝——漂亮！老子听过最他妈棒的差事！%SPEECH_OFF%你迂回穿过狂欢人群和呕吐物撤离了房间。 | %employer%猛摔酒杯，酒水大半泼在自己身上。%SPEECH_ON%精彩！卓越！完美！这就是我对你工作的评价，佣兵。见鬼，我们甚至抓到了几个从%feudfamily%的军队里跑来的逃兵，他们觉得那边已经输定了！给，%reward_completion%克朗，我请客！%SPEECH_OFF%他大笑着灌下一大口酒。 | 你走进%employer%房间时，他正端详作战地图，用羽毛笔轻搔下巴，不时哼着曲子点头。%SPEECH_ON%知道吗？我追踪你在%feudfamily%领地行动时差点把墨水用光，你的成果就是这么丰富，佣兵。%reward_completion%克朗在那边墙角。%SPEECH_OFF% | 有人在%employer%房外递来沉甸甸的钱袋。%SPEECH_ON%你的酬劳%reward_completion%克朗。大人正忙，但非常满意。这应该能体现他对你工作的赞赏。%SPEECH_OFF%确实是个好信号。 | 卫兵带你到%employer%紧锁的房门前，里面传来女声，他似乎正在……庆祝。卫兵敲门后又打消念头：%SPEECH_ON%我本来是想通报你来了，但他不喜欢被打扰——特别是这种时候。你懂的。%SPEECH_OFF%你点头问报酬在哪儿。卫兵引你去金库，一名鹰钩鼻男子在堆积如山的文书钱币后递来%reward_completion%克朗，并在卷轴上登记了交易。 | %employer%正在花园里监督仆人往沃土里栽苗。%SPEECH_ON%你花园里种了什么，佣兵？%SPEECH_OFF%你婉言表示自己不擅园艺。他若有所思地点头：%SPEECH_ON%我在考虑下季种萝卜。不说这个了——看见那个流汗的仆人了吗？他手里的袋子很沉，因为里面装着%reward_completion%克朗。这是给你的奖赏，说不定能买座自己的花园！%SPEECH_OFF% | %employer%和指挥官们正对着作战地图低语。有人推着带你们战徽的标记，用墨棒在地图上追踪轨迹。你抱臂高声道：%SPEECH_ON%看来对我的工作很满意？%SPEECH_OFF%贵族和指挥官们抬头。%employer%咧嘴笑着快步走来：%SPEECH_ON%当然！你干得太棒了，佣兵。那边护卫有%reward_completion%克朗作为报酬。%SPEECH_OFF% | %employer%站在指挥官中间，你进门时他欢呼道：%SPEECH_ON%老天爷啊！你差点把他们老家端了！除了天降神罚我还指望什么更好的结果？%reward_completion%克朗归你了，配得上这水准的工作！%SPEECH_OFF% | %employer%坐在房间里，对你十分满意：%SPEECH_ON%{瞧瞧，大功臣来了。我的小鸟们都在传颂你的战绩！干得漂亮消息自然传得快！%feudfamily%已受重创，战争结束近在眼前！墙角的袋子里装着%reward_completion%克朗。 | 你应该更得意些，佣兵。你对%feudfamily%做的超出我预期。没顺便灭他们全族倒是让我意外。罢了，来日方长。现在墙角有%reward_completion%克朗等着你。}%SPEECH_OFF% | 你见%employer%蹲在铺着作战地图的桌旁，目光掠过堆满的标记。%SPEECH_ON%你好，佣兵。%SPEECH_OFF%他跃起身，慢条斯理抓起代表%feudfamily%的标记扔开：%SPEECH_ON%欣赏你的杰作吧——没费多大力气就重创了我的敌人！我敢说这比正面战场还有效！墙角有%reward_completion%克朗，但愿报酬配得上你这完美表现。%SPEECH_OFF% | 你见%employer%和指挥官们被一群衣着与战时格格不入的女子包围。%SPEECH_ON%佣兵！快进来！%SPEECH_OFF%%employer%搂着两个女人踉跄后退。你勉强跟进去，有女子想拉你狂欢，被一位将军截胡。%employer%瘫坐椅子，女人坐在他腿上：%SPEECH_ON%你可是庆功宴的焦点人物！把%feudfamily%地盘搅得天翻地覆，比正面战场更能结束战争！干杯！%SPEECH_OFF%你环顾四周：%SPEECH_ON%庆功不错，但我不靠打架换酒色。你欠我钱。%SPEECH_OFF%雇主点头：%SPEECH_ON%当然！去找财务官亮出你的徽记，他会给你%reward_completion%克朗的。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "诚实的工作得到诚实的报酬。",
+					Text = "干活拿钱，天经地义。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess * 2);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess * 2, "掠夺敌人的土地");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess * 2, "劫掠敌人的土地");
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isCivilWar())
@@ -766,18 +766,18 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Failure1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{你走进 %employer%的房间准备好面对他的愤怒。 而且他确实很愤怒。%SPEECH_ON%让我把这说清楚，佣兵。 我提出雇你去劫掠 %feudfamily%的领地。 你接受了这个交易因为，我想它是，一个非常好的提案而且双方都有利可图。 现在你站在我面前说你对我们的约定放了个屁。 为什么你还要走过那扇门你个狗杂种？ 不，你比那更糟，你这令人作呕的蠕虫试图对一个进行着高尚工作的贵族行窃。 在我爆脾气之前离开这里。%SPEECH_OFF%尽管 %employer% 是在虚张声势，他才是在陷入愤怒的人。 你在你的脾气带着一个贵族的命一起爆掉前快速离开了。 | 你找到 %employer% 但一个卫兵将你阻在门外。%SPEECH_ON%他已经知道你做的，或者我应该说没做的。 你最好不要进去。%SPEECH_OFF%被掀翻的桌子的敲打声震的门直响。 一声尖叫随之而来。 你接受了卫兵的建议并离开了。 | %employer% 手指划过他杯子的边缘。 它随着他缠绕大声地呜咽着，一次又一次。%SPEECH_ON%真是甜蜜，美妙的音调。 一个简单的杯子，怎么会比你更好呢，雇佣兵？ 我想这就是这个世界有时候的样子。 我让什么人去做点事，然后他们不去做它。 还有什么可说的呢？请，出去。%SPEECH_OFF% | 你发现 %employer% 给他的狗们喂垃圾。 边上看着的仆人们看起来遭遇这种待遇时宁愿做狗。%employer% 转向你，一只狗轻轻的从他手中滑出一块培根。%SPEECH_ON%狗对肉很感兴趣。 这，我喂给它们一只猪的遗骸。 它是头好猪。 一头一生都过得不错的猪，当然，直到一个非常坏的时刻。 现在它喂了我的狗。 你，佣兵，在你自己的生命中给我带来了一个非常坏的时刻。 我应不应该把你也喂给我的狗？ 不？那么滚出我的房间。%SPEECH_OFF% | %employer% 拒绝与你见面。 两个他的卫兵解释说他对你没能对 %feudfamily%的领地造成任何伤害非常生气。 很合理。你为卫兵们使你免于一个贵族无意义的羞辱和愤怒轰炸向他们致谢。}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{你走进%employer%的房间，早已准备好承受他的怒火。而他果然大发雷霆。%SPEECH_ON%给我说清楚，佣兵。我付钱让你去袭击%feudfamily%的地盘。你接受了这桩买卖——我以为这是笔好交易，双方都能得利。现在你却站在这里说对我们的约定屁事没干？你这狗杂碎何必踏进这扇门？不，你比那还不如，你就是条想从干正事的贵族手里偷食的鼻涕虫。趁我还没发火，滚出去！%SPEECH_OFF%尽管%employer%气势汹汹，真正陷入危险的却是他。你迅速离开，免得按捺不住脾气要了这位贵族的性命。 | 你回到%employer%处，但护卫在门外拦住了你。%SPEECH_ON%他已经知道你干了——或者说什么都没干。你最好别进去。%SPEECH_OFF%掀桌的撞击声震得门扉发颤，接着是语无伦次的咆哮。你听从护卫的建议离开了。 | %employer%用手指反复摩挲杯沿，发出刺耳的嗡鸣。%SPEECH_ON%多么美妙的曲调。区区杯子怎会比你这佣兵更管用？想必世道就是如此。我托人办事，对方却搞砸。还有什么可说的？请出去吧。%SPEECH_OFF% | %employer%正在喂狗吃剩肉。旁观的仆从满脸宁愿自己当狗享受吃食的表情。有条狗轻轻从他手中叼走培根时，他转向你：%SPEECH_ON%狗就爱吃肉。我喂它们猪肉——那是头好猪，除了临终的糟心时刻一直活得挺滋润。现在我用它来喂狗。而你，佣兵，给我带来了你人生中的糟心时刻。我该拿你喂狗吗？不乐意？那就滚出我的房间。%SPEECH_OFF% | %employer%根本拒绝见你。他的两名护卫解释称，他因你未能对%feudfamily%领地造成任何破坏而大动肝火。合情合理。你谢过护卫让你省得听贵族老爷毫无意义的怒骂。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "去你妈的！",
+					Text = "去死吧！",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "掠夺敌人的土地失败");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "未能成功劫掠敌人的土地");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}

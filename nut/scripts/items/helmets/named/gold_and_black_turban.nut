@@ -4,7 +4,7 @@ this.gold_and_black_turban <- this.inherit("scripts/items/helmets/named/named_he
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.gold_and_black_turban";
-		this.m.Description = "这顶南方风头盔可不只是看着气派，其重量分布合理，所用材料也是一流。";
+		this.m.Description = "这顶南方风格头盔可不只是看着气派，其重量分布合理，所用材料也是一流。";
 		this.m.NameList = [
 			"南方之冠",
 			"沙漠羽冠",

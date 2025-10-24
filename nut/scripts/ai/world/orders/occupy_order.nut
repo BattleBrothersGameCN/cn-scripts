@@ -95,7 +95,7 @@ this.occupy_order <- this.inherit("scripts/ai/world/world_behavior", {
 			return true;
 		}
 
-		_entity.setOrders("Occupying");
+		_entity.setOrders("驻守中");
 
 		if (this.m.Start == 0.0)
 		{
@@ -132,7 +132,7 @@ this.occupy_order <- this.inherit("scripts/ai/world/world_behavior", {
 							}
 
 							local news = this.World.Statistics.createNews();
-							news.set("Holysite", e.getName());
+							news.set("圣地", e.getName());
 							news.set("Image", image);
 							this.World.Statistics.addNews(this.World.FactionManager.getFaction(_entity.getFaction()).getType() == this.Const.FactionType.OrientalCityState ? "crisis_holywar_holysite_south" : "crisis_holywar_holysite_north", news);
 						}

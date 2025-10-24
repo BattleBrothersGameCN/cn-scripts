@@ -151,7 +151,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 				if (this.Flags.get("IsOrcs"))
 				{
 					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Orcs).spawnEntity(tile, "兽人掳掠者", false, this.Const.World.Spawn.OrcRaiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
-					party.setDescription("一群凶狠的兽人，绿皮肤，远高过所有人。");
+					party.setDescription("一群凶狠的兽人，绿皮肤、个头比任何人类都高。");
 					party.getLoot().ArmorParts = this.Math.rand(0, 25);
 					party.getLoot().Ammo = this.Math.rand(0, 10);
 					party.addToInventory("supplies/strange_meat_item");
@@ -161,7 +161,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 				else
 				{
 					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "地精掠袭者", false, this.Const.World.Spawn.GoblinRaiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
-					party.setDescription("一群捣蛋的地精，小而狡猾，不可低估。");
+					party.setDescription("一伙狡诈的地精，身形矮小却诡计多端，不容小觑。");
 					party.getLoot().ArmorParts = this.Math.rand(0, 10);
 					party.getLoot().Medicine = this.Math.rand(0, 2);
 					party.getLoot().Ammo = this.Math.rand(0, 30);
@@ -312,10 +312,10 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 				}
 
 				this.Contract.m.BulletpointsObjectives = [
-					"将商人安全地送回%objectivedirection%的%objective%。"
+					"将商人安全地送回%objectivedirection%方向的%objective%。"
 				];
 				this.Contract.m.BulletpointsPayment = [];
-				this.Contract.m.BulletpointsPayment.push("一旦你到达，得到%reward_merchant%克朗。");
+				this.Contract.m.BulletpointsPayment.push("到达目的地即可得到%reward_merchant%克朗。");
 			}
 
 			function update()
@@ -348,12 +348,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 
 				if (this.Contract.m.Payment.Advance != 0)
 				{
-					this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getInAdvance() + "克朗作为预付");
+					this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getInAdvance() + "克朗");
 				}
 
 				if (this.Contract.m.Payment.Completion != 0)
 				{
-					this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
+					this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
 				}
 
 				this.Contract.m.Home.getSprite("selection").Visible = true;
@@ -379,14 +379,14 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer% 颓然的身姿与间歇的呻吟表露着他的近况。 在用着颤抖的声音向你问候前，他揉按着自己的太阳穴。 %SPEECH_ON%一个绿皮部落正抢掠并惊吓着 %origin% 周遭的地区。他们谁也不放过。 {我的人太过害怕以至于无能为力。 | 我手下的许多人失去了对土地的忠诚。 | 我的人不打算去解决它，除非能得到非分的酬劳。} 你是人们阻止这些畜牲的最后希望。 如果他们继续为所欲为，我们可以能再也没有机会重建！%SPEECH_OFF%在继续之前，他缓慢地闭上了眼睛，叹了口气。%SPEECH_ON%他们是绿皮。他们去的任何地方都留下了痕迹。 应该不难找到，对吧？ 杀光它们，为人们复仇在 %origin%！%SPEECH_OFF% | %employer% 盯着窗外，然后问了一个简单的问题。%SPEECH_ON%你知道一个绿皮会对婴儿做些什么吗？%SPEECH_OFF%你转过头。 一个守卫在角落耸肩。 你回答了问题。%SPEECH_ON%知道。%SPEECH_OFF%那个贵族点了点头，回到了他的办公桌前，开始了叙述。%SPEECH_ON%有一个绿皮部落在 %origin% 散播着恐惧。我需要你找到并杀光它们。 我做不到…他们也不行…好吧，消灭它们行吗？%SPEECH_OFF% | %employer% 将一只蜡烛置于书旁，眼神变得黯淡，注视着一下你无法阅读的文字。%SPEECH_ON%他们说绿皮在这片土地上有着漫长的历史。 你相信吗？%SPEECH_OFF%你耸耸肩，尽量给出了回答。%SPEECH_ON%如果你想在个世界上停留片刻，你就得战斗，而绿皮似乎已经存在了很久。%SPEECH_OFF%那人点头，似乎很满意你的观察。%SPEECH_ON%这里有许多绿皮在 %origin% 附近劫掠。他们正在烧掉他们遇到的一切，杀死所有人…我敢肯定，这很明显。 更加显而易见的是，我需要你，佣兵，找到它们消灭它们。你有兴趣吗？%SPEECH_OFF% | %employer% 在椅子上对自己笑着－他的头埋在了手里，就像某种小丑似的笑容。 这不是一个男人最好的样子。 他疲倦的看着你。%SPEECH_ON%绿皮再度泛滥起来。 我不知道它们在哪，只知道它们曾经去过的地方。 你知道那些痕迹对吧？%SPEECH_OFF%你点头并回答。%SPEECH_ON%它们留下了巨大的痕迹，我指的并不是它们的脚。%SPEECH_OFF%这个男人再次笑了，是痛苦的伤痕。%SPEECH_ON%好吧，显然我需要你为此做些什么。你愿意吗？%SPEECH_OFF% | %employer% 起身站在窗前，停下，摇了摇头，然后回到了自己的桌前。 缓慢慎重的坐下。%SPEECH_ON%起初我得到消息是强盗。 然后我听说是来自海岸的掠夺者。 接着越来越多的幸存者给出了消息。 现在你知道困扰我的难题是什么了吧？%SPEECH_OFF%你耸了耸肩。%SPEECH_ON%这重要吗？%SPEECH_OFF%他抬起一只眼皮。%SPEECH_ON%绿皮，佣兵。这就是它们的身份。 它们正在 %origin% 周围劫掠，我需要你去阻止它们。 现在这要紧吗？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer%佝偻的身姿和时不时的呻吟说明他今天过得糟透了。他揉着太阳穴，用颤抖的声音对你开口。%SPEECH_ON%一个绿皮部落正在%origin%周边地区烧杀抢掠。他们见什么毁什么。 {我手下都吓破了胆。 | 我的人手大多在外巡逻。 | 我的手下非得要天价酬劳才肯干。} 你是阻止这群畜生的最后希望。要是任由他们横行，我们就永无宁日了！%SPEECH_OFF%他缓缓闭眼叹息，继续说道。%SPEECH_ON%反正是绿皮杂种，走到哪儿都会留下痕迹。不难找对吧？把他们全宰了，为%origin%的善良百姓报仇！%SPEECH_OFF% | %employer%凝望窗外，问了个简单的问题。%SPEECH_ON%你知道绿皮杂种抓到婴儿会做什么吗？%SPEECH_OFF%你转过头。角落里的卫兵耸耸肩。你回答这个问题。%SPEECH_ON%知道。%SPEECH_OFF%贵族自顾自点头，回到书桌前沉重地坐下。%SPEECH_ON%有群绿皮正在%origin%肆虐。我要你找到他们，全部杀光。我不能再……他们不该……总之全宰了就对了，行吗？%SPEECH_OFF% | %employer%举着蜡烛贴近书本，烛光映得他眼神晦暗，正专注地盯着你看不懂的文字。%SPEECH_ON%据说绿皮在这片土地上有很悠久的历史……你信吗？%SPEECH_OFF%你耸耸肩凭认知回答。%SPEECH_ON%想在这世道活下去就得厮杀，而绿皮确实像活了很久的样子。%SPEECH_OFF%他点头，似乎很欣赏你的见解。%SPEECH_ON%现在有伙绿皮在%origin%周边流窜。见什么烧什么，见谁杀谁……这些都很明显。同样明显的是我需要你，佣兵，去找到并消灭他们。有兴趣吗？%SPEECH_OFF% | %employer%瘫在椅子里自顾自发笑——同时又把脸埋在掌心，活像藏起窃笑的小丑。这副模样实在不体面。他抬起疲惫的双眼望向你。%SPEECH_ON%绿皮又开始作乱了。我不知道他们在哪儿，只知道他们去过哪里。你认得那些痕迹对吧？%SPEECH_OFF%你点头回答。%SPEECH_ON%他们会留下很显眼的踪迹，我指的可不只是脚印。%SPEECH_OFF%他又笑了，却是带着痛苦的苦笑。%SPEECH_ON%看来我得靠你来解决了。你接这活吗？%SPEECH_OFF% | %employer%起身走到窗边，停住脚步摇摇头，又回到桌前，缓缓坐下。%SPEECH_ON%起初我听说是一帮土匪。后来又说是上岸的海寇。直到幸存者开始描述……现在你明白我的麻烦了吧？%SPEECH_OFF%你耸耸肩。%SPEECH_ON%有区别吗？%SPEECH_OFF%他挑起眉毛。%SPEECH_ON%是绿皮，佣兵。就是他们。正在%origin%周边肆虐，我需要你阻止这群畜生。现在觉得有区别了吗？%SPEECH_OFF%}}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们猎杀他们，只要价钱合适。 | 对抗绿皮可不便宜。 | 让克朗说话。}",
+					Text = "{我们可以猎杀他们，只要价钱合适。 | 对抗绿皮可不便宜。 | 佣金是多少？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -394,7 +394,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 
 				},
 				{
-					Text = "{这不值得。 | 我们还有其他任务。}",
+					Text = "{这事不划算。 | 我们还有其他任务。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -411,12 +411,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "DestroyedCaravan",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_60.png[/img]{一个商队。显然，没有什么还是完好的。 货车已经倾倒，驾车的人已经被杀害了。 你追寻着秃鹫的踪迹一路收集着证据。 如果屠杀并不一定是绿皮所为，那么巨大的脚印则证实了和他们相关。 你找到了正确的方向。 | 好吧，绿皮经过的道路并不难跟踪。 你偶然发现了一行燃烧的商队货车。 篝火是新鲜的，依旧在载重货车的木头上燃烧着。 商队人员与商人的尸体同样新鲜的，看起来他们在惊恐中死去。 继续前进，你可能还能抓住那些绿皮畜牲。 | 一个人从一棵孤独的树的四肢上垂下来，好像他从天空掉下来然后在那儿串了针。 树干前有两只死驴。 一辆货车已经完全被摧毁，车轮四散而落并且碎裂。 货物和货品散落在各处。 一处旧的营火舔炽着周围，寻找着可以燃烧的东西，越来越微弱。\n\n 这些是绿皮的杰作，你并不怀疑。 距离你找到他们不会太久了。}",
+			Text = "[img]gfx/ui/events/event_60.png[/img]{一支商队。显然状况不佳。货车被掀翻，车夫惨遭屠杀。你赶走秃鹫仔细查看现场。即使这惨状还不能说明是绿皮干的，那些扭曲的脚印也足以证实。你找对方向了。 | 绿皮的踪迹并不难追踪。你撞见一排燃烧的商队货车。火焰还在熊熊燃烧，正吞噬着车厢木板。商队伙计和商人的尸体也刚断气不久，死前似乎都惊恐万状。继续前进，你说不定还能追上那些绿皮杂种。 | 一具尸体挂在孤树的枝杈间，仿佛从天而降穿刺在上。树干旁倒着两头死驴。再往前，一辆货车四面散架，轮子迸裂碎散。货物撒得遍地都是。残存的营火苟延残喘地舔舐着四周，为渐弱的火势寻找着最后的燃料。\n\n这绝对是绿皮干的好事，你毫不怀疑。很快就能追上他们了。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "他们就在附近。",
+					Text = "我们快找到他们了",
 					function getResult()
 					{
 						return 0;
@@ -428,12 +428,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "BurnedFarmstead",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{几缕青烟扭曲着从农庄废墟中升起。 一具尸体成陈列在门前。 其中的一半已经不见了。 剩下的那一半带有惊恐的表情，一根烧焦的手臂伸向某个不再存在的东西或者人物。 一些脚印散布在泥土和草丛中。 绿皮。你越来越接近了。 | 小农庄并没能存活下来。 你找到了被屠杀在四处的农夫，手中依然紧紧攥着草叉。 其中的一具草叉带着血液。那绝对并非人类所有。 你跟随着踪迹，明白即将找到这场犯罪的凶手。 | 一条死去的狗。另一个。 牧羊犬，你猜想，尽管一场暴行使得它们难以辨认。 他们的管理者似乎并不远－这表明他们在放出狗狗后逃走。 不幸的是，脚印告诉你这几个农夫还是遭遇了绿皮。 狗们打得很好，他们的主人打得很好。\n\n你接近了，继续前进，你将会遇到那些混蛋。}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{几缕缕烟雾从农庄废墟中缭绕升起。一具尸体躺在曾经的门口，半边身子不见了。剩下的半截脸上凝固着惊恐的表情，烧焦的手臂伸向某个早已消失的人或物。泥草间散落着零星的脚印。是绿皮。你越来越近了。 | 这座小农庄毫无招架之力。你看见农工们横尸四处，手中还紧握着当作武器的草叉。其中一根齿尖沾着血迹——绝非人类的血。沿着踪迹追寻，你知道很快就能追上制造这起惨案的元凶。 | 一条死狗。又一条。看样子都是牧羊犬，虽然残忍的伤势让它们难以辨认。牧主们就在不远处——看来他们在犬群断后时试图逃跑。不幸的是，脚印表明这些农民撞上了绿皮。忠犬们奋勇抵抗，主人们拼命奔逃。\n\n很近了。继续前进，马上就能追上那群畜生。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "他们就在附近。",
+					Text = "我们快找到他们了",
 					function getResult()
 					{
 						return 0;
@@ -445,12 +445,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "DeadBodiesOrcs",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_60.png[/img]{兽人的作品并不难以辨认：它看起来是否精密而准确？ 如果是的，那么并非兽人。 你正在查看的是一连串的尸体和身体部位，身体所有者和缺失的人全都混合在一起。 需要花费一个星期才能将他们重新拼凑起来。 如果你继续前进，那么必定会遇到兽人。 | 你发现了一个被切成两半的人。另一个则是四分五裂。 还有一个脑袋已经不见了，被砸进了胸口。 还有一个严重的擦伤，当你查看的时候，每一根骨头都在咯吱作响并且晃动着，完全断裂了。 这是兽人的作品。 你确实找到了他们的踪迹。 | 一具尸体向后弯曲，头部碰到了脚后跟。 你在胸口发现了一个大洞，另一具尸体似乎被某些粗糙的锯齿状工具砍碎。 没有任何干净的地。 是的毫无疑问，这是兽人的作品。}",
+			Text = "[img]gfx/ui/events/event_60.png[/img]{辨认兽人的手笔很容易：现场看起来工整精准吗？如果是，那就不是兽人干的。你眼前是散落一地的尸体和残肢，主干和零件全都混作一团。把这些拼回去得花一星期都不止。继续追踪，很快就能撞上那群兽人。 | 你发现一具被腰斩的尸体。另一个被竖着劈开。还有个脑袋被砸进胸腔的。另一具遍体鳞伤，当你上前查看时，里面的每根骨头都在松动移位——完全碎透了。这绝对是兽人的杰作。看来你已经咬住他们的行踪了。 | 一具尸体被反向对折，脑袋碰到了脚后跟。另一具胸口开着大洞，还有一具似乎被参差不齐的钝器开了膛。没有一具尸体是完整的。毫无疑问，这是兽人干的好事。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "看起来我们即将狩猎兽人。",
+					Text = "看来我们狩猎的兽人。",
 					function getResult()
 					{
 						return 0;
@@ -462,12 +462,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "DeadBodiesGoblins",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_60.png[/img]{你偶然发现一名男子倚着路标。 当你问他是否见过绿皮时，他前倾斜并跌落在地。 他的背部有一只飞镖。 我想这就是你问题的答案。 这也意味着你即将面对地精，而不是兽人。 | 兽人不会留下像这样混乱的局面。 你发现了一系列农民和他们的狗被杀。 但是这有点的混乱。 刺伤在这里，小刺伤在那里。 到处都是几支飞镖。 并提示着有毒。 这是…地精的作品。 他们一定不远。 | 一个人躺在草地上，一只飞镖扎在脖子上。 他的脸发紫，舌头抽出。 他的手紧紧地握着，好像他们在抓紧自己一样。 毫无疑问，这是一种令人讨厌，麻痹的毒药。 无疑，这不是兽人的作品，而是地精作品。 他们一定就在附近了…}",
+			Text = "[img]gfx/ui/events/event_60.png[/img]{你撞见一个人靠在路标上。当你问他是否见过绿皮时，他直接向前倾倒摔在地上。背上插着几支飞镖。看来这回答了你的问题。也说明你追踪的是地精，不是兽人。 | 兽人不会留下这种现场。你发现一连串农民和他们的狗被杀死，但现场不算太乱。这儿有刺伤，那儿有小孔。到处散落着飞镖，镖尖还涂着毒。这是……地精的手笔。他们肯定离得不远。 | 草丛里躺着个人，脖子上插着支飞镖。他脸色发紫，舌头吐在外面，双手紧紧攥着，仿佛在抓住自己。这无疑是某种致命剧毒的效果。也无疑不是兽人，而是地精干的。他们肯定就在附近……}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "看起来我们即将狩猎地精。",
+					Text = "看来我们狩猎的是地精。",
 					function getResult()
 					{
 						return 0;
@@ -479,12 +479,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "BattleWonOrcs",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_81.png[/img]{在你的人解决最后一个兽人之后，你环顾四周。 绿皮带来了地狱般惨烈的战斗。 是时候检查下队伍的伤亡，回去找雇主，%employer%。 | %employer%的人永远不会做你刚刚做的事。 只有 %companyname% 才能处理得了这些绿皮。 你为战团感到骄傲，但尽量不要表现出来。 | 战斗已经结束了，两个人的赌局也一样。 事实证明，在你从兽人的脖子上割下脑袋后，兽人也无法继续咬牙切齿了！ 你的雇主，%employer%，可能并不在乎这些野蛮的经验，但是他会为你今天的完成的工作支付酬劳。 | The orcs put up a fight that the holy men might have even dared to call righteous. 但是它们并没能比 %companyname% 更强，至少不是在今天！ | 你的雇主，%employer%，希望你杀死这些绿皮，而你确切完成了。 现在是时候检查下人员然后返回领取你来之不易的报酬了。 | 与兽人的战斗永远不是一项容易的任务，这一次也一样。%employer%的报酬可能使 %companyname% 更能咽下现在的艰难处境。 | 你的雇主，%employer%，最好他妈的为你与这些畜牲的战斗给两个子－想让它们倒下可并不容易！ 检查人员，准备回到雇主那去。}",
+			Text = "[img]gfx/ui/events/event_81.png[/img]{当你的手下放倒最后一个兽人，你环顾四周。绿皮们打得很是生猛。该清点战团情况并准备返回雇主%employer%那里了。 | %employer%的手下绝对没办法复刻你刚才的事迹。只有%companyname%才能解决这些绿皮。你为战团感到骄傲，但尽量不表现出来。 | 战斗结束了，弟兄们的几个赌约也见了分晓。事实证明，把兽人脑袋砍下来它就不咬人了！雇主%employer%大概不在乎这种野蛮实验，但他会为你今天的活儿付钱。 | 兽人的抵抗连好人看了都得夸一句。但他们终究敌不过%companyname%，至少今天不行！ | 雇主%employer%要你宰了这些绿皮，你完美达成了。现在该查看队伍状况，准备回去领辛苦钱了。 | 和兽人干架从来不是轻松差事，这次也不例外。不过%employer%酬金会让%companyname%的辛苦好受些。 | 雇主%employer%最好为对付这些畜生付足酬劳——他们可不好解决！清点你的队伍，准备回去见雇主。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "回 %townname%！",
+					Text = "回去%townname%！",
 					function getResult()
 					{
 						return 0;
@@ -496,12 +496,12 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "BattleWonGoblins",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_83.png[/img]{对于这样的卑鄙小人们来说，地精们确实懂得如何战斗！ 你的雇主，%employer%，应该会对你今天完成的任务感到满意。 | 你曾听过人们嘲笑地精的体格大小。 好吧，他们可能小，但他们全力以赴。\n\n统计下你的人员准备回到你的雇主，%employer% 那去，为了你的发薪日。 | 地精们像饥饿的狗杂种一样战斗。 饥饿，狡诈 ，杀人的杂种。 不幸的是它们的精明没能应用得更好。 恩，%employer% 会为这边的消息感到满意的。 | 你并不清楚这是否是一件好事，你的雇主，%employer%，并不能完全确定这里是否有地精。 如果他知道后，会减少我们的佣金吗？ 当然看着这些地精时，它们无疑已经失败了，但是该死的，它们清楚的明白该如何战斗。\n\n 无论如何，是时候统计人数，准备返回雇主那去交差了。 | 地精们死了。真是令人憎恶。 你的雇主，%employer%，应该会为你今天在此所作的事感到满意。 | 一堆死去的地精的仍然无法与一个兽人狂战士压倒性的高度相提并论。 但是，它们表现得很出色！ 遗憾的是，他们的努力在如此渺小的身躯上被白白浪费。 再说一次，如果他们的机智和狡猾装在了兽人的身上…旧神啊，这真是一个令人胆寒的想法！}",
+			Text = "[img]gfx/ui/events/event_83.png[/img]{地精个子不大，打起仗来却一点不能小瞧！ 你的雇主%employer%会对今天的成果满意的。 | 你常听人嘲笑地精的个头。是啊，他们确实矮小，但打起来可是拼了老命。\n\n清点你的队伍，准备回去找雇主%employer%领赏吧。 | 这些地精打起来像饿疯的野狗。饥饿、狡诈、嗜血的野狗。可惜他们的机灵没用在正道上。不过%employer%会喜欢这里的捷报。 | 不知该不该庆幸，你的雇主%employer%当初并不完全确定这里出没的是地精。要是他知道情况，会不会就不给那么高的价码了？地精看着是不起眼，但天杀的真会打架。\n\n无论如何，该整队回去见雇主了。 | 地精全躺下了。真是群烦人的东西。你的雇主%employer%该对今天的成果感到满意。 | 一堆地精尸体叠起来还够不到兽人狂战士的腰。可是……他们打起来丝毫不逊色！可惜这份能耐浪费在小身板上了。但话说回来，要是把他们的狡诈装在兽人的躯壳里……旧神在上，这念头真吓人！}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "回 %townname%！",
+					Text = "回去%townname%！",
 					function getResult()
 					{
 						return 0;
@@ -512,8 +512,8 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		});
 		this.m.Screens.push({
 			ID = "Warlord",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_49.png[/img]{当你接近兽人战团的时候，你看到一个残忍的兽人军阀清晰的轮廓。 它的出现使得情况变得比原本想象中更加困难。 | 兽人中间有着一个巨大的督军。 这改变不了什么。好吧，也许改变了一点点，但是最终的目标仍然不变：将它们屠戮殆尽。 | 多么不幸的消息！一群兽人中被发现出现了一位兽人督军。 对于这位督军来说，这真是不幸。 你非常确信对于它来说，一定是费了九牛二虎之力才来到这里。 遗憾的是 %companyname% 将会毁灭它前面的努力。 | 兽人中有一位督军！ 他的体型与咆哮，不会有错了－你听见了它，就像一只熊正对着你的脸咧嘴狞笑！ 无所谓了，这只绿皮也会像其他人一样倒下。 | 一位督军。一位战争领主。一位可怖的兽人。 你感受到了。 一位如此巨大的绿皮出现在绿皮营地。 他们中的一位领袖。 他们中最强的战士。 这又有什么关系？ 这一点也不重要。 当然不！一点也不。 一切都会按照计划中的那样进行。}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_49.png[/img]{当你接近兽人战团的时候，一眼就认出了其中一个高大的身影是兽人军阀。看来对付这群绿皮要比预想的更加棘手。 | 兽人队伍里有个高大的军阀。但这没什么影响。好吧，是有点影响，不过最终目标不受影响：把他们全宰了。 | 真是个不幸的消息！兽人阵营里赫然立着个军阀——当然是说对那个军阀不幸。你相信他爬到这位置不容易，可惜%companyname%马上要去灭了他了。 | 绿皮群里有个军阀！那块头和吼声绝不会认错——就算有头熊在你面前大吼你也听得出来！无所谓，这家伙会和其他绿皮一样变成尸体。 | 军阀。巨型兽人。凶兽人。这些名头你都听过。此刻就有这么个庞然大物矗立在绿皮营地。他们的首领之一。他们最强的战士之一。那又怎样？根本无所谓。当然无所谓！完全无所谓。一切都会按计划进行。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -529,8 +529,8 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		});
 		this.m.Screens.push({
 			ID = "Shaman",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_48.png[/img]{当你接近的时候，你发现一缕陌生的烟雾升上天空。 它并不是黑色或者灰色，是紫色的，看起来像活物一般在绿色的卷曲中循环滑动。 地精群中有一位萨满！ | 一位萨满！你意识到这些狡诈的地精其中一个有着骨制首饰，斜眼，在他们笨拙的面孔中带着一丝寻常地精不会拥有的智慧。 这些是危险的绿皮，必须要小心！ | 唔，注意你的脚步。 地精队伍中出现了一位萨满！ 这是最危险的敌方战斗人员！ 不要轻视他矮小的体型或者重量… | 你曾经听说一些萨满可以从一个人的耳朵中抽取梦境。 你并不确信这是否是真的，但是你知道他们是狡诈的战士，而你即将面对他！ | 一个地精萨满…你无论在哪都知道这骨质外衣还有伪装斗篷！ 保持冷静，继续前进-将所有的绿皮屠戮殆尽，仅此而已！ | 萨满。一位地精萨满… 你曾听过关它们的恐怖魔法的故事，但并不是此时此刻。 让士兵们准备进攻！ | 一个地精萨满。你曾听过那些卑鄙的把戏能迷惑一个人的心智。 你现在疑惑 %employer%，你的雇主，是否被欺骗了以至于将你陷入此处。\n\n…不。不是吧？ | 一个地精萨满！你曾听过关于这些生物的邪恶故事。 其中一个是他们把黄蜂放入囚犯的耳朵！ 一个男人在喝了一些酒后信誓旦旦的告诉你，他曾亲眼看到蜜蜂把一个人的脑袋变成蜂窝！ 以他亲爱的舌头作为赌注！}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_48.png[/img]{接近时，你看到一缕怪烟袅袅升起。不是灰烬般的灰色，而是紫色，其中还有仿佛活物的绿色触须在缠绕穿梭。地精在这里，他们还带着一个萨满！ | 萨满！你到哪都能认出这种狡猾地精——骨制饰品，斜眯的眼睛，在地精的蠢脸上难得一见的狡黠神情。这些绿皮很危险，当心点！ | 喂，注意脚下。地精萨满就站在敌军队伍里！这可是最危险的敌人！别因为它个子小就掉以轻心…… | 你听过有些萨满能从人耳朵里抽出梦境的传说。你不确定是不是真的，但你很清楚他们都是狡猾的对手，而现在你就要面对其中一个！ | 地精萨满……那身骨制装束和伪装斗篷到哪都认得出来！保持冷静，继续前进——把这群绿皮全宰了！ | 萨满。一位地精萨满……你听过关于他们“妖术”的恐怖传说，但现在不是讨论这个的时候。让兄弟们准备进攻！ | 地精萨满。你听说过这些下流杂种能蛊惑人心的传闻。你现在怀疑%employer%是不是被忽悠了才把你派来这。\n\n应该……不是……吧？ | 地精萨满！你听过关于这些邪恶家伙的传闻。有人说他们把黄蜂塞进俘虏耳朵里！还有个喝得醉醺醺的家伙告诉你说，他亲眼看见蜜蜂把人的脑子改造成了蜂巢！那蜂蜜尝起来肯定够呛！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -547,13 +547,13 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "Merchant",
 			Title = "战斗之后……",
-			Text = "{战斗结束后，你从一堆废墟中发现了一个令人惊讶的俘虏：一位商人。 身着沾血的绸衣，他对你感激不尽。 他向你询问是否能够将他带到 %objective%。很明显，他在道路上并不安全。 你耸耸肩，并开始考虑。 这个男人迅速的继续说了起来，将会给予了 %reward_merchant% 克朗的报酬，如果你愿意帮助他。 这比你心动的价格还要多一些… | 一个男人从一堆死去的绿皮中冒出来。 他并不是你雇佣兵中的一员，实际上是一个商人，双手被反绑在背后。 你询问他什么时候加入了这样一只“队伍”的时候，他耸耸肩，说他很少听说绿皮会留下俘虏。 他真的是十分幸运。\n\n 这个男人环顾四周，回过头来。%SPEECH_ON%我必须感谢你，佣兵，但如果情况不够明显的话，我必须声明在路上旅行已经难以让我感到安全了。 如果你把我完好无损的送到 %objective%，我将会很乐意，呃，付出 %reward_merchant% 克朗。 这对你来说听起来还行吧？%SPEECH_OFF% | 战斗结束之后，你注意到一位商人丑陋的坐在他死去的马旁。 一些难以控制的暴力终结了这个生物，现在商人遭遇了不幸。 他看了战场，然后看着你。 双臂交叉于鞍，他大声询问。%SPEECH_ON%战士先生，你能护送我到 %objective% 吗？如你所见，我的出行已经无法继续进行下去了，在场战斗中失败了…不是你的错！ 不，先生！但是，我真的必须去那个城镇。%SPEECH_OFF%他在你身旁停顿并悬挂了一个小钱包。%SPEECH_ON%我为你准备了 %reward_merchant% 克朗。 这听起来如何？%SPEECH_OFF% | 当你调查战场时，一个男人走到你身边，询问这里发生了什么。 擦拭刀片上的血，你告诉他好好看一下。 他咪起眼睛，不管出于什么原因，他向前踮起脚尖。%SPEECH_ON%啊，绿皮。一场可耻事件。好吧….%SPEECH_OFF%他跌倒了。%SPEECH_ON%Wait a old gods-damned minute. 绿皮？ 它们在这做了些什么？ 上天保佑，我不可能在此获得安全！战士！ 我将会支付你 %reward_merchant% 克朗，如果你能护送我到 %objective%，我发誓，它离这并不远，我无法独自一人前进。%SPEECH_OFF%他用拇指划过脖子，指着死了的绿皮。%SPEECH_ON%我不认为有人能付得起这样的代价，明白吗？%SPEECH_OFF%}",
+			Text = "{战斗结束后，你在战场中发现一个令人意外的俘虏：一名商人。他穿着血迹斑斑的丝绸衣服，满怀感激地走近你，询问能否带他去%objective%。显然，独自赶路对他太危险。你耸耸肩看向别处。那人急忙提高价码，承诺只要护送他就能得到%reward_merchant%克朗，这倒是挺合你心意…… | 一个男人从绿皮尸体堆里钻出来。他不是你的佣兵，而是个双手反绑的商人。你问他怎么落到这步田地，他耸耸肩说从没听说绿皮会留活口。他可真是走运。\n\n环顾四周后，商人凑近说道。%SPEECH_ON%必须感谢你，佣兵，但如你所见我不敢独自赶路了。要是能平安送我到%objective%，我很乐意……呃……付%reward_merchant%克朗给你。 你觉得怎么样？%SPEECH_OFF% | 战斗结束后，你注意到有个商人狼狈地坐在死马旁。这牲口被人误伤弄死了，现在商人可倒大霉了。他望望战场又看看你，抱着马鞍前桥扬声问道%SPEECH_ON%战士先生，你能护送我到%objective%吗？如你所见我的坐骑死在乱战里……当然不是怪你！但我必须赶到镇子里。%SPEECH_OFF%他停顿片刻，在你面前拿出个小钱袋晃悠。%SPEECH_ON%这儿有%reward_merchant%克朗。你觉得如何？%SPEECH_OFF% | 你巡视战场时，有个男人上前打听情况。你边擦剑边让他自己看。他眯起眼睛，莫名踮起脚尖。%SPEECH_ON%啊，绿皮。真不幸……%SPEECH_OFF%他重新站稳。%SPEECH_ON%等会， 绿皮？它们在这儿搞什么？老天爷，这地方不能待了！士兵！护送我去%objective%，我给你%reward_merchant%克朗。我保证不远，但我可不敢一个人走过去。%SPEECH_OFF%他用拇指抹过脖子，指着死了的绿皮。%SPEECH_ON%没人敢冒这种风险，懂吗？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "非常好，我们带你去 %objective%。",
+					Text = "行，我们护送你到%objective%。",
 					function getResult()
 					{
 						this.Contract.setState("Running_Merchant");
@@ -562,7 +562,7 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 
 				},
 				{
-					Text = "别挡我们的路。",
+					Text = "走开，别碍我们的事。",
 					function getResult()
 					{
 						this.Contract.setState("Return");
@@ -590,19 +590,19 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到 %employer% 并将绿皮的脑袋掷于他的桌面。 他迅速的从那躲开了。.%SPEECH_ON%劳驾？%SPEECH_OFF%他对着那个点着头，你解释道那个肮脏的东西已经死了。 他从口袋中掏出一条手帕，开始擦拭血液。%SPEECH_ON%是的，我看得见。 这鬼东西本应该待在这，而不是让我起身躲开！ 靠的，佣兵…你的佣金在那个角落！ 然后离开的时候记得把我的仆人叫过来。 这必须有人清理下！%SPEECH_OFF% | %employer% 正在给一位女性讲着故事，当你进来时。 她对着你笑了几声并目不转睛的盯着你。 他看到了这些，并迅速的打发她出去，以免她被真正的男子气概迷晕。%SPEECH_ON%佣兵！你有什么消息吗？%SPEECH_OFF%你从麻袋中拿出了一个绿皮脑袋。%employer% 注释着它，撅起嘴唇，微笑，皱起眉头，似乎不清楚该拿他正注视的东西怎么办。%SPEECH_ON%好吧…好吧。你的报酬在这，如同约定的。%SPEECH_OFF%他从桌上拉开了一个木制箱子。%SPEECH_ON%当你出去的时候，把女孩带进来。%SPEECH_OFF% | 你将一个绿皮脑袋放在了 %employer%的办公桌上。 他打开卷轴，将绿皮的图纸与真实的样子进行了比较。%SPEECH_ON%哼，我会告诉学者们他们出现了一点…误差。%SPEECH_OFF%你询问是什么。%SPEECH_ON%他们把它画成灰色。 而这一个明显更加绿。%SPEECH_OFF%你高声质疑学者们画的是否就是绿色。 这个男人闭上了嘴巴并点了点头。%SPEECH_ON%哏。有趣的想法。好吧，门外的警卫会给你报酬。 让我看这个…标本。%SPEECH_OFF% | 当你进来的时候一位长袍男子站立在 %employer% 身旁。 他的脸埋入卷轴中，甚至你进来了也没有看一眼。 耸肩，你将一个绿皮脑袋从袋子中取出置于雇主的桌上。 这引起了陌生人的注意，他拿起了那个头颅！ 他抢走了它并立刻跑出了房间，甚至伴随着轻浮的嚎叫。 你询问到底发生了什么事。%employer% 笑了。%SPEECH_ON%那个学者一直期待着你的归来。 他们一直渴望学习一些新的东西。%SPEECH_OFF%这个男人拿出了一个袋子打开并数了数。 你询问道那个学者是否也会付钱给你。%employer% 耸肩。%SPEECH_ON%如果你能抓住他。 我的意思是并不是肉体意义上的－他们现在如此痴迷于自己的思索中，看起来我们在他的世界中就像不存在一样。%SPEECH_OFF% | %employer% 一只手抓着一只鸟，而另一只手上拿着一块石头。 你问他正在做什么。%SPEECH_ON%我想弄清楚哪个更值钱。手中的一只鸟，或者…或者一块石头…等一下…%SPEECH_OFF%你没有时间这样，并将一个绿皮脑袋放在他的桌面上，问道这个值多少。 那个男人放下了鸟，并将石头放在书架上。 他回身从手上拿出了你的报酬。%SPEECH_ON%我出这边的这个…出于好奇，我的问题已经被解决了。你的报酬，正如承诺的那样。%SPEECH_OFF%你在想这个人等下要如何抓住那只鸟，但最后决定不是为此费心了。 | %employer% 正在咳嗽当你回来的时候。 他瞥了你一眼，用手捂住了嘴唇。%SPEECH_ON%所以你肯定给我带来了好消息？%SPEECH_OFF%你耸耸肩，然后把绿皮的脑袋放在了桌子上，解释到它们已经全部被处理了。%employer% 瞥了一眼。%SPEECH_ON%所以一定是其他的什导致了我的疾病…但是是什么？ {女人？很可能是女人。 老实说，总是女人。 | 狗。人们说这些糟糕的杂种是不幸的预兆。 | 黑猫！是的，当然！ 我要把他们杀光！ | 小孩子。他们最近一直十分吵闹。 他们的笑声中到底在谋划着些什么？ | 也许是我吃了没煮熟的肉…又或者…我十分确定是那个住在山上的蠢女人。 | 我确实吃了无意间和老鼠分享的面包 不是那样，就是女人。 你知道那些东西是怎么回事，总是在传染和腐蚀我们，那些该死的女人！}%SPEECH_OFF%这个男人停了下来，然后摇了摇头。%SPEECH_ON%好吧，无论如何，你的报酬就在外面的守卫那。 是我们先前商定的价格，你可以去数数。 只有神灵才知道，我到底疏忽了些什么！%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到%employer%那里，把一个绿皮脑袋扔在他桌上。他连忙往后躲。%SPEECH_ON%你这是干嘛？%SPEECH_OFF%你对着脑袋点头示意，解释说那些脏东西已经全解决了。他迅速掏出手帕擦拭血迹。%SPEECH_ON%是，我看见了。这些脏玩意就该留在原地，不是拿到我眼前！天杀的佣兵……酬金在角落！出去时叫我仆人进来，这烂摊子总得有人收拾！%SPEECH_OFF% | 你回来时%employer%正在给个女人讲故事。你进门时她的娇笑变成了渴望的凝视。他见状赶紧把她打发出去，生怕真汉子在场让她昏倒。%SPEECH_ON%佣兵！有什么消息？%SPEECH_OFF%你从麻袋里掏出个绿皮脑袋。%employer%盯着它，抿嘴、微笑、皱眉，似乎不知该如何对待眼前这东西。%SPEECH_ON%行……行。你的酬金在这儿，说好的数。%SPEECH_OFF%他把一个木箱提到桌上。%SPEECH_ON%出去时叫那姑娘回来。%SPEECH_OFF% | 你把绿皮脑袋摆在%employer%桌上。他挺直身子展开卷轴，对比着绿皮画像和真货的差异。%SPEECH_ON%嗯，得告诉学者们他们画得……有些不对。%SPEECH_OFF%你问哪里不对。%SPEECH_ON%他们涂成灰色。这明明是绿色的。%SPEECH_OFF%你嘀咕也许是学者们没有绿色墨水。他抿嘴点头。%SPEECH_ON%呵，有道理。门外卫兵拿着你的酬金。让我好好研究这……标本。%SPEECH_OFF% | 你进门时%employer%身边站着个穿长袍的男人。那人埋头看卷轴，根本没瞥你一眼。你耸耸肩从麻袋掏出绿皮脑袋放在雇主桌上。这下陌生人注意到了，连脑袋也一把抢走！他抓起脑袋立刻冲出房间，兴奋得几乎嚎叫。你问那是什么人。%employer%大笑。%SPEECH_ON%学者们一直盼着你回来。他们早想找新东西研究了。%SPEECH_OFF%他取出钱袋递过来。你数着克朗问那些书呆子会不会另付报酬。%employer%耸肩。%SPEECH_ON%前提是你能跟他们谈上话，不是说他们人不好找，而是那些人满脑子只有自己的想法，根本就注意不到别人的存在！%SPEECH_OFF% | %employer%一手抓鸟一手握石。你问他在干嘛。%SPEECH_ON%我在琢磨哪个更值钱。一鸟在手，还是……石头……等等……%SPEECH_OFF%你没空陪他疯，把绿皮脑袋砸在桌上问这值多少。他放开鸟把石头放回书架，转身递来酬金。%SPEECH_ON%看这……玩意儿，我的麻烦应该解决了。酬金，说好的数。%SPEECH_OFF%你确实好奇他到底怎么逮住那鸟的，但决定不再深究。 | 你回来时%employer%正咳得厉害。他瞥了你一眼，拳头抵在唇边。%SPEECH_ON%你该不会也带来什么厄运吧？%SPEECH_OFF%你耸耸肩把绿皮脑袋放他桌上，说已经全解决了。%employer%瞟了一眼。%SPEECH_ON%看来我的病是别的原因……但是什么呢？ {女人？多半是女人。说实话，永远是女人惹的祸。 | 野狗。人们都说那些癞皮狗会带来疯病。 | 黑猫！对，肯定是！我要把它们全宰了！ | 小孩。那些小鬼最近吵得要命。他们在嘻嘻哈哈背后策划什么？ | 可能是我吃了没熟的肉……或者……不，我肯定是因为山上住的疯婆子。 | 我确实吃过被老鼠啃过的面包。不是这个就是女人。你知道的，那些该死的娘们整天让我们染病堕落！}%SPEECH_OFF%这个男人停了下来，然后摇了摇头。%SPEECH_OFF%他顿了顿摇头。%SPEECH_ON%啊，无所谓了。酬金由门外卫兵手里。是说好的数目，不过你尽管清点。天晓得我这状态会不会数错！%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "一场成功的狩猎。",
+					Text = "狩猎成功。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "照顾劫掠的绿皮");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "处理四处劫掠的绿皮");
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isGreenskinInvasion())
@@ -628,15 +628,15 @@ this.marauding_greenskins_contract <- this.inherit("scripts/contracts/contract",
 		});
 		this.m.Screens.push({
 			ID = "Success2",
-			Title = "在 %objective%…",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{在安全的到达 %objective% 后，商人转过身并对你表示感谢。 他手中拿出着一袋克朗，就像先前约定的一样，然后迅速的走向了城镇。 | %objective% 已经近在眼前，商人也看见了－你护送的这个男人嚎哭着，欣喜于赚钱或者是幸存了下来，无论什么它都是的这个男人能继续行商。 他跑入一家小酒馆，然后迅速的返回，手中带着一袋克朗。%SPEECH_ON%如同约定的，佣兵。 我欠你的远远不止于此。%SPEECH_OFF%你故意问他为此打算付多少钱。他笑了。%SPEECH_ON%我不敢为我的脑袋开价，因为我保证有人愿意为此付款！%SPEECH_OFF%你点了点头，表示理解并相当满意于目前的报酬。 | 在接近了 %objective% 之后，商人给予了你先前商定的报酬。 然后他迅速的跑开，继续前往去赚更多的钱，睡更多的女人。 | 你安全的把商人带到了 %objective%。他对你表示感谢，然后他迅速的走向附近的酒馆。 当他回来的时候，他手中拉着一袋克朗，就像是用袜子着一堆柚子。 他将它递给你。%SPEECH_ON%你的报酬，雇佣兵。你得到了我的感激。当然还有我的克朗。现在，失陪了…%SPEECH_OFF%他伸直衬衫和裤子，抬起下巴。%SPEECH_ON%…因为我要继续去赚钱了。%SPEECH_OFF%他转身并前进，步伐中透漏着一股守财奴的热情。}",
+			Title = "%objective%里……",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{安全抵达%objective%后，商人转身向你道谢。他如约递来一袋克朗，随即匆匆进城。 | %objective%的景象让人眼前一亮，同行的商人也喜出望外——这位被你护送的男子激动地大喊大叫，不知是因保住性命而狂喜，还是为即将赚大钱而兴奋。他冲向附近旅店又迅速折返，手里攥着个钱袋。%SPEECH_ON%按约定给你，佣兵。我欠你的远不止这些。%SPEECH_OFF%你狡黠地问他还愿意付多少。他大笑。%SPEECH_ON%我可不敢给自己脑袋标价，保不准真有人想买呢！%SPEECH_OFF%你会意点头，对当前报酬已很满意。 | 到达%objective%后，商人按约定数额支付了报酬。随即匆匆离开，嘴里念叨着要赚大把克朗，睡遍漂亮姑娘。 | 你将商人平安送达%objective%。他道谢后匆忙赶往附近酒馆，回来时拎着个塞得鼓囊囊的钱袋，像袜子里塞了个柚子。他把钱袋抛给你。%SPEECH_ON%你的报酬，佣兵。我向你献上我的谢意——还有我的克朗。现在失陪了……%SPEECH_OFF%他整理好衣裤，昂起下巴。%SPEECH_ON%……我还要去赚大钱呢。%SPEECH_OFF%说罢转身迈步离开，步伐里带着精打细算的轻快。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			ShowEmployer = false,
 			Options = [
 				{
-					Text = "轻松的克朗。",
+					Text = "这钱好挣。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);

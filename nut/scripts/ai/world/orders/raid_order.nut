@@ -50,7 +50,7 @@ this.raid_order <- this.inherit("scripts/ai/world/world_behavior", {
 			return true;
 		}
 
-		_entity.setOrders("Raiding");
+		_entity.setOrders("袭击中");
 
 		if (this.m.Start == 0.0)
 		{

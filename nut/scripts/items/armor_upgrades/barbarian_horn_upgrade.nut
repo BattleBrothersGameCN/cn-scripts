@@ -5,7 +5,7 @@ this.barbarian_horn_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_
 		this.armor_upgrade.create();
 		this.m.ID = "armor_upgrade.barbarian_horn";
 		this.m.Name = "骨与角";
-		this.m.Description = "自封的野蛮人国王的仪式性装饰。稀有而坚韧的犄角作为护甲出奇地有效。";
+		this.m.Description = "自封的蛮王的仪式性装饰。稀有而坚韧的犄角作为护甲出奇地有效。";
 		this.m.ArmorDescription = "野蛮人工匠为这件盔甲装饰上了仪式用角。";
 		this.m.Icon = "armor_upgrades/upgrade_23.png";
 		this.m.IconLarge = this.m.Icon;

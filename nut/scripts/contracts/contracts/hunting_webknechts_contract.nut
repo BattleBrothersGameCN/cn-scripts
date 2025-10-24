@@ -41,7 +41,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"猎杀林中蛛魔，大概在 " + this.Contract.m.Home.getName()
+					"猎杀林中蛛魔，大概在" + this.Contract.m.Home.getName()
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -113,7 +113,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 				local tile = this.Contract.getTileToSpawnLocation(playerTile, numWoods >= 12 ? 6 : 3, 9, disallowedTerrain);
 				local party;
 				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "蛛魔", false, this.Const.World.Spawn.Spiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
-				party.setDescription("一群蜘蛛在游荡。");
+				party.setDescription("一大群蛛魔正在四周窸窣爬动。");
 				party.setFootprintType(this.Const.World.FootprintsType.Spiders);
 				party.setAttackableByAI(false);
 				party.setFootprintSizeOverride(0.75);
@@ -235,14 +235,14 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_43.png[/img]{%employer% 挥手唤你进入他的房间。你注意到几个拿着草叉的人阴沉的盯着他的窗户外，尽管其中一个显然靠着墙睡着了。 你问这个定居点的镇长他想要什么。 他直接切入话题。%SPEECH_ON%附近的居民报告说有怪物在偷走儿童和狗之类的东西。 我不想放纵多疑和迷信，但是从这些报告中听起来很像是在说蜘蛛。 我的父亲会叫他们纺蛛，如果是真的或许它们在这片地方筑了一个巢而我需要你找到并摧毁它。 有兴趣吗，佣兵？%SPEECH_OFF% | 你看到 %employer% 正用两个叉子拉伸着蜘蛛网。 他把其中一个器皿转了一下把网缠在了一股绳上。 叹了口气，他终于看向你。%SPEECH_ON%我不想把佣兵带到这片地方，但我现在无计可施。 巨大的蜘蛛出现了，偷走牲口，宠物。 一个女士报告说她的婴儿被从摇篮里偷走，它睡的地方只剩下有一片网。 我需要这些可怕的生物被解决掉，它们的巢穴被摧毁。 有足够奖励的话，你会有兴趣吗？%SPEECH_OFF% | 你走到 %employer% 身边而他被你的阴影吓到。 他在椅子上挺起身点点头。%SPEECH_ON%啊，我刚刚没忍住。 没注意到你在这，佣兵，尽管你够吓人了，但这片地方传言有巨大蜘蛛。 我有理由相信这些故事，因为我去了一个农场看到了巨大的网和被吞噬的牲口。 我需要一个能行使绝对暴力的人，这是在说你，而且我需要这样一个人去找到这些怪物的巢穴并解决它们。有兴趣吗？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_43.png[/img]{%employer%招手让你进屋。你注意到有几个手持草叉的男子正神情严肃地盯着窗外保持警戒，虽然其中一个显然靠墙睡着了。你直接问这位镇长有何要事。他开门见山。%SPEECH_ON%偏远地区的村民报告说有怪物抓走小孩和狗之类的东西。我本来不想助长这种疑神疑鬼的风气，但这些描述听起来很像蜘蛛——我父亲那辈人管它们叫蛛魔，如果是真的，很可能它们在这片地方已经筑了个巢。我需要你找到并摧毁它。 有兴趣吗，佣兵？%SPEECH_OFF% | 你见到%employer%时，他正用两把叉子拉扯着蛛丝。他将其中一把扭转，把蛛丝缠成线绳。叹了口气，他终于抬头看你：%SPEECH_ON%我本来没想找佣兵来处理，可现在实在没办法。巨型蜘蛛到处活动，偷牲口和宠物。有个妇人报案说婴儿从摇篮里消失，只剩一堆蛛网。需要有人解决这些可怕生物，端掉它们的巢穴。报酬到位的话，你接不接这活儿？%SPEECH_OFF% | 你刚走近%employer%，光是你的人影就把对方吓了一跳。他在桌前坐直身子点头。%SPEECH_ON%别介意，我有点紧张。不是说你吓人，佣兵，但这带传闻有巨型蜘蛛出没。我去过某个农庄，亲眼见过巨大的蛛网和被啃光的牲口，所以相信这些传言。现在需要个擅长以暴制暴的行家——说的就是你——去找到怪物巢穴彻底清除它们。有兴趣吗？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{你能拿出多少克朗？ | 谈谈报酬吧。 | 让克朗说话。}",
+					Text = "{你能拿出多少克朗？ | 谈谈报酬吧。 | 佣金是多少？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -250,7 +250,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这听起来不像是适合我们的工作。}",
+					Text = "{听起来这活不适合我们。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -267,7 +267,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Banter",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_25.png[/img]{你经过了一只死掉的牛，干瘪露骨，皮却没有任何日晒干裂的痕迹。%randombrother% 蹲下来用手指数了数刺口。他点头道。%SPEECH_ON%蜘蛛干的，毫无疑问。 我认为它们毒倒了它后在被麻痹的身体上开始的进食。 一具新鲜的尸体意味着它们很近了…%SPEECH_OFF% | 你经过了一具被网包住的尸体倚着一颗孤树。 你切开丝线。 一个儿童的尸体从中滑出倒在地上。 它的脸皮包骨，死白的头上眼球深深的陷在眼窝里。 舌头也同样的干瘪，鼻子几乎不见了。%randombrother% 啐了口水点头说。%SPEECH_ON%没错。我们很近了。或者说，它们很近了。 如果这能安慰你们，这个男孩变成这样前就死了。 蜘蛛的咬刺带毒，儿童无法存活多久。%SPEECH_OFF%好，好吧。是时候去找这些怪物了。 | 你路过一个小伙子躲在一辆翻过来的手推车下。 他拒绝出来，他的小脑袋像贝壳里的珍珠一样从里面向外探视。 You ask what he\'s doing. 他直白的解释道他在躲避蜘蛛而你应该离开。%SPEECH_ON%去找你自己的车。这个是我的。%SPEECH_OFF% 显摆起你的剑，你告诉他你要找的是蜘蛛。 他盯着你。点头说。%SPEECH_ON%那可是个坏主意，先生。 然后，不，我不知道它们去了哪里。 我来时跟着个商队而你看到商队了吗？ 不，你看不到因为他们现在都成蜘蛛沙拉了，所以在它们看到你跟我说话前快滚！%SPEECH_OFF%车啪地闭上。 你没兴趣把它再抬起来，但你在离开时好好的给它来了一脚。}",
+			Text = "[img]gfx/ui/events/event_25.png[/img]{你经过了一只死掉的牛，血肉被吸食干净，表皮却没有风干痕迹。%randombrother%蹲下用手指探查那些穿刺伤口，点头道。%SPEECH_ON%准是蛛魔干的。它们先毒倒这牲口，再慢慢吸食。尸体还新鲜说明它们就在附近……%SPEECH_OFF% | 你看见一具缠满蛛网的尸体靠在大树上。割开丝茧后，一具孩童的躯干滑落在地——面皮紧贴头骨，惨白的颅骨上嵌着深陷的眼球，舌头萎缩，鼻子几乎消失。%randombrother%啐了口唾沫点头说。%SPEECH_ON%没错，我们很近了。或者说是它们很近了。说句宽慰话，这孩子死透了才被吸干的——蛛魔咬人时注入的毒液没有小孩能扛得住。%SPEECH_OFF%这多多少少宽慰了你一些，是时候让这些怪物面对成年人的怒火了。 | 你发现有个男孩躲在翻倒的手推车底下，小脑袋像蛤蜊里的珍珠般从缝隙里探出窥视。问他怎么回事，他慌里慌张地解释自己在躲蜘蛛，还让你赶紧离开。%SPEECH_ON%想躲自己找推车去！这辆是是我的！%SPEECH_OFF%你拍了拍剑柄说我们就是来找蜘蛛的。男孩瞪大眼睛看着你，点了点头。%SPEECH_ON%这主意可真他妈的糟透了，先生。我压根不知道它们去哪儿了——我原本跟着商队，你现在还看得到商队吗？当然看不到！因为他们全成了蜘蛛的美餐！趁它们没发现你跟我说话，赶紧滚蛋！%SPEECH_OFF%手推车\"哐当\"一声被他拉紧闭合。你懒得再把车掀开，不过离开时还是狠狠踹了它一脚。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -284,7 +284,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Encounter",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_110.png[/img]{蜘蛛的巢穴就是一个被白丝环绕的土坑。 在它的边缘飘着细丝，它们对最微小的轻风都会做出反应。 随着你让战团向内挺进，网开始呈现一种有文明般的形态，好像你在冬日田园里散步一样，其中被紧紧裹住的猎物显示这地方刚建好不久：鹿，狗，人尺寸的茧毫无生气的挂在网上，如同漏嘴的食物掉在白毯子上一样。 一个黑影从纱幕后悠闲的晃出来，出现在前方，腿弯曲遮着什么，它的头伏在它们后好似这肮脏的生物被它自己的腿挡住了一般。 一只人手如可怕的奶嘴般在它的上颚中吸进吸出。 你来对地方了。 | 蜘蛛巢穴很安静，战团到来的响声几乎如同虚构般，金属碰撞的叮当声在经过中显得额外尖锐。\n\n 你遇到个人倒挂在颗树上，他的整个身体被茧包住，只露出一张脸被丝拉扯着。 他请求你切断绑住他眼皮的丝，你照做了。 他的眼皮缓慢闭上，干燥的眼睛上的硬层随之裂开好像几天没有闭过一般。 但它们突然张开，男人在尖叫。 茧在他的腰间鼓起并裂开，喷涌而出的小黑蜘蛛冒了出来。 他的身体剧烈地颠簸着，虫群正在吞噬他，小蜘蛛漫入他的肺而他只能垂死尖叫着将它们咳出。 被吓到，你后退几步只看到一大群大得多的蜘蛛四面八方地从树边涌出。 | 巢穴很显眼，一片无冬的雪地，白色的网一块块地在每一棵树，每一片矮林，每一寸地面上批着。 你让战团径直进入，武器在手，而后你经过了被包起的尸体，它们的中心爆开变黑，以群小蜘蛛在器官上吸食着。\n\n  抬起头，你看到红色的眼睛在附近树上的树枝间闪起，整个蛛形纲植物园活跃了起来，它的看守者停留在树丛间弯着的腿与树枝难以区别，敌人就这么躲在视线中。 当一颗树突然完全展开，每一根树枝都展露成蜘蛛腿，你几乎拉了一裤子，这些木栖敏捷生物正降临到队伍上噼里啪啦地想要咬一口！}",
+			Text = "[img]gfx/ui/events/event_110.png[/img]{蛛魔的巢穴是个被白色蛛网环绕的土坑，边缘的细丝即使在最微弱的微风中也摇曳不定。当你带领战团深入时，蛛网开始呈现出某种规整的形态——仿佛从冬日的荒原步入文明领域。新近织就的蛛网紧紧包裹着猎物：鹿、狗、与人体等大的茧囊了无生机，它们被妥帖地悬挂在白色丝巢与平面上，如同散落在苍白地毯上的碎屑。一道黑影在纱幕般的巢穴后方悠然显现，它蹲伏着节肢形成天然屏障，头部低垂其间，仿佛这卑劣生物用自己的步足筑起了栅栏。一只人类手掌在它的颚齿间时隐时现，如同恐怖的安抚奶嘴。你来对地方了。 | 蜘蛛巢穴寂静无声，战团行进时的金属碰撞声显得格外突兀，如同冒犯此地的异响。\n\n你发现一个被倒吊在树上的男子，除面部外全身都被茧包裹，蛛丝拉扯着他的皮肤。他请求你割开缠住眼皮的蛛网，你照做了。他的眼睑缓缓闭合，干涩的眼球可能数日来首次得以休息——但随即猛地睁开，男子发出凄厉惨叫。他腰间的茧囊突然鼓起爆裂，涌出密密麻麻的黑色幼蛛。随着蛛群啃噬他的身躯，男子剧烈抽搐着，被蛛群填满的肺部发出汩汩惨叫，垂死痉挛中咳出无数蜘蛛。正当你惊骇后退时，成群巨型蜘蛛正从树林四周涌现！ | 巢穴的位置显而易见——这片纯白蛛网覆盖的区域不见严寒，每棵树、每处灌木、每寸土地都挂着随风飘荡的白色蛛网。 你率队持械闯入，眼前是被蛛网包裹的尸体：它们的胸腔已被撕开发黑，成群的幼蛛正在啃食内脏。\n\n抬头望去，周围树枝间突然亮起无数红色眼睛，整片蛛网笼罩的树林瞬间苏醒——那些守护者一直潜伏在枝叶间，它们蜷缩的节肢与树枝难以分辨，敌人始终就在眼前。当一棵\"树\"突然舒展全部枝干，每根\"树枝\"竟是蜘蛛步足时，你吓得几乎失禁——这场树木伪装的诡计正朝着战团倾覆而下，发出渴求撕咬的窸窣锐响！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -302,7 +302,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Victory",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_123.png[/img]{最后一只蜘蛛被解决了，它的腿抱起好像要永恒的抱着杀死它的武器。 你对战团的出色工作点头，然后下令烧毁整个地方。 火快速的窜上丝网，摧毁着丝桥并燃起它们的连接。 整个巢穴被烈火席卷而它深处中的某处你可以听到被点着的小蜘蛛尖声的嚎叫声。 | 你走近最后的几只蜘蛛边并审视它可怕的颚。 它仗着一套凶狠的上颌来作为某种牙龈护具，细长的嘴本体逆向排列着锋利的牙齿来撕碎任何试图逃跑的东西。\n\n 你下令烧掉整个巢穴。 随着火焰燃起，小蜘蛛的叫声从它们的窝中传出。 | 你准备回去找 %employer%，但得先把这巢穴完全烧干净。 战团站在火焰前听着小蜘蛛的尖锐叫声并时不时笑着像长腿的小火球一样跑来跑去的小虫子。 | 蜘蛛们被击败了，你下令烧掉这该死的地方并准备回程去找 %employer%。随着火越烧越旺，细小的蜘蛛从中跑出，它们照着火就好像夜晚的萤火虫一样。 几个佣兵开始了场看谁踩的多的即兴游戏，这场游戏以一个特别有野心的小蜘蛛几乎点着了一个佣兵的裤子结束。}",
+			Text = "[img]gfx/ui/events/event_123.png[/img]{最后一只蛛魔被解决了，它的腿脚蜷缩收拢，仿佛要永远抓住那柄杀死它的武器。你点头认可战团的表现，随即下令将整个巢穴付之一炬。火焰迅速沿着蛛网蔓延，烧断了丝线桥梁，将毁灭性的火势传递到各个连接点。整个巢穴在烈火中化为灰烬，在巢床深处某处，你们听见幼蛛被烈焰吞噬的尖利惨叫。 | 你走近最后一只蛛魔，凝视它狰狞的口器。它长着一对凶恶的颚肢充当某种牙龈防护，嘴巴本身就是一道裂缝，边缘排列着逆向生长的锋利牙齿，足以撕碎任何试图逃脱的猎物。\n\n下令将整个巢穴烧毁。随着火焰升腾，巢穴深处传来了幼蛛的哀鸣。 | 你准备回去找%employer%，但事先让人将巢穴彻底焚毁。战团成员站在烈焰前，听着幼蛛的尖声惨叫，有时还会被那些像长了腿的小火球一样四处乱窜的小东西逗得发笑。 | 蜘蛛被消灭后，你下令烧掉这该死的地方并准备回程去找%employer%。随着火势蔓延，微小的幼蛛浑身着火跑出来，就像夜间的萤火虫。几个佣兵临时发起比赛，看谁能踩死最多着火的小蜘蛛，直到一只特别胆大的幼蛛差点点着某个佣兵的裤子，这场闹剧才告终。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -319,12 +319,12 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "OldArmor",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_123.png[/img]{消灭了蛛魔后，你命令战团搜索这些生物的巢穴，尽管佣兵们被命令不要独自游荡。你和%randombrother%一起四处转悠。你们一起发现了一棵树，这棵树的网线明显较少。当你们绕过去时，你们发现一名骑士的尸体靠在树干上。他的手放在一把断剑的剑柄上，另一只手完全缺失，只有手腕处的衣袖和腹部的残缺手臂。尸体躺在自己制造的巢穴中，一堆看起来像腐烂大黄杆和腐烂甲壳的灌木丛中，破碎的身体洞穴并散发着毒气。%randombrother% 点头说。%SPEECH_ON%真是太可惜了。无论他是谁，我敢打赌他会成为%companyname%的一名出色战士。%SPEECH_OFF% 的确，这看起来像是一位伟大战士的终结。你想给他安葬，但你没有时间。你让%randombrother%从尸体上取走他能拿到的东西，并准备返回%employer%。}",
+			Text = "[img]gfx/ui/events/event_123.png[/img]{解决掉蛛魔后，你命令战团简单搜索这些生物的巢穴，但严令佣兵不得单独行动。你和%randombrother%一起四处转悠。你们同时发现了一棵树，这棵树的蛛网明显较少。绕到树后，只见一具骑士尸体靠在树干上。他一只手搭在断剑的剑柄上，另一只手臂齐腕而断，残肢搁在腹部。尸身陷在巢穴中——那是由腐烂的大黄茎秆与腐朽甲壳堆成的厚垫，破碎的甲壳内里中空，散发着毒物的恶臭。%randombrother%点头道。%SPEECH_ON%真是可惜。不管是谁，我敢打赌他肯定能成咱们%companyname%的好手的。%SPEECH_OFF%确实，这场面看来的确像是伟大战士才会有结局。你本想安葬他，但没时间这么做。你吩%randombrother%从尸体上搜集可用之物，准备返回%employer%。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "回 %townname%！",
+					Text = "回去%townname%！",
 					function getResult()
 					{
 						return 0;
@@ -358,13 +358,13 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Survivor",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_123.png[/img]{战斗结束了，你见到一个人脚粘着网摆来摆去。 他的身体被蛛丝绑住了一半，还有更多的从他的腰间像被撕碎的裙子般摇摆着。 看来蜘蛛们在 %companyname% 到来时放下了他。 见到你他笑了起来。%SPEECH_ON%嘿，你们是雇佣兵吧？肯定的，我看得出来。你们不会无缘无故地来到这里，除非是为了钱，而且你们打得像被下了赌注的混蛋一样。野蛮至极。%SPEECH_OFF%你问他你能从解救他得到什么。 他抬起头，然后他的整个身体开始摇摆并且有时候让他摆的离你更远了。 他说，或许是向着你或者是他正面向的随便什么方向。%SPEECH_ON%是的，好问题！好吧，你或许在这看不出来，但我自己就是个佣兵，而且你恐怕不知道我的战团和队长全都被那群蜘蛛吃掉了！ 放我下来，我没有比你的战团更好的去处了。 当然前提是你愿意接受我。%SPEECH_OFF%你下令放下他并探讨该怎么做，然后回去找 %employer%。}",
+			Text = "[img]gfx/ui/events/event_123.png[/img]{战斗结束后，你发现有个男人被蛛丝缠住脚踝倒吊着。他半个身子都被蛛网包裹，腰际垂下的蛛丝像破裙子般晃荡。看来是%companyname%的到来让蜘蛛们丢下了这个猎物。见到你，他微笑道。%SPEECH_ON%嘿，那边的。是佣兵吧？瞧出来了。要不是为了钱，你们也不会来这儿吧？不过你们打起架来像赌场里的恶狗，真够带劲的。%SPEECH_OFF%你问他要是割断蛛网能拿什么好处。他仰起头，整个身子开始晃荡，时不时转得背对你。不管朝哪个方向，他继续喊着%SPEECH_ON%问得好！你看我现在这模样，其实我也是个佣兵。我那群弟兄和队长全被蜘蛛们缠起来吞吃干净了！放我下来，我横竖都得找新东家——你们战团要是收人，我就跟你们混。%SPEECH_OFF%你让人割断蛛网，在返回%employer%之前琢磨着该如何安置这个幸存者。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "欢迎来到战团！",
+					Text = "欢迎加入战团！",
 					function getResult()
 					{
 						this.World.getPlayerRoster().add(this.Contract.m.Dude);
@@ -400,7 +400,7 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 					this.Contract.m.Dude.getSkills().add(this.new("scripts/skills/traits/fear_beasts_trait"));
 				}
 
-				this.Contract.m.Dude.getBackground().m.RawDescription = "你在树上发现了挂着的%name%，他是一名佣兵，他所在的佣兵团被派去对付蛛魔，只有他活了下来。你救了他，他就加入了你的战团。";
+				this.Contract.m.Dude.getBackground().m.RawDescription = "你在树上发现了挂着的%name%，他是一名佣兵，他所在的佣兵团被派去对付蛛魔，只有他活了下来。在你救下他之后，他便加入了你的战团。";
 				this.Contract.m.Dude.getBackground().buildDescription(true);
 				this.Contract.m.Dude.worsenMood(0.5, "他以前的战团被蛛魔干掉了");
 				this.Contract.m.Dude.worsenMood(0.5, "几乎被蛛魔活活吃掉");
@@ -432,19 +432,19 @@ this.hunting_webknechts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_85.png[/img]{%employer% 在城镇入口碰到了你，边上还有一大群人跟在身边。 他热情的欢迎你，声称他派了个侦察兵跟着你，他见证了全程。 在他交付你的报酬后，居民们一个个的走上前，他们中的许多人不敢直视一个佣兵的眼睛，但他们献上了几个礼物以感谢为他们解除了蜘蛛的恐怖。 | 你不得不寻觅 %employer% 的踪迹，最终在一个马厩里跟一个农民女孩在一起。 他从干草堆中抬起头，惊吓到了马们，它们轻声嘶唔并跺起脚。 半裸着，他说他带着你的报酬并交了过来。 注意到你在看女孩，他然后开始抓任何能碰到的东西，包括马的鞍袋里，并把它们交了过来。%SPEECH_ON%额，镇民们也都想献上一份。 你懂得，表达谢意。%SPEECH_OFF%很好。为了更多的“谢意”你问他会不会给你附近袋子里的任何东西。 | %employer% 拍手搓着欢迎你回来，好像你刚刚带了只火鸡而不是你胜利的可怕证据。 在支付你被承诺的报酬后，你听到些意外的行文。 镇长说一个失踪的镇民的资产不能被很好的分割所以，作为额外的谢意，你可以拿上剩下的。}",
+			Text = "[img]gfx/ui/events/event_85.png[/img]{%employer%在镇口迎接你，身边围着一群镇民。他热情地欢迎你归来，说派了探子目睹整场战斗。他递过酬金后，镇民们依次上前——许多人不敢直视佣兵的眼睛，但还是送上礼物感谢你们消除了蛛魔的恐怖威胁。 | 你四处寻觅%employer%，最终在马厩发现他正和一个农家女孩在一起。他猛地从干草堆里坐起来，惊得马匹嘶鸣跺蹄。衣衫不整的他声称早已备好酬金，说着就把钱塞了过来。见你盯着那姑娘，他开始胡乱抓取手边能拿的东西——包括拴着的马匹鞍袋里的物品——一股脑塞给你。%SPEECH_ON%呃，镇民们也想要表示表示。你懂的，算是谢意。%SPEECH_OFF%为了进一步表达\"谢意\"，你问他能否把附近行囊里的东西也交出来。 | %employer%拍着手热情地迎接你归来，搓手的动作仿佛你带回的是火鸡而不是骇人的战利品。支付约定酬金后，你得知一个意外消息：这位镇长表示有位遇难镇民的遗产无法妥善分配，作为额外感谢，剩下的东西都归你处置。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "一场成功的狩猎。",
+					Text = "狩猎成功。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上的蛛魔");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除城镇附近的蛛魔");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}

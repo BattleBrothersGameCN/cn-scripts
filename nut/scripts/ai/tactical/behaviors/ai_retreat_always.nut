@@ -37,7 +37,7 @@ this.ai_retreat_always <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + this.getAgent().getActor().getName() + ": Retreated!");
+				this.logInfo("* " + this.getAgent().getActor().getName() + ": 撤退！");
 			}
 
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getAgent().getActor()) + "撤出了战斗");
@@ -65,7 +65,7 @@ this.ai_retreat_always <- this.inherit("scripts/ai/tactical/behavior", {
 
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + this.getAgent().getActor().getName() + ": Retreating.");
+					this.logInfo("* " + this.getAgent().getActor().getName() + ": 撤退中。");
 				}
 
 				navigator.findPath(_entity.getTile(), this.m.TargetTile, settings, 0);
@@ -88,7 +88,7 @@ this.ai_retreat_always <- this.inherit("scripts/ai/tactical/behavior", {
 					{
 						if (this.Const.AI.VerboseMode)
 						{
-							this.logInfo("* " + this.getAgent().getActor().getName() + ": Retreated!");
+							this.logInfo("* " + this.getAgent().getActor().getName() + ": 撤退！");
 						}
 
 						this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(this.getAgent().getActor()) + "撤出了战斗");

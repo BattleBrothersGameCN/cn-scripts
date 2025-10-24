@@ -69,7 +69,7 @@ this.ai_attack_thresh <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using Round Swing / Thresh!");
+				this.logInfo("* " + _entity.getName() + ": 使用回旋挥击/连枷！");
 			}
 
 			this.m.Skill.use(this.m.TargetTile);

@@ -4,7 +4,7 @@ this.random_scenario <- this.inherit("scripts/scenarios/world/starting_scenario"
 	{
 		this.m.ID = "scenario.random";
 		this.m.Name = "随机";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_74.png[/img][/p][p]以随机选择的起源开始战役。 多么令人兴奋啊！[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_74.png[/img][/p][p]以随机选择的起源开始战役。 刺激！[/p]";
 		this.m.Difficulty = 0;
 		this.m.Order = 900;
 	}

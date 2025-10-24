@@ -106,7 +106,7 @@ this.ai_attack_terror <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using Horrific Scream against " + this.m.TargetTile.getEntity().getName() + "!");
+				this.logInfo("* " + _entity.getName() + ": 使用骇人尖啸，目标: " + this.m.TargetTile.getEntity().getName() + "!");
 			}
 
 			this.m.Skill.use(this.m.TargetTile);

@@ -81,7 +81,7 @@ this.runaway_laborers_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "欢迎加入 %companyname%！",
+					Text = "欢迎加入%companyname%！",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);

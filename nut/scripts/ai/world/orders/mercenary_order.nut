@@ -59,7 +59,7 @@ this.mercenary_order <- this.inherit("scripts/ai/world/world_behavior", {
 			return true;
 		}
 
-		_entity.setOrders("Getting Hired");
+		_entity.setOrders("被雇佣中");
 		_entity.clearTroops();
 		local r = this.Math.min(350, 150 + this.World.getTime().Days);
 		local brush = _entity.getSprite("body").getBrush().Name;

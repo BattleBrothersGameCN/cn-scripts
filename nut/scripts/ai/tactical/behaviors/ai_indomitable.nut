@@ -99,7 +99,7 @@ this.ai_indomitable <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Indomitable!");
+			this.logInfo("* " + _entity.getName() + "：使用不屈！");
 		}
 
 		this.m.Skill.use(_entity.getTile());

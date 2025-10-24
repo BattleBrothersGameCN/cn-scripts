@@ -3,7 +3,7 @@ this.corpse_explosion_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.corpse_explosion";
-		this.m.Name = "尸体爆炸";
+		this.m.Name = "尸爆";
 		this.m.Description = "";
 		this.m.Icon = "skills/active_234.png";
 		this.m.IconDisabled = "skills/active_234.png";

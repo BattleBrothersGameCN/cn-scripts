@@ -76,7 +76,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "欢迎加入 %companyname%！",
+					Text = "欢迎加入%companyname%！",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -112,7 +112,7 @@ this.civilwar_deserter_event <- this.inherit("scripts/events/event", {
 			List = [],
 			Options = [
 				{
-					Text = "欢迎加入 %companyname%！",
+					Text = "欢迎加入%companyname%！",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);

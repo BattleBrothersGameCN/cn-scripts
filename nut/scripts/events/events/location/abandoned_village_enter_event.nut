@@ -123,7 +123,7 @@ this.abandoned_village_enter_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "Defeat",
-			Text = "[img]gfx/ui/events/event_178.png[/img]{战局急转直下。你意识到，这些怪物身上，也一定有那些死在他们手里的人。为了不落得同样的下场，你下令撤退。血肉傀儡们太过笨拙，它们缓慢地处理掉队伍的后卫，渐渐淡出了你的视野。\n\n或许你还会回到这里 — 这里的怪物到底是怎么回事？}",
+			Text = "[img]gfx/ui/events/event_178.png[/img]{战局急转直下。你意识到，这些怪物身上，也一定有那些死在他们手里的人。为了不落得同样的下场，你下令撤退。血肉魔像们太过笨拙，它们缓慢地处理掉队伍的后卫，渐渐淡出了你的视野。\n\n或许你还会回到这里 — 这里的怪物到底是怎么回事？}",
 			Image = "",
 			List = [],
 			Characters = [],

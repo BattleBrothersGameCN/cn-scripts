@@ -48,7 +48,7 @@ this.pessimist_won_battle_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50 && !bro.getSkills().hasSkill("trait.optimist"))
 					{
-						bro.worsenMood(0.4, "经过淬炼的(Tempered by)" + _event.m.Pessimist.getName() + "的悲观情绪");
+						bro.worsenMood(0.4, "被" + _event.m.Pessimist.getName() + "的悲观情绪影响");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

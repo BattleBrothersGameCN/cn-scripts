@@ -273,7 +273,7 @@ this.ai_disengage <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Disengaging!");
+				this.logInfo("* " + _entity.getName() + "：脱离！");
 			}
 
 			this.getAgent().adjustCameraToTarget(this.m.TargetTile);

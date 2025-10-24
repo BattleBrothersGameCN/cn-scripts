@@ -64,7 +64,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 			{
 				this.Contract.m.BulletpointsObjectives = [
 					"前往%objective%",
-					"打破绿皮围攻"
+					"打破绿皮的围攻"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -108,7 +108,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 				}
 
 				local faction = this.World.FactionManager.getFaction(this.Contract.getFaction());
-				local party = faction.spawnEntity(this.Contract.getHome().getTile(), this.Contract.getHome().getName() + " 战团", true, this.Const.World.Spawn.Noble, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
+				local party = faction.spawnEntity(this.Contract.getHome().getTile(), this.Contract.getHome().getName() + "战团", true, this.Const.World.Spawn.Noble, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.getSprite("banner").setBrush(faction.getBannerSmall());
 				party.setDescription("听命于当地领主的职业军人。");
 				this.Contract.m.Troops = this.WeakTableRef(party);
@@ -334,7 +334,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer%递给你一杯酒。%SPEECH_ON%喝了它。%SPEECH_OFF%你从他的气息中嗅到了坏消息的味道。你一口气喝下了这杯酒，向他点了点头。他回以点头。%SPEECH_ON%绿皮正在这个地区肆虐，看起来，他们盘算着攻占%objective%。%SPEECH_OFF%他又倒了杯酒，一饮而尽，一杯接一杯。%SPEECH_ON%如果这个地方被攻陷，我们可以预见整个地区的沦陷。不知道你对于十年前这些畜生侵袭的事情了解多少，没人想要目睹这种情况再次发生。现在，我的间谍告诉我，围攻刚刚开始，绿皮立足未稳，这意味着我们可以立即发起攻击，以免事情失去控制。如果你有兴趣，以诸神之名我真心希望你有，去那里打破围攻！%SPEECH_OFF% | 卫兵围在%employer%身旁。他们卸下了头盔，头上满是汗水，还有人在盔甲里打颤。%employer%从绝望的人群中看到了你，招手示意你上前。%SPEECH_ON%佣兵！我有一些……相当可怕的消息。也许你已经听说了，不过我还是简短地概括一下：绿皮可能已经入侵了这片地区，威胁着%objective%。他们正在围攻那里，但报告显示，绿家伙们还没有完全准备好。我需要你去那里，解除围城，以免事情失控。%SPEECH_OFF% | %employer%身边站着几名抄写员，轮流低声说着什么，而贵族只是点头应答。终于，%employer%将注意力转向了你。%SPEECH_ON%雇佣兵，你参与过解围吗？%objective%地区正被绿皮围攻。他们就快占领那里，我们的时间不多了，也许最终他们会占领整个地区，该死的！然后后……我相信你知道十年前发生了什么。%SPEECH_OFF%抄写员们一齐低头行礼。%employer%继续道。%SPEECH_ON%你怎么想，有兴趣参加一场军事行动吗？%SPEECH_OFF% | %employer%面带担忧地欢迎着你。%SPEECH_ON%佣兵，我们有些困难，需要你的帮助！%objective%已被绿皮围攻，我没有足够的士兵去解围。但我相信你有能力完成这项任务。行吗？我会付给你丰厚的报酬。%SPEECH_OFF% | %employer%双臂撑在桌前。他的肩膀耸着，像一只盯着猎物的乌鸦。他摇了摇头。%SPEECH_ON%佣兵，我需要更多的人手来搞定包围%objective%的兽人军队。你能胜任吗？我现在就要答案。%SPEECH_OFF% | %employer%一见你就站了起来，额头上挂着汗珠，脸上挤出一个急促而歪扭的微笑。%SPEECH_ON%雇佣兵！你能来真是太好了！有消息传来，绿皮围攻了%objective%，我需要你的帮助！你有兴趣吗？你最好快点决定。%SPEECH_OFF% | 你看到%employer%深深地埋坐在他的椅子里，似乎是希望椅背能永远把他隔离在这个世界之外。他懒散地指向桌子上的一张地图。%SPEECH_ON%嗯，绿皮回来了，正在围攻%objective%。我需要尽可能多的人前往那里并解围。报酬少不了，你要加入吗？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer%递给你一杯酒。%SPEECH_ON%干了。%SPEECH_OFF%你几乎能从他呼吸中嗅到坏消息的味道。你将酒一饮而尽，朝那人点了点头。他也点头回应。%SPEECH_ON%绿皮正在这片区域肆虐，看样子他们打算拿下%objective%。%SPEECH_OFF%他又倒了一杯酒，喝干，然后再倒一杯。%SPEECH_ON%如果它陷落了，那我想我们可以认为这个区域的其余部分也会随之完蛋。我不知道你是否清楚十年前这些绿皮来袭时发生了什么，但这附近没多少人想再看重演一遍。现在，我的探子告诉我围城刚刚开始，绿皮还没有完全集结，意味着我们可以现在就进攻，在局势失控之前打破围城。如果你有兴趣——旧神在上，我真心希望你有——那么我需要你去那里，解除围城！%SPEECH_OFF% | 守卫们围在%employer%身边。他们摘下了头盔，满头大汗，有些人在盔甲里瑟瑟发抖。%employer%透过这群绝望的人看到了你，招手让你上前。%SPEECH_ON%佣兵！我有一些……特别糟糕的消息。或许你已经听说了，但时间紧迫我就长话短说：绿皮可能已经入侵了这个区域，并且他们正威胁要拿下%objective%。他们目前正在围城，但报告说绿皮还没完全集结。我需要你去那里，在局势失控之前打破围城。%SPEECH_OFF% | %employer%身边站着几位书记员。他们轮流低语，贵族则对他们说的一切都只是点头。最终，%employer%将注意力转向你。%SPEECH_ON%佣兵，你以前打破过围城吗？本地区的%objective%目前正被绿皮围困。我们的时间不多了，他们很快就会攻占那里，然后可能拿下整个地区！在那之后……嗯，我相信你知道十年前发生了什么。%SPEECH_OFF%书记员们齐刷刷地点头并低下脑袋。%employer%继续说道。%SPEECH_ON%那么你怎么说，对军事行动感兴趣吗？%SPEECH_OFF% | %employer%面带忧色地迎接你。%SPEECH_ON%我们有点麻烦，佣兵，我们需要你的帮助！%objective%已被绿皮围困，而我自己没有足够的兵力去独自解围。但我觉得你能胜任这个任务。你能吗？报酬会很丰厚。%SPEECH_OFF% | %employer%双臂撑在桌上站着。他耸着肩膀，像一只乌鸦俯视着猎物。他摇了摇头。%SPEECH_ON%佣兵，我需要更多人马来帮忙击退围困%objective%的绿皮大军。你能胜任吗？我现在就需要知道。%SPEECH_OFF% | 你一进去，%employer%就站了起来。他脸上带着汗，挤出一个慌乱又勉强的微笑。%SPEECH_ON%佣兵！太、太高兴你来了！有消息说绿皮已经围困了%objective%，我需要你的帮助！你有没有兴趣？你最好尽快决定。%SPEECH_OFF% | 你发现%employer%深陷在他的椅子里，仿佛希望椅背能合上，将他永远隔绝出这个世界。他懒洋洋地朝桌上一张地图指了指。%SPEECH_ON%嗯，消息是绿皮回来了，他们正在围困%objective%。我需要尽可能多的人手去那里解围。报酬会相当可观，你加入吗？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
@@ -349,7 +349,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 
 				},
 				{
-					Text = "{这不值得。 | 我们还有其他任务。}",
+					Text = "{这事不划算。 | 我们还有其他任务。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -365,13 +365,13 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		});
 		this.m.Screens.push({
 			ID = "PreparingForBattle",
-			Title = "在%townname%…",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{你走出%employer%的驻地，准备好战团。周围到处都是跑来跑去的骑士和士兵。其中一些人围在神职人员周围，无声地为死亡做准备。%SPEECH_ON%他们正在天堂订位子呢。%SPEECH_OFF%%randombrother%凑到边上，冲你咧嘴一笑。%SPEECH_ON%怎么，太阴暗了吗？%SPEECH_OFF% | %employer%的住所外，士兵们东奔西跑。一些人在马车后装载补给，剩下的则在磨利他们的武器，还有个把侍从，带着大堆盔甲来回穿梭。你走到队伍前，命令他们准备好。%randombrother%向忙碌的人群点了点头。%SPEECH_ON%看来这次我们有伴儿了。%SPEECH_OFF% | %employer%的房间外有士兵，大厅里也有士兵。走过的房间里，满是惊恐的妇孺和失明的老人，他们宁愿自己聋了。走出大厅，你被迫挤过一群带着盔甲和武器，涌动着的侍从。%companyname%还等着你呢。%SPEECH_ON%我们出发吧。这些人必须为战斗做准备，但我们已经准备好了，对吧伙计们？%SPEECH_OFF% | 离开%employer%的地方，你发现%randombrother%正在等你。他正看着四周忙碌的战争准备：侍从们带着盔甲武器慌忙奔跑，士兵们往马车里装备，神职人员短暂平息着年轻士兵的恐惧。你告诉你的佣兵准备好行装，你们将跟随这些士兵们一起解围。 | 你走到外面，看到%employer%的士兵正为战斗准备。他们正把装备装上马车，一位神职人员正在他们中间走动。妇女、儿童和老人站在路边。%companyname%正尽责地站着。你走过去告诉他们手头的任务。 | 走出去后，你发现%employer%的士兵正整装待发。儿童们肆意奔跑，欢笑，玩着战争游戏，满不在乎真的战争就要来了。失去了一两个丈夫的妇女们就深沉多了。你穿过队伍找到%companyname%，告诉他们任务的细节。 | %employer%的士兵正在准备战斗。年轻人紧张不安，用虚假的勇气和不情愿的笑容掩饰他们的恐惧。老兵们埋头做他们自己的事，脸上显出对那些从未归来的老战友的思念。而那些疯狂的、眼中冒血的家伙们，在即将到来的战争前几乎早早地感到兴奋。你穿过他们，去通知%companyname%担负的任务。 | 当你走出来时，你发现%employer%的军队士兵正为行军做准备。武器散乱成堆，士兵在里面挑挑拣拣。这种怪象显示了组织度的缺乏。这不是个好兆头，但你把它抛在脑后，告诉%companyname%他们的合同。}",
+			Title = "%townname%里……",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{你走出%employer%的住所，开始整备战团。周围到处都是跑来跑去的骑士和士兵。其中一些人围在神职人员周围，无声地为死亡做准备。%SPEECH_ON%他们正在天堂订位子呢。%SPEECH_OFF%%randombrother%凑到边上，冲你促狭地咧嘴一笑。%SPEECH_ON%怎么，太阴暗了吗？%SPEECH_OFF% | %employer%的宅邸外，士兵们四处奔忙。一些人正把补给品搬上马车，剩下的则在磨砺他们的武器，还有个把侍从，抱着大堆盔甲来回穿梭。你走到队伍前，命令他们准备好。%randombrother%向忙碌的人群点了点头。%SPEECH_ON%看来这次我们有伴儿了。%SPEECH_OFF% | %employer%的房间外有士兵，大厅里也有士兵。走过的房间里，里面是惊恐的妇孺和恨不得自己耳聋的瞎眼老人。到了外面，你不得不费力穿过一群忙碌的侍从，他们正抱着武器盔甲来回穿梭。%companyname%正等着你。%SPEECH_ON%我们出发吧。这儿的人还得准备好才能打仗，但我们早就准备好了，对吧伙计们？%SPEECH_OFF% | 离开%employer%的地方，你发现%randombrother%正等着你。他正看着四周繁忙的战前准备：抱着武器盔甲奔跑的侍从、往马车上搬运补给品的士兵、以及暂时安抚着年轻士兵恐惧的神职人员。你告诉你的佣兵做好准备，你们将跟随这些士兵出发去解围。 | 你走到外面，看到%employer%的士兵正为战斗准备。他们正把装备装上马车，一位神职人员正在他们中间走动。妇女、儿童和老人站在路边。%companyname%的成员正尽责地列队等候。你走过去告诉他们手头的任务。 | 走出去后，你发现%employer%的士兵正整装待发。儿童们肆意奔跑，欢笑，玩着打仗游戏，全然不知真正的战争就要来了。妇女们则显得忧虑得多，其中一些已经失去过一两个丈夫。你穿过行进的队伍找到%companyname%，告诉他们任务的细节。 | %employer%的士兵们正在为战争做准备。年轻人很紧张，用强装的勇气和勉强的笑声掩饰恐惧。老兵们埋头做自己的事，脸上显出对昔日从未归来的老战友的思念。而那些疯狂的、瞪大眼睛、嗜血成性的人，对即将到来的战争前景则带着令人不安的兴奋。你经过他们所有人，去告知%companyname%他们必须完成的任务。 | 当你走出来时，你发现%employer%的军队正为行军做准备。武器堆成一大摊，士兵在里面挑挑拣拣。这种怪象显示了组织度的缺乏。这不是个好兆头，但你把它抛在脑后，告诉%companyname%他们的新合同。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们上！",
+					Text = "我们走！",
 					function getResult()
 					{
 						return 0;
@@ -383,12 +383,12 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "TroopsHaveDied",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]所有贵族士兵都死在了赶赴围城现场的路上。总比你死了强。%companyname%继续向%objective%进军。",
+			Text = "[img]gfx/ui/events/event_22.png[/img]贵族军队的所有人都死在了赶赴围城阵地的路上。总比你死了强。%companyname%继续向%objective%进军。",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们必须继续。",
+					Text = "我们必须前进。",
 					function getResult()
 					{
 						return 0;
@@ -399,13 +399,13 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		});
 		this.m.Screens.push({
 			ID = "ArrivingAtTheSiege",
-			Title = "%objective%附近…",
-			Text = "[img]gfx/ui/events/event_68.png[/img]{你终于来到了围困现场。绿皮兽人包围了%objective%，你看着他们的攻城器械向空中发射着燃烧的石头。半个城镇已经被火焰吞噬，你看到小小的人影匆忙地跑来跑去扑灭火势。贵族士兵的中尉命令你前去攻击攻城器械，然后重新汇合并消灭剩余的敌人。 | %objective%看起来更像是一个巨大的篝火而不是一个城镇。你看着绿皮兽人的攻城器械发射出狂暴的轰炸，天空中充满了黑色的石头、死牛和燃烧的木材。贵族士兵的中尉命令你摧毁攻城器械。他和他的士兵将攻击绿皮兽人军队的主力部队，然后你们两个将重新汇合消灭任何残存的敌人。 | %objective%仍然坚持着，围困还在继续。看起来你们来得正是时候，因为绿皮兽人从攻城器械中发射出的破坏力如此之大，可能几个小时后就没有城镇了。看着这一幕，贵族士兵的中尉命令你侧翼攻击并摧毁攻城武器。他和他的士兵将攻击兽人军队的主要部队，然后你们一起重新汇合，消灭任何幸存者。 | 你先是听到轰击声，然后才看到了轰击。围绕%objective%的绿色野蛮人周围有着敌军攻城器械，正在猛烈地攻击，投石车、投尸器、尸体包扔过来，什么都用得上。\n\n高贵士兵的队长跟你介绍了他的计划。你需要从侧翼攻击攻城器械。他和他的士兵将攻击绿皮兽军的中心，成功后，你们两个将重新联合并消灭其余的敌人。 | 一名年轻的女子被发现在路上和一群孩子蜷缩在一起，就像冬天里的狼崽子。干血粘在她的头侧，但她用几缕凌乱的头发掩盖住了。她解释说，如果你要%objective%，你必须赶紧。绿皮族已经设置了他们的攻城武器，并发起了疯狂的轰击。你和高贵士兵继续前进，把女子留下一些面包来喂孩子们。\n\n攀登过下一个山丘，你看到了一个证明难民所说的故事的景象。贵族士兵的队长迅速下达命令。你和%companyname%将进攻攻城器械，而士兵们则进攻绿皮兽人军队的核心。完成这些任务后，你们将会汇合，消灭任何残留的敌人。 | 你和士兵们翻过了最近的山丘来到达%objective%。城镇还在那里，但它更接近于一堆废墟，而不是一个村庄。绿皮兽人肯定已经用他们简陋的攻城器械轰击它有一段时间了，而他们似乎并没有打算就此停止。\n\n贵族战士的队长命令你去迂回敌人，攻击攻城武器。与此同时，士兵们将攻击敌军的核心部队。完成两项任务后，你将会会合士兵们摧毁剩余的敌军残部。 | 你发现一个老人正在沿着路推一辆手推车。在车上，是一名双腿破碎的年轻人。他昏迷了过去，双手还紧握着破碎的膝盖。老人说%objective%就在附近的山丘上，那里正在遭受攻击。所以如果你要采取行动，最好赶紧去。%companyname%和士兵们前进了，留下老人独自继续前行。\n\n长老没有说谎： %objective% 被烧毁，正慢慢地变成废墟，被一堆野蛮的攻城器械围攻。见到这一幕，贵族士兵们的中尉迅速制定了一个行动计划： %companyname% 将从侧面攻击攻城器械，而士兵们则与大部分的绿皮兽人作战。一旦两项任务完成，您们将重聚并消灭剩余的敌人。 | 你发现一群野狗沿着道路奔跑。他们远离你的小组，但你注意到他们的尾巴紧贴着腿，头低垂。他们快速地路过你，没有停顿。\n\n翻过下一个山头，你看到混乱的原因：绿皮兽人正在用简陋的攻城机械无情轰击%objective%。部队队长点头表示同意，并迅速下达命令。%companyname%将侧翼进攻并直接摧毁攻城武器。完成任务后，你们需要绕回来与士兵汇合，然后继续前进。}",
+			Title = "%objective%附近……",
+			Text = "[img]gfx/ui/events/event_68.png[/img]{你终于抵达了围城战场。绿皮包围了%objective%，你看着他们的战争机器将燃烧的石头抛向空中。半个城镇似乎已经起火，你能看到微小的人影来回奔跑试图灭火。贵族军队的指挥官命令你去攻击那些攻城器械。之后你们再会合，清剿任何残存的野人。 | %objective%看起来更像一个巨大的篝火，而不是一个城镇。你看着绿皮的攻城器械发动猛烈轰击，天空中充斥着黑色的石头、死牛和燃烧的木材。贵族军队的指挥官命令你摧毁那些攻城器械。他和他的手下将攻击绿皮军队的主力，然后你们两队再会合，消灭任何残敌。 | 围城仍在激烈进行，%objective%看来还在坚守。你们似乎来得正是时候，因为绿皮正用他们的攻城器械倾泻着巨量的破坏，再过几个小时恐怕城镇就不剩什么了。目睹此景，贵族军队的指挥官命令你们侧翼包抄，摧毁那些攻城武器。他和他的士兵将攻击敌军的核心，然后你们再会合，屠杀任何幸存者。 | 你先是听到轰击声，然后才看到了轰击。攻城弹的呼啸声如同狂风般划过空气，它们坠地时的撞击声则是最残酷的终曲。最终，你们登上山顶，看清了%objective%的全貌。它被绿皮包围着，他们的攻城器械正在笨拙而猛烈地运作，发射石头、死牛、成捆的人类尸体——任何这些杂种能搞到手的东西。\n\n贵族军队的指挥官向你提出了他的计划。你们负责侧翼包抄并攻击攻城器械。他和他的士兵将攻击绿皮军队的中心，一旦成功，你们两队再会合，歼灭所有残余敌人。 | 你们在路上发现一个年轻女子，一群孩子像严冬里的狼崽一样紧紧依偎着她。她头侧凝结着干涸的血迹，虽然她用一绺缠结的头发巧妙地遮掩着。她解释说，如果你们要去%objective%，必须抓紧时间。绿皮已经架起了攻城武器，正在发动猛烈的轰击。你和贵族军队继续前进，给那女人留下一袋面包喂养孩子们。\n\n登上下一座山丘，眼前的景象证实了难民的描述。贵族军队的指挥官迅速下达命令。你和%companyname%负责攻击攻城器械，而士兵们则攻击绿皮军队的主力。一旦这两项任务完成，你们将汇合，歼灭任何残敌。 | 你和贵族军队登上了最靠近%objective%的山丘。城镇还在，但该死的，它现在更像一堆废墟。绿皮肯定用他们那些简陋的攻城器械轰击了好一阵子了，而且他们看起来丝毫没有要停下的意思。\n\n贵族军队的指挥官命令你们侧翼包抄野蛮人，攻击他们的攻城武器。同时，士兵们将攻击敌军的主力。两项任务完成后，你们将再次会合，消灭所剩无几的散兵游勇。 | 你们发现一个老人正沿路推着一辆手推车。车斗里躺着一个双腿被压碎的年轻人。他已经昏了过去，双手仍紧抓着破碎的膝盖。老人说%objective%就在最近那座山丘那边，正遭受攻城武器的轰击，所以如果你们要采取行动，最好快点。%companyname%和士兵们继续前进，留下老人独自缓慢前行。\n\n老人没有说谎：%objective%正在燃烧，在一大群攻城器械的攻击下正慢慢化为瓦砾。亲眼目睹后，贵族军队的指挥官迅速制定了一个行动方案：%companyname%负责侧翼包抄并攻击攻城武器，而士兵们则对付绿皮军队的主力。两项任务完成后，你们将再次会合，杀死任何还活着的东西。 | 你们遇到一大群野狗沿路奔跑。它们避开了你们的队伍，但你注意到它们夹着尾巴，低着头。它们没有停下，迅速地与你们擦身而过。\n\n 登上下一座山丘，你看到了混乱的根源：绿皮正用一排排简陋的攻城器械无情地轰击着%objective%。贵族军队的指挥官对此点了点头，迅速厉声下达命令。%companyname%将侧翼包抄，直接攻击那些攻城武器。完成后，你们要绕回来与士兵会合，并从那里继续推进。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "做好准备战斗！",
+					Text = "做好战斗准备！",
 					function getResult()
 					{
 						this.Contract.setState("Running_BreakSiege");
@@ -422,13 +422,13 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		});
 		this.m.Screens.push({
 			ID = "ArrivingAtTheSiegeNoTroops",
-			Title = "%objective%附近…",
-			Text = "[img]gfx/ui/events/event_68.png[/img]{你终于看到了%objective%，它正处于极度危险之中。城镇正受到绿皮攻城器的连环轰炸。你命令%companyname%准备行动：你们将从侧翼包抄敌军，直接攻击这些攻城机械。 | 所有贵族士兵都死在了路上，你独自抵达了%objective%。绿皮还在城镇周围，用拼凑的攻城武器轰击着它。你决定包抄这些化外之民，攻击他们的攻城器。}",
+			Title = "%objective%附近……",
+			Text = "[img]gfx/ui/events/event_68.png[/img]{你终于看到了%objective%，它已岌岌可危。城镇正受到绿皮攻城器的连环轰炸。你命令%companyname%准备行动：你们将从侧翼包抄敌军，直接攻击这些攻城器。 | 在贵族军队全员阵亡后，你独自抵达了%objective%。绿皮还在城镇周围，用拼凑的攻城器轰击着它。你决定包抄这些野人，攻击他们的攻城器。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "做好准备战斗！",
+					Text = "做好战斗准备！",
 					function getResult()
 					{
 						this.Contract.setState("Running_BreakSiege");
@@ -446,12 +446,12 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "SiegeEquipmentAhead",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_68.png[/img]{绿皮在附近集结了一些攻城器。你必须摧毁它们，帮助解除围城！ | 你的部队发现附近有几件攻城器械。绿皮正在做突击准备！你要摧毁它们，帮助解除围城！}",
+			Text = "[img]gfx/ui/events/event_68.png[/img]{绿皮已在附近组装了一些攻城器械。你必须摧毁它们以解除围城！ | 你的手下在附近发现了几件攻城器械。绿皮必定在准备发动突击！你要摧毁它们以解除围城！}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "开战！",
+					Text = "接敌！",
 					function getResult()
 					{
 						this.Contract.getActiveState().onCombatWithSiegeEngines(null, this.Contract.m.IsPlayerAttacking);
@@ -464,12 +464,12 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Shaman",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_48.png[/img]{你走向围城的地精，在队伍中看到了一个独特的身影。一个萨满。你让手下做好充分准备。 | 一个独特的身影矗立在地精当中。它用自以为是语言的骇人声音发号施令。这邪性家伙身上绕着奇怪的植物，显现出兽骨项链的形状。%SPEECH_ON%那是个萨满。%SPEECH_OFF%%randombrother%凑近了说道。%SPEECH_ON%我会提醒其他人的。%SPEECH_OFF% | %randombrother%的侦察结束了。他带来消息说，攻城队伍中有一名地精萨满。那人似乎相当恼火。%SPEECH_ON%我喜欢杀地精，但这次恐怕要头疼了。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_48.png[/img]{你走向围城的地精，在队伍中看到了一个独特的身影。那是地精萨满。你让手下做好充分准备。 | 一个独特的身影矗立在地精当中。它用自以为是语言的骇人声音发号施令。这邪性家伙身上绕着奇怪的植物，还戴着一串似乎是动物骨头做成的项链。%SPEECH_ON%那是个萨满。%SPEECH_OFF%%randombrother%凑近了说道。%SPEECH_ON%我会提醒其他人的。%SPEECH_OFF% | %randombrother%的侦察结束了。他带来消息说，攻城队伍中有一名地精萨满。那人似乎相当恼火。%SPEECH_ON%我喜欢杀地精，但这次恐怕要头疼了。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "开战！",
+					Text = "接敌！",
 					function getResult()
 					{
 						return 0;
@@ -481,12 +481,12 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Warlord",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_49.png[/img]{随着你接近围攻的绿皮，一个无法忽视的东西引起了你的注意：一位高大威猛的兽人军阀。这坏东西的盔甲闪闪发光，它转身用兽人的语言发号施令，激发着麾下同胞们的狂热。你让%randombrother%送去这个消息，让大家做好准备。 | 走近围城营地的同时，你认出了兽人军阀那高大残暴的身影。即使在这么远的距离，你也能听到他朝着手下怒吼的声音。这场战斗越来越扣人心弦了。 | 你朝绿皮的营地走去，只听到兽人军阀独特的咆哮。他用那种令人作呕的语言大声喊出命令。他的出现让任务稍稍棘手了一点，你通知给了士兵们。 | %randombrother%侦察归来，他说绿皮营地里有个兽人军阀。虽然是个坏消息，但提前知道做好准备总比临阵被吓住要好。}",
+			Text = "[img]gfx/ui/events/event_49.png[/img]{当你接近围城的绿皮时，你发现了一个几乎不可能忽视的存在：一名高大威猛的兽人军阀。那丑恶家伙的盔甲在其转身用兽人语咆哮着下令时闪闪发光，刺激着它的绿皮同伙陷入一种狂暴、口沫横飞的狂热之中。你让%randombrother%将消息传开，并让兄弟们做好准备。 | 走近围城营地的同时，你认出了兽人军阀那高大残暴的身影。即使在这么远的距离，你也能听到他朝着手下怒吼的声音。这场战斗越来越扣人心弦了。 | 你朝绿皮的营地走去，只听到兽人军阀独特的咆哮声。他用那令人作呕且相当响亮的语言高声下达命令。他的出现让任务稍稍棘手了一点，你把这个情况告知了弟兄们。 | %randombrother%侦察归来，说绿皮营地里有个兽人军阀。虽然是个坏消息，但提前知道并做好准备，总比临阵被打个措手不及要好。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "开战！",
+					Text = "接敌！",
 					function getResult()
 					{
 						return 0;
@@ -498,7 +498,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "TheAftermath",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗结束了，绿皮兽人从战场上溃败了。%objective%获救了，%employer%应该会很高兴的。你跨过了成堆的尸体，无论是人还是兽，集合你的士兵返回。 | 战场上到处都是尸体，许多苍蝇已经开始围绕和繁忙起来。你集合你的士兵，准备回到%employer%拿取报酬。 | %objective%得救了！嗯，尽管只剩下一点。士兵和绿皮兽人，活着的和垂死挣扎的，充斥着地面到你视线能够触及的地方。这是一个残酷的景象，新鲜血淋淋的。你下令%companyname%准备返回%employer%拿取报酬。 | 成堆的尸体，两三个，甚至四个尸体堆成一堆。幸存者被埋在这些死人下面，尽管仍在地面上，也深埋了六英尺深。这是一个可怕的景象，更加令人不安的是，重伤和垂死的人们呼救声不断。在尸体和血肉之海中发现他们就像是在浩渺黑暗的海洋上寻找漂浮的水手。你转身离开这个景象，集合%companyname%的士兵。%employer%应该很期待你们的回归。 | 战斗胜利结束，你看着长矛手们小心地在战场上踱步。他们用长兵器的优势去安全地处理任何还躺在地上的绿皮兽人。其余的贵族士兵都倒在地上，喝水，洗掉脸上的血迹。你没有时间休息，快速召集你的雇佣兵回到%employer%。 | 血浑浊了大地，你的靴子深深陷入泥潭。尸体散落在周围，身体变得陌生，肢体被扯落并遍地散开。断头之处，双目中凝结着惊恐之色。折断的箭矢，打碎的长矛，无人问津的剑。碎裂铠甲在脚下发出嘎吱声。这场战斗可谓是煞费苦心，对所有人，这场战斗都留下了深深的印记。\n\n成功拯救了%objective%后，你慢慢地召集%companyname%返回%employer%领取丰厚的报酬。 | 战斗结束后，高尚的士兵们没有浪费时间，开始砍下他们能找到的每一个绿皮兽人的脑袋。他们将这些头颅刺在长矛上，并高高举起，仿佛在模仿刚刚被他们消灭的野蛮人的残暴行径。你没有时间参与这样的戏剧性演出。%objective%已经得救，这是你将获得报酬的原因。%companyname%迅速集结，准备返回%employer%。 | 战斗结束后，你小心翼翼地穿过战场。每一个尸体都诉说着它们的故事。有些人被人从背面刺杀，有些人失去了头颅，他们的故事将会在别的地方讲述，还有些人的肠子被挖了出来，他们紧紧地抱着它们，震惊地看着自己所见证的不该被看见的事情。与众无异，只是不同的地方而已。最重要的是%objective%仍然屹立不倒。你召集%companyname%返回%employer%领取报酬。 | %randombrother% 走到你身边。他拿着一个兽人的头，但是很快就把它扔掉了，好像已经过了新奇的感觉。他把双手放在臀部，点点头看着战场。%SPEECH_ON%好吧，这算是点收获了。%SPEECH_OFF%尸体散落在地上，有时候会堆叠成三四层。脚肢上撕裂的伤口，苍白的脸庞和渗出的鲜血。士兵们穿过这一切，他们的脚下踩着汇集成河流的鲜血，像是在小溪里行进一般。%objective% 看起来还在远方燃烧，但这已经足够了。%companyname% 现在应该返回 %employer% 领取报酬。 | 围攻已经解除，尽管绿皮族不是自愿放弃的。死去的人和野兽散落在你眼前的整片土地上，没有多少可以想象的场景被留给你。%randombrother% 走到你身边。他揭起一块绿色的肉，像拧湿的抹布一样向外甩了一下。%SPEECH_ON%战斗真是一场壮观的厮杀，长官。%SPEECH_OFF%你点点头，命令他准备部队。%employer% 听到 %objective% 已经被保存下来一定会非常高兴的。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗结束了，绿皮已被逐出战场。%objective%得救了，%employer%肯定会非常满意。你踏过堆积如山的人类或野兽尸体，召集你的手下准备返回。 | 尸体遍布战场，成群的苍蝇已开始聚集忙碌。你集结手下，准备返回%employer%处领取报酬。 | %objective%得救了！嗯，至少剩下的部分得救了。士兵和绿皮，死者与垂死者，铺满了目光所及之地。景象残酷，且如此新鲜。你命令%companyname%准备返回%employer%处领取报酬。 | 尸堆叠了两层、三层，有时甚至四层高。被压在这些死者之下的幸存者，虽在地面却如同身处三尺之下。这景象相当骇人，而伤者和垂死者的呼救声更是凄厉。在肢骸的海洋中寻找他们，如同试图在黑暗的海洋中找到一名漂浮的水手。你转身离开这场景，召集%companyname%的成员。%employer%应该正高兴地等着你们归来。 | 战斗胜利结束，你看着持长戟的士兵小心翼翼地穿行战场。他们用长兵器的优势去安全地处理任何还躺在地上的受伤绿皮。其余的士兵瘫坐在地上，喝水并洗去脸上的血迹。你没时间这样休息，迅速召集你的佣兵返回%employer%处。 | 血污浸染大地，你的靴子深陷泥泞。尸体四处横陈，身躯已难以辨认，肢体分离，散落在远离主人的地方。断首处处，双眼凝固着惊骇。断裂的箭矢、破碎的长矛、遗弃的刀剑。碎裂的盔甲碎片在脚下咯吱作响。这真是场恶战，无疑给所有后来者留下了触目惊心的印记。\n\n既然%objective%已经获救，你慢慢召集%companyname%，准备返回%employer%处领取丰厚的报酬。 | 战斗结束，士兵们毫不耽搁地砍下他们能找到的每一个绿皮的脑袋。他们将头颅插在长矛上高高举起。这行径无疑是在模仿他们刚刚解决的兽人。你没时间搞这种戏码。%objective%得救了，这是你领取报酬的理由。%companyname%迅速集合，准备返回%employer%处。 | 战斗结束，你小心翼翼地穿过战场。每具尸体都在诉说着它的由来。有些背后中剑，有些身首异处，还有些被开膛破肚，被发现时紧抓着自己的内脏，脸上带着目睹了不该看之物的惊骇表情。没什么新鲜的，都一样，只是地点不同。最重要的是%objective%依然屹立。你召集%companyname%返回%employer%处领取报酬。 | %randombrother%来到你身边。他拎着一个绿皮的脑袋，但很快把它扔了，仿佛那点新鲜感刚刚消失。他双手叉腰，对着战场点了点头。%SPEECH_ON%呵，够劲。%SPEECH_OFF%尸体，有时堆叠三四层高，散落一地。肢体扭曲，面容紧绷，能听到血液流淌的声音。士兵们穿行其间，他们的腿搅动起积聚血液的大片飞沫，仿佛在涉过溪床。%objective%，或许仍在燃烧，但依然矗立在远方，这对你来说才是最重要的。%companyname%现在该返回%employer%处领取报酬了。 | 围城已经解除，尽管绿皮并非自愿放弃。死去的士兵和野兽铺满了你目光所及的土地，无疑也如实填满了更远处的敌方。%randombrother%来到你身边。他从肩上拎起一条绿色的肉条，像甩湿布一样把它甩掉。%SPEECH_ON%真是场恶战，头儿。%SPEECH_OFF%你点点头，命令他让兄弟们做好准备。%employer%听到%objective%已得救的消息，应该会非常高兴。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -516,7 +516,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你带着一些下属回到了%employer%的面前，他们报告了最新的消息。你的雇主很快点了点头，递给你一个大麻袋的克朗。在你离去的时候，他的下属们都有些嫉妒地看着你。 | 围城被攻破，你向%employer%报告了这个消息。他点了点头，并给了你一个装满克朗的小口袋。%SPEECH_ON%他们会传颂你的。我是说，那些还未诞生的人们。%SPEECH_OFF% | 你向%employer%传递了被攻坚散的消息。他站起来和你握手。%SPEECH_ON%靠着古老的神，你今天的服务永远不会被忘记！%SPEECH_OFF%但是你心里却想着这些话说给一个现在只有骨头和灰尘的人听过。不过你还是拿到了报酬，将遗产和历史留给哲学家。 | %employer% 欣然欢迎您的回归，他立刻站起来，差点绊倒了一只狗。%SPEECH_ON%雇佣军，我已经听到了这个好消息！围城已被解除，您确实赚了一笔不小的报酬！%SPEECH_OFF% 他将沉重的箱子放在桌子上，您接过去，数着克朗，然后离开了。 | 当你进入时，%employer%正在他的桌子后面坐着。%SPEECH_ON%进来吧，“英雄”。你希望下一个记录在案的是什么？%SPEECH_OFF%你问他他在说什么。%SPEECH_ON%请不要这么谦虚，雇佣兵。你所完成的事情值得那些甚至未出生的人口传颂！%SPEECH_OFF%你点点头。%SPEECH_ON%嗯，好吧，那很不错。我的钱呢？%SPEECH_OFF%你的雇主嘴唇紧抿。他也点了点头，递给你一个提包。%SPEECH_ON%我相信你是一个任务众多的人，但这个任务对我们来说意义重大！%SPEECH_OFF% | 当你进入时，%employer%低头看着他的脚。有人藏在他的桌子下面，他没有试图掩盖他的情妇。%SPEECH_ON%欢迎回来，佣兵！你的薪水在那个角落里。那个角落，那边的角落。别试图偷看。%SPEECH_OFF%你拿到报酬，朝门口走去。%employer%向你喊叫，并竖起了大拇指。%SPEECH_ON%顺便说一句，干得好。%SPEECH_OFF%你点了点头，离开了。 | 你带着一些队长们进入%employer%的房间。他们看到你们后立即站起来，但很快就挥手让他的士兵们出去。他们听从了他的指示，懒洋洋地离开了。你摇了摇头。%SPEECH_ON%他们也参加了战斗。%SPEECH_OFF%%employer%把你打发走。%SPEECH_ON%他们当然参加了战斗，而且他们已经在薪水名单上了。不过，你是按合同雇佣的，合同已经履行完毕。顺便说一句，那些人不要看到我给你的薪水，这样也许更好。%SPEECH_OFF%你拿到了你的报酬，那是足以引起嫉妒的数额，你在走出大厅的路上藏起来了。}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你返回到%employer%那里，身后跟着他的几位指挥官。他们汇报了情况，你的雇主迅速点了点头，递给你一大袋克朗。在你离开时，他的指挥官们向你投来些许嫉妒的目光。 | 围城已被解除，你向%employer%报告了这一消息。他点点头，给了你一袋克朗。%SPEECH_ON%你的美名会流传下去的。当然还得等上一段时间。%SPEECH_OFF% | 你告知%employer%围城已被解除的消息。他站起身与你握手。%SPEECH_ON%旧神在上，你今日的功绩必将被永世铭记！%SPEECH_OFF%但你心里却在想，这句一模一样的话，是否也曾对某个如今已化为枯骨尘埃的人说过。你依然收下了报酬，把传承与历史留给哲学家们去思考。 | %employer%热情地欢迎你的归来，他猛地站起身，差点被自己的一条狗绊倒。%SPEECH_ON%佣兵，我已经听到这个好消息了！围城已解，你确实值得一份丰厚的报酬！%SPEECH_OFF%他将一个沉重的箱子搬到桌上。你接过箱子，清点了克朗，然后便告辞了。 | 你进去时，%employer%正坐在他的桌子后面。%SPEECH_ON%进来吧，‘英雄’。他们该在你的名字旁边刻上什么好呢？%SPEECH_OFF%你问他到底在说什么。%SPEECH_ON%佣兵，拜托。别这么谦虚，你的成就是值得后辈传颂的！%SPEECH_OFF%你点点头。%SPEECH_ON%是啊，当然。这很好，都没错。我的钱在哪儿？%SPEECH_OFF%你的雇主抿紧了嘴唇。他也点点头，把袋子递了过来。%SPEECH_ON%我确信你是干大事的人。这次任务对你来说不算什么，但对我们却意义重大！%SPEECH_OFF% | 你进去时，%employer%正低头看着自己的脚。他的桌子底下有人，而他并未试图隐藏他的情妇。%SPEECH_ON%欢迎回来，佣兵！你的报酬在角落里。那个角落，那边。别想偷看。%SPEECH_OFF%你拿到报酬，朝门口走去。%employer%朝你喊了一声，大拇指坚定地翘向空中。%SPEECH_ON%顺便说一句，干得好。%SPEECH_OFF%你点点头离开了。 | 你走进%employer%的房间，他的几位指挥官紧跟着你。此人一看到你们这帮人就站了起来，但迅速挥手让他的士兵出去。他们服从命令，慢吞吞地离开了。你摇了摇头。%SPEECH_ON%他们也参与战斗了。%SPEECH_OFF%%employer%对你摆摆手。%SPEECH_ON%他们当然参与战斗了，但他们早就领过军饷了。而你，是按合同办事，现在合同履行完毕了。顺便说一句，别让那些人看到我付给你多少，或许才是最好的。%SPEECH_OFF%你收下了报酬。这数目绝对会引人嫉妒，你在走出大厅时把它藏了起来。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -528,7 +528,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "从围攻中拯救了 " + this.Flags.get("ObjectiveName"));
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "从围攻中拯救了" + this.Flags.get("ObjectiveName"));
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isGreenskinInvasion())
@@ -554,7 +554,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Failure1",
 			Title = "%objective%周边",
-			Text = "[img]gfx/ui/events/event_68.png[/img]{你耽搁了太久，%objective%成了一片废墟。绿皮使用了震慑战术冲破了城墙，从飘来的臭味不难发现，城内的人已经被屠戮殆尽。 | %companyname%没能及时解围，%objective%为此付出了代价。他们本以为你会拯救他们，但你却让他们失望了。如果说有什么好消息，那就是没人能幸存下来诉说你的失败。怎么应付雇主%employer%就是另一码事了。毫无疑问，这位贵族会对你的无所作为感到愤怒。 | %objective%被攻破了！兽人驾驭着可怕的战争机器摧毁了城墙。凶残的绿皮涌入城镇，杀害了一切敢于挡路的人，掳到了鬼知道是哪的地方。你的雇主%employer%对你的失败非常愤怒！ | 你没能及时解%objective%之围！绿皮冲破了城门，把城镇夷为平地。考虑到这和%employer%付费的目的相反，可以肯定，他对事情发展成这样感到不满。 | 你磨磨蹭蹭不务正业，致使%objective%被绿皮攻陷！愿众神怜悯城民，但不要指望你的雇主%employer%会对这个结果感到满意。}",
+			Text = "[img]gfx/ui/events/event_68.png[/img]{你耽搁了太久，如今%objective%已化为一片废墟。绿皮以闪电般的恐怖战术攻破了城墙。顺着风飘来的气味足以让人意识到，里面的所有人已被屠戮殆尽。 | %companyname%没能及时解围，%objective%为此付出了代价。他们本以为你会拯救他们，但你却让他们失望了。如果说有什么好消息，那就是没人能幸存下来诉说你的失败。怎么应付雇主%employer%就是另一码事了。毫无疑问，这位贵族会对你的无所作为感到愤怒。 | %objective%被攻破了！兽人驾驭着可怕的战争机器摧毁了城墙。凶残的绿皮涌入城镇，杀害了一切敢于挡路的人，或者将人掳到了鬼知道是哪的地方。你的雇主%employer%对你的失败非常愤怒！ | 你没能及时为%objective%解围！绿皮冲破了城门，把城镇夷为平地。考虑到这和%employer%付费的目的相反，可以肯定，他对事情发展成这样感到不满。 | 你磨磨蹭蹭不务正业，致使%objective%被绿皮攻陷！愿众神怜悯其中居民，但不要指望你的雇主%employer%会对这个结果感到满意。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -652,7 +652,7 @@ this.break_greenskin_siege_contract <- this.inherit("scripts/contracts/contract"
 
 			local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Goblins).spawnEntity(tile, "攻城器", false, this.Const.World.Spawn.GreenskinHorde, this.Math.rand(100, 120) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 			this.m.UnitsSpawned.push(party.getID());
-			party.setDescription("绿皮军团和他们的攻城器。");
+			party.setDescription("带着攻城器的绿皮军团。");
 			local numSiegeUnits = this.Math.rand(3, 4);
 
 			for( local j = 0; j < numSiegeUnits; j = ++j )

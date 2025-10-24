@@ -177,7 +177,7 @@ this.ai_miasma <- this.inherit("scripts/ai/tactical/behavior", {
 			{
 				local targetTile = target.getTile();
 
-				if (_entity.isAlliedWith(target) && !target.getFlags().get("undead"))
+				if (_entity.isAlliedWith(target) && !target.getFlags().get("亡灵"))
 				{
 					score = score - 1.0;
 					continue;

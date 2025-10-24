@@ -47,7 +47,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"保护位于%townname%附近的废墟%location%"
+					"肃清%townname%附近的废墟%location%"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -93,7 +93,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"保护位于%townname%附近的废墟%location%"
+					"肃清%townname%附近的废墟%location%"
 				];
 				this.Contract.m.Location.getSprite("selection").Visible = true;
 			}
@@ -285,14 +285,14 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_20.png[/img]{%employer% 提供了些面包和啤酒，看着很开心的自己吃了起来。 在闲聊了些你对 %townname% 的感觉后，他开始说正事了。%SPEECH_ON%这个地区以前很繁荣，但我们的许多资产被强盗抢劫、烧毁或接管。 我们需要你去 %location% 那里在 %townname% 郊外，清理并赶走任何占据者好让我们安全的派出材料并让我们的工人重建。%SPEECH_OFF%他越过桌子直直的看着你。%SPEECH_ON%你愿意帮助我们完成它吗？%SPEECH_OFF% | %employer% 咬了口苹果后丢给了你。 接住它，你看向他，不太清楚该做点什么。 当他什么也没说的时候，你咬一口，然后扔回去，谢谢他。%SPEECH_ON%没关系，佣兵。今天是个好日子，但是，当然，我有个活要交给你。 %location% 那里在 %townname% 郊外，我相信，窝藏着一群强盗。 我需要你做的是到那里去赶走他们好让我把它恢复到从前的样子。 你…意下如何？%SPEECH_OFF% | %employer% 叹着气从手中放下一串卷轴好像上面的消息过于沉重。%SPEECH_ON%我们从 %townname% 没有收到足够的克朗，而我相信是因为强盗占据了 %location%。这并没有被完全证实… 我真的应该多跟进些手下人的消息，但你知道情况是怎么样。%SPEECH_OFF%你耸了耸肩。%SPEECH_ON%不论如何，我希望你到那里去，找到问题，然后回我这里接受进一步指示。 听起来很简单，对吗？%SPEECH_OFF% | %employer% 坐在椅子上前倾，指着办公桌上摊开的地图上的一个点。%SPEECH_ON%%location% 那里在 %townname% 郊外，被强盗摧毁了。 现在，佣兵，我需要你的帮助来把那里夺回来并开始重建，至少我跟农民是这么说的。有兴趣吗？%SPEECH_OFF% | %employer% 叹气，一边呼气，另一边倒在椅子上。%SPEECH_ON%我小时候经常去 %location%。 那时候真是个富饶的地方，但是现在因为一些流浪汉它被摧毁了。 当然，我不是为了怀旧跟你说这些。 我需要你去那里把它夺回来！ 杀了这些强盗然后马上回来跟我报告。 这个简单的任务有兴趣吗？%SPEECH_OFF% | %employer% 把腿翘到办公桌上，踢倒几个空杯子。%SPEECH_ON%农民们又在抱怨了。打扰着我。 他们说 %location% 那里在 %townname% 郊外，被摧毁了。 我一般不会相信这帮蠢货的话，但是几个议员看起来确认了这个消息。 所以现在我得做点什么。%SPEECH_OFF%他手指转向你，笑着。%SPEECH_ON%%location% 正是你派上用场的地方。去那里杀了那些无法无天的流浪汉，然后回来跟我报告。 听起来怎么样？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_20.png[/img]{%employer%拿出些面包和啤酒款待，自己似乎也乐得享用。闲聊几句你对%townname%的看法后，他切入正题。%SPEECH_ON%这片区域曾经繁荣过，但我们的许多资产都遭到强盗洗劫、焚毁或占领。需要你前往%townname%外的%location%，清除那里的所有占据者，这样我们才能安全运送物资，让工匠重建我们曾经拥有的一切。%SPEECH_OFF%他俯身撑桌，坚定地注视着你。%SPEECH_ON%你愿意协助我们完成这项任务吗？%SPEECH_OFF% | %employer%咬了口苹果，把剩下的抛给你。接住后，你看着这人，不太确定他的用意。见他沉默不语，你便咬了一口扔回去，并向他道谢。%SPEECH_ON%不客气，佣兵。今天天气不错，不过嘛，显然我另有他事相求。%townname%外的%location%据信窝藏着一伙强盗。你只需去那里清剿干净，让我能把这地方恢复往日的清净模样。这符合你的……利益吗？%SPEECH_OFF% | %employer%叹着气任由一卷文书从指间滑落，仿佛其中的消息沉重到难以承受。%SPEECH_ON%我们从%townname%收取的克朗不够，我认为这可能是因为强盗占领了%location%。虽然尚未完全证实……我确实该更关注子民的消息，但你也明白情况。%SPEECH_OFF%你耸了耸肩。%SPEECH_ON%总之，我要你去那里查明问题，然后回来向我汇报以便进一步指示。听起来很简单，对吧？%SPEECH_OFF% | %employer%从椅子里探身向前，指向摊在桌案的地图。%SPEECH_ON%%townname%外的%location%已被强盗摧毁。现在，佣兵，我需要你协助夺回这片领土，帮我重振往日荣光——至少我是这么告诉那些农民的。你有兴趣吗？%SPEECH_OFF% | %employer%长叹一声，气息往前呼出，身体则往后陷进椅子里。%SPEECH_ON%我小时候常去%location%。那曾是个繁荣之地，如今却因一群流寇而沦为废墟。显然，我找你不只是为了怀旧。我需要你去那里夺回控制权！杀掉那些强盗，然后立即向我汇报。这项简单任务能让你提起兴致吗？%SPEECH_OFF% | %employer%把脚架到桌上，碰翻了一只空酒杯。%SPEECH_ON%那些农民又来了。不停地烦我。他们说%townname%外的%location%已被摧毁。我通常不信这些蠢货的话，但我的几位顾问似乎证实了消息。所以现在我得采取行动了。%SPEECH_OFF%他晃着手指指向你，脸上带着笑意。%SPEECH_ON%这就是你出场的时候了。去%location%，杀掉那些无法无天的流寇，然后回来向我汇报。你觉得如何？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{听起来挺简单。 | 让克朗说话。}",
+					Text = "{听起来挺简单。 | 佣金是多少？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -300,7 +300,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这听起来不像是适合我们的工作。 | 我不这么认为。}",
+					Text = "{听起来这活不适合我们。 | 我觉得还是免了吧。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -317,12 +317,12 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Empty",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{到达 %location%。你让手下展开慢慢进入这片区域。 你走进去，小心的接近那些建筑物，风呼啸着穿出窗户。 继续调查，看起来没有任何人在这里。 甚至也没有证据证明他们刚刚离开。 你集齐手下回去告诉 %employer%。 | %location% 令人意外的空旷。 你漫步在房子里，举起些布满灰尘的杯子掀翻几张草床，但是虫都找不到一个，更别提人。 这个地方完全就是被抛弃了。 你回去告诉 %employer% 消息。 | %location% 的边缘只有一个鹿角晃着，木头的微响声是这块地方唯一的生气。 如果任何人住在这里，他们很久前就离开了。 房子是空的。空洞着。 你从外面就看得出来里面没人。 旧神摧毁这里也没人会知道或在乎。悲伤。 最好跟 %employer% 报告这个“好”消息。 | %location% 被遗弃了，就像你猜的那样，但是看不到一个强盗或流浪汉。 倒也不能责怪他们不想住这里：尽管有几栋房子，周围的一切东西都让你处在一种边缘上。 老，破...闹鬼？好像这些是什么难以计量罪恶的藏身处。 或许 %employer%的工人会把它们拆掉重新开始。 | %location% 一个强盗都找不到。一般的房子被摧毁了，另一半空荡荡的。 几个 %employer%的工人可能可以把这个地方修整好所以你最好快去告诉他。 | 你找到一个风向标卡在土里还有旁边一头牛的残骸。 一个猪圈上长满了新鲜的绿草。 其中一个房子葱郁的爬满了藤蔓。 墓地的标记弯曲了还有些倒在地上。 你找到一个铲子还有边上一个洞。 水填满了空墓蓝鸟在里面洗澡。 你寻思这个地方是不是最后就这么放着，但不是你来做决定。 你回去找 %employer% 汇报情况。 | 你进入 %location% 让手下展开并搜索建筑。 不准备让这帮佣兵独自进行调查，你进入了一个附近的房子。 门洞大开并且几乎马上的你脚就提到了土上的一堆瓶瓶罐罐。 缓慢前进，你在角落里找到了几个死掉的小老师，它们的骷髅仍然呈疾走壮，在它们边上是只死猫。 横梁上有个鸟巢。 黄色的蛋在鸟巢中一闪一现，但你即没看到也没听到鸟。\n\n%randombrother% 穿过门走进来说什么都找不到。 如果强盗曾经在这里，它们很早就走了。 你告诉雇佣兵集合，因为是时候回去报告给 %employer%。}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{抵达%location%后，你让手下散开，缓慢潜入该区域。你亲自前进，小心地穿梭走向那些建筑——阵阵疾风穿过时，窗框发出呼啸声。进一步调查后，这里似乎空无一人。甚至连他们刚离开的迹象都没有。你集结手下，返回向%employer%汇报。 | %location%出人意料地空荡。你在某间房屋内踱步巡视，拾起积尘的杯子，翻动草垫床铺，却既不见虫豸也不见人迹。这地方已被彻底废弃。你动身回去将这个消息告知%employer%。 | 一个驱鹿器在%location%边缘不停点头摇晃，其木制声响是周遭唯一显得有生机的东西。若曾有人居住于此，他们也早已离去多时。建筑空置着，内部已被掏空。仅凭外观就能断定里面空无一人。即便旧神亲自摧毁此地，也不会有人知晓或在意。可悲。最好让%employer%知道这个“好消息”。 | %location%正如你所料已被废弃，但视野内不见强盗或流浪者的踪迹。你无法责怪他们不愿占据此地：尽管仍有几栋建筑立着，但处处都让你感到不安。陈旧、脆弱……闹鬼？仿佛这里曾是无尽罪孽的温床。或许%employer%的工人们会将其拆除并重新建设。 | 在%location%找不到一个强盗。半数的建筑已被摧毁，其余则空置荒废。几个%employer%的工人或许能让此地恢复秩序，所以你最好去通知他。 | 你发现一个风向标陷在泥泞中，旁边还有具牛尸。猪圈里铺满了鲜绿的野草。某栋建筑已被蔓延的藤蔓染成翠绿。墓地的标记歪斜倾倒，有些平躺在地。你找到一把铁锹和旁边的土坑。未使用的墓穴积满了水，蓝色鸟儿正在其中沐浴。你思忖此地是否保持原状更好，但这并非你该考虑的事。你动身回去向%employer%汇报现状。 | 你进入%location%，让手下散开搜查建筑。你不愿将调查完全交给这群佣兵，便亲自走进附近一间民居。门板嘎吱开启，后面是散落一地的锅碗瓢盆。跋涉而入后，你在屋角发现几只死老鼠，它们的骨架仍保持着奔逃姿态，旁边还有一只死猫。椽子上有个鸟巢。发黄的蛋壳顶盖微微闪烁，但你始终未见鸟类踪影，更未闻其鸣叫。\n\n%randombrother%进门报告说一无所获。就算曾有强盗在此，他们也早已离去。你命令这名佣兵集结手下，是时候向%employer%汇报调查结果了。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我没想到。",
+					Text = "这倒是没想到。",
 					function getResult()
 					{
 						this.Contract.setState("ReturnForEscort");
@@ -335,7 +335,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Bandits",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{你命令你的人展开面向 %location%。你手握利剑蹑手蹑脚地穿过这片区域。 随着你转过一个弯，你找到一个人蹲在粪坑边上。 他的膝盖因看到你摇摆。 当他伸手去取武器，你穿透了他，快速的把他的尸体踢下利刃并警告你的手下有强盗而他们正在从周围的建筑里快速涌出。 | %location% 很安静，但是不够安静。 时不时你听到木头受压的咔嚓声，锁链被移动的叮当声。 这里有人。你拔出剑命令你的手下准备战斗。 刚发出命令，一个强盗踢开门冲了出来，一大群同样叫嚣着的人跟在他后面。 | 强盗！如你所料。 不仅仅是他们在 %location%，他们看来完全不在乎有多显眼。 随着你的人汇聚向这个区域，强盗们懒散的收拾起武器好像他们解决过你这样的人。 | %location% 完全是空的-除了一大群强盗驻扎在中心，蹲在一个营火和上面的烤猪周围。 他们看了看你，又看了看猪，然后又看向你。 其中一个叉了块肉下来。%SPEECH_ON%该死的，先生，我们正想吃。%SPEECH_OFF%你拔出剑点头。%SPEECH_ON%我也想。%SPEECH_OFF% | 你找到一个强盗在 %location% 外面。他背着一个农民的尸体作为证据，足够告诉你得杀了他和他的朋友。 你命令你的人进攻。 | 强盗随着你靠近 %location% 匆忙的从营火冲出。意外的，他们武装起自己并冲出来保护他们新近获得的“领土。”}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{你命令手下在%location%散开搜索。你手握长剑潜行穿过这片区域。刚转过一个拐角，你就发现一个男人正蹲在粪坑上。他看到你时膝盖直打颤。当他伸手去拿武器时，你一剑刺穿了他，迅速将他的尸体从剑刃上踢开，并向手下发出强盗来袭的警告——他们正从附近建筑里蜂拥而出。 | %location%很安静，但还不够安静。四处都能听到木材的吱嘎声，链条移动的叮当响。这里有人。你拔出长剑，命令手下准备战斗。刚下令，一个强盗就踹开建筑大门冲了出来，一群同样叫嚷着的人跟在他身后蜂拥而出。 | 强盗！果然如你所料。他们不仅占据了%location%，还毫不在意自己有多显眼。当你的手下合围该区域时，强盗们懒洋洋地拿起武器，仿佛早就对付过你们这类人似的。 | %location%空无一人——除了占据中央的那一大群强盗，他们正围坐在篝火和一只烤全猪旁。他们瞥了你一眼，回头看看猪，又看向你。其中一个从火边拿起油腻的烤肉叉。%SPEECH_ON%见鬼，先生，我们只想吃点东西。%SPEECH_OFF%你拔出长剑点了点头。%SPEECH_ON%我也是。%SPEECH_OFF% | 你在%location%外发现一个强盗。他正扛着一具农民的尸体，这证据足以让你明白需要杀掉他和他的所有同伙。你命令手下发动攻击。 | 当你靠近%location%时，强盗们纷纷从营火旁匆忙散开。出乎意料的是，他们拿起武器，出来保卫他们新占领的“领地”。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -367,7 +367,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Spiders",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_110.png[/img]{白色的东西像烟一样从 %location% 的房子里随风飘荡，但是建筑本身没有被破坏。 随着你靠近，一对又一对的红色眼睛从它们的窗户里亮起。 蜘蛛出现，它们纤细的腿在木头上铛铛的作响，摩擦着起皱的屋顶，黑色的躯体从窗框漂出好像一片焦黑的蒲公英。 | 你发现 %location% 被遗弃了，但是白丝在每个角落都是，几条在随风翻腾。%randombrother% 碰了一根然后它带着他的手臂缩回去而他得切断它自救。 回头看，你看到蜘蛛正冲向你，它们纤细的腿像剪刀般以恐怖的速度掠过地面，它们的下颚饥饿的敲打着。}",
+			Text = "[img]gfx/ui/events/event_110.png[/img]{从%location%住宅区随风无力飘荡的白色物质看似烟尘，但建筑却完好无损。当你靠近这些住所时，一对对红色眼瞳在黑暗的窗内骤然亮起。蛛魔蜂拥而出，它们多刺的肢节在木板条上咔嗒作响，刮擦着屋顶，成片的黑色身躯如蒲公英烧烬后的飞絮般从窗框里翻涌而出。 | 你发现%location%已空无一人，但一层丝质白色薄膜如霜般覆盖着此处的每个角落，细丝在风中无力地卷曲。%randombrother%碰了其中一根的末端，那丝线随着他的手臂拉伸，他只得割断才得以脱身。抬头向前望去，你看见蛛魔正朝你们冲来，它们多刺的节肢如剪刀般交错移动，跨越地面的速度快得骇人，饥饿的口器发出咔嗒声响。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -395,12 +395,12 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Refugees1",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_59.png[/img]{%location% 到处都是人，确实，但是它们不是强盗。 难民像一大群移动的垃圾堆在找地方落脚一样。 肮脏的男人，女人甚至小孩缓慢的走来走去，太过虚弱根本没注意到面前的佣兵团。%randombrother% 到你身边问该做什么。\n\n 如何他们要留在这里，%employer% 不会很高兴而且你很可能拿不到报酬。 另一边…看看他们这群不幸的人。 他们需要个地方安顿下来。 | 你放下望远镜摇摇头。 %location% 充满了－或者说全都是－难民。 比强盗好，你想，但还是个问题。%employer% 不会很高兴见到他们，你知道这个。 另一边，那里的人…衣衫褴褛…骨瘦如柴…精疲力竭…他们不该被再次赶回路上，是吗？ | %randombrother% 转身吐唾沫。 他腰间握拳并摇头。%SPEECH_ON%该死。%SPEECH_OFF%在你和你兄弟们面前是一群衣衫褴褛的难民。 二十，或者三十个。大部分是男人。 你认为剩下的人，女人和孩子，目前都躲在更里面的地方。 这群疲劳的人看起来太过无力，话都说不清。 他们只是互相瞥几眼还有时不时卑微的耸肩。\n\n 一个兄弟在你一边说。%SPEECH_ON%我们要想 %employer%的钱恐怕得把他们踢出去…%SPEECH_OFF%但是另一个从另一侧说…%SPEECH_ON%是的，但是看看他们。 我们真的可以把他们送回去吗？ 让他们留下吧，我说。%SPEECH_OFF% | 难民占据了 %location%，估计是因为什么地方在打仗。 他们搜罗了区域里的资源并且安定了下来。 你知道 %employer% 对于他们不会很高兴-他们看起来不像是本地人。%randombrother% 来到你一边向这群破败的陌生人点头。%SPEECH_ON%我可以带几个人赶走他们，长官。 很简单。%SPEECH_OFF% | 看不到一个强盗。 与之相对的，你找到一大群难民占据着 %location%。一大群疲劳的人们安定在这里：他们有锅在火上而且对于他们的新“家”显得挺开心。 但是 %employer% 不会乐意他们住在这里。 一点都不。你不想相信它，但是事实是如果你想拿到钱这些人就得走。}",
+			Text = "[img]gfx/ui/events/event_59.png[/img]{%location%确实挤满了人，但他们不是强盗。难民像流动的垃圾一样堆满此地，寻找着歇脚之处。这些令人不适的男女甚至孩童在场地内怯生生地走动，全都虚弱得无暇顾及眼前的佣兵团。%randombrother%来到你身边询问该如何处理。\n\n如果任由他们留在这里，%employer%会很不高兴，你大概也拿不到报酬。但另一方面……看看这群可怜人吧。他们需要个地方安顿下来。 | 你放下望远镜摇了摇头。难民挤满了——或者该说是侵占了%location%。总比强盗强吧，你这么想，但依然是个问题。%employer%不会乐见他们的存在，这点你很确定。但另一方面，下面那些人……衣衫褴褛……瘦骨嶙峋……疲惫不堪……你也不忍心再把他们赶回路上流浪吧，对吧？ | %randombrother%转身吐了口唾沫。他双手叉腰摇着头。%SPEECH_ON%天杀的。%SPEECH_OFF%站在你和战团成员面前的是一群混杂的难民。大概二三十人。多半是男性。你估计其余的人，妇女和儿童，此刻正躲藏在偏僻地带。这群疲惫的人似乎累得无法与你们真正交流。他们只是互相交换眼神，偶尔顺从地耸耸肩。\n\n一位弟兄在你一侧说道：%SPEECH_ON%如果我们想要%employer%的报酬，就得把他们赶走……%SPEECH_OFF%但这时另一个兄弟从你另一侧插话：%SPEECH_ON%是啊，但看看这些人。真的要把他们赶出去吗？要我说，就让他们留下吧。%SPEECH_OFF% | 难民们占据了%location%，估计是某场残酷战争的幸存者。他们搜刮了该地区的资源，现在似乎已相当扎根于此。你知道%employer%不会高兴他们的存在——他们看起来不像是本地人。%randombrother%来到你身边，朝那群衣衫褴褛的疲惫陌生人点了点头。%SPEECH_ON%我可以带几个人把他们赶走，长官。很简单的。%SPEECH_OFF% |视野内不见强盗踪影。相反，你发现一大群难民占领了%location%。这群疲惫的人们已在此安顿得相当不错：几只炖锅在噼啪作响的篝火上煮着，他们似乎对这个新“家”相当满意。但%employer%绝对不会高兴他们在此。绝对不会。你虽不愿相信，但冷酷的事实是：如果你想拿到报酬，这些人必须离开。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "把这些人踢出去。",
+					Text = "把这些人赶出去。",
 					function getResult()
 					{
 						return "Refugees2";
@@ -408,7 +408,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "这些人无处可去。 就…别管他们了。",
+					Text = "这些人无处可去。 就……别管他们了。",
 					function getResult()
 					{
 						return "Refugees3";
@@ -420,7 +420,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Refugees2",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_59.png[/img]{你命令手下赶出难民。 他们没有怎么反抗－大部分只是在埋怨世道残酷。 你只能想到你能拿到多少。 | %randombrother% 和几个雇佣兵受命赶他们出去。 幸运的是没有冲突，但是每个经过的难民跟你对视时都带着一股沉重，悲伤的表情。你耸耸肩。 | 难民被踢了出去。 其中一个看起来想说什么，但是闭上了嘴。 就好像他以前说过这些话，但他记得当时这些话是不起作用的，而现在这些话也不会起作用。 你享受他的沉默。 | 你让 %randombrother% 发了点食物给难民。 反正本来就要坏掉的：板砖一样的面包还有揭开盖子就闻起来要死了的汤。 难民们像你给了他们全世界一样接受了全部。 尽管他们没有道谢。 他们只是点头耸肩然后走开了。}",
+			Text = "[img]gfx/ui/events/event_59.png[/img]{你命令手下把难民们赶出去。他们没有怎么反抗——大多只是在抱怨世道残酷。然而你心里只想着能拿到多少报酬。 | 你命令%randombrother%和几个佣兵进去把他们赶走。幸运的是没有发生流血事件，但每个从你面前经过的难民都用肃穆而悲伤的目光看着你。你耸了耸肩。 | 难民们被赶了出去。其中一个像是想对你说什么，但最终还是闭上了嘴。仿佛他记起曾经说过那些想法，在当时毫无作用，现在也不会有什么不同。你享受着他的沉默。 | 你让%randombrother%给难民们分发一些食物。都是些快要变质的东西：要么是硬得像砖头的面包块，要么是揭开盖子就散发着死亡气息的陈年炖菜。难民们接过每件东西的样子，仿佛你给了他们全世界。不过他们并没有道谢。只是点点头，耸耸肩，然后继续前行。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -439,17 +439,17 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Refugees3",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_59.png[/img]{你留难民在那里。 最好不要回去找 %employer% 因为他对此不会很高兴。 | 男人，女人和孩子看起来受够磨难了。 你决定让他们留在这里。 | 这些人受够了这个世界的苦难。 你不认为他们能再挺过一段旅途并决定让他们就这么住下来。 | 这群被反复折磨的人们不应被从这里踢出去。 你决定让他们呆这里。 他们会把这里变得好起来的，尽管 %employer% 对于没有自己人在这里不会很高兴。 | %employer% 想要他自己的人住在这里，但你想这些人先到了。 除此之外他们看起来不像能再野外再活多久。}",
+			Text = "[img]gfx/ui/events/event_59.png[/img]{你任由难民们留在这里。最好别回去见%employer%了，因为他绝不会对此感到满意。 | 男人，女人和孩子看起来受够磨难了。你决定让他们留在这里。 | 这些人已饱尝世间苦难。你觉得他们没法再挺过一次流浪，于是决定让他们留在已安顿下来的地方。 | 这些饱经风霜、受尽磨难的人不该被从此地赶走。你打算随他们去。他们很快就能把这里变成可居住的区域，尽管%employer%不会乐意于看到自己的人没法进驻此地。 | %employer%想让自己的人在此定居，但你觉得是这群人先来的。况且，他们要是再被赶到荒野里的话，估计活不了多久。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们会在别的地方找到工作的…",
+					Text = "我们会在别的地方找到工作的……",
 					function getResult()
 					{
 						this.World.Assets.addMoralReputation(2);
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "没能保护好一个破败的 " + this.Contract.m.Location.getRealName());
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "没能肃清破败的" + this.Contract.m.Location.getRealName());
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -460,7 +460,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Victory",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{战斗结束了，%location% 安全了。是时候回去找 %employer%。 | 你看了看战场，点了点头，庆幸自己肩上还有个脑袋可以点头。是时候回去找 %employer%。 | 尽管战斗艰苦，你集合手下准备回去找 %employer%。 | 战斗结束，你视察环境并准备着报告。%employer% 会想知道这里都发生了什么的。}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{战斗已经结束，%location%已肃清。是时候返回%employer%那里了。 | 你检视着战场点了点头，庆幸自己肩上还有个脑袋可以点头。该回去见%employer%了。 | 战斗相当激烈，你集结了手下，准备返回%employer%处。 | 战斗结束后，你评估着现场情况，思索着后续如何报告。%employer%肯定会想了解这里发生的一切。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -477,12 +477,12 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "RebuildingLocation",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{你回到 %location% 看着工人们前往房子。 他们开始工作，堆起木头，竖起支撑柱，还有一群人在挖井。 看来你现在可以回去找 %employer% 了。 | 工人谢谢你带他们安全到达 %location%。 他们之后转身在区域里散开用手边工具开始了工作。 锤子和锯子发出的咯咯声和呼噜声在你身后回响，你离开了这里去找 %employer%。 | 大部分的工人进入了 %location% 并开始准备重建。 工头谢谢你带他们安全到达因为他知道世事险恶。 他还谢谢你没有背叛他们。 你带着笑容接受这份敬意后开始了回程去找 %employer%。 | 好，工人们都安全到站了。 你转身，回去找 %employer% 去拿你应得的报酬。 | 路途真是遥远，来来回回的，但是看起来 %location% 要好起来了。 在确认工人都安全了之后，你回去找 %employer% 拿报酬。}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{你返回%location%，看着工人们分散到各栋建筑中。他们开始工作，堆积木板，架起支撑梁，其中一队人正在为自己挖掘水井。看来现在可以回去见%employer%了。 | 建筑工人们感谢你将他们平安送达%location%。随后他们转身开始工作，分散在场地各处，随手拿起身边的工具忙碌起来。当你动身返回%employer%时，身后回荡着锤锯交错的嗡鸣嘶响。 | 大多数建筑工人进入%location%并开始重建的准备工作。工头感谢你确保他们安全抵达，因为他深知这个世界的危险。他还感谢你没有出卖他们。你带着一丝苦笑接受这番感激，随后启程返回%employer%。 | 好了，工人们已平安抵达。你转身踏上归途，返回%employer%那里领取你应得的报酬。 | 这趟旅程漫长无比，来回往返，但现在%location%似乎即将重新站稳脚跟。在确认工人们安全无虞后，你动身返回%employer%处领取酬金。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "是时候拿报酬了。",
+					Text = "是时候去拿报酬了。",
 					function getResult()
 					{
 						this.Contract.setState("Return");
@@ -495,7 +495,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_98.png[/img]{%employer% 瞥了眼你进来。%SPEECH_ON%所以都办好了？%SPEECH_OFF%你点头。 %employer% 起身给你指示：你要带一群工人回到 %location% 好让他们开始重建它。 | %employer% 听了你的报告点了点头。%SPEECH_ON%我有一群人要回到 %location% 好重建它。 我需要你护送他们。懂吗？很好。%SPEECH_OFF% | 收起些卷轴，%employer% 给了你下一步指示。%SPEECH_ON%我有一伙人要回到那里开始重建。 事关一大堆克朗，所以我需要你确保这些人安全到那里。 在那之后，回来拿你的报酬。%SPEECH_OFF% | %employer% 听了你的报告后坐下来。 他正在啜饮一杯眼镜蛇酒。%SPEECH_ON%消息？%SPEECH_OFF%你告诉他这个区域已经被清理了。 那人一口气喝完剩下的酒，然后放下杯子。%SPEECH_ON%很好…很好。现在带一伙我的工人回去帮忙重建。 一旦他们完事了，回来领报酬。%SPEECH_OFF% | %employer% 后靠着看你进来。%SPEECH_ON%我想你回来意味着 %location% 被清理干净了，对吗？%SPEECH_OFF%你确认了他想听到的。 他看起来很高兴，尽管你的工作还没结束：%employer% 要你带一群工人回到那里开始重建。 只要他们安全的到了那里，你就可以回来领报酬了。}",
+			Text = "[img]gfx/ui/events/event_98.png[/img]{%employer%在你进门时瞥了你一眼。%SPEECH_ON%那么清理干净了吗？%SPEECH_OFF%你点点头。%employer%起身下达指令：你需要带领一队建筑工人返回%location%，以便他们进行重建。 | %employer%听着你的汇报并点了点头。%SPEECH_ON%我有一批人要返回%location%进行重建。你需要护送他们。明白了吗？很好。%SPEECH_OFF% | %employer%卷起几卷文书，向你下达下一步指令。%SPEECH_ON%我有一伙人要回去重建那个地方。这里头投入了不少克朗，所以我需要你确保那些人能完好无损地抵达。之后再回来领取你的报酬。%SPEECH_OFF% | %employer%看到你之后向后靠坐。小口啜饮一杯蛇酒。%SPEECH_ON%有消息了？%SPEECH_OFF%你告诉他区域已肃清。这人将剩下的酒一饮而尽，放下杯子。%SPEECH_ON%很好……很好。现在带我一伙工人回去协助重建。等他们完工后，回来领你的酬金。%SPEECH_OFF% | %employer%在你进门时向后靠坐。%SPEECH_ON%你既然回来了，我想%location%已经清理完毕了，对吗？%SPEECH_OFF%你确认了他想听到的消息。他似乎很高兴，但你的任务尚未结束：%employer%要你带一伙工人返回该地区协助重建和重新安置。等他们安全抵达后，回来找他领取报酬。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -516,20 +516,20 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success2",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_63.png[/img]{%employer% 用一大袋沉重的克朗欢迎你回来。 他挥手示意你可以离开了，几乎没有跟你道谢。 不过嘛，去他妈和他妈的表面功夫。 一包克朗足够谢意了。 | 你进入 %employer%的房间而他示意你靠近。 他的一个手下教给你一大袋克朗。 你看着他。%SPEECH_ON%你怎么知道他们到了？%SPEECH_OFF%%employer% 羞涩地笑了。%SPEECH_ON%我在这片区域有眼线。 连鸟都会跟我说话…%SPEECH_OFF%这解释够多了。 | 回到 %employer%，你解释说 %location% 已经有序开始重建了。他谢谢你。%SPEECH_ON%好，看看，啊？ 一个受信用并且能办好事的雇佣兵。 真罕见。这是你的报酬。%SPEECH_OFF%其中一个手下递给你麻袋装的沉重克朗。%employer% 做了个手势。%SPEECH_ON%后会有期，佣兵。%SPEECH_OFF% | %employer% 在你回来时正在读书。 他给你看了个卷轴问你知不知道这是什么。你耸耸肩。%SPEECH_ON%我不是一个有学问的人。 不管怎样，不是书面的。%SPEECH_OFF%%employer% 转身耸肩。%SPEECH_ON%真遗憾。但你是个守口头承诺的人。 你信守承诺并且，相信我，这很少见。你的报酬在角落里。%SPEECH_OFF%报酬就在他说的地方。 你花了点时间做表面功夫然后拿上它离开了。 | %employer% 靠在椅子上，看起来沾沾自喜。%SPEECH_ON%我知道怎么挑。我是说佣兵。 很多我的同行都会雇你这样的人，但是他们总会搞砸，因为他们不知道如何从一只死狗的尾巴中判断一个好人。 但是你…我看到你那一刻就知道你会办好的。你的报酬，佣兵…%SPEECH_OFF%他把一袋克朗砸在办公桌上。%SPEECH_ON%都在这里，但我理解你，如果你想数一下的话。%SPEECH_OFF%你数了数－分文不差。}",
+			Text = "[img]gfx/ui/events/event_63.png[/img]{%employer%用一沉甸甸的克朗钱袋迎接你的归来。他摆手示意你离开，几乎没感谢你的工作。不过，去他的吧，去他的繁文缛节。一袋克朗就是最好的感谢。 | 你进入%employer%的住所，他招手让你过去。他的一名手下递给你一大袋克朗。你看着那人。%SPEECH_ON%你怎么知道他们到了？%SPEECH_OFF%%employer%腼腆地笑了笑。%SPEECH_ON%在这一带我有许多眼线。连鸟儿都会向我传话……%SPEECH_OFF%这个解释已经足够了。 | 回到%employer%那里，你汇报说%location%的修复工作进展顺利。他向你道谢。%SPEECH_ON%呵，瞧瞧看？一个信守承诺、完成工作的佣兵。真是难得。这是你的报酬。%SPEECH_OFF%他的一名手下递给你一个粗麻布袋，沉甸甸的，里面的克朗让袋子棱角分明。%employer%抬手致意。%SPEECH_ON%后会有期，佣兵。%SPEECH_OFF% | 你返回时%employer%正在书房里。他向你展示一卷文书，问你是否知道这是什么。你耸耸肩。%SPEECH_ON%我没什么学问。至少不会认字。%SPEECH_OFF%%employer%也耸了耸肩。%SPEECH_ON%真可惜。但你是遵守承诺的人，相信我，如今的世道这很难得。你的报酬在角落那里。%SPEECH_OFF%报酬就在他所说的地方。你无意拘泥客套，拿起钱袋便告辞离去。 | %employer%向后靠坐，神情颇为自得。%SPEECH_ON%我知道怎么挑人。我是说，挑佣兵。我那些同行大多也雇你们这路人，但总搞砸，因为他们根本不知道如何从蛛丝马迹判断人的好坏。但你……我第一眼见到你就知道你这人靠谱。你的报酬，佣兵……%SPEECH_OFF%他将一袋克朗重重放在桌上。%SPEECH_ON%全在这儿了，不过你想数的话我也理解。%SPEECH_OFF%你确实数了——分文不差。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "轻松的克朗。",
+					Text = "这钱好挣。",
 					function getResult()
 					{
 						this.Contract.m.Location.setActive(true);
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "帮助重建 " + this.Contract.m.Location.getRealName());
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "帮助重建" + this.Contract.m.Location.getRealName());
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -549,7 +549,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Failure1",
 			Title = "战斗之后",
-			Text = "[img]gfx/ui/events/event_60.png[/img]{房子都毁了而且任何重建 %location% 的可能性都没了。 至少一段时间内是这样。}",
+			Text = "[img]gfx/ui/events/event_60.png[/img]{建筑队已然被毁，重建%location%的任何希望都已破灭。至少目前如此。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -560,7 +560,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "没能保护建筑行进队伍");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "未能保护好建筑队");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -571,7 +571,7 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Failure2",
 			Title = "战斗之后",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{你的士兵未能保护好%location%，所以你不应该期待任何报酬。}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{你的手下未能成功肃清%location%，因此你不必指望获得任何报酬。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -595,11 +595,11 @@ this.restore_location_contract <- this.inherit("scripts/contracts/contract", {
 	function spawnCaravan()
 	{
 		local faction = this.World.FactionManager.getFaction(this.getFaction());
-		local party = faction.spawnEntity(this.m.Home.getTile(), "工人商队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.4, this.getMinibossModifier());
+		local party = faction.spawnEntity(this.m.Home.getTile(), "工人车队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.4, this.getMinibossModifier());
 		party.getSprite("banner").Visible = false;
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
-		party.setDescription("一队来自的工人和建筑材料的队伍" + this.m.Home.getName() + ".");
+		party.setDescription("一支携带建筑材料的建筑工车队，来自" + this.m.Home.getName() + ".");
 		party.setFootprintType(this.Const.World.FootprintsType.Caravan);
 		party.setMovementSpeed(this.Const.World.MovementSettings.Speed * 0.5);
 		party.setLeaveFootprints(false);

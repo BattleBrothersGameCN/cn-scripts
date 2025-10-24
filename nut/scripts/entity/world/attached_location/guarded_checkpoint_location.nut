@@ -5,7 +5,7 @@ this.guarded_checkpoint_location <- this.inherit("scripts/entity/world/attached_
 		this.attached_location.create();
 		this.m.Name = "武装检查站";
 		this.m.ID = "attached_location.guarded_checkpoint";
-		this.m.Description = "由职业士兵把守的道路检查站。";
+		this.m.Description = "由正规军把守的道路检查站。";
 		this.m.Sprite = "world_guarded_checkpoint_01";
 		this.m.SpriteDestroyed = "world_guarded_checkpoint_01_ruins";
 		this.m.IsMilitary = true;

@@ -148,7 +148,7 @@ this.ai_defend_riposte <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Riposte!");
+			this.logInfo("* " + _entity.getName() + "：使用 反击！");
 		}
 
 		this.m.Skill.use(_entity.getTile());

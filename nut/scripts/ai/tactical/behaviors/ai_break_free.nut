@@ -53,7 +53,7 @@ this.ai_break_free <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Breaking Free!");
+			this.logInfo("* " + _entity.getName() + ": 脱困！");
 		}
 
 		this.m.Skill.use(_entity.getTile());

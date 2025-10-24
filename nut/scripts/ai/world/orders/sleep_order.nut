@@ -35,7 +35,7 @@ this.sleep_order <- this.inherit("scripts/ai/world/world_behavior", {
 
 	function onExecute( _entity, _hasChanged )
 	{
-		_entity.setOrders("Sleeping");
+		_entity.setOrders("休眠中");
 
 		if (this.m.Start == 0.0)
 		{

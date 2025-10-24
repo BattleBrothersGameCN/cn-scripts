@@ -30,7 +30,7 @@ this.vagabond_background <- this.inherit("scripts/skills/backgrounds/character_b
 			"流民",
 			"不得安歇者(the Restless)",
 			"旅行者(the Traveller)",
-			"乌鸦(the Raven)"
+			"·渡鸦"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;

@@ -88,7 +88,7 @@ this.ai_flee <- this.inherit("scripts/ai/tactical/behavior", {
 
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + this.getAgent().getActor().getName() + ": Fleeing.");
+					this.logInfo("* " + this.getAgent().getActor().getName() + "：溃逃中。");
 				}
 
 				navigator.findPath(_entity.getTile(), this.m.TargetTile, settings, 0);

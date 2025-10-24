@@ -81,7 +81,7 @@ this.defend_barbarians_action <- this.inherit("scripts/factions/faction_action",
 		{
 			local party = this.getFaction().spawnEntity(spawnpoints[i], "野蛮人", false, this.Const.World.Spawn.Barbarians, this.m.Settlement.getResources() * 0.66);
 			party.getSprite("banner").setBrush(this.m.Settlement.getBanner());
-			party.setDescription("一支野蛮部落的战团。");
+			party.setDescription("一支野蛮人战团。");
 			party.setFootprintType(this.Const.World.FootprintsType.Barbarians);
 			party.getFlags().set("IsRandomlySpawned", true);
 

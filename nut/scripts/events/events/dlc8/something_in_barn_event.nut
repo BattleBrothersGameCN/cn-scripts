@@ -38,7 +38,7 @@ this.something_in_barn_event <- this.inherit("scripts/events/event", {
 				if (this.Const.DLC.Unhold && _event.m.BeastSlayer != null)
 				{
 					this.Options.push({
-						Text = "[队长]兽王猎人%beastslayer%应该能处理这个。",
+						Text = "应该让%beastslayer%能处理此事。",
 						function getResult( _event )
 						{
 							return "D";

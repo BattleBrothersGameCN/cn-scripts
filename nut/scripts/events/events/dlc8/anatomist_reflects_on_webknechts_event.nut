@@ -10,13 +10,13 @@ this.anatomist_reflects_on_webknechts_event <- this.inherit("scripts/events/even
 		this.m.Cooldown = 80.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist%伸出手臂，看着一只长腿蜘蛛在他的皮肤上爬行。当这只生物到达它新找到的领域的边缘时，解剖学家转动了他的手臂，建议蜘蛛换一个方向继续前进。他这样做了一段时间，直到用手指指向地面，蜘蛛就才真正爬走了，也许从未意识到它身处一个活体之上。解剖学家在笔记中写下了几页。%SPEECH_ON%前几天，我看到一只蜘蛛跳了20倍身长，抓住了一只苍蝇。这只我放走的蜘蛛，一旦看到它的猎物，就会像狩猎狗一样在地面上加速奔跑。看来古神对我们这帮恶棍人很宽容，因为这两个生物都不会是以巨大的网格形态出现的。%SPEECH_OFF%尽管被攻击和剖开是相当可怕的，但你告诉他被蛛牢牢钱在一只蜘蛛吸血前包裹起来无疑更糟糕。解剖学家举起一根手指。%SPEECH_ON%一个普遍的错误认识，无赖，因为蜘蛛实际上更喜欢在你死后很久很久再进食。我们认为它的毒素是针对腹部的，打开腹部并利用体液将你从内部融化掉。这可能就是为什么它们会把猎物倒挂在上面，这样毒素就可以在器官中滴落，将你变成一种液体袋。过程中消耗物质只是消化剩余部分。它们唯一不吃你的时候，是当它们把他们的幼虫放在你体内时，这时你将会是幼虫的食物。%SPEECH_OFF%这仍然听起来比被一只狩猎蜘蛛刺伤要糟糕得多，但无论哪种情况，你都后悔刚刚的谈话，不再深究这个话题。不幸的是，%otherbro%就在附近，听到了太多......}",
+			Text = "[img]gfx/ui/events/event_184.png[/img]{%anatomist%正平伸着手臂，观察一只长腿蜘蛛在他皮肤上爬行。当这小生物爬到手臂尽头时，解剖学家便转动手腕引导它另寻去路。如此反复数次后，他终于将手指垂向地面让蜘蛛彻底离开——或许这小东西始终没意识到自己刚才在活物身上爬行。解剖学家在笔记上记下数页。%SPEECH_ON%之前我看见一只蜘蛛跳了二十个身长那么远，直接把苍蝇给逮住了。而刚才放走的这家伙，要是发现猎物跑起来比猎狗还快。看来旧神还是可怜咱们，流氓，至少这两种本事没让那些蛛魔给沾上。%SPEECH_OFF%你表示虽然被扑倒撕扯很可怕，但被裹成茧慢慢吸干显然更糟。解剖学家竖起食指。%SPEECH_ON%这是常见的误区，流氓。蛛魔其实更喜欢等你死透了再开饭。它们的毒液专门对付肚子，把里面器官都化成汤水——所以它们才把猎物倒挂着，让毒液能把五脏六腑都泡透，把你变成个人肉汤包。最后进食阶段不过是喝汤罢了。唯一不吃的情况是他们要在你的身体里产卵，毕竟小蜘蛛破壳时总得有点存粮。%SPEECH_OFF%这听起来仍然比被狩猎蜘蛛捅死可怕千万倍，你后悔开启这个话题便不再多言。不幸的是，%otherbro%就在近旁听得一清二楚......}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "停止散布恐慌，该死。",
+					Text = "别再散布恐慌了，见鬼。",
 					function getResult( _event )
 					{
 						return 0;
@@ -35,7 +35,7 @@ this.anatomist_reflects_on_webknechts_event <- this.inherit("scripts/events/even
 					icon = trait.getIcon(),
 					text = _event.m.OtherBro.getName() + "现在害怕野兽"
 				});
-				_event.m.OtherBro.worsenMood(1.0, "怕蜘蛛");
+				_event.m.OtherBro.worsenMood(1.0, "害怕蜘蛛");
 
 				if (_event.m.OtherBro.getMoodState() < this.Const.MoodState.Neutral)
 				{

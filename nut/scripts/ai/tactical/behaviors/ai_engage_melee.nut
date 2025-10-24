@@ -1226,7 +1226,7 @@ this.ai_engage_melee <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (bestWaitBeforeMove)
 			{
-				this.logInfo("Waiting before move!");
+				this.logInfo("移动前等待！");
 			}
 
 			score = score * bestScoreMult;
@@ -1403,7 +1403,7 @@ this.ai_engage_melee <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Waiting until others have moved!");
+				this.logInfo("* " + _entity.getName() + ": 等待直到其他人移动！");
 			}
 
 			return true;
@@ -1439,12 +1439,12 @@ this.ai_engage_melee <- this.inherit("scripts/ai/tactical/behavior", {
 
 					if (this.Const.AI.VerboseMode && this.m.TargetActor != null)
 					{
-						this.logInfo("* " + _entity.getName() + ": Engaging to melee range with " + this.m.TargetActor.getName() + " (" + (this.m.TargetActor.getTile().IsVisibleForEntity ? "visible" : "not visible") + "), accepted_distance=" + this.m.TargetDistance + ", value=" + this.queryTargetValue(_entity, this.m.TargetActor));
+						this.logInfo("* " + _entity.getName() + "：接近目标进行近战" + this.m.TargetActor.getName() + " (" + (this.m.TargetActor.getTile().IsVisibleForEntity ? "可见的" : "不可见的") + "), 接战距离 =" + this.m.TargetDistance + "，评估值=" + this.queryTargetValue(_entity, this.m.TargetActor));
 					}
 
 					if (!navigator.findPath(this.m.OriginTile, this.m.TargetTile, settings, this.m.TargetDistance))
 					{
-						this.logWarning("* " + _entity.getName() + ": Failed to execute path for Melee Engage - No path found");
+						this.logWarning("* " + _entity.getName() + "：执行近战接敌路径失败 —  未找到路径。");
 						return true;
 					}
 
@@ -1495,11 +1495,11 @@ this.ai_engage_melee <- this.inherit("scripts/ai/tactical/behavior", {
 				{
 					if (_entity.getTile().ID == this.m.TargetTile.ID)
 					{
-						this.logInfo("* " + _entity.getName() + ": Reached engage destination");
+						this.logInfo("* " + _entity.getName() + "：抵达交战地点");
 					}
 					else
 					{
-						this.logInfo("* " + _entity.getName() + ": Stopped before reaching destination");
+						this.logInfo("* " + _entity.getName() + "：在抵达目标地点之前停下。");
 					}
 				}
 

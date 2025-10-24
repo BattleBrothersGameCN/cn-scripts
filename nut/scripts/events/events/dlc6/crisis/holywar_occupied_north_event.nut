@@ -10,13 +10,13 @@ this.holywar_occupied_north_event <- this.inherit("scripts/events/event", {
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_%image%.png[/img]{信息传的很快，带着一点宗教味的刺激性：%holysite% 被北方十字军占领了！ | 来自北方的十字军占领了 %holysite%。你不确定这意味着战争是否很快就要结束了。 如果是的话那真是可惜，想想这场斗争创造了多少好机会。 | %holysite% 陷落于北方十字军旗下！ 毫无疑问，在旧神们欢呼时，镀金者的追随者将会试图夺回它。 这个可能的机会来到了 %companyname%。}",
+			Text = "[img]gfx/ui/events/event_%image%.png[/img]{在宗教势力的推波助澜下消息传得飞快：%holysite%已被北方十字军攻占！ | 来自北方的十字军已夺取%holysite%。你不确定这是否意味着战争即将结束。若真如此未免可惜——毕竟乱世才最有机可乘。 | %holysite%已沦陷于北方十字军的旗帜之下！旧神自然为此倍感欣慰，但镀金者的追随者势必试图夺回此地。这对%companyname%而言或许是个良机。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "宗教动乱之火熊熊燃烧。",
+					Text = "宗教冲突之火熊熊燃烧。",
 					function getResult( _event )
 					{
 						return 0;

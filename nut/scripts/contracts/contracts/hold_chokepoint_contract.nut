@@ -84,7 +84,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"移动到废弃的要塞，防御北方的入侵"
+					"前往废弃的要塞，防御北方的入侵"
 				];
 				this.Contract.setScreen("Task");
 			}
@@ -117,7 +117,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 				{
 					if (n.getFlags().get("IsHolyWarParticipant"))
 					{
-						n.addPlayerRelation(-99.0, "在战争选择了阵营");
+						n.addPlayerRelation(-99.0, "在战争中选择了阵营");
 					}
 				}
 
@@ -153,7 +153,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"利用废弃的堡垒来防御北方的入侵",
+					"利用废弃的要塞来防御北方的入侵",
 					"不要走得太远"
 				];
 
@@ -282,7 +282,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 
 							return 0;
 						});
-						local party = enemyNobleHouse.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getName() + " 战团", true, this.Const.World.Spawn.Noble, (this.Math.rand(100, 120) + this.Flags.get("Wave") * 10 + (this.Flags.get("IsAlliedReinforcements") ? 50 : 0)) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
+						local party = enemyNobleHouse.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getName() + "战团", true, this.Const.World.Spawn.Noble, (this.Math.rand(100, 120) + this.Flags.get("Wave") * 10 + (this.Flags.get("IsAlliedReinforcements") ? 50 : 0)) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 						party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + enemyNobleHouse.getBannerString());
 						party.setDescription("听命于当地领主的职业军人。");
 						party.getLoot().Money = this.Math.rand(50, 200);
@@ -421,14 +421,14 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_162.png[/img]{%employer% 被他的军人们围了起来。 他们穿着各种浮夸的衣服，让你觉得他们有点不适合参加战争。 不过，虽然穿的像只鸟似的，其中一个指挥官拿着张地图把你带到边上并简明的说道。%SPEECH_ON%逐币者，我们需要你去一座在 %direction% 的被废弃的要塞。 我们有一个联队的士兵正在前往那里，但他们没法赶在北方野蛮人前到那里。 范围内，你是最近的。 去那儿并守到我们的士兵出现。 工事已经破败了，但我相信你这样狡猾的人就靠点石头也办得到的。%reward% 克朗会在你成功活着完成任务后时候给你。%SPEECH_OFF% | %employer% 坐在一个坐垫上，面前铺着一张巨大的地毯。 穿着华丽的军官们坐在边上的角落里，每一个都拿着一根长木棍推着些木块。 在地毯的长边上几个地毯工匠仍在往地图上添加着什么，从你的了解来看应该是北方的区域。 维齐尔看到了你并远远的对你说。%SPEECH_ON%逐币者，%direction% 有一座要塞。 一座破败的堡垒，有人说现在不过是一片碎砖，但是古人们把它建在那里是有个好理由的：它有重要的战略意义。 尽管我的士兵正快速前往那里，他们无法在北方人的部队前赶到那里。 一群不洁的野蛮人，但你得承认他们快速进军的诡计是很有效。 所以，我需要你去占领要塞并坚守到我的军队到达。%SPEECH_OFF%他举起一张纸，上面又一个你可以轻易理解的数字：%reward% 克朗。 | 一个非常高的着军装的人阻止了你进入 %employer%的房间。 可以听到维齐尔正在和他的后宫缠绵，但这和你无关。 军官拍了张卷轴到你胸上。%SPEECH_ON%古人们在 %direction% 修了一座要塞。 它破败至今，像一切事物一样被时间摧残了，但是这个地方仍然有战略意义。 我们正让一队士兵前去那里，但我们的侦察兵报告说北方杂种也清楚它的重要性并会在我们之前赶到。 这就是你派上用场的地方了。%reward% 克朗，去占领并坚守到援军抵达。 一旦战况缓和，你就可以回来拿一份不菲的报酬。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_162.png[/img]{%employer%被他的军人们簇拥着。他们穿着极其浮夸的服装，让你觉得他们有点不像来打仗的。然而，尽管外表相当华而不实，其中一位指挥官还是拿着地图把你拉到一边，清晰地说道。%SPEECH_ON%逐币者，我们需要你前往此处%direction%方向的一座废弃要塞。我们有一支士兵正赶往该地，但他们无法赶在北方的野蛮人之前到达。在所有能联系到的人中，你是距离最近的。去那里防守，直到我们的士兵出现。那要塞已经破败，但我相信，以你那善于钻营的性子，必要的时候靠着一堆碎石也能应付。你回来时能拿到%reward%克朗，当然，前提是你成功完成任务。%SPEECH_OFF% | %employer%坐在一个垫子上，面前铺着一块巨大的地毯。衣着考究的副官们坐在角落，每人手持一根长木棍推动着代表部队的棋子。而在地毯的另一头，还有几个地毯匠正在往地图上添加内容——就你所见，他们正在添加北方的区域。维齐尔看到了你，从远处开口说道。%SPEECH_ON%逐币者，此地%direction%方向有一座倾颓的要塞，有人说它几乎只剩下一堆碎石，但古人将其建在那里是有充分理由的：它具有重要的战略意义。虽然我已派士兵火速赶往该地，但他们无法在一支北方部队到达之前抵达。那些不洁的野蛮人，尽管令人不齿，但你不得不佩服他们快速推进的狡黠。所以，我需要你占领那座要塞，并抵挡住北方人，直到我的军队到达。%SPEECH_OFF%他举起一张纸，上面写着一个你很容易理解的数字：%reward%克朗。 | 一个身着军装、身材异常高大的男人拦住了你，没让你进入%employer%的房间。能听到维齐尔正在他的后宫佳丽中周旋，但这不关你的事。那位中尉将一卷羊皮纸按在你胸前。%SPEECH_ON%古人曾在此地%direction%方向修建了一座要塞。它早已坍塌，如同万物一样敌不过时间的侵蚀，但其地理位置至今仍被证明具有战略价值。我们正调遣一队士兵前往该地，但我们的哨骑回报说，北方狗也同样意识到了它的重要性，并将抢先我们一步抵达。这就是你发挥作用的时候了。夺取要塞并坚守至援军到达。一旦解围，你就返回我们这里，领取你这逐币者应得的%reward%克朗。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{听起来像是 %companyname% 可以做的事情。 | 我们来谈谈我们为此得到的报酬。 | 我们能守住要塞抵御异教者的入侵。}",
+					Text = "{听起来像是%companyname%能做的事情。 | 先谈谈我们能拿到的报酬吧。 | 我们能保卫要塞，抵御异教的入侵。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -436,7 +436,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这不值得。 | 我们还有别的地方要去。 | 我不会冒险让战团守住一个废墟。}",
+					Text = "{这不值得。 | 我们还有别的地方要去。 | 我不会冒险让战团去守卫废墟。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -453,7 +453,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Arrive",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_167.png[/img]{要塞看起来熟悉而又反常。 尽管破败到变成一堆堆的碎砖碎石，你还是会不由地感觉到墙壁中的威严。 在更里面的地方，破败的军械库和遗弃的食堂边，有些更奇特的结构：匆忙立起的防御，远离岗位的最后一战的痕迹。 很难说这里发生过什么，或者什么时候，但现在它是 %companyname%的临时住所了。\n\n 你走到有垛口的墙边，往外看。 看起来你刚好赶上了：北方人已经在接近，一排轮廓像蚂蚁越过山丘一样正越过地平线。 | 关于这座堡垒是古代帝国遗迹的传言看来是对的：它的建筑即相同又相异。 你理解这些墙的用途，但你不确定上面的符号有什么含义。 就连一些房间的建筑结构，角落里扫出来的那些令人难以置信的砖砌漩涡状物体，不像你见过的任何东西。 你不确定这是否能产生什么战术优势又或者它的建造者这么设计有别的目的。\n\n但是没有时间去钻研这地方的历史了，你来这里只是为了把它变成一个哨所。 而且看起来时候到了：一波北方人翻过地平线正径直冲向你！}",
+			Text = "[img]gfx/ui/events/event_167.png[/img]{这座要塞既熟悉又陌生。尽管它已分崩离析，化作堆积的碎石，你仍不禁从其残垣断壁中感受到一种庄严。再往里走，在破败的军械库和废弃的食堂周围，有更多仓促建造的构造：匆忙搭建的防御工事，那些背水一战的痕迹，却远在它们本应在的位置之外。无从得知这里曾发生过什么，甚至不知是何时发生的，但此刻，它将作为%companyname%的临时据点。\n\n你走到带垛口的墙边向外望去。看来你们来得很及时：北方人已经逼近，一排人影正行进在地平线上，如同前往蚁丘的蚁群。 | 这座要塞作为一个古老帝国失落的遗迹，这说法似乎很贴切：它的构造既熟悉又陌生。你明白墙壁的用途，但却不太理解刻在其上的一些符号代表什么。甚至某些房间的建筑结构，墙角处那令人称奇的砖砌漩涡，也与你见过的任何样式都不同。你不确定这其中是否蕴含某种战术优势，亦或是它的建造者赋予了这些设计其他重要的意义。\n\n但没有时间在它的历史上耽搁了，你来这里仅仅是扼守住咽喉要道。而时机似乎已到：一股北方人如浪潮般涌过地平线，正朝你们直冲过来！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -475,8 +475,8 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Wave1",
-			Title = "战斗之前…",
-			Text = "[img]gfx/ui/events/event_90.png[/img]{北方人的先锋到了。 你跳到墙上叫 %companyname% 准备好战斗。 佣兵们跃起，进入岗位并准备起武器。 同时，北方人装备的哐当声随他们靠近越发响亮。 第一支箭无害似的滑入了要塞，轻轻的暗示着一场血腥战斗即将到来。}",
+			Title = "战斗之前……",
+			Text = "[img]gfx/ui/events/event_90.png[/img]{北方先锋部队已兵临城下。你跃上城墙，朝%companyname%大喊，命令他们做好战斗准备。佣兵们立刻行动，各就各位，整备兵器。与此同时，北方军队铿锵作响的兵甲碰撞声随着他们逼近而愈发震耳。第一支箭无害地落入堡垒，这微弱的信号预示着一场恶战即将展开。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -497,8 +497,8 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Wave2",
-			Title = "战斗之前…",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{%randombrother% 大喊一声，你冲到墙边。 战场上布置着一支北方人的重装步兵大队。 也许他们已经了解到，摆在他们面前的是 %companyname%，他们需要更认真地对待这件事。 并不是说额外的谨慎可以拯救他们。 面对 %companyname% 只有一个结果，你忍不住向接近中的攻击队列咧嘴露出了邀请似的坏笑。}",
+			Title = "战斗之前……",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{%randombrother%大喊起来，你急忙冲向城墙。阵列于战场之上的是一支全副武装的北方部队。或许他们已得知挡在面前的是%companyname%，因此打算稍微认真些对待此事。但多余的谨慎也救不了他们。与%companyname%正面交锋的结果只有一个，你对着那逼近的攻势，忍不住露出了一个挑衅的笑容。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -519,8 +519,8 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Wave3",
-			Title = "战斗之前…",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{北方人再次接近。 他们像鲷鱼在盐水里一样穿过曾经战友的尸体，一个由人和材料打成的黑暗的结点，黑黑的并且被那些敢于进犯的人染出来的血红泥土衬出的轮廓。 老鼠已经在啃食散步各处的死者，还有环绕的秃鹫。 你举起武器并命令手下准备好面对最好是最后一场的战斗。}",
+			Title = "战斗之前……",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{北方人再次逼近。他们踏过尸骸前进，如同鲷鱼游过盐水，集结成一团黑暗的人马与装备，阴沉地、轮廓分明地映衬在被你们化为血泥的大地上。原本正在啃食死尸的老鼠四散奔逃，秃鹫也纷纷惊飞。你抬起手臂，命令兄弟们做好准备，迎接这场但愿是最后的战斗。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -542,7 +542,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Waiting1",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_167.png[/img]{第一波攻势被击退了。 你短暂的考虑了下要不要用尸体去堵住墙上的窟窿，但你不想引来老鼠和它们可能带来的疫病。 简短的几声命令，你让尸体都堆到墙的外面并让手下为下场攻击做好准备。}",
+			Text = "[img]gfx/ui/events/event_167.png[/img]{第一波攻势被击退了。你短暂地考虑了下要不要用尸体去填补墙上的缺口，但你可不想招来老鼠和它们带来的瘟疫。随着一声简短的命令，你让人把尸体堆在墙外，然后令部下准备迎接下一次突击。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -563,12 +563,12 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Waiting2",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_167.png[/img]{%companyname% 几乎开始看起来像你刚招募他们时一样：被世界践踏与殴打过那样。 但是在战团度过的这段时间让他们成为了更强的人。 尽管精疲力竭，但疲劳没有磨灭训练、威望和名声。 当时候来时，%companyname% 将准备好迎接下次攻击。}",
+			Text = "[img]gfx/ui/events/event_167.png[/img]{%companyname%的成员们看起来几乎像是你当初雇佣他们时的样子：饱经风霜，疲惫不堪。但与战团共度的所有这些时光已经让他们成为了更好的战士。尽管已经耗尽精力，但训练不会停歇，威名不会磨损，声望不会衰减。当时机来临，%companyname%必将为下一次突击做好准备。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "还可能有更多要来。",
+					Text = "还可能有更多敌人要来。",
 					function getResult()
 					{
 						return 0;
@@ -584,16 +584,16 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Failure",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_87.png[/img]{你已经看够了。 维齐尔的任务是坚守一段时间，不是坐在这等死。}",
+			Text = "[img]gfx/ui/events/event_87.png[/img]{你已经受够了这一切。维齐尔交给战团的任务是坚守一段时间，而不是坐在这等死。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "不值得为此失去整个战团…",
+					Text = "不值得为此葬送整个战团……",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "未能防御住北方入侵者的防御工事。");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "未能成功抵御北方入侵者，丢失了废弃的要塞。");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -608,7 +608,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "EnemyRetreats",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_168.png[/img]{随着尸体堆积成山，苍蝇嗡嗡直响，还有黑云般盘旋的大群秃鹫，看起来北方人受够了。 一声号角吹出低沉软弱的声音，然后人们放下武器转身回他们来的方向去了。 同时，一个侦察兵从南方赶来说 %employer%的士兵很快就会到。 看起来你可以回去找雇主了。}",
+			Text = "[img]gfx/ui/events/event_168.png[/img]{尸体堆积如山，苍蝇嗡嗡作响，秃鹫如巨大黑云般在空中盘旋，看来北方人已经受够了。一声号角带着溃败的断续鸣响传来，士兵们放下武器，转身向来路撤去。与此同时，一名哨骑从南方赶来，报告说%employer%的部队即将抵达。看来你们可以安全返回雇主那里了。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -630,13 +630,13 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Reinforcements",
-			Title = "战斗之前…",
-			Text = "[img]gfx/ui/events/event_164.png[/img]{北方人再次接近。 他们像鲷鱼在盐水里一样穿过曾经战友的尸体，一个由人和材料打成的黑暗的结点，黑黑的并且被那些敢于进犯的人染出来的血红泥土衬出的轮廓。 在你举起武器给手下发令时，更多人出现在了地平线上。 你的心里阴沉了一阵，知道你发现他们带着 %employer%的旗帜！ 维齐尔的人到了！}",
+			Title = "战斗之前……",
+			Text = "[img]gfx/ui/events/event_164.png[/img]{北方人再次逼近。他们踏过尸骸前进，如同鲷鱼游过盐水，集结成一团黑暗的人马与装备，阴沉地映衬在这片被你们化为血泥的大地上。就在你抬起手臂准备向部下下令时，地平线上出现了更多的军队。你的心一沉，随即认出他们高举着%employer%的旗帜！维齐尔的援军到了！}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "终于，一点帮助！",
+					Text = "终于，有援军了！",
 					function getResult()
 					{
 						this.Flags.set("IsAlliedReinforcements", true);
@@ -654,8 +654,8 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Ultimatum1",
-			Title = "在你等待时…",
-			Text = "[img]gfx/ui/events/event_90.png[/img]{一声刺耳的号角吸引了你的注意。 你前去防御工事的顶端并看到下面有一个带着贵族颜色的使者。 他孤身一人，但他的嗓音如同一整支战伍。%SPEECH_ON%尔佣兵求宽恕乎？ 尔佣兵求明日否，或次冬春乎？ 尔佣兵求生否，然…%SPEECH_OFF%你对他喊回去让他少扯淡。 他清清嗓子。%SPEECH_ON%贵族们想要做个交易。 立刻离开这片区域然后你将被放出一条生路。 不仅如此，我们认为你们的石板打蜡了，离开这里就把石板瓦熔化干净。 %companyname% 与北方之间的所有敌对行为将由北方令状撤销。 当然，这需要你接受这个提议。%SPEECH_OFF%}",
+			Title = "在你等待时……",
+			Text = "[img]gfx/ui/events/event_90.png[/img]{一声洪亮的号角吸引了你的注意。你走上防御工事的顶端向下望去，发现一名打着贵族旗号的传令官。他只身一人，但嗓门却抵得上一整个连队。%SPEECH_ON%尊贵的佣兵，你是否在寻求宽恕？你是否渴望能见到另一个黎明，又或者渴望再经历一个冬去春来？你是否渴望活下去，以便……%SPEECH_OFF%你朝他喊话，让他直说重点。那人清了清嗓子。%SPEECH_ON%贵族们愿意做笔交易。立刻离开此地，我们便放你走，绝不追击。不仅如此，我们承诺，你的过往记录将如同蜡板，离开此地便意味着将其擦拭干净。%companyname%与北方之间的一切敌意，都将凭北方法令一笔勾销。当然，这前提是你接受这个提议。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -684,23 +684,23 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Ultimatum2",
-			Title = "在你等待时…",
-			Text = "[img]gfx/ui/events/event_90.png[/img]{你接受了交易。 几个手下发了点牢骚，其他人则感到宽心，尽管如此都好好藏起来以免引起你的怀疑。 %companyname%“合法的”放弃了这个地方，而北方人占领了它。 你被交予了几份正式文件，上面带着所有北方家族和人物的签名，还有他们的正式印章。 它会让你在北方领土里平安无事，尽管你无疑为这份权利失去了南方人的好感。}",
+			Title = "在你等待时……",
+			Text = "[img]gfx/ui/events/event_90.png[/img]{你接受了这笔交易。一些弟兄发出抱怨，另一些则如释重负，不过这两种情绪的迹象无疑都被小心翼翼地隐藏起来，以免引起你的猜疑。%companyname%就此“合法地”撤离了此地，北方人接管了控制权。你被授予了一系列正式文书，上面载有能从北方各家显贵那里获取的所有重要签名，以及他们的正式印章。这将保你平安穿过北方领土，尽管你无疑是以丧失在南方的良好声誉为代价才取得了这项权利。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "对于战团而言这是最好的办法。",
+					Text = "对于战团而言这是最好的选择。",
 					function getResult()
 					{
 						local f = this.World.FactionManager.getFaction(this.Contract.getFaction());
-						f.addPlayerRelation(-f.getPlayerRelation(), "在战争中改变了立场");
+						f.addPlayerRelation(-f.getPlayerRelation(), "在战争中改变了阵营");
 						f.getFlags().set("Betrayed", true);
 						local nobles = this.World.FactionManager.getFactionsOfType(this.Const.FactionType.NobleHouse);
 
 						foreach( n in nobles )
 						{
-							n.addPlayerRelationEx(50.0 - n.getPlayerRelation(), "在战争中改变了立场");
+							n.addPlayerRelationEx(50.0 - n.getPlayerRelation(), "在战争中改变了阵营");
 							n.makeSettlementsFriendlyToPlayer();
 						}
 
@@ -718,8 +718,8 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Ultimatum3",
-			Title = "在你等待时…",
-			Text = "[img]gfx/ui/events/event_90.png[/img]{你告诉使者回去找他的指挥官。他点头。%SPEECH_ON%也许你的勇气获得旧神们的赞赏，它可动摇不了北方的力量。%SPEECH_OFF%信使鞠躬并告别了。}",
+			Title = "在你等待时……",
+			Text = "[img]gfx/ui/events/event_90.png[/img]{你让传令官回他的指挥官那里去。他点了点头。%SPEECH_ON%愿你的坚韧能打动旧神，因为它无法撼动北方的力量。%SPEECH_OFF%传令官鞠了一躬，随即掉头离开。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -742,7 +742,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Victory",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_168.png[/img]{尸体散落在战场上，有时候堆到三或四个高。 %companyname% 的手下走在尸体间搜刮他们能找到的一切，伴随着乌鸦，秃鹫，老鼠，猫，狗，狼，一个过于危险不宜靠近的野人，还有一群看起来觉得这个地方足够暖和而从迁徙中停下来的鹅。 维齐尔的人也到了并换了岗，所以你得自己迁徙回去找 %employer% 拿报酬了。 | 空气中有一股潮湿的停滞感还有刺鼻的铜味。 这里的杀戮如此激烈以致这里的土地变成了一片血与肉的沼泽。 尸体躺在各种方向，有时候堆在另一个上面。 有时候你听到什么人在呻吟，但是死的人太多了搜寻幸存者恐怕也是浪费时间。%employer%的手下很快就会来替换你，意味着是时候回去找维齐尔拿报酬了。}",
+			Text = "[img]gfx/ui/events/event_168.png[/img]{尸体遍布战场，有时堆积达三四层高。%companyname%的成员穿行于尸骸间搜刮能拿的一切，加入他们掠夺行列的还有乌鸦、秃鹫、老鼠、耗子、野猫、流浪狗、一匹狼、一个过于危险而无法靠近的野人，以及一群显然觉得此地足够温暖而暂停了季节性迁徙的野鹅。维齐尔的手下也已抵达并开始接管，所以你自己也需要动身返回%employer%处领取报酬。 | 空气中弥漫着潮湿凝滞的气息，夹杂着刺鼻的铜腥味。屠杀是如此彻底，以至于此处的土地已化作一片血污沼泽。尸体以各种扭曲的姿态倒伏，有时层层堆叠。偶尔你会听到呻吟声，但死者如此众多，试图寻找幸存者不过是浪费时间。%employer%的手下很快将接管你们的职责，这意味着现在是返回维齐尔那里领取报酬的好时机。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -766,7 +766,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{%employer% 在你离他王座不远的地方止住了你。 他打了个响指然后一个仆人走上前，但是维齐尔笑着举起手。%SPEECH_ON%不，等一下。让女人们中的一个来。 她。最丑的那个。%SPEECH_OFF%他指向他的后宫，然后女士们分开来直到一个女人被孤立出来。 她如此美丽以致你想她能在北方换来一座城堡。 她从仆人手里拿下那包克朗并在你面前伏下。%employer% 坏笑起来。%SPEECH_ON%你的任务是坚守要塞直到我的手下到。 但是，你选择娘娘腔的临阵脱逃。 幸运的是，我的人，真男人们，到了地方从北方人手里夺回了它并且把它设成了一个枢纽。 停止盯着那个小妾了，逐币者！ 你的眼只允许盯着地面或者你的报酬。 我建议你拿上你的硬币并且在镀金者的光芒在你脚下燃起火前离开我的视线。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{%employer%在你离他王座还有一掷之遥时叫停了你。他打了个响指，一个仆人应声上前，但维齐尔大笑着抬手制止。%SPEECH_ON%不，等等。让个女人来做。她。最丑的那个。%SPEECH_OFF%他指向他的后宫，女人们纷纷散开，直到一个女子被孤立出来。她的身姿如此曼妙，你会觉得她在北方能值一座城堡。她从仆人手中接过一袋克朗，匍匐在你面前。%employer%讥讽地笑道。%SPEECH_ON%你本该坚守堡垒直到我的部队抵达。结果你却显露出娘们似的本性，一见危险就逃之夭夭。算你走运，我的人，那些真正的男子汉，从北方人手中夺回了堡垒，并扼守住了那里。别再盯着那个小妾看了，逐币者！你的眼睛要么看着地面，要么看着你的报酬。我建议你拿着你的钱，在我动怒让你吃不了兜着走之前，立刻从我眼前消失。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -804,7 +804,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success2",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你向 %employer% 汇报了事情的经过。 一片笑容慢慢的在维齐尔的脸上露出。%SPEECH_ON%天啊，我的军官派你去的？ 那个要塞分文不值。 谁会做这种诡计？ 我会想斩首为此负责的人，但是呢，多少来着，%reward_completion% 克朗？ 它对我而言没什么。 我曾经花了更多钱请北方的小丑来亲自跟我讲笑话，而他们的幽默感最多只能用贫瘠来形容。 拿上你的金子离开我的住所，逐币者。%SPEECH_OFF% | 当你回去找 %employer% 时，你找不到他。 与之相对，他的一个军官把你带到一边并为你的服务表示感谢。%SPEECH_ON%在我们和老鼠们之间，并且确保这些话从来没有说过，还有这些长廊里找不到老鼠，如果我的队伍里有你这样的人会让我心中燃起自己来当征服者的欲望。 唉，我手下的士兵对我就像沙漠里的一撮沙般有用。 这是你的报酬，克朗－，战士。%SPEECH_OFF%他交过来一包 %reward_completion% 克朗。 另一个军官开始沿着走廊走过来，然后你面前的人拍到了你的肩上，他的面容突然没有一丝幽默或亲善。%SPEECH_ON%滚吧，逐币者，你的报酬都在这儿了而且我们不想再从你嘴里听到一声讨价还价！%SPEECH_OFF% | 你走进维齐尔的大厅却只找到一个人孤身扫着大理石地板。 他的扫帚的条刮到你的靴子上停了下来而他也抬起了头。%SPEECH_ON%啊。他们跟我说过你这样身份的人要来。%SPEECH_OFF%他放下扫帚，它的柄可能比他脆弱的身躯还要粗壮。 他走到一个桌子边打开一个宝箱里面一盘一盘的金子，其中一盘装着 %reward_completion% 克朗。 你问他维齐尔怎么会把这么多硬币给他看管。 他拿起他的扫把并笑道。%SPEECH_ON%如果我给自己偷了些克朗，我能跑多远呢？ 它很沉。我没法全部拿上。 所以我可以拿一点？不。 我没有任何物质资产。 就像镀金者的目光使花儿绽放，我手掌中的金币也会找出我的窃行。 我绝对跑不远的。 这里就是我的岗位，然后这是你的。%SPEECH_OFF%你拿上了硬币，但是又问他怎么知道你是那个佣兵。 他的扫帚又剐蹭着停了下来，汗珠从脸颊上缓慢流下。 在他回答前，你拿着克朗走了。 | %employer% 跟他的议会在一起。 这场穿丝戴银，抚摸着大胡子的人们的罕见聚会以蔑视迎接了你。 你大声声称要塞已经守住并被南方士兵掌控。 一切噪音都停息了而你的声音回响在大理石长廊里并且每一个仆人还有议会都停了下来。%employer% 站起来。%SPEECH_ON%仆人，去拿给这摇舌头狗的硬币。%SPEECH_OFF%其中一个议员吐了口唾沫，而一个被项圈困住的儿童快速的清理了它。%SPEECH_ON%他在要塞的时候应该把工资汇了。 他怎么胆敢在这房间里呼吸。%SPEECH_OFF%仆人赶到你身边带着一袋 %reward_completion% 克朗。 维齐尔摇了摇手。%SPEECH_ON%滚，逐币者。我每天都有很多人要雇，而你不在他们之中。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你向%employer%报告了发生的一切。维齐尔脸上缓缓浮现出一丝笑容。%SPEECH_ON%天哪，是我的副官们派你去的？那座堡垒一文不值。谁会开这种玩笑？我倒是想砍了责任人的脑袋，但唉，是多少来着，%reward_completion%克朗？对我而言不算什么。我付过更多钱，就为了听北方弄臣当面讲个蹩脚笑话，而他们的幽默感充其量也只是贫乏得很。拿着你的金子，离开我的地盘吧，逐币者。%SPEECH_OFF% | 当你回到%employer%那里时，到处都找不到维齐尔。取而代之的是他的一名副官将你拉到一边，感谢你的服务。%SPEECH_ON%我私底下和你说，倘若我麾下能有你这样的士兵，我心中恐怕会萌生征伐的妄念。唉，可我得到的部队对我来说，犹如沙粒之于沙漠。这是你的报酬，逐币——士兵。%SPEECH_OFF%他递过来一袋%reward_completion%克朗。另一名副官沿着走廊走来，你面前的这人拍了拍你的肩膀，他的脸色突然没了幽默或友善。%SPEECH_ON%滚出去，逐币者，这就是你的报酬，我们不想听到你嘴里任何讨价还价的话！%SPEECH_OFF% | 你走进维齐尔的大厅，却只发现一个孤零零的人在打扫大理石地板。他扫帚的鬃毛刮到你的靴子停了下来，他抬起头。%SPEECH_ON%啊。他们告诉我像你这样身份的人会来。%SPEECH_OFF%他放下扫帚，那扫帚柄可能比他那孱弱的身躯还要粗。他走到一张桌子前，打开一个装有%reward_completion%克朗的箱子。你问维齐尔们怎么会把这么多钱币托付给他。那人拿起扫帚笑了。%SPEECH_ON%倘若我自己偷走这些克朗，我能跑多远？它很重。我无法全部带走。那么我能拿一点吗？不行。我看起来就不像个贵人。金子在我手中只会照亮我这个小偷，正如镀金者之眼催开鲜花一样确凿。我绝对跑不远的。这就是我的归属，而这些是你的。%SPEECH_OFF%你拿起钱币，但接着问他怎么知道你就是来领钱的佣兵。他的扫帚又停了下来，一滴汗珠慢慢顺着他的脸颊流下。没等他回答，你拿起克朗就走了。 | %employer%正与他的议员共处。那群难得一见的、身着丝绸、抚须沉吟的人用轻蔑的目光打量着你。你大声宣布堡垒已被守住并由南方士兵接管。所有嘈杂声都停止了，你的话语在铺满大理石的大厅里回荡，每个仆人都停下了动作，议员也都停下交谈。%employer%站起身来。%SPEECH_ON%仆人们，给这摇唇鼓舌的家伙拿他的钱。%SPEECH_OFF%一名议员啐了一口，一个戴着项圈的孩子迅速清理干净。%SPEECH_ON%就该趁他还在堡垒时就把报酬汇过去。他怎敢在这房间里喘气。%SPEECH_OFF%仆人们拿着几袋%reward_completion%克朗冲到你身边。维齐尔挥了挥手。%SPEECH_ON%滚吧，逐币者。我花钱雇了一堆弄臣，而你不在其列。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],

@@ -191,7 +191,7 @@ this.ai_adrenaline <- this.inherit("scripts/ai/tactical/behavior", {
 			{
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Waiting until using Adrenaline!");
+					this.logInfo("* " + _entity.getName() + "：等待直到使用肾上腺素！");
 				}
 
 				return true;
@@ -204,7 +204,7 @@ this.ai_adrenaline <- this.inherit("scripts/ai/tactical/behavior", {
 
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Adrenaline!");
+			this.logInfo("* " + _entity.getName() + ": 使用肾上腺素！");
 		}
 
 		this.m.Skill.use(_entity.getTile());

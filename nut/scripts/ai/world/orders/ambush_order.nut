@@ -28,7 +28,7 @@ this.ambush_order <- this.inherit("scripts/ai/world/world_behavior", {
 		{
 			if (this.m.WaitTimeStart == 0)
 			{
-				_entity.setOrders("Lying in Ambush");
+				_entity.setOrders("伏击中");
 				this.m.WaitTimeStart = this.Time.getVirtualTimeF();
 			}
 			else if (this.m.WaitTimeStart + this.Const.World.AI.Behavior.AmbushWaitTime <= this.Time.getVirtualTimeF())
@@ -38,7 +38,7 @@ this.ambush_order <- this.inherit("scripts/ai/world/world_behavior", {
 		}
 		else
 		{
-			_entity.setOrders("Preparing Ambush");
+			_entity.setOrders("准备伏击");
 
 			if (_hasChanged || _entity.getPath() == null)
 			{

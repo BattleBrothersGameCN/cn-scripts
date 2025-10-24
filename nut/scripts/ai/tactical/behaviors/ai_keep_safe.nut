@@ -144,7 +144,7 @@ this.ai_keep_safe <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Moving into safer position");
+				this.logInfo("* " + _entity.getName() + "：移动到更安全位置");
 			}
 
 			this.m.IsFirstExecuted = false;
@@ -317,7 +317,7 @@ this.ai_keep_safe <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode && bestDestination.isSameTileAs(_entity.getTile()))
 			{
-				this.logInfo("* " + _entity.getName() + ": In fact, I would prefer to remain where I am");
+				this.logInfo("* " + _entity.getName() + "：事实上，我宁愿留在原地");
 			}
 
 			this.m.TargetTile = bestDestination;

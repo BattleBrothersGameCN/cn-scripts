@@ -36,7 +36,7 @@ this.webknecht_potion_effect <- this.inherit("scripts/skills/skill", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "免疫中毒效果，包括蛛魔与地精的毒药"
+				text = "免疫中毒效果，包括蛛魔的毒液与地精的毒药"
 			},
 			{
 				id = 12,

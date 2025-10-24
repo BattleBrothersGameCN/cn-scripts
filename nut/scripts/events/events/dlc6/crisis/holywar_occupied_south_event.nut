@@ -10,13 +10,13 @@ this.holywar_occupied_south_event <- this.inherit("scripts/events/event", {
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_%image%.png[/img]{消息传来，镀金者们征服了 %holysite%。至于他们打算用它做什么，谁知道呢。 或许立起一圈镶金的栅栏来把北方人挡在外面？ 你最担心的是这场战斗可能接近尾声，随着所有那些 %companyname% 享受着的甜蜜的宗教甜点一起。 | 镀金者的光辉想必前所未有的闪亮： %holysite% 现在处于南方人的控制下。 或许镀金的人们会希望 %companyname% 来帮忙守住它，又或许旧神需要些真正有勇气的人来帮他们夺回它。 不论如何，%companyname% 依旧坐在让钱袋子变大的座位上。}",
+			Text = "[img]gfx/ui/events/event_%image%.png[/img]{消息传来，镀金者们征服了 %holysite%。至于他们打算对它做什么，谁知道呢。 或许会竖起一圈镀金栅栏把北方人挡在外面？ 你最担心的是这场战斗可能接近尾声，那%companyname%一直享用的宗教纷争甜头可就没了。 | 镀金者的光辉想必空前闪亮： %holysite%已落入南方人的掌控。 或许镀金者的信徒会希望%companyname%协助防守，也可能旧神需要借助外力夺回圣地。无论如何，%companyname%稳坐钓鱼台，不愁赚不到丰厚报酬。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "宗教动乱之火熊熊燃烧。",
+					Text = "宗教冲突之火熊熊燃烧。",
 					function getResult( _event )
 					{
 						return 0;

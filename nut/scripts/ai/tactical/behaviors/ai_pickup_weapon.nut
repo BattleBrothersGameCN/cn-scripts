@@ -57,7 +57,7 @@ this.ai_pickup_weapon <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Picking up melee weapon!");
+			this.logInfo("* " + _entity.getName() + "：拿出近战武器！");
 		}
 
 		_entity.pickupMeleeWeaponAndShield(_entity.getTile());

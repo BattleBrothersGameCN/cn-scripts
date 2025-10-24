@@ -74,7 +74,7 @@ this.ai_attack_gash <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using Gash against " + this.m.TargetTile.getEntity().getName() + "!");
+				this.logInfo("* " + _entity.getName() + ": 使用撕裂，目标: " + this.m.TargetTile.getEntity().getName() + "!");
 			}
 
 			this.m.Skill.use(this.m.TargetTile);

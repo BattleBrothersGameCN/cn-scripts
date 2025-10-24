@@ -7,11 +7,11 @@ this.win_against_x_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.win_against_x";
 		this.m.Duration = 14.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "让我们先把小规模战斗放一边，去击败至少一打敌人。 \n这就是我们的名字将在这片土地上广为人知的原因！";
+		this.m.ButtonText = "我们先把小规模战斗放一边，去击败至少一打敌人。 \n唯有如此，我们的名号才能在这片土地上响彻四方！";
 		this.m.RewardTooltip = "胜利时额外获得150名望。";
 		this.m.UIText = "一战战胜至少12名敌人";
-		this.m.TooltipText = "一战战胜至少12名敌人，无论杀死打跑，也无论是否在合同之内。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_22.png[/img]你的敌人死的死，逃的逃，%bravest_brother%挥舞着战团的旗帜以示庆祝。%SPEECH_ON%%companyname%的又一场战斗，%companyname%的又一场胜利！%SPEECH_OFF%沙哑的欢呼声在他周围回响。不久，你发觉这场战斗成了十里八乡的谈资。每当兄弟们在酒馆里休息，他们发现，只要讲起这场战斗，就有人请他们酒喝。越是添油加醋，敬酒的人就越多。";
+		this.m.TooltipText = "一战战胜至少12名敌人，无论杀死还是击溃，也无论是否在合同之内。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_22.png[/img]你的敌人死的死，逃的逃，%bravest_brother%挥舞着战团的旗帜以示庆祝。%SPEECH_ON%%companyname%的又一场战斗，%companyname%的又一场胜利！%SPEECH_OFF%四周顿时响起震耳欲聋的欢呼。不久后，你们发现这场战役已成为当地城镇乡村的热议话题。每当战团在沿途酒馆驻足，只要提起那场战役的故事，总有人慷慨赠饮——而故事越是绘声绘色，酒水便越是源源不断。";
 		this.m.SuccessButtonText = "还有谁敢阻挡我们？";
 	}
 
@@ -62,7 +62,7 @@ this.win_against_x_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.m.SuccessList.push({
 			id = 10,
 			icon = "ui/icons/special.png",
-			text = "取胜时会获得额外名望"
+			text = "胜利时会获得额外名望"
 		});
 	}
 

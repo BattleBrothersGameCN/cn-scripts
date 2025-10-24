@@ -175,7 +175,7 @@ this.ai_defend <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Waiting until others have moved!");
+				this.logInfo("* " + _entity.getName() + ": 等待直到其他人移动！");
 			}
 
 			return true;
@@ -209,7 +209,7 @@ this.ai_defend <- this.inherit("scripts/ai/tactical/behavior", {
 
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Going for defensive position.");
+					this.logInfo("* " + _entity.getName() + ": 前往防御位置。");
 				}
 
 				this.m.IsFirstExecuted = false;
@@ -229,14 +229,14 @@ this.ai_defend <- this.inherit("scripts/ai/tactical/behavior", {
 			{
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Waiting until others have moved!");
+					this.logInfo("* " + _entity.getName() + ": 等待直到其他人移动！");
 				}
 			}
 			else
 			{
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Holding defensive position.");
+					this.logInfo("* " + _entity.getName() + ": 坚守防御位置。");
 				}
 
 				this.getAgent().getIntentions().IsRecuperating = true;

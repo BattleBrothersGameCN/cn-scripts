@@ -90,7 +90,7 @@ this.behavior <- {
 			if (this.Const.AI.BenchmarkMode && !_entity.isPlayerControlled())
 			{
 				local timeTaken = this.Time.getExactTime() - startTime;
-				this.logInfo("[] Evaluating " + this.Const.AI.Behavior.Name[this.getID()] + " took " + timeTaken + " seconds. Frame: " + this.Time.getFrame());
+				this.logInfo("[]评估" + this.Const.AI.Behavior.Name[this.getID()] + "耗时" + timeTaken + "秒.帧号:" + this.Time.getFrame());
 			}
 
 			if (score != null)
@@ -112,7 +112,7 @@ this.behavior <- {
 			if (this.Const.AI.BenchmarkMode && !_entity.isPlayerControlled())
 			{
 				local timeTaken = this.Time.getExactTime() - startTime;
-				this.logInfo("[] Evaluating " + this.Const.AI.Behavior.Name[this.getID()] + " took " + timeTaken + " seconds. Frame: " + this.Time.getFrame());
+				this.logInfo("[]评估" + this.Const.AI.Behavior.Name[this.getID()] + "耗时" + timeTaken + "秒.帧号:" + this.Time.getFrame());
 			}
 
 			return true;

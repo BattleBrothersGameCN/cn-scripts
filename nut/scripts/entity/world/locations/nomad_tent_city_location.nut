@@ -2,7 +2,7 @@ this.nomad_tent_city_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "一大片花花绿绿的游牧民帐篷，在沙漠中聚集着。";
+		return "一大片花花绿绿的游牧民棚屋与帐篷。";
 	}
 
 	function create()

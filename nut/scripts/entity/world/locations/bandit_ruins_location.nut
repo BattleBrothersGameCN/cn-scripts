@@ -6,7 +6,7 @@ this.bandit_ruins_location <- this.inherit("scripts/entity/world/location", {
 
 		if (isSouthern)
 		{
-			return "这些古老的遗迹把它们的影子远远地投在周围的沙子上。";
+			return "这座古老废墟在沙海里投下绵长的阴影。";
 		}
 		else
 		{

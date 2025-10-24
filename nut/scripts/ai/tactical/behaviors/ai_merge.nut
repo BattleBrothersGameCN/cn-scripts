@@ -137,7 +137,7 @@ this.ai_merge <- this.inherit("scripts/ai/tactical/behavior", {
 			{
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Waiting for others to act!");
+					this.logInfo("* " + _entity.getName() + "：等待他人行动！");
 				}
 
 				return true;

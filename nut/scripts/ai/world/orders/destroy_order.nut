@@ -85,7 +85,7 @@ this.destroy_order <- this.inherit("scripts/ai/world/world_behavior", {
 			return true;
 		}
 
-		_entity.setOrders("Destroying");
+		_entity.setOrders("摧毁中");
 
 		if (this.m.Start == 0.0)
 		{
@@ -102,7 +102,7 @@ this.destroy_order <- this.inherit("scripts/ai/world/world_behavior", {
 					if (this.World.Assets.isPermanentDestruction() && !e.isSouthern())
 					{
 						local news = this.World.Statistics.createNews();
-						news.set("City", e.getName());
+						news.set("城市", e.getName());
 						this.World.Statistics.addNews("crisis_greenskins_town_destroyed", news);
 						this.World.FactionManager.addGreaterEvilStrength(this.Const.Factions.GreaterEvilStrengthOnTownDestroyed);
 						e.setActive(false);

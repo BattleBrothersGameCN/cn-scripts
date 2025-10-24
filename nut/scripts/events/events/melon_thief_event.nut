@@ -7,7 +7,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.melon_thief";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
@@ -140,7 +140,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "非常好。 欢迎加入 %companyname%！",
+					Text = "非常好。欢迎加入%companyname%！",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);

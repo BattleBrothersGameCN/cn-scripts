@@ -52,7 +52,7 @@ this.event <- {
 			}
 		}
 
-		this.logError("屏幕 \'" + _id + "事件“\'”未找到" + this.m.ID + "\'.");
+		this.logError("Screen \'" + _id + "\' not found for event \'" + this.m.ID + "\'.");
 		return null;
 	}
 

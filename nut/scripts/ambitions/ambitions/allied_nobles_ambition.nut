@@ -5,7 +5,7 @@ this.allied_nobles_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.allied_nobles";
 		this.m.Duration = 40.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "我们应赢得一个贵族家族的信任，成为他们的盟友。\n他们自然会与好朋友分享他们殷实的军械库里的宝贝。";
+		this.m.ButtonText = "我们应赢得一个贵族家族的信任，成为他们的盟友。\n他们当然会愿意和好朋友分享军械库里的宝贝。";
 		this.m.RewardTooltip = "你将被授予结盟的贵族家族独有的装备";
 		this.m.UIText = "与一个贵族家族达成“盟友”关系";
 		this.m.TooltipText = "通过履行派系成员的合同，将与任一贵族家族的关系提升至“盟友”。半途而废或背叛他们会降低你们的关系。";

@@ -18,7 +18,7 @@ this.combat_manager <- {
 
 		if (!p1.isAttackable() || !p2.isAttackable())
 		{
-			this.logError("对象不能被攻击！");
+			this.logError("Entity cannot be attacked!");
 			return;
 		}
 

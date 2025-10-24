@@ -78,7 +78,7 @@ this.ai_attack_swing <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode && !this.m.TargetTile.IsEmpty)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using Swing against " + this.m.TargetTile.getEntity().getName() + "!");
+				this.logInfo("* " + _entity.getName() + ": 使用挥舞，目标: " + this.m.TargetTile.getEntity().getName() + "!");
 			}
 
 			this.m.Skill.use(this.m.TargetTile);

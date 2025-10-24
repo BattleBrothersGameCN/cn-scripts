@@ -7,7 +7,7 @@ this.cat_on_tree_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.cat_on_tree";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

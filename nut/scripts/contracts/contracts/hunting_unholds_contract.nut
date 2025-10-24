@@ -46,7 +46,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"猎杀巨魔，大概在 " + this.Contract.m.Home.getName()
+					"猎杀巨魔，大概在" + this.Contract.m.Home.getName()
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -94,7 +94,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "巨魔", false, this.Const.World.Spawn.Unhold, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				}
 
-				party.setDescription("一个或多个笨拙的巨人。");
+				party.setDescription("一个或多个笨重的巨人。");
 				party.setFootprintType(this.Const.World.FootprintsType.Unholds);
 				party.setAttackableByAI(false);
 				party.setFootprintSizeOverride(0.75);
@@ -232,14 +232,14 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_79.png[/img]{当你进入 %employer%的房间你见到他在床边附身，带着一种几乎预谋着什么似的畏缩看着外面。 他眯着眼，然后睁开，然后又眯起来。 他啪地拉上窗帘并猛地转头看向你。%SPEECH_ON%你不会碰巧看到一个非常愤怒的女人正在过来，对吧？ 啊，不要在意。看看这个。%SPEECH_OFF%他丢给你一张卷轴，而你卷开了它。 上面粗糙的画着看起来像是个男人弓着背俯视一个蚂蚁或者某种昆虫。 你不太能辨别。%employer% 拍拍手。%SPEECH_ON%本地的农夫报告有牲口失踪。 他们只找到些足够人摆个棺材那么大的脚印。 我这听起来觉得像是道听途说散布谣言，可能是竞争对手在试着隐瞒犯罪，但我会交给你判断。 搜寻周围的领地并看看能找到什么。 如果你真的遇到个巨人我想你知道该做什么。%SPEECH_OFF% | 你见到 %employer% 坐在他的办公桌旁，似乎和村里一半的农夫在开会。 他们弓身在卷轴前并在纸上留下铅印，画着看起来像巨人或者带角的胖子。 一个人画着个火柴人操着另一个火柴人。%employer% 丢给你一张更启示性的一页，上面画着一个怪物的面容。%SPEECH_ON%这些好先生们跟我说有个巨人在附近。 我不想怀疑我同僚们的顾虑并因此寻求你的服务，佣兵。 钱已经在桌子上了，你要做的只是搜寻 %townname% 附近的领地并找到这个怪兽。你怎么说？%SPEECH_OFF% | 你见到 %employer% 挡着一群农民。 他们带着草叉和没点燃的火把进到了他的房间，他得不停的警告他们不要点火把，以免把这纯木建筑点着了。 看到你，%employer% 像个掉到水里的人喊救生筏一样向你喊道。%SPEECH_ON%佣兵！天啊快过来。 这些人说有个野兽出现了。%SPEECH_OFF%其中一个农民用他的草叉重重地咚了下地面。%SPEECH_ON%不，不是什么寻常野兽，但是个怪物吧？ 一个巨人！一个大只佬。一只大只佬巨人。 在外面。就在那边。我见到过它。%SPEECH_OFF%叹口气同时点了个头，%employer% 回到对话中。%SPEECH_ON%好。所以呢，我愿意拿出一份钱雇你去找这个巨人。 你愿意接吗？%SPEECH_OFF% | %employer% 坐在办公桌边手抱着头。 他在轻声自言自语。%SPEECH_ON%这个说怪物，那个野兽。 “噢我的鸡被拿了”，噢或许你应该考虑下把它放到个笼子里你该死的－噢，嗨，佣兵！%SPEECH_OFF%他从椅子上站起来，扔给你一张纸。 上面粗糙的画着一只头很大的野兽。%SPEECH_ON%人们报道有个巨人在这片区域游荡。 我会开个好价钱来雇人好好调查这些报告，当然还有解决这个野兽的丰厚报酬。 你能行吗？求你了给我个肯定的回答。%SPEECH_OFF% | %employer% 不情愿的欢迎你进入他的房间，假装他不需要你的帮助，尽管显然他完全不想要。%SPEECH_ON%啊，佣兵。通常来说 %townname% 这样的地方不会找你们这种人，但我想恐怕有巨魔被目击到在这片区域游荡，偷了足够多的牲口以至人们集起了一波钱来雇一个像你一样的人。 有兴趣捕猎这头肮脏的生物吗？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_79.png[/img]{你走进%employer%的房间，发现他正弓着身子站在窗边，神情紧张地向外窥视。他眯着眼睛又突然睁大，如此反复几次，最后猛地拉上窗帘转头看向你。%SPEECH_ON%你不会正好看见有个怒气冲冲的女人往这边来吧？算了不说这个。看看这个。%SPEECH_OFF%他扔给你一卷羊皮纸，你展开看到一幅粗糙的画作：像是个男人弯腰对着蚂蚁或什么虫子——实在看不出来到底是什么。%employer%拍手道。%SPEECH_ON%农户们都在报告牲畜失踪，只找到能躺进棺材的脚印。 我看像是谣言，说不定是竞争对手想掩盖自己干的坏事。不过交给你查探了，在周边搜查看看，若真碰上巨人——你知道该怎么做。%SPEECH_OFF% | 你见到%employer%时，他正和半个村的农户围在桌边。他们趴在羊皮纸上用铅条画着像长角巨人或胖子的图案。有个家伙甚至在画火柴人交媾的涂鸦。%employer%递来一张更清晰的怪物画像。%SPEECH_ON%这些先生说有巨人出没。我不想质疑乡亲们的忧虑，所以雇佣你，佣兵。钱在桌上，只需在%townname%周边找出这畜生。意下如何？%SPEECH_OFF% | 你见到%employer%正在应付一群闯进房间的农民——他们拿着干草叉和未点燃的火把，他不断警告别在木屋里点火。见到你时，%employer%像溺水者看到浮木般呼喊。%SPEECH_ON%佣兵！天啊快过来。 这些人说出现了野兽。%SPEECH_OFF%其中一个农民用他的草叉重重地往地面一跺。%SPEECH_ON%不是普通野兽，是大家伙！巨人！我亲眼瞅见的！%SPEECH_OFF%%employer%叹着气接过话。%SPEECH_ON%好吧。我出钱请你去追查这个巨人，接不接这活儿？%SPEECH_OFF% | %employer%正双手抱头坐在桌前喃喃自语。%SPEECH_ON%这个说怪物，那个说野兽。‘噢我的鸡被偷了’——哦也许你该把鸡关进笼子，你这没脑子的蠢……啊佣兵你好！%SPEECH_OFF%他从椅子上站起来，扔给你一张纸。 上面粗略地画着个大头怪物。%SPEECH_ON%乡亲们说这带有个巨人游荡。我出钱请你调查，要是真找到也一并解决掉。你接这活吗？求你说接。%SPEECH_OFF% | %employer%不情不愿地迎你进屋，装出一副不需要帮忙的样子，虽然很明显他压根就不想找你。%SPEECH_ON%佣兵啊，像%townname%这样的地方很少和你这类人搭上关系，但恐怕确实有巨魔在这片土地上掠夺，偷走了大量牲畜，镇民们已经凑齐了钱款，特地请来了你这样的人物。有兴趣猎杀这头肮脏的生物吗？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{与巨人战斗可不便宜。 | %companyname%可以帮忙，只要价钱合适。 | 让克朗说话。}",
+					Text = "{与巨人战斗可不便宜。 | %companyname%可以帮忙，只要价钱合适。 | 佣金是多少？}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -247,7 +247,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这听起来不像是适合我们的工作。 | 这不值得冒险。}",
+					Text = "{听起来这活不适合我们。 | 这风险不值当。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -264,7 +264,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Banter",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{%randombrother% 侦查完回来。 他报告说附近的一个农场被摧毁了，一个洞捅穿了它的屋顶像什么人踢了个蚁丘一样。 你问他有没有幸存者。他点头。%SPEECH_ON%某种程度上。一个拒绝说一句话的小伙子。 一个不停叫我滚的女人。除此之外，没有。 他们是出于情境和运气幸存下来的。 这个世界不会允许他们在这呆多久。%SPEECH_OFF%你告诉这个佣兵把这判断留在心里并让战团再次继续前进。 | 你在路边见到半头牛。 它比起屠宰更多的是被巨大的暴力不均的扯开。 它的大部分内脏滑到了地上堆成一团。 坟墓大小的脚印领向别处。 这场屠杀的踪迹穿过一段被粉碎的栅栏，沿着踪迹望去你能看到一个谷仓的废墟。%randombrother% 笑道。%SPEECH_ON%我们救差一大坨屎了。%SPEECH_OFF%你告诉他检查它的靴子。 | 几个路上遇到的农民警示你。%SPEECH_ON%离开这里！ 那盔甲连舔一下都挡不住！%SPEECH_OFF%你问他们巨魔的事而他们的说辞总结起来描述了一个怪物般的巨人不久前刚一路破坏过这片区域。 看起来你的方向没错。 | 巨魔留下了一团糟。 牲口被踩扁，别的被破碎并像被吸过蜜般。 鸡在地上啄着，一个农夫看着他们。他点头。%SPEECH_ON%刚好错过。%SPEECH_OFF%看来你在接近了。}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{%randombrother%侦查完回来报告称，附近的农庄已遭摧毁，屋顶被开了个大洞，看着就像被踹了一脚的蚂蚁窝。你询问是否有幸存者，他点头。%SPEECH_ON%算有吧。有个不肯开口的男孩，还有个一直冲我喊滚开的女人。除此之外……没了。他们能活下来全凭运气，这世道容不得他们继续呆下去。%SPEECH_OFF%你让这名佣兵收起评判，转而带队继续前进。 | 你在路边发现半头牛尸，并非经宰割而是被以极暴力的方式撕扯得不成形状，内脏泼洒满地。墓穴大小的足迹延伸向远处，残骸轨迹穿过支离破碎的栅栏，谷仓的残骸在前方隐约可见。%randombrother%笑道。%SPEECH_ON%现在就缺堆巨人屎了。%SPEECH_OFF%你让他先瞧瞧自己靴底。 | 几个路上遇到的农民警示你。%SPEECH_ON%赶紧离开！ 这身铠甲顶不住它舔一口！%SPEECH_OFF%你追问巨魔踪迹，他们生动描述不久前肆虐此地的庞然巨物——看来没找错路。 | 巨魔所过之处狼藉一片：牲畜被踩成肉泥，有些则像嗦花蜜般被吸食殆尽。散养的鸡群仍在啄食地面，看守的农夫点头示意。%SPEECH_ON%好戏刚散场。%SPEECH_OFF%看来离目标不远了。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -281,7 +281,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Encounter",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_104.png[/img]{巨魔们让你部分回想起任何一群工人，围着灭了的篝火，挠着肚子并弓着身像块石头一样躺在地上。 当然，你的到来使它们起身并摧毁了任何你和它们间的相似处，或许除了差不多大小的第三条腿。 怪兽吼着跺脚，但它们没有进攻。 它们伸出手并试图轰走你。 但是 %companyname% 大老远到这里不是来放弃的。 你拔出你的剑并带领伙计们前进。 | 每一只巨魔无比巨大。 它们对前来交战的蚂蚁感到困惑。 其中一只挠着头欢快的打了个嗝，牛血如雨点洒向战团。 不过看起来它们认出了你手中的钢剑，上面的反光将它们从饱睡中惊醒。 地震般的跺脚后，它们冲过来把你赶出地盘，或者赶到地盘的地里。 | %companyname% 全员头脚相叠仍然无法比肩一只巨魔。 但你就站在这里，挥着剑准备与这些巨兽交战。 它们难以置信的看着你，不知道拿群这么想面对它们的小生物怎么办。 其中一只挠挠肚皮，狗大小的皮屑下起了雪。 好吧，继续在这上面计较也没什么意义。 你命令战团前进！ | 巨魔闻到了你并主动冲出来面对 %companyname%。它们看起来如同学步的小孩，只是像山一样，腿难堪地向前爬动着但每一步从脚底传来震动，它们大嘴张开好像见到大餐般留着口水。 你冷静的拔出你的剑并让伙计们组成阵型。}",
+			Text = "[img]gfx/ui/events/event_104.png[/img]{这些巨魔围坐在熄灭的篝火旁揉着肚皮的模样，乍看就像群蹲在地上的劳工。当然，你们的出现立刻让它们起身，彻底打破了任何与人类的相似感，或许除了尺寸相当的第三条腿。 巨兽们低吼跺脚却未立即进攻，反而挥舞手臂试图赶走你。 但%companyname%大老远而来岂会空手而归。 你利剑出鞘，率领众人向前逼近。 | 每头巨魔都庞大得无以伦比。它们困惑地打量着这些敢来挑战的蝼蚁。其中一只挠头时随意打了个嗝，溅得战团成员满身牛血。 不过闪烁的剑光终于让它们从饱食后的慵懒中清醒。随着震天动地的跺脚，它们迈步上前，要将你们逐出这片土地——或直接踏进泥土里。 | 就算%companyname%全员叠罗汉也抵不上一头巨魔的高度。然而此刻你们竟挥舞刀剑准备与这些庞然大物交锋。它们们投来难以置信的目光，不明白这些渺小生物何来的勇气。其中一只挠了挠肚皮，掉落的皮屑竟有狗那么大。罢了，现在不是犹豫的时候。你当即下令全队进攻！ | 巨魔嗅到气息，横越原野冲向%companyname%。它们如同山峦大小的幼童，笨拙迈步却震得大地颤动，张开的巨口垂着涎液准备饱餐一顿。你冷静地拔剑出鞘，指挥队伍列阵迎敌。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -299,7 +299,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "DriveThemOff",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_104.png[/img]{你正让伙计们组成阵型，%shouter% 跑过你直接冲向了巨魔。 他大声呼喊，他像个蠢货般甩着手臂。 巨魔们停了下来互相看了看。 你不确定该不该让他继续…}",
+			Text = "[img]gfx/ui/events/event_104.png[/img]{正当你指挥部队列阵时，%shouter%突然从你身旁跑过，径直冲向巨怪，他又是怪叫又是嘶吼，双臂乱挥得像条被钓钩拽上来的海怪。巨魔们停下动作面面相觑。你一时不知是否该放任他继续……}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -314,7 +314,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "%shouter% 知道他在做什么。",
+					Text = "%shouter%知道自己在做什么。",
 					function getResult()
 					{
 						if (this.Math.rand(1, 100) <= 35)
@@ -338,7 +338,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "DriveThemOffSuccess",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_104.png[/img]{比起更好的判断，你放手让 %shouter% 去做。 他完全没停下来，像他在追一群正为他脱衣的漂亮女人一样。 震惊的是，巨魔们后退了一步。 它们一个个开始撤退直到只剩一个巨魔。\n\n%shouter% 跑到他的脚边像只狂吠的狗一样发出些返祖的尖叫，如此刺耳以致你寻思是否每个埋在地里的祖先都听到了它。 巨魔摆手遮面好像要保护自己一样，然后开始后退，越来越远直到它离开！它们都跑了！}",
+			Text = "[img]gfx/ui/events/event_104.png[/img]{尽管心存疑虑，你还是放手让%shouter%去做。 他如同脱缰野马般狂奔不止，活像在追逐一群正为他宽衣解带的美女。令人震惊的是，巨魔们竟然后退了。它们接二连三地后撤，最后只剩一头巨魔留在原地。\n\n%shouter%如狂吠的小狗般冲到巨兽脚边，声音如此刺耳以致你寻思是否每个埋在地里的祖先都听到了它。 那巨人抡起巨臂护住面门，竟开始步步后退，越来越远，直至消失在视野中——它们全都被吓跑了！}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -358,7 +358,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Characters.push(this.Contract.m.Dude.getImagePath());
-				this.Contract.m.Dude.improveMood(3.0, "他一个人设法赶走了那些巨魔");
+				this.Contract.m.Dude.improveMood(3.0, "他设法一个人赶走了那些巨魔");
 
 				if (this.Contract.m.Dude.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -374,7 +374,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "DriveThemOffFailure",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_104.png[/img]{比起更好的判断，你放手让 %shouter% 去做。 他完全没停下来，像他在追一群正为他脱衣的漂亮女人一样。 震惊的是，巨魔们后退了一步。 它们一个个开始撤退直到只剩一个巨魔。\n\n%shouter% 跑到他的脚边像只狂吠的狗一样发出些返祖的尖叫，如此刺耳以致你寻思是否每个埋在地里的祖先都听到了它。 巨魔摆手到面前然后把它甩向 %shouter% 拍飞了他。 他在空中翻滚起来而他的尖叫伴随他一起像被老鹰抓住的兔子一般。 他空翻着的尖叫声回响在空中直到它砰地一声重重的摔在地上。 巨人轻声笑到发抖。 这场闹剧吸引了刚离开的巨魔们的注意，它们全部转过身开始走回来。}",
+			Text = "[img]gfx/ui/events/event_104.png[/img]{尽管心存疑虑，你还是放手让%shouter%去做。 他如同脱缰野马般狂奔不止，活像在追逐一群正为他宽衣解带的美女。令人震惊的是，巨魔们竟然后退了。它们接二连三地后撤，最后只剩一头巨魔留在原地。\n\n%shouter%如狂吠的小狗般冲到巨兽脚边，声音如此刺耳以致你寻思是否每个埋在地里的祖先都听到了它。 那巨人抡起巨臂护住面门，随即猛地挥下，像拍苍蝇般将%shouter%扫飞出去。 他那人如同被苍鹰掳走的兔子般在空中翻滚，凄厉的惨叫随之划破长空。当他在远处砰然坠地时， 巨人发出沉闷如大地震颤的嗤笑。这笑声引得撤离的巨魔们纷纷驻足，晃晃悠悠地折返回来。}",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -408,7 +408,7 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 					icon = injury.getIcon(),
 					text = this.Contract.m.Dude.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				this.Contract.m.Dude.worsenMood(1.0, "他一个人没能赶走那些巨魔");
+				this.Contract.m.Dude.worsenMood(1.0, "他没能赶走那些巨魔");
 
 				if (this.Contract.m.Dude.getMoodState() <= this.Const.MoodState.Neutral)
 				{
@@ -424,12 +424,12 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Victory",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_113.png[/img]{巨魔们被消灭了，你命令伙计们尽所能收集战利品作为你完成工作的证明，而且可能还可以自己用来干点什么。 如果人能用牛皮制革，这些巨人肯定也有什么有价值的东西？ 不论如何，%employer% 还等着呢。 | 巨人们全部被消灭了，%employer% 应该在等你回去了。 他的城镇现在永远安全了并且不再需要你这样的佣兵。 你思索了一阵直到你开始笑起来，你的人向你投以无法理解的目光。 你告诉他们无视它并整队好开始回程。 | 可怕的怪物们战斗的很顽强，但他们斗不过 %companyname% 的集体力量，才智和蛋蛋尺寸。你告诉伙计们尽可能收集战利品准备回程去找 %employer%。 | 最后一只巨魔被消灭，你点了点名。%randombrother% 正在其中一只的肚皮上弹跳并在你告诉他下来的时候有点失望。%employer% 想看到的是杀手和他们的战利品，不是一群儿童。}",
+			Text = "[img]gfx/ui/events/event_113.png[/img]{巨魔尽数伏诛，你下令让士兵们尽可能收集战利品作为成果证明——这些庞然巨物的皮毛骨骼或许还能另作他用。既然人类能用牛皮制革，这些巨兽身上定有更珍贵的材料？无论如何？%employer%还在等着。 | 随着最后一头巨人轰然倒地，%employer%此刻应当正等候你们的凯旋。他的城镇将重获安宁，不再需要你这类佣兵的服务。这个念头让你忍不住迸发出一阵大笑，在队员们困惑的注视中，你摆手命他们整队踏上归途。 | 可怖的巨怪负隅顽抗，却终究难敌%companyname%的合力——无论是力量、智谋还是胆识。你命令伙计们携带战利品作为证明，准备向%employer%折返。 | 最后一只巨魔毙命后，你开始清点队伍。发现%randombrother%正在巨怪的肚皮上蹦跳着，在你厉声喝止时露出悻悻之色。%employer%期待看到的是提着战利品的屠夫，而非一群嬉闹的稚童。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "是时候拿报酬了。",
+					Text = "是时候去拿报酬了。",
 					function getResult()
 					{
 						return 0;
@@ -441,12 +441,12 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SignsOfAFight",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_113.png[/img]{巨人们被消灭，你让伙计们准备回程去找 %employer%，但 %randombrother% 喉间的颤抖吸引了你的注意力。 你走过去看到他站在一只倒下的巨魔前。 他指向它的血肉，撕开成片并像玉米穗般耷拉着。 这种伤害远超过你武器的能力。 这位佣兵转过身来，眼睛睁地大大的。%SPEECH_ON%你觉得那是什么东西干的？%SPEECH_OFF%继续看着皮肤，有碟状的凹陷伤痕，穿刺的地方留下了一个洞。 你爬到巨魔身上并把你的剑插进其中一个孔，翘出来一颗同你前臂差不多长的牙齿。 它的边上有倒刺，牙叠牙。 伙计们看到了这一切并互相窸窣讨论起来，而你希望自己没有这个发现因为你完全无法想象或理解。}",
+			Text = "[img]gfx/ui/events/event_113.png[/img]{巨人们倒下后，你正准备带领队员们返回%employer%处复命，%randombrother%却声音发颤地叫住了你。你走过去，见他正站在一具巨魔尸体前，指着那些被撕裂的皮肉——伤口如同玉米秆般层层垂落，这种破坏力远非我们手中兵器所能及。这名佣兵转头望向远处，瞳孔骤然放大。%SPEECH_ON%你觉得这是什么东西干的？%SPEECH_OFF%顺着皮肤上的痕迹望去，可见凹陷的碟状疤痕，中央还带着穿透的孔洞。你爬上巨魔身躯，将长剑卡进一处凹痕奋力撬动，竟挖出半截前臂长度的獠牙。齿缘布满倒刺，仿佛在獠牙上又生出新的利齿。队员们见状窃窃私语，而你宁愿从未目睹这一切——因为眼前的现象已超出常理可解的范畴。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "荒野黑暗且充满了恐怖。",
+					Text = "荒野黑暗而危机四伏。",
 					function getResult()
 					{
 						return 0;
@@ -462,19 +462,19 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_79.png[/img]{%employer% 欢迎你归来，几乎立刻说他从你离开起再没听到任何关于巨魔的故事。 你点头并给出缘由的证据，巨人们油滑的遗体噼里啪啦的被你倒在他的地板上。 木头被染得好像你铺了张地毯。 这位镇长咬了咬嘴唇。%SPEECH_ON%你妈的，佣兵？%SPEECH_OFF%你翘首扬起眉头。 他让手耷拉下去并略微屈腰。%SPEECH_ON%啊，别担心！一切都很好！ 这儿，你的报酬，谈好的！%SPEECH_OFF% | 你回到 %employer% 这儿发现他在跟小孩讲故事。 他的手抓过空气并像个野兽一样咆哮。 敲了敲门，你侵入了这个剧场。%SPEECH_ON%好，然后无比荣誉的佣兵消灭了怪物！%SPEECH_OFF%孩子们向你适时的到来发出欢呼。 这位镇长起身交给你约定的报酬，说他有个哨兵一路跟着你并且它已经听过了你成功的消息。 他问你要不要呆一会给孩子们讲讲故事。 你告诉他你不会免费干活并离开了房间。 | 你在镇子里找了一阵才找到 %employer%，他被一个躲在被子里的年轻女孩赶起身站在房间里。 这位镇长快速的着装，没有因他的裸体有一丝顾虑。 他把一个硬币弹向女孩然后和你说道。%SPEECH_ON%啊，佣兵，我正等着你呢！ 你的赏金，如同约定的！%SPEECH_OFF%他把钱袋交给你，但一块硬币滑出来掉到地板缝里了。 他咬了咬嘴唇然后跑到女孩边上从手里取回硬币并把它放到了袋子里。 | %employer% 在与农民们争论未交的税以及领主会怎样不择手段的拿到他们的钱。 你这样全副武装的人的到来显得恰到好处并让几个农民忙着去拿他们的钱袋。 你告诉他们安静下来然后要镇长去拿你的报酬。 他从抽屉里把它取了出来，只停下来好把一个农民手里的钱币倒进去灌满它，然后他把它交给了你。%SPEECH_ON%感谢你的工作，佣兵。%SPEECH_OFF% | 你向 %employer% 报告了你的工作而他，令人意外的毫无疑问。%SPEECH_ON%好，我有个哨兵跟着你的队伍而且他在你之前回到了镇子里。 你们俩的每个词都对得上。 Your pay, as promised.%SPEECH_OFF%他交给你一个袋子。}",
+			Text = "[img]gfx/ui/events/event_79.png[/img]{你刚回来%employer%就迎了上来，开口就说自从你离开后，再没听过巨魔肆虐的消息。你点头掏出证据，——将巨怪的残骸倒到他地板上，木质地板顿时像铺了层污秽地毯般。镇长抿紧嘴唇。 镇长咬了咬嘴唇。%SPEECH_ON%搞什么鬼，佣兵？%SPEECH_OFF%你歪头挑眉。他立刻摆手躬身。%SPEECH_ON%啊，别介意！没事了！给，说好的酬金！%SPEECH_OFF% | 你去找%employer%时，发现他正在给小孩们讲故事。他张牙舞爪地模仿野兽咆哮。你的敲门声打断了他的表演。%SPEECH_ON%看啊，英勇的佣兵们斩杀了怪物！%SPEECH_OFF%孩子们为你的适时出现欢呼。镇长起身递来约定的赏金，坦言派了探子全程跟进，早已知晓战果。他问是否愿意给孩子们讲讲经历，你丢下句\"我不白打工\"便转身离去。 | 你在镇上找了半天才见到%employer%，他正和一位年轻女郎躲在被窝里，被你撞个正着的镇长毫不在意，当着你的面穿上衣服，还朝女孩抛了枚硬币，转身对你说道%SPEECH_ON%啊，佣兵，我正等着你呢！ 说好的酬金在这！%SPEECH_OFF%他递来钱袋时漏了枚硬币掉进地板缝里。只见他抿嘴思索片刻，转身抢回刚给女孩的硬币塞回钱袋。 | %employer%正为欠税与农奴争执，扬言领主总有办法收到钱。全副武装的你适时出现，吓得农奴们慌忙掏出钱袋。你让他们安静，接着向镇长索要酬劳。他从抽屉取出钱袋，顺手从农奴手里抢了枚硬币填满袋口，这才递给你。%SPEECH_ON%辛苦你了，佣兵。%SPEECH_OFF% | 你向%employer%汇报战果，他竟然没有任何怀疑。%SPEECH_ON%我派了斥候尾随，他比你们先回镇。你说的每句话都对得上他的报告。给，约定好的报酬 Your pay, as promised.%SPEECH_OFF%说着便将钱袋递了过来。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "一场成功的狩猎。",
+					Text = "狩猎成功。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上的巨魔");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除城镇附近的巨魔");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -495,19 +495,19 @@ this.hunting_unholds_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SuccessPeaceful",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_79.png[/img]{%employer% 手指抚到眼角然后向前展开。%SPEECH_ON%让我理一理，你的一个佣兵把那些巨人叫跑了？%SPEECH_OFF%你点头并告诉他它们的方向，还挺重要的，是向着远离 %townname%。镇长卧在椅子上。%SPEECH_ON%好。那么好吧。我想这现在不是我的麻烦了。 死了或者走了，我想都一样。%SPEECH_OFF%他交给你一个袋子，但他额外抓了一会。%SPEECH_ON%你知道如果你在撒谎而且它们回来的话我会派出我所有的信鸽去宣传你的荣耀。%SPEECH_OFF%你起身，拔出剑，并跟他说它们到时候就可以拿他的头做窝了。 他点头并放开钱。%SPEECH_ON%别在意，佣兵，只是生意。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_79.png[/img]{%employer%用手指抵住眼角向前一划。%SPEECH_ON%让我捋捋，你手下的佣兵把巨人叫跑了？%SPEECH_OFF%你点头确认，并特意强调巨人撤退的方向确实远离了%townname%。镇长向后靠上椅背。%SPEECH_ON%行吧。反正现在不是我的麻烦了。死透还是跑路，横竖结果都一样。%SPEECH_OFF%他递来钱袋时故意抓住不放。%SPEECH_ON%要是你说谎，等它们杀回来，我保证用所有信鸽告诉别人你们的光辉事迹。%SPEECH_OFF%你猛然按剑起身，说等巨魔回来时正好可以用他的头骨当酒杯。镇长立即松手赔笑。%SPEECH_ON%别生气嘛佣兵，只是按规矩办事。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "一场成功的狩猎。",
+					Text = "狩猎成功。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上的巨魔");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除城镇附近的巨魔");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}

@@ -97,7 +97,7 @@ this.ai_attack_bow <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using " + this.m.SelectedSkill.getName() + " against " + this.m.TargetTile.getEntity().getName() + "!");
+				this.logInfo("* " + _entity.getName() + ": 使用" + this.m.SelectedSkill.getName() + "，目标: " + this.m.TargetTile.getEntity().getName() + "!");
 			}
 
 			this.m.SelectedSkill.use(this.m.TargetTile);

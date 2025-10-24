@@ -175,7 +175,7 @@ this.ai_engage_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": It\'s important that I get some distance from my opponents...");
+				this.logInfo("* " + _entity.getName() + "：与对手保持一定距离很重要…");
 			}
 
 			scoreMult = scoreMult * this.Math.maxf(this.getProperties().OverallDefensivenessMult * 0.5, this.m.CurrentDanger / this.Math.maxf(1.0, this.m.TargetDanger));
@@ -185,7 +185,7 @@ this.ai_engage_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Considering improving position since a clearly better one is right next to me...");
+				this.logInfo("* " + _entity.getName() + "：考虑改善位置，因为我旁边就有一个明显更好的地方…");
 			}
 
 			scoreMult = scoreMult * this.Const.AI.Behavior.RangedEngageImprovePosNearbyMult;
@@ -202,7 +202,7 @@ this.ai_engage_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Taking cover...");
+				this.logInfo("* " + _entity.getName() + "：寻找掩护...");
 			}
 
 			scoreMult = scoreMult * this.Math.maxf(1.0, this.Const.AI.Behavior.RangedEngageTakeCoverMult * this.Math.minf(3.0, (1.0 + this.getStrategy().getStats().EnemyRangedFiring) / (1.0 + this.getStrategy().getStats().AllyRangedFiring)) * this.getProperties().OverallDefensivenessMult);
@@ -237,7 +237,7 @@ this.ai_engage_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 				{
 					if (this.Const.AI.VerboseMode)
 					{
-						this.logInfo("* " + _entity.getName() + ": Waiting until others have moved!");
+						this.logInfo("* " + _entity.getName() + ": 等待直到其他人移动！");
 					}
 
 					this.m.TargetTile = null;
@@ -277,7 +277,7 @@ this.ai_engage_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Engaging into firing range over " + movement.Tiles + " tiles");
+				this.logInfo("* " + _entity.getName() + "：移动以进入射击范围" + movement.Tiles + "单元格");
 			}
 
 			this.m.IsFirstExecuted = false;
@@ -403,7 +403,7 @@ this.ai_engage_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 						this.m.TargetDist = this.Math.min(12, this.Math.max(this.Const.AI.Behavior.RangedEngageMinQueryRadius, _maxRange));
 						this.m.TargetTile = target.Tile;
 						this.m.TargetDanger = 0;
-						this.logDebug("No good tile in range, engaging in the general direction of the enemy!");
+						this.logDebug("找不到合适的位置，只能朝敌人大致方向前进并交战！");
 						return true;
 					}
 				}
@@ -793,7 +793,7 @@ this.ai_engage_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": In fact, I would prefer to remain where I am (new)");
+				this.logInfo("* " + _entity.getName() + "：事实上，我宁愿留在原地（新）");
 			}
 
 			this.m.TargetDist = 0;

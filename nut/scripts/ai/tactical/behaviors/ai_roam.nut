@@ -76,7 +76,7 @@ this.ai_roam <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Roaming.");
+				this.logInfo("* " + _entity.getName() + "：游荡中。");
 			}
 
 			navigator.findPath(_entity.getTile(), this.m.TargetTile, settings, 0);

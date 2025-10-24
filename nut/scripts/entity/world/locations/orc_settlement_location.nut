@@ -2,7 +2,7 @@ this.orc_settlement_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "一大片散发着恶臭的帐篷海，其中最大的是一个军阀的帐篷和王座室。这里是整个部落的家园，直到他们去其他地方狩猎和突袭。";
+		return "一大片散发着恶臭的帐篷海，其中最大的是军阀的帐篷和王座室。这里是整个部落的家园，直到他们去其他地方狩猎和突袭。";
 	}
 
 	function create()

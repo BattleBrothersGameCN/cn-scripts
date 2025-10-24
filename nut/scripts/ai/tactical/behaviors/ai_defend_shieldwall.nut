@@ -351,7 +351,7 @@ this.ai_defend_shieldwall <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Shieldwall!");
+			this.logInfo("* " + _entity.getName() + "：使用 盾墙！");
 		}
 
 		this.m.Skill.use(_entity.getTile());

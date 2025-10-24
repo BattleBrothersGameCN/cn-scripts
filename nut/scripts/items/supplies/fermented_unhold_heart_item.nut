@@ -5,7 +5,7 @@ this.fermented_unhold_heart_item <- this.inherit("scripts/items/supplies/food_it
 		this.food_item.create();
 		this.m.ID = "supplies.fermented_unhold_heart";
 		this.m.Name = "酵制巨魔心脏";
-		this.m.Description = "食物。曾是北方野蛮人国王用来壮阳的美食。这玩意尝起来非常糟糕。";
+		this.m.Description = "食物。曾是北方蛮王们为增强雄风而享用的珍馐，但其味道实在令人难以下咽。";
 		this.m.Icon = "supplies/inventory_provisions_19.png";
 		this.m.Value = 150;
 		this.m.GoodForDays = 20;

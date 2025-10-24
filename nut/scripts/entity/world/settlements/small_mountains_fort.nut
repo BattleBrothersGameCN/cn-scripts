@@ -27,7 +27,7 @@ this.small_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"峰顶垒",
 			"丘垒",
 			"灵运岗",
-			"一握垒",
+			"狮鹫垒",
 			"天空岗"
 		]);
 		this.m.DraftList = [

@@ -4,7 +4,7 @@ this.southern_light_shield <- this.inherit("scripts/items/shields/shield", {
 	{
 		this.shield.create();
 		this.m.ID = "shield.southern_light_shield";
-		this.m.Name = "阿达尔加盾";
+		this.m.Name = "阿达加盾";
 		this.m.Description = "一面使用皮革包覆，安有金属外框的轻型木制盾牌。凭借其尺寸提供了良好的远程防护，可惜不算坚固。";
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;

@@ -178,7 +178,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Archer.improveMood(1, "展示了他的射箭技术");
+				_event.m.Archer.improveMood(1, "展现了射箭的身手");
 
 				if (_event.m.Archer.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -223,7 +223,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "这是为大家好。",
+					Text = "这是为他们自己好。",
 					function getResult( _event )
 					{
 						return 0;
@@ -235,7 +235,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Clown.getImagePath());
 				this.Characters.push(_event.m.Archer.getImagePath());
-				_event.m.Clown.worsenMood(1.0, "请求被拒绝");
+				_event.m.Clown.worsenMood(1.0, "被驳回了请求");
 
 				if (_event.m.Clown.getMoodState() < this.Const.MoodState.Neutral)
 				{
@@ -257,7 +257,7 @@ this.archery_stunt_event <- this.inherit("scripts/events/event", {
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral && this.Math.rand(1, 100) <= 10 && !bro.getSkills().hasSkill("trait.bright") && !bro.getSkills().hasSkill("trait.fainthearted"))
 					{
-						bro.worsenMood(1.0, "没有得到他所希望的娱乐");
+						bro.worsenMood(1.0, "没找成乐子");
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

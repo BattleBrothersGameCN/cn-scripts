@@ -2,7 +2,7 @@ this.nomad_hidden_camp_location <- this.inherit("scripts/entity/world/location",
 	m = {},
 	function getDescription()
 	{
-		return "游牧民把他们的营地藏得很好，以避免不期而遇的访客或城邦的追兵。";
+		return "游牧民把他们的营地藏得很好，以避免不速之客或城邦的追兵。";
 	}
 
 	function create()

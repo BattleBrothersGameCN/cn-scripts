@@ -5,7 +5,7 @@ this.scale_armor <- this.inherit("scripts/items/armor/armor", {
 		this.armor.create();
 		this.m.ID = "armor.body.scale_armor";
 		this.m.Name = "鳞甲";
-		this.m.Description = "一件套有层叠无袖鳞甲的小号链甲衫。";
+		this.m.Description = "一件在链甲内衬上层叠鳞片而成的无袖鳞甲。";
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;

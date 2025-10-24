@@ -433,7 +433,7 @@ this.ai_defend_rotation <- this.inherit("scripts/ai/tactical/behavior", {
 
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Rotation!");
+			this.logInfo("* " + _entity.getName() + "：使用 换位！");
 		}
 
 		this.m.Skill.use(this.m.TargetTile);

@@ -93,7 +93,7 @@ this.send_barbarian_ambushers_action <- this.inherit("scripts/factions/faction_a
 		local mult = this.World.FactionManager.isCivilWar() ? 1.1 : 1.0;
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "野蛮人", false, this.Const.World.Spawn.Barbarians, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("一支野蛮部落的战团。");
+		party.setDescription("一支野蛮人战团。");
 		party.setFootprintType(this.Const.World.FootprintsType.Barbarians);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().Money = this.Math.rand(0, 50);

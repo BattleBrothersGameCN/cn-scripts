@@ -4,13 +4,13 @@ this.named_nordic_helmet_with_closed_mail <- this.inherit("scripts/items/helmets
 	{
 		this.named_helmet.create();
 		this.m.ID = "armor.head.named_nordic_helmet_with_closed_mail";
-		this.m.Description = "这顶护面北欧盔工艺出众，外观和防护能力俱佳，令人久久不能忘怀。";
+		this.m.Description = "这顶带面甲的北欧盔工艺出众，其防护性能与外观同样出众。";
 		this.m.NameList = [
 			"海寇盔",
 			"枭盔",
-			"装饰北欧盔",
+			"带饰北欧盔",
 			"酋长盔",
-			"蚀刻北欧盔",
+			"雕纹北欧盔",
 			"贵族北欧盔"
 		];
 		this.m.ShowOnCharacter = true;

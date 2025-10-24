@@ -61,7 +61,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"把强盗逐出" + this.Flags.get("DestinationName") + "(%origin%%direction%方)"
+					"把强盗逐出" + this.Flags.get("DestinationName") + "%origin%%direction%边的强盗"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -261,7 +261,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{多大的生意？ | %townname%愿拿多少买个安生？ | 谈谈价钱吧。}",
+					Text = "{多大的生意？ | %townname%准备拿多少钱买个安生？ | 谈谈价钱吧。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -269,7 +269,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{不感兴趣。 | 我们有更重要的事情要做。 | 我祝你好运，但我们不会参与其中。}",
+					Text = "{不感兴趣。 | 我们有更重要的事情要做。 | 祝你好运，但我们不会掺和此事。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -285,8 +285,8 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "AttackRobberBaron",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_54.png[/img]{在侦察强盗营地时，你注意到一个人的侧影，当地人几乎狂热地描述了他:那是%robberbaron%，这个引起恐慌的富豪嗑强盗。他有一大队凶残的手下。\n\n你敢打赌他的头颅值几个克朗。 | 你本不计划见他，但毫无疑问是这个男人本人：%robberbaron%在强盗的营地里。这个臭名昭著的杀手显然在探访他的一个罪犯分子，认真地在贼王周围走动，指着这个那个地指点江山，评价这个那个的质量。\n\n几个保镖紧随其后。你估计在他和其余强盗之间，大约有%totalenemy%人胡闹。 | 合同只是要消灭强盗，但是现在多了一个要求，这个要求更重：%robberbaron%，臭名昭著的杀手和原始路霸，在营地里。跟随着一个保镖，盗贼贵族似乎正在评估他的罪犯装备。\n\n你想知道%robberbaron%的头颅值多少克朗... | %robberbaron%。就是他，你知道。用望远镜盯着，你可以轻松地看到臭名昭著的富豪强盗的轮廓，他在强盗营地周围移动。虽然他不在你的计划中，也没有提到合同，但毫无疑问，如果你把他的头带回城镇，你会因麻烦而得到一些额外的回报。 | 在窥探强盗的营地时，你数了约%totalenemy%人在动，你发现了一个意料之外的角色:%robberbaron%，这个臭名昭著的强盗。这个人和他的保镖似乎在检查营地的状态。\n\n多么幸运啊!如果你能把他的头带回给雇主，你可能会得到一点小奖励。}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_54.png[/img]{在侦察强盗营地时，你注意到了一个让当地人恨得牙痒痒的身影：%robberbaron%，他是肆虐这片地区的著名强盗贵族。无论他去往何处，总有一群面相凶悍的随从紧跟其后。。\n\n你敢打赌，他的脑袋绝对能让你额外赚些钱。 | 你没想到能在这里碰到他，但毫无疑问那就是他本人：%robberbaron%现在就在这座强盗营地里。这个声名狼藉的刽子手正在视察他的其中一个贼窝，煞有介事地在匪徒间踱来踱去，指指点点，品头论足。\n\n几个护卫贴身跟随着他。算上他在内，你估计营地里一共有%totalenemy%个人。 | 本来合同只要求你扫清这里的强盗，但现在似乎多了个更诱人的额外目标：恶名昭彰的刽子手和路匪%robberbaron%就在这座营地里。在一名护卫的陪同下，这位强盗贵族正在评估这座犯罪据点的情况。\n\n而你正掂量着%robberbaron%的脑袋能值多少钱…… | %robberbaron%。那就是他，你确信无疑。透过望远镜，你可以清晰地看到这位恶名昭彰的强盗贵族在营地里走动的身影。他本不在计划内，合约也未曾提及，但毫无疑问的是，如果你把他的脑袋带回镇子里，会有人为你多花的这番工夫支付额外的钱。 | 你在侦察匪徒过程中——清点出约有%totalenemy%人在活动——意外瞥见一个完全出乎预料的身影：%robberbaron%，那位恶名昭彰的强盗贵族。此人带着贴身护卫，想必正在视察营地状况。\n\n真是天赐良机！如果能把他的脑袋带给你的雇主，你说不定还能赚笔外快。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -304,7 +304,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "RobberBaronDead",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗结束后，你走向%robberbaron%的尸体，用剑快速地砍了两下，一刀肉，一刀骨。你钩住脖子上的肉，系上绳子，挂在腰间。 | 战斗结束后，你快速搜索并找到在死者中的%robberbaron%尸体。纵使面色苍白，他依然显得威武。你将他的头从身体上拔下，随手丢进麻袋里。你认为，如果你还能看见他的脸，他依然看上去威武无比。 | %robberbaron%倒在你脚下。你翻过他的身体，伸直了脖子，为你的剑提供更好的目标。你砍了两刀，将他的头迅速放入麻袋。 | 既然他死了，%robberbaron%突然让你想起了你认识的许多人。你没想那么多：几下快速的挥剑，你把他的头斩了下来，随手扔进一个袋子里。 | %robberbaron%打了一场漂亮的仗，而他的脖子又再一次证明了这一点，肌腱和骨头尚未从他的头脖上分离，你成功获得了悬赏金。 | 你拿起%robberbaron%的头。%randombrother%指着它说道：%SPEECH_ON%那是什么？那是%robberbaron%的……？%SPEECH_OFF%你摇了摇头。%SPEECH_ON%不，那家伙已经挂了。这只是额外的报酬而已。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗结束，你走到%robberbaron%的尸体旁，利落的两剑斩下了他的首级——第一剑切开皮肉，第二剑斩断骨骼。你用钩子刺入颈肉边缘，系上绳索挂在了腰间。 | 战事平息后，你迅速在尸堆中翻找出%robberbaron%的遗体。尽管血色正从躯体褪去，他面容仍显狰狞。当你将首级与躯干分离时那模样依旧狰狞，即便把脑袋扔进粗麻袋再也看不见面容，你猜那副尊容想必还是相当狰狞。 | %robberbaron%倒毙在你脚边。你将尸体翻过面来，摆正脖颈以便剑刃瞄准。两记利落劈斩后首级应声而落，你迅速将其塞进麻袋。 | %robberbaron%毙命后，他突然让你想起许多故人。你没沉溺于这既视感太久：剑光几闪便取下首级，随手抛入行囊。 | %robberbaron%顽强抗争过，他的脖颈又负隅顽抗了一番——筋络骨骼都不让你轻易取走首级兑换赏金。 | 你收好%robberbaron%的首级。经过时%randombrother%指着它问。%SPEECH_ON%那是？该不会是%robberbaron%的……？%SPEECH_OFF%你摇摇头。%SPEECH_ON%不，那人已经死了。这玩意儿只是换赏金用的。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -321,12 +321,12 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "BountyHunters1",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_07.png[/img]{返回领取契约时，几个人走上了路。其中一个人指向%robberbaron%的头。%SPEECH_ON%我们是这个地方最高薪水的赏金猎人，我相信你们抢了我们的活计。把头给我们，今晚所有人都可以安然入睡。%SPEECH_OFF%你笑了。%SPEECH_ON%你需要比这更强。%robberbaron%的头值很多克朗，我的朋友。%SPEECH_OFF%这些所谓的赏金猎人的领袖也对你大声笑了。他举起了一个沉甸甸的袋子。%SPEECH_ON%这里有%randomname%，这里是这个地方最想抓的家伙之一。还有这个......%SPEECH_OFF%他举起另一个袋子。%SPEECH_ON%是杀了他的人的头。明白了吗？所以把赏金交出来，我们就可以离开了。%SPEECH_OFF% | 一个人走上了路，挺直了身子，对着你摆出姿势。%SPEECH_ON%你好先生们。我相信你们中有人拿着%robberbaron%的头。%SPEECH_OFF%你点了点头。那个人微笑了。%SPEECH_ON%能请你友好地将它交给我吗？%SPEECH_OFF%你笑了，摇了摇头。那个人没有笑，他举起一只手，啪地一声响指。一群武装瓦解的人从附近的灌木丛中出来，摇曳着重金属的响声从路上传来。他们看起来像是行刑前夜一个男人的梦。他们的领袖露出了一丝布满金点的冷笑。%SPEECH_ON%我不会再问你一遍。%SPEECH_OFF% | 在与%randombrother%交谈时，一个响亮的喊声引起了你的注意。你抬头看到一群人挡住了你的路。他们手持各种武器和盔甲。他们的头儿走到前面，宣布他们是著名的赏金猎人。%SPEECH_ON%我们只希望得到%robberbaron%的头。%SPEECH_OFF%你耸了耸肩。%SPEECH_ON%我们杀了那个人，我们要得到他的头颅。现在请把路让开。%SPEECH_OFF%当你向前迈了一步时，赏金猎人们举起了武器。他们的领袖向你走了一步。%SPEECH_ON%这里有一个选择，可以让很多好人死去。我知道这不容易，但我建议你认真考虑。%SPEECH_OFF% | 一声尖啸吸引了你和你的人的注意。你转向路的一侧，看到一群人从一些灌木丛中走了出来。每个人拔出了武器，但这些陌生人没有再往前走一步。他们的头儿走了过来。他胸前挂着一个穿过他胸前的弹药带，它是他的杰作的总结。%SPEECH_ON%各位，你们好。我们是赏金猎人，如果你还不知道，我相信你拿着我们的悬赏之一。%SPEECH_OFF%你举起了%robberbaron%的头。%SPEECH_ON%你是说这个吗？%SPEECH_OFF%头目热情地笑了。%SPEECH_ON%当然。如果你能把它交给我，我和我的朋友们会很高兴的。%SPEECH_OFF%他拍打着剑柄，露出笑容。%SPEECH_ON%这只是商业的问题。我相信你明白的。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_07.png[/img]{正当你们返回交付合约时，几个人拦在了路中央。其中一人指着%robberbaron%的首级。%SPEECH_ON%我们是这带报酬最高的赏金猎人，我看你们正在抢我们的生意。把那脑袋交出来，今晚大家就都能安稳睡个好觉。%SPEECH_OFF%你大笑。%SPEECH_ON%光说可不够。%robberbaron%的脑袋值不少克朗呢，朋友。%SPEECH_OFF%那个自称赏金猎人头目的人也朝你大笑。他提起一个鼓鼓囊囊的袋子。%SPEECH_ON%这里面是%randomname%，这带最值钱的通缉犯之一。而这个...%SPEECH_OFF%他又举起另一个袋子。%SPEECH_ON%是宰了他的那家伙的脑袋。明白了吗？所以把脑袋交出来，我们各走各路。%SPEECH_OFF% | 一个男人走到路中间，挺直身子朝你们摆开架势。%SPEECH_ON%各位先生好。我相信你们手里有%robberbaron%的脑袋。%SPEECH_OFF%你点头。那人笑了。%SPEECH_ON%麻烦你们行个好，把它交给我吧。%SPEECH_OFF%你大笑着摇头。那人收起笑容，抬手打了个响指。一群全副武装的人从附近灌木丛里涌出，伴着金属碰撞的叮当声列队挡在路中间。他们模样狰狞得像是死囚临刑前夜会梦见的恶鬼。头目露出镶着金牙的笑容。%SPEECH_ON%我不会再问第二遍。%SPEECH_OFF% | 正和%randombrother%交谈时，一声大喊吸引了你的注意。抬头望去，只见一群人挡在路中央。他们装备着各式武器盔甲。为首者上前宣布他们是著名的赏金猎人。%SPEECH_ON%我们只要%robberbaron%的脑袋。%SPEECH_OFF%你耸耸肩。%SPEECH_ON%人是我们杀的，赏金自然归我们。现在让开。%SPEECH_OFF%当你向前迈出一步时，赏金猎人们纷纷举起武器。他们的首领朝你逼近一步。%SPEECH_ON%现在做的决定可能会让很多好汉送命。我知道这口气不好咽下，但我建议你仔细想清楚。%SPEECH_OFF% | 一声尖哨吸引了你和队员们的注意。转向路旁，只见一群人从灌木丛中现身。所有人都拔出武器，但这些陌生人并未再靠近。为首者走上前来，胸前斜挎的皮带上串满耳朵——这是他手艺的汇总。%SPEECH_ON%嘿哥们儿。我们是赏金猎人——要是你们还没看出来的话，而且我确信你们手里有我们的一个赏金目标。%SPEECH_OFF%你举起%robberbaron%的脑袋。%SPEECH_ON%是说这个吗？%SPEECH_OFF%头目热情地笑了。%SPEECH_ON%当然。现在请你们把它交出来，这样我和我的朋友们都会很满意。%SPEECH_OFF%那人轻敲剑柄，咧嘴一笑。%SPEECH_ON%相信你能理解，我们只是来挣钱的。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "那就拿这该死的头离开吧。",
+					Text = "拿上这该死的脑袋，离我们远点。",
 					function getResult()
 					{
 						this.Flags.set("IsRobberBaronDead", false);
@@ -337,7 +337,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{要是你这么想要的话，你必须用鲜血来买单。 | 如果你想让你的头和这个一起，那么继续吧，试试你的运气。}",
+					Text = "{要是你这么想要，那便用鲜血的代价来换吧。 | 想让你的脑袋和这个作伴？尽管过来试试。}",
 					function getResult()
 					{
 						this.TempFlags.set("IsBountyHunterTriggered", true);
@@ -361,12 +361,12 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "BountyHunters2",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_07.png[/img]你今天已经看了足够的流血，把头交给他们吧。",
+			Text = "[img]gfx/ui/events/event_07.png[/img]你觉得今天流的血够多了，于是把脑袋给了他们。",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们继续前进吧，我们还需要收取报酬。",
+					Text = "走吧，还有赏金等着我们呢。",
 					function getResult()
 					{
 						return 0;
@@ -378,12 +378,12 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "BountyHunters3",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_07.png[/img]赏金猎人对于%companyname%过于强大！为了不让你的士兵不必要的死去，你下令紧急撤退。不幸的是，在混乱中失去了%robberbaron%的头颅。",
+			Text = "[img]gfx/ui/events/event_07.png[/img]赏金猎人对%companyname%来说实力过于强大！你不愿让队员们白白送死，下令仓促撤退。不幸的是，%robberbaron%的首级在混乱中丢失了……",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "噢，好吧。我们还有待领取的报酬。",
+					Text = "噢，好吧。还有赏金等着我们呢。",
 					function getResult()
 					{
 						this.Flags.set("IsBountyHunterRetreat", false);
@@ -396,7 +396,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Survivors1",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{随着战斗接近尾声，一些敌人跪下请求饶恕。%randombrother%向你寻求下一步该怎么做。 | 战斗结束后，你的士兵会缉拿剩余的强盗。幸存者请求饶命。其中有一个看起来比较像孩子，而不是一个男人，但他是所有人中最安静的。 | 剩下的几个强盗放下武器请求饶恕，现在你开始想象在相反位置的情况下他们会怎样做。 | 战斗结束了，但决定还没做出：还有一些强盗从战斗中幸存下来。%randombrother%拿着剑立在一个囚犯身边，问你想做什么。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗接近尾声，几名敌人跪地乞求宽恕。%randombrother%望向你等候决断。 | 战斗结束后，你的队员们将残余匪徒团团围住。幸存者们哀声求饶。其中一个更像是个孩子而非成人，但他却是所有人里最安静的。 | 意识到败局已定，最后几名站着的匪徒丢下武器请求宽恕。你不禁设想若立场对调他们会作何选择。 | 战斗已经结束，但仍有待决断：几名匪徒在战斗中幸存。%randombrother%持剑抵着一名俘虏的脖颈，询问你如何处置。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -410,7 +410,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "拿起武器，把他们赶走。",
+					Text = "拿走他们的装备，把他们赶走。",
 					function getResult()
 					{
 						this.World.Assets.addMoralReputation(2);
@@ -423,7 +423,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Survivors2",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{慷慨是给天真幼稚之人的。你让俘虏们被屠杀。 | 你想起强盗屠杀无辜商人的次数。想法仅出自你脑海，你就下令处决这些俘虏。他们稍微抗议了一番，但很快就被剑和矛打断。 | 你转身离去。%SPEECH_ON%直接通过他们的脖子，快点。%SPEECH_OFF%雇佣兵们遵从命令，你很快就听到了垂死之人的哀嚎。根本不是什么快速。 | 你摇了摇头。俘虏们大声哭喊，但他们却已经被人砍杀和刺穿。幸运的人连察觉到自己的死亡都没来得及就已经被砍了头。那些稍微有些反抗的人一直在受苦。 | 仁慈需要时间。时间看看肩膀后面，时间考虑这是否是正确的决定。你没有时间。你没有仁慈。俘虏被处决了，而这根本就不需要花费多少时间。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{只有天真之人才会选择仁慈。你下令处决了所有囚犯。 | 你想起匪徒曾无数次残杀无辜商人。这个念头刚从你脑海冒出，你就下达了处决命令。囚犯们发出短暂的抗议，但很快被刀剑长矛打断。 | 你背过身去。%SPEECH_ON%对准脖子。利落点。%SPEECH_OFF%佣兵们执行了命令，你随即听到将死之人的哽咽声。整个过程根本谈不上利落。 | 你摇头拒绝。囚犯们失声哀嚎，但队员们已然扑上，挥砍劈刺。幸运者在意识到死亡降临前便已身首分离。那些尚存反抗意志的则煎熬至最后一刻。 | 仁慈需要时间。需要你回头审视的时间。需要质疑抉择的时间。你没有时间，也就没有仁慈。囚犯被尽数处决——这花不了多少时间。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -440,7 +440,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Survivors3",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{今天已经有足够多的杀戮和死亡。你放了囚犯，拿走了他们的武器和盔甲，然后放他们走。 | 对盗贼和强盗的宽恕并不常见，所以当你释放囚犯时，他们几乎亲吻你的脚，好像与神有关。 | 你沉思了一会儿，然后点了点头。%SPEECH_ON%就这样吧。拿走他们的装备，然后放他们走。%SPEECH_OFF%囚犯被释放了，留下了他们所带的武器和盔甲。 | 你让强盗们脱下他们的衣服，只剩下内衣 - 如果他们真的有的话 - 然后让他们走了。%randombrother%在你看着一群半裸男人匆匆离开的同时在翻找剩下的装备。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{今天的杀戮与死亡已经够多了。你释放了囚犯，收缴他们的武器盔甲后便放他们离开。 | 对盗匪的宽恕并不常见，因此当你释放囚犯时，他们几乎要亲吻你的脚，仿佛在膜拜神明。 | 你沉思片刻，随后点头。%SPEECH_ON%那就饶他们一命。没收了装备就放人。%SPEECH_OFF%囚犯们被释放，留下的武器盔甲都归了你们。 | 你让匪徒们脱得只剩衬衣——如果他们还有的话——随后放他们离开。%randombrother%在翻捡留下的装备时，而你目送那群半裸男子仓惶逃远。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -457,7 +457,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Volunteer1",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗结束后，安静开始回归，你听到有人在喊叫。你朝着那里走去，发现一名囚犯被歹徒绑了起来。他嘴里和手上都套着绳子，你很快将其解开。他喘息着，虚弱地问道是否可以加入你的公司。 | 你在歹徒的营地发现了一名被绑架的囚犯。将他解救出来后，他解释说他来自%randomtown%，几天前被流浪汉绑架。他请求能否加入你的雇佣兵团。 | 翻找歹徒营地残留的物品，你发现了一名囚犯。将他解救出来后，他坐起身来，解释说他在前往%randomtown%寻求工作时被歹徒绑架。你想知道他是否能为你工作，取代被打败的雇佣兵团。 | 战斗结束后，留下了一个人。他不是歹徒，而是他们的囚犯。当你问他是谁时，他提到他来自%randomtown%，正在寻找工作。你问他是否能挥舞剑，他点了点头。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗刚结束，一切开始安静下来时，你听到一名男子的喊叫声。循声而去，发现是匪徒的一名囚犯。他的嘴和双手都被绳索捆绑，你迅速解开了束缚。他喘过气后，怯生生地询问能否加入你们的队伍。 | 在匪徒营地中发现一名被捆绑的囚犯。解救他后，他解释自己来自%randomtown%，几天前刚被这群流寇绑架。他询问是否能加入你的佣兵团队。 | 在翻捡匪徒营地的残余物资时，你发现了他们关押的一名囚犯。释放他后，男子坐起身来解释，自己是在前往%randomtown%找工作的途中被这些匪徒绑架的。你在想或许他可以为你效力…… | 战斗结束后一名男子还留在战场上。他并非匪徒，实际上是他们的囚犯。当你问起他的身份时，他提到自己来自%randomtown%并且正在找工作。你问他是否会使剑。他点了点头。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -497,7 +497,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Volunteer2",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{这名男子加入了你的战团，融入了一群兄弟中，这些人似乎对他非常友好，尽管他们只是一群拿钱杀人的人。新雇的人员表示他对所有武器都很擅长，但你认为你应该决定他最擅长的是什么。 | 囚犯满脸笑容，你挥手让他加入。几位兄弟问应该给他什么武器，但你耸了耸肩，想着你自己会决定如何武装这个人。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{这这名男子加入了你的队伍，融入这群兄弟之中——对于一群雇佣杀手来说，大家对他的接纳算得上相当热情了。新来的自称精通所有武器，但你觉得该由你来决定他最擅长用什么。 | 当你招手让囚犯加入时，他笑得合不拢嘴。几个弟兄询问该给他配什么武器，你耸耸肩说你会自己决定给这人装备什么。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -524,13 +524,13 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Volunteer3",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{你摇了摇头。那个人皱了皱眉头。%SPEECH_ON%你确定吗？我很善于……%SPEECH_OFF%你打断了他。%SPEECH_ON%我确定。现在好好享受你的新自由吧，陌生人。%SPEECH_OFF% | 你观察了一下那个人，发现他不适合成为一名雇佣兵。%SPEECH_ON%我们感激你的提议，陌生人，但是雇佣兵生涯充满危险。回家和你的家人在一起，或者恢复你的工作和生活。%SPEECH_OFF% | 你已经有足够的人手来见缝插针了，虽然你很想替换%randombrother%，只是想看看这个人降职后的反应。然而，你会和那个囚犯握手并放他离开。虽然他有点失望，但他很感谢你解救他。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{你摇头拒绝。男子皱起眉头。%SPEECH_ON%你确定吗？我挺擅长……%SPEECH_OFF%你打断他。%SPEECH_ON%我很确定。现在享受你重获的自由吧，陌生人。%SPEECH_OFF% | 你打量了这名男子，判断他不适合佣兵生活。%SPEECH_ON%我们感谢你的提议，陌生人，但佣兵生涯危机四伏。回家去吧，回去找你的家人、你的工作、你的家园。%SPEECH_OFF% | 你手下的队员已经足够用了，虽然你差点想用他替换%randombrother%好看看那人被降职时的反应。但最终你还是与囚犯握了握手并送他上路。尽管失望，他还是感谢你解救了他。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "你已经可以出发了。",
+					Text = "走吧。",
 					function getResult()
 					{
 						return 0;
@@ -549,7 +549,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到了%townname%并与%employer%交谈，你的旅程经历很简单：你消灭了土匪。他点点头，面带微笑地交付了你支付的费用。%SPEECH_ON%干得好，伙计们。那些土匪给我们带来了很多麻烦。%SPEECH_OFF% | %employer%为你打开门，他手里拎着一个小包。%SPEECH_ON%你回来了，我就知道那些土匪死了。%SPEECH_OFF%你点点头。%employer%耸了耸肩。%SPEECH_ON%可能是吧，不过那些伤口不会骗人。好工作,自由雇佣军。当然，如果你在撒谎，我就找到你。%SPEECH_OFF% | 当你把一袋头颅放在桌子上时，%employer%笑了起来。%SPEECH_ON%为了证明你的任务已经完成，不必弄得满手血腥。我已经得到你成功的消息了–这片土地上的鸟传播得很快，是不是？你的酬劳在角落里。%SPEECH_OFF% | 你报告完成后，%employer%用手帕擦了擦额头。%SPEECH_ON%他们全部死了？你不知道你给我减轻了多少负担，自由雇佣兵。你的克朗，一如既往地承诺。%SPEECH_OFF%他在桌子上放了一个小包，你很快地接过来。 | %employer%喝了一口酒，点头赞许。%SPEECH_ON%你知道吗，我不喜欢你们这种人，但你们做得非常好，雇佣兵。在你来之前，%randomname%就告诉我所有的土匪都已经被杀了。他描述的方式非常出色。好的，克朗已经准备好了。%SPEECH_OFF%他拍了一下桌子上的一个小包。%SPEECH_ON%这是你应得的回报。%SPEECH_OFF% | %employer%向后靠在椅子上，双手交叉放在膝盖上。%SPEECH_ON%很多人不喜欢雇佣兵，也许是因为你们会毁掉整个村庄，只为赚更多的钱。但我承认你们做得很好。%SPEECH_OFF%他指了一下房间的一个角落，那里有一个木箱还没有打开。%SPEECH_ON%一切都在那里，如果你需要，我不会介意你去数数。%SPEECH_OFF%你数，发现的确没问题。 | %employer%的桌子上满是脏兮兮和展开的卷轴，他露出温柔的笑容，好像他正在对着一堆宝藏诉说。%SPEECH_ON%贸易协议！贸易协议到处都是！快乐的农民！快乐的家庭！每个人都很开心！啊，太棒了。当然，对于你来说也是好事，自由佣兵，因为你的口袋变得更重了！%SPEECH_OFF%这个人把一个小钱包扔给你，然后又扔了一个，再扔一个。%SPEECH_ON%我本来想用一个更大的小包付钱的，但是这样也挺有意思。%SPEECH_OFF%他调皮地扔了一个小钱袋，而你则轻松自如地抓住了它，如同一个拥有新鲜血液的男人一样毫不在乎。}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到%townname%与%employer%会面。你的任务经过很简单：剿灭了那帮匪徒。他点点头，简短一笑，随即按约定支付了报酬。%SPEECH_ON%干得好，伙计们。那些匪徒可给我们添了不少麻烦。%SPEECH_OFF% | %employer%在你抵达时亲自为你开门。他手里提着个钱袋向你示意。%SPEECH_ON%你既然回来了，说明匪徒都解决了吧？%SPEECH_OFF%你点头。那人把钱袋抛过来。你提醒他也许你在撒谎。%employer%耸耸肩。%SPEECH_ON%也许吧，但白眼狼反咬一口这种事情，没两天就传遍世界了。干得漂亮，佣兵。当然如果只是你谎报军情，我会去找你算账的。%SPEECH_OFF% | %employer%在你进屋将首级扔上他书桌时咧嘴笑了。%SPEECH_ON%不必弄脏我的名贵家具来证明你完成了任务，佣兵。我早已收到捷报——这地方的信鸟飞得可真快，不是吗？报酬在墙角。%SPEECH_OFF% | 你刚汇报完，%employer%便用手帕擦拭额头。%SPEECH_ON%当真全都解决了？天啊……你根本不知道卸下了我多重的负担，佣兵。完全想象不到！你的克朗，如约奉上。%SPEECH_OFF%他将钱袋放在桌上，你迅速收下。分文不差，一如约定。 | %employer%抿着酒杯点头。%SPEECH_ON%知道吗，我向来不待见你们这类人，但这次干得漂亮，佣兵。%randomname%在你抵达前就向我汇报了匪徒全灭的消息。据他描述，当时的场面相当动人。所以嘛……%SPEECH_OFF%他将钱袋重重放在桌上。%SPEECH_ON%按约定，这是相当动人的报酬。%SPEECH_OFF% | %employer%靠着椅背，双手交叠放在膝上。%SPEECH_ON%佣兵向来不受待见，想必是因为你们常为点蝇头小利就屠杀村民——但我得承认这次你们做得不错。%SPEECH_OFF%他朝屋角努了努嘴，那儿放着未上锁的木箱。%SPEECH_ON%全在里面，要清点的话我也不介意。%SPEECH_OFF%你确实清点了，分文不差。 | %employer%的书桌铺满污损展开的卷轴。他对着它们暖笑，仿佛在凝视宝藏。%SPEECH_ON%贸易合约！到处都是贸易合约！快乐的农夫！幸福的家庭！皆大欢喜！啊，当个快活人真好。当然你也挺快活，佣兵，因为你的钱袋刚刚沉了不少！%SPEECH_OFF%他朝你扔来一个小钱袋，接着又一个，再接一个。%SPEECH_ON%本来能用大钱袋支付，但我偏喜欢这么给。%SPEECH_OFF%这人嬉皮笑脸地又抛来一袋，你面无表情地接住，带着剑刃血迹未干者特有的漠然从容。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -583,7 +583,7 @@ this.drive_away_bandits_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success2",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你将罪犯的头颅扔在%employer%的桌子上，冷笑着指着它。%SPEECH_ON%那是%robberbaron%。%SPEECH_OFF%%employer%站起来，揭开盖在奖杯上的麻布袋，点了点头。%SPEECH_ON%没错，就是他。我猜你会因此得到额外的奖励。%SPEECH_OFF%你因为杀了强盗并摧毁了周围许多团伙的领导而获得了%reward%克朗的丰厚报酬。 | %employer%在你提着一个头的时候走进他的房间，他后退着。幸运的是，头发上并没有流血。%SPEECH_ON%这是%robberbaron%的头。或者我该说是过去式？%SPEECH_OFF%%employer%缓慢地站起来，打量了一下。%SPEECH_ON%用过去式是正确的，你不仅摧毁了强盗的巢穴，还带来了他们的领袖的头颅。干得好，佣兵，你会得到额外的奖励。%SPEECH_OFF%男人拿出一个装有%original_reward%克朗的小包，然后从自己身上拿出一个钱袋扔向你。 | 你举起%robberbaron%的头，眼神滑向滴着血丝的头发。%employer%的脸上露出缓慢的笑容。%SPEECH_ON%你知道你干了什么吗，佣兵？你知道你通过从他的肩膀上拿下那个人的头给这些地方带来了多少安慰吗？你会得到比你预期的更多的报酬！原始任务的%original_reward%克朗和......%SPEECH_OFF%男人在桌子上放了一个厚实的钱袋。%SPEECH_ON%还有一些额外的奖金，因为你一直在承担着那份额外的负荷。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你将罪犯的首级扔到%employer%的桌上。咧嘴一笑，指着它。%SPEECH_ON%这就是%robberbaron%。%SPEECH_OFF%%employer%起身掀开覆盖战利品的粗麻布。他点头。%SPEECH_ON%没错，确实是他。看来这笔额外报酬你拿定了。%SPEECH_OFF%你因剿灭匪帮并摧毁附近多个犯罪集团的首脑而获得了整整%reward%克朗。 | %employer%在你提着头发拎着首级进屋时向后靠去。幸运的是，脑袋没有在滴血。%SPEECH_ON%这是%robberbaron%的脑袋。%SPEECH_OFF%%employer%缓缓起身粗略看了一眼。%SPEECH_ON%这么说，你不仅端了匪徒的老巢，还把首领的脑袋带给了我。干得漂亮，佣兵，这份额外奖赏你拿定了。%SPEECH_OFF%他推过来装有%original_reward%克朗的包裹，又从自己腰间取下钱袋抛给你。 | 你举起%robberbaron%的首级，它歪斜的目光扫过血淋淋的发丝。%employer%脸上慢慢浮现笑容。%SPEECH_ON%知道你立了什么功吗，佣兵？知道砍下那人脑袋给这片地区带来多大安宁吗？你的报酬将远超约定！%original_reward%克朗是原定任务酬金，再加上……%SPEECH_OFF%他将一个鼓囊囊的钱袋滑过桌面。%SPEECH_ON%一点小意思……就当是你一路扛着脑袋回来的辛苦费。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,

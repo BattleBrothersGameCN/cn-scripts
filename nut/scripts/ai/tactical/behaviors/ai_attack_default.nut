@@ -139,7 +139,7 @@ this.ai_attack_default <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using " + this.m.Skill.getName() + " against " + this.m.TargetTile.getEntity().getName() + "!");
+				this.logInfo("* " + _entity.getName() + ": 使用" + this.m.Skill.getName() + "，目标: " + this.m.TargetTile.getEntity().getName() + "!");
 			}
 
 			local dist = _entity.getTile().getDistanceTo(this.m.TargetTile);

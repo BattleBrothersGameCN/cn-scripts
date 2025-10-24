@@ -5,12 +5,12 @@ this.oath_of_distinction_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_distinction";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "真正杰出的是那些能够遵循年轻的安瑟姆的教导的人。\n让我们立下超群誓言，证明我们有资格走他的路！";
-		this.m.TooltipText = "小安瑟姆经常寻求独处，有时甚至是在战场上。 “用这种方式证明你的价值，即使是古神也不会说他们的眼睛在他们所看到的荣耀中有错误。”";
-		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{许多剑术大师都是独处的。 他们的想法是，他们不是在与前面的人战斗，而是在为中间的空间而战。 虽然你不可能理解剑术大师和佣兵在空中舞剑的细微差别，但你会意识到这一公理的核心真理。 宣誓者，虽然可敬、勤奋，但内心仍然勇敢得近乎残酷，过分自信得荒谬可笑。 超群誓言在精神上遵循了剑术大师的技艺，而宣誓者则铭记于心。 每个人都独立自主地努力证明自己，证明自己值得别人的称赞。 如果有任何无偏见的俗人碰巧在观看，那么就不可能说 %companyname% 没有作为一个精良的队伍脱颖而出。\n\n但是区别是不可避免的。 我们不能整天霸占着荣耀！ 到下一个誓言！}";
-		this.m.SuccessButtonText = "{为了小安瑟姆！ | 宣誓者万岁！ | 誓约使者去死吧！}";
+		this.m.ButtonText = "能够遵循安瑟姆教诲的人才称得上是杰出。\n让我们立下超群誓言，证明我们有资格走他的路！";
+		this.m.TooltipText = "即便是在战场上，小安瑟姆也时常寻求独处。“所谓证明自己，就是取得上至旧神都不会觉得看走眼了的荣耀。”";
+		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{许多剑术大师都行独处之道。他们在战斗时并不直接着眼于结果对手，而是争夺对中间空间的控制。或许你并不理解剑术大师和佣兵挥剑时的个中差别，但是其中的核心理念不言自明。宣誓者，固然追求荣誉，勤勤恳恳，却执于蛮勇，刚愎自用。超群誓言是剑术大师技艺的灵魂，所有宣誓者都应当铭记于心。对任何人都是一样，只有独立证明过自己，面对别人的称赞才能问心无愧。以后要是碰巧有普通信徒看到我们，只要他没有什么偏见，他就绝对不能否认，%companyname%是一支身手不凡的队伍。\n\n但还是让什么超群见鬼去吧。我们不能因为过去的荣耀就洋洋得意！让我们立下新的誓言！}";
+		this.m.SuccessButtonText = "{为了小安瑟姆！ | 执誓者万岁！ | 给渡誓者以死亡！}";
 		this.m.OathName = "超群誓言";
-		this.m.OathBoonText = "你的战团成员获得 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 决心，[color=" + this.Const.UI.Color.PositiveValue + "]+3[/color] 每回合疲劳值恢复量，并造成 [color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 伤害（相邻格没有队友时）";
+		this.m.OathBoonText = "所有战团成员 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 决心，[color=" + this.Const.UI.Color.PositiveValue + "]+3[/color] 每回合疲劳值恢复量，且若相邻格没有队友时，造成的伤害 [color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color]。";
 		this.m.OathBurdenText = "你的人不会从队友的击杀中获得经验。";
 	}
 
@@ -22,7 +22,7 @@ this.oath_of_distinction_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 
 	function getRewardTooltip()
 	{
-		return "誓言目标: 让你的一位战团成员升级" + this.getBonusObjectiveGoal() + " 次(" + this.getBonusObjectiveProgress() + "/" + this.getBonusObjectiveGoal() + ").";
+		return "额外名望：让你的一位战团成员升级" + this.getBonusObjectiveGoal() + " 次(" + this.getBonusObjectiveProgress() + "/" + this.getBonusObjectiveGoal() + ").";
 	}
 
 	function getBonusObjectiveProgress()

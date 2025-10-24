@@ -8,7 +8,7 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 	{
 		this.contract.create();
 		this.m.Type = "contract.drive_away_nomads";
-		this.m.Name = "赶走游牧民";
+		this.m.Name = "驱逐";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
@@ -44,7 +44,7 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"把游牧民逐出" + this.Flags.get("DestinationName") + "(%origin% %direction%)"
+					"把游牧民逐出" + this.Flags.get("DestinationName") + "%origin%%direction%边的游牧民"
 				];
 				this.Contract.setScreen("Task");
 			}
@@ -255,14 +255,14 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_163.png[/img]{你走入 %employer%的房间，里面尽管没有喇叭奏乐，没有庆贺彩纸，没有喧嚷起哄，但仍然有着相当讲究的排场。 技艺纯熟的匠人用着多样的珠宝、金银，把居室装饰得富丽堂皇，闺阁的女子妖艳动人至极，让人觉得，如果能有机会加入这宛若日夜不休的盛宴，他甘愿去做任何事。%employer% 坐在一堆软垫上。%SPEECH_ON%啊，逐币者。我一直在等着你。 但你们可别靠得太近，不然会扰乱我的兴致。 我有个小事让你办。 一伙游牧民抢掠了我的商队，这让我金库里的硬币变少了。 你们应该明白，属于自己的东西被夺走是什么感觉，对吧？ 啊，你看起来好笨。头脑空空。 不管怎样，你只要干好自己的行当。 帮我宰了那些游牧民，我愿意付出 %reward% 克朗来了解此事。 你们的耳朵能明白我说的话对吧？%SPEECH_OFF% | %employer% 的身子一侧靠在一个丝绸软垫制成的宝座，另一侧拥在一群妖艳女子的胴体上。 他抬起手来。%SPEECH_ON%给我止步，你们这些逐币者要是再敢离我近点，那么你们就是不知分寸了，知道吧？ 聪明人知道自己的位置。 我想让你们这些拿剑的做些事。 %townname% 附近的游牧民在抢夺，无恶不作。 那些人让我很不爽，给我灭掉他们，我会给你们不错的奖赏。%SPEECH_OFF% | 你看到 %employer% 在喂一只笼子里的鸟。 这鸟五彩斑斓，其中的一些色彩你之前都没见到过。 觉察到你的赶来，亦或是闻到你的味道，%employer% 转过身来，脸上闪过一丝嫌恶。%SPEECH_ON%你把我的鸟吓到了，逐币者，咱就长话短说，给我的爱鸟图个清静。 在我的领地周边，有些作乱的游牧民，我想让他们被挫骨扬灰。 我知道你们，呃，你们这种人，会很愿意给我做这种小差事吧？%SPEECH_OFF% | 你进入 %employer%的房间。 他正吃着水果，下半身淹没在一片肉体的海洋当中，那是他的后宫在喧嚷地侍奉着。 你无所事事地站着，已经等了太长时间，当你想开口时，这人抬起一只手。 看着他的一个仆人，打了个响指。 仆人穿着丝绸底的凉鞋，走过大理石制成的地板。 他给你一张纸。上面写着：%SPEECH_ON%致有意前来的逐币者，游牧民在 %townname% 周边为非作歹，扰得鸡犬不宁。若能除掉他们，必有 %reward% 克朗的重赏。 无意向者请立马离开。%SPEECH_OFF%仆人看着你，等待你的答复。 | 你进入 %employer% 的房间时，他叹着气。%SPEECH_ON%啊，是逐币者，我都差点忘了我邀请过你们，让你们来毁掉我今天的雅兴。%SPEECH_OFF%你盯着维齐尔，他纵身于软垫当中，一群女子正在按摩抚慰，以至于让维齐尔抽身乏术。%SPEECH_ON%好吧，我想我应该花一个小时来解决这件事。 一伙游牧民正在对我的商队胡作非为，就像他们经常做的那样，这让市场缺了一些我想要的货。 我提供 %reward% 克朗来作为找到并消灭这些沙漠虫子的奖赏。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_163.png[/img]{虽然没有号角齐鸣，没有彩带飞舞，也没有欢呼喝彩，但当你踏入%employer%的房间时，仍能感受到扑面而来的奢华气息。房间里装点着金银器皿，技艺精湛的工匠打造的繁复珠宝，还有一群姿容绝世的侍女——置身此情此景，任谁都会不由自主地愿意完成任何吩咐，只为有机会参与这看似日常的盛宴。%employer%斜倚在一堆软垫上。%SPEECH_ON%啊，逐币者。我正等着你呢。别再靠近了，你会吓到我的宝贝们。有个简单的差事给你。游牧民一直在抢劫我的商队，导致我金库日渐空虚。我相信你多少能理解被夺走东西的滋味，对吧？呵，看你那副呆相。如此茫然。不过嘛，倒是挺专注本行的。我要那些游牧民死，愿意付%reward%克朗办成这事。这番话能让你那脑袋里装的东西听明白吗？%SPEECH_OFF% | %employer%半坐半靠在丝绸软垫堆砌的王座上，身下还压着几个妖娆的侍女。他抬手制止。%SPEECH_ON%逐币者，要是你再往前踏一步，你的身影会更清晰，身份却会更低贱，明白吗？聪明人懂得摆正自己的位置。有个简单的任务要交给你的剑。 %townname%外的游牧民专干偷抢掳掠的勾当。我会给你丰厚的奖赏，需要你彻底消灭这些让我日子不痛快的家伙。%SPEECH_OFF% | 你看见%employer%正在喂食一只笼中鸟。那鸟儿身披斑斓羽色，有些色彩你甚至从未见过。%employer%似乎察觉到你的存在——或者说是闻到了你的气味——他转过身，脸上带着一丝嫌恶。%SPEECH_ON%你吓到我的鸟了，逐币者，看在她的份上我就长话短说。有游牧民在我领地周边游荡，我要他们彻底消失。像你这种……呃……层次的人，应该很愿意接这种简单轻松的话吧？%SPEECH_OFF% | 你走进%employer%的房间。他正在享用水果，下半身埋在一群侍女的肉体之中，那些照料他的女人们正喧闹地忙碌着。你无所事事地站了一会，刚想开口，这人就抬手制止。他指向一个仆人打了个响指。仆人踏着丝底凉鞋滑过大理石地面，将一张纸笺递到你面前，上面写着：%SPEECH_ON%致有意向的逐币者：游牧民持续滋扰%townname%周边治安。速往清剿，酬金%reward%克朗。无意接受者请立即离开。%SPEECH_OFF%仆人看着你，等待你的答复。 | 你刚走进房间，%employer%就叹了口气。%SPEECH_ON%啊，逐币者，我差点忘记之前我叫了你们这种人来败坏雅兴。%SPEECH_OFF%你盯着这位维齐尔，他正费力地从堆积如山的软垫和负责拍松每个垫子的侍女群中挣脱出来。%SPEECH_ON%好吧，看来我得花点时间把这事了结。游牧民一直在抢劫我的商队，害得我的市场缺了不少我想要的货品。我出%reward%克朗，去找到并消灭这些沙海里的蛀虫。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我们再多谈谈报酬。 | 我能解决掉这个麻烦。}",
+					Text = "{我们再谈一谈报酬。 | 我能解决掉这个麻烦。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -270,7 +270,7 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{不感兴趣。 | 我们有更重要的事情要做。 | 我祝你好运，但我们不会参与其中。}",
+					Text = "{不感兴趣。 | 我们有更重要的事情要做。 | 祝你好运，但我们不会掺和此事。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -286,13 +286,13 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Treasure1",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_54.png[/img]{游牧民出乎意料的按兵不动、人数众多，你发现了这样的原因所在：这些沙漠住民围在地上的一个洞旁边。 用着制作的滑轮，心急火燎地挖着他们能在沙漠里发现的一切。 从监督这次行动的人的笑容来看，这里想必是埋藏着宝物。\n\n你可以现在进攻，这样会面临更多的敌人，或者你可以等到他们挖完东西，带着他们挖出来的东西离开。}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_54.png[/img]{这群游牧民异常密集地聚集在原地，人数也出奇地多——你很快就明白原因了：这些沙民正围在一个地洞周围。他们在洞口架设了滑轮组，正疯狂地拖拽着从沙漠深处找到的某样东西。从监工那人脸上挂着的笑容来看，下面无疑埋藏着宝藏。\n\n你可以现在进攻，这样会面临更多的敌人，或者等到他们完工，带着挖出的东西离开后再动手。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们现在进攻！",
+					Text = "现在就发起进攻！",
 					function getResult()
 					{
 						this.Contract.getActiveState().onDestinationAttacked(this.Contract.m.Destination);
@@ -301,7 +301,7 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "我们等到他们完事，营地防守不那么严密的时候。",
+					Text = "我们等他们完事，营地防守松懈了再动手。",
 					function getResult()
 					{
 						return "Treasure1A";
@@ -312,8 +312,8 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Treasure1A",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_54.png[/img]{你等待游牧民族取出财宝，果然是一个箱子。他们打开它时脸上露出满足。而且，正如预料的那样，游牧民族分裂了，一部分最强壮的男人带着财宝离开，可能要在别处出售。游牧营地现在变得更脆弱，更容易遭受攻击......}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_54.png[/img]{你等待着游牧民将宝物取出。果然，那是一个箱子。当他们撬开箱盖时，脸上掠过一丝满意的神色。而同样不出所料的是，游牧民们分开了——一队最精锐的战士带着财宝离去，想必是要去某个地方销赃。此刻，游牧民的营地比之前更薄弱，也更容易受到攻击…….}",
 			Image = "",
 			List = [],
 			Options = [
@@ -334,7 +334,7 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Treasure2",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_168.png[/img]{你把游牧民族杀死后，自然而然地前去看看他们究竟在地下挖出了什么。你站在他们搭建的滑轮上，凝视着那个深坑。可以看到一个箱子，绳索已经绑在了它上面。你感谢已故的游牧民族所做的所有工作，然后轻松地拉起箱子。你打开它发现…}",
+			Text = "[img]gfx/ui/events/event_168.png[/img]{游牧民全数歼灭后，你自然要去看看他们到底从地里挖出了什么玩意儿。你站在他们架设的滑轮组前，俯身望向坑洞深处。只见一口箱子静静躺在那里，绳索早已捆扎妥当。你倒是该谢谢那些死去的游牧民替你做完了所有苦工，转身轻松地将箱子从地底拉了上来。打开箱盖，映入眼帘的是……}",
 			Image = "",
 			List = [],
 			Options = [
@@ -387,8 +387,8 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "SandGolems",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_160.png[/img]{当你准备攻击时，一个人突然从沙漠中升起。他被吓到，一边尖叫着一边向着游牧民族的营地滚下沙丘。你紧追不放，手握武器准备杀死他。你在跳跃中可以看到游牧民族相互攀登，倒塌帐篷拿起武器。当你回头看向那个人时，他突然在沙中消失了，连接沙丘的胳膊从地下伸出来，形状上的尘土和沙子落了下来。\n\n你几乎不能理解你所看到的，但所有游牧民族似乎都在喊着同样的话：“伊弗利特！伊弗利特！伊弗利特！”这个没有面孔的，看似无穷无尽的“伊弗利特”在即将到来的战斗中没有任何归属。 | 你朝着游牧民族冲下沙丘，他们被吓到了，大声喊着口令，跑去拿武器。当你接近营地时，一股沙子冲击了营地角落，一些游牧民族被扔飞了。一秒钟后，一个巨石从尘云中飞出来，将一名游牧民族砸成碎片。一只巨大的，由土砾形成的生物咆哮着向前走来。“伊弗利特！伊弗利特！”游牧民族尖叫着，你推测这个“伊弗利特”将没有任何一方站在他的一边。}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_160.png[/img]{正当你准备发动袭击时，一个男人突然从沙地中钻了出来。他吓得猛地后退，尖叫着滚下沙丘朝游牧民营地逃去。你亮出武器紧追不舍，决心将其灭口。在颠簸的视野边缘，你看见游牧民互相推搡着冲向武器，帐篷在混乱中接连倒塌。当你再次看向那个哨兵时，他竟在沙砾的包裹中骤然消失，而连接着沙丘的巨臂破土而出，耸立在你面前，尘沙与泥土正从其不断成型的躯体上簌簌滑落。\n\n你几乎无法理解眼前的景象，但所有游牧民都在声嘶力竭地呼喊着同一句话：\"伊夫利特！伊夫利特！伊夫利特！\" 而这个无面的、仿佛无边无际的\"伊夫利特\"，在即将到来的战斗中不会站在任何一方。 | 你从沙丘上向游牧民发起冲锋。受惊的他们厉声呼喝着冲向武器。当你逼近营地时，一阵沙浪轰击在营地角落，几名游牧民被掀飞出去。紧接着一块巨岩从尘雾中呼啸而来，将一名游牧民砸得粉碎。一头巨大的土石巨怪咆哮着踏地而来。\"伊夫利特！伊夫利特！\"游牧民们尖叫着，你意识到这个\"伊夫利特\"在这场战斗中不会站在任何人一边。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -405,8 +405,8 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Assassins",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_165.png[/img]{你带领队伍冲入营地，此刻刚好看到一名身穿黑衣的男子从其中一座帐篷走出。他正在与游牧民族的领袖握手，这可能不是什么好兆头。两个人在半握手的状态下惊呆了，盯着你的进攻，结果肯定不妙。游牧民族的领袖叫嚷着让他的刺客们放手杀敌。那名黑衣杀手点点头，掏出刀剑，一队刺客随即蜂拥而出，加入游牧民族的阵营，与你展开战斗!}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_165.png[/img]{你率队冲入营地，正好撞见一名黑衣男子从帐篷中走出。他正在与游牧民族首领握手——这恐怕不是什么好兆头。两人握手到一半骤然停住，盯着你们这支突袭队伍，这可能也不是件好事。游牧首领厉声高呼，命令他手下的刺客们行动起来。那名黑衣杀手点头应和，随之利刃出鞘，一队同伙刺客接连从帐中鱼贯而出，与游牧民一同投入战斗！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -423,8 +423,8 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Necromancer",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_161.png[/img]{摊破的帐篷。篮子散开了。衣服在沙丘上滚动。而在这一切的中心，坐着一个穿着黑斗篷的男人，他那可怖的脸从斗篷的阴影中窥视出来。%SPEECH_ON%你们既迟到了又恰到好处。%SPEECH_OFF%他说着站了起来。帆布哗啦哗啦地响着，篮子倾斜着，衣服被拉扯着，大地犹如活生生地着迷。突然，沙子中峡谷般的通道出现了，冷酷的游牧民族从地下涌出，有些像脱胎换骨般跳出来，仿佛要在清新的空气中重生，有些从脚跟到荷包腰飞起，身体挺直像旗杆一样。他们的动作令人不安，僵硬而又倾斜，而黑衣人在他们摇摆的队列后面露出了一个笑容。他并不是普通的恶棍，而是一个死灵术士！}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_161.png[/img]{到处是支离破碎的帐篷，地上散落着解体的篮筐。衣物在沙地上翻滚。在这片狼藉中央，坐着一位身披黑色斗篷的男子，他那张狰狞的面孔从兜帽的阴影中窥视而来。%SPEECH_ON%你们来迟了，却又来得凑巧。%SPEECH_OFF%他说着，站起身来。篷布窸窣作响，篮筐倾倒，衣物猛地掀到一旁，整片土地霎时间生机躁动。突然，沙粒滑入幽深的沟壑，满怀敌意的游牧民从地底涌出，他们攀爬而上，有的纵身跃起，仿佛要在新鲜空气中重获生机，有的则身躯挺直如同旗杆。他们的动作怪异而僵直，令人不安。在这群蹒跚前行的队伍后方，那黑衣男子露出了狞笑。他绝非普通的恶徒，而是一名死灵法师！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -442,19 +442,19 @@ this.drive_away_nomads_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{一个仆人挡住了你见%employer%的路。他递给你一卷卷轴和一个小包。虽然仆人已经把文牒交给你了，他仍然背起手，看着天花板念念有词起来。%SPEECH_ON%根据事先的安排，逐币者将获得%reward_completion%克朗作为奖赏。收到奖励后，他们应该立即离开。%SPEECH_OFF%仆人低头看着你，点头示意。%SPEECH_ON%走吧。%SPEECH_OFF%他说。 | 你试图进入%employer%的房间，但一个有疤的大个子卫兵把矛尖横在了门前。%SPEECH_ON%不准进去。%SPEECH_OFF%你说你有事情要找维齐尔。卫兵摇了摇头。一个仆人从你身后快步走了过来，把一个小包按在你的手臂上，然后又快步走开了。卫兵把武器收回身边。%SPEECH_ON%你和维齐尔的琐事在你第一次离开时就结束了。别去坏了他的心情。现在就走，在你坏了我的心情之前。%SPEECH_OFF% | 当你走向%employer%的房间时，一个女人的拍手声从大厅另一头传了过来。你转过头去，她已经快走到你面前了。四只鸟停在她的肩膀上，随着她的每一步摇曳。%SPEECH_ON%逐币者。%SPEECH_OFF%她拿出一个小包递给你。%SPEECH_ON%%employer%不想再闻到你的气味，进到这里就够了。如果你要侮辱我们，就数一数钱。如果你想让我们高兴，就离开吧。%SPEECH_OFF%她转身走开，异国情调的裙子左右摇摆。她肩上的一只鸟朝你转了过来，喳喳的叫着，似乎不太高兴。}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{一名仆人拦住了你与%employer%会面的去路。他递给你一卷羊皮纸和一个钱袋。尽管已经将文书交到你手中，仆人却将双手背在身后，仰头望着天花板背诵道。%SPEECH_ON%依照先前约定，逐币者获赏%reward_completion%克朗。既已领赏，请即刻离开此地。%SPEECH_OFF%仆人低头看向你，点了点头。%SPEECH_ON%请离开。%SPEECH_OFF%他说道。 | 你试图进入%employer%的房间，但一名身形魁梧、面带疤痕的守卫将长矛的利刃横在门前。%SPEECH_ON%谢绝访客。%SPEECH_OFF%你声称有事要面见维齐尔。守卫摇了摇头。此时一名仆人悄然来到你身后，把一个钱袋塞进你怀里，随后迅速离去。守卫将长矛收回身侧。%SPEECH_ON%你与维齐尔的那点琐事，在你上次离开时就已经了结了。别再去坏他的兴致。赶紧走。现在就走。趁你还没坏掉我的兴致之前。%SPEECH_OFF% | 就在你走向%employer%的房间时，大厅对面传来一阵掌声。你转头看去，发现一位女子不知何时已逼近眼前。四只鸟停在她的肩头，随着她每一步轻轻晃动。%SPEECH_ON%逐币者。%SPEECH_OFF%她掏出一个钱袋递过来。%SPEECH_ON%%employer%不想再闻到你的气味，走到这里就够了。想羞辱我们就数钱，想讨好我们就拿钱走人。%SPEECH_OFF%她说完利落转身离去，那身奇特的裙摆左右飘动。肩头一只鸟扭过头对你发出刺耳的鸣叫。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "好吧，我们已经得到了报酬。",
+					Text = "行，这趟不算白忙活。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "摧毁了一个游牧营地。");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "摧毁了一处游牧民营地。");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}

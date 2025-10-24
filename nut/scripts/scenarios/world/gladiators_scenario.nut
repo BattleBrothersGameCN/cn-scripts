@@ -79,7 +79,7 @@ this.gladiators_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[1].getItems().equip(this.new("scripts/items/weapons/oriental/heavy_southern_mace"));
 		bros[1].getItems().equip(this.new("scripts/items/shields/oriental/metal_round_shield"));
 		bros[1].improveMood(0.75, "渴望在竞技场外证明自己");
-		bros[2].setTitle("毒蛇");
+		bros[2].setTitle("蝰蛇");
 		bros[2].getSkills().add(this.new("scripts/skills/traits/glorious_quickness_trait"));
 		bros[2].getTalents().resize(this.Const.Attributes.COUNT, 0);
 		bros[2].getTalents()[this.Const.Attributes.MeleeDefense] = 2;

@@ -115,7 +115,7 @@ this.aging_swordmaster_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_17.png[/img]你转身时听到了老剑术大师的叹息。 看来，仅仅是跟上战团的步伐，对他来说就已经是一场战斗了。",
+			Text = "[img]gfx/ui/events/event_17.png[/img]你转身时听到了老剑术大师的叹息。看来，仅仅是跟上战团的步伐，对他来说就已经是一场战斗了。",
 			Image = "",
 			List = [],
 			Characters = [],

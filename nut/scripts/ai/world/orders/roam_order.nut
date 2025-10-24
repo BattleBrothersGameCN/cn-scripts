@@ -151,7 +151,7 @@ this.roam_order <- this.inherit("scripts/ai/world/world_behavior", {
 		if (_hasChanged || _entity.getPath() == null || this.m.TargetTile == null || this.m.TargetTile.ID == _entity.getTile().ID)
 		{
 			++this.m.Attempts;
-			_entity.setOrders("Roaming");
+			_entity.setOrders("游荡中");
 			this.findTargetTile(_entity);
 
 			if (this.m.TargetTile == null)
