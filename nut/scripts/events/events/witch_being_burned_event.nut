@@ -6,7 +6,7 @@ this.witch_being_burned_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.witch_being_burned";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

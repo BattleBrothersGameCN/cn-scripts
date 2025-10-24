@@ -234,7 +234,7 @@ this.ai_move_tentacle <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Moving to engage.");
+				this.logInfo("* " + _entity.getName() + "：移动，准备交战。");
 			}
 
 			this.m.Agent.adjustCameraToTarget(this.m.TargetTile);

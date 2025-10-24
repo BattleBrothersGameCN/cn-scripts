@@ -49,7 +49,7 @@ this.man_in_forest_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_50.png[/img]你跟着那个人走进灌木丛。 在泥泞的地面上那个人的踪迹非常容易寻找，他慌张的逃跑给团队留下了很多指引。 但突然，它们消失了。 跟着足迹团队来到了一片空地，然后足迹和线索就全部消失了好像那人凭空不见了。 你听到上面传来哨声。 抬头看，你看见那个男人正坐在一根树枝上。他挥了挥手。%SPEECH_ON%你好，陌生人。%SPEECH_OFF%他瞥了一眼空地。 装备精良的人们正在不断的靠近。 那人在树上不屑的哼了一声。%SPEECH_ON%再见，陌生人。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_50.png[/img]你跟着那个人走进灌木丛。 在泥泞的地面上那个人的踪迹非常容易寻找，他慌张的逃跑给团队留下了很多指引。 但突然，它们消失了。 跟着足迹团队来到了一片空地，然后足迹和线索就全部消失了好像那人凭空不见了。 你听到上面传来哨声。 抬头看，你看见那个男人正坐在一根树枝上。他挥了挥手。%SPEECH_ON%你好，陌生人。%SPEECH_OFF%他瞥了一眼空地。 装备精良的人们正在不断的靠近。 那人在树上不屑的哼了一声。%SPEECH_ON%永别了，陌生人。%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],

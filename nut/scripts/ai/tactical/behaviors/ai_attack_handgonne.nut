@@ -81,7 +81,7 @@ this.ai_attack_handgonne <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode && this.m.TargetTile.IsOccupiedByActor)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using " + this.m.Skill.getName() + " against " + this.m.TargetTile.getEntity().getName() + "!");
+				this.logInfo("* " + _entity.getName() + ": 使用" + this.m.Skill.getName() + "，目标: " + this.m.TargetTile.getEntity().getName() + "!");
 			}
 
 			this.m.Skill.use(this.m.TargetTile);

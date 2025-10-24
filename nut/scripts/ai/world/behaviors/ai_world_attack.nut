@@ -190,7 +190,7 @@ this.ai_world_attack <- this.inherit("scripts/ai/world/world_behavior", {
 			return true;
 		}
 
-		_entity.setOrders("Attacking " + this.m.Target.getName());
+		_entity.setOrders("攻击 " + this.m.Target.getName());
 		local dist = this.getVecDistance(this.m.Target.getPos(), _entity.getPos());
 
 		if (dist <= this.Const.World.CombatSettings.CombatDistance)

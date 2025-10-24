@@ -30,7 +30,7 @@ this.wait_order <- this.inherit("scripts/ai/world/world_behavior", {
 
 	function onExecute( _entity, _hasChanged )
 	{
-		_entity.setOrders("Waiting");
+		_entity.setOrders("等待");
 
 		if (this.m.Start == 0.0)
 		{

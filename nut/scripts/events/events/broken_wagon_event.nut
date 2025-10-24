@@ -7,7 +7,7 @@ this.broken_wagon_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 50.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%你在高高的芦苇丛中发现了一辆废弃的载重货车。%randombrother% 检查它，并吼叫回答。%SPEECH_ON%它破的像坨屎，但我想我们可以挽救回一部分。%SPEECH_OFF%",
+			Text = "%terrainImage%你们在高耸的芦苇丛中发现一辆废弃的货车。%randombrother%上前查看后回头喊道。%SPEECH_ON%这玩意儿都快散架了，不过有些零件应该还能用。%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Options = [
@@ -27,7 +27,7 @@ this.broken_wagon_event <- this.inherit("scripts/events/event", {
 				this.List.push({
 					id = 10,
 					icon = "ui/icons/asset_supplies.png",
-					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color]点工具和补给"
+					text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + amount + "[/color]份工具和补给"
 				});
 			}
 

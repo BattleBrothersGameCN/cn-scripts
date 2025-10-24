@@ -6,7 +6,7 @@ this.sword_eater_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.sword_eater";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 60.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

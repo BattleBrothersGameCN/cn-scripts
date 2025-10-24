@@ -30,7 +30,7 @@ this.swim_order <- this.inherit("scripts/ai/world/world_behavior", {
 
 	function onExecute( _entity, _hasChanged )
 	{
-		_entity.setOrders("Sailing");
+		_entity.setOrders("航行");
 
 		if (_entity.getTile().ID == this.m.TargetTile.ID)
 		{

@@ -73,7 +73,7 @@ this.ai_attack_split <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using Split!");
+				this.logInfo("* " + _entity.getName() + ": 使用劈裂！");
 			}
 
 			this.m.Skill.use(this.m.TargetTile);

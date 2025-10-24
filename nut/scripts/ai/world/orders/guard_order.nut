@@ -43,7 +43,7 @@ this.guard_order <- this.inherit("scripts/ai/world/world_behavior", {
 	{
 		if (_entity.getTile().ID == this.m.TargetTile.ID)
 		{
-			_entity.setOrders("Guarding");
+			_entity.setOrders("守卫中");
 
 			if (this.m.WaitTimeStart == 0)
 			{
@@ -56,7 +56,7 @@ this.guard_order <- this.inherit("scripts/ai/world/world_behavior", {
 		}
 		else
 		{
-			_entity.setOrders("Falling back");
+			_entity.setOrders("后撤中");
 
 			if (_hasChanged || _entity.getPath() == null)
 			{

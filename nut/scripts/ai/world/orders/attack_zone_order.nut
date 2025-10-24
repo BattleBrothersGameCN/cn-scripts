@@ -40,7 +40,7 @@ this.attack_zone_order <- this.inherit("scripts/ai/world/world_behavior", {
 			return true;
 		}
 
-		_entity.setOrders("Attacking Zone");
+		_entity.setOrders("攻击区域");
 		local parties = this.World.getAllEntitiesAtPos(_entity.getPos(), this.Const.World.CombatSettings.CombatPlayerDistance);
 
 		if (parties.len() > 1)

@@ -4,7 +4,7 @@ this.beast_hunters_scenario <- this.inherit("scripts/scenarios/world/starting_sc
 	{
 		this.m.ID = "scenario.beast_hunters";
 		this.m.Name = "野兽杀手";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_122.png[/img][/p][p]你和你的人靠捕猎在文明边缘威胁村庄的许多野兽为生。 这是一项危险的工作，但报酬足够高，而且总是有一头更大的野兽需要杀戮，还能挣得更多的克朗。\n\n[color=#bcad8c]野兽杀手：[/color] 从三个野兽杀手和体面的装备，以及一些野兽战利品开始。\n[color=#bcad8c]专家追踪者：[/color] 能看到更远处的足迹。\n[color=#bcad8c]专家剥皮师：[/color] 你杀死的每一头野兽有50%的几率掉落额外的战利品。\n[color=#bcad8c]偏见：[/color] 大多数人不相信你这类人，所以交易价格变差10%。[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_122.png[/img][/p][p]你和你的人靠捕猎在文明边缘威胁村庄的许多野兽为生。 这是一项危险的工作，但报酬足够高，而且总是有一头更大的野兽需要杀戮，还能挣得更多的克朗。\n\n[color=#bcad8c]野兽杀手：[/color] 从三个野兽杀手和体面的装备，以及一些野兽战利品开始。\n[color=#bcad8c]专业追踪者：[/color] 能看到更远处的足迹。\n[color=#bcad8c]专业剥皮师：[/color] 你杀死的每一头野兽有50%的几率掉落额外的战利品。\n[color=#bcad8c]偏见：[/color] 大多数人不相信你这类人，所以交易价格变差10%。[/p]";
 		this.m.Difficulty = 3;
 		this.m.Order = 90;
 		this.m.IsFixedLook = true;

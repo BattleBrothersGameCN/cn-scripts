@@ -15,7 +15,7 @@ this.glutton_gets_fat_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "把猪肉放下, 马上！",
+					Text = "把猪肉放下，马上！",
 					function getResult( _event )
 					{
 						return 0;

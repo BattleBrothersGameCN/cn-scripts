@@ -54,11 +54,11 @@ this.ai_hide <- this.inherit("scripts/ai/tactical/behavior", {
 		}
 
 		score = score * this.Math.maxf(1.0, this.Math.minf(this.Const.AI.Behavior.HideInertiaMaxMult, this.m.Inertia * this.Const.AI.Behavior.HideInertiaMult));
-		this.logWarning("hide after inertia: " + score);
+		this.logWarning("闲置后隐蔽：" + score);
 		score = score * (1.0 - _entity.getTile().getDistanceTo(this.m.TargetTile) / (this.Const.AI.Behavior.HideMaxSearchRange + 1.0));
-		this.logWarning("hide after distance?: " + score);
+		this.logWarning("一定距离后隐蔽？：" + score);
 		score = score * (1.0 - this.Const.AI.Behavior.HideTerrainValueMult + this.Math.maxf(0.0, this.m.TargetTile.TVTotal / 14.0) * this.Const.AI.Behavior.HideTerrainValueMult);
-		this.logWarning("hide after tactical value?: " + score);
+		this.logWarning("战术价值判断后隐藏？：" + score);
 		local myTile = _entity.getTile();
 		local allies = this.queryAllyMagnitude(myTile, this.Const.AI.Behavior.HideMaxOpponentToAllyDistance);
 		local opponents = this.queryOpponentMagnitude(myTile, this.Const.AI.Behavior.HideMaxOpponentToAllyDistance);
@@ -68,13 +68,13 @@ this.ai_hide <- this.inherit("scripts/ai/tactical/behavior", {
 			score = score * this.Math.minf(2.0, opponents.Opponents * opponents.AverageDistanceScore / (allies.Allies * allies.AverageDistanceScore));
 		}
 
-		this.logWarning("hide after numbers advantage?: " + score);
+		this.logWarning("数量占优后隐藏？：" + score);
 		score = score * (1.0 - this.Const.AI.Behavior.HideBreakBecauseOpponentCloseMult + opponents.AverageDistanceScore * this.Const.AI.Behavior.HideBreakBecauseOpponentCloseMult);
-		this.logWarning("hide after opponent close enough?: " + score);
+		this.logWarning("敌人接近后隐藏？：" + score);
 		local engagedPct = this.Math.maxf(allies.AverageEngaged, opponents.AverageEngaged);
 		local engagedMult = this.Math.pow(2 - engagedPct, 5) / this.Math.pow(2, 5);
 		score = score * engagedMult;
-		this.logWarning("hide after everyone engaged?: " + score);
+		this.logWarning("在所有人交战后隐蔽？：" + score);
 		this.m.IsHoldingPosition = _entity.getTile().isSameTileAs(this.m.TargetTile);
 
 		if (this.m.IsHoldingPosition && this.getAgent().getIntentions().IsRecuperating)
@@ -137,7 +137,7 @@ this.ai_hide <- this.inherit("scripts/ai/tactical/behavior", {
 
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Hiding!");
+					this.logInfo("* " + _entity.getName() + "：隐蔽！");
 				}
 
 				this.m.IsFirstExecuted = false;
@@ -157,7 +157,7 @@ this.ai_hide <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Holding hidden position.");
+				this.logInfo("* " + _entity.getName() + "：保持隐蔽位置。");
 			}
 
 			return true;
@@ -246,7 +246,7 @@ this.ai_hide <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode && bestDestination.isSameTileAs(_entity.getTile()))
 			{
-				this.logInfo("* " + _entity.getName() + ": In fact, I would prefer to remain where I am");
+				this.logInfo("* " + _entity.getName() + ": 事实上，我宁愿留在原地");
 			}
 
 			this.m.TargetInfo = bestDestinationInfo;

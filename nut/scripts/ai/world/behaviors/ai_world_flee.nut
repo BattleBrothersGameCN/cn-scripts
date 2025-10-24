@@ -244,7 +244,7 @@ this.ai_world_flee <- this.inherit("scripts/ai/world/world_behavior", {
 			}
 		}
 
-		_entity.setOrders("Fleeing");
+		_entity.setOrders("溃逃中");
 		return true;
 	}
 

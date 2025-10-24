@@ -81,7 +81,7 @@ this.ai_explode_corpse <- this.inherit("scripts/ai/tactical/behavior", {
 
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Corpse Explosion!");
+			this.logInfo("* " + _entity.getName() + "：使用 尸爆！");
 		}
 
 		if (this.m.Skill.use(this.m.TargetTile))

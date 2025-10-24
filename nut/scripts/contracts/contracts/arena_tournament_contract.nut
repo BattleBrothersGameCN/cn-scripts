@@ -635,7 +635,7 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 	{
 		this.m.Screens.push({
 			ID = "Task",
-			Title = "在竞技场",
+			Title = "竞技场内",
 			Text = "",
 			Image = "",
 			List = [],
@@ -663,8 +663,8 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 			],
 			function start()
 			{
-				this.Text = "[img]gfx/ui/events/event_155.png[/img]数十名男子聚集在竞技场的入口。有些人沉默不语，不愿透露自己的能力。然而，另一些人则趾高气昂，夸夸其谈，他们要么是发自内心地信任自己的武艺，要么是希望通过虚张声势掩盖技艺上的漏洞。\n\n";
-				this.Text += "竞技场主，是你见过做着有趣工作的人里，最不对自己工作感兴趣的，可他今天却相当活跃。他一只手拿着卷轴，另一只手竖起三根手指。%SPEECH_ON%三轮！三轮连战，每一轮都比上一轮更难。用五个人赢得所有三轮比赛，就能赢得一件名为%prizename%的著名%prizetype%！锦标赛！锦标赛！你参加吗？%SPEECH_OFF%";
+				this.Text = "[img]gfx/ui/events/event_155.png[/img]数十名男子在竞技场入口处往来徘徊。有人沉默伫立，不愿显露半分实力；另一些人却在大肆吹嘘，要么对自身武艺充满信心，要么想靠虚张声势来掩饰不足。\n\n";
+				this.Text += "竞技场主，在你见过做着有趣工作的人里，是最不对自己工作感兴趣的，今天倒是格外兴致勃勃。他一手举着卷轴，另一手竖起三根手指。%SPEECH_ON%三轮！连打三轮！一轮接一轮，越打越凶险。用指定的五个人赢得所有三轮比赛，就能赢得一件名为%prizename%的著名%prizetype%！锦标赛！锦标赛！你参加吗？%SPEECH_OFF%";
 				this.Text += "竞技场主继续说道。%SPEECH_ON%准备好后，让那些将参加战斗的人戴上我们提供的竞技场项圈。%SPEECH_OFF%";
 			}
 
@@ -672,7 +672,7 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Overview",
 			Title = "Overview",
-			Text = "竞技场锦标赛战斗是这样进行的。你同意这些条款吗？",
+			Text = "竞技场锦标赛规则如下。你同意这些条款吗？",
 			Image = "",
 			List = [],
 			Options = [
@@ -709,8 +709,8 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Start",
-			Title = "在竞技场",
-			Text = "[img]gfx/ui/events/event_155.png[/img]{在你候场的时候，人群的嗜血欲望穿过了黑暗，灰尘成片从头顶落下，脚步声轰如雷鸣。他们期待中低语，在杀戮中咆哮。战斗之间的宁静只有片刻，直到刺耳的铁链声拉起了生锈的大门，人群再次沸腾起来。你走到了亮光中，雷鸣般的声音撞击着你的心脏，哪怕是一具僵尸也会心潮澎湃。 | 竞技场的观众摩肩接踵，大部分都喝的酩酊大醉。他们尖叫呐喊，各地的语言混在一起，疯狂的面孔和挥舞的拳头已经足够，他们的血腥欲望无需多言。现在，%companyname%的人将满足这些疯狂的傻瓜。 | 清洁工人在竞技场中匆忙前行。他们拖走尸体，摸走值钱的东西，偶尔还会把战利品扔到人群里，引发一场暴动，一场看台上的竞技场战斗。现在，%companyname%也是这场盛事的一部分。 | 竞技场在等待，人群在沸腾，%companyname%的荣耀一刻已经到来！ | 当%companyname%的士兵迈步走进这个血腥的斗坑时，人群爆发了。尽管这欢呼来自于观众无意识的嗜血，你还是无法控制自己内心的自豪，因为你知道，你的战团将是这场表演的主角。 | 大门升起时，除了锁链的响声、滑轮的吱嘎声和奴隶劳作的哼声外，什么声音也没有。连%companyname%一路走出竞技场，走向沙坑中央，脚踩沙子的声音都十分清晰。一个陌生的声音从竞技场的顶部传来，你无法理解这种语言，但只等这声音回响了一次，观众们就爆发出欢呼和咆哮声。现在，你的人将在凡夫俗子的注视下证明自己。 | %companyname%很少在那些远离暴力的外行人面前完成工作。但在角斗场，平民们渴望死亡和痛苦，他们咆哮着看你的人进入沙坑，怒吼着见证他们准备好战斗。 | 竞技场的形状就像是一个疮疤，天花板被神撕开，揭示了人类的虚荣、嗜血和野蛮。在那里，人们尖叫着，如果鲜血溅到他们身上，他们只会用那污物洗脸并相视一笑。人们为了战利品互相搏斗，为他人的疼痛而狂欢。%companyname%将在这些人的面前战斗，他们将为他们提供娱乐，无上的娱乐。 | 竞技场的观众阶级混杂，贫富部分，只有维齐尔们有自己的独立看台。在%townname%的人民暂时团结起来，慷慨地聚在一起，观看人和怪物互相厮杀。%companyname%很高兴能尽自己的一份力。 | 男孩们坐在父亲的肩膀上，女孩们向角斗士投去鲜花，女人们扇着扇子，男人们想着自己是否也能做到。这就是竞技场上的人们——其他人都喝得酩酊大醉，大喊大叫。希望%companyname%能够为这个疯狂的群体贡献至少一两个小时的娱乐。 | 当%companyname%的人走上沙坑时，观众群发出震耳欲聋的欢呼声。傻瓜才会把兴奋和崇拜混淆在一起，一旦掌声停下来，飞过来的就会是空啤酒杯和臭烂的番茄，那些看热闹的人则会咯咯大笑。你在想%companyname%的人是否真的要把时间花在这里，但考虑到可以获得的金钱和荣耀，以及等到一天结束时，看台上的那些杂碎们还是会过着他们的狗屁生活，而你也会回到你的狗屁生活，比起他们，至少你口袋里的钱是货真价实的。}",
+			Title = "竞技场内",
+			Text = "[img]gfx/ui/events/event_155.png[/img]{当你们候场时，观众的嗜血穿过了黑暗，顶棚震落的尘埃如幕布垂下，跺脚声震耳欲聋。他们期待中低语，在杀戮中咆哮。战斗间歇的宁静转瞬即逝，随着生锈栅门在锁链刺耳声中升起，人群再度沸腾。你踏入光线的刹那，雷鸣般的喧嚣直击心脏，足以唤醒死尸。 | 竞技场看台摩肩接踵，多数人醉语连篇。他们嘶吼着当地方言与异邦话语，但癫狂的面容与挥动的拳头已足够传递嗜血的渴望。现在，%companyname%的人将满足这群疯子的渴求。 | 清洁工在场地里匆忙穿梭。他们拖走尸体，收集有价值之物，偶尔将战利品抛向观众，看台上立刻重演群氓式的争斗。如今，%companyname%也是这场盛事的一部分。 | 竞技场在等待，人群在沸腾，%companyname%夺取荣耀的时刻到了！ | 当%companyname%的战士踏入血染的角斗场时，人群爆发出轰鸣。尽管知道这只是观众的无脑嗜血狂欢，你胸腔仍不禁涌起自豪——你的战团正是这场表演的主角。 | 栅门升起。唯有锁链碰撞、滑轮吱嘎与奴隶劳作的喘息刺破寂静。当%companyname%的战士们从场地深处走出，沙砾在脚下咯吱作响，直至他们在场地中央站定。看台顶端传来陌生语言的呐喊，尾音在空气中尚未消散，人群便已爆发出欢呼与咆哮。现在正是你的部下在平民注视下证明自身的时刻。 | %companyname%的厮杀很少展现在那些惯于远离暴力的人眼前。但在这角斗场，平民贪婪期盼着死亡与痛苦，当你的战士踏入沙地时他们发出嗜血的低吼，当佣兵们亮出兵器准备厮杀时他们纵情咆哮。 | 这座竞技场犹如溃烂的疮口，顶盖被神灵撕开，揭露出人类的虚荣、嗜血与野蛮。看台上的人们嘶吼叫嚣，当鲜血飞溅到脸上，他们竟用血水洗脸，相视而笑如同闹剧。他们为战利品互相争斗，以他人痛苦为乐。而%companyname%即将在这群人面前搏杀，为他们献上娱乐，绝佳的娱乐。 | 竞技场的观众阶级混杂，贫富不分，唯有维齐尔们高坐专属看台。在%townname%的民众难得团结一致，共赏人与怪物互相屠戮的盛宴。%companyname%很乐意为此尽一份力。 | 男孩骑在父亲肩头，少女向角斗士投掷鲜花，妇人轻摇团扇，男子暗自衡量自身能耐。这就是竞技场观众的常态——剩下的还有些醉醺醺胡言乱语的酒鬼。你希望%companyname%至少能为这群疯子贡献一两小时的消遣。 | 当%companyname%的人走进沙坑时，观众爆发出震耳欲聋的欢呼声。千万别错把这欢呼当作善意——掌声未落便有空啤酒杯与烂番茄砸下，夹杂着看客们幸灾乐祸的嬉笑。你不禁怀疑%companyname%的人是否真的要在这耗费时光，但转念想到即将到手的金钱与荣耀，想到这些看台上的杂碎终将回到惨淡生活，而你虽同样回归惨淡生活，至少钱袋会鼓胀几分。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -740,8 +740,8 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Won2",
-			Title = "在竞技场",
-			Text = "[img]gfx/ui/events/event_147.png[/img]{三场战斗中的第一场已经结束。你需要认真评估自己的士兵是否能够继续下一轮战斗，而下一轮将比上一轮更加困难。正好比死人不会自豪一样，离开也没什么可耻的。你仍然会得到一些钱，但也失去了赢取大奖的机会。}",
+			Title = "竞技场内",
+			Text = "[img]gfx/ui/events/event_147.png[/img]{三场战斗中的第一场已经结束。你得仔细评估手下状况，判断他们能否挺过下一轮——接下来的战斗只会更加艰难。退出也没什么可耻的，毕竟死人没机会吹嘘自己的胜利。你仍然会得到一些钱，但也失去了赢取大奖的机会。2",
 			Image = "",
 			List = [],
 			Options = [
@@ -781,15 +781,15 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.BulletpointsObjectives = [
 					"下一轮战斗将自动开始。",
 					"每场战斗都将一决生死，你将无法撤退或获得战利品",
-					"每轮结束后，您可以选择退出或立即开始下一轮。"
+					"每轮比赛结束后，你可以选择退出比赛，或者立即开始下一轮。"
 				];
 			}
 
 		});
 		this.m.Screens.push({
 			ID = "Won3",
-			Title = "在竞技场",
-			Text = "[img]gfx/ui/events/event_147.png[/img]半决赛结束了，你可以选择现在放弃，或者继续战斗争得大奖。",
+			Title = "竞技场内",
+			Text = "[img]gfx/ui/events/event_147.png[/img]半决赛结束了，你可以选择现在退出，或者继续战斗争得大奖。",
 			Image = "",
 			List = [],
 			Options = [
@@ -830,8 +830,8 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Won4",
-			Title = "在竞技场",
-			Text = "[img]gfx/ui/events/event_147.png[/img]战斗结束了，观众沉闷叫喊声在你耳边回荡，压倒了所有的感官，让你沉浸在一片爆炸般的兴奋中。你是人民的化身，一个图腾，通过你，他们可以代入自己的虚荣心和虚无飘渺的英雄主义。除了人们的崇拜，你还得到了大奖：%prizename%！",
+			Title = "竞技场内",
+			Text = "[img]gfx/ui/events/event_147.png[/img]战斗结束，人群的咆哮在你耳边回荡，如潮水般淹没所有感官。你不过是民众的化身，是他们借以宣泄虚荣与空洞英雄主义的图腾。在众人的狂热崇拜中，你赢得了最终大奖：%prizename%！",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -874,14 +874,14 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "DropOut",
-			Title = "在竞技场",
-			Text = "[img]gfx/ui/events/event_147.png[/img]{你决定退出比赛，保留你的人以备再战。因为这是在竞技场里进行的，所以没有听到嘘声或嘶嘶声。这最多只是一个官方手续，支付一笔小额经济赔偿金就可以离开。没有人会为此悲伤，尤其是其他角斗士，他们比任何人都更了解这个决定的意义。那么观众们呢？他们只想看到鲜血，他们甚至不会注意到哪些带着鲜血的身体已经离去。}",
+			Title = "竞技场内",
+			Text = "[img]gfx/ui/events/event_147.png[/img]{你决定退出锦标赛，让手下养精蓄锐来日再战。由于退赛在竞技场外办理的，所以没有人给你喝倒彩。这不过是走个事务性流程，领取少量奖金后你们便可离开。没有人会鄙夷这个决定——尤其是那些最懂其中利害的角斗士同行。至于观众？他们只渴望鲜血，根本不会留意哪些流淌鲜血的躯体已经离开。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "也许下次吧。",
+					Text = "下次吧。",
 					function getResult()
 					{
 						this.Contract.getHome().removeSituationByID("situation.arena_tournament");
@@ -907,8 +907,8 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Failure1",
-			Title = "在竞技场",
-			Text = "[img]gfx/ui/events/event_147.png[/img]{%companyname%的人被打败了，他们要么痛快死了, 要么成了表演的道具。但至少观众们很高兴。在竞技场里，任何的表现，即便是死了，都是好的表现。}",
+			Title = "竞技场内",
+			Text = "[img]gfx/ui/events/event_147.png[/img]{%companyname%的人战败了，有人当场战死, 有人重伤，后者可能是更加不幸的结局。至少观众们倒是心满意足。在这竞技场中，只要演出精彩，即便结局是死亡也值得称道。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -941,8 +941,8 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Failure2",
-			Title = "在竞技场",
-			Text = "{[img]gfx/ui/events/event_155.png[/img]竞技场比赛的时间到了，你们却没有出现。也许是碰到了更重要的事情，也许是你像懦夫一样躲了起来。不管怎样，你的声誉都会因此受损。",
+			Title = "竞技场内",
+			Text = "{[img]gfx/ui/events/event_155.png[/img]竞技场比赛的时间到了，你们却没有到场。或许是被更重要的事耽搁，又或许只是像懦夫般躲了起来。不管怎样，你的声誉都会因此受损。",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -963,8 +963,8 @@ this.arena_tournament_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Collars",
-			Title = "在竞技场",
-			Text = "{[img]gfx/ui/events/event_155.png[/img]竞技场比赛的时间到了，但你的人都没有佩戴竞技场项圈，被禁止进入。\n\n你应该决定派谁去参加比赛，并给他们佩戴竞技场项圈，比赛会在你再次进入竞技场时开始。",
+			Title = "竞技场内",
+			Text = "{[img]gfx/ui/events/event_155.png[/img]竞技场比赛即将开始，但你的人均未佩戴竞技场项圈，故无法入场。\n\n请为你指定的队员装备获得的竞技场项圈以确定参赛人选，再次进入竞技场后比赛将正式开始。",
 			Image = "",
 			Characters = [],
 			List = [],

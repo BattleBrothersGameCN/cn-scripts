@@ -30,7 +30,7 @@ this.large_tundra_fort <- this.inherit("scripts/entity/world/settlement", {
 			"突堡",
 			"航行堡",
 			"鞋跟堡",
-			"吞堡",
+			"戍堡",
 			"炉堡",
 			"革堡",
 			"回响堡",

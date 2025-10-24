@@ -4,8 +4,8 @@ this.scout_follower <- this.inherit("scripts/retinue/follower", {
 	{
 		this.follower.create();
 		this.m.ID = "follower.scout";
-		this.m.Name = "侦察员";
-		this.m.Description = "侦察员是寻找隐蔽山口、穿越凶险沼泽和引导人们安全通过茂密森林的专家。";
+		this.m.Name = "斥候";
+		this.m.Description = "斥候是寻找隐蔽山口、穿越凶险沼泽和引导人们安全通过茂密森林的专家。";
 		this.m.Image = "ui/campfire/scout_01";
 		this.m.Cost = 2500;
 		this.m.Effects = [

@@ -355,7 +355,7 @@ this.jousting_tournament_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "回去干活儿！",
+					Text = "回去干活！",
 					function getResult( _event )
 					{
 						return 0;

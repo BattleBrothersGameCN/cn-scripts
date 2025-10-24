@@ -220,7 +220,7 @@ this.ai_line_breaker <- this.inherit("scripts/ai/tactical/behavior", {
 
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Line Breaker!");
+			this.logInfo("* " + _entity.getName() + "：使用 破阵者！");
 		}
 
 		this.m.Skill.use(this.m.TargetTile);

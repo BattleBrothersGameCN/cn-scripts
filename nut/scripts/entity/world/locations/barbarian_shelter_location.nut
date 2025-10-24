@@ -2,7 +2,7 @@ this.barbarian_shelter_location <- this.inherit("scripts/entity/world/location",
 	m = {},
 	function getDescription()
 	{
-		return "几个简单的野蛮毛皮小屋挤成一个圈。";
+		return "几座简单的野蛮人毛皮小屋围成一圈。";
 	}
 
 	function create()

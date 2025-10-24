@@ -5,7 +5,7 @@ this.collectors_situation <- this.inherit("scripts/entity/world/settlements/situ
 		this.situation.create();
 		this.m.ID = "situation.collectors";
 		this.m.Name = "收藏家";
-		this.m.Description = "有几个寻求异国古董的收藏家来到镇上。在这里，出售野兽战利品能获得不错的收益。";
+		this.m.Description = "有几名专门搜罗奇珍异品的收藏家来到镇上。在这里，出售野兽战利品能获得不错的收益。";
 		this.m.Icon = "ui/settlement_status/settlement_effect_46.png";
 		this.m.Rumors = [
 			"你们是猎兽人吗？我听说在%settlement%出现了一些奇怪的人，他们正在购买他们能找到的每一个奇异的怪物战利品。",

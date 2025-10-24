@@ -5,7 +5,7 @@ this.orc_warrior_potion_item <- this.inherit("scripts/items/misc/anatomist/anato
 		this.anatomist_potion_item.create();
 		this.m.ID = "misc.orc_warrior_potion";
 		this.m.Name = "铁头药剂";
-		this.m.Description = "正如任何一位名副其实的老兵都可以证明的那样，与兽人战士作战就是与一面金属和血肉铸成的城墙作战，即使是最致命的打击似乎也无法伤其分毫。有了这种药剂，你就可以成为那堵墙了！";
+		this.m.Description = "正如任何一位万名之战的老兵都可以证明的那样，与兽人战士作战就是与一面金属和血肉铸成的城墙作战，即使是最致命的打击似乎也无法伤其分毫。有了这种药剂，你就可以成为那堵墙了！";
 		this.m.IconLarge = "";
 		this.m.Icon = "consumables/potion_15.png";
 		this.m.Value = 0;

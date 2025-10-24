@@ -69,7 +69,7 @@ this.move_order <- this.inherit("scripts/ai/world/world_behavior", {
 			return true;
 		}
 
-		_entity.setOrders("Moving");
+		_entity.setOrders("移动中");
 
 		if (_entity.getTile().ID == this.m.TargetTile.ID)
 		{

@@ -38,7 +38,7 @@ this.thief_background <- this.inherit("scripts/skills/backgrounds/character_back
 			"影子",
 			"掏包儿(the Cutpurse)",
 			"蛇(the Snake)",
-			"乌鸦(the Raven)",
+			"·渡鸦",
 			"恶贼(the Burglar)",
 			"抢掠者(the Snatcher)",
 			"黑猫(the Black Cat)",

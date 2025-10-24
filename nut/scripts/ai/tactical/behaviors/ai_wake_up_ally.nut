@@ -68,7 +68,7 @@ this.ai_wake_up_ally <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Wakes Up Ally!");
+			this.logInfo("* " + _entity.getName() + "：唤醒了队友！");
 		}
 
 		this.m.Skill.use(this.m.Target);

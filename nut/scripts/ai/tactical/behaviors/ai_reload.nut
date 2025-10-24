@@ -67,7 +67,7 @@ this.ai_reload <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Reloading!");
+			this.logInfo("* " + _entity.getName() + "：重新装填！");
 		}
 
 		this.m.Skill.use(_entity.getTile());

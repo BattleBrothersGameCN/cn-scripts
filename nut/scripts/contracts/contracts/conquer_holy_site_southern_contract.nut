@@ -153,7 +153,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 				{
 					if (n.getFlags().get("IsHolyWarParticipant"))
 					{
-						n.addPlayerRelation(-99.0, "在战争选择了阵营");
+						n.addPlayerRelation(-99.0, "在战争中选择了阵营");
 					}
 				}
 
@@ -458,14 +458,14 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_162.png[/img]{你发现%employer%正坐在一堆卷轴后面忙着写字，他旁边的神职人员也在专心听取，每当Vizier说完一句话，他们就会抢走卷轴。最终结束时，这个从事写作的人终于抬起头来。%SPEECH_ON%我们有一个%holysite%被北方鼠辈闯入的问题。我会试着克制对此事的感情，因为Gilder不会用愤怒的情绪来玷污人性的理智，总之，这些野蛮人的存在冒犯了我们理智的食欲。%SPEECH_OFF%Vizier沾上一根羽毛笔，然后回到他的写作和发言之中。%SPEECH_ON%但是，狗吠鸟飞。我需要一只狗，Crownling，还需要一只有咬力的狗。带领你的战团前往圣地，铲除那些败类。如果你同意，那么%reward%克朗将会等待你回来。%SPEECH_OFF% | %employer%用惊人的热情欢迎你。%SPEECH_ON%我真的相信Gilder会派来一个重要的人物，一个具有强大力量和绝对实力的人物。一个Crownling，当然，但是一个战士？当然是！%SPEECH_OFF%在你还没来得及问这是什么事情时，Vizier拿起一只镶金边的酒杯，杯口的一半被切成了月牙形。%SPEECH_ON%我们的圣地%holysite%被野蛮的北方人夺走了。我们的世界正受到黑暗的威胁，为了抵御阴影，我们必须在我们的努力中获得祝福。我的领地上的人很多，但是Gilder的地盘延伸千里，我需要像你这样的士兵来帮忙夺回%holysite%。其实它是Gilder的领土之一，而Gilder支付我们所有人：%reward%克朗将会支付给你。我们达成一致了吗？%SPEECH_OFF% | 在一个罕见的场景中，你看到%employer%俯伏在一块闪闪发光的太阳形徽章下。他自言自语几句，然后站起来，又说了几句小声的话，逐个擦拭他的指尖，然后转向你。%SPEECH_ON%在这些士兵正在为我们做出有利的进展的时候，%holysite%已经无人守卫。为了赢得这场战争，我留下了一个机会，让野蛮的北方人占据了这个地方。我希望，当面对你时，外面有人来帮我一下。Gilder会给我们提供金子般的道路，Crownling，你也不例外。通过我的手，如果你夺回%holysite%，你将获得%reward%克朗！%SPEECH_OFF% | 一只金色的酒杯散落在大理石地板上，红酒四溅。Vizier对你大声喊叫，愤怒和需要交织在一起。%SPEECH_ON%终于，有人可以提供帮助了！%SPEECH_OFF%他打发了一些帮手，甚至打发了一些看起来像是他自己的中尉。%SPEECH_ON%Crownling，%holysite%已经被北方的蠢物征服了。我曾为他们洗耳恭听，曾经流泪想到他们抢走这个地方，我将每天为他们玷污Gilder的足迹而流泪。%reward%克朗，这就是你将得到的奖励。这对你来说是一笔可观的财富，但毕竟有这样一句话，对于某些人，这样被铺设的金色路径可能更像是字面意义超过了其他人的。%SPEECH_OFF% | %employer%被披着丝绸的男人包围。其中一个带着一只笼子，里面装着萤火虫，昏暗的虫光在这里和那里闪烁。另一个笼子里只剩下一只死鸟的骨头，除了两根仿佛是曾经的翅膀的羽毛，鸟的其他部分已经全部剥离。看到你后，Vizier从这些人之间走了出来，就像一座庙宇中不可移动的柱子之间走路一样。%SPEECH_ON%Crownling，你来了！我的侦察兵报告说我们在与北方狗的战争中已经退了一步。%holysite%已经被占领了，根据Gilder的耳语，我必须让它回到我们手中。不仅为了我的领地，而且为了使Gilder的崇高有所收获。如果你完成任务，你将获得%reward%克朗，这对于这个艰巨的任务来说是一个巨额的奖励，是的！%SPEECH_OFF% | 记住往常的华丽和奢侈，你看到%employer%跪在地上，穿着相对较为简朴的服装。他戴着一顶裹着黑色缎绸的首饰。这位社交场上的低调人士平静地对你说话。%SPEECH_ON%北方异教徒从我们的领土占领了%holysite%。我不责怪他们的行为，他们不知道自己在做什么。我会在Gilder知道我的过失之后，用我的诚实之手去挽回这个错误。但失败并不意味着放弃。我需要你去圣地并将其带回我们的领域。对此，你将得到放置在你的资金包中的%reward%克朗。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_162.png[/img]{你在堆积如山的卷宗后找到了%employer%。他正忙于书写，周围的圣职人员同样专注地守候着，确保在维齐尔写完最后一句话的瞬间就能收走卷轴。这位奋笔疾书的大人物终于抬起头来。%SPEECH_ON%我们遇到了%holysite%被北方鼠辈侵占的事件。我会尽量克制情绪——毕竟镀金者的教义不主张让怒火玷污理智，我就简单表态吧：这些野蛮人的存在冒犯了理性的尊严。%SPEECH_OFF%维齐尔蘸了蘸羽毛笔继续边写边说。%SPEECH_ON%不过，犬吠惊飞鸟。我需要一条能撕咬的猎犬，逐币者，带着你的战队去圣地根除那些败类。若达成协议，%reward%克朗与镀金者的荣光将待你归来。%SPEECH_OFF% | %employer%以出人意料的热情迎接你。%SPEECH_ON%我早知镀金者必将为我带来举足轻重的强者，一个真正孔武有力的战士。说是逐币者没错，但更是真正的勇士！%SPEECH_OFF%不待你询问任务详情，维齐尔便举起一只黄金圣杯，杯沿如同月牙般被削去半边。%SPEECH_ON%我们最神圣的土地%holysite%已被北方野蛮人占领。我们的世界正面临黑暗威胁，要抵御这片阴影必须确保行动顺利。我麾下将士虽众，但镀金者眷顾的土地辽阔无边。我需要你这样的战士助我们夺回%holysite%。因为这片土地乃镀金者之封邑，而镀金者必会犒赏众人：任务完成可得%reward%克朗。我们可否达成协议？ | 难得一见地，你发现%employer%正匍匐在一枚日光形状的闪耀徽章之下。他低声自语后起身，再次低语，逐一清洁指尖，然后转向你。%SPEECH_ON%当我的军队在别处高歌猛进时，%holysite%却无人防守。我急于赢得这场战争，却给北方野蛮人敞开了侵占的大门。我当面请求你提供外部援助。镀金者会为我们铺就镀金之路，逐币者，你同样在祂的慷慨恩泽之内。只要你夺回%holysite%，经由我手，你将获得%reward%克朗！%SPEECH_OFF% | 一只金质高脚杯砸在大理石地板上，酒水四处飞溅。维齐尔对你喊道，语气混杂着愤怒与需求。%SPEECH_ON%总算来了能帮忙的人！%SPEECH_OFF%他挥手屏退几名侍从，甚至几名看似是他指挥官的人。%SPEECH_ON%逐币者，%holysite%已被北方渣滓攻占。一想到他们在那洗劫我就悲痛落泪，而他们玷污镀金者圣迹的每一天，我都将再度哭泣。%reward%克朗。这就是将要筹备并放入你口袋的数目。对你来说确实丰厚，但人们说得对，对某些人而言，镀金之路的含义或许更为直白。%SPEECH_OFF% | %employer%被身着绸缎的随从环绕。一人提着带罩的笼子，里面萤火虫的微光忽明忽暗；另一人拿着鸟笼，里面的鸟儿只剩骨架和两根仿佛复现其完整羽翼的羽毛。见到你，维齐尔从这些人中间走出，如同穿行于神庙坚不可摧的立柱之间。%SPEECH_ON%逐币者，你来了！我的斥候报告说，我们在对抗北方野狗的战争中退了一步。%holysite%已被占领，依照镀金者的启示，我必须将其夺回。不仅为了我的领土，更是为了让祂的荣光不至蒙尘。成事你将获得%reward%克朗，重赏之下必有勇夫，正是如此！%SPEECH_OFF% | 一反往常珠光宝气、被熟识的奢靡之徒环绕的景象，你发现%employer%身着简朴服饰跪在地上。他头戴饰有黑色绳圈的头巾。这位收敛了社交锋芒的维齐尔平静地对你说。%SPEECH_ON%北方异教徒已从我们土地上夺走了%holysite%。我不责怪他们的行为，他们不知自己在做什么。凭我赤诚双手，镀金者必知我过。但失败不意味着投降。我需要你前往圣地，将其归还于我。为此，你将获得%reward%克朗的犒赏。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{我相信你会为这样的袭击付出充分的报酬。 | 我们已经准备好尽自己的一份力了。 | 我们再多谈谈报酬。}",
+					Text = "{我相信你会为这样的袭击慷慨解囊的。 | 我们已经准备好尽自己的一份力了。 | 我们再谈一谈报酬。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -473,7 +473,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 
 				},
 				{
-					Text = "{这不值得。 | 这太远了。 | 我们有更紧迫的事情要处理。 | 我们还有别的地方要去。}",
+					Text = "{这事不划算。 | 这太远了。 | 我们有更紧迫的事情要处理。 | 我们还有别的地方要去。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -490,7 +490,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "Attacking",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{正如维齐尔所料，北方人已经占据了 %holysite% 及其周围的位置。大多数宗教信徒早已离开，只剩下 %companyname% 和对立势力。你拔出剑命令士兵发起攻击。}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{正如维齐尔所料，北方人已在%holysite%内外展开部署。大多数普通信徒早已撤离，现在只剩下%companyname%与敌军对峙。你拔出长剑，下令战士们准备进攻。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -507,8 +507,8 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		});
 		this.m.Screens.push({
 			ID = "AlliedArmy",
-			Title = "在 %holysite%",
-			Text = "[img]gfx/ui/events/event_164.png[/img]{当你接近%holysite%时，一个人突然从地面下站了起来。你吓了一跳，拔出武器，但这个人说自己是 %employer% 的伪装指挥官。 %SPEECH_ON%放轻松，雇佣兵，你还会得到你的硬币的。维齐尔的信鸽已经告诉我的队伍你的到来，我必须说你迟到了。我知道这不是你们的战争, 但好吧, 我想现在也不是责备彼此之时. 让我们共同努力夺回圣地，为了吉尔德荣耀！%SPEECH_OFF% | 当你接近%holysite%时，一个人突然从地面下站了起来，并问你是不是 %companyname% 的指挥官。经过短暂的确认后，他立刻说话道 %SPEECH_ON%是的，当然是你。我是%employer%的中尉指挥官%commander%。维齐尔的信鸽已经告诉我你可能会来。 雇佣兵，虽然你可能只是为钱而战，但只要我们能赢得今天这场战斗，吉尔德将会给我们带来无尽的荣耀！%SPEECH_OFF%}",
+			Title = "%holysite%里",
+			Text = "[img]gfx/ui/events/event_164.png[/img]{当你接近%holysite%时，一个人突然站起，仿佛从地下冒出。你受惊拔出武器，但对方表明自己是%employer%手下的指挥官，只是在潜伏而已。%SPEECH_ON%放轻松，逐币者，你的赏金少不了。维齐尔的信鸽早已将你的行踪告知我们，不得不说你们来得有点晚。我明白这不是你们的战争，不过……好吧，现在不是责备的时候。我们一起为镀金者夺回圣地，愿我们前方的道路永远沐浴在祂的光辉之中。%SPEECH_OFF% | 当%holysite%映入眼帘时，一个人影从地底冒出。他询问你是否是%companyname%的指挥官，你的片刻迟疑似乎给了他答案，于是他立即开口。%SPEECH_ON%是了，你当然是。我是%employer%的副官%commander%。维齐尔的信鸽早已通报你可能前来。逐币者，你或许是为钱财而来，但若今日获胜，镀金者的荣光必将照亮你明日的道路！%SPEECH_OFF%}",
 			Image = "",
 			Banner = "",
 			List = [],
@@ -531,13 +531,13 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		});
 		this.m.Screens.push({
 			ID = "SallyForth",
-			Title = "在 %holysite%",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{ %holysite% 的守卫者得到了增援! 但值得庆幸的是，还有一线希望: 额外的援军使得使他们有信心离开圣地的自然防御并在开阔的战场上接近你。 | 你惊讶地看到防守者离开 %holysite% 并徒步穿过开阔的战场。一份迅速的侦查报告传达道: 他们在过去几天中得到了增援, 因此变得很有底气。 一方面，他们深深的阵列有点令人不安，但另一方面，在平坦的战场上面对他们会更容易。经过理智评估, 他们选择在开阔战场直面 %companyname% 将是一个致命的错误。}",
+			Title = "%holysite%里",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{%holysite%的守军得到了增援！所幸还有一线希望：新增的兵力让他们有了信心离开圣地的天然防御，主动来到开阔地带与你交战。 | 你惊讶地看到守军离开了%holysite%，正跋涉穿过开阔地。一份快速的侦察报告显示，他们在过去几天里获得了增援，单纯因人数而壮了胆。一方面，他们深厚的阵势确实有些令人不安；但另一方面，在平原地带迎战他们会容易得多。不过据你客观估计，他们选择与%companyname%正面交锋本身就是个错误。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "那就是一场野战了。",
+					Text = "那便打一场野战吧。",
 					function getResult()
 					{
 						this.Contract.getActiveState().onDestinationAttacked(this.Contract.m.Destination);
@@ -553,8 +553,8 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		});
 		this.m.Screens.push({
 			ID = "Mercenaries1",
-			Title = "在 %holysite%",
-			Text = "[img]gfx/ui/events/event_134.png[/img]{当 %holysite% 出现在视野中时，一个看起来几乎与你相似得有些诡异的男人走了过来。他身边有一名财务主管和几个雇佣兵。%SPEECH_ON%晚上好，队长。我是来自 %mercenarycompany% 的雇佣兵 %mercenary%，像你一样为钱而来。现在，我打赌维齐尔已经为你和你的手下签订了合同，但如果你支付给我 %pay% 克朗，我将会协助您完成这个小任务？%SPEECH_OFF%. | 你被一群男人包围，其中一个人的步态和体质都让你感到奇怪地相似。他自称为%mercenary%，是%mercenarycompany%的队长。%SPEECH_ON%我以为维齐尔会派专业军队来处理圣地易手的事情。我必须向您承认，队长，我曾经帮助北方人占领这个著名的纪念碑。然而，如果以 %pay% 克朗作为报酬，我愿意帮助你们夺回它。作为一名同行雇佣兵，相信你能看出这对所有人来说都是一个好交易.%SPEECH_OFF%}",
+			Title = "%holysite%里",
+			Text = "[img]gfx/ui/events/event_134.png[/img]{当%holysite%映入眼帘时，一个看起来与你惊人相似的男子走了过来。他身边带着一个财务官和几个佣兵。%SPEECH_ON%晚上好，队长。我是%mercenarycompany%的%mercenary%。我和你一样，来这片土地是为了赚取克朗。我敢打赌维齐尔已经签了份靠谱合同雇你和你的手下，不过如果你付我%pay%克朗，我就帮你完成这桩小事——你意下如何？%SPEECH_OFF% | 一群人向你走来，其中一人的步态和体格都与你相似到古怪的程度。他自称是%mercenarycompany%的队长%mercenary%。%SPEECH_ON%我原以为维齐尔会派他的正规军来夺回圣地。实不相瞒，队长，最初帮北方人占领这座神圣纪念碑的正是我。不过，只要%pay%克朗，我很乐意帮你们夺回来。同为佣兵，你肯定明白这对各方都是笔好买卖。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [],
@@ -574,7 +574,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 				else
 				{
 					this.Options.push({
-						Text = "恐怕我们没有那么多的钱币。",
+						Text = "恐怕我们没有花这种钱的习惯。",
 						function getResult()
 						{
 							return "Mercenaries3";
@@ -596,8 +596,8 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		});
 		this.m.Screens.push({
 			ID = "Mercenaries2",
-			Title = "在 %holysite%",
-			Text = "[img]gfx/ui/events/event_134.png[/img]{那队长露出笑容，拍了拍你的肩膀。%SPEECH_ON%啊哈，就是这样！就是这种高尚的雇佣兵精神！嗯，作为 %companyname% 的指挥官，让我们一起前往战斗吧，虽然只是短暂的时间！%SPEECH_OFF% | 交易完成后，雇佣军队长靠近你。他几乎贴在你身边，让人感到不舒服，并且肯定能闻到他的呼吸，这是令人不喜欢的。%SPEECH_ON%你知道，像我们这样的人，伙计们，我们是朋友对吧？像我们这样的朋友必须要互相支持。在接下来的战斗中，我们会一起并肩作战。%SPEECH_OFF%他点了点头，并猛地拍了一下你的肩膀。%SPEECH_ON%战斗结束后，我希望我们还能再做好朋友啊！你懂得。 %SPEECH_OFF%}",
+			Title = "%holysite%里",
+			Text = "[img]gfx/ui/events/event_134.png[/img]{队长咧嘴一笑，拍了拍你的肩膀。%SPEECH_ON%啊——这就对了！这就对了，高贵的佣兵精神！好啊，%companyname%的指挥官，让我们就此结伴而走，短暂同行，并肩作战，同样短暂！%SPEECH_OFF% | 交易达成后，这个佣兵队的队长溜达到你身边，靠得极近，近得几乎让人不适，而且绝对能让你闻到他带着异味的气息。%SPEECH_ON%你知道，像我们这样的人，像我们这样的家伙，哥们儿，我们是哥们儿，对吧？像我们这样的哥们儿。我们得团结一致。就眼前这场仗，我们会紧紧团结在一起的。%SPEECH_OFF%他点点头，朝你肩膀轻轻捶了一拳。%SPEECH_ON%等打完了，嗯，我希望咱们以后还有机会再做哥们儿，你懂的吧？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -625,8 +625,8 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		});
 		this.m.Screens.push({
 			ID = "Mercenaries3",
-			Title = "在 %holysite%",
-			Text = "[img]gfx/ui/events/event_134.png[/img]{%SPEECH_START% 真是太遗憾了。%SPEECH_OFF% %mercenary%说着，迅速回到了 %mercenarycompany% 的队伍中。他不断地向后退，直接撞上了保卫 %holysite% 的士兵。他的手臂张开，像在逆流中游泳一样摆动着。%SPEECH_ON%我可真是感到非常遗憾啊！好吧， %companyname% 队长，让我们看看哪一方购买的雇佣兵更出色呢？%SPEECH_OFF%这位雇佣兵拔出武器，周围的北方士兵也做同样的事情，你也跟着拔出武器。现在是时候战斗了。 | %SPEECH_ON%哦，我明白了。嗯，我也没抱太大期望。毕竟，我也是一名雇佣兵。而现在……%SPEECH_OFF%他向后走到他的同伴那里，他的同伴站在保护 %holysite% 的北方士兵队列中。%SPEECH_ON%现在，南方人证明自己是出价最高的。%SPEECH_OFF%}",
+			Title = "%holysite%里",
+			Text = "[img]gfx/ui/events/event_134.png[/img]{%SPEECH_START%真遗憾。%SPEECH_OFF%%mercenary%说着，迅速退回到%mercenarycompany%的队列中。他一路后退，直接融入了防守%holysite%的北方士兵阵线。他双臂张开摆动，仿佛在逆流游泳。%SPEECH_ON%我是说，真他妈遗憾！好吧，%companyname%的队长，就让咱们瞧瞧哪边请到了更强的佣兵，好吗？%SPEECH_OFF%这名佣兵拔出了武器，他身后%holysite%的北方士兵们也纷纷亮出兵刃。自然地，你也拔出了武器。是时候战斗了。 | %SPEECH_ON%行，行，我明白了。好吧。我本来也没抱太大期望。毕竟，我也是个雇佣兵。而现在……%SPEECH_OFF%他步步后退，与自己的战团会合，而他的战团则与守护%holysite%的北方士兵们融为一体。%SPEECH_ON%眼下看来，北方人才是出价更高的主顾。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -649,12 +649,12 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "CounterAttack1",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{战斗结束了，但远处的金色闪光引起了你的注意。当你凝视着地平线时，一队北方人出现了，他们鲜艳的外表无疑是为了被看到。这是一次反击！ | 当你收起剑的时候，一支箭从头顶飞过，落在沙地上发出轻微的声响。你朝着箭矢来源看去，看到一个年轻而紧张的弓手被人拍打了一下脑袋。这个男人旁边是整个北方军团！这是一次反击！}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{战斗已经结束，但远处有盔甲的金属反光在闪烁。你眯起眼睛聚焦于逐渐接近的身影。或许他们是前来朝圣的信徒——不，是北方人！这是他们的反击！ | 当你收剑入鞘时，一支箭从头顶呼啸而过，轻声扎进沙地。你朝来源望去，只见一个紧张的年轻弓箭手正被人拍打后脑勺，而在他身旁赫然是一整支北方部队！这是他们的反击！}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们将坚守这个地点进行防御！",
+					Text = "我们将坚守此地！",
 					function getResult()
 					{
 						return "CounterAttack2";
@@ -662,7 +662,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 
 				},
 				{
-					Text = "我们会在开阔地见他们！",
+					Text = "我们将在开阔地和他们硬碰硬！",
 					function getResult()
 					{
 						return "CounterAttack3";
@@ -670,7 +670,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 
 				},
 				{
-					Text = "我们无法再战斗。撤退！",
+					Text = "我们没办法再打一场了。撤退！",
 					function getResult()
 					{
 						return "Failure";
@@ -686,7 +686,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "CounterAttack2",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{%SPEECH_START%又来了一些北方人。%SPEECH_OFF%%randombrother% 说。你点点头回答道。%SPEECH_ON%给金匠的火炉添更多的木材。%SPEECH_OFF%雇佣兵提到金匠对金子比火焰更珍视，但你叫他闭嘴，准备迎接即将到来的战斗。%holysite%本身的防御应该能很好地为战团服务。 | 你命令士兵在%holysite%内自卫。%randombrother%环顾四周。%SPEECH_ON%你是否曾经想过正在观看这一切的神会不会有点失望呢？你知道的吗？就像我们把他们的锅碗弄得一团糟？%SPEECH_OFF%你扇了他的脑袋一巴掌，让他集中注意力。}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{不过是又来了一批北方佬。%SPEECH_OFF%%randombrother%说道。你点头回应。%SPEECH_ON%正好给镀金者的火焰添更多柴薪。%SPEECH_OFF%他嘀咕说镀金者更喜欢黄金而非火焰，但你让他闭嘴，准备好迎接即将到来的战斗。%holysite%本身的防御工事应该能帮上忙。 | 你命令士兵们在%holysite%内组织防御。%randombrother%环顾四周。%SPEECH_ON%你说那些看着这里的神明会不会有点恼火？懂我意思吗？就像我们把他们的锅碗瓢盆搞得一团糟？%SPEECH_OFF%你拍了下他的后脑勺，让他集中注意力。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -712,7 +712,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "CounterAttack3",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{你命令%companyname%进入战场。北方的中尉挥手微笑着迎接你。%SPEECH_ON%终于出来了，受够祈祷了吧？%SPEECH_OFF%你转过身吐了口痰。%SPEECH_ON%我们已经没有地方埋葬你们的尸体了。%SPEECH_OFF%中尉的微笑变得沉默，随即下令冲锋。出兵！}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{你命令%companyname%进入战场。北方部队的军官咧嘴笑着向你挥手致意。%SPEECH_ON%终于敢出来了，是吧？怎么，祷告腻了？%SPEECH_OFF%你转身啐了一口。%SPEECH_ON%我们只是没地方埋你们的尸体罢了。%SPEECH_OFF%他的笑容瞬间消失，随即下令冲锋。准备战斗！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -738,7 +738,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "Victory",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{当你收起武器，让同伴开始搜刮尸体时，你有一种奇怪的感觉，好像这不是第一次发生在 %holysite% 的血腥事件。无论如何，如果有人注定要在这场争斗中死去，你很高兴那个人不是你。几个南方人进来保护圣地时，你动身前往 %employer%。，你相信他会很高兴收到你的好消息。 | 你打败了敌人，成功收复了 %holysite%。南方士兵慢慢地修复防线，在他们身后缓缓涌来一群信徒，迈过死者后跪拜在圣地前。没有一个人对你说谢谢。虽然这并不重要，因为那是 %employer% 的工作 | 战斗结束后，一些忠诚的人开始聚集在%holysite%的角落里。你不知道这些人从哪里来，他们不在意你，而你也不在意他们。现在重要的是有大量克朗在 %employer% 那等待着你回去领取。当你离开时，几个南方士兵接管了岗位，并没有向你道谢。}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{当你收剑入鞘，让战团从尸体上搜集战利品时，你隐约感到%holysite%并非第一次经历这般血腥。罢了，若有人注定要重蹈祖先的覆辙，你很高兴那人不是你。几名南方士兵前来接管这片圣地。有他们驻守，你便动身离开，心知%employer%必将喜迎你带回的消息。 | 你打败了敌人，成功收复了%holysite%。南方士兵逐渐进驻防御工事。随后零散跟来的是一群信徒，他们穿过横陈的尸骸，只为在那至圣之所顶礼膜拜。没有一人向你道谢。不过无所谓，因为这是%employer%的职责。 | 战事既毕，一小群信徒开始聚集在%holysite%的各个角落。你都不知道这些人是从哪儿冒出来的。他们不打扰你们，你们也不理会他们。现在重要的是，%employer%备好的大笔克朗正待你归去。当你离开时，几名南方士兵接防驻地，同样没吐露半句感谢。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -765,7 +765,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "Failure",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/%illustration%.png[/img]{你没能从北方人手中保护好%holysite%。待在这儿是没什么用了，如果你实在是想把你的头放在维齐尔镶金的盘子里的话，回去找%employer%也行。}",
+			Text = "[img]gfx/ui/events/%illustration%.png[/img]{你未能保护%holysite%免受北方人侵占。待在这儿是没什么用了，如果你实在是想把你的头放在维齐尔的鎏金托盘里的话，回去找%employer%也行。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -775,7 +775,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "未能征服一个圣地");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractFail, "未能征服某处圣地");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -790,7 +790,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 		this.m.Screens.push({
 			ID = "Success",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{%employer% 正坐在一个巨大的金色吊灯下，它像太阳一样悬挂在天花板上。看起来这是你离开时安装的。当你走近时，一个神圣的人拦住了你，并摇了摇头。他用手在空中画了个圆圈，然后轻轻地触碰了你的额头，热情地引导你到房间另一边放着整齐堆放着 %reward% 克朗的木盘处。\n\n 这个人向你鞠躬致意，随后将金色吊灯的光芒引导到装满克朗的木盆处，克朗被照得闪闪发光。虽然这似乎是某种诡计，但报酬是真实的，所以您接受并离开了。 | 当你进入%employer%的房间时，一些卫兵对你鞠躬跪拜。在远处，维齐尔静静地坐在宝座上，周围都是穿着丝绸衣服的神圣人物，看来今天你无法接近他。然而，一群年轻男孩一个接一个地给你带来了装满克朗的盘子，直到你收到了%reward%克朗。维齐尔点头示意，并用手势让你收下了报酬后离开。 | 当你走进大厅时，你看到 %employer% 似乎被一团金色的雾气所迷住。他站在一个旋转平台上——在地板下几乎看不见的奴隶的帮助下粗糙地旋转——手腕上系着布条。他的妃嫔站在一边，嘴里含着了一些金色液体，然后喷出唇溅溅的雾气。仔细观察后，你会发现这并不是你刚走进来时想象中那么壮观。在你想靠近进一步观察之前，一个身穿宗教服装的大汉拦截了你，并带领你到房间后面的桌子前。桌子上摆满了盛有克朗的托盘，总共价值%reward%克朗作为您的报酬。你收取了报酬后匆忙地被离开了房间。}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{%employer%正坐在一件金色圣徽的光芒下——那是由链条从天花板悬吊下来的巨大金属物件，形如太阳。这一定是你外出期间新建造的。当你上前时，一位圣职人员拦住你并摇了摇头。他在空中画了个圆，随后将指尖轻触你的头顶。他微笑着将你引到房间另一侧，%reward%克朗已被整齐码放在木托盘中。\n\n那人鞠躬，双手指向金色圣徽，手掌姿态如同托举着整个构造物，随后他做出引导圣徽的荣光至酬金的动作，钱币顿时迸发出光芒。虽是某种把戏，但报酬确是真的，于是你收下钱便离开了。 | 当你走进%employer%的房间，数名守卫短暂地鞠躬并伏地跪拜后起身。远处，维齐尔静坐在王座上，身着丝绸的圣职人员环绕四周。今日你似乎无缘近前觐见，但一群少年将盛满钱币的托盘逐批端到你面前，直到你收齐%reward%克朗。维齐尔点头并翻转手掌。你收取报酬后便离去。 | 你走进宏伟殿堂，看见%employer%仿佛被一团金色烟雾所包裹。他手腕上系着布条，站在旋转平台上——由藏身地板下的奴隶吃力地推动着转动。他的侍妾们站在一旁，口中含满某种金色液体，随后将其喷溅成水雾。细看之下，这场面远不如初入时想象的那般辉煌。所幸你无需继续观摩：一名身着圣袍的壮汉拦住你，将你引至房间后方的长桌。桌上排列着盛满钱币的托盘，总计是你应得的%reward%克朗报酬。钱款到手后，你便被匆忙带离了殿堂。}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -802,7 +802,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "征服了一个圣地");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "征服了一处圣地");
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isHolyWar())
@@ -1007,7 +1007,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 			}
 		}
 
-		local party = f.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + " 战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 140) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
+		local party = f.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + "战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 140) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
 		party.setDescription("听命于当地领主的职业军人。");
 		party.setAttackableByAI(false);

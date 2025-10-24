@@ -138,7 +138,7 @@ this.ai_move_tail <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Moving tail.");
+				this.logInfo("* " + _entity.getName() + "：移动尾巴.");
 			}
 
 			this.m.Agent.adjustCameraToTarget(this.m.TargetTile);

@@ -15,7 +15,7 @@ this.fainthearted_is_shellshocked_event <- this.inherit("scripts/events/event", 
 			Characters = [],
 			Options = [
 				{
-					Text = "让他自己待会儿。",
+					Text = "不管他",
 					function getResult( _event )
 					{
 						return 0;

@@ -77,7 +77,7 @@ this.conquer_order <- this.inherit("scripts/ai/world/world_behavior", {
 			return true;
 		}
 
-		_entity.setOrders("Conquering");
+		_entity.setOrders("征服中");
 
 		if (this.m.Start == 0.0)
 		{
@@ -94,9 +94,9 @@ this.conquer_order <- this.inherit("scripts/ai/world/world_behavior", {
 					if ((e.getOwner() == null || e.getOwner().getID() != _entity.getFaction()) && !e.hasSituation("situation.conquered"))
 					{
 						local news = this.World.Statistics.createNews();
-						news.set("Conqueror", this.World.FactionManager.getFaction(_entity.getFaction()).getName());
-						news.set("Defeated", e.getOwner().getName());
-						news.set("City", e.getName());
+						news.set("征服者", this.World.FactionManager.getFaction(_entity.getFaction()).getName());
+						news.set("失败了(Defeated)", e.getOwner().getName());
+						news.set("城市", e.getName());
 						this.World.Statistics.addNews("crisis_civilwar_town_conquered", news);
 						local defeatedFaction = e.getOwner();
 

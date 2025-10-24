@@ -3,7 +3,7 @@ this.ambition_fulfilled_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.ambition_fulfilled";
-		this.m.Title = "一个野心达成";
+		this.m.Title = "一项野心目标达成";
 		this.m.IsSpecial = true;
 		this.m.Screens.push({
 			ID = "A",

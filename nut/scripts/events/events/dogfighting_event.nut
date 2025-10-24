@@ -7,7 +7,7 @@ this.dogfighting_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.dogfighting";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

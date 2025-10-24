@@ -154,7 +154,7 @@ this.ai_protect <- this.inherit("scripts/ai/tactical/behavior", {
 			{
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Waiting until others have moved!");
+					this.logInfo("* " + _entity.getName() + ": 等待直到其他人移动！");
 				}
 
 				this.m.TargetTile = null;
@@ -193,7 +193,7 @@ this.ai_protect <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Going for protective position.");
+				this.logInfo("* " + _entity.getName() + ": 前往防御位置。");
 			}
 
 			this.m.IsFirstExecuted = false;
@@ -479,7 +479,7 @@ this.ai_protect <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode && bestDestination.isSameTileAs(_entity.getTile()))
 			{
-				this.logInfo("* " + _entity.getName() + ": In fact, I would prefer to remain where I am");
+				this.logInfo("* " + _entity.getName() + "：事实上，我宁愿留在原地");
 			}
 
 			this.m.TargetTile = bestDestination;

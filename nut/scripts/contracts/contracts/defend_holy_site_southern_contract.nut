@@ -125,7 +125,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 				{
 					if (n.getFlags().get("IsHolyWarParticipant"))
 					{
-						n.addPlayerRelation(-99.0, "在战争选择了阵营");
+						n.addPlayerRelation(-99.0, "在战争中选择了阵营");
 						houses.push(n);
 					}
 				}
@@ -146,7 +146,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 						}
 					}
 
-					local party = f.spawnEntity(this.Contract.m.Destination.getTile(), candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + " 战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 150) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
+					local party = f.spawnEntity(this.Contract.m.Destination.getTile(), candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + "战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 150) * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 					party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
 					party.setDescription("听命于当地领主的职业军人。");
 					party.getLoot().Money = this.Math.rand(50, 200);
@@ -453,7 +453,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 
 				},
 				{
-					Text = "{这不值得。 | 我们还有别的地方要去。 | 我不会冒险让战团对抗北方军队。}",
+					Text = "{这事不划算。 | 我们还有别的地方要去。 | 我不会冒险让战团对抗北方军队。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -535,7 +535,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Preparation1",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/%illustration%.png[/img]{你坚信你已经做出了对 %holysite% 来说适当的防卫。 剩下的时间不多了，你的 %companyname% 至少还能完成一项重要任务。 现在问题是如何将战团保持在最佳状态。}",
 			Image = "",
 			List = [],
@@ -573,7 +573,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Preparation2",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/%illustration%.png[/img]{抢劫圣地本身，这是一件你吩咐你的队员不要做的事情，还有偷拿被抛弃的原属于忠实信徒的所有物，你打算收集足够多的木头围在角落的一系列墙体旁来巩固 %holysite%。 那地方就在你估计是进攻者最佳入侵之处，并因此也是你最想守住的地方。}",
 			Image = "",
 			List = [],
@@ -596,7 +596,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Preparation3",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/%illustration%.png[/img]{你让人在这里搜寻战斗物资。 一大串东西被挪用并叠了起来。 整个 %holysite% 曾被彻底地搜寻过，你和你的人花了一些时间认出哪些东西是比较有用的…}",
 			Image = "",
 			List = [],
@@ -686,7 +686,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Preparation4",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/%illustration%.png[/img]{仍在 %holysite% 旁逗留的少数忠实信徒一定是充满热情和狂热的。 在这儿你代表南方，你让人挑选了几个镀金者的追随者并询问了他们是否愿为他们的神而战。 如果有的话，那么这将是一个方便的招募办法，他们可以很快的武装自己，接受最短时间的训练。 你只能希望这些人能在即将到来的实战中有些作用。}",
 			Image = "",
 			List = [],
@@ -709,7 +709,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "TheEnemyAttacks",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/event_78.png[/img]{北方军队来了。 或者说，至少是一部分。 由于相当繁重的盔甲和武装，长途跋涉已经让士兵有些消瘦，但他们仍然看起来十分有挑战性。 你看向 %randombrother%，他耸耸肩。%SPEECH_ON%{除去这片景色之外，只是另一场战斗罢了，不是吗？ | 我知道每个人都将会谈论这件事，宗教狗屎之类，但是说实话，对我来说这只是另一场战斗。 而且我爱它。}%SPEECH_OFF%点了点头，你拔出你的剑，命令你的人做好准备。}",
 			Image = "",
 			List = [],
@@ -730,7 +730,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Alchemist1",
-			Title = "在%townname%",
+			Title = "%townname%里",
 			Text = "[img]gfx/ui/events/event_163.png[/img]{在 %townname% 的大门处，一个男人走进你。根据他胸前挂着的乱七八糟颜色的条纹和护符带来判断，他是一个炼金术士。 他声称他是维齐尔派来的。%SPEECH_ON%我的材料有点短缺，但我有足够的材料来制作非常具体的东西，如果是你说出来的，当然可以。%SPEECH_OFF%他描述他的方案如：火焰罐，闪光罐或者烟雾罐。}",
 			Image = "",
 			Banner = "",
@@ -781,7 +781,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "Alchemist2",
-			Title = "在%townname%",
+			Title = "%townname%里",
 			Text = "[img]gfx/ui/events/event_163.png[/img]{炼金术士迅速开工，他将一大堆原材料粉末泼进碗中，然后将少量你无法认出的材料捣入。 这只花费了令人惊奇的极短时间，你不确定他是天赋异禀还是这整件事只是闹剧。 不管怎样，他如约交付了罐子。%SPEECH_ON%愿镀金者照亮你的道路，愿你的剑将和平带到 %holysite%。%SPEECH_OFF%}",
 			Image = "",
 			Banner = "",
@@ -829,7 +829,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "SallyForth1",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/event_78.png[/img]{北方人出现了，虽然并非主力部队，但也不一定只是他们的侦察兵。 看起来他们在路途中花了一些时间来保持队形而不是散开来自由行军。 如果你现在发动攻击，你很有很可能打他们个措手不及。}",
 			Image = "",
 			List = [],
@@ -858,7 +858,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "SallyForth2",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/event_156.png[/img]{%SPEECH_START%好办法。%SPEECH_OFF%%randombrother% 许诺遵从你的指令。 %companyname% 快速出发，在北方部队完全集结前开始了进攻。 在他们察觉之前，你不知不觉的到了他们身边。 你看见他们还在卸下行李和装备，在你的视线中，一些随军仆人站起来开始逃命。 剩余的士兵匆忙将武器拿起。 通过他的尖锐的声音判断，在这里的唯一的指挥官并没有接受过应对突袭的训练，他扯着嗓子发号施令，几近破音，同时军队正尝试摆出阵列的样子来。 不要浪费时间，你们冲入战斗！}",
 			Image = "",
 			List = [],
@@ -880,7 +880,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "SallyForth3",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/event_90.png[/img]{你们解决掉了最后一个士兵，惊讶的神情仍然可怕地凝固在他的脸上。%SPEECH_ON%队长，其余的人都来了。%SPEECH_OFF%%randombrother% 一边说着，一边从地平线凝视中转过头来。 你点点头，命令你的人准备好。 这次北方人正排着整齐的阵列靠近，尽管在看见你们和你们脚下的尸体后，他们又放弃了排阵。 旗帜直插天空，北方人重获新生，愤怒而有力地冲向前。 你低头看向 %randombrother%，把他肩上没弄干净的器官掸掉。 当他回头看向你，你微微一笑。%SPEECH_ON%乐趣就在于此，你应该着装整洁些。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
@@ -902,7 +902,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "SallyForth4",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/event_78.png[/img]{%SPEECH_START%好办法。%SPEECH_OFF%%randombrother% 许诺遵从你的指令。 %companyname% 快速出发，在北方部队完全集结前开始了进攻。 在他们察觉之前，你不知不觉的到了他们身边。 你看见他们还在卸下行李和装备，在你的视线中，一些随军仆人站起来开始逃命。 剩余的士兵匆忙将武器拿起。 就在你认为自己有先手时，另外一支小分队从侧边袭入。%SPEECH_ON%真见鬼了，怎么这么多人！%SPEECH_OFF%%randombrother% 说道。防卫部队太远，而敌人太近。 现在只有一条出路。 你举起了你的剑，准备让你的人冲锋。}",
 			Image = "",
 			List = [],
@@ -925,7 +925,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "SallyForth5",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/%illustration%.png[/img]{你认为最好是固守不动。 这或许会让机会流逝，但反过来这也是所有可能选项中最安全的。%SPEECH_ON%我们本应该出去。我们这样就失去了一次机会，队长。%SPEECH_OFF%你抬起头，看见 %randombrother% 正在耸肩。 你告诉他别嚼舌根子，不然他的身体也会失去某些东西。}",
 			Image = "",
 			List = [],
@@ -948,7 +948,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "AlliedSoldiers1",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/event_164.png[/img]{在你等待北方人的时候，一小队南方士兵冲向了你。 谢天谢地，他们是你们一边的并且准备提供帮助。%SPEECH_ON%镀金者告诉我们你们应该在这里，虽然你是逐币者，我们还是会服从你的命令，以他的荣耀保卫这片土地。%SPEECH_OFF%从他们的装备来看，他们最适合用作掩护部队，或许可以把来犯的部分敌军引开。 或者现在最好是加入 %companyname%，加强你的军队里已经是最强的地方。}",
 			Image = "",
 			Banner = "",
@@ -994,7 +994,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "AlliedSoldiers2",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/event_164.png[/img]{你拿出了一个望远镜，开始仔细观察战场。 南方士兵像蚂蚁一样倾巢而出，和北方人开始缠斗。 令你惊奇的是，佯攻起了作用。 你咧嘴一笑，看着北方军队被拆散，被追赶，他们的军队被渐渐削弱了。}",
 			Image = "",
 			Banner = "",
@@ -1019,7 +1019,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "AlliedSoldiers3",
-			Title = "在 %holysite%",
+			Title = "%holysite%里",
 			Text = "[img]gfx/ui/events/event_164.png[/img]{你宁愿士兵和你待在一起。军官点了点头。%SPEECH_ON%镀金者坚信我们已经帮助了你，不管你信不信，他也相信你也这么想。%SPEECH_OFF%好吧，当然。你告诉他们应该去的地方，虽然恼火，但宗教的服从让他们开始行动，继续搜寻关于黄金和光芒一类的东西。}",
 			Image = "",
 			List = [],
@@ -1310,7 +1310,7 @@ this.defend_holy_site_southern_contract <- this.inherit("scripts/contracts/contr
 			}
 		}
 
-		local party = f.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + " 战团", true, this.Const.World.Spawn.Noble, (this.m.Flags.get("IsEnemyLuredAway") ? 130 : 160) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
+		local party = f.spawnEntity(tiles[0].Tile, candidates[this.Math.rand(0, candidates.len() - 1)].getNameOnly() + "战团", true, this.Const.World.Spawn.Noble, (this.m.Flags.get("IsEnemyLuredAway") ? 130 : 160) * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + f.getBannerString());
 		party.setDescription("听命于当地领主的职业军人。");
 		party.setAttackableByAI(false);

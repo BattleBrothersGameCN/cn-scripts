@@ -9,7 +9,7 @@ this.pimp_vs_harlot_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.pimp_vs_harlot";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

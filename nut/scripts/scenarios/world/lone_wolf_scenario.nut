@@ -4,7 +4,7 @@ this.lone_wolf_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 	{
 		this.m.ID = "scenario.lone_wolf";
 		this.m.Name = "独狼";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_35.png[/img][/p][p]你已经独自旅行很长时间了，参加比武赛并与年轻贵族切磋。作为高大如树的雇佣骑士，你从来不需要别人陪伴很久。这还是真的吗？\n\n[color=#bcad8c]独狼：[/color]从一名经验丰富的雇佣骑士开始，装备精良，但资金不足。\n[color=#bcad8c]少数精英：[/color]你的花名册上不能超过12个人。\n[color=#bcad8c]化身：[/color]如果你的雇佣骑士死了，战役就结束了。[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_35.png[/img][/p][p]你已经独自旅行很长时间了，参加比武赛并与年轻贵族切磋。作为高大如树的流浪骑士，你从来不需要别人陪伴很久。这还是真的吗？\n\n[color=#bcad8c]独狼：[/color]从一名经验丰富的流浪骑士开始，装备精良，但资金不足。\n[color=#bcad8c]少数精英：[/color]你的花名册上不能超过12个人。\n[color=#bcad8c]化身：[/color]如果你的流浪骑士死了，战役就结束了。[/p]";
 		this.m.Difficulty = 3;
 		this.m.Order = 110;
 		this.m.IsFixedLook = true;
@@ -23,7 +23,7 @@ this.lone_wolf_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 		bro.setStartValuesEx([
 			"hedge_knight_background"
 		]);
-		bro.getBackground().m.RawDescription = "一个漂泊的雇佣骑士，你是一个骑士比武和搏斗比赛的老手。同时你也曾屡战屡胜。这个事实让许多人听起来有些害怕，然而如果有什么事情可以吸引你去从事雇佣兵工作，那就是无聊了。表面上你会说是因为钱的缘故，但你内心知道，也是因为渴望伴侣。";
+		bro.getBackground().m.RawDescription = "一个漂泊的流浪骑士，你是一个骑士比武和搏斗比赛的老手。同时你也曾屡战屡胜。这个事实让许多人听起来有些害怕，然而如果有什么事情可以吸引你去从事雇佣兵工作，那就是无聊了。表面上你会说是因为钱的缘故，但你内心知道，也是因为渴望伴侣。";
 		bro.getBackground().buildDescription(true);
 		bro.setTitle("独狼(the Lone Wolf)");
 		bro.getSkills().removeByID("trait.survivor");

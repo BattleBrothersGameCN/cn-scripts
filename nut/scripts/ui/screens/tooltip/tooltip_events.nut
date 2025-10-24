@@ -1227,7 +1227,7 @@ this.tooltip_events <- {
 						{
 							id = 2,
 							type = "description",
-							text = "你携带的食物总量。一般人每天需要2份食物，复杂地形上的需求量更大。你的人会先食用最接近过期的食物。食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你每天消耗[color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color]点食物。你的[color=" + this.Const.UI.Color.PositiveValue + "]" + food + "[/color]点食物能够供您食用至多[color=" + this.Const.UI.Color.PositiveValue + "]" + time + "[/color]天。记住，一批食物早晚会变质！"
+							text = "你携带的食物总量。一般人每天需要2份食物，复杂地形上的需求量更大。你的人会先食用最接近过期的食物。食物短缺会降低士气，最终导致你的人在饿死之前抛弃你。\n\n你每天消耗[color=" + this.Const.UI.Color.PositiveValue + "]" + dailyFood + "[/color]点食物。你的[color=" + this.Const.UI.Color.PositiveValue + "]" + food + "[/color]点食物能够供您食用至多[color=" + this.Const.UI.Color.PositiveValue + "]" + time + "[/color]天。记住，食物早晚会变质！"
 						}
 					];
 				}
@@ -1883,7 +1883,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "地图种子是决定了世界样貌的特殊字符串。按下Escape（Esc）键，就能看到当前战役的地图种子。把种子分享给朋友，可以让他们在同一世界中进行游玩。"
+						text = "地图种子是决定世界样貌的特殊字符串。按下Escape（Esc）键，就能在游戏菜单看到当前战役的地图种子。把种子分享给朋友，可以让他们在相同世界中进行游玩。"
 					}
 				];
 
@@ -3191,7 +3191,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "搭拆帐篷。扎营的时候，时间流逝加快，你的人会更快治愈、修好装备。然而，你也更容易受到突然袭击。"
+						text = "搭拆帐篷。扎营的时候，时间流逝加快，你的人会更快地疗伤、维修装备。然而，你也更容易受到突然袭击。"
 					}
 				];
 
@@ -3231,7 +3231,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "查看讣告，上面列出了自你上任以来为战团献身的人。"
+						text = "查看讣告，上面列出了自你上任以来为战团而死的人。"
 					}
 				];
 

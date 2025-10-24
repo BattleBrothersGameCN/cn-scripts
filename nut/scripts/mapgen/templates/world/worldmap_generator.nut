@@ -45,7 +45,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 			if (!this.isWorldAcceptable(_rect))
 			{
-				this.logInfo("World rejected. Creating new one...");
+				this.logInfo("世界被驳回。创建新的世界中...");
 				this.clearWorld(_rect);
 				continue;
 			}
@@ -59,12 +59,12 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 			if (this.Const.DLC.Desert && !this.isDesertAcceptable(_rect))
 			{
-				this.logInfo("World rejected. Creating new one...");
+				this.logInfo("世界被驳回。创建新的世界中...");
 				this.clearWorld(_rect);
 				continue;
 			}
 
-			this.logInfo("World accepted.");
+			this.logInfo("世界已采用。");
 			break;
 		}
 
@@ -123,7 +123,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 	function buildLandAndSea( _rect )
 	{
-		this.logInfo("Building land and sea...");
+		this.logInfo("正在构建 陆地和海洋...");
 		local l = false;
 		local r = false;
 		local t = false;
@@ -875,7 +875,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 	function buildTerrain( _rect )
 	{
-		this.logInfo("Building terrain...");
+		this.logInfo("正在构建 地形...");
 		local isAutumnLeft = this.Math.rand(0, 1) == 1;
 
 		for( local y = _rect.Y; y < _rect.Y + _rect.H * 0.65; y = ++y )
@@ -1275,7 +1275,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 	function removeStraits( _rect )
 	{
-		this.logInfo("Spacing terrain...");
+		this.logInfo("布置 地形间隔中…");
 
 		for( local r = 0; r < 8; r = ++r )
 		{
@@ -1579,7 +1579,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 	function buildLabels( _rect )
 	{
-		this.logInfo("Building regions...");
+		this.logInfo("正在构建 地区…");
 		local regions = [];
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
@@ -1617,7 +1617,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 		}
 
-		this.logInfo("Found " + regions.len() + " separate regions.");
+		this.logInfo("找到 " + regions.len() + " 个区域。");
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
@@ -1663,7 +1663,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 			else
 			{
-				this.logInfo("Failed to find decent spot for region label.");
+				this.logInfo("未找到适合显示地区名的位置。");
 				continue;
 			}
 
@@ -1738,7 +1738,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 		}
 
-		this.logInfo("Creating final " + finalRegions.len() + " regions...");
+		this.logInfo("正在创建最终的" + finalRegions.len() + "区域");
 
 		for( local x = _rect.X; x < _rect.X + _rect.W; x = ++x )
 		{
@@ -1761,7 +1761,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 	function buildSettlements( _rect )
 	{
-		this.logInfo("Building settlements...");
+		this.logInfo("正在构建 定居点…");
 		local isLeft = this.Math.rand(0, 1);
 		local settlementTiles = [];
 
@@ -1902,7 +1902,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 			}
 		}
 
-		this.logInfo("Created " + settlementTiles.len() + " settlements.");
+		this.logInfo("已创建" + settlementTiles.len() + "定居点。");
 	}
 
 	function guaranteeAllBuildingsInSettlements()
@@ -2062,7 +2062,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 	function buildRoads( _rect, _properties )
 	{
-		this.logInfo("Building roads...");
+		this.logInfo("正在构建 道路...");
 		local settlements = this.World.EntityManager.getSettlements();
 		local roadConnections = [];
 		roadConnections.resize(settlements.len());
@@ -2176,7 +2176,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 	function buildAdditionalRoads( _rect, _properties )
 	{
-		this.logInfo("Building additional roads...");
+		this.logInfo("正在构建 更多道路...");
 		local settlements = this.World.EntityManager.getSettlements();
 		local roadCost = [
 			0,
@@ -2447,7 +2447,7 @@ this.worldmap_generator <- this.inherit("scripts/mapgen/map_template", {
 
 	function buildAbandonedFortresses( _rect )
 	{
-		this.logInfo("Placing abandoned fortresses...");
+		this.logInfo("放置废弃的要塞……");
 		local settlements = this.World.EntityManager.getSettlements();
 		local candidates = [];
 

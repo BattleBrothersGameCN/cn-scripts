@@ -6,7 +6,7 @@ this.brawler_throw_fight_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.brawler_throw_fight";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 100.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

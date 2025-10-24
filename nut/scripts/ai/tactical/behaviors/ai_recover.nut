@@ -69,7 +69,7 @@ this.ai_recover <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Recover!");
+			this.logInfo("* " + _entity.getName() + ": 使用 深呼吸！");
 		}
 
 		this.m.Skill.use(_entity.getTile());

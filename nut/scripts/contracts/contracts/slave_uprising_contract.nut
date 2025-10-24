@@ -49,7 +49,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"镇压%townname%%location%的负债者起义"
+					"镇压%townname%附近%location%的负债者起义"
 				];
 				this.Contract.setScreen("Task");
 			}
@@ -88,7 +88,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"镇压%townname%%location%的负债者起义"
+					"镇压%townname%附近%location%的负债者起义"
 				];
 				this.Contract.m.Destination.getSprite("selection").Visible = true;
 				this.Contract.m.Destination.setOnEnterCallback(this.onDestinationEntered.bindenv(this));
@@ -230,7 +230,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"返回 %townname%"
+					"返回%townname%"
 				];
 				this.Contract.m.Destination.getSprite("selection").Visible = false;
 				this.Contract.m.Destination.setOnEnterCallback(null);
@@ -256,14 +256,14 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_162.png[/img]{%employer% 通常在深思熟虑，在由顾问和维齐尔组成的漩涡中思考，这里的每个人都用手指的啪啪声和地图上咄咄逼人的点来互相咨询。 尽管这看上去如此奇怪，但仍有一个小仆人穿过了人群，拿着一张卷轴来到你面前。 他巧妙地解释道，那些欠了金主一大笔钱的人发起暴动的地方在 %townname%的 %location%。%SPEECH_ON%这些逐币者要求社会福利。 如果你想参与恢复有关各方的规范，并为了改善债主和金主们的利益，请拿着这支笔，在卷轴上划上一个叉。%SPEECH_OFF%你们相互对视。 接着他叹了口气，轻轻敲了一下卷轴。%SPEECH_ON%这是付给你们的报酬，如果你接受的话。%reward% 克朗。%SPEECH_OFF% | 当你接近 %employer%的房间时一对护卫用他们的戟把拦下了。 这引起了喊叫和匆忙的脚步声甚至又把那个仆人引了过来。%SPEECH_ON%警卫！这些衣着邋遢的旅行者只是个逐币者。 很抱歉，逐币者，我们非常紧张，因为维齐尔可能需要你的帮助：这些负债者已经在 %location% 的 %townname% 发生了一场暴动。起义很可能会从那里蔓延开来。%SPEECH_OFF%仆人拿出一本书卷递给你。 上面写着，%reward% 克朗等待着那些可以镇压负债者反抗的人，卷轴上还有 %townname% 的各种维齐尔的标志。 | %townname% 的维齐尔待在他们的作战室里，气氛比平时更加紧张。 但你仍被当在外面，不能接近他们。 你不知道过了多久，但这时大金主们已经从房间里出来了。 他们互相交谈，不时点头，然后递给了仆人一张卷轴。 你看着仆人朝你冲过来。 然后把它递给你，然后从又再次一遍重复了他的话。%SPEECH_ON%负债者的人已经超过了他们的主人，从那里接管了 %location%。%reward% 克朗已经准备好放在了官邸的保险箱中，只要你能粉碎这帮狂妄自大的人。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_162.png[/img]{平日里被沉思氛围环绕的%employer%，此刻正陷于顾问和维齐尔同僚的讨论漩涡中，他们不时打响指，激烈地在地图上指指点点。在这片混乱中，一名小侍从灵巧地穿过人群，将一卷文书递到你面前。他熟练地解释道：%townname%的%location%已被负债者控制。%SPEECH_ON%现需要逐币者效力。若您愿参与让各方回归正轨，为负债者与主人共谋福祉，请在此文书画叉确认。%SPEECH_OFF%你们四目相对片刻，他叹着气轻点纸面。%SPEECH_ON%若接此任务，酬金在此。共%reward%克朗。 | 当你走近%employer%的房间时，两名守卫当即用戟尖对准了你。此时一位侍从快步赶来喝止。%SPEECH_ON%卫兵！这些衣着邋遢的旅人是逐币者。失礼了，逐币者，我们如此紧张的原因正是维齐尔们需要各位协助的理由：负债者们已控制了%townname%的%location%。暴乱恐怕将由此蔓延。%SPEECH_OFF%侍从取出一卷文书递来。上面写明镇压负债者叛乱可得%reward%克朗，文书末尾盖着%townname%诸位维齐尔的联合印章。 | %townname%的维齐尔们齐聚作战室，气氛比平时凝重许多。你被挡在远处无法靠近——从天花板降下的金色栅栏横在面前。他们低声商议，不时点头，最后将一卷文书交给侍从。侍从接过文书后快步走来递给你，并凭记忆复述。%SPEECH_ON%负债者已经推翻了他们的主人，占领了%location%。剿灭这群叛乱者的人，可获得%reward%克朗酬劳。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{他们没有机会。 | 我们会给以后要这么做的人做个榜样。 | 我们会重新夺取 %location%。}",
+					Text = "{他们毫无胜算。 | 我们会拿他们杀鸡儆猴。 | 我们会夺回%location%。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -271,7 +271,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这听起来不像是适合我们的工作。 | 我不这么认为。 | 我们不会去跟昔日的奴隶战斗。}",
+					Text = "{听起来这活不适合我们。 | 我觉得还是免了吧。 | 我们不想跟逃跑的奴隶战斗。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -288,12 +288,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "FightingBack1",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{在 %location% 的负债者看到你的队伍，你希望你们手上的武器助于阻止他们继续做任何他们所追求的自由美梦。 但令你惊奇的是，他们并没有放下武器，反而开始聚在一起与你对峙。 他们看上去弱不禁风，但聚集在一起使得这群人有了许多声势。 | 你发现那些负债者已经清楚地明白你为什么会在这里。 主事者的安排，你自己武装到牙齿，从城里来，负债者带着他们捡的东西，逃避着他们的枷锁。 他们完全是一个乱七八糟，可悲的集会，但你很清楚，尽管他们缺少武器，但没有什么能弥补他们的欲望。 如果不是一种磨砺的效果，自由的滋味也算不了什么。 | 如前所述，奴隶们现在已经占据了 %location% 并用他们能找到的任何东西武装自己。 一见到你，他们就匆匆忙忙地开始组建阵型，尽管他们缺乏训练、纪律、食物和其他很多东西。 然而，他们所拥有的信念，是不想再次回到他们原来的地方，那里可能和任何钢铁一样锋利和危险。}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{%location%的负债者们看着你们靠近，你希望武器的寒光能让他们停止争取自由的行动。令人惊讶的是，他们非但没有放下武器，反而集结起来与你们对峙。这群乌合之众都是强制劳役和征兵制度的牺牲品。 | 你找到这群负债者，他们回望的眼神清楚地表明他们知道你的来意。双方阵营泾渭分明：你们全副武装从城镇而来，而他们拿着搜刮来的简陋武器，远离曾经束缚他们的锁链。这是支杂乱可怜的队伍，但你深知他们对自由的渴望足以弥补武器的匮乏。自由的滋味最能磨砺人的意志。 | 正如情报所述，负债者们占领了%location%并用能找到的一切武装自己。见到你们后，他们匆忙摆出阵型，但缺乏训练、纪律和补给。然而他们宁死不愿回到过去境遇的决心，却比任何钢铁都要锋利危险。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "摧毁他们！",
+					Text = "灭了他们！",
 					function getResult()
 					{
 						local tile = this.World.State.getPlayer().getTile();
@@ -321,12 +321,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "FightingBack2",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_71.png[/img]{起义被镇压了。 在死亡中，奴隶们的脸看起来确实有些宽慰，似乎所有事情的结局都比生活在锁链中的残酷无情要好。%employer% 和维齐尔将等待你的返回。}",
+			Text = "[img]gfx/ui/events/event_71.png[/img]{起义已被镇压。死去时，奴隶们的面容确实带着几分解脱，仿佛万物的终结也好过枷锁下无情残酷的生活。%employer%与维齐尔们正在等候你返回。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们的工作完成了。",
+					Text = "我们干完活了。",
 					function getResult()
 					{
 						return 0;
@@ -338,12 +338,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Outlaws1",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_176.png[/img]{你到达%location%后发现它被烧成了废墟并遭到了洗劫。一个幸存者从一个被烧黑的建筑物中磕磕绊绊地走了出来。他解释说，债务人设置在每一个可用的人身上，强奸妇女，杀害儿童，偷走了所有有价值的东西，然后分散到内陆地区。 | 债务人的起义早已离开了%location%，留下了毁灭和死亡的痕迹。一些幸存者正在捡拾自己的东西。那些还能说话的人谈到了恐怖，债务人基本上像野蛮人一样袭击了这个区域，杀戮、抢劫、掠夺。一个蒙着眼睛的男人说他听到他们谈论着要前往乡下并在那里分散开来。%SPEECH_ON%他们现在只是简单的强盗。尝过鲜血的动物，对他们来说，再也没有回到安全的禁锢链之中。他们已经失去了。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_176.png[/img]{你到达%location%后发现它已被烧成废墟，洗劫一空。一名幸存者从建筑焦黑的灰烬中蹒跚走出。他解释说，那些负债者袭击了所有能碰到的人，对妇女施暴，杀害孩童，劫掠了所有值钱物品，然后分散逃往了偏僻地带。 | 暴动的负债者早已离开%location%，只留下一片死亡与毁灭。一些幸存者蹒跚地收拾着残存的物件。那些还能开口的人讲述着恐怖经历，说负债者简直像野蛮人一样袭击了这片地区，杀人、施暴、抢劫。一个用破布遮住眼睛的男子说，他听见他们谈论要前往乡间并在那里分散开来。%SPEECH_ON%他们现在是普通的强盗了。尝过鲜血的野兽再也无法回到锁链下的生活。他们彻底迷失了。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们当下就去追捕他们。",
+					Text = "我们会去追捕他们的。",
 					function getResult()
 					{
 						this.World.uncoverFogOfWar(this.Contract.m.Target.getPos(), 400.0);
@@ -360,7 +360,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 				local nearest_nomads = this.World.FactionManager.getFactionOfType(this.Const.FactionType.OrientalBandits).getNearestSettlement(cityTile);
 				local tile = this.Contract.getTileToSpawnLocation(this.Contract.m.Home.getTile(), 9, 15);
 				local party = this.World.FactionManager.getFaction(nearest_nomads.getFaction()).spawnEntity(tile, "负债者", false, this.Const.World.Spawn.NomadRaiders, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
-				party.setDescription("一群因债务而转向了抢劫的人。");
+				party.setDescription("一群落草为寇的负债者。");
 				party.setFootprintType(this.Const.World.FootprintsType.Nomads);
 				party.getSprite("banner").setBrush(nearest_nomads.getBanner());
 				party.getSprite("body").setBrush("figure_nomad_03");
@@ -387,12 +387,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Outlaws3",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_168.png[/img]{你看着一名奴隶的尸体，他的身体被前世的劳作所塑造，但在他的手中和脖子上却有着被盗的武器和战利品。在一种残忍的想法中，你发现如果他们除了自由没有别的理想的话，打倒他们会更容易。但正是他们的贪婪和欲望使他们变得更加危险。但是，他们已经死了。对于欠债者来说，无论他们有多高的目标，%townname%的宰相们都会感到高兴。}",
+			Text = "[img]gfx/ui/events/event_168.png[/img]{你低头看着一具奴隶的尸体，那身躯被过去的劳役塑造，但手中和颈间却装饰着偷来的武器与战利品。带着一丝残酷的念头，你觉得奇怪：若他们除了自由别无野心，或许更容易被镇压。但正是贪婪与渴求让他们变得更加危险。不过。他们都死了。而%townname%的维齐尔们会很高兴——无论这些负债者曾怀揣怎样崇高的目标。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们的工作完成了。",
+					Text = "我们干完活了。",
 					function getResult()
 					{
 						return 0;
@@ -404,12 +404,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Spartacus1",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_166.png[/img]{你发现那些负债者坐在沙漠的岩石中，他们没有因为你们的到来而站起来。 相反，一个人向你走来。 他身材魁梧，你能感觉到他是来谈判的，他全身肌肉就是很好的外交辞令。%SPEECH_ON%逐币者，我就知道你们会来的。 我的名字是 %spartacus%，我是这群想要逃离鸟笼寻找自由的鸟儿们所选举出的领导者，他们想要自由的飞翔。 你们从镀金者指示的道路来到我们这里，在看不见的金链的指引下，对你们不能保障的诺言，正是基于这些保证的协议，在这些一方的安排上，你们要来杀了我们或者俘虏我们。是这样吗？%SPEECH_OFF%你点了点头。%spartacus% 也跟着点了点头。%SPEECH_ON%没错。在我们履行承诺，掌控自己的命运之前，你依旧是王权的奴隶。但在我谈判的时候，我将尽量用对你有利的方式。%SPEECH_OFF%男子跪下来，%SPEECH_ON%我是一个失去家族，历史和房产的继承人。这些人，这些男人，现在是我的家人。但是，在我的以前的生活中，我有一些你可能会觉得有价值的东西。%SPEECH_OFF%他拿出一张纸。%SPEECH_ON%让我们走，并在这张纸上写下你在其他地方找不到的宝藏位置。如果你攻击我们，我将把我的家族最后的传家宝带到坟墓里，最后一口气喘着子不是为了这些失落的财富，而是为了呼吸自由之火，火焰在我的肺中闪耀，这种痛比任何锁链的舒适度更能让我喘息。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_166.png[/img]{你发现那些负债者正坐在荒漠的岩石间，他们对你的到来并无反应。只有一个男人向你走来。尽管他体格强壮，你却感觉他是来谈判的——有什么比肌肉更能令人信服的外交辞令呢。%SPEECH_ON%逐币者，我料到你总会来的。我叫%spartacus%，是这些自由追寻者推选出来的首领——倘若敞开的笼子也能算是渴望飞翔之鸟的首领的话。你沿着镀金之路来到我们面前，被那条无形的金链，还有那些你无法保证会兑现的承诺所牵引至此。而你正是要凭借这些伪造的约定，这些被曲解的协议，来此杀戮或俘获我们。我说得对吗？%SPEECH_OFF%你点了点头。%spartacus%也点头回应。%SPEECH_ON%果然如此。在我们各自践行约定之前——我们决心成为自己命运的主宰，而你则甘为克朗的奴隶——请允许我以一种，呵，逐币者，你会觉得有利可图的方式，尝试与你交涉。%SPEECH_OFF%这个男人单膝跪地。%SPEECH_ON%我是一个失落家族、失落传承、失落家业的末裔。这些人，这些兄弟们，如今就是我的家人。但我之前的生活仍为我留下了某物，或许你会认为它价值连城。%SPEECH_OFF%他递出一张纸。%SPEECH_ON%放我们走，我就在这张纸上为你写下藏宝之地，那里藏着你在别处绝找不到的财富。若你选择攻击，我便会将家族最后的传承带进坟墓。而我最后一息所牵挂的，将不再是那些湮没的财宝，而是去呼吸自由本身的炽烈火焰，让它在我肺中闪耀。这痛苦，也远胜于任何锁链带来的安逸。%SPEECH_OFF%}}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我同意你的条件。 你应该有你的自由。",
+					Text = "我同意你的条件。你自由了。",
 					function getResult()
 					{
 						return "Spartacus2";
@@ -417,7 +417,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "这只是生意。 你的小叛乱就要被粉碎了。",
+					Text = "我只是公事公办。你们那点螳臂当车的反抗，到此为止了。",
 					function getResult()
 					{
 						return "Spartacus3";
@@ -429,12 +429,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Spartacus2",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_166.png[/img]{你把手伸出来。%spartacus% 笑了，他说。%SPEECH_ON%的确是。%SPEECH_OFF%他举起一支铅笔，铅笔尖上有一些黑色的粉状碎末。 他指着远处的一块石头。%SPEECH_ON%只有当我们的人离开时，我才会在那里写下我的传家宝的位置。 现在我能看出你是否以为我在说谎。 但这种不确定性是正是自由的代价，不是吗？ 不确定的未来何去何从，但要自己动手。 这才是真正的自由。 鸟笼的舒适是为那些不想飞翔的鸟儿而设的，逐币者。 愿你在镀金者道路上的旅行如我们的第一步一样富有成效。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_166.png[/img]{你伸出了手。%spartacus%也伸出手来。他开口道：%SPEECH_ON%就这么说定了。%SPEECH_OFF%他举起一支石制的铅笔，笔尖是某种黑色粉末岩石。他指向远处的一块石头。%SPEECH_ON%我们离开时，我会在那块石头上写好家族遗产的位置。我看到你脸上写着疑问，想知道我是否在欺骗你。这种不确定性正是自由的代价，不是吗？不确定将去往何方，却是凭自己的意志前行。这才是真正的自由。笼中的安逸属于不愿飞翔的鸟儿，逐币者。愿你在镀金之路上的旅程，能像我们迈出的第一步这般硕果累累。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "尽情享受你们的自由吧。",
+					Text = "趁着还有机会，尽情享受你们的自由吧。",
 					function getResult()
 					{
 						local bases = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).getSettlements();
@@ -479,7 +479,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 						location.setDiscovered(true);
 						this.World.getCamera().moveTo(location);
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationMajorOffense, "站在起义的负债者一边");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationMajorOffense, "选择帮助起义的负债者");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -490,7 +490,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Spartacus3",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_166.png[/img]{%spartacus% 伸出手来，但你却没有伸出你的手。 相反，你拔出你的剑。 叛军首领点了点头。%SPEECH_ON%好的。你被禁止离开金钱的牢笼，我明白了，被召唤到闪闪发光的镀金者的道路上，他们如此迫切地奴役你，你被俘虏了，以至于当鸟笼打开时，你也不会张开你的翅膀，而是仅仅停留在主人的手指上跳一跳。 希望这场战斗对我们都好，逐币者。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_166.png[/img]{%spartacus%伸出手，但你并未伸手回应，反而拔出了剑。这位反抗军首领点了点头。%SPEECH_ON%好吧。我明白了，你无法离开克朗的牢笼，被镀金之路的光芒所驱使。你的奴役如此彻底，你的禁锢如此深刻，以至于当牢门敞开时，你却不展开双翼，宁愿仅仅跳到主人的指头上。愿战斗善待我们双方，逐币者。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -523,12 +523,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Spartacus4",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_168.png[/img]{你站在 %spartacus% 的身边。尽管他热爱自由，但这位可敬的叛军领袖在他最后的解放时刻并没有微笑。 他那扭曲的脸上的伤痕和皱纹透露出一阵哀伤。 但是他的眼睛中央。那里有一个火花，凝视着天空。 这时一个影子突然穿过他的眼睛，你抬头看向天空，以为是一只鸟，但什么也没有。 当你再往下看的时候，火花已经熄灭，死人仅仅只是一个死人。}",
+			Text = "[img]gfx/ui/events/event_168.png[/img]{你站在%spartacus%的尸身旁。这位反抗军领袖虽然一生向往自由，但在最终获得解脱的时刻，死去的他脸上却没有笑容。他的面容因痛苦而扭曲，身上的伤口显露出皮下组织的黏腻纹路。但他的眼睛。那里曾跃动着一点星火，凝望着天空。一道阴影掠过他的眼眸，你抬头望去以为会看到飞鸟，却空无一物。当你再度低头时，那点星火已然熄灭，死者终究只是死者。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们的工作完成了。",
+					Text = "我们干完活了。",
 					function getResult()
 					{
 						return 0;
@@ -540,12 +540,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Fleeing1",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_59.png[/img]{你发现了一堆灼热的脚镣，摸起来很烫。 一位老人伸手指向北方。%SPEECH_ON%那些人朝那边走去了。%SPEECH_OFF%你很好奇，你问他为什么要把这些负债者的行踪供出来。他微笑着说。%SPEECH_ON%我也有我的工作需要完成，有时候维齐尔会借给我一些东西。 单凭我自己的双手很难完成一项好任务。%SPEECH_OFF% | 你遇到一条长长的沙地、泥土和灌木丛，它们显然受到了北行的人的干扰。 在被踩踏的乱七八糟的小路上你找到了一个镣铐，很明显，看来指向他们行踪的证据你拿到了。 负债者已经转向北方，你得把他们找出来。 | 接着你又在沙漠灌木丛中找到了一个枷锁。 一位老人从杯子里啜饮着水，咕哝着指向北方。%SPEECH_ON%那些乌合之众的负债者就是这样。 如果你能设法把他们带回维齐尔那里，麻烦为我说句好话。 给我找来几个人帮我打水。 从来没有自由人给我打水。%SPEECH_OFF%你不会为任何人说一句好话，但无论如何还是要谢谢他，然后向北走。}",
+			Text = "[img]gfx/ui/events/event_59.png[/img]{你发现一堆散乱的镣铐，摸上去还很烫手。一位老人伸手指向北边。%SPEECH_ON%那些获得自由的人往那边去了。%SPEECH_OFF%你觉得奇怪，便问他为何要告发那些负债者。他笑了笑。%SPEECH_ON%我有些活儿需要完成，有时候维齐尔们会借几个人给我。单靠我自己这两只手，实在很难把活儿干好。%SPEECH_OFF% | 你发现一道长长的沙土与灌木痕迹，明显遭受过朝北行进的扰动。在散落着杂物的路径中，你找到了一副镣铐，这是所需的最后一点证据。负债者已经转向北边，你必须去追猎他们了。 | 你看见一副镣铐在沙漠灌木丛中晃荡。一个正用杯子喝水的老汉嘟哝着指向北方。%SPEECH_ON%那些负债者像兔子一样往那边跑了。你要是能把他们抓回去交给维齐尔，或许能替我说句好话。我这儿正缺一两个人手帮忙打水。自由人可不会给我打水。%SPEECH_OFF%你自然不会为谁美言，但还是谢过他，然后向北行进。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们当下就去追捕他们。",
+					Text = "我们会去追捕他们的。",
 					function getResult()
 					{
 						this.World.uncoverFogOfWar(this.Contract.m.Target.getPos(), 400.0);
@@ -562,7 +562,7 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 				local nearest_nomads = this.World.FactionManager.getFactionOfType(this.Const.FactionType.OrientalBandits).getNearestSettlement(cityTile);
 				local tile = this.Contract.getTileToSpawnLocation(this.Contract.m.Home.getTile(), 9, 15);
 				local party = this.World.FactionManager.getFaction(nearest_nomads.getFaction()).spawnEntity(tile, "负债者", false, this.Const.World.Spawn.Slaves, 90 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult());
-				party.setDescription("一群负债的人。");
+				party.setDescription("一群负债者。");
 				party.setFootprintType(this.Const.World.FootprintsType.Nomads);
 				party.getSprite("banner").setBrush("banner_deserters");
 				this.Contract.m.UnitsSpawned.push(party);
@@ -600,12 +600,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Fleeing2",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_59.png[/img]{你终于追上那些负债者。 他们现在走的是崎岖的道路，他们所经过的荒凉的地形使他们身上留下了各种各样的印记。 但他们走到这一步就绝不会放弃：所有的人一看到你就马上武装起来，组成了阵型。 | 负债者现在已经处于绝望的状态，只要旅途给了他们自由的呼吸，他们就用精神和身体付出了代价。 那些晒得黝黑、四面楚歌、衣衫褴褛的人，眼睛睁得大大的，疲惫不堪地走近来。 你从狂野的目光中知道他们已经没有退路了。 他们会在路上或别的地方决一死战。}",
+			Text = "[img]gfx/ui/events/event_59.png[/img]{你终于追上了这些负债者。他们如今已是饱经风霜的亡命徒，所穿越的荒芜之地在他们身上留下了印记，正如他们也在那片土地上留下了痕迹。但他们跋涉至此绝非为了放弃：一见到你，这群人便全体武装起来，并向你逼近。 | 这些负债者处境绝望，虽说这段旅程给予了他们喘息的自由，他们却为此付出了身心俱疲的代价。这些晒伤、困顿、衣衫褴褛的男人双眼圆睁又充满疲惫地靠近。从他们狂野的眼神中你明白，他们已毫无退意，决心要血战到底。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "摧毁他们！",
+					Text = "灭了他们！",
 					function getResult()
 					{
 						this.Contract.getActiveState().onDestinationAttacked(this.Contract.m.Target, this.Contract.m.IsPlayerAttacking);
@@ -618,12 +618,12 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Fleeing3",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_168.png[/img]{总而言之，了结这些负债者是件简单的事。 所有的幸存者都清楚自己既然无法获得自由，那么就宁愿选择钢铁般的死亡。 在他们的皮肤里，你不确定你是否会做出任何不同的选择。 你收集你能收集到的证据，并准备好回去给 %employer%。}",
+			Text = "[img]gfx/ui/events/event_168.png[/img]{回过头来看，彻底解决这些负债者其实是件简单直接的事。幸存者们都让自己断了回头路，宁可选择刀剑下的死亡。设身处地想，你也不确定自己会做出不同的选择。你收集了能作为证据的物品，准备返回%employer%处。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们的工作完成了。",
+					Text = "我们干完活了。",
 					function getResult()
 					{
 						return 0;
@@ -635,20 +635,20 @@ this.slave_uprising_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_162.png[/img]{你发现这次 %employer% 没有在后宫玩乐或在葡萄酒中游泳。 相反，你发现他正在散步，手拿着一个空鸟笼。 他闷闷不乐地说，他最喜欢的鸟飞了出来，飞走了。%SPEECH_ON%别以为我是个愚蠢的人，逐币者，我知道你可能会发现我的宠物和我的负债者有相似之处。 不过如果你这么认为的话，请随意。 但你这样想是目光短浅的。 我可以让我的鸟自由飞翔，但对这个世界来说，除了被吃掉之外没有任何用处。 但这并不是一种自由，逐币者，人都要学会去承担出生时命运赋予它的责任。 他们的自由是从厄运中逃脱出来的，是对于我命运的一种逃避，是许多同类都无法获得的逃脱。%SPEECH_OFF%维齐尔打了个响指，一个仆人似乎不知从哪里出现了。 他递给你一包硬币。 你抬头一看，维齐尔放下笼子，走开了。 | %employer% 处在他的四肢之中，用卫兵的话来说，就是“最爱的后宫。” 他伸出嘴，你感觉到他的眼睛从出汗的膝盖的缝隙里盯着你看，虽然没有真正的证据。%SPEECH_ON%胜利的逐币者回来用他疲惫的目光欣赏我最好的商品。 我的侦察兵说，正是这样，你没有充分利用把那些狂妄自大的负债者，他们的死会被重新制作成一种新的实用工具，一个由你亲手写的友好的场景，逐币者，作为对所有其他负债者的警告。%SPEECH_OFF%维齐尔瞬间消失，然后又出现在一个女人的大腿之间。%SPEECH_ON%仆人！付钱给逐币者。%SPEECH_OFF%两个瘦骨嶙峋的男孩背着一个小箱子，把它放在你的脚边。 它很重，而且没有人帮你搬。 | 一个戴着锁链的人在 %employer%的房间外和你见面。 他每只胳膊上都系着一条链子。 一根链子挂在墙上，另一根链子穿过地板到一箱克朗上。 两条链条都用锁固定。 这个人拿着箱子的钥匙。 他紧紧盯着你，咬牙切齿，手指紧捏着钥匙，最终他松开了钥匙，大口的吸气。 他最后蹲下，打开了箱子的锁，你拿起它，后退一步。 奴隶把钥匙放在胸前，他瞥了一眼另一把锁，他把手放在钥匙上，低下头，然后传来一种声音，你不知道是什么声音。 一个警卫告诉他在把你领出去之前不要出声。}",
+			Text = "[img]gfx/ui/events/event_162.png[/img]{你没看到%employer%沉溺女色或畅游酒池，而是见他提着空鸟笼踱步。他阴郁地说心爱的鸟儿逃出笼子飞走了。%SPEECH_ON%别把我当傻子，逐币者，我看得出你觉得我的宠物与那些负债者有相似之处。随你怎么想。但你这么想太短见了。我的鸟自由翱翔于天际，对这世间而言，除了沦为他人腹中食外别无用处。但这并非自由，逐币者——重拾自己天生的使命叫什么自由？真正的自由是逃离这种命运，逃进我的世界，这是它大多数同类永远得不到的机会。%SPEECH_OFF%维齐尔打了个响指，一个侍从仿佛凭空出现。他递给你一袋钱币。你抬头时，维齐尔已经放下鸟笼走开了。 | %employer%正埋首于他那——用守卫的话说——“最宠爱的后宫”的玉体横陈之中。他伸出嘴来，你感觉他的目光正从某个汗湿的膝弯处盯着你，不过无法确定。%SPEECH_ON%逐币者胜利归来了，让他疲惫的双眼好好享用我这儿最上等的货色吧。我的探子说，你确实已经将那些不知天高地厚的负债者铲除殆尽，而他们死亡的消息已被重新利用，成了一句善意的警告，由你亲手书写，逐币者，用以警示其他所有负债者。%SPEECH_OFF%维齐尔消失不见，随即又从一名女子的大腿间冒了出来。%SPEECH_ON%仆从！给逐币者付钱。%SPEECH_OFF%两个瘦骨嶙峋的少年抬过来一个小箱子，放在你脚边。箱子相当沉重，而且没人帮你把它抬出去。 | 一个戴着镣铐的男子在%employer%的房间外迎接你。他双臂各连着一条锁链。一条锁链通向墙壁，另一条则哗啦啦地拖过地板，连着一箱克朗。两条锁链都挂着锁。而钥匙，就在这个男人手里。他紧盯着你，手指反复攥紧又松开钥匙，呼吸急促而不稳。他终于蹲下身，打开了连着你的箱子的那把锁。你拿起箱子后退一步。奴隶将钥匙紧握在胸前，他瞥了一眼另一把锁，将钥匙紧紧攥在手心，低下头，发出一阵你难以分辨是何意味的声响。一名守卫呵斥他保持安静，接着带你出门。}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "克朗就是克朗。",
+					Text = "钱给够就行。",
 					function getResult()
 					{
 						this.World.Assets.addMoralReputation(-2);
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "镇压一场负债起义。");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "镇压了一场负债者起义。");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}

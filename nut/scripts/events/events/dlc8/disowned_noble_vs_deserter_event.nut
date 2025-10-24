@@ -16,7 +16,7 @@ this.disowned_noble_vs_deserter_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "这是一个小小的世界，至少对于被流放者来说是这样。",
+					Text = "这世界很小，至少对于流放者来说很小。",
 					function getResult( _event )
 					{
 						return 0;

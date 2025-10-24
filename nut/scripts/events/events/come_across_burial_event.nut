@@ -7,13 +7,13 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 130.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_28.png[/img]在路上，你遇到一群人围着一堆土。 走近一点，你发现这是一场葬礼。 一位与会者转向你。%SPEECH_ON%你认识他吗？ 你在他身边打过仗吗？%SPEECH_OFF%你摇摇头，开始挤进人群中去看那个人。 你发现这个人的尸体像僵尸一样陈旧。 他的胸前有一把非常锋利闪闪发光的剑，脏兮兮的被虫蛀手指抓着剑柄。%randombrother% 来到你的身边耳语道。%SPEECH_ON%那是，呃，一个看起来很不错的武器，我就是说说。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_28.png[/img]在旅途中，你遇见一群人围着一座土堆。走近才发现是场葬礼。其中一个参加者转头看你：%SPEECH_ON%你认识他？跟他一块打过仗吗？%SPEECH_OFF%你摇头否认，拨开人群想看清死者模样。那人看上去已经死透了，一柄锋利闪亮的长剑横陈胸前，剑柄仍被他那脏兮兮的手指紧握着。%randombrother%凑到你身旁低声说道：%SPEECH_ON%没别的意思，但那把剑看起来真不赖。%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "让我们把它变成我们的。",
+					Text = "我们把它拿走吧",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 35 ? "B" : "C";
@@ -21,7 +21,7 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "别管他们了。",
+					Text = "不管他们。",
 					function getResult( _event )
 					{
 						return 0;
@@ -36,13 +36,13 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_36.png[/img]你拔出你的剑，其他队员也这么做了。 雇佣兵们把人群往后推，但没有你想象的那么多阻碍。 一位与会者走上前。%SPEECH_ON%这是你要的剑，是吗？ 继续，拿去吧。 那个死者提到了像你这样的人。 说你比他更需要这把剑。%SPEECH_OFF%你举起剑，问他这是不是他们都站在周围的原因。那人笑着说。%SPEECH_ON%不是的，他还说他永远不会死，所以我们很想知道他说的话是否会成真。%SPEECH_OFF%你慢慢地拿起剑，现在很好奇是否有人说过要杀掉把手按在剑上的那个人。 谢天谢地，从表面上看，这个伟大的死人并没有说这样的话。",
+			Text = "[img]gfx/ui/events/event_36.png[/img]你拔剑出鞘，战团成员也纷纷亮出武器。佣兵们向前施压，人群后退得却比预想中干脆。其中一人走上前来。%SPEECH_ON%是冲着这把剑来的吧？拿去吧。地上那位早就提过会有你们这号人，说你们比他自己更需要这柄剑。%SPEECH_OFF%你收剑入鞘，问他们是不是就为这个围在这儿。那人咧嘴一笑。%SPEECH_ON%那倒不是，他还吹嘘自己永远不会死呢，我们就是想看看这话能不能当真。%SPEECH_OFF%你谨慎地拿起长剑，心里嘀咕着该不会碰到什么\"擅动此剑者必遭不测\"的诅咒——好在，看样子这位狂妄的逝者并没留下这种话。",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "他不再需要那东西了。",
+					Text = "他用不着那东西了。",
 					function getResult( _event )
 					{
 						return 0;
@@ -65,13 +65,13 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_28.png[/img]你穿过人群，抓起死者的剑。 一名与会者尖叫起来。%randombrother% 打开酒瓶塞，把泡沫喷到一个农民脸上。 战团的其他成员拿出了他们的武器，以确保任何进一步的抗议不会发生。 一位上了年纪的妇女从人群中穿过，像老妇人一样，摇摇晃晃的。%SPEECH_ON%先生，那不属于你。还给我们。%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_28.png[/img]你拨开人群伸手去取死者手中的剑，一名送葬者当即惊叫起来。%randombrother%挥拳猛击，打得那人晕厥过去。战团其余成员立刻亮出兵刃，震慑任何还想抗议的人。一位老妇人步履蹒跚地穿过人群，颤巍巍地开口。%SPEECH_ON%大人，那不是你的，请放回原处。%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "是时候动手了。",
+					Text = "现在是了",
 					function getResult( _event )
 					{
 						return "D";
@@ -79,7 +79,7 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "这个老太婆说的对，我们不应该再打扰这场葬礼了。",
+					Text = "这位老妇人说的对，我们不该继续打扰这场葬礼了。",
 					function getResult( _event )
 					{
 						return "E";
@@ -95,7 +95,7 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_36.png[/img]你告诉老太太把她那古怪的屁股钻到洞里去然后去死。 死者的剑进了你的仓库 %companyname% 回到了道路上。\n\n农民们心烦意乱的叫喊着，说你所做的事将会在风中传播，就像一千头牛在拉屎放屁一样。 你只是大笑，很欣赏他们的想象力。",
+			Text = "[img]gfx/ui/events/event_36.png[/img]你让那老妇人赶紧滚回她的老鼠洞里等死。 顺手将死者的长剑收入行囊，带着%companyname%重新上路。\n\n愤慨的农民们在身后哭喊，说你今日恶行必将如千牛齐泻的屁响般随风传遍四方。你只是大笑，倒是很欣赏他们这别致的比喻。",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -125,13 +125,13 @@ this.come_across_burial_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_28.png[/img]你把剑放回死者的手里。 老太太点头。%SPEECH_ON%所以你们是能够听从良言的好人。%SPEECH_OFF%另一个农民为你的荣誉欢呼，其他人也纷纷效仿。 在这帮世俗之人看来，仅仅拿走武器再放回去，就足以成为一种值得庆祝的义举。 也许你应该经常假装偷窃。",
+			Text = "[img]gfx/ui/events/event_28.png[/img]你将长剑放回死者手中。老妇人颔首道。%SPEECH_ON%看来这世上还是有愿意听劝的善人哩。%SPEECH_OFF%有个农夫开始称赞你的美德，其他人也纷纷应和。看来在这群乡民眼中，光是这番取而复还的举动就值得他们夹道欢送——或许你该多演几出佯装窃取的戏码。",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "反正我们也不需要。",
+					Text = "反正我们也不用不着。",
 					function getResult( _event )
 					{
 						return 0;

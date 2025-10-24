@@ -30,7 +30,7 @@ this.map_generator <- {
 			return this.m.Templates[_templateName];
 		}
 
-		this.logError("错误：模板名为\"" + _templateName + "文件不存在！");
+		this.logError("ERROR: Template named \"" + _templateName + "\" does not exist!");
 		this.assert(false);
 		return null;
 	}

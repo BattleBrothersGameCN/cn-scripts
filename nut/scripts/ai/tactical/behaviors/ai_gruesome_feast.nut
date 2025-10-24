@@ -348,7 +348,7 @@ this.ai_gruesome_feast <- this.inherit("scripts/ai/tactical/behavior", {
 				{
 					if (this.Const.AI.VerboseMode)
 					{
-						this.logInfo("* " + _entity.getName() + ": Waiting until others have moved!");
+						this.logInfo("* " + _entity.getName() + ": 等待直到其他人移动！");
 					}
 
 					this.m.TargetTile = null;
@@ -376,7 +376,7 @@ this.ai_gruesome_feast <- this.inherit("scripts/ai/tactical/behavior", {
 
 				if (!navigator.findPath(_entity.getTile(), this.m.TargetTile, settings, this.m.Skill.getMaxRange()))
 				{
-					this.logWarning("* " + _entity.getName() + ": Failed to execute path for Gruesome Feast - No path found!");
+					this.logWarning("* " + _entity.getName() + "：执行 阴森悚宴 路径失败 —  未找到路径。");
 					return true;
 				}
 
@@ -390,7 +390,7 @@ this.ai_gruesome_feast <- this.inherit("scripts/ai/tactical/behavior", {
 
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Moving into range to use Gruesome Feast");
+					this.logInfo("* " + _entity.getName() + "：移动到范围内使用 阴森悚宴");
 				}
 
 				this.m.IsFirstExecuted = false;
@@ -440,7 +440,7 @@ this.ai_gruesome_feast <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Gruesome Feast!");
+			this.logInfo("* " + _entity.getName() + "：使用 阴森悚宴！");
 		}
 
 		if (this.m.Skill.use(this.m.TargetTile))

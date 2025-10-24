@@ -9,7 +9,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 40.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%peddler% 向你走来，用手摩擦着后颈，紧张地扯着衬衫的前襟。 他提出了一个建议：让他带一些货物去城镇里卖，就像他过去经常做的那样。\n\n唯一一个问题就是他还没有货物－他得去附近港口城镇里的当地人那里购买。 现在他只需要一些起始资金来购买货物。 总计大概500克朗。 自然，作为合作伙伴，如果一切正常进行，你能得到其中的一部分利益。",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%peddler%走到你面前，搓着后颈，紧张地拽着衣领。 他提议带着一批货进城兜售，就像他以往经常做的那样。\n\n唯一的问题是他现在手里没货——得先跟附近乡民采购。眼下只需要500克朗启动资金进货。当然，作为合伙人，事成之后你将获得分红。",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -23,7 +23,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "你现在是个雇佣兵了。 是时候把过去抛在身后了。",
+					Text = "你现在是个雇佣兵，是时候把过去抛在身后了。",
 					function getResult( _event )
 					{
 						return 0;
@@ -39,13 +39,13 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_04.png[/img]你把克朗递给 %peddler%，他收下并离开了。\n\n几个小时之后，小贩手里拿着一个小密码箱跑了过来。 他脸上的笑容是那么地明显，甚至在跑来的时候还情不自禁地挥舞了一下拳头。 当他停下来准备说话的时候，不由得大口喘息起来。 你拍了拍他的肩膀，告诉他慢慢来。 恢复过来后，他递给你一大把硬币，说这是你的分红。\n\n在你还没来得及说话的时候，他已经小跑着离开了，因他的成功而心驰目眩。",
+			Text = "[img]gfx/ui/events/event_04.png[/img]你给了%peddler%一笔克朗，他便动身离开了。\n\n几小时之后，小贩手里拿捧着小锁盒快步跑来。他脸上挂着藏不住的笑容，快步走来时不自觉地挥舞着拳头。刚要开口就被急促的喘息打断。你抬手示意他慢慢说。平静下来后，他递来沉甸甸的钱袋，说这是你应得的分红。\n\n不待你回应，他已雀跃着转身跑远，仍沉浸在成功的喜悦中。",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "和你一起做生意很愉快。",
+					Text = "合作愉快。",
 					function getResult( _event )
 					{
 						return 0;
@@ -62,7 +62,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/icons/asset_money.png",
-						text = "你获得[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
+						text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]" + money + "[/color]克朗"
 					}
 				];
 				_event.m.Peddler.getBaseProperties().Bravery += 1;
@@ -87,7 +87,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_05.png[/img]%peddler% 离开了，而你转向别的工作。\n\n几个小时后，你走出帐篷，看见了一个佝偻着身子的身影慢慢向你走来。 他看起来像是小贩。 他两手空空，紧皱着的眉头回到了你的身边。 当他走进时，你注意到了他身上一块块的淤青。 他解释道：虽然他成功从他的渠道买到了货物，但是镇子里的居民似乎对他的销售策略不太认可。\n\n所有投资的钱都没了，而 %peddler% 则走向帐篷去治疗他的伤势。",
+			Text = "[img]gfx/ui/events/event_05.png[/img]%peddler%离开了，你则继续处理其他日常事务。\n\n几个小时后你走出帐篷，远远望见一道佝偻身影正蹒跚走来，看来正是先前离开的小贩。他空着手，一脸沮丧。待他走近，你才看清他周身的淤青。 他解释说虽从货源处采购到了商品，可镇民们对他的买卖手段颇不待见。\n\n投进去的本钱全打了水漂，而%peddler%只得钻回帐篷疗伤去了。",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -118,7 +118,7 @@ this.peddler_deal_event <- this.inherit("scripts/events/event", {
 					icon = "ui/icons/days_wounded.png",
 					text = _event.m.Peddler.getName() + "受到了轻微伤"
 				});
-				_event.m.Peddler.worsenMood(2, "他的计划失败了，损失了一大笔钱");
+				_event.m.Peddler.worsenMood(2, "他计划失败了，损失了一大笔钱");
 
 				if (_event.m.Peddler.getMoodState() < this.Const.MoodState.Neutral)
 				{

@@ -6,8 +6,8 @@ this.goblin_staff <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.goblin_staff";
-		this.m.Name = "树瘤权杖";
-		this.m.Description = "一条用陈年硬木雕琢而成，饰有骨头和羽毛的树瘤权杖。收藏家可能会感兴趣。";
+		this.m.Name = "树瘤手杖";
+		this.m.Description = "一条用陈年硬木雕琢而成，饰有骨头和羽毛的树瘤手杖。收藏家可能会感兴趣。";
 		this.m.Categories = "骨朵, 单手持";
 		this.m.IconLarge = "weapons/melee/goblin_weapon_06.png";
 		this.m.Icon = "weapons/melee/goblin_weapon_06_70x70.png";

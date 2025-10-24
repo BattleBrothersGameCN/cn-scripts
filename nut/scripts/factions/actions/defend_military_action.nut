@@ -112,7 +112,7 @@ this.defend_military_action <- this.inherit("scripts/factions/faction_action", {
 
 		for( local i = 0; i != spawnpoints.len(); i = ++i )
 		{
-			local party = this.getFaction().spawnEntity(spawnpoints[i], this.m.Settlement.getName() + " 战团", true, this.Const.World.Spawn.Noble, this.m.Settlement.getResources());
+			local party = this.getFaction().spawnEntity(spawnpoints[i], this.m.Settlement.getName() + "战团", true, this.Const.World.Spawn.Noble, this.m.Settlement.getResources());
 			party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + _faction.getBannerString());
 			party.setDescription("听命于当地领主的职业军人。");
 			party.setFootprintType(this.Const.World.FootprintsType.Nobles);

@@ -10,13 +10,13 @@ this.alp_nightmare1_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 300.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{围着营火的士兵们正在交谈，%spiderbro%突然跳起来尖叫着。他向后弹开，被火光照亮，你可以看到一只像头盔一样大的蜘蛛附在他的靴子上！}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{伙计们正围坐在营火旁交谈，%spiderbro%却突然猛地跳起来尖叫。他踉跄后退，在火光照耀下，你看见一只头盔大小的蜘蛛正附在他的靴子上！}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "有人把它砍掉了！",
+					Text = "剁了那玩意！",
 					function getResult( _event )
 					{
 						return "B";
@@ -40,13 +40,13 @@ this.alp_nightmare1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{你刚拔出剑来，但是%otherbro%已经先你一步行动，他怒吼着让%spiderbro%站着不动。尽管他犹豫不决地站着，但是那个拿着武器的雇佣兵却挥剑太高了，直接切掉了他的脖子。失去头颅的尸体摇晃着倒下，整个战团发出惊恐和愤怒的尖叫声。}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{你刚拔出剑来，%otherbro%却已抢先出手。他大喊着让%spiderbro%站着不动。对方勉强照做。然而持剑的佣兵这一挥竟高高扬起，利刃径直掠过那人的脖颈。无头身躯应声倒地，战团其余成员在惊骇与暴怒中咆哮不止。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "我靠！",
+					Text = "他妈的！",
 					function getResult( _event )
 					{
 						return "C";
@@ -89,13 +89,13 @@ this.alp_nightmare1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_39.png[/img]{你冲向%otherbro%，想要梆死他，然而你的双手只是跑过他的身体，就像穿过了雾气一样，你的势头差点把你撞倒在地。%SPEECH_ON%队长，你没事吧？%SPEECH_OFF%回过头来，你看到一个状况完全良好的%spiderbro%坐在火边。远处，有一些苍白而光滑的东西从一棵树干上退后，你眨眼之间，它就不见了。你告诉士兵守好外围，然后回到你的帐篷，摇着头，捏了捏眼睛。}",
+			Text = "[img]gfx/ui/events/event_39.png[/img]{你冲向%otherbro%想要掐死他，双手却如穿透雾气般掠过他的身体，整个人因惯性栽倒在地。%SPEECH_ON%呃，你没事吧队长？%SPEECH_OFF%你回过头，只见%spiderbro%完好无损地坐在篝火旁。远处树后有个苍白矫健的身影悄然隐没。你眨眼的功夫，那影子便消失无踪。你吩咐队员们加强守夜，揉着发胀的太阳穴走回帐篷。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "仅仅是一个噩梦。",
+					Text = "只是做了个噩梦。",
 					function getResult( _event )
 					{
 						return 0;
@@ -110,13 +110,13 @@ this.alp_nightmare1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%spiderbro%点了点头，僵硬地走向篝火，蜘蛛宝宝用着奇怪的信任之眼注视着他。他把小动物放进了火坑里，立刻着了火。一开始，你以为他已经摆脱了危险，但是燃烧的蜘蛛宝宝沿着这个男人的裤腿狂奔，将他的衣服点燃，并粘上了他的头。着火后，这个人伸出手寻找帮助。那野兽咬住了他的头，叫声戛然而止，这位雇佣兵像木板一样倒在篝火里。}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%spiderbro%僵硬地走向营火，那只幼蛛竟用异常温顺的眼神仰望着他。他将小生物抛进火坑，火焰瞬间包裹了它。正当你以为危机解除时，着火的蜘蛛竟顺着裤腿急速上爬，点燃衣裤直扑面门。浑身着火的男人张开双臂疯狂奔逃，蜘蛛将毒牙埋入他的头颅——惨叫在骤然僵直中戛然而止，这名佣兵如同木板般直挺挺栽进了营火堆。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "把他的尸体从那里拿走！",
+					Text = "把他挪走！",
 					function getResult( _event )
 					{
 						return "E";
@@ -158,13 +158,13 @@ this.alp_nightmare1_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_39.png[/img]{你朝雇佣兵大喊让他们尽职尽责，但当你跳向篝火和%spiderbro%的时候，有阵灰烬和火花袭来。当它们消失后，你发现那个佣兵静静地坐在火边。%SPEECH_ON%啊，队长，你说什么？%SPEECH_OFF%四周看了看，你发现战团的其他成员正在聊天。当你再次回头看向%spiderbro%时，你以为看到他身后掠过一道白影，但再一看，却已经没有了。你告诉士兵们要警惕入侵者，并回到自己的帐篷。}",
+			Text = "[img]gfx/ui/events/event_39.png[/img]{你朝佣兵们厉声下令，但当你扑向营火旁的%spiderbro%时，骤然迸发的火星与灰烬迷蒙了视线——待烟尘散去，只见这名佣兵安然坐在火焰旁。%SPEECH_ON%啊，队长，你说什么？%SPEECH_OFF%环顾四周，战团成员们仍在闲谈。当你再度望向%spiderbro%时，似乎有抹白影在他身后掠过，定睛看去却已无踪。你吩咐众人保持警觉，随即回到了自己的帐篷。}",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "我需要得到更多的休息。",
+					Text = "我得多休息一些。",
 					function getResult( _event )
 					{
 						return 0;

@@ -5,11 +5,11 @@ this.cart_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.ambition.create();
 		this.m.ID = "ambition.cart";
 		this.m.Duration = 21.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "我们快带不下更多的装备和战利品了。\n让我们存个7500克朗，买辆板车来减轻负担吧！";
+		this.m.ButtonText = "我们快带不下更多的装备和战利品了。\n攒够7500克朗，买辆板车来减轻负担吧！";
 		this.m.RewardTooltip = "你将解锁27个额外的仓库栏位。";
 		this.m.UIText = "拥有至少7500克朗";
 		this.m.TooltipText = "收集7500以上的克朗，用于购买一辆板车，获得额外的仓库空间。你可以通过完成合同、掠夺废墟或营地、进行贸易等方式赚钱。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_158.png[/img]收集到足够克朗付给制车匠人让你伤筋动骨，搞不好是字面意义上的。现在，作为一辆新货车的骄傲主人，你可以携带更多的装备和战利品，银器、金冠，或是一件从某个暴徒身上扒下来，被撕破了一半，满是虱子的武装衣。\n\n和你的新加入的四轮兄弟走了几英里后，你注意到%randombrother%似乎不见了。在周围找了又找，你最后在载重货车上的一些粮食袋子后面找到了他，正平静地打着呼噜。头上浇点冷水，屁股上踹两脚，懒汉很快就会站起来，像其他人一样走路。和以往一样，你最好确保那些人知道他们在战团里的地位。%SPEECH_ON%别让我发现你们谁再这样！在%companyname%，如果你脑袋滚下来掉地上，那我欢迎你上车！如果你不想上车，行军途中就给我时刻保持警惕，准备好你的武器！%SPEECH_OFF%人们小声抱怨着，继续往前走。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_158.png[/img]攒够车匠要的钱让你们伤筋动骨，搞不好是字面意义上的伤筋动骨。如今拥有这辆崭新货车后，你们既能装载更多装备，也能运送更多战利品，无论是金银器皿还是从匪徒身上剥下的半破武装衣。\n\n和新车行进数里后，你发现%randombrother%不见了踪影。在周围找了又找，最终在货车的粮袋后找到他时，这人正打着鼾酣睡。一瓢冷水浇头再加一脚狠踹，很快让这懒汉爬起来继续徒步。你决定让所有人认清规矩。%SPEECH_ON%都给我听好！%companyname%的人想坐这辆车，除非是拎着自己脑袋上去！在这片土地行进时，所有人都必须保持警戒，武器不离手。%SPEECH_OFF%在弟兄们的嘟囔声中，队伍继续前进。";
 		this.m.SuccessButtonText = "行动起来！";
 	}
 

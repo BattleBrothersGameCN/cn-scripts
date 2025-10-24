@@ -61,7 +61,7 @@ this.patrol_order <- this.inherit("scripts/ai/world/orders/move_order", {
 			  // [076]  OP_CLOSE          0      3    0    0
 		}
 
-		_entity.setOrders("Patrolling");
+		_entity.setOrders("巡逻中");
 
 		if (_entity.getTile().ID == $[stack offset 0].m.TargetTile.ID)
 		{

@@ -5,17 +5,17 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.lend_men_to_build";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 45.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_79.png[/img]当你们接近 %townname% 时，一个当地人朝你们挥手。 他站在一座磨坊的骨架旁。 他看起来非常生气，他解释说他的工人今天没有来但是他需要在当地一位男爵到来之前把磨坊完工。 如果他不能完成的话男爵可能就不会再给他一份合同了。 你的战团里面有些成员以前是工人。 也许可以叫他们来帮助这个人？",
+			Text = "[img]gfx/ui/events/event_79.png[/img]快到%townname%时，一个当地人朝你们挥手。 他站在一座磨坊的骨架旁。气急败坏地解释说今天的工人全都没来，而且必须在当地男爵抵达前建好磨坊。要是没法按时完工，男爵可能再也不会给他任何承包合同了。战团里正好有几个弟兄以前当过工人，或许能帮上忙？",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "你建筑，我们杀人。 另找别人去。",
+					Text = "我们只会杀人。找别人帮你吧。",
 					function getResult( _event )
 					{
 						return 0;
@@ -23,7 +23,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "好吧，我会派一到几个人。",
+					Text = "行，我有人能帮上忙。",
 					function getResult( _event )
 					{
 						return this.Math.rand(1, 100) <= 50 ? "B" : "C";
@@ -38,7 +38,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "B",
-			Text = "[img]gfx/ui/events/event_79.png[/img]你同意派 %companyname% 中几个建筑好手来帮助这个人。 他们很快就回归到了老本行中就像他们一直都是干这个的，迅速地四处搜集资源，敲打，砌砖，安装门的路径？ 不管什么东西需要装门，他们总可以非常迅速的完成它。 当所要求的一切都完成以后，当地人笑着向你走来。 他递过一个袋子。%SPEECH_ON%这是你应得的，好心的先生！ 更重要的是，你赢得了我的信任－只要我能我将在任何时候传播你的仁慈！%SPEECH_OFF%",
+			Text = "[img]gfx/ui/events/event_79.png[/img]你同意派%companyname%中几个建筑好手去帮忙。这些人重操旧业简直轻车熟路，转眼间就分头收集材料，敲敲打打、砌砖抹灰——至于装门？不管这活儿该怎么干，他们都迅速搞定了。待到工程完工，当地人乐得合不拢嘴。他递过一个钱袋。%SPEECH_ON%这是你应得的，好心的先生！ 更重要的是，我欠你个人情，以后我见人就说你们的好话！%SPEECH_OFF%",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -54,7 +54,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationFavor, "你借出一些人帮助建了一个磨坊");
+				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationFavor, "你借出一些人帮忙建了一座磨坊");
 				this.World.Assets.addMoney(150);
 				this.List = [
 					{
@@ -84,7 +84,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 						if (this.Math.rand(1, 100) <= 50)
 						{
-							bro.improveMood(0.5, "帮助建了一个磨坊");
+							bro.improveMood(0.5, "帮忙建了一座磨坊");
 
 							if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 							{
@@ -102,13 +102,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "C",
-			Text = "[img]gfx/ui/events/event_79.png[/img]你同意帮助这个人。 但不幸的是，这个人似乎没有安排好工地的一切。 你的第二个“工人”踩在屋顶上屋顶塌了下来，把这个人送进了一个由瓦片组成的天坑。 另一名男子用锤子将一颗钉子钉在木架上木架正好被砸成两半，木片砸在了他的脸上。 松动的砖块脱落下来，让人滑倒的潮湿的泥土，各种各样的灾难结束了整个工程。\n\n 当地人一边不停地道歉一边想着如何对付男爵。 他咬着自己的指头，他打响指惊叫着说只要给他钱就行了。",
+			Text = "[img]gfx/ui/events/event_79.png[/img]你答应帮忙修缮房屋。 可惜这人显然没安排妥当。 你的“工人”刚踩上去，屋顶就塌了个窟窿，那人直接从破洞栽进了瓦片堆里。另一个弟兄抡锤钉钉子，支撑木竟应声断裂，木屑溅了满脸。 松动的砖块不断滚落，湿滑的泥地让人摔得四仰八叉——层出不穷的意外最终让整个工程成了一团乱麻。\n\n 当地人一一边啃着指甲喃喃说着该怎么向男爵交代，一边不住地向你赔罪。突然他打了个响指，说自己大不了直接赔钱给男爵就是了。",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "这些克朗是属于我们的！",
+					Text = "那些钱是我们的！",
 					function getResult( _event )
 					{
 						return "D";
@@ -116,7 +116,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "那么只能祝那个男爵好运。",
+					Text = "那就祝你顺利度过男爵那关吧。",
 					function getResult( _event )
 					{
 						return "E";
@@ -131,13 +131,13 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "D",
-			Text = "[img]gfx/ui/events/event_79.png[/img]当这个人不断地思考如何解决问题并且最后找到解决方法时，你打响你的手指把带他回到残酷的现实。%SPEECH_ON%那些克朗是属于我们的，农民。 这是一开始就定好的。%SPEECH_OFF%那人摇着头双颊上下抽动着。%SPEECH_ON%但是这个磨坊…它根本就没有完工！%SPEECH_OFF%你耸耸肩。%SPEECH_ON%不是我们的问题。在我让你成为我们的麻烦之前，把它交出来。%SPEECH_OFF%那人无奈的点了点头，遵循的将装满克朗的袋子递给你。",
+			Text = "[img]gfx/ui/events/event_79.png[/img]正当这人沉浸在自己想出的完美方案时，你打了个响指将他拉回残酷的现实。%SPEECH_ON%那袋钱是我们的，农民。说好的价钱。%SPEECH_OFF%对方连连摇头，脸颊的肉随着动作直晃。%SPEECH_ON%可磨坊……根本还没完工啊！%SPEECH_OFF%你耸耸肩。%SPEECH_ON%不是我们的问题。马上把钱交出来，不然你就是我们的问题了。%SPEECH_OFF%村民神情凝重地点点头，顺从地将那袋克朗交到你手中。",
 			Image = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "祝你下次好运。",
+					Text = "希望你下次运气好点。",
 					function getResult( _event )
 					{
 						return 0;
@@ -147,7 +147,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(-this.Const.World.Assets.RelationFavor, "你极力要求一个有影响的居民为你帮助建造的一座磨坊支付报酬");
+				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(-this.Const.World.Assets.RelationFavor, "在帮助一名有影响力的居民建造一座磨坊后，你强硬要求他支付报酬");
 				this.World.Assets.addMoney(200);
 				this.List = [
 					{
@@ -177,7 +177,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 						if (this.Math.rand(1, 100) <= 50)
 						{
-							bro.improveMood(0.5, "帮助建了一个磨坊");
+							bro.improveMood(0.5, "帮忙建了一座磨坊");
 
 							if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 							{
@@ -195,7 +195,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 		});
 		this.m.Screens.push({
 			ID = "E",
-			Text = "[img]gfx/ui/events/event_79.png[/img]在之后一小段时间内，你总会想象到一幅你自己用剑刺穿斜眼男人的画面。 这真的会让他意识到世界的现实，但你却给了他一个喘息的机会。 参加过这一个灾难工程的工人都不太高兴。 希望所学到的经验能使他们坚强起来。",
+			Text = "[img]gfx/ui/events/event_79.png[/img]刹那间，你脑海中闪过一个画面：自己用长剑刺穿了那个眯缝眼男人的身躯。这无疑能让他彻底认清现实，但你最终还是决定放他一马。那些参与了这场灾难性工程的劳工们对此颇为不满。只能说这破事至少让他们锻炼了一下身体。",
 			Image = "",
 			List = [],
 			Characters = [],
@@ -211,7 +211,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationFavor, "你借出一些人帮助建了一个磨坊");
+				this.World.FactionManager.getFaction(_event.m.Town.getFactions()[0]).addPlayerRelation(this.Const.World.Assets.RelationFavor, "你借出一些人帮忙建了一座磨坊");
 				local brothers = this.World.getPlayerRoster().getAll();
 
 				foreach( bro in brothers )
@@ -233,7 +233,7 @@ this.lend_men_to_build_event <- this.inherit("scripts/events/event", {
 
 						if (this.Math.rand(1, 100) <= 33)
 						{
-							bro.worsenMood(1.0, "帮助建了一个磨坊却没有得到报酬");
+							bro.worsenMood(1.0, "帮忙建了一座磨坊却没有得到报酬");
 
 							if (bro.getMoodState() < this.Const.MoodState.Neutral)
 							{

@@ -330,7 +330,7 @@ this.ai_possess_undead <- this.inherit("scripts/ai/tactical/behavior", {
 
 				if (this.Const.AI.VerboseMode)
 				{
-					this.logInfo("* " + _entity.getName() + ": Moving into range to use Possess Undead");
+					this.logInfo("* " + _entity.getName() + "：移动到范围内使用 支配亡灵");
 				}
 
 				this.m.IsFirstExecuted = false;
@@ -362,7 +362,7 @@ this.ai_possess_undead <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using Possess Undead!");
+				this.logInfo("* " + _entity.getName() + "：使用支配亡灵");
 			}
 
 			if (this.m.Skill.use(this.m.TargetTile))

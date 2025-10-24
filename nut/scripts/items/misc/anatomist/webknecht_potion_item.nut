@@ -5,7 +5,7 @@ this.webknecht_potion_item <- this.inherit("scripts/items/misc/anatomist/anatomi
 		this.anatomist_potion_item.create();
 		this.m.ID = "misc.webknecht_potion";
 		this.m.Name = "毒血药剂";
-		this.m.Description = "任何一位经验丰富的野兽猎人都会告诉你，被称为“蛛魔”的发育过度的蛛形纲动物真正可怕的是它们的毒液。好吧，马上就不再是了！无论谁喝了这种药剂，都不必再害怕这些生物的毒液了！";
+		this.m.Description = "任何一位经验丰富的野兽猎人都会告诉你，被称为“蛛魔”的巨型蛛类最可怕之处在于它们的剧毒。但现在不同了！无论谁喝下这瓶药剂，都无需再怕这些生物的毒液！";
 		this.m.IconLarge = "";
 		this.m.Icon = "consumables/potion_31.png";
 		this.m.Value = 0;
@@ -53,7 +53,7 @@ this.webknecht_potion_item <- this.inherit("scripts/items/misc/anatomist/anatomi
 			id = 11,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "免疫中毒效果，包括蛛魔与地精的毒药"
+			text = "免疫中毒效果，包括蛛魔的毒液与地精的毒药"
 		});
 		result.push({
 			id = 65,

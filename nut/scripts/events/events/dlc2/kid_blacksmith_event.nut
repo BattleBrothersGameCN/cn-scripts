@@ -9,7 +9,7 @@ this.kid_blacksmith_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.kid_blacksmith";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 999999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

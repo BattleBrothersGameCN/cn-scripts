@@ -192,7 +192,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 				else if (this.Flags.get("IsGhouls"))
 				{
 					party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "食尸鬼", false, this.Const.World.Spawn.Ghouls, 110 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
-					party.setDescription("一群正在寻觅的食尸鬼");
+					party.setDescription("一群正在觅食的食尸鬼");
 					party.setFootprintType(this.Const.World.FootprintsType.Ghouls);
 					this.Const.World.Common.addFootprintsFromTo(this.Contract.m.Home.getTile(), party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Ghouls, 0.75);
 				}
@@ -346,7 +346,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_43.png[/img]{在你等待%employer%解释他的需求时，你思索起为何在你来的路上这个定居点如此安静而怪异。%employer%提起嗓门。%SPEECH_ON%这个地方受到了众神的诅咒，还出没着怪异的野兽！它们目带红光在晚上来临，肆意屠杀。我们的牛大多都被杀死了，而我还担心一旦牛没了，我们人就会是下一个被撕碎的。几天前我们派了村里最强壮的小伙子们去找到并杀死这些野兽，但我们之后再也没听到他们的消息。%SPEECH_OFF%他深深地叹了口气。%SPEECH_ON%跟着%direction%边的脚印，找到并解决那些野兽好让我们能再次平平安安地生活！我们没有多少钱，但是所有人都贡献了一份来雇你。%SPEECH_OFF% | %employer%在你找到他时正看向窗户外。手里拿着一个高脚杯 —— 外面一片寂静。他转向你，几乎是忧郁的。%SPEECH_ON%你来这里的路上有没有意识到这里有多安静？%SPEECH_OFF%你说你注意到了，但你想是因为自己看着就像个佣兵。这正是你所习惯的环境。%employer%点头喝了一口。%SPEECH_ON%啊，当然。不幸的是，这并非是因为人们在害怕你。这次不是。我们过去几个星期有几起人被攻击的事件。某种野兽在游荡，我们不知道它们是什么，只知道它们带走了谁。我们请求过我们的领主，当然，但是他没有做任何事情来帮我们……%SPEECH_OFF%他的下一口喝了很久。当他喝完时，他转向你，杯子空着。%SPEECH_ON%你愿不愿意去猎捕这些怪物？求你了，佣兵，帮帮我们。%SPEECH_OFF% | %employer%在你找到他时正在听几个农民说话。那些人在看到你后很快离开了，在他手里留下一个袋子。他举起它来。%SPEECH_ON%这里面有克朗。那些人给我克朗，好给某个人，任何人，来帮帮我们。人们在失踪，佣兵，而当他们被找到时他们……不仅是死了，而是……被撕烂了。残缺不全。所有人都很害怕，哪儿也不敢去。%SPEECH_OFF%他盯向袋子，然后看向你。%SPEECH_ON%我真的希望你对这个任务感兴趣。%SPEECH_OFF% | 你找到%employer%时他正读着一个卷轴。他把纸扔给你，让你把名字念出来。字迹很难辨认，但并不比读出名字更困难。你停下来并道歉，表示你不是这个地方的人。那个人点点头，拿回了卷轴。%SPEECH_ON%这没什么，佣兵。如果你想知道，这些是上周去世的男人、女人和孩子们的名字。%SPEECH_OFF%上个星期？那上面可有很多个名字。那人似乎读懂了你的话，忧郁地点了点头。%SPEECH_ON%是，我们的情况很糟。失去了这么多生命。我们相信这是邪恶生物的杰作，我们无法理解的野兽。很显然，我们想雇你去找到并解决掉它们。有兴趣接受这个委托吗，佣兵？%SPEECH_OFF% | %employer%的脚边有几只狗，全都累坏了，耷拉着舌头。%SPEECH_ON%它们过去几天都在找失踪了的人。老天爷都不知道去哪了的家伙们。%SPEECH_OFF%他伏身抚摸其中一只猎犬，挠着它的后脑勺。通常来说，狗会有所回应，但这个可怜虫几乎没有任何反应。%SPEECH_ON%不过，我明白了一些那些家伙不知道的东西，人们不是在消失……他们是被抓走了。可怕的野兽在游荡，佣兵，而且我需要你去追杀它们。见鬼，或许你能找到几个人，但我不抱信心。%SPEECH_OFF%其中一条狗呼出长长一声疲倦的叹息，几乎像是按照剧本上的台词一样。 | %employer% 拿着一个贴着卷轴的袋子，但是上面写的名字不是你的。 他小心的掂量着它，硬币的形状在他的指间环绕，它们的叮当声低沉。他转向你。%SPEECH_ON%你认识那个名字吗？%SPEECH_OFF%你摇头。他继续道。%SPEECH_ON%一个星期前我们派在 %direction% 著名的 %randomnoble% 去猎杀一些近几个星期都在这一代制造恐怖的野兽。 你知道为什么这个袋子还在我手里吗？%SPEECH_OFF%你耸耸肩答道。%SPEECH_ON%因为他没回来？%SPEECH_OFF%%employer% 点头并放下袋子。 他坐在桌子的边缘上。%SPEECH_ON%没错。因为他没有回来。 现在，你觉得是为什么？ 我想是因为他死了，但我们不要这么悲观。 我想是因为外面那些野兽需要更多。 我想他们需要像你一样的人，佣兵。 你愿意帮助我们解决这个贵族解决不了的问题吗？%SPEECH_OFF% | %employer% 从书架取下一本书。 当他把它放在桌上，灰又或者尘埃从中涌出。 他打开它，一页一页的慢慢翻着。%SPEECH_ON%你相信怪物吗，佣兵？ 我是认真的，因为我相信你比我见得多。%SPEECH_OFF%你点头然后说。%SPEECH_ON%已经过了相信与否，是的。%SPEECH_OFF%他翻开另一页。他抬头看着你。%SPEECH_ON%好，我们相信你怪物来到了 %townname%。我们相信它们是人们在消失的原因。 知道这意味着什么吗？ 我需要你去找到这些“虚幻”的生物，像杀死其他生物一样杀死它们。有兴趣吗？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_43.png[/img]{你正等待%employer%说明他需要你提供何种服务，同时心里琢磨起这个地方为什么如此寂静而怪异。%employer%突然高声说道。%SPEECH_ON%这个地方受到了众神的诅咒，还出没着怪异的野兽！它们夜间来袭，双眼泛着红光，肆意夺人性命。我们大部分牲畜都死了，我怕一旦牲畜没了，接下来被撕碎的就是我们。前些天我们派了最壮实的小伙子们去捕杀那些野兽，但至今杳无音信。%SPEECH_OFF%他深深地叹了口气。%SPEECH_ON%沿着%direction%方向的踪迹追踪，找到并杀死那些怪物，这样我们才能重获安宁！我们并不富裕，但大家凑了钱来支付你的报酬。%SPEECH_OFF% | 你找到%employer%时，他正望着窗外。他手里拿着一个酒杯——而外面除了一片死寂，什么也没有。他转向你，神情几乎可以说是沉痛。%SPEECH_ON%你来这里时，注意到有多安静了吗？%SPEECH_OFF%你回答说注意到了，但你是个看起来就不好惹的佣兵，早已习惯这种场面。%employer%点点头，喝了一口。%SPEECH_ON%啊，当然。不幸的是，这次并不是因为人们怕你。过去几周一直有人遭到袭击。某种野兽在四处游荡，我们不知道它们是什么，只知道它们抓走了谁。我们当然向领主求助过，但他什么都没做……%SPEECH_OFF%他又喝了一口，这次喝了很久。喝完时，他转向你，手里拿着空杯子。%SPEECH_ON%你愿意去猎杀这些怪物吗？求你了，佣兵，帮帮我们。%SPEECH_OFF% | 你找到%employer%时，他正在听几个农民说话。他们一看到你，就迅速离开了，留下他手里拿着一个袋子。他举起它来。%SPEECH_ON%这里面是克朗。是那些人给我，让我交给某个能帮助我们的人，任何人都行。不断有人失踪，佣兵，而且当找到他们时……他们不只是死了，而是……支离破碎。所有人都吓得不敢出门。%SPEECH_OFF%他盯着袋子，然后看向你。%SPEECH_ON%我真心希望你对这个任务感兴趣。%SPEECH_OFF% | 你看到%employer%正在读一卷卷轴。他把纸扔给你，让你念出上面的名字。笔迹难以辨认，但名字本身就不好辨别。你停下来道歉，说自己不是本地人。那人点点头，拿回卷轴。%SPEECH_ON%没关系，佣兵。如果你想知道，那是过去一周里死去的男女老少的名字。%SPEECH_OFF%上周？那名单上的名字可不少。那人似乎看出了你的想法，沉重地点了点头。%SPEECH_ON%是啊，我们处境很糟。死了这么多人。我们相信这是邪恶生物的所作所为，是超出我们理解能力的野兽。很明显，我们希望你去找到并消灭它们。你对这样的任务感兴趣吗，雇佣兵？%SPEECH_OFF% | %employer%脚边躺着几条狗，全都累坏了，舌头耷拉着。%SPEECH_ON%它们过去几天一直在搜寻失踪的人。那些人就这么消失了，天知道去了哪里。%SPEECH_OFF%他弯下腰，抚摸着其中一条猎犬，搔着它的耳后。通常狗会对这个有反应，但这可怜的家伙几乎毫无反应。%SPEECH_ON%不过，乡亲们不知道我所知道的事——那就是人们并非只是失踪……他们是被抓走的。可怕的野兽正在肆虐，佣兵，我需要你去追捕它们。见鬼，说不定你还能找到一两个镇民，虽然我对此不抱希望。%SPEECH_OFF%仿佛接到信号一般，其中一条杂种狗发出一声长长的、疲惫的喘息。 | %employer%拿着一个袋子，上面系着一卷纸，但纸上写的名字不是你的。他仔细掂量着挎包，指间感受着钱币的块状轮廓，叮当声显得沉闷。他转向你。%SPEECH_ON%你认得那个名字吗？%SPEECH_OFF%你摇摇头。那人继续说道。%SPEECH_ON%一周前，我们派了著名的%randomnoble%前往此地%direction%方向，去猎杀几周来一直肆虐本镇及周边农庄的邪恶野兽。你知道为什么这个钱袋还在我手里吗？%SPEECH_OFF%你耸耸肩答道。%SPEECH_ON%因为他没回来？%SPEECH_OFF%%employer%点点头，放下袋子。他坐在桌子边缘。%SPEECH_ON%没错。因为他没有回来。那么，你认为这是为什么呢？我觉得是因为他死了，但我们别这么悲观。我认为是因为外面的野兽需要更厉害的角色。我认为它们需要像你这样的人，佣兵。既然这位贵族失败了，你愿意帮助我们吗？%SPEECH_OFF% | %employer%从书架上取下一本书。当他把书放在桌上时，灰尘甚至可能是灰烬飞扬起来。他打开书，一页一页地慢慢翻阅。%SPEECH_ON%你相信有怪物吗，佣兵？我真心请教，因为我相信你在这个世界上的见闻比我广。%SPEECH_OFF%你点点头说道。%SPEECH_ON%不止是相信，我知道有。%SPEECH_OFF%那人又翻过一页。他抬头看着你。%SPEECH_ON%好吧，我们相信怪物已经来到了%townname%。我们相信这就是人们不断失踪的原因。明白这意味着什么吗？我需要你去找到这些传言中的生物，然后像对付普通畜生一样杀了它们。你感兴趣吗？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
@@ -361,7 +361,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这听起来不像是适合我们的工作。 | 我祝你好运，但我们不会参与其中。}",
+					Text = "{这听起来不像是适合我们的工作。 | 祝你好运，但我们不会掺和此事。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -377,8 +377,8 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "Humans",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_07.png[/img]{这些完全不是野兽，而是人穿着狼皮！ 看到了邪恶的“真”面目，手下对于最熟悉不过的敌人感到放松。 | 随着你靠近怪物，你意识到这些丑陋的生物不是野兽，而是伪装起来的人！ 你不知道为什么他们要玩这种扮演游戏，但是他们正在拔武器。 至于你而言，兽还是人，他们都会死。 | 你碰巧看到一个人从肩上卸下狼头。 他看到了你，手里仍拿着伪装，然后快速的把它穿了回去。你拔出你的剑。%SPEECH_ON%现在才开始伪装有点迟了。%SPEECH_OFF%你的武器切过他的面具使他后退。 在你能刺穿他之前，他跑路了，向着一群同样装束的人。 他们看到你就拔出了武器。 不论什么原因让这些蠢货玩起了扮装，现在不重要。 | 你遇到一具背后插着几根箭的野兽尸体。 伤害看起来并不致命…然后当你用剑尖掀起生物的毛发后，兽头掉了下来，露出了下面的人。%SPEECH_ON%是你干的吗？%SPEECH_OFF%前方传来声音。 那里站着几个人正在卸下他们的伪装：你追寻的野兽。 领头的人抬高音量。%SPEECH_ON%杀了他们！杀光他们！%SPEECH_OFF%不，这些还是野兽，不过是更柔弱点的那种。}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_07.png[/img]{这根本不是什么野兽，而是披着狼皮的人！ 看到了怪物的“真”面目，弟兄们反而松了口气——毕竟眼前的敌人他们再熟悉不过了。 | 当你逼近这些怪物时，才发现这些丑陋的生物根本不是野兽，而是伪装起来的人类！你不清楚他们为何要玩这种变装把戏，但他们已经亮出了兵器。对你而言，是兽是人，终归一死。 | 你撞见一个人正把狼头从肩膀上摘下来。他瞥了你一眼，手里的伪装还没放下，又慌忙戴了回去。你拔剑出鞘。%SPEECH_ON%现在再装神弄鬼，未免太迟了吧。%SPEECH_OFF%剑光一闪，你挑飞了他的面具，他踉跄后退。不等你补上一剑，他转身就逃，奔向一群同样鬼鬼祟祟的同伙。那些人一见到你，立刻亮出武器。不管这群蠢货为何扮成这副德行，现在都不重要了。 | 你发现一具野兽尸体，背上插着几支箭。这看起来并不致命……当你用剑尖挑开这生物的鬃毛时，它的脑袋竟滚落下来，露出了底下的人头。%SPEECH_ON%是你干的？%SPEECH_OFF%前方突然传来人声。那儿站着几个人，正卸去伪装——正是你们追踪的野兽。 领头的人抬高音量。%SPEECH_ON%杀了他们！杀光他们！%SPEECH_OFF%得了，的确是野兽——披着兽皮的禽兽。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -396,7 +396,7 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "WorkOfBeasts",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_60.png[/img]{你在草地上偶然发现一具尸体。 通常来说，尸体并不令人意外，到处都有人所以见到几具尸体只是个时间问题。 除了这具尸体背后有一个巨大的撕裂伤并且一些脏器不见了。\n\n%helpfulbrother% 走上来。%SPEECH_ON%脏器不见了是因为狼，又或甚至是兔子。 怎么，你没听说过只极端饥饿的兔子吗？%SPEECH_OFF%他吐了口唾沫，啃了啃指甲。%SPEECH_ON%不论如何，这些伤口，可不是兔子还是狗或者随便什么。 它得更加…大…更加危险。%SPEECH_OFF%你感谢他细致的观察并告诉他回到队伍里去。 | 一个农民走向你，衣服像片撕碎的碎布一样。 带着些许不好意思，他用手遮住大腿根。%SPEECH_ON%求求，先生们，过来看看这…恐怖的景象。%SPEECH_OFF%当你问他在说什么，他抬起手，髋部向你突过来。 他转身像木偶一样逃跑，又喊又叫的。 一个女人在他发疯时走过来。 她手抱着胸。%SPEECH_ON%他因为他的兄弟被野兽撕碎发疯了。%SPEECH_OFF%你转向她，半期待这位女士会脱下衣服把她的体态用她喜欢的姿势摇晃起来。 但并没有，她只是看着你。%SPEECH_ON%我知道 %townname% 雇了些人去解决这些野兽而且你看起来非常像个雇工。 求你了，先生，从这些邪恶中保护我们…还有它们散步的邪恶…%SPEECH_OFF% | 你遇到了一只牛的尸体，内脏不见了，一半在围栏上而另一半分布在稍远的草地上，间距呈肠子的极限长度。 像一块血肉模糊的附件。\n\n一个农夫靠近过来，踮起他的帽子露出眼睛。%SPEECH_ON%野兽干的。我没有看到它们，如果你想问的话，但我确实在你到之前听到了这惨剧。 光是听已经足够让我保持低调躲起来了。 求求你，如果你来这里是为了找这些生物，快点，因为我损失不起更多牲口了。%SPEECH_OFF% | 一个劈着柴的农民在你面前挺起身。%SPEECH_ON%神啊很高兴见到你，先生。 我就说我听说过佣兵们正在四处搜寻在这片地方制造恐怖的野兽。%SPEECH_OFF%你问他是否看到过什么能帮上忙的。 他放下手伸向斧柄。%SPEECH_ON%不能说我看到什么，不。 但我听到些东西。 我知道离这里不远的一个男人和女人被抓走了。 好吧，他们一起消失的。 传闻说他们在森林里死了。 吊在树上什么的，你知道的？ 或者，等等，或许他们只是走开去单独共处了！ 可恶…可恶！那个女孩儿讨厌她父亲而且那小子只是个无名小辈只不过长得好看嘴巴好听。 是啊，这说得通多了。%SPEECH_OFF%他停下来然后看向你。%SPEECH_ON%不论如何，我确定哪些怪物在附近。 眼睛瞪大点，佣兵。%SPEECH_OFF% | 一个女人跑出小屋拦住你。 几乎喘不上气，她问你是否见过一个男孩。 你摇头表示反对。她抬起手。%SPEECH_ON%他差不多这么大。 一头褐色头发。 不是天生的，但是那孩子真的很喜欢泥巴。 当他笑的时候他的牙齿就像星星，闪亮的散落着。%SPEECH_OFF%你摇头再次否认。%SPEECH_ON%他很会丢石头。丢的很远。 我告诉过他不要在领主的手下在附近时展示力量，不然他们会带他进军队。%SPEECH_OFF%她气喘吁吁，从她眼前吹开一丝头发。%SPEECH_ON%好吧糟糕了，不论如何，如果你看到他，让我知道。 我想他是我孩子。 还有，小心暗处。 野兽在这块儿蹲人草丛。%SPEECH_OFF%在你能说任何话之前，她收起衣服颠簸的走回了屋子。 | 你遇到一个男人蹲在一条从头到尾被摧毁的狗。 你蹲在他身边。%SPEECH_ON%是野兽干的吗？%SPEECH_OFF%他摇摇头表示否定。%SPEECH_ON%不，我做到了，终于做到了！ 可恶的家伙不会再让我睡不着了。%SPEECH_OFF%就在这时，路另一边的小屋开门跑出一个人喊叫着。%SPEECH_ON%那是我的狗吗你个婊子养的？%SPEECH_OFF%杀狗者快速起身。%SPEECH_ON%是野兽！它们昨晚又来了！%SPEECH_OFF%你安静的留下他们在狗躺着的地方争吵。}",
+			Text = "[img]gfx/ui/events/event_60.png[/img]{你在草丛中偶然发现一具尸体。通常来说，死尸并不那么令人惊讶，到处都有人，所以时不时看到一具尸体只是时间问题。但这具尸体的后背有巨大的撕裂伤口，而且器官都不见了。\n\n%helpfulbrother%走了过来。%SPEECH_ON%器官没了可能是狼吃了，甚至是兔子吃了。 怎么，你没听说过饿极了的兔子吗？%SPEECH_OFF%他吐了口唾沫，啃着指甲。%SPEECH_ON%不过，这些伤口，绝不是兔子或猎狗之类的东西弄的。是某种……更大的……更危险的东西。%SPEECH_OFF%你感谢这人敏锐的观察力，并让他归队。 | 一个农民向你走来，身上的衣服破成了碎布条。他还算体面地用双手遮住了下体。%SPEECH_ON%求求你们，先生们，来看看这个……恐怖的东西。%SPEECH_OFF%当你问他指的是什么时，他猛地举起双手，朝你挺了下胯。他像被旋转的木偶一样转过身，大叫大嚷地跑开了。在那人发疯之后，一个女人走向你。她双手按在胸前。%SPEECH_ON%他疯了，因为他的兄弟被野兽撕碎了。%SPEECH_OFF%你转向她，有点期待这女人也会扯掉衣服，随心所欲地摇晃她的身体。然而，她只是凝视着你。%SPEECH_ON%我知道%townname%雇了些人来对付这些野兽，而你看起来确实像个受雇的好手。求你了，先生，保护我们免受这些邪祟的侵害……以及它们所散播的邪祟……%SPEECH_OFF% | 你遇到一头被开膛破肚的牛，一半身子被甩在篱笆顶上，另一半则散落在远处的草地上，距离远到其内脏所能延伸的极限。\n\n一个农夫走过来，把帽子从眼前向上推了推。%SPEECH_ON%是野兽干的。我没看见它们，但我确实在你们来之前听到了这场该死的混乱。光是听到就够我知道该躲起来了。拜托，如果你们是来寻找那些怪物的，那就快点行动，因为我可承受不起再损失一头牲畜了。%SPEECH_OFF% | 一个正在劈柴的农民在你面前直起身来。%SPEECH_ON%诸神在上，见到你们真好，先生们。我之前听说有些佣兵在四处奔走，寻找骚扰这一带的野兽。%SPEECH_OFF%你问他是否看到过什么可能有助于搜寻的线索。他把手搭在斧柄上。%SPEECH_ON%不能说有。 但我听到些传闻。我知道离这不远的一对男女被抓走了。嗯，他们是一起失踪的。有消息说他们现在死在树林里了。像藤壶一样挂在树上，内脏松散地垂着，懂吗？或者，等等，也许他们只是自己跑掉同居去了！妈的……妈的！那姑娘恨她父亲，而那小子就是个空有俊俏脸蛋和油嘴滑舌的混混。对，这说得通。%SPEECH_OFF%他停顿了一下，然后瞥了你一眼。%SPEECH_ON%总之，我确定有怪物在附近。留神点，佣兵。%SPEECH_OFF% | 一个女人从她的小屋里跑出来拦住你。她几乎上气不接下气，问你有没有看到一个男孩。你摇头表示没有。她伸出手比划着。%SPEECH_ON%他大概这么高。一头棕色的乱发。不是天生的，但那小子就喜欢玩泥巴。他笑的时候牙齿像星星，又亮又散。%SPEECH_OFF%你再次摇头表示没有。%SPEECH_ON%他扔石头扔得可好了。扔得老远。我告诉过他，领主的手下在附近时不要显露力气，免得他们把他抓去当兵。%SPEECH_OFF%她呼了口气，把一缕散乱的头发吹出眼睛。%SPEECH_ON%唉，算了，总之，如果你看到他，告诉我一声。大概率就是我儿子。还有，小心黑暗。有野兽在这附近阴人。%SPEECH_OFF%没等你说什么，这女人提起她的长裙，蹒跚地回她的小屋去了。 | 你遇到一个男人跪在一只彻底死透的狗旁边。你在他身旁单膝跪下。%SPEECH_ON%是野兽干的吗？%SPEECH_OFF%他摇头否认。%SPEECH_ON%见鬼，是我干的。总算解决了。这该死的玩意儿再也不会吵得我睡不着了。%SPEECH_OFF%就在这时，对面一间小屋的门开了，一个男人尖叫着冲了出来。%SPEECH_ON%那是我的狗吗，你这狗娘养的？%SPEECH_OFF%杀狗者迅速站起来。%SPEECH_ON%是野兽！它们昨晚又来过了！%SPEECH_OFF%你悄悄地离开了这场发生在死狗旁的争执。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -413,12 +413,12 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "CollectingPelts",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_56.png[/img]{野兽死了，你命令手下拿走它们的毛皮作为证据。 你的雇主，%employer%，应该会很高兴看到它们。 | 解决了这些丑恶的生物，你开始剥它们的皮。 残暴的生物需要残暴的证据。 不然你的雇主，%employer%，可能不会相信你完成的工作。 | 战斗结束了，你让手下开始收集毛皮好拿回去给 %employer%，你的雇主。 | 你的雇主，%employer%，如果没见到证据或许不会相信这里发生了什么。 你命令手下开始剥毛皮，战利品，头皮，随便什么只要能证明你在这里取得的胜利。}",
+			Text = "[img]gfx/ui/events/event_56.png[/img]{野兽已被斩杀，你下令让队员们剥取毛皮作为证据。你的雇主%employer%看到这些应该会非常满意。 | 解决了这些丑恶的生物，你开始动手剥取它们的毛皮和头皮。要证明对付了如此骇人的生物，自然需要留下些骇人的证据。否则你的雇主%employer%或许不会相信你在此处的成果。 | 战斗结束后，你让队员们收集毛皮，准备带回给你的雇主%employer%。 | 若没有证据，你的雇主%employer%恐怕不会相信此地发生的一切。你命令队员们开始收集毛皮、战利品、头皮——任何能彰显你们在此胜利的物证。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "赶快完事吧，还有钱等着呢。",
+					Text = "赶快完事吧，还有赏金等着我们呢。",
 					function getResult()
 					{
 						return 0;
@@ -430,12 +430,12 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "CollectingProof",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{你的手下拿下这些蠢货的伪装不然你的雇主，%employer%，可能不会相信你在这里完成的工作。 | 你的雇主或许不会相信这里发生了什么。 你命令手下收集伪装。%bro1%，从一具尸体上取下面具，开始寻思。%SPEECH_ON%所以他们把自己打扮成这样来吸引我们，现在他们都死了。 我希望他们不要以为这是个游戏。%SPEECH_OFF%%bro2% 用其中一件伪装服擦干净了他的刀。%SPEECH_ON%如果是个游戏，我很享受它。%SPEECH_OFF% | %randombrother% 向尸体点头。%SPEECH_ON%很有可能 %employer% 不会相信是一群强盗打扮成了野兽。%SPEECH_OFF%表达了统一，你命令手下开始收集面具和伪装作为证据。 | 你会需要证据好展示给你的雇主，%employer%。这些不是你本来在找的野兽，但是他们确实带着很多伪装，而你的雇主很可能有兴趣看看。 其中一个人大声寻思。%SPEECH_ON%那他们为什么要扮成这样？%SPEECH_OFF%%bro2% 收集时把一件伪装卷在身上。%SPEECH_ON%仪式性自杀？毕竟他们欢快的舞蹈吸引到我们注意。%SPEECH_OFF%他捡起其中一副伪装，死者的头也被一起提了起来。 当这位佣兵把死人的头踢出去时，他笑了。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{你的手下带走了这些蠢货的伪装，以免你们的雇主%employer%不相信此事。 | 你们的雇主可能不会相信这里发生的事。你命令手下收集这些伪装。%bro1%一边从死者脸上扯下面具，一边思索。%SPEECH_ON%所以他们把自己打扮成能吸引我们注意力的模样，现在却都送了命。希望他们没把这当成儿戏。%SPEECH_OFF%%bro2%在伪装服的褶皱间擦拭刀刃。%SPEECH_ON%如果真是场游戏，我玩得还挺尽兴。%SPEECH_OFF% | %randombrother%对着尸体点头。%SPEECH_ON%雇主%employer%很可能不会相信有土匪扮成野兽这回事。%SPEECH_OFF%你表示同意，随即命令手下开始收集面具和伪装作为证据。 | 你需要向雇主%employer%出示证据。这些虽不是你们要找的野兽，但雇主肯定有兴趣过目他们的伪装。有个手下把自己的疑问说了出来。%SPEECH_ON%他们打扮成这样到底图什么？%SPEECH_OFF%%bro2%不断扯下伪装服叠在臂弯。%SPEECH_ON%仪式性自杀？毕竟他们的舞蹈和玩乐引起了我们注意。%SPEECH_OFF%他拎起一件伪装服时，连带着拽起了死者的头颅。这名佣兵大笑着把脑袋踢开。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "返回 %townname%！",
+					Text = "回去%townname%！",
 					function getResult()
 					{
 						return 0;
@@ -447,12 +447,12 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "CollectingGhouls",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_131.png[/img]{战斗结束了，你走到一个死食尸鬼边蹲下来。 如果不是因为一扇扭曲牙齿形成的门，你可以很轻松的把头放进野兽巨大的喉咙里。 比起欣赏眼前的牙科灾难，你掏出一把刀并把它的头割下来，穿过一层非常硬的表皮后，意外的，发现下面的肌腱非常柔软。 你举起头并命令 %companyname% 照做。毕竟，%employer% 会想要点证据的。 | 食尸鬼的尸体平躺着，一动不动，看起来更像岩石而不是野兽。 苍蝇已经在它的嘴里偶合，在充满泡沫的死亡残骸上播种生命。 你命令 %randombrother% 拿走它的头，因为 %employer% 需要证据。 | 死掉的食尸鬼零零散散倒在地上。 你蹲在其中一只边上然后看向它的嘴。 不论它肺里有什么依然在散发出味道，一股恶臭的风吹出。 用手帕遮住鼻子，你用另一只手用刀切向脖子，割下头并且举起来。 你命令几个兄弟跟着做因为 %employer% 会想看点证据。 | 一个死掉的食尸鬼是非常特别的样本。 你不得不寻思它在生态圈里是什么样的定位。 形状粗糙的似人，肌肉像某种野兽，而头部特征就好像个野人的噩梦里冒出来的一样。 你命令 %companyname% 开始收集这些丑恶东西的头好给 %employer% 点证据。}",
+			Text = "[img]gfx/ui/events/event_131.png[/img]{战斗结束后，你走到一具食尸鬼的尸体前单膝跪下。若不是那口参差不齐的獠牙碍事，你大可以把整个脑袋塞进它那张血盆大口。你无暇欣赏这口烂牙，掏出匕首锯断它的脖颈——外皮坚韧得出奇，但令人意外的是，内里的筋肉却轻易便被割开。你高举首级，下令%companyname%的弟兄们如法炮制。毕竟，%employer%总要见到凭证才肯认账。 | 死去的食尸鬼瘫在地上一动不动，看上去更像顽石而非野兽。蝇群已在它口中交配，在死亡泛起的白沫间播种生命。 你命令%randombrother%砍下它的头颅，毕竟%employer%肯定要看到证明才会付钱。 | 四处散落着食尸鬼的尸骸。你在其中一具旁蹲下，注视着它仍在微微开合的嘴——肺腔里的浊气随着嘶哑的嗝逆声不断溢出。你用布捂住口鼻，操起利刃剁向它的脖颈，随即拎起首级示意弟兄们照做。%employer%肯定想见到些凭证。 | 死去的食尸鬼堪称值得玩味的标本。你不禁思索它在自然界究竟处于何种位置：形如粗陋人形，肌肉虬结似猛兽，扭曲的头颅仿佛源自野人噩梦中的造物。你下令让%companyname%收集这些秽物的首级带回%employer%作为凭证。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "返回 %townname%！",
+					Text = "回去%townname%！",
 					function getResult()
 					{
 						return 0;
@@ -464,12 +464,12 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "CollectingSpiders",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_123.png[/img]{你命令你的人巡视战场尽可能的收集蜘蛛的肢体。 有几个人不小心碰到了蜘蛛腿上的毛，很快就发起皮疹挠了起来。 | 蜘蛛像在阁楼的角落里一样散落在战场上。 死后，它们看起来像紧紧闭在一起的巨大手套。 你让手下扭下它们的腿并从遗骸上收集证据。 | 雇佣兵们打扫着战场，切和锯着蜘蛛们僵硬的遗体好带回给 %employer%。就算死了，蜘蛛依然很渗人，看起来随时都能弹回生命并缠住最近的活物。 它们可怕的特征和超现实的尺寸并没有阻止一些佣兵在边上跳舞，弹着舌头，围着捉弄那些不愿意靠近这些玩意的人。}",
+			Text = "[img]gfx/ui/events/event_123.png[/img]{你命令弟兄们清扫战场，尽可能多地收集蜘蛛的残骸。有几个人不慎碰到蛛魔腿上的刚毛，很快就发起皮疹挠了起来。 | 蜘蛛的尸体散布战场，如同阁楼角落常见的景象。死去后，它们看起来就像僵硬合拢的巨型手套。你让伙计们用力掰开这些腿肢，采集这些野兽残骸作为证据。 | 佣兵们打扫着战场，对着蛛魔僵硬的遗体又劈又锯，准备将战利品带回给%employer%。即便已然死亡，这些织网骑士依然狰狞可怖，仿佛随时都会猛地复活，缠住最近的活物。它们骇人的外形和超现实的尺寸并没能阻止某些佣兵围着跳舞——他们弹舌发出嘶嘶声，尽情吓唬着那些不敢靠近这些鬼东西的同伴。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "返回 %townname%！",
+					Text = "回去%townname%！",
 					function getResult()
 					{
 						return 0;
@@ -481,19 +481,19 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到 %employer% 并把其中一条毛皮摊在他的办公桌上。 它无生气的爪子拍打在边上的橡木上。 他抬起一个，然后让它再掉下去。%SPEECH_ON%我看得出来你找到了我们要找的野兽。%SPEECH_OFF%你告诉他战斗经过。 他看起来非常满意，从他的书柜里拿出一个小木箱并交过来。%SPEECH_ON%%reward_completion% 克朗，我们说好的。 %townname% 的人们需要你通过消灭这些恐怖的东西带来的安宁。%SPEECH_OFF% | 当你走进 %employer%的房间他几乎立刻弹了起来。%SPEECH_ON%天啊你手里的是什么，佣兵？%SPEECH_OFF%你举着毛皮的脖颈处。 黑色的血从脖子处流出溅在地上。%SPEECH_ON%其中一只你在找的野兽。 如果你需要剩下的证据，它们就在外面…%SPEECH_OFF%他举起手，制止你。%SPEECH_ON%一个就足够我相信了。 做得非常好，佣兵。 你的报酬在 %randomname% 那里，一个你应该在大堂里经过了的议员。 他有张丑脸而且他带着 %reward_completion% 克朗，如同约定的。%SPEECH_OFF%他又看了一眼野兽然后慢慢摇了摇头。%SPEECH_ON%愿死者和生还者在这些丑恶生物的逝去中找到宁静。%SPEECH_OFF% | %employer% 拿着杯葡萄酒欢迎你。%SPEECH_ON%喝吧，野兽－杀手。%SPEECH_OFF%你很好奇他怎么知道你已经成功了。 他挥挥手打消你的好奇。%SPEECH_ON%我在这一块有很多耳目－不是密探，当然，但是人们嘴巴都很大。 我应该知道，因为我就是！ 你干的很好，佣兵，所以来一口吧。 这是好酒。%SPEECH_OFF%不错。尽管一袋 %reward_completion% 克朗的报酬更好。%employer% 制止了你。%SPEECH_ON%只是想跟你说，雇佣兵，这些野兽杀了不少好男人和女人。 这些人或许害怕你，毕竟你是个佣兵，但是他们还是会永远对此保持感谢的。%SPEECH_OFF%你掂量了下克朗。很感谢，确实… | %employer% 后退了几步。%SPEECH_ON%啊，呃，我看得出来你杀了这些野兽。 你拿着的可真是一条好毛皮。%SPEECH_OFF%你放下你拿来的：一块厚、重的野兽毛皮落在地上堆成了一堆毛和皮。 他，几乎过于害怕靠近，丢给你一个袋子。%SPEECH_ON%%reward_completion% 克朗，我们说好的。 我会告诉人们你成功的事情。 终于，我们可以安生了。%SPEECH_OFF% | %employer% 坐在桌边，腿架在桌角上。 他的眼睛盯着天花板，脸的角落衰老的皱纹紧紧的夹在一起。 他看着你。%SPEECH_ON%欢迎回来。我听说了你的事迹…你和怪物的战斗。%SPEECH_OFF%你点头，东张西望搜寻报酬。 他带你去开门。%SPEECH_ON%%randomname%，%townname% 的议员，在外面拿着你的报酬。说好的 %reward_completion% 克朗。 还有 %townname% 的人民，或许害怕你，依然受你的到来恩惠。谢谢你，雇佣兵。%SPEECH_OFF% | %employer% 在你回来时正在喂他的一条狗。 狗放下了它的骨头来闻了闻你带来的皮。 他指向毛皮。%SPEECH_ON%那是什么肮脏的东西？%SPEECH_OFF%你耸耸肩把它丢到他桌上。 狗用鼻子闻了问其中的一个爪子，低声咆了一声，然后开始舔它。%employer% 短暂的笑了，然后走到他的书架，拿起一个木箱子交给你。%SPEECH_ON%%reward_completion% 克朗，对吧？你应该知道你把给人民的安宁带到了 %townname%。%SPEECH_OFF%你点头。%SPEECH_ON%他们的喜悦会通过克朗表现吗？%SPEECH_OFF%%employer% 对你贪婪的幽默皱起了眉头。%SPEECH_ON%不，不会。 好运，雇佣兵。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到%employer%处，将一张兽皮平铺在他的桌案上。松垂的爪子轻轻叩击着橡木桌沿。他拎起一只爪子看了看，又任其落下。%SPEECH_ON%看来你找到了我们一直在搜寻的野兽。%SPEECH_OFF%你向他讲述了战斗经过。他显得十分满意，从书架上取来一个小木箱递给你。%SPEECH_ON%按约定，这是%reward_completion%克朗。%townname%的民众理应从这等恐怖中获得喘息，而你给了他们这份安宁。%SPEECH_OFF% | 当你踏入%employer%的房间时，他几乎立刻后退了一步。%SPEECH_ON%佣兵，你手里拿的究竟是什么鬼东西？%SPEECH_OFF%你拎起兽皮的后颈。黑色的血液从颈部成股滴落，溅在地板上。%SPEECH_ON%你要找的其中一头野兽。如果你还需要其他证据，外面还有……%SPEECH_OFF%那人抬手制止了你。%SPEECH_ON%一件就足够让我信服了。干得非常出色，佣兵。你的酬劳%reward_completion%克朗在%randomname%议员那里，你进来的时候可能经过他了，就长得很丑的那位。%SPEECH_OFF%他又瞥了一眼那野兽，缓缓摇头。%SPEECH_ON%愿逝者和生者都能因这些邪恶生物的消亡而得到安息。%SPEECH_OFF% | %employer%举着酒杯欢迎你的归来。%SPEECH_ON%喝一杯吧，野兽杀手。%SPEECH_OFF%你很好奇他怎么提前知道你的成功。他对你的好奇不以为意。%SPEECH_ON%我在这片土地上耳目众多——当然不是指密探，只是平民百姓们总爱传话。我自然清楚，我自己就是其中之一！这次你干得很棒，佣兵，所以喝一口吧。这可是上等好酒。%SPEECH_OFF%酒确实不错。不过，你带走的%reward_completion%克朗要美妙得多。%employer%叫住你。%SPEECH_ON%只想让你知道，佣兵，那些野兽杀害了许多好人。这里的人们或许会惧怕你，毕竟你是佣兵，但他们同样对你永远感激。%SPEECH_OFF%你掂了掂钱袋。是啊，相当感激…… | %employer%后退了几步。%SPEECH_ON%啊，呃，看来你确实宰了那些野兽。你带来的这张皮相当不错。%SPEECH_OFF%你扔下带来的东西：一团厚实沉重的兽皮瘫落成皮毛与血肉的混合物。那人几乎不敢靠近，直接扔给你一个钱袋。%SPEECH_ON%按约定，%reward_completion%克朗。我会去告知民众你的成功。我们终于可以安生了。%SPEECH_OFF% | %employer%正坐在桌边，双腿翘在桌角上。他凝视着天花板，脸庞的皱纹因忧虑而愈发深刻。他看向你。%SPEECH_ON%欢迎回来。我一直听闻你的行动……你与那些怪物的战斗。%SPEECH_OFF%你点点头，环顾四周寻找报酬。他示意你出门。%SPEECH_ON%报酬在%townname%议员%randomname%手里。按约定是%reward_completion%克朗。而且%townname%的民众，尽管他们可能惧怕你，但还是因你的到来而蒙受恩惠。谢谢你，佣兵。%SPEECH_OFF% | 你回来时，%employer%正在喂他的狗。那杂种狗丢下骨头，凑过来嗅你带来的东西。那人指着兽皮。%SPEECH_ON%这算哪门子恶心玩意儿？%SPEECH_OFF%你耸耸肩，把它扔到他的桌上。狗用鼻子碰了碰一只爪子，低吼一声，然后开始舔舐起来。%employer%短暂地笑了笑，随即走向书架，拿起一个木箱递给你。%SPEECH_ON%是%reward_completion%克朗对吧？你该知道，你为%townname%的民众带来了平静。%SPEECH_OFF%你点点头。%SPEECH_ON%他们的开心也能换算成克朗给我吗？%SPEECH_OFF%%employer%对你贪婪的幽默皱起眉头。%SPEECH_ON%不能。祝你今日愉快，佣兵。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "一场成功的狩猎。",
+					Text = "狩猎成功。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上的恐狼");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除城镇附近的恐狼");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -514,18 +514,18 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success2",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{%employer% 欢迎你回来。%SPEECH_ON%我已经听说了，我认为是非常棒的消息。 就是，我有点难以置信。 一群强盗玩扮装。 披着狼皮的…狼？%SPEECH_OFF%他向你露出微笑，希望你因他的笑话发笑。 你耸耸肩。他也耸耸肩。%SPEECH_ON%啊，好吧。你的报酬，%reward_completion% 克朗，就在外面等着你。 我会告诉 %townname% 的人们他们害怕的怪物其实是人。%SPEECH_OFF% | 你带着蠢货强盗们的服装回来。%employer% 左右摇摆着伪装。%SPEECH_ON%有趣。他们做工很出色。 我几乎要说这帮强盗很聪明。%SPEECH_OFF%他捡起其中一个面具并且看起来准备穿上试试，然后停下来好像他不应该在观众面前做这个。 他放下它向你笑。%SPEECH_ON%好，不论如何，佣兵…做得好。 你会拿到 %reward_completion% 克朗，在外面 %townname%的议员手里，他在等着你。 他会试图找你的。 现在，%townname% 的人们可以安葬死者并终于安宁下来了。%SPEECH_OFF% | %employer% 大笑着看你的展品。%SPEECH_ON%人？只是人？%SPEECH_OFF%你点头，但是试图让他回到正轨。%SPEECH_ON%他们杀害了许多农民，但他们仍然是一个危险的群体。%SPEECH_OFF%你的雇主点头。%SPEECH_ON%当然，当然！ 我不是想贬低任何东西或任何人。 不要假设什么，佣兵，那些死掉的人是我的朋友和邻居！ 不论如何，你完成了我的任务而我也因此非常感谢。%SPEECH_OFF%他递过来一袋克朗。你数了其中的 %reward_completion% 后准备离开。 那人向你喊道。%SPEECH_ON%你肯定能理解我试图在这个可怕世界中寻找幽默的，对吧？ 因为是我去了那些被杀死的人的葬礼。 我不会带着紧皱的眉头进坟墓的，不论这该死的地方怎么强迫我。%SPEECH_OFF% | 你展示给 %employer% 那些调皮强盗的证据。 他捡起一堆伪装，从手指上擦下干血。%SPEECH_ON%That is the blood of men alright. 你确认他们不是在玩而真正的怪物还在外面？%SPEECH_OFF%你张嘴说明他们用非常不玩耍的武器攻击了你。%employer% 点头，看起来明白了，但是还有些怀疑。%SPEECH_ON%好吧，我想我可以等等看怪物会不会回来。 如果它们回来了，好吧，一个被背叛的人会变成一个杰出的怪物，你不这么认为吗？%SPEECH_OFF%你告诉他付钱并等着看他是不是该这么不信任。 他点头，给你 %reward_completion% 克朗并向你告别。%SPEECH_ON%我真的希望你在说实话，雇佣兵。%townname% 需要从这个该死的世界不停鞭打过来的恐怖中歇息一下。%SPEECH_OFF% | %employer% 用手指划过一件伪装的边缘。%SPEECH_ON%毛摸起来很软。非常真实…%SPEECH_OFF%他抬头看着你。%SPEECH_ON%我不得不猜测是不是他们杀死了原本的怪物，然后…决定穿它们的皮？ 不过，为什么？你认为他们是不是被诅咒了？%SPEECH_OFF%你耸耸肩答道。%SPEECH_ON%我只能说他们除了怪物的伪装，还有它们的残忍。 他们攻击了我们并且付出了代价。 有没有本地人近期见到什么生物？%SPEECH_OFF%他拿出一袋子 %reward_completion% 克朗滑给你。%SPEECH_ON%不，他们没有。实际上，他们又开始出去探险了。 我不是指到路上去，但是离开他们前门对很多人是很大的进步了！ 你给我们带来了安宁，佣兵，为此我们感谢你。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{%employer%对你的归来表示欢迎。%SPEECH_ON%我已经听说了这个，我想算是好消息吧。不过我倒不意外。一群土匪玩扮装游戏，算是披着狼皮的……狼？%SPEECH_OFF%他朝你咧嘴一笑，期待你能被他这个蹩脚的笑话逗乐。你耸耸肩。他也跟着耸肩。%SPEECH_ON%啊，好吧。你的报酬%reward_completion%克朗正在外面等你。我会告诉%townname%的居民，他们害怕的怪物其实只是人类。%SPEECH_OFF% | 你带着那群蠢土匪的装扮回来了。%employer%左右翻看着这些伪装。%SPEECH_ON%有意思。做工相当精致。我差点要说这些土匪挺有想法。%SPEECH_OFF%他拿起一个面具似乎想试戴，却突然停下，仿佛意识到不该当着外人这么做。他把面具放回去，朝你微笑。%SPEECH_ON%总之，佣兵……干得好。%reward_completion%克朗的报酬就在外面，由%townname%的一位议员保管。他在等着你。现在%townname%的居民终于能安葬死者，重归平静了。%SPEECH_OFF% | 听闻你的揭晓，%employer%笑得前仰后合。%SPEECH_ON%人？竟然只是人？%SPEECH_OFF%你点头承认，同时试图把话题拉回正轨。%SPEECH_ON%他们杀了很多农民，而且依然是一群危险的家伙。%SPEECH_OFF%雇主点了点头。%SPEECH_ON%当然，当然！我无意轻视任何事或任何人。别擅自揣测我，佣兵，死去的都是我的乡亲邻舍！总之，你完成了我委托的事，我对此非常感激。%SPEECH_OFF%他递过来一袋克朗。你清点袋中的%reward_completion%克朗后便准备离开。那人在你身后喊道。%SPEECH_ON%你肯定明白在这糟糕的世道里找点乐子的心情，对吧？因为是我去参加了所有遇害者的葬礼。不管这该死的地方怎么逼我，我绝不要皱着眉头进坟墓。%SPEECH_OFF% | 你向%employer%展示了那群狡猾土匪的证据。他翻检着那堆伪装道具，搓掉手指上凝固的血痂。%SPEECH_ON%这确实是人血。你确定他们不是在玩扮装游戏，而真正的怪物还在外面游荡？%SPEECH_OFF%你抿紧嘴唇，解释说他们拿着攻击你们的武器可一点都不像玩具。%employer%点点头，看似理解了，但仍带一丝怀疑。%SPEECH_ON%好吧，我想我可以等着看怪物是否会再次出现。如果它们真的来了，呵，一个遭背叛的人本身就能变成相当可怕的怪物，你同意吗？%SPEECH_OFF%你只让他付钱，并说不妨等着看他这般多疑是否会应验。他点点头，给了你%reward_completion%克朗并送你离开。%SPEECH_ON%我真心希望你说的是实话，佣兵。%townname%太需要在这见鬼的世道中缓一口气了。%SPEECH_OFF% | %employer%用手指抚过一件伪装道具的边缘。%SPEECH_ON%这皮毛触感柔软。非常逼真……%SPEECH_OFF%他抬头看向你。%SPEECH_ON%我不得不猜想，是不是他们杀了原本的怪物，然后……决定披上它们的毛皮？可为什么呢？你觉得他们是被诅咒了吗？%SPEECH_OFF%你耸耸肩答道。%SPEECH_ON%我只能说，他们拥有怪物的外表，也具备怪物的残忍。他们袭击了我们，并为此付出了代价。最近有本地人目击到什么怪物吗？%SPEECH_OFF%那人取出一袋%reward_completion%克朗推给你。%SPEECH_ON%不，没有。事实上，他们又开始外出活动了。我指的不是远行，但对很多人来说，敢迈出自家安全的门槛已经是巨大的一步！你确实为我们带来了安宁，佣兵，我们为此十分感谢。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "兽，人…克朗才是重要的。",
+					Text = "不管是野兽还是匪徒……给钱就是了。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上伪装成恐狼的强盗");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除城镇附近伪装成恐狼的强盗");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -546,18 +546,18 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success3",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你发现 %employer% 坐在他的月桂树上。 他站起身穿上裤子，一个仆人赶快从他之前坐着的地方取回一个桶。 可怜的仆人快速的跑出房间。%employer% 指向你手上晃来晃去的食尸鬼头。%SPEECH_ON%这太恶心了。%randomname%，给这个人他的报酬。%reward% 克朗，对吧？%SPEECH_OFF% | 你把食尸鬼的头放在 %employer%的办公桌上。 因为某种原因，液体还从它的脖子流出，从桌子的边缘滴下并且无疑的弄脏了它。 他靠后，手指放在肚子上。%SPEECH_ON%食尸鬼？然后还有什么，幽灵？%SPEECH_OFF%那人暗自窃笑。%SPEECH_ON%对你没什么太过困难的，佣兵。%SPEECH_OFF%他打了个响指然后一个仆人走过来，交给你一袋 %reward% 克朗。 | 在战场和走到 %employer%的地方的路上，食尸鬼的喉咙充满了苍蝇，舌头变成了一个不成型的抽动着的黑球，充斥着嗡嗡声。%employer% 看了一眼然后用布遮住他的嘴巴。%SPEECH_ON%是的，我懂了，拿走它，请。%SPEECH_OFF%他唤来一个卫兵然后你收到了一袋 %reward% 克朗。 | %employer% 冷冰冰的探上身好好看看你带来的食尸鬼的头。%SPEECH_ON%难得一见，雇佣兵。 我很高兴你把它带来给我。%SPEECH_OFF%他靠回去。%SPEECH_ON%把它留在办公桌上。 或许我可以用它来吓孩子。 我想小家伙们有点太过适应好生活了。%SPEECH_OFF%他打了个响指然后一个仆人走来给你了你 %reward% 克朗。 | 你把食尸鬼的头交给 %employer%，他盯着它看了很长时间。%SPEECH_ON%这让我回想起了某个人。 我不太能把我的手指放在上面，而且我不确认我应该。 抱歉，佣兵，我没有付钱占用着你的时间。 仆人，给他他的钱！%SPEECH_OFF%你如同承诺一样的收到了报酬。 | %employer% 收下食尸鬼的头并举起它。 几只喵喵叫的猫似乎不知从哪儿冒出来，在它下面盘旋，就像秃鹰在头顶盘旋一样。 他把它丢出窗户而猫们追了出去。%SPEECH_ON%干得好，佣兵。%reward% 克朗，如同约定的。%SPEECH_OFF% | 你把一只食尸鬼的头摆在 %employer%的桌子上。 他从面前的餐盘抬头看向你，看了看头，然后你。%SPEECH_ON%我在吃饭，佣兵。%SPEECH_OFF%被恶心到的他推到一边的银器发出碰撞声。 一个仆人把食物收走，或许是为了他自己吃。%employer% 拿出一个袋子并把它放在桌上。%SPEECH_ON%%reward_completion% 克朗我们谈好的。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你找到%employer%时他正在解手。他站起身提好裤子，一名仆人迅速从他刚才坐的地方取走一个桶。那可怜的仆人匆匆离开了房间。%employer%指着你手里晃荡的食尸鬼头颅。%SPEECH_ON%真是恶心透顶。%randomname%，给这人结账。是%reward%克朗对吧？%SPEECH_OFF% | 你将食尸鬼头颅放在%employer%的桌案上。不知为何，黏液仍从它脖颈处渗出，顺着橡木桌边流淌，无疑会留下污渍。这人向后靠去，十指交叉搭在肚子上。%SPEECH_ON%食尸鬼？接下来是不是该说还有幽灵了？%SPEECH_OFF%他自顾自地轻笑。%SPEECH_ON%对你们佣兵来说，果然没什么事算难办。%SPEECH_OFF%他打了个响指，一名仆人上前递给你一袋%reward%克朗。 | 从结束战斗到走回%employer%住所的这段路上，食尸鬼大张的嘴里已聚满苍蝇，它的舌头被一团无定形、搏动着的、嗡嗡作响的黑色球体取代。%employer%瞥了一眼就掏出手帕捂住嘴。%SPEECH_ON%行了，我知道了，快拿走，拜托。%SPEECH_OFF%他招手唤来一名守卫，你领到了一袋%reward%克朗。 | 目光冷峻的%employer%俯身仔细打量你带来的食尸鬼头颅。%SPEECH_ON%真是壮观啊，佣兵。很高兴你把它带给了我。%SPEECH_OFF%他向后靠去。%SPEECH_ON%就放我桌上吧。说不定能拿来吓唬孩子们。要我说，这些小兔崽子最近对精致生活太过习以为常了。%SPEECH_OFF%他打了个响指，一名仆人上前付给你%reward%克朗。 | 你将食尸鬼头颅带给%employer%，他盯着它看了很久。%SPEECH_ON%这让我想起某个人。说不太清楚具体是谁，而且恐怕也不该深究。抱歉了佣兵，占用你时间还没付酬劳。仆人，给这人结账！%SPEECH_OFF%你如约获得了报酬。 | %employer%接过食尸鬼头颅举高。几只呜呜叫的猫不知从何处冒出来，像秃鹫般在下方绕圈。他把头颅扔出窗外，猫群立刻追着跑走了。%SPEECH_ON%干得好，佣兵。按约定给你%reward%克朗。%SPEECH_OFF% | 你将食尸鬼头颅放在%employer%的餐桌上。他从餐盘前抬起头，瞥了眼头颅，又看向你。%SPEECH_ON%我在吃饭呢，佣兵。%SPEECH_OFF%被恶心到的他推开餐盘，撞得银器叮当作响。 仆人迅速收走食物，大概是想自己吃掉。%employer%取出一个钱袋放在桌上。%SPEECH_ON%说好的%reward_completion%克朗。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "一场成功的狩猎。",
+					Text = "狩猎成功。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上的食尸鬼");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除城镇附近的食尸鬼");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -578,18 +578,18 @@ this.roaming_beasts_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success4",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你进入 %employer%的办公室背着死蜘蛛。 他尖叫而他的椅子也随着它飞过地板发出号哭。 他跳起来从办公桌上掏出一把黄油刀。 你从肩上丢下死蜘蛛，它的背朝下摔在地上发出咔嗒声。 这个城里人慢慢的靠过来。 他把黄油刀收进一片面包里并摇头。%SPEECH_ON%旧神啊，你几乎让我发了心脏病。%SPEECH_OFF%点头，你告诉他踩死这些野兽得用点比大靴子更厉害的东西。他点头。%SPEECH_ON%当然，佣兵，当然！ 你的报酬 %reward_completion% 克朗就在角落里。 而且，请，走的时候带走那个亵渎神灵的东西。%SPEECH_OFF% | 猫在你走进 %employer%的房间时就逃跑了。 几条狗，总是有点神秘，围着你的腿嗅蜘蛛的尸体，它们的鼻子缩着跑开但总是回来再闻一下。 这个城里人正在写笔记而且他不敢想象他的眼睛。 他把他的羽毛笔放下。%SPEECH_ON%那是一只巨大的蜘蛛吗？%SPEECH_OFF%你点头。他笑着捡起它的羽毛笔。%SPEECH_ON%或许我应该给你推荐一双非常大的靴子。 你的 %reward_completion% 就在这个袋子里。 拿上它把。都在那。 你可以离开尸体了。 我想近距离观察一下这个生物。%SPEECH_OFF% | %employer% 在你进入时正在办生日派对，你背着个巨大蜘蛛还把它丢着滑过地上。 它粗糙的毛擦过石头发出嘶嘶声而它的八条腿像某种恐怖家具一样上下摆动然后滑向一边弹到一个书架角上并翻过身来做的好像准备好跳起来。 现场混乱了起来，因为所有人都在尖叫着跑出门或者跳下最近的窗户，一大片彩色纸屑随着他们飘舞。 这个城里人站在空荡荡的房间里咬了下嘴唇。%SPEECH_ON%说真的，佣兵，有必要吗？%SPEECH_OFF%你点头并告诉他有必要雇你还有非常大的必要付你钱。 他摇了摇头并且示意向角落里的一条假驴尾巴。%SPEECH_ON%你的袋子就在那，里面装着 %reward_completion% 克朗，和我们谈好的一样。 现在把那玩意带出去并告诉人们活动还不需要结束。%SPEECH_OFF% | 你不认为你能把蜘蛛的尸体塞进 %employer%的房间，所以你选择从窗户外面丢过去。 你听到一声惊恐的惨叫还有家具掉落的响声。 过了一会边上的窗户打开了。 这个城里人探出身。%SPEECH_ON%哦非常棒，佣兵，非常棒！ 愿旧神因此给你一千年无聊日子！%SPEECH_OFF%点头，你问他你的报酬。 他不满的丢给你一个袋子。%SPEECH_ON%%reward_completion% 克朗在里面。 现在拿上那玩意走！%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你背着死蜘蛛走进了%employer%的办公室。那人尖叫起来，椅子随着他向后猛退而吱嘎作响。他跳起身，从桌上抓起一把黄油刀。你将死去的蛛魔从肩上甩下，它仰面摔在地上发出闷响。这位镇民慢慢凑上前，把黄油刀插回一条面包里，摇了摇头。%SPEECH_ON%旧神在上，你差点把我吓出心脏病。%SPEECH_OFF%你点点头，告诉他解决这些畜生可不是一只大靴子就能搞定的。他也点头回应。%SPEECH_ON%当然，佣兵，当然！你的报酬，%reward_completion%克朗，就在那个角落里。还有，求你离开的时候把这鬼东西一起带走。%SPEECH_OFF% | 你刚踏进%employer%的房间，猫儿们就发出嘶嘶声逃开了。几只狗——这些畜生总喜欢探究不明事物——在你腿边跑来跑去，嗅着蜘蛛尸体，它们的鼻子皱起、缩回，但又总是忍不住再凑上来闻。这位镇民正在写笔记，他几乎不敢相信自己的眼睛。他放下了羽毛笔。%SPEECH_ON%那是只巨型蜘蛛吗？%SPEECH_OFF%你点点头。他笑了，重新拿起了羽毛笔。%SPEECH_ON%也许我当初该建议你带只非常大的靴子去。你的报酬，%reward_completion%克朗，就在那个钱袋里。去吧，拿走它。钱都在里面。尸体你可以留下。我想好好观察一下这生物。%SPEECH_OFF% | %employer%正在举办一场生日派对，你扛着一只巨型死蜘蛛走进房间，并把尸体扔在地上。蜘蛛刚毛擦过石头发出嘶嘶声，八条腿倒立着快速划动，如同某种恐怖家具，它滑向一边，撞到书架一角弹起，翻转过来用脚尖支地，仿佛随时准备扑击。现场顿时一片混乱，所有人尖叫着跑出门，或者从最近的窗户跳出去，五彩纸屑在他们身后嬉戏般地旋转飘落。雇主独自站在空荡荡的场地中，抿紧了嘴唇。%SPEECH_ON%说真的，佣兵，有必要这样吗？%SPEECH_OFF%你点点头，告诉他雇佣你是必要的，付你钱同样也非常必要。那人摇摇头，用一根假驴尾巴示意房间的角落。%SPEECH_ON%钱袋在那边，里面有约定好的%reward_completion%克朗。现在把这吓人玩意弄出去，顺便告诉外面的人生日宴会还没结束。%SPEECH_OFF% | 你觉得没法把蜘蛛尸体搬进%employer%的房间，于是你改从外面把它啪地一声拍在他的窗户上。你听到一声惊恐的尖叫和家具倒地的声响。片刻之后，旁边的窗户被猛地推开。镇民探出身来。%SPEECH_ON%哦，干得漂亮，佣兵，真他妈漂亮！愿旧神罚你闲坐一千年！%SPEECH_OFF%你点点头，询问你的报酬。他不情愿地扔给你一个钱袋。%SPEECH_ON%%reward_completion%克朗在里面。现在拿着那鬼东西滚吧！%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			Options = [
 				{
-					Text = "一场成功的狩猎。",
+					Text = "狩猎成功。",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除镇上的蛛魔");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "清除城镇附近的蛛魔");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}

@@ -5,7 +5,7 @@ this.enter_friendly_town_event <- this.inherit("scripts/events/event", {
 	function create()
 	{
 		this.m.ID = "event.enter_friendly_town";
-		this.m.Title = "在%townname%";
+		this.m.Title = "%townname%里";
 		this.m.Cooldown = 21.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",

@@ -198,7 +198,7 @@ this.ai_switchto_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Switching to ranged weapon \'" + this.m.WeaponToEquip.getName() + "\'!");
+			this.logInfo("* " + _entity.getName() + "：切换为远程武器 \'" + this.m.WeaponToEquip.getName() + "\'!");
 		}
 
 		local oldWeapon = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);

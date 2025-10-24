@@ -74,7 +74,7 @@ this.move_troops_action <- this.inherit("scripts/factions/faction_action", {
 
 		for( local i = 0; i < 1; i = ++i )
 		{
-			local party = this.getFaction().spawnEntity(this.m.Start.getTile(), this.m.Start.getName() + " 战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 300) * this.getReputationToDifficultyLightMult());
+			local party = this.getFaction().spawnEntity(this.m.Start.getTile(), this.m.Start.getName() + "战团", true, this.Const.World.Spawn.Noble, this.Math.rand(100, 300) * this.getReputationToDifficultyLightMult());
 			party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + _faction.getBannerString());
 			party.setDescription("听命于当地领主的职业军人。");
 			party.setFootprintType(this.Const.World.FootprintsType.Nobles);

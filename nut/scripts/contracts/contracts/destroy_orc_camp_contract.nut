@@ -56,7 +56,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"摧毁%origin% %direction%边的" + this.Flags.get("DestinationName") + " "
+					"摧毁" + this.Flags.get("DestinationName") + " %origin%%direction%边的兽人"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -244,14 +244,14 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_61.png[/img]{%employer%喘着气。%SPEECH_ON%该死。%SPEECH_OFF%他走到窗户前，往外看。%SPEECH_ON%我最近举办了一个骑士比武比赛，有一些争议。现在，我的骑士都不肯为我而战，直到这个问题得到解决。%SPEECH_OFF%你问他是否想要雇佣兵解决贵族间的争端。这个人突然大笑起来。%SPEECH_ON%天哪，卑鄙的人。我需要你去处理一些绿皮兽，他们正在%origin%的%direction%扎营。他们已经恐吓这个地区有一段时间了，我想要你回敬他们。这听起来是你感兴趣的事情吗，还是我必须去找另一个佣兵？%SPEECH_OFF% | %employer% 把脚搁在桌子上。%SPEECH_ON%佣兵，你对绿皮兽有什么看法？%SPEECH_OFF% 你摇了摇头。这个人扭头看了看。%SPEECH_ON%有趣，大多数人会说他们害怕，或者说他们是可怕的野兽，能够劈开一个人。但你……你不同。我喜欢这个。你想去%origin%的%direction%一个当地人称为%location%的地方吗？我们看到了一大群兽人，需要你去驱散他们。%SPEECH_OFF% | 一只猫坐在%employer%的桌子上，他抚摸着它，猫挤着身子摩擦，但突然间它发出嘶嘶声，咬了那个人，然后从你刚才走过的门跑了出去。%employer%抖了抖灰尘。%SPEECH_ON%该死的动物，刚才还很亲近，现在，嘿…%SPEECH_OFF%他咂了咂血从拇指上流出来的一滴血。你问他是否应该回来照顾他的伤口。%SPEECH_ON%好笑，佣兵。不，我想让你去%origin%的%direction%，击败那个地区的一群绿皮兽人。我们需要他们被摧毁，消散，无论你使用什么词语只要他们“消失”就行。这听起来就像是你愿意为我们做的事情吗？%SPEECH_OFF% | %employer%一边卷起自己的卷轴，一边解释他的困境。%SPEECH_ON%贵族间的争端导致我缺少合适的战斗人员。不幸的是，一群绿皮兽人选择了这个时候进入这一地区。他们在%origin%的%direction%露营。我无法同时整顿家中并应对这些该死的东西的袭击，所以我非常希望你能够为我们效力，佣兵…%SPEECH_OFF% | %employer% 扫了你一遍。%SPEECH_ON%你们够强壮，能对抗一只绿皮兽人了吗？你的手下们呢？%SPEECH_OFF%你点点头，假装这件事情只不过是从树上取一只猫。%employer% 微笑了一下。%SPEECH_ON%很好，因为我收到一大堆关于绿皮兽人出现在%origin% %direction%的消息。到那里去把他们全部消灭吧，很简单吧？这对你这样充满...自信的队长应该很感兴趣。%SPEECH_OFF% | %employer% 站起来喂它们的狗，那是一些农民可能想杀的食物。他手里沾着肉油拍拍手。%SPEECH_ON%那是我的厨师做的，你能信吗？太可怕，令人恶心。%SPEECH_OFF%你点点头，仿佛你能理解这个人生活在什么样的世界里，喂狗好食品变得司空见惯。%employer%将他的手肘放在桌子上。%SPEECH_ON%无论如何，送给我们肉的人通报说绿皮兽人正在杀他们的奶牛。显然，在%origin%的%direction%有一个兽人贼营。如果你们有兴趣，我希望你们可以去那里将他们全都消灭掉。%SPEECH_OFF% | 你看到%employer%正盯着一些卷轴。他抬起头向你示意坐下。%SPEECH_ON%很高兴你来了，佣兵。这里出现了一些兽人问题——它们在这个方向%direction%扎营了。%SPEECH_OFF%他放下其中一个卷轴。%SPEECH_ON%而我不能伤及自己的士兵。骑士们可是不能牺牲的。你们则正好合适。你怎么看？%SPEECH_OFF% | 当你走进%employer%的办公室时，几个人离开了。他们是骑士，剑鞘咔哒作响，藏在他们的长袍下面。%employer%欢迎您的到来。%SPEECH_ON%不用担心他们。他们只是在想最后一次雇佣的人出了什么事。%SPEECH_OFF%你挑了挑眉毛。%SPEECH_ON%别和我扯淡，雇佣兵。你和我一样明白这个行当，有时你们有不足之处，你知道这意味着什么……%SPEECH_OFF%你没有说什么，但是沉默片刻后，你点了点头。%SPEECH_ON%好的，很高兴你理解。如果你想知道，我飞快地，呃，派了一些人出去找到了%origin%%direction%的兽人。他们扎营在那里，我认为自那时以来他们应该移动了。你有兴趣为我消灭它们吗？%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_61.png[/img]{%employer%怒气冲冲地喘着粗气。%SPEECH_ON%真该死。%SPEECH_OFF%他走到窗边向外望去。%SPEECH_ON%我最近办了场骑士比武，出了点争议。现在我的骑士们都不肯为我效力，除非这事解决。%SPEECH_OFF%你问他是否要雇佣兵来解决贵族纠纷。这人大笑起来。%SPEECH_ON%诸神在上，当然不是，平民。我需要你处理一群在%origin%%direction%边扎营的绿皮。它们祸害这片地区有段时间了，我要你以牙还牙。这差事你感兴趣吗？还是我得另找其他佣兵？%SPEECH_OFF% | %employer%把脚架在桌上。%SPEECH_ON%对绿皮有什么看法吗，佣兵？%SPEECH_OFF%你摇头表示没有。这人歪着头。%SPEECH_ON%有意思。多数人会说害怕他们，或者说那是能把人劈成两半的恶心蛮子。但你……你不一样。我很欣赏。不如你去%origin%%direction%方向那个被当地人称为%location%的地方？我们发现了大批兽人在那里聚集，需要把它们驱散。%SPEECH_OFF% | 一只猫趴在%employer%的桌上。他抚摸着，那猫儿正惬意地弓背享受抓挠，却突然嘶叫一声咬了他，从你刚进来的门窜了出去。%employer%掸了掸衣服。%SPEECH_ON%该死的畜生。前一刻还对你百般依恋，后一刻就……%SPEECH_OFF%他吮吸着拇指渗出的血珠。你问是否要给他点时间处理伤口。%SPEECH_ON%真幽默啊，佣兵。不用，我要你做的是去%origin%%direction%边对付盘踞在那片地区的绿皮。我们需要它们被消灭、驱散，随你怎么形容，只要它们‘消失’。这听起来像你能为我们办到的事吗？%SPEECH_OFF% | %employer%一边卷起卷轴一边解释他的困境。%SPEECH_ON%贵族间的纷争让我缺少善战的士兵。不幸的是，一伙绿皮偏偏选在这个时候闯入此地。它们在%origin%%direction%边扎了营。我无法在整顿内务的同时应付这些该死玩意的袭击，所以非常希望这任务能引起你的兴趣，雇佣兵……%SPEECH_OFF% | %employer%上下打量着你。%SPEECH_ON%你这身板够对付绿皮吗？你的手下呢？%SPEECH_OFF%你点头装作这事不过像从树上救猫一样轻松。%employer%笑了。%SPEECH_ON%很好，因为我发现整整一大群出现在%origin%%direction%边。去那里消灭它们。够简单吧？这肯定能引起你这种……自信之人的兴趣。%SPEECH_OFF% | %employer%正在喂狗，给每只都分了些农民会为之拼命的肉食。他拍掉手上的油腻。%SPEECH_ON%我的厨子做的，信吗？难吃。令人作呕。%SPEECH_OFF%你点头附和，仿佛能理解这个把上好食物喂狗当常态的人活在什么世界。%employer%把胳膊肘支在桌上。%SPEECH_ON%总之，给我们送肉的人报告说绿皮在宰他们的牛。在%origin%%direction%边发现了个营地。如果你有兴趣，我想请你去那里把它们全灭了。%SPEECH_OFF% | 你看到%employer%正埋头查看几份卷轴。他抬眼瞥见你，示意就座。%SPEECH_ON%很高兴你来了，雇佣兵。我这儿有绿皮的问题——它们在这里%direction%方向的地方扎了营。%SPEECH_OFF%他放下其中一份卷轴。%SPEECH_ON%而我派不起自己的人手。骑士可是……损失不起的。但你，正适合这活儿。意下如何？%SPEECH_OFF% | 你走进%employer%的办公室时，一群人正离开。他们是骑士，衣袍下传来剑鞘碰撞的轻响。%employer%迎你进来。%SPEECH_ON%别管他们。他们只是好奇我上次雇的人怎么了。%SPEECH_OFF%你挑起眉毛。这人挥挥手。%SPEECH_ON%哦别跟我来这套，佣兵。你跟我一样懂这行当，有时候你们的人失手了，你知道那意味着……%SPEECH_OFF%你沉默不语，停顿片刻后点了点头。%SPEECH_ON%很好，很高兴你明白。想知道的话，在%origin%%direction%边有绿皮。它们建了个营地，我猜自从我上次，呃，派了些人去那儿之后就没挪过窝。有兴趣替我端了它们吗？%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{对抗兽人可不便宜。 | 相信你会给得丰厚。 | 谈谈价钱吧。}",
+					Text = "{对抗兽人可不便宜。 | 想必你出价不低。 | 谈谈价钱吧。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -259,7 +259,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 
 				},
 				{
-					Text = "{这不值得。 | 我们还有其他任务。}",
+					Text = "{这事不划算。 | 我们还有其他任务。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -275,8 +275,8 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 		});
 		this.m.Screens.push({
 			ID = "OrcsAgainstOrcs",
-			Title = "在攻击前…",
-			Text = "[img]gfx/ui/events/event_49.png[/img]{当你下令部下进攻时，他们遭遇了许多兽人......相互战斗？这些绿皮似乎分裂了，他们通过分割对方来解决分歧。这是一个令人毛骨悚然的暴力场面。当你打算让他们自己解决时，两个兽人向你挑衅，很快每个兽人都盯着你。好了，不能逃跑...拿起武器！ | 你命令%companyname%攻击，认为你已经掌握了兽人的上风。但他们已经武装起来了！而且......相互战斗？\n\n一个兽人把另一个兽人劈成两半，另一个则压碎了另一个兽人的头颅。这似乎是一种氏族冲突。很遗憾你没有稍等片刻让这些野蛮人解决他们的分歧，现在这是一个自由的游戏！ | 兽人正在互相战斗！这是一场绿色皮肤的德行，而你已经成为其中的一员。兽人对抗兽人对抗人，真是精彩的景象！让你的部下靠得更近些，你可能会安然无恙。 | 我的神啊，兽人的数量比你想象的还要众多！幸运的是，他们似乎正在相互残杀。你不知道他们是不同的氏族还是这只是兽人版的醉酒斗殴。无论如何，你现在正处于其中！}",
+			Title = "在攻击前……",
+			Text = "[img]gfx/ui/events/event_49.png[/img]{你刚下令进攻，队员们却发现一群兽人正在……自相残杀？这些绿皮似乎分裂成了两派，正用将对方劈成两半的方式解决分歧。血腥的暴力场面令人作呕。当你正打算坐山观虎斗时，两个兽人打着打着就冲到了你们面前，转眼间所有兽人都盯上了你们。好吧，现在想跑也晚了……准备战斗！ | 你命令%companyname%发起进攻，自以为对兽人占了先机。可它们早已严阵以待！而且……正在自相残杀？\n\n一个兽人把同类劈成两段，另一个则砸碎了同族的脑袋。这似乎是部落内讧。真该多等会儿让这些蛮子自己解决矛盾，现在倒好，变成大混战了！ | 兽人正在自相残杀！这场绿皮内讧如今把你们也卷了进来。兽人对兽人对人类，真是难得一见的场面！让队员们保持紧密阵型，或许还能从这场混战中活着出去。 | 诸神在上，兽人的数量远超想象！幸好它们正在自相残杀。不知这是部落纷争还是绿皮特色的酒后斗殴。无论如何，你们已经深陷其中了！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -294,7 +294,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Betrayal1",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_78.png[/img]{你杀完最后一个兽人，突然一群身穿重甲的士兵出现在你面前。他们的中尉走上前来，拇指勾在腰间佩剑的腰带上。%SPEECH_ON%嘿，嘿，你们真蠢啊。%employer%可不是那么容易忘记的。他还记得你背叛了%faction%上一次的事。这次算是……送你一点小礼物吧。%SPEECH_OFF%话音刚落，中尉背后的士兵们突然发起了进攻。准备好翻盘吧，这是个伏击！ | 你刚刚清洗剑上的兽人血迹，突然发现一群人向你走来。他们举着%faction%的旗帜，手持武器。你意识到自己中了埋伏，这些混账先让你先去干掉那些兽人！让他们见识一下吧！ | 一个人从你身后走过来，你甚至没注意他什么时候出现的。他武器精良，披甲戴盔，满脸喜悦地向你微笑着。%SPEECH_ON%晚上好，雇佣兵。对那些绿皮干得不错啊，对吧？%SPEECH_OFF%他停顿了一下，微笑消失不见。%SPEECH_ON%%employer%派我来问候你。%SPEECH_OFF%就在此时，一群人从路两旁潜出。这是个伏击！该死的贵族背叛了你！ | 战斗才刚刚结束，一群穿着%faction%颜色的武装人员出现在你们背后，排成队伍，盯着你们的战团。他们的领袖慢慢地向你们走过来。%SPEECH_ON%我很享受从你的冰冷的手中夺走你的剑的那一刻。%SPEECH_OFF%你耸了耸肩膀，问为什么会中了埋伏。%SPEECH_ON%因为%employer%永远不会忘记那些背叛他或者他的家族的人。你只需要知道这些就够了。当你死的时候，我再跟你说这些也没有任何用处。%SPEECH_OFF%准备战斗吧，这是个伏击！ | 你的战斗团队搜查了兽人营地，却没发现一个人。突然，几个陌生人出现在你的背后，他们的中尉带着恶意走到你们面前，胸前绣着%employer%的徽章。%SPEECH_ON%真遗憾，那些兽人没能把你们解决掉。如果你想知道为什么我会出现在这里，是因为我要偿还债务，欠%faction%的债务。你承诺完成某项任务，然而你并没有兑现。现在你就死吧。%SPEECH_OFF%你拔出剑，瞪向中尉。%SPEECH_ON%看起来%faction%即将失约一次。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_78.png[/img]{你刚解决掉最后一只兽人，突然出现一队全副武装的人马。他们的指挥官拇指勾着佩剑腰带走上前来。%SPEECH_ON%啧啧，你们还真是蠢得可以。%employer%可不是健忘的人——他可没忘记你们上次的背叛。就当这是……一点小小的回礼。%SPEECH_OFF%话音刚落，他身后的士兵突然发起冲锋。抄起武器，我们中埋伏了！ | 你正擦拭剑上的兽人血迹，突然发现一队人马逼近。他们打着%employer%的旗帜，正在拔出武器。当对方发起冲锋时，你才恍然大悟中了圈套。这帮杂种专门让兽人先消耗你们！给他们点颜色看看！ | 有个装备精良的男人不知从哪儿冒出来打招呼。他装备精良，盔甲齐全，而且显然心情颇佳，在走近时露出狡黠的咧嘴笑。%SPEECH_ON%晚上好，雇佣兵。对付那些绿皮干得漂亮啊？%SPEECH_OFF%他停顿片刻，收起笑容。%SPEECH_ON%%employer%向你们问好。%SPEECH_OFF%就在这时，一群人从道路两侧涌出。是埋伏！那个该死的贵族背刺了你们！ | 战斗才刚刚结束，一队身着%faction%纹章颜色的武装人员出现在你们后方，呈扇形包围了战团。他们的首领打量着你们。%SPEECH_ON%我很期待从你冰冷僵硬的手里把这把剑撬出来。%SPEECH_OFF%你耸肩问为什么设局。%SPEECH_ON%%employer%从不会忘记背叛他或家族的人。知道这点就够了。反正你们很快就是死人了。%SPEECH_OFF%准备迎战吧，我们中了埋伏！ | 队员们搜遍兽人营地却空无一人。突然，身着%faction%颜色制服的士兵从背后出现，带队的指挥官神情恶劣地走上前来，胸前绣着%employer%的徽章。%SPEECH_ON%可惜那些绿皮没把你们解决掉。如果你们想知道的话，我是来替%employer%收债的。你们承诺过会完成任务。既然当时没能履约，现在就拿命抵债吧。%SPEECH_OFF%你拔剑出鞘，寒光直指对方。%SPEECH_ON%看来%employer%又要被爽约了。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			Options = [
@@ -323,12 +323,12 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Betrayal2",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{你在你腿上抹去了剑上的血并收回鞘内。 伏击者死了，扭曲成这样那样的姿势。%randombrother% 走过来问你现在怎么办。 看起来 %faction% 不会是最友善的人了。 | 你将伏击者的尸体从你剑上踹开。 看起来 %faction% 现在起不会是最友善的人了。 也许下一次，当我同意为这些人做点什么的时候，我真的做到了。 | 好吧，非常明显，这里学到的是不要接一个你完成不了的活。 这块土地上的人们对那些不守承诺的人可真不怎么友好… | 你背叛了 %faction%，但是不要在这事上钻牛角尖。 他们也背叛了你，这才是最重要的！ 未来，你最好注意着点他们和任何带着他们旗帜的人。 | %employer%，从你脚下的士兵尸体判断，看来不再喜欢你了。 如果你要猜的话，这是因为你以前做了些什么－失败，背叛，背后说坏话，睡了一个贵族的女儿？ 这些全部都被你回想起来寻思着。 重要的是你们两个之间的裂缝不会轻易修复了。 你最好看着点 %faction%的人一段时间。}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{你在裤腿上擦拭剑刃后迅速收剑入鞘。伏击者的尸体以各种怪异姿态倒毙在地。%randombrother%上前询问下一步行动。看来%faction%往后不会与我们友好相处了。 | 你将伏击者的尸体从剑尖踢落。看来从今往后%faction%不会对我们太友善。或许下次答应为这些人办事时，最好说到做到。 | 好吧，至少这次教训告诉我们：别承诺自己做不到的事。这片土地上的人们对失信之徒可不会客气…… | 你确实背叛过%faction%，但往事不必再提。现在重要的是他们背叛了你！从今往后，最好对这群人及其麾下势力都保持警惕。 | 从脚下士兵的尸体来看，%employer%显然对你不再满意。若要说原因，无非是往日旧账——背信弃义、任务失败、出言顶撞，还是睡了贵族女儿？细想之下桩桩件件都涌入脑海。重要的是你们之间的裂痕难以弥合，最近最好提防着点%faction%的人。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "没收到工资了...",
+					Text = "没薪水领了……",
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
@@ -342,7 +342,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "SearchingTheCamp",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_32.png[/img]{战斗过后，你搜寻了兽人的营地。在废墟中，你发现了看起来像是沉重护甲和人类武器的东西，不过看上去已经不能用了。可惜的是，你没有找到它们原来的主人。 | 几个兽人已经被你击败，你查看了一下他们的营地。满地都是垃圾。简直就是个垃圾场。%randombrother%走上前来，在一个帐篷柱子上擦了擦他的靴子。%SPEECH_ON%先生，我们是继续前进还是继续寻找？%SPEECH_OFF%你已经看到了足够多，闻到了够臭烘烘的味道。 | 兽人的营地是一个摇摇欲坠的废墟，到处弥漫着它们的味道和废物。毫不奇怪他们如此好战，因为他们甚至连文明社会都是个陌生的词语。 | 虽然兽人被你打败了，但你还是在废墟中找到了一些人类的尸体。从他们的武器来看，他们像是像你一样的佣兵。真可惜...现在他们的所有东西都被烧毁了。 | 你的几名雇佣兵走遍了兽人营地的废墟，翻找着这个那个没用的小玩意儿。%randombrother%把手中血迹斑斑的剑收了起来。%SPEECH_ON%没有发现什么有用的，先生。%SPEECH_OFF%你点点头，准备带着队伍返回给%employer%。 | 战斗结束后，你在营地四处搜寻，但并没有发现任何有用的东西。你找到了一堆死亡骑士，他们苍白虫蛀的脸孔表明他们已经在这里有一段时间了。谁知道兽人拿他们来干什么。}",
+			Text = "[img]gfx/ui/events/event_32.png[/img]{战斗结束后，你搜查了兽人营地。在废墟中发现了看似重甲和人类武器的残骸，但都已无法使用。遗憾的是，未能寻获它们可能曾经的主人。 | 兽人伏诛后，你环顾它们的营地。遍地都是污物，名副其实的污秽横流。这些该死的东西根本不知洁净为何物。%randombrother%深一脚浅一脚地走来，在帐篷柱上蹭着靴子。%SPEECH_ON%长官，我们是继续前进还是再搜搜……？%SPEECH_OFF%你已看够，也闻够了。 | 兽人营地是片充斥各种堕落的荒芜之地。空气中弥漫着交媾与排泄的气味。难怪它们如此好战，对最基本的文明都一无所知。 | 兽人营地已被摧毁，你仍花时间翻检废墟。在篝火的灰烬坑里发现了几具人类尸体。从装备判断，他们应是和你一样的佣兵。可惜……所有物品都已烧毁，再无利用价值。 | 几名佣兵穿梭在兽人营地的废墟中。他们翻捡残骸，偶尔拾起些无用的零碎物件。%randombrother%将染血的长剑归鞘。%SPEECH_ON%这儿一无所获，长官。%SPEECH_OFF%你点头示意，让队员们准备返回%employer%处。 | 战斗结束后，你在营地中漫步搜寻可用之物。虽然未找到可用的物资，却撞见一堆骑士的尸体。他们苍白的面容已满是蠕动的蛆虫，显然陈尸已久。天知道兽人对他们做了些什么。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -359,13 +359,13 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Volunteer1",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_32.png[/img]{战斗已经结束，但仍然有人在叫喊。你告诉%randombrother%闭上嘴巴，因为他总是喜欢发出一些随意的低声或尖叫声，但他摇了摇头说这不是他。就在这时，一个手铐男子从曾经是兽人营地的灰烬中站了起来。%SPEECH_ON%晚上好，各位先生！我相信你们已经救了我。%SPEECH_OFF%他摇摇晃晃地走来，一团幽灵般扭曲的灰尘云在他身后旋转。%SPEECH_ON%显然，我非常感激，并且我想报答你们。你们是雇佣兵，对吗？如果是这样，我想和你们一起战斗。%SPEECH_OFF%他从地上捡起一把刀，手腕灵巧地舞动着，像是自己从小就拥有它一样。一个有趣的提议，变得越来越有趣... | 整理完手中的武器，一个声音从一座倒塌的兽人帐篷中传来。%SPEECH_ON%好吧，先生们，你们做到了！%SPEECH_OFF%你看着一个面带微笑的男人出现。%SPEECH_ON%你们救了我！我想用我的手来报答这个服务！%SPEECH_OFF%他伸出手，停顿了一下，然后又把手拿回去了。%SPEECH_ON%我的意思是为你战斗！我想和你们战斗，先生！如果你们能做到这些，那么我肯定是一个好伙伴，对吗？%SPEECH_OFF%嗯，一个有趣的提议。你抛给他一把武器，他轻松地接住了。他手舞足蹈地旋转着柄，试图把它插入一把看不见的剑鞘当中。%SPEECH_ON%我叫%dude_name%。%SPEECH_OFF% | 一个身穿破烂的破铁甲的男子向你冲过来。他的手臂被绑在背后。%SPEECH_ON%你们做到了！我简直不敢相信！对不起，让我解释一下我的骄傲。一天前，我们试图攻进营地时，我被兽人俘虏了。当你们出现时，我想他们马上要把我放在烤叉上了。我趁机逃脱，但现在我看到你们和你们的队伍可能值得加入。%SPEECH_OFF%你让这个人说重点。他如实地说了。%SPEECH_ON%我想为你们战斗，先生。我有经验——曾经在领主军队中，当过雇佣兵，做过其他事情。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_32.png[/img]{战斗已经结束，但仍然有人在叫喊。你让%randombrother%闭嘴，因为他偶尔会莫名低吼或叫喊，但他摇头说不是自己。就在这时，一个戴镣铐的男人从兽人营地的废墟里站了起来。%SPEECH_ON%晚上好，先生们！我相信是你们解救了我。%SPEECH_OFF%他踉跄走来，身后旋起幽灵般的扭曲烟尘。%SPEECH_ON%我万分感激，想报答这份恩情。你们是雇佣兵对吧？如果是的话，我愿为你们而战。%SPEECH_OFF%他从地上拾起一把刀在手中旋转，舞动得如同自幼相伴的佩剑。这有趣的提议变得愈发诱人了…… | 你正擦拭剑刃时，倒塌的兽人帐篷里传来人声。%SPEECH_ON%先生们，你们做到了！%SPEECH_OFF%只见一个笑容满面的男人钻了出来。%SPEECH_ON%你们救了我！我助你一臂之力以作回报！%SPEECH_OFF%他伸出手又迟疑地收回。%SPEECH_ON%我是说为你们而战！长官，我愿为你效力！既然各位能有扫荡兽人的本事，我跟着你们准没错吧？%SPEECH_OFF%嗯，有意思的提议。你抛给他武器，他轻松接住，反手转动柄部，又尝试收剑入虚无的剑鞘。%SPEECH_ON%我叫%dude_name%。%SPEECH_OFF% | 一个穿着破旧凹陷盔甲的男人朝你奔来，双臂反绑在身后。%SPEECH_ON%你们成功了！真难以置信！抱歉，请允许我解释这失态举止。一天前我们攻打营地时被兽人俘虏，他们正要把我串上烤叉时各位就出现了。我抓住机会逃脱，但现在看来你的队伍值得投效。%SPEECH_OFF%你让他直奔主题。他照做了。%SPEECH_ON%长官，我愿为你战。我有经验——待过领主军队，当过佣兵，还干过……其他行当。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
 			Options = [
 				{
-					Text = "欢迎来到战团！",
+					Text = "欢迎加入战团！",
 					function getResult()
 					{
 						this.World.getPlayerRoster().add(this.Contract.m.Dude);
@@ -425,7 +425,7 @@ this.destroy_orc_camp_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到%employer%那里，汇报了你的工作。他向你挥了挥手。%SPEECH_ON%拜托了，雇佣兵。我已经知道了。你以为我在这些地方没有间谍吗？%SPEECH_OFF%他朝着桌角的一个小包裹做了一个手势，你把它取了过来，然后那个人翻了一个手腕。%SPEECH_ON%那就已经足够了，现在请离开我的视线。%SPEECH_OFF% | 你向%employer%展示了一只兽人的头颅。他看着它，然后看着你。%SPEECH_ON%有趣。那么你已经完成了我的要求吗？%SPEECH_OFF%你点了点头。那个人微笑着，交给了你一个木制宝箱，里面有%reward%克朗的奖励。%SPEECH_ON%我就知道我能信任你，雇佣兵。%SPEECH_OFF% | 你回到时，%employer%盯着你看。%SPEECH_ON%我已经听说了你的事情。%SPEECH_OFF%他的声音里有一种奇怪的语气，让你迅速回顾了过去一个星期你所做的事情。是贵族女人在...不行，那不是可能的。%SPEECH_ON%兽人已经死了。干得好，佣兵。%SPEECH_OFF%他塞给你一个%reward%克朗的小包, 你松了一口气。 | 你走进%employer%的房间，坐下来，倒了一杯酒。贵族盯着你看。%SPEECH_ON%我敢说，这不是画成四份的罪行，如果我感觉友好，那就是绞刑罪，如果我不友好，那就是火刑罪。%SPEECH_OFF% 你喝完酒，然后把一颗兽人头砸在桌子上。杯子晃动着，在桌子上滚动。%employer%向后缩，然后冷静下来。%SPEECH_ON%啊，是的，你干得好。那不是我最好的酒。%randomname%，我的卫兵，在外面等着你。他会带着我们约定的%reward%克朗给你的。%SPEECH_OFF% | 你举起一颗兽人头给%employer%看。绿色的口张开，舌头伸出，可能会被误认为是獠牙。%employer%点点头，挥了挥手。%SPEECH_ON%请你对我的梦寄予怜悯，把它带走。%SPEECH_OFF% 你按照所说的去做。这个人摇了摇头。%SPEECH_ON%这些天我怎么能睡觉，这样东西被运来了。不管怎样，你在外面已经有%reward%克朗的报酬在等着你了，还有我的一个卫兵。干得好，佣兵。%SPEECH_OFF% | 你来到%employer%的房间，发现他正在观看一张卷轴上的图纸。他注视着你，纸片的唇翻了回来。%SPEECH_ON%你能相信我的女儿自认为是个艺术家吗？%SPEECH_OFF%他向你展示了卷轴。上面画了一个看起来非常像%employer%的人。被描绘的人正面对着一个刽子手。%employer%大笑。%SPEECH_ON%愚蠢的女孩。%SPEECH_OFF% 他把卷轴揉成一团，随意地扔到了一边。%SPEECH_ON%不管怎么说，我的间谍已经告诉我你的成功了。这是我们约定的报酬。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你回到%employer%处汇报情况。他挥手打断你。%SPEECH_ON%得了吧佣兵，我早知道了。你以为我在这片地界没安插眼线吗？%SPEECH_OFF%他指向桌角的钱袋。你刚拿起钱袋，这人就甩了甩手腕。%SPEECH_ON%这应该足够酬谢你们了，现在请离开我的视线。%SPEECH_OFF% | 你将一颗兽人首级展示给%employer%。他盯着首级，又看向你。%SPEECH_ON%有意思。那我是否可以认为你已完成嘱托？%SPEECH_OFF%你点头回应。这人微笑着递来装有%reward%克朗的木箱。%SPEECH_ON%我就知道你值得信赖，佣兵。%SPEECH_OFF% | 你归来时%employer%凝视着你。%SPEECH_ON%我已经听说了你干的好事。%SPEECH_OFF%他古怪的语调让你迅速回顾过去一周的行踪。那位贵族女子难道……不，不可能。%SPEECH_ON%兽人死了。干得漂亮，雇佣兵。%SPEECH_OFF%他滑给你一袋%reward%克朗，你顿时松了口气。 | 你走进%employer%的房间自斟一杯酒。贵族死死瞪着你。%SPEECH_ON%要我说，你这行径就该判死刑，心情好就绞死，不好就火刑。%SPEECH_OFF%你饮尽酒后将兽人首级砸在桌上，酒杯晃动着滚落。%employer%惊退半步，随即镇定下来。%SPEECH_ON%啊，这杯酒你确实该喝。反正也不是我最好的藏酒。%randomname%我的护卫在门外等你，他会交付约定的%reward%克朗。%SPEECH_OFF% | 你举起兽人首级向%employer%展示。绿色的下颌耷拉着，舌头在獠牙般的齿间垂荡。%employer%点点头挥了挥手。%SPEECH_ON%行行好，为我的梦境着想，快拿开。%SPEECH_OFF%你照做后，这人摇头叹息。%SPEECH_ON%整天看着这些玩意儿我还怎么睡觉？算了，%reward%克朗在门外的护卫手里。辛苦了，佣兵。%SPEECH_OFF% | 你来到%employer%房间时，他正端详卷轴上的画作。他盯着你，纸缘向后卷曲。%SPEECH_ON%我女儿自以为是个画家，信么？%SPEECH_OFF%他向你展示卷轴——画功不俗，人物酷似%employer%，正面对着刽子手。%employer%大笑。%SPEECH_ON%傻丫头。%SPEECH_OFF%他揉碎卷轴扔到一旁。%SPEECH_ON%总之我的探子已经汇报了你的成功。这是约定好的报酬。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],

@@ -8,12 +8,12 @@ this.oath_of_camaraderie_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 		this.m.ID = "ambition.oath_of_camaraderie";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "没有任何一位宣誓者能够独自面对世界上的所有邪恶。\n让我们立下友谊誓言，以免失去真正的盟友！";
-		this.m.TooltipText = "小安瑟姆认为，有时，召集尽可能多的人参加战斗是正确的，即使大群人确实威胁到了指挥系统。 的确，“所有人都应该支持他们的兄弟”。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{力量在于人数，友情在于兄弟情谊。 虽然增派人手会阻碍你的指挥能力，但在每次战斗过程中，%companyname% 很快意识到，通过与你身边的人并肩作战，相信他能完成他的工作，他也相信你能完成你的工作，就能克服战斗的混乱。 这一经历使战团经受住了战争的浩劫。\n\n现在，战团知道可以通过信任自己的成员来对抗敌人，准备再次宣誓！}";
-		this.m.SuccessButtonText = "{为了小安瑟姆！ | 宣誓者万岁！ | 誓约使者去死吧！}";
+		this.m.TooltipText = "小安瑟姆认为，在特定情况下，即便会带来指挥上的问题，也应该将尽量多的人投入战斗。的确，“每个人都享有与兄弟并肩的权力”。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{人多力量大，同袍见真情。虽然增派人手会让指挥变得困难，但在一次次的战斗中，%companyname%很快意识到，只要与身旁的战友并肩作战，彼此信任、各司其职，就能克服战场上的混乱。这一经历让战团在战争中得到了淬炼。\n\n如今，这支队伍已经明白，只要彼此信任，就能直面敌人——它已准备好，立下另一道誓言！}";
+		this.m.SuccessButtonText = "{为了小安瑟姆！ | 执誓者万岁！ | 给渡誓者以死亡！}";
 		this.m.OathName = "友谊誓言";
-		this.m.OathBoonText = "你至多能带[color=" + this.Const.UI.Color.PositiveValue + "]14[/color]人加入战斗。";
-		this.m.OathBurdenText = "你的人总是随机以动摇或崩溃士气开始战斗。";
+		this.m.OathBoonText = "你能将最多[color=" + this.Const.UI.Color.PositiveValue + "]14[/color]人带入战斗。";
+		this.m.OathBurdenText = "战斗开始时，你的人总会随机处于动摇或崩溃士气。";
 	}
 
 	function getRenownOnSuccess()
@@ -24,7 +24,7 @@ this.oath_of_camaraderie_ambition <- this.inherit("scripts/ambitions/oaths/oath_
 
 	function getRewardTooltip()
 	{
-		return "如果你的队员在战斗中达到自信的次数足够，你将获得额外的名望(" + this.getBonusObjectiveProgress() + "/" + this.getBonusObjectiveGoal() + ").";
+		return "额外名望：队员在战斗中达到自信士气(" + this.getBonusObjectiveProgress() + "/" + this.getBonusObjectiveGoal() + ").";
 	}
 
 	function getBonusObjectiveProgress()

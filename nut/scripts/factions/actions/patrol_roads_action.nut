@@ -57,7 +57,7 @@ this.patrol_roads_action <- this.inherit("scripts/factions/faction_action", {
 			waypoints.push(wp);
 		}
 
-		local party = this.getFaction().spawnEntity(waypoints[0].getTile(), waypoints[0].getName() + " 战团", true, this.Const.World.Spawn.Noble, this.Math.rand(120, 250) * this.getReputationToDifficultyLightMult());
+		local party = this.getFaction().spawnEntity(waypoints[0].getTile(), waypoints[0].getName() + "战团", true, this.Const.World.Spawn.Noble, this.Math.rand(120, 250) * this.getReputationToDifficultyLightMult());
 		party.getSprite("body").setBrush(party.getSprite("body").getBrush().Name + "_" + _faction.getBannerString());
 		party.setDescription("听命于当地领主的职业军人。");
 		party.setFootprintType(this.Const.World.FootprintsType.Nobles);

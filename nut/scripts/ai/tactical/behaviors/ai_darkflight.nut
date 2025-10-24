@@ -387,7 +387,7 @@ this.ai_darkflight <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode)
 			{
-				this.logInfo("* " + _entity.getName() + ": Using Darkflight to engage.");
+				this.logInfo("* " + _entity.getName() + ": 使用暗影穿梭突入。");
 			}
 
 			this.m.Agent.adjustCameraToTarget(this.m.TargetTile);

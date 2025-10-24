@@ -2,7 +2,7 @@ this.goblin_city_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "一座巨大的地精城市，嵌套在一座古老要塞的遗迹中。在黑暗和高耸的墙壁的保护下，它承载着一支邪恶的绿皮军团。";
+		return "这座规模宏大的地精城市坐落在一座古老堡垒的遗迹之中。高耸的黑色城墙环绕其间，城内驻扎着一支凶残的绿皮军队。";
 	}
 
 	function create()

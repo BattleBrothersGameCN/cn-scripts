@@ -15,8 +15,8 @@ if (!("Paladins" in gt.Const.DLC) || !this.Const.DLC.Paladins)
 		this.Const.DLC.Mask = this.Const.DLC.Mask | 256;
 		this.Const.LoadingScreens.push("ui/screens/loading_screen_11.jpg");
 		local tips = [
-			"在“解剖学家”起源游戏中，初次击败某种敌人将授予药剂，使队员发生变异，获得特殊能力。",
-			"在“宣誓者”起源游戏中，你将选择誓言而非野心，获得特殊的恩惠和负担。"
+			"游玩“解剖学家”起源时，初次击败某种敌人将获得药剂，可使队员发生变异，获得特殊能力。",
+			"游玩“宣誓者”起源时，你将选择誓言而非野心，获得特殊的恩惠和负担。"
 		];
 		this.Const.TipOfTheDay.extend(tips);
 		this.Const.PlayerBanners.push("banner_32");

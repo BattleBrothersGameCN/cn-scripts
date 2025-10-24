@@ -8,7 +8,7 @@ this.have_armor_upgrades_ambition <- this.inherit("scripts/ambitions/ambition", 
 		this.m.ButtonText = "对真正的雇佣兵来说，普通的盔甲实在太过乏味。\n我们应该把战利品用上，好好装饰我们的装备！";
 		this.m.UIText = "为至少6件盔甲装上附件";
 		this.m.TooltipText = "为你拥有的至少6件盔甲装上附件。买来的，抢来的，请剥制师做出来的，统统安到你的人的盔甲上。";
-		this.m.SuccessText = "[img]gfx/ui/events/event_82.png[/img]当你接掌战团时，那只是一群苟且求生的乌合之众，一群临时拼凑起来的佣兵，除了顽固和对常识的绝对蔑视外，一无所有。 现在你看着这些人像一个超凡脱俗的野兽一样四处走动，他们的盔甲上装饰着可怖的头皮、毛皮和骨头，这种对战利品病态的再创作，使其他人知道 %companyname% 超出了大陆上的任何分类标准，无论被看作是怪物还是人类。";
+		this.m.SuccessText = "[img]gfx/ui/events/event_82.png[/img]当你接掌战团时，有的不过是一群苟且求生的乌合之众，一群临时拼凑起来，靠顽固和对常识的绝对蔑视捆绑在一起的佣兵。而现在在你眼前的是，一群四处走动着，狂野得超出了认知的亡命之徒，他们的盔甲上装饰着狰狞的战利品、毛皮和骨头，这种病态的再创作使其他人知道，%companyname%已经摆脱了常识的束缚，不能被简单归类为野兽或人类了。";
 		this.m.SuccessButtonText = "这对我们很有帮助。";
 	}
 

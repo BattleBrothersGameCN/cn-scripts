@@ -61,7 +61,7 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (item.getAmmoMax() > 0 && item.getAmmo() == 0)
 			{
-				this.logInfo("switching to melee weapon - no ammo!");
+				this.logInfo("切换到近战武器 - 没有弹药！");
 				isGoodReason = true;
 				scoreMult = scoreMult * this.Const.AI.Behavior.SwitchToOutOfAmmoMult;
 			}
@@ -78,7 +78,7 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 
 					if (bestTarget.Target == null || bestTarget.Score < 0)
 					{
-						this.logInfo("switching to melee weapon - noone to hit from here!");
+						this.logInfo("切换为近战武器——此处没有可攻击的目标！");
 						isGoodReason = true;
 						scoreMult = scoreMult * this.Const.AI.Behavior.SwitchToEnemyInRangeMult;
 					}
@@ -167,7 +167,7 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Switching to melee weapon \'" + this.m.WeaponToEquip.getID() + "\'!");
+			this.logInfo("* " + _entity.getName() + "：切换到近战武器 \'" + this.m.WeaponToEquip.getID() + "\'!");
 		}
 
 		local oldWeapon = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);

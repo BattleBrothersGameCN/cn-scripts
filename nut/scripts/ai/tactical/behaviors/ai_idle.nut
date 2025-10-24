@@ -55,7 +55,7 @@ this.ai_idle <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			if (this.Const.AI.VerboseMode && !_entity.isPlayerControlled())
 			{
-				this.logInfo("* " + _entity.getName() + ": Waiting with " + _entity.getActionPoints() + " of " + _entity.getActionPointsMax() + " AP left.");
+				this.logInfo("* " + _entity.getName() + "等待" + _entity.getActionPoints() + "中的" + _entity.getActionPointsMax() + "剩余行动点数。");
 				this.logInfo("* ---------------------------------------------------");
 			}
 		}
@@ -65,7 +65,7 @@ this.ai_idle <- this.inherit("scripts/ai/tactical/behavior", {
 
 			if (this.Const.AI.VerboseMode && !_entity.isPlayerControlled())
 			{
-				this.logInfo("* " + _entity.getName() + ": Ending Turn with " + _entity.getActionPoints() + " of " + _entity.getActionPointsMax() + " AP left.");
+				this.logInfo("* " + _entity.getName() + "：结束回合" + _entity.getActionPoints() + "中的" + _entity.getActionPointsMax() + "剩余行动点数。");
 				this.logInfo("* ---------------------------------------------------");
 			}
 		}

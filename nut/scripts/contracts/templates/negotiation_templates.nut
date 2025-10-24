@@ -74,12 +74,12 @@ gt.Const.Contracts.NegotiationDefault <- [
 
 					if (this.Contract.m.Payment.Advance != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getInAdvance() + "克朗作为预付");
+						this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getInAdvance() + "克朗");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
+						this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
 					}
 
 					return "Overview";
@@ -264,17 +264,17 @@ gt.Const.Contracts.NegotiationPerHead <- [
 
 					if (this.Contract.m.Payment.Advance != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getInAdvance() + "克朗作为预付");
+						this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getInAdvance() + "克朗");
 					}
 
 					if (this.Contract.m.Payment.Count != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + "克朗乘带回来的人头数，最多计" + this.Contract.m.Payment.MaxCount + "个头");
+						this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getPerCount() + "克朗乘带回来的人头数，最多计" + this.Contract.m.Payment.MaxCount + "个头");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
+						this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
 					}
 
 					return "Overview";
@@ -315,7 +315,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 			if (this.Contract.m.Payment.Count < 1.0)
 			{
 				this.Options.push({
-					Text = this.Contract.m.Payment.Count == 0 ? "我们需要按拿回的人头支付报酬。" : "我们需要你为每个带回的人头付更多的钱。",
+					Text = this.Contract.m.Payment.Count == 0 ? "我们需要按拿回的人头支付报酬。" : "我们需要你为每个带回来的脑袋付更多的钱。",
 					function getResult()
 					{
 						this.Contract.m.Payment.Annoyance += this.Math.maxf(1.0, this.Math.rand(this.Const.Contracts.Settings.NegotiationAnnoyanceGainMin, this.Const.Contracts.Settings.NegotiationAnnoyanceGainMax) * this.World.Assets.m.NegotiationAnnoyanceMult);
@@ -479,7 +479,7 @@ gt.Const.Contracts.NegotiationPerHead <- [
 			}
 			else if (this.Contract.m.Payment.Completion == 0 && this.Contract.m.Payment.Advance == 0 && this.Contract.m.Payment.Count != 0)
 			{
-				this.Text += "每带回一个人头{你会得到 | 你会收到 | 我会给你} %reward_count% 克朗，{我最多收 %maxcount% 个头 | 我最多给你 %maxcount% 个头的钱 }。%SPEECH_OFF%";
+				this.Text += "每带回一个脑袋{你会得到 | 你会收到 | 我会给你}%reward_count%克朗，{最多%maxcount%个头 | 我最多给你%maxcount%个头的钱 | 封顶%maxcount%个脑袋}。%SPEECH_OFF%";
 			}
 			else if (this.Contract.m.Payment.Completion != 0 && this.Contract.m.Payment.Advance != 0 && this.Contract.m.Payment.Count == 0)
 			{
@@ -547,17 +547,17 @@ gt.Const.Contracts.NegotiationPerHeadAtDestination <- [
 
 					if (this.Contract.m.Payment.Advance != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getInAdvance() + "克朗作为预付");
+						this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getInAdvance() + "克朗");
 					}
 
 					if (this.Contract.m.Payment.Count != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getPerCount() + "克朗乘回来时的人头数，最多计" + this.Contract.m.Payment.MaxCount + "个头");
+						this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getPerCount() + "克朗乘回来时的人头数，最多计" + this.Contract.m.Payment.MaxCount + "个头");
 					}
 
 					if (this.Contract.m.Payment.Completion != 0)
 					{
-						this.Contract.m.BulletpointsPayment.push("酬金" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
+						this.Contract.m.BulletpointsPayment.push("预付金为" + this.Contract.m.Payment.getOnCompletion() + "克朗会在事成之后付清");
 					}
 
 					return "Overview";

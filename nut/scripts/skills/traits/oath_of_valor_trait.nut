@@ -28,7 +28,7 @@ this.oath_of_valor_trait <- this.inherit("scripts/skills/traits/character_trait"
 				id = 11,
 				type = "text",
 				icon = "ui/icons/morale.png",
-				text = "不会逃离战斗"
+				text = "不会在战斗中溃逃"
 			},
 			{
 				id = 10,

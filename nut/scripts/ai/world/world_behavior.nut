@@ -83,7 +83,7 @@ this.world_behavior <- {
 			if (this.Const.AI.BenchmarkMode)
 			{
 				local timeTaken = this.Time.getExactTime() - startTime;
-				this.logInfo("[] Evaluating " + this.getID() + " took " + timeTaken + " seconds.");
+				this.logInfo("[]评估" + this.getID() + "用时" + timeTaken + "秒。");
 			}
 
 			if (score != null)
@@ -100,7 +100,7 @@ this.world_behavior <- {
 			if (this.Const.AI.BenchmarkMode)
 			{
 				local timeTaken = this.Time.getExactTime() - startTime;
-				this.logInfo("[] Evaluating " + this.getID() + " took " + timeTaken + " seconds.");
+				this.logInfo("[]评估" + this.getID() + "用时" + timeTaken + "秒。");
 			}
 
 			return true;

@@ -57,7 +57,7 @@ this.ai_use_potion <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Potion!");
+			this.logInfo("* " + _entity.getName() + ": 使用药剂!");
 		}
 
 		this.m.Skill.use(_entity.getTile());

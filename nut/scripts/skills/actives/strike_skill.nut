@@ -16,7 +16,7 @@ this.strike_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.strike";
-		this.m.Name = "横扫劈击";
+		this.m.Name = "劈击";
 		this.m.Description = "一次可覆盖2格范围的横扫劈击，可以从前线后方使用，超出大多数其他近战武器的范围。";
 		this.m.Icon = "skills/active_66.png";
 		this.m.IconDisabled = "skills/active_66_sw.png";

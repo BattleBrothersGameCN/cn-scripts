@@ -193,7 +193,7 @@ this.named_item_ambition <- this.inherit("scripts/ambitions/ambition", {
 
 		_vars.push([
 			"nameditem",
-			nameditem != null ? nameditem.getName() : "名剑"
+			nameditem != null ? nameditem.getName() : "著名大剑"
 		]);
 	}
 

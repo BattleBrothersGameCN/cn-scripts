@@ -82,8 +82,8 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"阻止所有%objective%附近的南方掠夺队",
-					"不要让他们烧了任何地点"
+					"拦截所有%objective%附近的南方掠夺队",
+					"不要让他们烧毁任何地点"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -119,7 +119,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 
 				foreach( c in cityStates )
 				{
-					c.addPlayerRelation(-99.0, "在战争选择了阵营");
+					c.addPlayerRelation(-99.0, "在战争中选择了阵营");
 				}
 
 				this.Contract.m.Destination.setLastSpawnTimeToNow();
@@ -387,14 +387,14 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "Task",
 			Title = "谈判",
-			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer%的房间又暗又安静。 要不是有几根闪烁的蜡烛和鸟叫这房间就是又黑又寂静的了。 站在阴影里，贵族开口说道。%SPEECH_ON%南方杂种持续向北方派出掠夺队。 这添了不少麻烦，你懂的，几个古铜色的狗杂种来来往往，掠夺，抢劫，杀人，强奸。 他们想让我分兵到后方，但我可不会让他们得逞。 这就是你在这的原因，佣兵。 我需要你去找到这些入侵过来的破坏者并杀光他们。 如果你能承担这个任务，报酬是 %reward% 克朗。%SPEECH_OFF% | 你看到 %employer% 正在与他的军官们说话。 他有两堆筹码，其中一个比另一个高得多。 他从高的拿出一些放在矮的上。%SPEECH_ON%那么如果我布置这么多呢？%SPEECH_OFF%军官们摇了摇头。%SPEECH_ON%那正是南方人想要的。 如果我们从前线调人，那么他们肯定会知道并借机发动进攻。%SPEECH_OFF%所有人突然看向你。%employer% 咧起嘴角。%SPEECH_ON%啊－哈，看来我们的救星正是一个雇佣兵！ 喔，我敢说一个佣兵可以为我们解决这件事。 那边那个，领头的，我需要些战士呆在 %townname% 附近并从南方破坏者和强盗手中保护他们。 你会在这个任务圆满完成后拿到 %reward% 克朗的报酬！%SPEECH_OFF%军官们看起来对于像让这样的佣兵你承包这份任务有些迟疑，但你感觉得到，局势并不乐观。 | 你被引导到 %employer%的图书馆，他正在翻阅数张卷轴。他举起其中一个。%SPEECH_ON%在这样的时节，你觉得我在读些什么？%SPEECH_OFF%你猜与军事有关。他摇起头来。%SPEECH_ON%农业问题。你知道的，我正在一场战争中。 但战争不止需要靠人战斗，还需要补给链，后勤，食物。 所有这些都是后方提供的。 南方的狗杂种同我们一样理解这种概念，并派出掠夺者和渗透者来摧毁后方。 来分散我，分散我的士兵们。 我需要你去根除这些杂种并保护我们的家乡，我们的商铺，我们的农场。 顺利完成，我会给予你 %reward% 克朗。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_45.png[/img]{%employer%的房间昏暗而安静。若不是几支摇曳的烛光和鸟儿的啁啾，这里简直漆黑无声。贵族站在阴影中说道：%SPEECH_ON%那些南方杂碎不断派遣掠夺队北上。你也知道，让几个黝黑的杂种在这里烧杀抢掠，实在是件麻烦事。他们想逼我把主力部队调回后方，但我绝不会让步。这就是你出现在这里的原因，佣兵。我要你找到这些捣乱的破坏分子，把他们全部干掉。如果你接下这个任务，%reward%克朗就是你的了。%SPEECH_OFF% | 你看到%employer%正在和他的军官们商议。他面前摆着两堆筹码，一堆明显比另一堆高得多。他从较高的那堆取出一些放到较矮的那堆上。%SPEECH_ON%如果我分配这么多呢？%SPEECH_OFF%军官们纷纷摇头。%SPEECH_ON%这正是南方人想要的结果。如果从前线抽调兵力，他们肯定会察觉并趁势进攻。%SPEECH_OFF%这时所有人突然抬头看向你。%employer%咧嘴一笑。%SPEECH_ON%啊哈，看来我们的救星非雇佣兵莫属！队长，我需要战士留守%townname%，防御南方破坏分子和掠夺者的袭击。只要你圆满完成任务，%reward%克朗就是你的！%SPEECH_OFF%军官们对让你这样的佣兵承担此任务显得犹豫，但你能感觉到形势确实严峻。 | 你被引到%employer%的书房，他正在翻阅卷轴。他举起其中一份。%SPEECH_ON%在这种时期，你觉得我在研读什么？%SPEECH_OFF%你猜测是军事方面的内容。他摇了摇头。%SPEECH_ON%是务农学。你看，我现在处于战争状态。但战争不仅靠士兵，还要靠补给线、后勤和粮食。所有这些都依赖后方提供。南方狗和我们一样明白这个道理，他们派了掠夺者和渗透者来摧毁我们的后方。为了分散我的注意力，分散我士兵的注意力。我需要你揪出这些杂种，保护我们的家园、店铺和农场。只要圆满完成，我愿意支付%reward%克朗。%SPEECH_OFF%}",
 			Image = "",
 			List = [],
 			ShowEmployer = true,
 			ShowDifficulty = true,
 			Options = [
 				{
-					Text = "{这对我们来说也许正是合适的工作。 | 击退南方来的入侵者？ 战团在此响应号召！ | Very well. 让我们更深入地谈谈报酬问题。}",
+					Text = "{这工作可能正适合我们。 | 击退南方来的入侵者？ 战团在此响应号召！ | 行吧，我们再谈酬金的问题。}",
 					function getResult()
 					{
 						return "Negotiation";
@@ -402,7 +402,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 
 				},
 				{
-					Text = "{这不值得。 | 我们还有别的地方要去。 | 这将占用我们太多的时间。}",
+					Text = "{这事不划算。 | 我们还有别的地方要去。 | 这会占用我们太多的时间。}",
 					function getResult()
 					{
 						this.World.Contracts.removeContract(this.Contract);
@@ -419,12 +419,12 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "LocationDestroyed",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_30.png[/img]{远处冒起浓烟。 尖叫声回响在云层之下，从浮动着轮廓的火中传出。 那是在 %location% 的 %objective%，很显然它正在被摧毁。}",
+			Text = "[img]gfx/ui/events/event_30.png[/img]{远方浓烟升腾。尖叫声回响在云层之下，火焰中跃动着仓惶逃窜的身影。那正是%objective%的%location%，此地无疑已被摧毁。}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "我们必须在过份前阻止它。",
+					Text = "趁着为时未晚，我们必须阻止他们。",
 					function getResult()
 					{
 						return 0;
@@ -440,7 +440,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "InterceptParty",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_156.png[/img]{南方人看起来如同在地理过渡区般，混着他们自己的和北方人的服饰，还带着一箱箱夺来的战利品。 一个人穿着北方婚礼的裙子转着玩。 看起来就好像一队友好的旅行者在靠近，如果不是他们身上满是血迹与灰尘的话。战斗！ | 你找到了来北方的南方人掠夺队。 从他们身上的血迹判断，你敢打赌他们已经在郊区的民众间扫荡了出了一条混乱路线。战斗！}",
+			Text = "[img]gfx/ui/events/event_156.png[/img]{这些南方人仿佛正处在地域过渡中，衣着混杂着南方服饰与北方装束，还携带着满载掠夺财宝的箱子。有个男人戏谑地套着北方婚纱转圈。若不是他们满身血污与灰烬，这伙人看起来倒像支欢乐的队伍。准备战斗！ | 你发现了这支北上的南方掠夺队。从他们满身的血迹判断，这帮人肯定已经在偏远地区的定居点制造了一路混乱。准备战斗！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -462,7 +462,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "PartiesDefeated",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_87.png[/img]{你找到了最后一个还有一口气的南方人并抓住他的头发把他拎起来给所有人看。 农民与农夫之类看着你从喉咙切到脖子直到他的身体落下，头高高的举在你的手中。人群欢呼起来。%SPEECH_ON%我们的救星！%SPEECH_OFF%无疑 %employer% 会很高兴听到你的工作成果。 | 南方人被杀了，任何残存的幸存者被留给了当地人。 虐待，大量的鞭打，切鸡鸡和各类血腥创意。 但你对这些人不抱同情。%employer% 等着的报酬，倒让你更感点兴趣。 | 随着最后一批南方人死了后，你知道 %employer% 肯定会乐于支付你的报酬。 你离开时，你看到几个当地人正在破坏强盗们的尸体，如同这里和全世界其他地方的传统一样。 | 一声吓人的惨叫背叛着他之前对这世界的掌控感，最后的强盗死于了剑下。 他的战友被当地人拽来拽去，尸体要么被肢解或者点燃。 你看了一会，但最终还是回到了路上，毕竟 %employer% 还等着呢。 | 强盗中最幸运的是那些已经死了的，因为重伤的人没有被给予任何仁慈。 当地人和农场主涌入战场来夺取他们的被害者，有的甚至在为此交换克朗，然后被选中的强盗们被玷污，残害，并虐待。 你看不到任何人是被直接杀死的，实际上其中一例中，一个医师看起来只是在延长痛苦。 很壮观，但比起这更好的景象是 %employer% 往你的金库里放一大笔报酬的时候。}",
+			Text = "[img]gfx/ui/events/event_87.png[/img]{你找到最后一个还在喘气的南方人，揪着头发将他提起示众。在农民们的注视下，你从喉咙割到后颈，直到身躯坠落，头颅高悬手中。人群欢呼起来。%SPEECH_ON%我们的救星！%SPEECH_OFF%毫无疑问，%employer%听闻你的功绩定会欣喜不已。 | 南方入侵者已被全数歼灭，伤重未死者遭到当地居民的残酷清算。剥皮阉割等极端手段层出不穷，场面血腥得令人不忍直视。但你对这些外邦人毫无同情，此刻更关心的是%employer%即将支付的酬金。 | 随着最后一批南方人被送进坟墓，你知道%employer%会很乐意支付你应得的报酬。离开时，你看见一些当地居民正在肢解袭击者的尸体——在这片土地和世界其他地方，这都是传统做法。 | 最后一名掠夺者发出凄厉的惨叫，最终毙命于刀下。他的同伙被当地民众拖来拖去，尸体要么被剁成碎块，要么被付之一炬。你观望片刻，终究继续赶路，心里清楚%employer%还在等着你。 | 死者反倒是掠夺者中最幸运的，因为重伤者得不到丝毫怜悯。当地居民和农户们涌入战场认领俘虏，有人甚至为此出价交易。被选中的掠夺者随后遭到玷污、肢解和酷刑。你没看到有人被直接处死，实际上有个医师似乎专程在场延长他们的痛苦。这景象颇为壮观，但更让人期待的是%employer%将丰厚酬金倒入你的钱箱。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -484,7 +484,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "Lost",
 			Title = "在途中……",
-			Text = "[img]gfx/ui/events/event_94.png[/img]{敌人不见了，但他们的工作已经完成。 浓烟弥漫在被烧成灰烬的建筑物周围，那些没有为了在南方卖而作为负债者被抓的人则死在了街上。\n\n回去找雇主没有什么意义了，因为你没什么机会为失败得到报酬。 最好去别的地方找新工作。}",
+			Text = "[img]gfx/ui/events/event_94.png[/img]{敌人已经离去，但他们的恶行已然得逞。烟尘萦绕在焚毁的断壁残垣间，此处的居民除了被掳掠到南方当作负债者贩卖，就只剩下横陈街头的死尸。\n\n你没必要返回雇主处复命了，他们不会为你的失败支付酬金的。不如去别处另寻生计。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -493,7 +493,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "没能协助" + this.Contract.m.Destination.getName() + "来自南方劫掠者");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "抵御南方劫掠者失败，未能保卫" + this.Contract.m.Destination.getName() + " ");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -508,7 +508,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "Assassins",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_165.png[/img]{你找到一个农夫背上插着一把弯曲的匕首死在了路上。 没人会把那么好的匕首留在背后，正如你怀疑的，他的凶手仍在这里：一群南方刺客。 他们如同阴影般变换，他们锋利的钢刃随每一次晃动和转向发出反光。战斗！ | 一个女人快速跑向你，她破碎的裙子胡乱地摆动，双臂摇晃，眼睛放大，其中的白色如同猩红海滩上的贝壳般沁在红血中。 在她能说任何话之前她咕哝着在一瞬间倒在地上。 一把匕首在她的后脑勺上，更后方，一个黑衣的男人与一群刺客正站在一起！}",
+			Text = "[img]gfx/ui/events/event_165.png[/img]{你发现一个农夫死在路上，背上插着一柄弯刀。没人会扔下这么精致的匕首不要，果然如你所料——凶手仍在现场：一群南方刺客。他们如鬼影般游移，锋利的钢刃随身形转动寒光闪烁。准备战斗！ | 一个女人匆忙向你奔来，破碎的衣裙飘荡，双臂挥舞，双眼圆睁——眼白浸在血海中，宛如猩红海滩上的贝壳。未及开口，她闷哼一声瞬间倒地。一柄匕首钉在她后脑，更远处，一个黑衣男子带着一队刺客赫然伫立！}",
 			Image = "",
 			List = [],
 			Options = [
@@ -530,7 +530,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "Slavers",
 			Title = "当你接近时……",
-			Text = "[img]gfx/ui/events/event_53.png[/img]{南方掠夺队看起来好像由世界各地的人组合出来的般。 在更近的观察下你才意识到是因为他们是奴隶主！ 奴隶与主人的大杂烩接近着 %companyname%，受过训练的与毫无训练的一起组成一排散乱的阵线。 你可以看到人群中有北方人的面孔，但可悲的是，他们是一个破碎的群体，他们宁愿拿起武器对抗战团，也不愿为自由而战。 | 你找到了南方人，但他们完全不是强盗－他们是奴隶主！ 他们带着一车车的女人和孩子，并在你发现的同时，奴隶主们匆忙的开始处决任何近期奴役的有威胁的人同时剩下的开始冲向 %companyname%。空气中弥漫着屠杀的气息，你肆无忌惮地向他们发起进攻！}",
+			Text = "[img]gfx/ui/events/event_53.png[/img]{这支南方掠夺队看起来像是聚集了世界各地的人。仔细察看才发现，原来他们是奴隶贩子！这群主奴混杂的队伍向%companyname%逼近，训练有素者和乌合之众杂乱无章地组成阵型。你能在人群中看到北方人的面孔，但可悲的是他们已被摧垮意志，宁愿拿起武器对抗战团，也不为自由而战。 | 你遭遇了南方人，但他们根本不是什么掠夺者——而是奴隶贩子！他们押运着满载妇女儿童的货车。当你们被发现时，奴隶贩子们急忙开始砍杀任何可能构成威胁的新奴役男子，其余人则向%companyname%发起冲锋。杀戮即将开始，你毫不留情地向这群人压去。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -551,8 +551,8 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		});
 		this.m.Screens.push({
 			ID = "ThankfulVillagers",
-			Title = "在 %objective%",
-			Text = "[img]gfx/ui/events/event_79.png[/img]{你放倒了最后的南方掠夺者。 在你命令队伍收集任何有价值的东西时，几个村民带着他们自己的物品站了出来。%SPEECH_ON%我们以为一切都完了，但你出现了，我们的骑士。%SPEECH_OFF%尽管你不是一个骑士，你不会拒绝被称赞为骑士－以及骑士的奖励：村民们给了你礼物！ | 掠夺者解决了，你发现自己慢慢地被村民们包围。 他们看起来憔悴又害怕，但同时他们带着一篮篮的物品。 作为拯救了他们的礼物被交给了你。 他们看起来把你跟 %employer%的士兵们搞混了，但你都没想去展露你的雇佣兵身份。 你拿上礼物，甚至点了点帽子并说这只是你的工作，它确实是。}",
+			Title = "%objective%里",
+			Text = "[img]gfx/ui/events/event_79.png[/img]{你们解决了最后一批南方掠夺者。 正当你命令战团收集有价值之物时，几个村民带着自己的物资走了出来。%SPEECH_ON%我们还以为世界末日到了，结果你们来了，我们的骑士。%SPEECH_OFF%虽然你并非骑士，但你不介意接受骑士般的赞誉——以及骑士般的报酬：村民们赠予了你们礼物！ | 袭击者被清除后，你发现自己渐渐被村民们围住。他们面容憔悴、惊魂未定，却提着满篮的物资。这些是作为救命之恩的谢礼献给你们的。他们似乎把你们误认作%employer%的士兵，但你压根没想过要透露自己只是雇佣兵。你收下赠礼，甚至还轻触帽檐说这是分内之事——而事实也的确如此。}",
 			Image = "",
 			List = [],
 			Options = [
@@ -586,7 +586,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{%employer% 摆手让你进去，尽管没你所希望的欢迎那样的喜气。 他的语调透露出某种慈父般的失望。%SPEECH_ON%你解决了几个南方强盗。 不是很好，但也不坏。 我会按每个被阻止的队伍付你报酬，但我只希望你能做的更好。%SPEECH_OFF%你几乎想要道歉，但你知道你这一方的任何软弱迹象或许会导致吃亏并没有开口。 他支付了应得的 %reward% 克朗。 | %employer% 在你进入房间时带着几个卫兵，尽管人群中有几张脸有些破相。 他沉闷地说道。%SPEECH_ON%你尽力了，佣兵。 你不太可能能赶在所有的掠夺者前。 这我现在意识到了。 我，当然，会支付一些合理的报酬给你。 我知道我雇了错误的人，但我今天不会对此下决定。 有太多要重建了。 你的 %reward% 克朗，按谈好的以每一个被摧毁的掠夺队算。%SPEECH_OFF% |  你进入 %employer%的房间发现作为你报酬的 %reward% 克朗已经准备好放在桌上了。 他轻率的翻手指了指它。%SPEECH_ON%掠夺者来了，你解决了几个，剩下的则肆意烧杀劫掠了一番。 所以。拿上你 %reward% 克朗的报酬，佣兵。 它是按照你工作的质量来的，所以请你不要对发现叠起来的克朗矮了一点感到惊讶。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{%employer%招手让你进去，不过欢迎方式并不如你期望的那般热情。他的语气带着几分父亲般的失望。%SPEECH_ON%你们解决了几伙南方流寇。不算出色，但也不算太糟。我会按你们阻止的每批匪徒付钱，只是我原本希望你们能做得更好。%SPEECH_OFF%你几乎想要道歉，但你知道任何示弱的表现都可能让对方趁机克扣报酬，于是把话咽了回去。他按约定支付了%reward%克朗。 | 你进去时%employer%身边跟着几名守卫，不过人群里少了些熟悉的面孔。他语气沉痛地说道。%SPEECH_ON%你已尽力了，佣兵。要全歼那些掠夺者本就不太可能。我现在明白了。当然，我这是在给你找台阶下。说不定我雇错了人，但今日我不作此决断。要重建的实在太多。按击垮的掠夺者队伍数量支付你%reward%克朗，依约履行。%SPEECH_OFF% | 你走进%employer%的房间，发现%reward%克朗的报酬已经核算好放在桌上。他漫不经心地转了下手指向那堆钱币。%SPEECH_ON%掠夺者来了，你们解决了一些，剩下的烧杀抢掠无恶不作。所以。拿上你的%reward%克朗吧，佣兵。这与你的工作质量相符，要是觉得钱堆矮了一截也别太惊讶。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -598,7 +598,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractPoor);
 						this.World.Assets.addMoney(this.Math.round(this.Contract.m.Payment.getOnCompletion() / 2));
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractPoor, "保卫了" + this.Contract.m.Destination.getName() + "来自南方劫掠者");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractPoor, "抵御南方劫掠者，成功保卫" + this.Contract.m.Destination.getName() + " ");
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isHolyWar())
@@ -624,7 +624,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 		this.m.Screens.push({
 			ID = "Success2",
 			Title = "你回来后……",
-			Text = "[img]gfx/ui/events/event_04.png[/img]{你发现 %employer% 不在他的作战室，而是在他的侧办公室里跟几个乱转的女士在一起。 她们在处理角落里的蜘蛛网，塞卷轴到书架里，或者打磨着家具。 而且她们都裸着，很自然地。 他张开手臂。%SPEECH_ON%我想着是时候庆祝一番，%townname% 被拯救了，被你这样的人拯救了，佣兵！%SPEECH_OFF%他喝醉了，女人们轻轻的在他在房间里转起来的途中躲避以免撞到他。%SPEECH_ON%现在…现在－嗝－现在我向你保证，那个，那个我不会赊着你的 %reward% 克朗。 都在这－嗝－和谈好的一样。 农民们很高兴，而且我也很高兴。非常高兴。%SPEECH_OFF%他挤了挤其中一个女人，她的反应就像一块斑驳的地毯一样活泼。 你拿上钱袋并离开，几个女士跟着你一起溜出了门，留下 %employer% 倒在地上恍惚地嘟哝着。 | 你发现 %employer% 不在他的作战室而在他的图书管理，里面可能书架比书还多。 但他看起来依然很自满。%SPEECH_ON%你的工作完成的很出色，佣兵。很漂亮。 当然，依然有些伤亡，但总体而言东西还在它们该在的地方而且那群南方杂碎都被赶走了。 在你的帮助下，我们的前线得以免于为保护后方变薄。 这儿，你说好的 %reward% 克朗。%SPEECH_OFF%当他移开，你看到他摆了一个新近打光滑了的头骨在架子上。 他带着儿童般的笑容指着它。%SPEECH_ON%是他们中的一个头骨。 我打算用它来喝酒，或者当尿壶。还没下决定。%SPEECH_OFF% | %employer% 坐在他摆了一个三个头骨叠出来的塔型的办公桌前。 他的手放在上面好像在拍狗头一样。 你注意到上面还有一条条血肉甚至头发在上面，漂白过程看来很仓促。 他开心的说道。%SPEECH_ON%因为你，我的士兵可以留在前线，佣兵。 解决那些强盗不仅拯救了这里许多人的生命，还可能制止了一系列多米诺中的第一颗倒下。 没有你的帮助，父亲，兄弟和儿子们可能得后撤去照顾他们的家庭然后这整场战争将会变得一团糟。%SPEECH_OFF%用他空出来的手，他向前推出一个包。%SPEECH_ON%你的 %reward% 克朗。相当分量正当所得的硬币，我得说。%SPEECH_OFF%他冷酷的笑起来然后立起头盯着骷髅。%SPEECH_ON%我想他们会赞同的，尽管我得说在这方面我将会代替他们发言。%SPEECH_OFF%}",
+			Text = "[img]gfx/ui/events/event_04.png[/img]{你没在作战室找到%employer%，而是在他的侧室——几位女士正在屋里走动，有的在清理角落蛛网，有的往书架归档卷轴，还有的在擦拭家具。她们自然都赤身裸体。这人张开双臂。%SPEECH_ON%我觉得该庆祝一下，因为%townname%得救了，被你这样的人救了，佣兵！%SPEECH_OFF%他醉醺醺的，在屋里摇摇晃晃时女士们都温柔地让开。%SPEECH_ON%现在...现在——嗝——现在我向你保证，那%reward%克朗我绝对没——嗝——没克扣。全按说好的在那儿。平民们很开心，我也很开心。非常开心。%SPEECH_OFF%他搂了其中一个女人，那女人的反应跟砖头一样沉闷。你抓起钱袋离开时，几个姑娘也溜出门外，%employer%则陷入喃喃自语的醉态。 | 你在作战室外找到了%employer%，他正在书房里——书架恐怕比书还多。但他看起来仍自我感觉良好。%SPEECH_ON%你在外面的表现很出色，佣兵。绝对出色。当然有伤亡，但总体而言一切运转正常，那些南方杂碎也被赶跑了。多亏你，我们的前线不必为照顾后方而松懈。给，答应你的%reward%克朗。%SPEECH_OFF%这人移开身子时，你看见书架上摆着个刚处理完还泛着油光的头骨。他带着孩童般的得意指向它。%SPEECH_ON%那是他们的头骨之一。我打算拿它当酒壶，或者尿壶。还没决定好。%SPEECH_OFF% | %employer%正坐在书桌前，桌上叠着三个头骨组成的金字塔。他一只手搭在上面，像在抚摸狗头。你注意到头骨上还挂着碎肉甚至头发，漂白工序想必很仓促。这人愉快地说道：%SPEECH_ON%多亏了你，我的士兵才能坚守前线，佣兵。解决这些掠夺者不仅救了许多人的命，或许还阻止了第一块多米诺骨牌的倒下。若没有你，前线的父亲、兄弟和儿子们可能早已退守照顾家人，整场战争就全完了。%SPEECH_OFF%他用空着的手推过来一个钱袋。%SPEECH_ON%你的%reward%克朗。要我说，这袋钱币的分量衬得上你的成果。%SPEECH_OFF%他阴沉一笑，对着头骨歪了歪头。%SPEECH_ON%我想它们也会同意——虽然这件事上我得替它们发言。%SPEECH_OFF%}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -636,7 +636,7 @@ this.intercept_raiding_parties_contract <- this.inherit("scripts/contracts/contr
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "保卫了" + this.Contract.m.Destination.getName() + "来自南方劫掠者");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "抵御南方劫掠者，成功保卫" + this.Contract.m.Destination.getName() + " ");
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isHolyWar())

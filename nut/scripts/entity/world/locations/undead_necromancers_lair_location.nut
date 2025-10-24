@@ -2,7 +2,7 @@ this.undead_necromancers_lair_location <- this.inherit("scripts/entity/world/loc
 	m = {},
 	function getDescription()
 	{
-		return "一位亡灵巫师将这个巢穴作为他修行黑暗仪式的避难所。";
+		return "一位死灵法师将这个窝点作为他修行黑暗仪式的藏身处。";
 	}
 
 	function create()
