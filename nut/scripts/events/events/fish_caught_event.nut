@@ -32,7 +32,7 @@ this.fish_caught_event <- this.inherit("scripts/events/event", {
 					{
 						id = 10,
 						icon = "ui/items/" + food.getIcon(),
-						text = "你获得了 [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + food.getAmount() + "[/color] 条鱼"
+						text = "你获得了[color=" + this.Const.UI.Color.PositiveEventValue + "]+" + food.getAmount() + "[/color] 条鱼"
 					}
 				];
 				_event.m.Fisherman.improveMood(0.5, "钓到一些鱼");

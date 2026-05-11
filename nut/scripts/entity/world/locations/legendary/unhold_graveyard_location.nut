@@ -2,7 +2,7 @@ this.unhold_graveyard_location <- this.inherit("scripts/entity/world/location", 
 	m = {},
 	function getDescription()
 	{
-		return "广阔的土地上散落着巨大的骨头和头骨。有些已成苍白色，但有些是新鲜的，仍然有肉附着。";
+		return "一片遍布巨大骨架与颅骨的广阔原野。有些已风化至惨白，有些则相对新鲜，骨上仍残留着血肉。";
 	}
 
 	function create()

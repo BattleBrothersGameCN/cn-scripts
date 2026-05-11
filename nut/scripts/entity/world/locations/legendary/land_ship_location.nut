@@ -2,7 +2,7 @@ this.land_ship_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "在一些树的顶上有一个很大的木结构。虽然看起来很奇怪，但它看起来很像一艘船。";
+		return "几棵树的顶端架着一座大型木结构。尽管很奇怪，它的确酷似一艘船。";
 	}
 
 	function create()

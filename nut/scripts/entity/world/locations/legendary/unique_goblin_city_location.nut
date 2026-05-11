@@ -2,7 +2,7 @@ this.unique_goblin_city_location <- this.inherit("scripts/entity/world/location"
 	m = {},
 	function getDescription()
 	{
-		return "一座巨大的地精城市，嵌套在一座古老要塞的遗迹中。在黑暗和高耸的墙壁的保护下，它承载着一支邪恶的绿皮军团。";
+		return "一座巨大的地精城市，嵌套在一座古老要塞的遗迹中。漆黑高耸的城墙守护着这座要塞，其中驻扎着一支凶残的绿皮军团。";
 	}
 
 	function create()
@@ -22,7 +22,7 @@ this.unique_goblin_city_location <- this.inherit("scripts/entity/world/location"
 
 	function onSpawned()
 	{
-		this.m.Name = "统治者加齐克斯";
+		this.m.Name = "鲁尔加齐克斯";
 		this.location.onSpawned();
 
 		for( local i = 0; i < 14; i = ++i )

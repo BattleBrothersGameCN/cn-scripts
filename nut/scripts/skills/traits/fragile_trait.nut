@@ -6,7 +6,7 @@ this.fragile_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.fragile";
 		this.m.Name = "脆弱";
 		this.m.Icon = "ui/traits/trait_icon_04.png";
-		this.m.Description = "这家伙脆的像蛋壳，天生就不是打架的料。";
+		this.m.Description = "这家伙脆得像蛋壳，天生就不是打架的料。";
 		this.m.Excluded = [
 			"trait.huge",
 			"trait.tough",

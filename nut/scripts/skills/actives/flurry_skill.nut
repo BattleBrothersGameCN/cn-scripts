@@ -60,7 +60,7 @@ this.flurry_skill <- this.inherit("scripts/skills/skill", {
 	{
 		local user = this.m.Container.getActor();
 		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], 1.0, _targetTile.Pos);
-		this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(user) + "它周围释放出一连串猛烈的攻击。");
+		this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(user) + "朝它周围胡乱地挥击。");
 		local ownTile = user.getTile();
 		local numAttacks = 6;
 		local targetTiles = [];

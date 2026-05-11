@@ -6,10 +6,10 @@ this.dumb_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.dumb";
 		this.m.Name = "愚笨";
 		this.m.Icon = "ui/traits/trait_icon_17.png";
-		this.m.Description = "呃，什么？这个角色不是很聪明，新概念需要一段时间才能被他掌握。";
+		this.m.Description = "呃，啥？这个角色不太聪明，总要花些时间才能理解新概念。";
 		this.m.Titles = [
-			"缓慢者",
-			"白痴(the Idiot)",
+			"蠢货",
+			"白痴",
 			"怪人"
 		];
 		this.m.Excluded = [

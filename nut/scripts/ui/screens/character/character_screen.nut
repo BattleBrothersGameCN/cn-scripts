@@ -333,7 +333,7 @@ this.character_screen <- {
 
 						if (other.getBackground().getID() == "background.slave")
 						{
-							other.improveMood(this.Const.MoodChange.SlaveCompensated, "高兴" + bro.getName() + "根据服役时间获得了补偿");
+							other.improveMood(this.Const.MoodChange.SlaveCompensated, "因" + bro.getName() + "根据服役时间获得了补偿而感到高兴");
 						}
 					}
 				}
@@ -2250,7 +2250,7 @@ this.character_screen <- {
 
 	function helper_convertErrorToUIData( _errorCode )
 	{
-		local errorString = "未定义的错误。";
+		local errorString = "未知错误。";
 
 		switch(_errorCode)
 		{
@@ -2259,11 +2259,11 @@ this.character_screen <- {
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToAcquireInventory:
-			errorString = "未能获取物品清单。";
+			errorString = "未能获取行李清单。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToAcquireStash:
-			errorString = "未能获取存储。";
+			errorString = "未能获取仓库清单。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToAcquireGroundItems:
@@ -2271,7 +2271,7 @@ this.character_screen <- {
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToFindGroundItem:
-			errorString = "未能找到地上的物品。";
+			errorString = "未能找到地上物品。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToFindBagItem:
@@ -2279,7 +2279,7 @@ this.character_screen <- {
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToFindStashItem:
-			errorString = "未能找到存储物品。";
+			errorString = "未能找到仓库物品。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToRemoveItemFromBag:
@@ -2287,11 +2287,11 @@ this.character_screen <- {
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToRemoveItemFromTargetSlot:
-			errorString = "无法从目标槽中移除物品。";
+			errorString = "未能从目标槽位中移除物品。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToRemoveItemFromSourceSlot:
-			errorString = "无法从源槽中移除物品。";
+			errorString = "未能从源槽位中移除物品。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToEquipBagItem:
@@ -2303,7 +2303,7 @@ this.character_screen <- {
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToEquipStashItem:
-			errorString = "未能装备存储物品。";
+			errorString = "未能装备仓库物品。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToPutItemIntoBag:
@@ -2315,7 +2315,7 @@ this.character_screen <- {
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.FailedToPutStashItemIntoBag:
-			errorString = "未能将存储物品进背包。";
+			errorString = "未能将仓库物品放进背包。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.ItemAlreadyWithinBag:
@@ -2327,7 +2327,7 @@ this.character_screen <- {
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.ItemIsNotAssignedToAnySlot:
-			errorString = "物品未分配到任何插槽。";
+			errorString = "物品未分配到任何槽位。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.NotEnoughActionPoints:
@@ -2339,7 +2339,7 @@ this.character_screen <- {
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.NotEnoughStashSpace:
-			errorString = "存储空间不足。";
+			errorString = "仓库空间不足。";
 			break;
 
 		case this.Const.CharacterScreen.ErrorCode.OnlyActiveEntityIsAllowedToChangeItems:

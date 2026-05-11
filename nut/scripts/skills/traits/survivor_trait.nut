@@ -6,7 +6,7 @@ this.survivor_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.survivor";
 		this.m.Name = "幸存者";
 		this.m.Icon = "ui/traits/trait_icon_43.png";
-		this.m.Description = "你怎么就死不了呢？这个角色是一个幸存者，他的寿命比大多数同龄人都要长。";
+		this.m.Description = "你怎么就死不了呢？这个角色命很硬，会比大多数同伴活得更久。";
 		this.m.Titles = [
 			"幸存者",
 			"幸运星",

@@ -2,7 +2,7 @@ this.fountain_of_youth_location <- this.inherit("scripts/entity/world/location",
 	m = {},
 	function getDescription()
 	{
-		return "森林中以一棵细长的古董树为中心的小空地。这棵树似乎有点不对劲，但很难从远处看出来。";
+		return "森林间有片小空地，中央矗立着一棵奇特的细长树木。这棵树似乎有些异样，但从远处难以看清。";
 	}
 
 	function create()

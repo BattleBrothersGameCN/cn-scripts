@@ -66,7 +66,7 @@ this.manhunters_ledger_item <- this.inherit("scripts/items/item", {
 			id = 65,
 			type = "text",
 			icon = "ui/icons/xp_received.png",
-			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 负债者经验获取"
+			text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color]负债者经验获取"
 		});
 		result.push({
 			id = 65,

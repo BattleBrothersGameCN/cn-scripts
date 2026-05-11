@@ -6,7 +6,7 @@ this.night_blind_trait <- this.inherit("scripts/skills/traits/character_trait", 
 		this.m.ID = "trait.night_blind";
 		this.m.Name = "夜盲";
 		this.m.Icon = "ui/traits/trait_icon_56.png";
-		this.m.Description = "在夜间，这个角色必须和一群人绑在一起，因为他甚至看不到自己的鼻子。";
+		this.m.Description = "在夜间，这个角色必须被人牵着才能走路，因为他甚至看不到自己的鼻子。";
 		this.m.Excluded = [
 			"trait.eagle_eyes",
 			"trait.night_owl"

@@ -6,10 +6,10 @@ this.impatient_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.impatient";
 		this.m.Name = "急躁";
 		this.m.Icon = "ui/traits/trait_icon_46.png";
-		this.m.Description = "我们赶紧走吧！怎么还拖拖拉拉的？这个人物希望现在就开始做事。";
+		this.m.Description = "我们赶紧走吧！怎么还拖拖拉拉的？这个角色总是迫不及待。";
 		this.m.Titles = [
-			"快人一步",
-			"渴望者",
+			"快腿",
+			"急先锋",
 			"急性子"
 		];
 		this.m.Excluded = [

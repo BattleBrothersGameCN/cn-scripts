@@ -4,9 +4,9 @@ this.oath_of_distinction_trait <- this.inherit("scripts/skills/traits/character_
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.oath_of_distinction";
-		this.m.Name = "超群誓言";
+		this.m.Name = "独身誓言";
 		this.m.Icon = "ui/traits/trait_icon_88.png";
-		this.m.Description = "该角色立下了超群誓言，发誓在寻求胜利时不得借助盟友的支持。";
+		this.m.Description = "该角色立下了独身誓言，发誓在寻求胜利时不得借助盟友的支持。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}
@@ -34,7 +34,7 @@ this.oath_of_distinction_trait <- this.inherit("scripts/skills/traits/character_
 				id = 10,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+3[/color]每回合疲劳值回复量（相邻格没有队友时）"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+3[/color] 每回合疲劳值回复量（相邻格没有队友时）"
 			},
 			{
 				id = 10,

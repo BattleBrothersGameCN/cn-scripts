@@ -232,11 +232,11 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 		if (!this.World.Assets.isIronman())
 		{
-			this.showDialogPopup("退出到主菜单", "你确定要退出这场战斗并返回主菜单吗？\n\n在战斗中取得的任何进展都将丢失，但战斗开始前已经进行了自动保存。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
+			this.showDialogPopup("退出到主菜单", "你确定要退出这场战斗并返回主菜单吗？\n\n\n\n在战斗中取得的任何进展都将丢失，但战斗开始前已经进行了自动保存。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
 		}
 		else
 		{
-			this.showDialogPopup("退出并退休", "你确定你想退出这场战斗，并因此输掉你的铁人模式游戏，从战团退休吗？\n\n你的存档将被删除，你将无法继续。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
+			this.showDialogPopup("退出并退休", "你确定你想退出这场战斗，并就此结束你的铁人模式游戏，从战团退休吗？\n\n\n\n你的存档将被删除并且无法继续。", this.onQuitToMainMenu.bindenv(this), this.onCancelQuitToMainMenu.bindenv(this));
 		}
 
 		this.Cursor.setCursor(this.Const.UI.Cursor.Hand);
@@ -1348,7 +1348,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 					if (this.isKindOf(targetEntity, "actor"))
 					{
-						this.logDebug("[" + _activeEntity.getName() + "] 正在执行技能： [" + skill.getName() + "] ，目标是： [" + targetEntity.getName() + "]");
+						this.logDebug("[" + _activeEntity.getName() + "]正在执行技能：[" + skill.getName() + "]，目标是：[" + targetEntity.getName() + "]");
 					}
 				}
 
@@ -1369,7 +1369,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 			else
 			{
 				this.Cursor.setCursor(this.Const.UI.Cursor.Denied);
-				this.Tactical.EventLog.log("[color=" + this.Const.UI.Color.NegativeValue + "]无效的目标！[/color]");
+				this.Tactical.EventLog.log("[color=" + this.Const.UI.Color.NegativeValue + "]无效目标！[/color]");
 			}
 		}
 	}
@@ -2264,7 +2264,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 	function turnsequencebar_onNextRound( _round )
 	{
-		this.logDebug("下一轮已发布：" + _round);
+		this.logDebug("下一轮已开始：" + _round);
 		this.Time.setRound(_round);
 
 		if (this.m.StrategicProperties != null && this.m.StrategicProperties.IsArenaMode)
@@ -2462,22 +2462,22 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 		{
 		case this.Const.Tactical.CombatResult.EnemyDestroyed:
 			result.title = "胜利";
-			result.subTitle = "敌人被消灭了, 战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
+			result.subTitle = "敌人被消灭了，战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.EnemyRetreated:
 			result.title = "胜利";
-			result.subTitle = "敌人撤退了, 战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
+			result.subTitle = "敌人撤退了，战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.PlayerDestroyed:
 			result.title = "失败";
-			result.subTitle = "你战败了, 战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
+			result.subTitle = "你战败了，战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
 			break;
 
 		case this.Const.Tactical.CombatResult.PlayerRetreated:
 			result.title = "撤退";
-			result.subTitle = "你撤退了, 战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
+			result.subTitle = "你撤退了，战斗历时" + rounds + "回合" + (rounds > 1 ? "s" : "");
 
 			if (!this.isScenarioMode())
 			{
@@ -3610,11 +3610,11 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 						if (this.m.IsDeveloperModeEnabled)
 						{
-							this.logDebug("***开发者模式已启用***");
+							this.logDebug("*** 开发者模式已启用 ***");
 						}
 						else
 						{
-							this.logDebug("***开发者模式已禁用***");
+							this.logDebug("*** 开发者模式已禁用 ***");
 						}
 					}
 

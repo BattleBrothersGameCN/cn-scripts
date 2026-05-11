@@ -6,7 +6,7 @@ this.greedy_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.greedy";
 		this.m.Name = "贪婪";
 		this.m.Icon = "ui/traits/trait_icon_06.png";
-		this.m.Description = "我还要更多！这个角色很贪婪，会比类似背景的人需求更高的日薪，一旦你的克朗用完，他就会很快离开。";
+		this.m.Description = "我还要更多！这个角色很贪婪，其日薪会比类似背景的人更高，一旦你的克朗用完，他会很快离开。";
 		this.m.Excluded = [];
 	}
 

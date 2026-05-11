@@ -2,7 +2,7 @@ this.tundra_elk_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "在一个小湖边的树荫下，一只孤独的麋鹿在绿色的草地上吃草。";
+		return "在一个小湖边的树荫下，一只孤独的麋鹿在绿色的草地上进食。";
 	}
 
 	function create()

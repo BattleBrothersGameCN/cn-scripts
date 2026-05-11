@@ -226,7 +226,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 
 		if (this.findEntityByID(this.m.AllEntities, entityId) != null)
 		{
-			this.logDebug("TurnSequenceBar::addEntity(" + _entity.getName() + "已存在。)");
+			this.logDebug("TurnSequenceBar::addEntity(" + _entity.getName() + " already exists.)");
 			return false;
 		}
 
@@ -314,7 +314,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 	{
 		if (this.m.IsBattleEnded)
 		{
-			this.logDebug("信息: 战斗历时" + this.m.CurrentRound + "回合。");
+			this.logDebug("信息：战斗历时" + this.m.CurrentRound + "回合。");
 			return;
 		}
 
@@ -747,7 +747,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 					flashBars.fatigue <- true;
 				}
 
-				this.Tactical.EventLog.log("[color=" + this.Const.UI.Color.NegativeValue + "]角色太疲劳了！[/color]");
+				this.Tactical.EventLog.log("[color=" + this.Const.UI.Color.NegativeValue + "]角色疲劳值过高！[/color]");
 			}
 
 			if (flashBars != null)
@@ -1097,7 +1097,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 		}
 		else
 		{
-			this.logDebug("错误：对于未知的实体点击了技能！");
+			this.logDebug("ERROR: Skill was clicked for an unknown entity!");
 		}
 	}
 
@@ -1116,7 +1116,7 @@ this.turn_sequence_bar <- this.inherit("scripts/ui/screens/ui_module", {
 		}
 		else
 		{
-			this.logDebug("错误：未知实体点击了技能取消！");
+			this.logDebug("ERROR: Skill cancel was clicked for an unknown entity!");
 		}
 	}
 

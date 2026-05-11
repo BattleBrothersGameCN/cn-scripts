@@ -2,7 +2,7 @@ this.oracle_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "一座曾经容纳着古代先知的神殿遗址。虽然现在已经破败不堪，但人们仍涌向这里，并对即将发生的事情抱有幻想。";
+		return "一座古老神庙的遗迹，在久远的过去曾有先知居住于此。如今虽已倾颓，人们仍蜂拥而至，企图在此窥探未来的景象。";
 	}
 
 	function create()
@@ -21,7 +21,7 @@ this.oracle_location <- this.inherit("scripts/entity/world/location", {
 
 	function onSpawned()
 	{
-		this.m.Name = "神谕之地";
+		this.m.Name = "神谕所";
 		this.location.onSpawned();
 	}
 

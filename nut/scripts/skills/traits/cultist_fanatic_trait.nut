@@ -4,9 +4,9 @@ this.cultist_fanatic_trait <- this.inherit("scripts/skills/traits/character_trai
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.cultist_fanatic";
-		this.m.Name = "达库尔狂热者";
+		this.m.Name = "达库尔盲信者";
 		this.m.Icon = "ui/traits/trait_icon_64.png";
-		this.m.Description = "这个角色是一名达库尔的狂热追随者，相信达库尔会通过死亡将人迎接到自己的神域。";
+		this.m.Description = "这个角色是达库尔的狂热信徒，坚信死亡即是达库尔对人类的终极拥抱。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 

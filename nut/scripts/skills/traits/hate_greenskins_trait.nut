@@ -6,7 +6,7 @@ this.hate_greenskins_trait <- this.inherit("scripts/skills/traits/character_trai
 		this.m.ID = "trait.hate_greenskins";
 		this.m.Name = "憎恨绿皮";
 		this.m.Icon = "ui/traits/trait_icon_52.png";
-		this.m.Description = "这个角色过去生活中的一些事情激起了他对所有绿色和卑鄙事物的强烈仇恨。";
+		this.m.Description = "这个角色过去的一些经历让他对所有卑劣的绿皮生物抱有强烈的仇恨。";
 		this.m.Titles = [
 			"兽人克星"
 		];
@@ -36,7 +36,7 @@ this.hate_greenskins_trait <- this.inherit("scripts/skills/traits/character_trai
 				id = 10,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 决心，与绿皮战斗时"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 决心（与绿皮战斗时）"
 			}
 		];
 	}

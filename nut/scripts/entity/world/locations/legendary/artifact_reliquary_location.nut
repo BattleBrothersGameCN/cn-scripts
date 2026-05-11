@@ -2,7 +2,7 @@ this.artifact_reliquary_location <- this.inherit("scripts/entity/world/location"
 	m = {},
 	function getDescription()
 	{
-		return "一座倒塌成废墟的古建筑。偶尔闪出的火光和深处传出的怪声出卖了里面的住人。";
+		return "一座远古遗留至今的坍塌废墟。偶尔闪出的火光和深处传出的怪声提示其中并非空无一人。";
 	}
 
 	function create()

@@ -6,9 +6,9 @@ this.quick_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.quick";
 		this.m.Name = "快速";
 		this.m.Icon = "ui/traits/trait_icon_18.png";
-		this.m.Description = "已经到了！这个角色行动迅速，通常比他的对手更快。";
+		this.m.Description = "抢先一步！这名角色行动迅捷，总能先于对手出手。";
 		this.m.Titles = [
-			"快人一步"
+			"快腿"
 		];
 		this.m.Excluded = [
 			"trait.huge",
@@ -34,7 +34,7 @@ this.quick_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color]主动值"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 主动值"
 			}
 		];
 	}

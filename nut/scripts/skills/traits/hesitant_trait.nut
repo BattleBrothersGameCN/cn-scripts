@@ -6,9 +6,9 @@ this.hesitant_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.hesitant";
 		this.m.Name = "犹豫";
 		this.m.Icon = "ui/traits/trait_icon_25.png";
-		this.m.Description = "嗯……好……也许吧。这个角色对行动很犹豫。";
+		this.m.Description = "嗯……好……也许吧。这个角色做起事来瞻前顾后。";
 		this.m.Titles = [
-			"缓慢者"
+			"拖沓鬼"
 		];
 		this.m.Excluded = [
 			"trait.fearless",
@@ -39,7 +39,7 @@ this.hesitant_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color]主动值"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color] 主动值"
 			}
 		];
 	}

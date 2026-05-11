@@ -6,7 +6,7 @@ this.brute_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.brute";
 		this.m.Name = "粗野";
 		this.m.Icon = "ui/traits/trait_icon_01.png";
-		this.m.Description = "不太擅长精准攻击，在近战中，这个角色会全力击打对手的头部，以准头为代价造成额外伤害。";
+		this.m.Description = "不太擅长精准攻击，在近战中，这个角色会全力击打对手的头部造成额外伤害，但命中率较低。";
 		this.m.Titles = [
 			"公牛",
 			"壮牛",

@@ -6,7 +6,7 @@ this.clumsy_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.clumsy";
 		this.m.Name = "笨拙";
 		this.m.Icon = "ui/traits/trait_icon_36.png";
-		this.m.Description = "这个角色对自己和对手同样危险。";
+		this.m.Description = "这个角色动起手来往往伤敌一千自损八百。";
 		this.m.Excluded = [
 			"trait.weasel",
 			"trait.dexterous",

@@ -6,7 +6,7 @@ this.arena_veteran_trait <- this.inherit("scripts/skills/traits/character_trait"
 		this.m.ID = "trait.arena_veteran";
 		this.m.Name = "竞技场老兵";
 		this.m.Icon = "ui/traits/trait_icon_75.png";
-		this.m.Description = "作为一个有着许多伤疤的竞技场老兵，这个角色知道如何让人群为血腥的场面欢呼。实力越是悬殊，娱乐效果越好！";
+		this.m.Description = "这位身负无数伤疤的竞技场老手，深知如何用血腥场面引爆观众欢呼。越是胜算渺茫的对决，越能成就绝佳表演！";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 

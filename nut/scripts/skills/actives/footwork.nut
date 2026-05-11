@@ -4,7 +4,7 @@ this.footwork <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.footwork";
 		this.m.Name = "步法";
-		this.m.Description = "使用熟练的步法离开敌对控制区域且不触发借机攻击。";
+		this.m.Description = "使用熟练的步法离开敌方控制区且不触发借机攻击。";
 		this.m.Icon = "ui/perks/perk_25_active.png";
 		this.m.IconDisabled = "ui/perks/perk_25_active_sw.png";
 		this.m.Overlay = "perk_25_active";
@@ -55,7 +55,7 @@ this.footwork <- this.inherit("scripts/skills/skill", {
 				id = 9,
 				type = "text",
 				icon = "ui/tooltips/warning.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]只能在对手的控制区内使用[/color]"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]只能在敌方控制区内使用[/color]"
 			});
 		}
 

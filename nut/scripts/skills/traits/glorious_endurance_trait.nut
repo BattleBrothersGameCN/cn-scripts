@@ -6,14 +6,14 @@ this.glorious_endurance_trait <- this.inherit("scripts/skills/traits/character_t
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.glorious";
-		this.m.Name = "忍耐之誉";
+		this.m.Name = "荣耀之躯";
 		this.m.Icon = "ui/traits/trait_icon_70.png";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 
 	function getDescription()
 	{
-		return "这个角色在南方的竞技场上经历过许多战斗的锻炼，每一次打击只会增强他不屈不挠的意志和耐力。他奢靡的生活需要高薪来维持，但他永远不会抛弃你，也不能被解雇。如果三个初始成员都死了，你的战役就结束了。";
+		return "这个角色在南方的竞技场上经历过无数战斗的锤炼，每一次打击只会增强他不屈不挠的意志和体魄。他奢靡的生活需要高薪来维持，但他永远不会抛弃你，也不能被解雇。如果三个初始成员都死了，你的战役就结束了。";
 	}
 
 	function getTooltip()

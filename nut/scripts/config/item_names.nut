@@ -416,7 +416,7 @@ gt.Const.Strings.JavelinNames <- [
 ];
 gt.Const.Strings.FencingSwordNames <- [
 	"毒刺",
-	"冷锋",
+	"花剑",
 	"棘刺",
 	"钢钳",
 	"利刃",

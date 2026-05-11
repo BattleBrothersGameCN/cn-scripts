@@ -2,7 +2,7 @@ this.kraken_cult_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "带有奇怪标记的石圈和石柱暗示着该地区有一些怪异的东西正在出没。";
+		return "带有奇怪标记的石圈和石柱，暗示着此地潜藏着某种诡异事物。";
 	}
 
 	function create()

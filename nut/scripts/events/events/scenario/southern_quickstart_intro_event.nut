@@ -36,7 +36,7 @@ this.southern_quickstart_intro_event <- this.inherit("scripts/events/event", {
 
 	function onPrepare()
 	{
-		this.m.Title = "这个" + this.World.Assets.getName();
+		this.m.Title = "战团" + this.World.Assets.getName();
 	}
 
 	function onPrepareVariables( _vars )

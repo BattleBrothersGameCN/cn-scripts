@@ -23,7 +23,7 @@ this.campfire_main_dialog_module <- this.inherit("scripts/ui/screens/ui_module",
 		local shield = this.World.Assets.getBannerID() < 10 ? "0" + this.World.Assets.getBannerID() : this.World.Assets.getBannerID();
 		local result = {
 			Title = "随从",
-			SubTitle = "管理你的非战斗追随者",
+			SubTitle = "管理你的非战斗随从",
 			Assets = this.UIDataHelper.convertAssetsInformationToUIData(),
 			Background = this.Const.World.TerrainSettlementImages[type].Background + (night ? "_night" : "") + ".jpg",
 			BackgroundCenter = "ui/campfire/campfire_tents_01.png",
@@ -61,11 +61,11 @@ this.campfire_main_dialog_module <- this.inherit("scripts/ui/screens/ui_module",
 		{
 			if (this.World.Assets.getMoney() >= this.Const.World.InventoryUpgradeCosts[this.World.Retinue.getInventoryUpgrades()])
 			{
-				this.showDialogPopup(this.Const.Strings.InventoryUpgradeHeader[this.World.Retinue.getInventoryUpgrades()], "你可以选择" + this.Const.Strings.InventoryUpgradeText[this.World.Retinue.getInventoryUpgrades()] + "以获得 27 个额外的仓库空间, 这需要花费" + this.Const.Strings.InventoryUpgradeCosts[this.World.Retinue.getInventoryUpgrades()] + "克朗，你确定要这样做吗？", this.onUpgradeInventorySpace.bindenv(this), null);
+				this.showDialogPopup(this.Const.Strings.InventoryUpgradeHeader[this.World.Retinue.getInventoryUpgrades()], "你可以选择" + this.Const.Strings.InventoryUpgradeText[this.World.Retinue.getInventoryUpgrades()] + "以获得27个额外的仓库栏位，这需要花费" + this.Const.Strings.InventoryUpgradeCosts[this.World.Retinue.getInventoryUpgrades()] + "克朗，你确定要这样做吗？", this.onUpgradeInventorySpace.bindenv(this), null);
 			}
 			else
 			{
-				this.showDialogPopup(this.Const.Strings.InventoryUpgradeHeader[this.World.Retinue.getInventoryUpgrades()], "很遗憾, 你的资金少于" + this.Const.Strings.InventoryUpgradeCosts[this.World.Retinue.getInventoryUpgrades()] + "克朗, 无法" + this.Const.Strings.InventoryUpgradeText[this.World.Retinue.getInventoryUpgrades()] + ", 暂时无法获得更多的仓库空间", null, null, true);
+				this.showDialogPopup(this.Const.Strings.InventoryUpgradeHeader[this.World.Retinue.getInventoryUpgrades()], "很遗憾，你的资金少于" + this.Const.Strings.InventoryUpgradeCosts[this.World.Retinue.getInventoryUpgrades()] + "克朗，无法" + this.Const.Strings.InventoryUpgradeText[this.World.Retinue.getInventoryUpgrades()] + "，暂时无法获得更多的仓库空间", null, null, true);
 			}
 		}
 	}

@@ -6,7 +6,7 @@ this.drunkard_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.drunkard";
 		this.m.Name = "酒鬼";
 		this.m.Icon = "ui/traits/trait_icon_29.png";
-		this.m.Description = "不用猜就知道他把钱花在哪了。可以预料到他每场战斗前都会使劲喝酒，必要情况下会悄悄喝。";
+		this.m.Description = "不用猜就知道他把钱花在哪了。他每场战斗之前必先豪饮，必要时还会偷偷喝。";
 		this.m.Titles = [
 			"醉汉",
 			"酒鬼"

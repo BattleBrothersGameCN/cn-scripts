@@ -11,7 +11,7 @@ this.aimed_shot <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.aimed_shot";
 		this.m.Name = "瞄准射击";
-		this.m.Description = "集中注意，仔细瞄准。即使预设目标较远也相对容易命中。陷入近战后无法使用。";
+		this.m.Description = "集中注意，仔细瞄准。即使离预设目标较远也相对容易命中。陷入近战后无法使用。";
 		this.m.KilledString = "射杀";
 		this.m.Icon = "skills/active_18.png";
 		this.m.IconDisabled = "skills/active_18_sw.png";
