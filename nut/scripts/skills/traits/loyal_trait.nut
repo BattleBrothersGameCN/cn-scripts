@@ -6,11 +6,11 @@ this.loyal_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.loyal";
 		this.m.Name = "忠诚";
 		this.m.Icon = "ui/traits/trait_icon_39.png";
-		this.m.Description = "与你同在！这个角色忠诚到底，即使你耗尽了克朗和粮食，也不太可能离开你。";
+		this.m.Description = "我陪着你！这个角色忠诚到底，即使你耗尽了克朗和粮食，也不太可能离开你。";
 		this.m.Titles = [
-			"忠诚者",
-			"The Follower",
-			"狗"
+			"死忠",
+			"跟班",
+			"老狗"
 		];
 		this.m.Excluded = [
 			"trait.disloyal",

@@ -80,7 +80,7 @@ this.event_manager <- {
 	{
 		if (this.m.ActiveEvent != null && this.m.ActiveEvent.getID() != _id)
 		{
-			this.logInfo("事件触发失败-另一个事件ID为\'" + this.m.ActiveEvent.getID() + "\'已加入队列。");
+			this.logInfo("事件触发失败——另一个ID为\'" + this.m.ActiveEvent.getID() + "\'的事件已在队列中。");
 			return false;
 		}
 
@@ -109,7 +109,7 @@ this.event_manager <- {
 		}
 		else
 		{
-			this.logInfo("无法触发事件 - ID为\'" + _id + "\'未找到。");
+			this.logInfo("事件触发失败——ID\'" + _id + "\'未找到。");
 			return false;
 		}
 	}

@@ -8,13 +8,13 @@ this.retinue_slot_event <- this.inherit("scripts/events/event", {
 		this.m.Title = "在途中……";
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%companyname% 的威信和名望不断提高。 无论你去哪里，人们都渴望着加入你们－不仅仅是佣兵，也有其他用途的追随者！ | 随着佣兵们在每一场战役中的战斗，战团的名望都在不断提高。 因为名声的提高，更多人，不仅仅是佣兵，期待加入 %companyname%。也许该是战团该招下一个追随者的时候了？ | %companyname% 需要的下属不仅仅是战士－看来随着战团名望和威信的增长，会有其他人愿意搭顺风车。 也许这些跟随者对战团有很大的用处，即使它们在战场上没有贡献。}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%companyname%的威信和名望不断提高。无论你走到哪里，都有人想要加入——不仅仅是佣兵，还有能在其他方面派上用场的追随者！ | 随着每一场战斗的胜利，战团的名望不断提升。名声越响，想要加入%companyname%的人就越多——不限于佣兵。或许是时候考虑吸纳新的追随者了？ | %companyname%的追随者不必都是战士——随着战团名望和威信的增长，似乎也有人愿意依附于我们。即使这些人不能在战场上效力，或许也能为战团提供重要帮助。}",
 			Banner = "",
 			List = [],
 			Characters = [],
 			Options = [
 				{
-					Text = "去看看我们的随行人员吧！",
+					Text = "看看能招募到什么随从！",
 					function getResult( _event )
 					{
 						return 0;

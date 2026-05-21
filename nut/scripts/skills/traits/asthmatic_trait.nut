@@ -6,7 +6,7 @@ this.asthmatic_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.asthmatic";
 		this.m.Name = "哮喘";
 		this.m.Icon = "ui/traits/trait_icon_22.png";
-		this.m.Description = "呼吸急促，容易咳嗽，这个角色需要更长时间从疲劳中恢复。";
+		this.m.Description = "这个角色容易气喘咳嗽，需要更长时间从疲劳中恢复。";
 		this.m.Titles = [];
 		this.m.Excluded = [
 			"trait.athletic",

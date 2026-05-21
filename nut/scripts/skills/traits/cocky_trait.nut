@@ -6,9 +6,9 @@ this.cocky_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.cocky";
 		this.m.Name = "自大";
 		this.m.Icon = "ui/traits/trait_icon_24.png";
-		this.m.Description = "都太简单了！这个角色有点自大，这对他不好。";
+		this.m.Description = "简直小菜一碟！这家伙有时候太过嘚瑟，对他自己不是件好事。";
 		this.m.Titles = [
-			"勇士",
+			"勇者",
 			"牛皮大王"
 		];
 		this.m.Excluded = [

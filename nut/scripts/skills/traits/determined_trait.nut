@@ -6,7 +6,7 @@ this.determined_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.determined";
 		this.m.Name = "坚定";
 		this.m.Icon = "ui/traits/trait_icon_31.png";
-		this.m.Description = "别担心，我办得到。这个人物展现出了相当可观的自信心。";
+		this.m.Description = "别担心，看我的。这个人物举手投足间透着一股稳如泰山的自信。";
 		this.m.Excluded = [
 			"trait.weasel",
 			"trait.dastard",

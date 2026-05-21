@@ -174,7 +174,7 @@ this.adopt_wardog_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "该死，他的适应力真强。",
+					Text = "该死，他本该能合得来的。",
 					function getResult( _event )
 					{
 						return 0;

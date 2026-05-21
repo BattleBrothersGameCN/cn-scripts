@@ -6,7 +6,7 @@ this.teamplayer_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.teamplayer";
 		this.m.Name = "团队精神";
 		this.m.Icon = "ui/traits/trait_icon_58.png";
-		this.m.Description = "这个角色总是向战友们宣布他的意图。其实，他就不知道什么叫闭嘴。至少这降低了发生意外的概率。";
+		this.m.Description = "这名角色总是会向战友们宣布他的意图。事实上，他简直喋喋不休……不过至少这能降低误伤的几率。";
 		this.m.Titles = [];
 		this.m.Excluded = [
 			"trait.cocky",

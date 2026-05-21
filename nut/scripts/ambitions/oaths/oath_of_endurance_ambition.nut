@@ -5,11 +5,11 @@ this.oath_of_endurance_ambition <- this.inherit("scripts/ambitions/oaths/oath_am
 		this.oath_ambition.create();
 		this.m.ID = "ambition.oath_of_endurance";
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
-		this.m.ButtonText = "坚持初创者安塞姆的誓言就是承担起一种无穷无尽的责任。\n让我们立下忍耐誓言，为即将到来的任务做好准备！";
+		this.m.ButtonText = "坚持初创者安塞姆的誓言就是承担起一种无穷无尽的责任。\n让我们立下坚韧誓言，为即将到来的任务做好准备！";
 		this.m.TooltipText = "“三番三次攀登，他们真的耐力惊人。” 据说当年年轻的安瑟姆爬上希加利亚山脉最高的峰顶时，他带着他最值得信任的九名追随者。";
 		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{一位著名将军被问到他希望看到哪支军队在他面前部署，他回答道：‘一支不需要呼吸的军队。’不管一个人有多么熟练，如果他没有战斗的能量，那么他所有的技能都将消失，只剩下呼吸声，甚至连剑术大师也会发现自己只有像一个卖酒的女人一样危险。现在喘上一口气，就等于成功地挥出了宝刀。%companyname%已经充分遵循了这个格言！现在战团已经充满了合适的激情，准备接受另一个誓言！}";
 		this.m.SuccessButtonText = "{为了小安瑟姆！ | 执誓者万岁！ | 给渡誓者以死亡！}";
-		this.m.OathName = "忍耐誓言";
+		this.m.OathName = "坚韧誓言";
 		this.m.OathBoonText = "你的所有战团成员每回合额外恢复" + this.Const.UI.Color.PositiveValue + "]+3[/color] 疲劳值。";
 		this.m.OathBurdenText = "你在每场战斗中最多出动 [color=" + this.Const.UI.Color.NegativeValue + "]10[/color] 人.";
 	}

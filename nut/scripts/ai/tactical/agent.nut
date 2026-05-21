@@ -452,7 +452,7 @@ this.agent <- {
 		if (this.Const.AI.VerboseMode && !this.m.Actor.isPlayerControlled())
 		{
 			this.logInfo("* ");
-			this.logInfo("* " + this.m.Actor.getName() + "：开始回合");
+			this.logInfo("* " + this.m.Actor.getName() + "：开始回合。");
 		}
 	}
 
@@ -485,7 +485,7 @@ this.agent <- {
 		if (this.Const.AI.VerboseMode && !this.m.Actor.isPlayerControlled())
 		{
 			this.logInfo("* ");
-			this.logInfo("* " + this.m.Actor.getName() + "：继续执行回合");
+			this.logInfo("* " + this.m.Actor.getName() + "：继续执行回合。");
 		}
 	}
 
@@ -628,7 +628,7 @@ this.agent <- {
 			{
 				if (this.Const.AI.VerboseMode && !this.m.Actor.isPlayerControlled())
 				{
-					this.logInfo("-> 选取行为: " + this.m.SortedBehaviors[i].getName() + " (" + this.m.SortedBehaviors[i].getScore() + ")");
+					this.logInfo("-> 选取行为：" + this.m.SortedBehaviors[i].getName() + " (" + this.m.SortedBehaviors[i].getScore() + ")");
 				}
 
 				return this.m.SortedBehaviors[i];

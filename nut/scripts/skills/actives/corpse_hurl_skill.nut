@@ -167,7 +167,7 @@ this.corpse_hurl_skill <- this.inherit("scripts/skills/skill", {
 		decal.setBrightness(0.9);
 		_user.spawnTerrainDropdownEffect(_tile);
 		local corpse = clone this.Const.Corpse;
-		corpse.CorpseName = "一具血肉模糊是尸体";
+		corpse.CorpseName = "一具腐尸";
 		corpse.Tile = _tile;
 		corpse.IsResurrectable = false;
 		corpse.IsConsumable = true;

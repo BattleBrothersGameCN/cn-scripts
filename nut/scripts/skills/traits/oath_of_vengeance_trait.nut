@@ -8,7 +8,7 @@ this.oath_of_vengeance_trait <- this.inherit("scripts/skills/traits/character_tr
 		this.m.ID = "trait.oath_of_vengeance";
 		this.m.Name = "复仇誓言";
 		this.m.Icon = "ui/traits/trait_icon_77.png";
-		this.m.Description = "该角色立下了复仇誓言，发誓要与为害人类的绿皮族作战。";
+		this.m.Description = "该角色立下了复仇誓言，发誓要与为害人类的绿皮作战。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}
@@ -30,61 +30,61 @@ this.oath_of_vengeance_trait <- this.inherit("scripts/skills/traits/character_tr
 				id = 10,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color] 意志（对抗绿皮族）"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15[/color] 意志（对抗绿皮时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/melee_skill.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 近战技能（对抗绿皮族）"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 近战技能（对抗绿皮时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/ranged_skill.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 远程技能（对抗绿皮族）"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 远程技能（对抗绿皮时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/melee_defense.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 近战防御（对抗绿皮族）"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 近战防御（对抗绿皮时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/ranged_defense.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 远程防御（对抗绿皮族）"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 远程防御（对抗绿皮时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color] 决心（对抗非绿皮族）"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-10[/color] 决心（对抗非绿皮敌人时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/melee_skill.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 近战技能（对抗非绿皮族）"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 近战技能（对抗非绿皮敌人时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/ranged_skill.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 远程技能（对抗非绿皮族）"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 远程技能（对抗非绿皮敌人时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/melee_defense.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 近战防御（对抗非绿皮族）"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 近战防御（对抗非绿皮敌人时）"
 			},
 			{
 				id = 10,
 				type = "text",
 				icon = "ui/icons/ranged_defense.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 远程防御（对抗非绿皮族）"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-5[/color] 远程防御（对抗非绿皮敌人时）"
 			}
 		];
 	}

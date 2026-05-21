@@ -34,7 +34,7 @@ this.optimist_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 决心，在积极士气检查时"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 决心（仅在正面士气检查中生效）"
 			},
 			{
 				id = 11,

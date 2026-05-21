@@ -1197,7 +1197,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			return false;
 		}
 
-		this.logDebug("位置已输入：" + _location.getName());
+		this.logDebug("已进入：" + _location.getName());
 
 		if (!this.isPaused())
 		{
@@ -2283,7 +2283,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 						"U"
 					]) ? "一个" : "一个";
 					entities.push({
-						Name = start + this.removeFromBeginningOfText("这个。", this.Const.Strings.EntityName[i]),
+						Name = start + this.removeFromBeginningOfText(" ", this.Const.Strings.EntityName[i]),
 						Icon = this.Const.EntityIcon[i],
 						Overlay = null
 					});
@@ -2316,7 +2316,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 
 			if (!_isPlayerInitiated)
 			{
-				text = "来不及辨别了。<br/>保护好自己！";
+				text = "来不及辨别来袭的敌人了。<br/>准备自卫！";
 			}
 			else
 			{
@@ -3157,7 +3157,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			}
 
 			this.logInfo("距离：" + this.m.LastTileHovered.getDistanceTo(this.getPlayer().getTile()));
-			this.logInfo("y: " + this.m.LastTileHovered.SquareCoords.Y);
+			this.logInfo("y：" + this.m.LastTileHovered.SquareCoords.Y);
 			this.logInfo("类型：" + this.m.LastTileHovered.Type);
 			return true;
 
@@ -3796,7 +3796,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			this.World.Flags.set("IsUnholdCampaign", true);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 6000, function ( _tag )
 			{
-				this.showDialogPopup("已加载旧版战役", "此战役是在激活“野兽与探险”DLC之前创建的。请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
+				this.showDialogPopup("已加载旧版战役", "此战役是在激活《野兽与探险》DLC之前创建的。请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
 			}.bindenv(this), null);
 		}
 		else if (this.Const.DLC.Wildmen && !this.World.Flags.get("IsWildmenCampaign"))
@@ -3804,7 +3804,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			this.World.Flags.set("IsWildmenCampaign", true);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 6000, function ( _tag )
 			{
-				this.showDialogPopup("已加载旧版战役", "此战役是在激活“北方勇士”DLC之前创建的。请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
+				this.showDialogPopup("已加载旧版战役", "此战役是在激活《北方勇士》DLC之前创建的。请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
 			}.bindenv(this), null);
 		}
 		else if (this.Const.DLC.Desert && !this.World.Flags.get("IsDesertCampaign"))
@@ -3812,7 +3812,7 @@ this.world_state <- this.inherit("scripts/states/state", {
 			this.World.Flags.set("IsDesertCampaign", true);
 			this.Time.scheduleEvent(this.TimeUnit.Real, 6000, function ( _tag )
 			{
-				this.showDialogPopup("已加载旧版战役", "此战役是在激活“炽热沙漠”DLC之前创建的。请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
+				this.showDialogPopup("已加载旧版战役", "此战役是在激活《炽热沙漠》DLC之前创建的。请注意，你可以继续游玩此战役，但除非你开始新的战役，你将无法访问所有新内容。", null, null, true);
 			}.bindenv(this), null);
 		}
 

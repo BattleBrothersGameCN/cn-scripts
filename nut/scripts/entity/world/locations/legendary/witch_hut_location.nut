@@ -2,7 +2,7 @@ this.witch_hut_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "一间歪斜、枯萎的小屋，看起来随时都可能倒塌。烟从歪斜的烟囱里冒出来。";
+		return "一间歪斜腐朽的小屋，看上去随时可能坍塌。歪扭的烟囱正升起袅袅炊烟。";
 	}
 
 	function create()

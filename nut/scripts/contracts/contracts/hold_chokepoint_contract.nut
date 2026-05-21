@@ -458,7 +458,7 @@ this.hold_chokepoint_contract <- this.inherit("scripts/contracts/contract", {
 			List = [],
 			Options = [
 				{
-					Text = "所有人，准备好！",
+					Text = "全体都有，备战！",
 					function getResult()
 					{
 						this.Flags.set("WaitUntil", this.Time.getVirtualTimeF() + this.Math.rand(5, 8));

@@ -4,12 +4,12 @@ this.weasel_trait <- this.inherit("scripts/skills/traits/character_trait", {
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.weasel";
-		this.m.Name = "鼬鼠";
+		this.m.Name = "黄鼠狼";
 		this.m.Icon = "ui/traits/trait_icon_60.png";
 		this.m.Description = "这个人物像黄鼠狼一样敏捷。可惜，只有逃命时他才能使出这种本领。";
 		this.m.Titles = [
 			"胆小鬼",
-			"鼬鼠",
+			"黄鼠狼",
 			"鸡仔",
 			"鳗鱼"
 		];

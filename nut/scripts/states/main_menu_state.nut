@@ -447,7 +447,7 @@ this.main_menu_state <- this.inherit("scripts/states/state", {
 			{
 				id = 4,
 				name = "游戏前期",
-				description = "[p=c][img]gfx/ui/events/event_09.png[/img][/p]\n[p=c]一场遭遇战，用前期能入手的装备对抗前期敌人组合。中等难度。[/p]"
+				description = "[p=c][img]gfx/ui/events/event_09.png[/img][/p]\n[p=c]用游戏前期能入手的装备对抗前期敌人组合。中等难度。[/p]"
 			},
 			{
 				id = 15,
@@ -477,7 +477,7 @@ this.main_menu_state <- this.inherit("scripts/states/state", {
 			{
 				id = 3,
 				name = "林中漫步",
-				description = "[p=c][img]gfx/ui/events/event_127.png[/img][/p]\n[p=c]可能在游戏后期遇到的敌人组成和可用装备。困难。[/p]"
+				description = "[p=c][img]gfx/ui/events/event_127.png[/img][/p]\n[p=c]用游戏后期能入手的装备对抗后期敌人组合。困难难度。[/p]"
 			}
 		];
 

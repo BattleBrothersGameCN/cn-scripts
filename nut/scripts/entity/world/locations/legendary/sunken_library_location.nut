@@ -2,7 +2,7 @@ this.sunken_library_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "从沙子里露出的金色圆顶在阳光下闪闪发光，透露出这里有更大的东西在沉睡，在沙子下沉没和埋葬了很多年。";
+		return "从沙子里露出的金色圆顶在阳光下熠熠生辉，揭示着更为庞大的建筑物正沉寂于此，深埋沙下历经岁月。";
 	}
 
 	function create()

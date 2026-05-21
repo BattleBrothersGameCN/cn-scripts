@@ -1439,7 +1439,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "失败于围攻 " + this.Flags.get("ObjectiveName"));
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "未能成功攻下" + this.Flags.get("ObjectiveName"));
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -1590,7 +1590,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "参加围攻" + this.Flags.get("ObjectiveName"));
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "参与围攻" + this.Flags.get("ObjectiveName"));
 						this.World.Contracts.finishActiveContract();
 
 						if (this.World.FactionManager.isCivilWar())
@@ -1625,7 +1625,7 @@ this.siege_fortification_contract <- this.inherit("scripts/contracts/contract", 
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "失败于围攻 " + this.Flags.get("ObjectiveName"));
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "未能成功攻下" + this.Flags.get("ObjectiveName"));
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}

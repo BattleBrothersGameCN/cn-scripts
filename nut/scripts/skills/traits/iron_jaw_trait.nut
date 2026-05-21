@@ -9,8 +9,8 @@ this.iron_jaw_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Description = "这个角色能轻易挨过那些足以瘫痪脆弱者的打击。";
 		this.m.Titles = [
 			"铁颌",
-			"岩石",
-			"种马"
+			"巨石",
+			"大马"
 		];
 		this.m.Excluded = [
 			"trait.fragile",

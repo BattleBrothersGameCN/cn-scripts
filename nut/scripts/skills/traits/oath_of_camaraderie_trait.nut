@@ -6,7 +6,7 @@ this.oath_of_camaraderie_trait <- this.inherit("scripts/skills/traits/character_
 		this.m.ID = "trait.oath_of_camaraderie";
 		this.m.Name = "友谊誓言";
 		this.m.Icon = "ui/traits/trait_icon_85.png";
-		this.m.Description = "该角色立下了友谊誓言，发誓与他的战友同生共死。然而更多参战人员导致的混乱，以及对个人技能和个人荣耀的关注的缺乏，都让这个角色在战斗开始时的决心受到了影响。";
+		this.m.Description = "该角色立下了友谊誓言，发誓与他的战友同生共死。然而，战场人数众多导致的普遍混乱，以及对个人技能与荣耀的忽视，会在战斗开始时削弱该角色的决心。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}

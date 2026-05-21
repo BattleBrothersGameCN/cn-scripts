@@ -139,7 +139,7 @@ this.goblin_city_enter_event <- this.inherit("scripts/events/event", {
 
 				},
 				{
-					Text = "暂时撤退。",
+					Text = "暂且撤退。",
 					function getResult( _event )
 					{
 						return 0;

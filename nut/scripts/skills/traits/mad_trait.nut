@@ -6,7 +6,7 @@ this.mad_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.mad";
 		this.m.Name = "疯狂";
 		this.m.Icon = "ui/traits/trait_icon_76.png";
-		this.m.Description = "这个角色凝视了深渊，深渊又凝视了回来，这把他逼疯了。他经常嘴里念叨些胡言乱语，并且他神秘的思维已经完全无法被同僚和敌人所掌握。";
+		this.m.Description = "这个角色凝视过深渊，也被深渊凝视过，这把他逼疯了。他经常嘴里念叨些胡言乱语，并且他神秘的思维已经完全无法被同僚和敌人所掌握。";
 	}
 
 	function getTooltip()

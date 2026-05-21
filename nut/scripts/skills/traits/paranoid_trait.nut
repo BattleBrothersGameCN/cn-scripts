@@ -6,7 +6,7 @@ this.paranoid_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.ID = "trait.paranoid";
 		this.m.Name = "被害妄想";
 		this.m.Icon = "ui/traits/trait_icon_55.png";
-		this.m.Description = "我打赌那边的树丛在动！这个角色格外谨慎，不愿意前进。";
+		this.m.Description = "我发誓那边的灌木丛刚才在动！这个角色特别谨慎，因此不愿贸然前进。";
 		this.m.Titles = [
 			"狂人",
 			"多疑者"
@@ -50,7 +50,7 @@ this.paranoid_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]-30[/color]主动值"
+				text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]-30[/color] 主动值"
 			}
 		];
 	}

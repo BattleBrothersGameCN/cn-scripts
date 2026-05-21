@@ -4,9 +4,9 @@ this.arena_fighter_trait <- this.inherit("scripts/skills/traits/character_trait"
 	{
 		this.character_trait.create();
 		this.m.ID = "trait.arena_fighter";
-		this.m.Name = "竞技场战士";
+		this.m.Name = "竞技场斗士";
 		this.m.Icon = "ui/traits/trait_icon_74.png";
-		this.m.Description = "听到一群人喊你的名字会让人上瘾。这个角色开始享受竞技场里的死斗，并以一种娱乐观众的方式解决对手。";
+		this.m.Description = "听到人群高呼你名字的感觉确实令人上瘾。这个角色开始沉迷于竞技场的殊死搏斗，并以取悦观众的方式解决对手。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 	}
 

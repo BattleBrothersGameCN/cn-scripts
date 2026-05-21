@@ -62,7 +62,7 @@ this.wagon_ambition <- this.inherit("scripts/ambitions/ambition", {
 		this.m.SuccessList.push({
 			id = 10,
 			icon = "ui/icons/special.png",
-			text = "你获得了27个额外的仓库空位"
+			text = "你获得了27个额外的仓库栏位"
 		});
 	}
 

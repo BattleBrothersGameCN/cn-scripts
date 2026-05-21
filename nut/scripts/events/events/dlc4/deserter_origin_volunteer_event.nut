@@ -153,7 +153,7 @@ this.deserter_origin_volunteer_event <- this.inherit("scripts/events/event", {
 					this.List.push({
 						id = 10,
 						icon = "ui/icons/asset_medicine.png",
-						text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color] 医疗用品"
+						text = "你失去了[color=" + this.Const.UI.Color.NegativeEventValue + "]-" + amount + "[/color]医疗用品"
 					});
 				}
 

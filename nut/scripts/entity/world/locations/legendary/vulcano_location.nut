@@ -2,7 +2,7 @@ this.vulcano_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "曾经的繁华城市，早已化作灰尘下的废墟。这座有过许多名字的旧日都会，如今被南北两方奉为各自宗教文化的载体。";
+		return "曾经的繁华城市，早已化作灰烬覆盖的废墟。这座有过诸多称谓的旧日都会，已成为南北双方文化与宗教尊严的象征。";
 	}
 
 	function create()

@@ -34,7 +34,7 @@ this.athletic_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 11,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "走过一格的疲劳值积累减少[color=" + this.Const.UI.Color.PositiveValue + "]2[/color]"
+				text = "走过一格的疲劳值积累减少[color=" + this.Const.UI.Color.PositiveValue + "]2[/color] 点"
 			}
 		];
 	}

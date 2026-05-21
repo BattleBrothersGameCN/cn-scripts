@@ -439,7 +439,7 @@ this.drive_away_barbarians_contract <- this.inherit("scripts/contracts/contract"
 
 				},
 				{
-					Text = "所有人，冲锋！",
+					Text = "全体都有，冲锋！",
 					function getResult()
 					{
 						this.World.Assets.addMoralReputation(-3);

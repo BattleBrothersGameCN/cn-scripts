@@ -8,7 +8,7 @@ this.tough_trait <- this.inherit("scripts/skills/traits/character_trait", {
 		this.m.Icon = "ui/traits/trait_icon_14.png";
 		this.m.Description = "这个角色硬得像钉子，挨打就像挠痒痒。";
 		this.m.Titles = [
-			"岩石",
+			"巨石",
 			"公牛",
 			"壮牛",
 			"大熊"

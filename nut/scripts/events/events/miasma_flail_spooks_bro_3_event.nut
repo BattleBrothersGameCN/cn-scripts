@@ -9,7 +9,7 @@ this.miasma_flail_spooks_bro_3_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 9999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "%terrainImage%{一个声音溜进了黑暗当中：你的妈妈在哪里……她就故意把你遗弃……我在哪里……我就给你她缺失带来的伤害那么多的爱。我会把你养育得很强大，佣兵，我会用生命的乳汁哺育你……\n\n 你猛然惊醒，只见眼前一片绿光，赶快一巴掌把它扇到了一边。%hauntedbrother%跌坐在地上，大先知的链枷咣地一声落在他的身边。佣兵摇摇头，眼睛睁得大大的，疑惑地环顾着四周。%SPEECH_ON%什，什么？我怎么跑到这里来了？%SPEECH_OFF%你盯着那链枷，看着它青绿的的光逐渐消散，一阵怪异的笑声随之回响起来。}",
+			Text = "%terrainImage%{一个声音溜进了黑暗当中：你的妈妈在哪里……她就故意把你遗弃……我在哪里……我就给你她缺失带来的伤害那么多的爱。我会把你养育得很强大，佣兵，我会用生命的乳汁哺育你……\n\n 你猛然惊醒，只见眼前一片绿光，赶快一巴掌把它扇到了一边。%hauntedbrother%跌坐在地上，大先知的链枷咣地一声落在他的身边。佣兵摇摇头，眼睛睁得大大的，疑惑地环顾着四周。%SPEECH_ON%什，什么？我怎么跑到这里来了？%SPEECH_OFF%你盯着那链枷，看着它青绿的光逐渐消散，一阵怪异的笑声随之回响起来。}",
 			Image = "",
 			List = [],
 			Characters = [],

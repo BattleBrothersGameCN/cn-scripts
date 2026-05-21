@@ -6,7 +6,7 @@ this.oath_of_wrath_trait <- this.inherit("scripts/skills/traits/character_trait"
 		this.m.ID = "trait.oath_of_wrath";
 		this.m.Name = "愤怒誓言";
 		this.m.Icon = "ui/traits/trait_icon_80.png";
-		this.m.Description = "该角色立下了愤怒誓言，发誓要斩杀任何敌人，即使他的敌人实力强大。";
+		this.m.Description = "该角色立下了愤怒誓言，发誓要斩杀任何敌人，即使对方实力强大。";
 		this.m.Order = this.Const.SkillOrder.Trait - 1;
 		this.m.Excluded = [];
 	}
@@ -28,7 +28,7 @@ this.oath_of_wrath_trait <- this.inherit("scripts/skills/traits/character_trait"
 				id = 10,
 				type = "text",
 				icon = "ui/icons/hitchance.png",
-				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15%[/color] 持有双手或双手握持近战武器攻击的命中率"
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]+15%[/color] 命中率（持有双手或双手握持单手近战武器时）"
 			},
 			{
 				id = 10,
@@ -46,7 +46,7 @@ this.oath_of_wrath_trait <- this.inherit("scripts/skills/traits/character_trait"
 				id = 10,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "所有的击杀都是必死击杀(如果武器允许)。"
+				text = "所有的击杀都是必死击杀（如果武器允许）。"
 			}
 		];
 	}

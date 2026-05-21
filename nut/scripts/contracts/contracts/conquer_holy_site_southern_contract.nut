@@ -670,7 +670,7 @@ this.conquer_holy_site_southern_contract <- this.inherit("scripts/contracts/cont
 
 				},
 				{
-					Text = "我们没办法再打一场了。撤退！",
+					Text = "我们没法继续战斗了。撤退！",
 					function getResult()
 					{
 						return "Failure";
