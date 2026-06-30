@@ -15,17 +15,17 @@ this.slave_southern_background <- this.inherit("scripts/skills/backgrounds/slave
 		this.m.Names = this.Const.Strings.SouthernNames;
 		this.m.LastNames = this.Const.Strings.SouthernNamesLast;
 		this.m.Titles = [
-			"受奴役者(the Enslaved)",
-			"囚犯(the Prisoner)",
-			"倒霉蛋(the Unlucky)",
-			"负债者(the Indebted)",
-			"负债者(the Indebted)",
-			"负债者(the Indebted)",
-			"不自由者(the Unfree)",
-			"罪犯(the Criminal)",
-			"顺从者(the Obedient)",
-			"受铐者(the Shackled)",
-			"被缚者(the Bound)"
+			"受奴役者",
+			"囚犯",
+			"倒霉蛋",
+			"负债者",
+			"负债者",
+			"负债者",
+			"不自由者",
+			"罪犯",
+			"顺从者",
+			"受铐者",
+			"被缚者"
 		];
 	}
 

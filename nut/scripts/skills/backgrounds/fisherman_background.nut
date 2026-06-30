@@ -21,8 +21,8 @@ this.fisherman_background <- this.inherit("scripts/skills/backgrounds/character_
 			"trait.fat"
 		];
 		this.m.Titles = [
-			"渔民(the Fisherman)",
-			"渔夫(the Fisher)"
+			"渔民",
+			"渔夫"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.CommonMale;

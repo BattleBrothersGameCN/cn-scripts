@@ -36,15 +36,15 @@ this.thief_background <- this.inherit("scripts/skills/backgrounds/character_back
 		];
 		this.m.Titles = [
 			"影子",
-			"掏包儿(the Cutpurse)",
-			"蛇(the Snake)",
+			"掏包儿",
+			"蛇",
 			"·渡鸦",
-			"恶贼(the Burglar)",
-			"抢掠者(the Snatcher)",
-			"黑猫(the Black Cat)",
-			"王子(the Prince)",
-			"快指(Quickfingers)",
-			"盗贼(the Thief)"
+			"恶贼",
+			"抢掠者",
+			"黑猫",
+			"王子",
+			"快指",
+			"盗贼"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.CommonMale;

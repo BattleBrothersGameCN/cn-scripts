@@ -22,8 +22,8 @@ this.eunuch_background <- this.inherit("scripts/skills/backgrounds/character_bac
 			"trait.impatient"
 		];
 		this.m.Titles = [
-			"阉人(the Eunuch)",
-			"去势者(the Gelding)"
+			"阉人",
+			"去势者"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.YoungMale;

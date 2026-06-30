@@ -35,7 +35,7 @@ this.oathbreaker_event <- this.inherit("scripts/events/event", {
 				if (this.World.Assets.getOrigin().getID() == "scenario.paladins")
 				{
 					this.Options.push({
-						Text = "年轻的安瑟姆(Anselm)有其他计划给你。加入我们！",
+						Text = "小安瑟姆对你另有安排。加入我们！",
 						function getResult( _event )
 						{
 							return "Oathtaker";

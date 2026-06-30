@@ -19,8 +19,8 @@ this.disowned_noble_background <- this.inherit("scripts/skills/backgrounds/chara
 			"trait.clubfooted"
 		];
 		this.m.Titles = [
-			"被断绝关系者(the Disowned)",
-			"流放者(the Exiled)",
+			"被断绝关系者",
+			"流放者",
 			"受辱者"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;

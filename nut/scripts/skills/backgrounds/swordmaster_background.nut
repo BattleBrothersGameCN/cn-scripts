@@ -43,9 +43,9 @@ this.swordmaster_background <- this.inherit("scripts/skills/backgrounds/characte
 			this.Const.Attributes.RangedSkill
 		];
 		this.m.Titles = [
-			"传奇(the Legend)",
-			"老卫兵(the Old Guard)",
-			"大师(the Master)"
+			"传奇",
+			"老卫兵",
+			"大师"
 		];
 		this.m.Faces = this.Const.Faces.SmartMale;
 		this.m.Hairs = this.Const.Hair.TidyMale;

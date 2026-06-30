@@ -31,7 +31,7 @@ this.irrational_trait <- this.inherit("scripts/skills/traits/character_trait", {
 				id = 10,
 				type = "text",
 				icon = "ui/icons/bravery.png",
-				text = "每当士气检查时，随机 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 或 [color=" + this.Const.UI.Color.NegativeValue + "]-10[/color] 决心"
+				text = "士气检定中，随机 [color=" + this.Const.UI.Color.PositiveValue + "]+10[/color] 或 [color=" + this.Const.UI.Color.NegativeValue + "]-10[/color] 决心"
 			}
 		];
 	}

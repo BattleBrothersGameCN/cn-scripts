@@ -256,7 +256,7 @@ this.anatomist_wants_skull_event <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				_event.m.Anatomist.improveMood(1.0, "获得了一颗不寻常的颅骨进行研究。");
-				_event.m.Wildman.improveMood(1.0, "帮助了 (Helped)" + _event.m.Anatomist.getName() + "获得一颗不寻常的头骨");
+				_event.m.Wildman.improveMood(1.0, "帮助" + _event.m.Anatomist.getName() + "获得了一颗不寻常的头骨");
 
 				if (_event.m.Anatomist.getMoodState() >= this.Const.MoodState.Neutral)
 				{

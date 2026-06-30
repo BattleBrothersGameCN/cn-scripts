@@ -59,7 +59,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[1].setStartValuesEx([
 			"manhunter_background"
 		]);
-		bros[1].setTitle("鞭子(the Whip)");
+		bros[1].setTitle("鞭子");
 		bros[1].getBackground().m.RawDescription = "{%name% 是你认识的最糟糕的人之一。 他对负债者毫不留情地残暴，即使以你的标准来衡量，他也要对你的一些捕获物负责。 也就是说，他的刻薄作风将对战团很有好处。 考虑到你已经因为失去库存而鞭打了他一到三次，你知道他也能承受打击。}";
 		bros[1].setPlaceInFormation(13);
 		local items = bros[1].getItems();
@@ -79,7 +79,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[2].setStartValuesEx([
 			"slave_southern_background"
 		]);
-		bros[2].setTitle("博学者(the Learned)");
+		bros[2].setTitle("博学者");
 		bros[2].getBackground().m.RawDescription = "{你发现 %name% 正受到城市警卫的法律制裁。 看起来他们要用他的手腕玩一个“接住弯刀”的游戏，直到你介入，他认为他欠镀金者的钱远比欠任何人的钱还多。 你希望把他高价卖给的维齐尔，但没有人会接受他，因为他太“博学”了，而且似乎正是那种会引发起义的威胁。 对一个地位如此之高的人来说，他确实对你怀有一点尊敬。}";
 		bros[2].setPlaceInFormation(2);
 		bros[2].getSkills().removeByID("trait.dumb");
@@ -93,7 +93,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[3].setStartValuesEx([
 			"slave_background"
 		]);
-		bros[3].setTitle("北方人(the Northerner)");
+		bros[3].setTitle("北方人");
 		bros[3].getBackground().m.RawDescription = "{无论如何不是一个友好的人，但这就是枷锁的作用。当你碰巧碰到他时，%name% 正因为一系列的犯罪而被送上了绞架。 你为他的生命付出了投资，说他现在应该努力工作才能在镀金者的目光中找到救赎。 他对你的虔诚信仰不太有把握，但你却雇了一位牧师来证实他的汗水确实来自于更高的崇高境界。}";
 		bros[3].setPlaceInFormation(3);
 		bros[3].getSprite("miniboss").setBrush("bust_miniboss_indebted");
@@ -106,7 +106,7 @@ this.manhunters_scenario <- this.inherit("scripts/scenarios/world/starting_scena
 		bros[4].setStartValuesEx([
 			"slave_southern_background"
 		]);
-		bros[4].setTitle("逃兵(the Deserter)");
+		bros[4].setTitle("逃兵");
 		bros[4].getBackground().m.RawDescription = "{%name% 是异端的传家宝，是维齐尔的一位牧师送给你的。 这个人在大领主的军队里是个逃兵，但通过富有的关系设法避免了处决。 然而，只有一种方法可以避免地狱之火，那就是通过负债感恩。 他会为你工作，直到他找到救赎，什么时候会发生完全取决于你。}";
 		bros[4].setPlaceInFormation(4);
 		bros[4].getSprite("miniboss").setBrush("bust_miniboss_indebted");

@@ -30,16 +30,16 @@ this.raider_background <- this.inherit("scripts/skills/backgrounds/character_bac
 			"trait.insecure"
 		];
 		this.m.Titles = [
-			"掠袭者(the Raider)",
-			"掳掠者(the Marauder)",
-			"可怖者(the Terrible)",
-			"强盗(the Bandit)",
-			"四指(Fourfingers)",
-			"乌鸦黑(Ravensblack)",
-			"乌鸦(The Crow)",
-			"反抗者(the Defiant)",
-			"劫掠者(the Pillager)",
-			"威胁者(the Menace)"
+			"掠袭者",
+			"掳掠者",
+			"可怖者",
+			"强盗",
+			"四指",
+			"乌鸦黑",
+			"乌鸦",
+			"反抗者",
+			"劫掠者",
+			"威胁者"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;

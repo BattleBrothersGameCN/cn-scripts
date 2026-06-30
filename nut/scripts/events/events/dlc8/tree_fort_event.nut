@@ -43,7 +43,7 @@ this.tree_fort_event <- this.inherit("scripts/events/event", {
 				if (this.World.Assets.getOrigin().getID() == "scenario.paladins")
 				{
 					this.Options.push({
-						Text = "宣誓者!(Oathtakers)",
+						Text = "执誓者!",
 						function getResult( _event )
 						{
 							return "D";

@@ -32,10 +32,10 @@ this.bowyer_background <- this.inherit("scripts/skills/backgrounds/character_bac
 			this.Const.Attributes.MeleeSkill
 		];
 		this.m.Titles = [
-			"弓匠(the Bowyer)",
-			"制箭师(the Fletcher)",
-			"制箭者(the Arrowmaker)",
-			"耐心者(the Patient)"
+			"弓匠",
+			"制箭师",
+			"制箭者",
+			"耐心者"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.TidyMale;

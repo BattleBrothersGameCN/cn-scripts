@@ -25,7 +25,7 @@ this.oathtakers_skull_event <- this.inherit("scripts/events/event", {
 			],
 			function start( _event )
 			{
-				_event.m.Oathtaker.improveMood(1.35, "年轻的安瑟姆(Anselm) 重归他的誓约信仰。");
+				_event.m.Oathtaker.improveMood(1.35, "小安瑟姆使他重拾了对誓言的信仰");
 
 				if (_event.m.Oathtaker.getMoodState() >= this.Const.MoodState.Neutral)
 				{

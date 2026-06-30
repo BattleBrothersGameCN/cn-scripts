@@ -30,12 +30,12 @@ this.deserter_background <- this.inherit("scripts/skills/backgrounds/character_b
 			this.Const.Attributes.Bravery
 		];
 		this.m.Titles = [
-			"逃兵(the Deserter)",
-			"叛徒(Turncloak)",
-			"背叛者(the Betrayer)",
-			"跑手(the Runner)",
+			"逃兵",
+			"叛徒",
+			"背叛者",
+			"跑路仔",
 			"狗",
-			"蠕虫(the Worm)"
+			"蠕虫"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.CommonMale;

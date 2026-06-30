@@ -309,7 +309,7 @@ this.shadow_dissection_event <- this.inherit("scripts/events/event", {
 					}
 					else if (this.Math.rand(1, 100) <= 33)
 					{
-						bro.worsenMood(0.5, "害怕 (Afraid of)" + _event.m.Mercenary.getName());
+						bro.worsenMood(0.5, "害怕" + _event.m.Mercenary.getName());
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{

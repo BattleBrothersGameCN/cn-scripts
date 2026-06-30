@@ -126,7 +126,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 					});
 				}
 
-				_event.m.Superstitious.improveMood(0.5, "目睹(Witnessed)" + _event.m.Victim.getName() + "被鸟屎砸中");
+				_event.m.Superstitious.improveMood(0.5, "目睹了" + _event.m.Victim.getName() + "被鸟屎砸中");
 
 				if (_event.m.Superstitious.getMoodState() >= this.Const.MoodState.Neutral)
 				{
@@ -192,7 +192,7 @@ this.bird_shits_on_sellsword_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 25)
 					{
-						bro.improveMood(1.0, "目睹(Witnessed)" + _event.m.Archer.getName() + "队长精湛的射箭技艺");
+						bro.improveMood(1.0, "目睹了" + _event.m.Archer.getName() + "精湛的射箭技艺");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

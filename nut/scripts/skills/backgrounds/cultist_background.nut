@@ -34,17 +34,17 @@ this.cultist_background <- this.inherit("scripts/skills/backgrounds/character_ba
 			"trait.fainthearted"
 		];
 		this.m.Titles = [
-			"邪教徒(the Cultist)",
+			"邪教徒",
 			"疯子",
 			"信徒",
-			"神秘学者(the Occultist)",
-			"疯狂者(the Insane)",
+			"神秘学者",
+			"疯狂者",
 			"The Follower",
-			"迷失者(the Lost)",
+			"迷失者",
 			"怪人",
-			"歧途者(the Misguided)",
-			"狂热者(the Fanatic)",
-			"狂信者(the Zealot)"
+			"歧途者",
+			"狂热者",
+			"狂信者"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;

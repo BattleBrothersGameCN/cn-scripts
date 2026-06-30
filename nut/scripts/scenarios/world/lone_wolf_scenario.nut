@@ -25,7 +25,7 @@ this.lone_wolf_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 		]);
 		bro.getBackground().m.RawDescription = "一个漂泊的流浪骑士，你是一个骑士比武和搏斗比赛的老手。同时你也曾屡战屡胜。这个事实让许多人听起来有些害怕，然而如果有什么事情可以吸引你去从事雇佣兵工作，那就是无聊了。表面上你会说是因为钱的缘故，但你内心知道，也是因为渴望伴侣。";
 		bro.getBackground().buildDescription(true);
-		bro.setTitle("独狼(the Lone Wolf)");
+		bro.setTitle("独狼");
 		bro.getSkills().removeByID("trait.survivor");
 		bro.getSkills().removeByID("trait.greedy");
 		bro.getSkills().removeByID("trait.loyal");

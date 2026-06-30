@@ -147,7 +147,7 @@ this.crusader_background <- this.inherit("scripts/skills/backgrounds/character_b
 	{
 		this.character_background.onAdded();
 		local actor = this.getContainer().getActor();
-		actor.setTitle("十字军(the Crusader)");
+		actor.setTitle("十字军");
 	}
 
 	function onAddEquipment()

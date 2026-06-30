@@ -57,7 +57,7 @@ this.civilwar_town_conquered_event <- this.inherit("scripts/events/event", {
 		]);
 		_vars.push([
 			"defeated",
-			this.m.News.get("失败了(Defeated)")
+			this.m.News.get("被击败")
 		]);
 		_vars.push([
 			"city",

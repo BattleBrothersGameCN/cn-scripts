@@ -30,11 +30,11 @@ this.killer_on_the_run_background <- this.inherit("scripts/skills/backgrounds/ch
 			"trait.optimist"
 		];
 		this.m.Titles = [
-			"黑心者(Darkhearted)",
-			"背藏刀(Backblade)",
-			"割喉(Throatslash)",
+			"黑心者",
+			"背藏刀",
+			"割喉",
 			"在逃者(on the Run)",
-			"通缉犯(the Wanted)",
+			"通缉犯",
 			"杀人犯"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;

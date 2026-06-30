@@ -43,12 +43,12 @@ this.wildman_background <- this.inherit("scripts/skills/backgrounds/character_ba
 			"trait.drunkard"
 		];
 		this.m.Titles = [
-			"蒙昧者(the Savage)",
-			"被驱逐者(the Outcast)",
-			"野人(the Wildman)",
-			"蛮族(the Feral)",
-			"野蛮者(the Wild)",
-			"野蛮人(the Barbarian)"
+			"蒙昧者",
+			"被驱逐者",
+			"野人",
+			"蛮族",
+			"野蛮者",
+			"野蛮人"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.WildMale;

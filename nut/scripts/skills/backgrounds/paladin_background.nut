@@ -12,15 +12,15 @@ this.paladin_background <- this.inherit("scripts/skills/backgrounds/character_ba
 		this.m.HiringCost = 150;
 		this.m.DailyCost = 22;
 		this.m.Titles = [
-			"圣战士(the Crusader)",
-			"狂信者(the Zealot)",
-			"尽责者(the Pious)",
-			"虔诚者(the Devoted)",
-			"圣武士(the Paladin)",
-			"正义者(the Righteous)",
-			"誓缚者(the Oathbound)",
-			"誓言守护者(the Oathsworn)",
-			"高尚者(the Virtuous)"
+			"圣战士",
+			"狂信者",
+			"虔敬者",
+			"虔诚者",
+			"圣武士",
+			"正义者",
+			"誓缚者",
+			"誓言守护者",
+			"高尚者"
 		];
 		this.m.Excluded = [
 			"trait.ailing",

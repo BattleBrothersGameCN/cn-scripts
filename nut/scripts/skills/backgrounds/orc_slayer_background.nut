@@ -147,7 +147,7 @@ this.orc_slayer_background <- this.inherit("scripts/skills/backgrounds/character
 	{
 		this.character_background.onAdded();
 		local actor = this.getContainer().getActor();
-		actor.setTitle("兽人杀手(the Orc Slayer)");
+		actor.setTitle("兽人杀手");
 	}
 
 	function onAddEquipment()

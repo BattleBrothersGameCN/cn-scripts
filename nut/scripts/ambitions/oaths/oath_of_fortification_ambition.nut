@@ -7,7 +7,7 @@ this.oath_of_fortification_ambition <- this.inherit("scripts/ambitions/oaths/oat
 		this.m.Duration = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.ButtonText = "邪恶之徒躲藏在公理与正义的高墙之外。\n让我们立下壁垒誓言，把这堵高墙拍在他们脸上！";
 		this.m.TooltipText = "“信任你的盾牌，就像你相信旧神一样，因为树木和土地的贡献不应被浪费在懦夫的神经紧张上。” - 年轻的安瑟姆";
-		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{古帝国的文献记载了军事编队之间的关系是如此之紧密和紧凑，以至于就像是脚下漫步的城堡：数百个盾牌像蛇鳞或乌龟壳一样紧密结合。%companyname%尽力复制这些理论，总需要一些时间来整合这些要素，但您从未打算将其变成一个卓越的演练。古人拥有帝国，而你是一群不和谐的人和宣誓者。但根据你的估计，毕竟团队仍在坚持，因此这个誓言是一个杰出的成功。\n\n现在是时候放下盾牌和古代帝国的热情，并接受新的誓言了！}";
+		this.m.SuccessText = "[img]gfx/ui/events/event_180.png[/img]{古帝国文献中所记载的军事阵型十分紧凑，动起来宛如移动的堡垒：数百面盾牌紧紧相连，如同蛇鳞或龟甲。%companyname%竭尽全力去复现这些理论，但要将各个要素整合起来毕竟需要时间，你从没有指望这次演练能有多成功。古人能建立帝国自有其原因，而你们只是一群不合群的执誓者。但依你的判断 ——战团是否还活着 —— 这次誓约可谓大获成功。\n\n现在是时候放下盾牌和对古代帝国的狂热，立下新的誓言了！}";
 		this.m.SuccessButtonText = "{为了小安瑟姆！ | 执誓者万岁！ | 给渡誓者以死亡！}";
 		this.m.OathName = "壁垒誓言";
 		this.m.OathBoonText = "你的所有战团成员中使用盾牌技能时减少 [color=" + this.Const.UI.Color.NegativeValue + "25%疲劳值积累。”盾墙“技能提供额外 [color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 近战防御和 [color=" + this.Const.UI.Color.PositiveValue + "]+5[/color] 远程防御。“击退”技能在成功命中时会对目标施加踉跄效果。";

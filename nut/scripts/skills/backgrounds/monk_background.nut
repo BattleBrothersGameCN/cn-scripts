@@ -30,14 +30,14 @@ this.monk_background <- this.inherit("scripts/skills/backgrounds/character_backg
 			"trait.bloodthirsty"
 		];
 		this.m.Titles = [
-			"虔诚者 (the Pious)",
-			"僧侣(the Monk)",
-			"学者(the Scholar)",
-			"传教士(the Preacher)",
-			"虔诚者(the Devoted)",
-			"无声者(the Quiet)",
-			"沉稳者(the Calm)",
-			"忠诚者(the Faithful)"
+			"虔诚者",
+			"僧侣",
+			"学者",
+			"传教士",
+			"虔诚者",
+			"无声者",
+			"沉稳者",
+			"忠诚者"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.Monk;

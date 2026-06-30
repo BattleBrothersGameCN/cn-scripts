@@ -559,7 +559,7 @@ gt.Const.World.LocationNames.GreenskinCamp <- [
 gt.Const.World.LocationNames.GoblinCamp <- [
 	"蓄奴者营地",
 	"尖牙窝点",
-	"串肉扦藏身处",
+	"穿刺者藏身处",
 	"长矛窝点",
 	"黑狼窝点",
 	"尖耳藏身处",

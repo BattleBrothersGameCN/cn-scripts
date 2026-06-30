@@ -26,9 +26,9 @@ this.miner_background <- this.inherit("scripts/skills/backgrounds/character_back
 			"trait.dastard"
 		];
 		this.m.Titles = [
-			"矿工(the Miner)",
-			"爬行者(the Crawler)",
-			"地底人(Earthside)"
+			"矿工",
+			"爬行者",
+			"地底人"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;

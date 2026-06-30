@@ -12,19 +12,19 @@ this.slave_barbarian_background <- this.inherit("scripts/skills/backgrounds/slav
 		this.m.Bodies = this.Const.Bodies.AllMale;
 		this.m.Names = this.Const.Strings.BarbarianNames;
 		this.m.Titles = [
-			"野蛮人(the Barbarian)",
-			"北人(the Northman)",
-			"苍白者(the Pale)",
-			"囚犯(the Prisoner)",
-			"倒霉蛋(the Unlucky)",
-			"受奴役者(the Enslaved)",
-			"掠袭者(the Raider)",
-			"俘虏(the Captive)",
-			"不自由者(the Unfree)",
-			"桀骜不驯者(the Unruly)",
+			"野蛮人",
+			"北人",
+			"苍白者",
+			"囚犯",
+			"倒霉蛋",
+			"受奴役者",
+			"掠袭者",
+			"俘虏",
+			"不自由者",
+			"桀骜不驯者",
 			"受监者",
-			"受铐者(the Shackled)",
-			"被缚者(the Bound)"
+			"受铐者",
+			"被缚者"
 		];
 	}
 

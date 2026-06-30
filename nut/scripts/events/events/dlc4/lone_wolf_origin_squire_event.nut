@@ -62,7 +62,7 @@ this.lone_wolf_origin_squire_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Head));
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Body));
 				_event.m.Dude.getItems().equip(this.new("scripts/items/armor/linen_tunic"));
-				_event.m.Dude.setTitle("侍从(the Squire)");
+				_event.m.Dude.setTitle("扈从");
 				this.Characters.push(_event.m.Dude.getImagePath());
 			}
 

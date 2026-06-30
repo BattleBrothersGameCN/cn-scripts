@@ -32,10 +32,10 @@ this.cripple_background <- this.inherit("scripts/skills/backgrounds/character_ba
 			this.Const.Attributes.Initiative
 		];
 		this.m.Titles = [
-			"残废(the Cripple)",
-			"残废者(the Maimed)",
-			"废人(the Broken)",
-			"奇形怪状者(the Grotesque)"
+			"残废",
+			"残废者",
+			"废人",
+			"奇形者"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;

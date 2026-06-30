@@ -40,7 +40,7 @@ this.cocky_vs_iron_lungs_event <- this.inherit("scripts/events/event", {
 					icon = this.Const.MoodStateIcon[_event.m.Cocky.getMoodState()],
 					text = _event.m.Cocky.getName() + this.Const.MoodStateEvent[_event.m.Cocky.getMoodState()]
 				});
-				_event.m.IronLungs.improveMood(1.0, "击败 (Beat)" + _event.m.Cocky.getName() + "在力量比拼中");
+				_event.m.IronLungs.improveMood(1.0, "在力量比拼中击败了" + _event.m.Cocky.getName() + "兄弟");
 				this.List.push({
 					id = 10,
 					icon = this.Const.MoodStateIcon[_event.m.IronLungs.getMoodState()],

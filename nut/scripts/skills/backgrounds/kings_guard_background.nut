@@ -33,7 +33,7 @@ this.kings_guard_background <- this.inherit("scripts/skills/backgrounds/characte
 	{
 		this.character_background.onAdded();
 		local actor = this.getContainer().getActor();
-		actor.setTitle("国王护卫(the Kingsguard)");
+		actor.setTitle("国王护卫");
 	}
 
 });
