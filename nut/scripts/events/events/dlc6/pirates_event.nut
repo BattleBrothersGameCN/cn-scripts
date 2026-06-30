@@ -99,7 +99,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"fisherman_background"
 				]);
-				_event.m.Dude.setTitle("船员(the Sailor)");
+				_event.m.Dude.setTitle("船员");
 				_event.m.Dude.getBackground().m.RawDescription = "城邦周围活动的海盗劫持了%name%，你把他从奴隶生活中救了出来。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
@@ -154,7 +154,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"fisherman_background"
 				]);
-				_event.m.Dude.setTitle("船员(the Sailor)");
+				_event.m.Dude.setTitle("船员");
 				_event.m.Dude.getBackground().m.RawDescription = "城邦周围活动的海盗劫持了%name%，你把他从奴隶生活中救了出来。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
@@ -202,7 +202,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"slave_background"
 				]);
-				_event.m.Dude.setTitle("船员(the Sailor)");
+				_event.m.Dude.setTitle("船员");
 				_event.m.Dude.getBackground().m.RawDescription = "%name%曾是海上的水手，城邦的海盗登上了他的船，把他和他的船员一起抓作俘虏。由于一些偶然事件，他进入了你的队伍，并在此偿还欠镀金者的债。";
 				_event.m.Dude.getBackground().buildDescription(true);
 				_event.m.Dude.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));
@@ -213,7 +213,7 @@ this.pirates_event <- this.inherit("scripts/events/event", {
 				_event.m.Fisherman.setStartValuesEx([
 					"slave_background"
 				]);
-				_event.m.Fisherman.setTitle("航海家(the Mariner)");
+				_event.m.Fisherman.setTitle("航海家");
 				_event.m.Fisherman.getBackground().m.RawDescription = "%name%曾是海上的水手，城邦的海盗登上了他的船，把他和他的船员一起抓作俘虏。由于一些偶然事件，他进入了你的队伍，并在此偿还欠镀金者的债。";
 				_event.m.Fisherman.getBackground().buildDescription(true);
 				_event.m.Fisherman.getItems().unequip(_event.m.Dude.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand));

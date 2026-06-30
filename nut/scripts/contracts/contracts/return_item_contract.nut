@@ -334,7 +334,7 @@ this.return_item_contract <- this.inherit("scripts/contracts/contract", {
 		this.m.Screens.push({
 			ID = "BattleDone",
 			Title = "战斗之后……",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗结束后，你从敌人手中取回%itemLower%，准备返回%employer%处。他一定会为你的成功欣喜不已！ | 偷走%itemLower%的匪徒都死了，幸好物品也顺利找回。%employer%肯定会非常满意这次行动的结果。 | 很好，你们找到并了结了偷窃%itemLower%的匪徒。现在只需把%itemLower%交回%employer%就能领取报仇！ | 战斗结束，你在敌人尸体中轻松找到了%itemLower%。该把它带回%employer%那里领取应得的报酬了！}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{战斗结束后，你从敌人手中取回%itemLower%，准备返回%employer%处。他一定会为你的成功欣喜不已！ | 偷走%itemLower%的匪徒都死了，幸好物品也顺利找回。%employer%肯定会非常满意这次行动的结果。 | 很好，你们找到并了结了偷窃%itemLower%的匪徒。现在只需把%itemLower%交回%employer%就能领取报酬！ | 战斗结束，你在敌人尸体中轻松找到了%itemLower%。该把它带回%employer%那里领取应得的报酬了！}",
 			Image = "",
 			List = [],
 			Options = [

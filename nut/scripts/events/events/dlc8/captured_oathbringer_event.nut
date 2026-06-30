@@ -224,7 +224,7 @@ this.captured_oathbringer_event <- this.inherit("scripts/events/event", {
 					icon = injury.getIcon(),
 					text = _event.m.Torturer.getName() + " 遭受 " + injury.getNameOnly()
 				});
-				_event.m.Torturer.worsenMood(0.5, "放走一名被俘的誓言者(Oathbringer)。");
+				_event.m.Torturer.worsenMood(0.5, "放走了一名被俘的渡誓者。");
 			}
 
 		});

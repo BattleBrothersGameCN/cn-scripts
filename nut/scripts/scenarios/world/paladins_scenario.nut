@@ -4,7 +4,7 @@ this.paladins_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 	{
 		this.m.ID = "scenario.paladins";
 		this.m.Name = "宣誓者";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_180.png[/img][/p][p]奉行骑士精神的宣誓者们是高尚无私的战士，他们不受贵族领主的约束，而是向他们已经故去的创始人， “初创者安塞姆”的理想与教诲宣誓效忠。这支骑士教团如今发现自己身陷囹圄，并求助于你，希望你能扭转他们的命运。你能够引导这些狂热者成为优秀的佣兵吗？\n\n[color=#bcad8c]圣武士：[/color] 以两位久经沙场且装备精良的战士开始游戏。\n[color=#bcad8c]宣誓者：[/color] 你必须遵从初创者安塞姆的教诲，每隔十天宣下一则誓言，并为此同时承受奖励与惩罚，直至誓言完成为止。[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_180.png[/img][/p][p]执誓者奉行骑士精神，是高尚无私的战士，他们不效忠于君主，而是忠于其创始人“小安瑟姆”的理想和教诲。这支骑士团如今深陷困境，他们向你求助，希望你能扭转他们的命运。你能够引导这些狂热者成为优秀的佣兵吗？\n\n[color=#bcad8c]圣武士：[/color] 以两位久经沙场且装备精良的战士开始游戏。\n[color=#bcad8c]宣誓者：[/color] 你必须遵从初创者安塞姆的教诲，每隔十天宣下一则誓言，并为此同时承受奖励与惩罚，直至誓言完成为止。[/p]";
 		this.m.Difficulty = 2;
 		this.m.Order = 40;
 		this.m.IsFixedLook = true;

@@ -26,9 +26,9 @@ this.messenger_background <- this.inherit("scripts/skills/backgrounds/character_
 			"trait.brute"
 		];
 		this.m.Titles = [
-			"信使(the Messenger)",
-			"邮差(the Courier)",
-			"跑手(the Runner)"
+			"信使",
+			"邮差",
+			"跑手"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.CommonMale;

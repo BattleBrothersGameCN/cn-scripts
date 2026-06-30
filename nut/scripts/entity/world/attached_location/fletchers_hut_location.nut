@@ -3,9 +3,9 @@ this.fletchers_hut_location <- this.inherit("scripts/entity/world/attached_locat
 	function create()
 	{
 		this.attached_location.create();
-		this.m.Name = "箭匠工棚";
+		this.m.Name = "制箭师工棚";
 		this.m.ID = "attached_location.fletchers_hut";
-		this.m.Description = "箭匠在这些工棚里生产出各类远程弹药，再把它们带到最近的定居点里出售。";
+		this.m.Description = "制箭师们在这些工棚里制造出各类远程弹药，并在就近的定居点里出售。";
 		this.m.Sprite = "world_fletchers_hut_01";
 		this.m.SpriteDestroyed = "world_fletchers_hut_01_ruins";
 	}

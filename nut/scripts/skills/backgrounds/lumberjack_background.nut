@@ -28,9 +28,9 @@ this.lumberjack_background <- this.inherit("scripts/skills/backgrounds/character
 			"trait.tiny"
 		];
 		this.m.Titles = [
-			"结实者(the Sturdy)",
-			"砍斧(the Axe)",
-			"林中人(the Woodsman)"
+			"结实者",
+			"砍斧",
+			"林中人"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.CommonMale;

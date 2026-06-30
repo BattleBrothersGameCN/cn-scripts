@@ -23,13 +23,13 @@ this.vagabond_background <- this.inherit("scripts/skills/backgrounds/character_b
 		];
 		this.m.Titles = [
 			"流浪汉",
-			"流浪者(the Wanderer)",
-			"三只脚(Threefeet)",
-			"背包客(Bindlestiff)",
-			"褴褛汉(Tatterdemalion)",
+			"流浪者",
+			"三只脚",
+			"背包客",
+			"褴褛汉",
 			"流民",
-			"不得安歇者(the Restless)",
-			"旅行者(the Traveller)",
+			"不得安歇者",
+			"旅行者",
 			"·渡鸦"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;

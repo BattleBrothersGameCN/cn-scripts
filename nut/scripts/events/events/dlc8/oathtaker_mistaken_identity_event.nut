@@ -30,7 +30,7 @@ this.oathtaker_mistaken_identity_event <- this.inherit("scripts/events/event", {
 				this.World.Assets.addMoralReputation(-1);
 				local f = _event.m.Town.getFactionOfType(this.Const.FactionType.Settlement);
 				f.addPlayerRelation(this.Const.World.Assets.RelationMinorOffense, "你的一个士兵打了一个孩子。");
-				_event.m.Oathtaker.worsenMood(2.0, "被误认为是一名誓约者(Oathbringer)。");
+				_event.m.Oathtaker.worsenMood(2.0, "被误认为是一名渡誓者。");
 
 				if (_event.m.Oathtaker.getMoodState() < this.Const.MoodState.Neutral)
 				{

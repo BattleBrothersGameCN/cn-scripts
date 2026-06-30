@@ -203,7 +203,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.5, "目击(Witnessed)" + _event.m.Strong.getName() + "的惊人壮举");
+						bro.improveMood(0.5, "目睹了" + _event.m.Strong.getName() + "的惊人壮举");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{
@@ -255,7 +255,7 @@ this.cow_tipping_event <- this.inherit("scripts/events/event", {
 
 					if (this.Math.rand(1, 100) <= 50)
 					{
-						bro.improveMood(0.5, "目击(Witnessed)" + _event.m.Cocky.getName() + "的失败乐趣");
+						bro.improveMood(0.5, "目睹了" + _event.m.Cocky.getName() + "的失败乐趣");
 
 						if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 						{

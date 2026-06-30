@@ -5,9 +5,9 @@ this.greater_flesh_golem_attack_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.greater_flesh_golem_attack";
-		this.m.Name = "冻结";
+		this.m.Name = "扑击";
 		this.m.Description = "";
-		this.m.KilledString = "被冻结";
+		this.m.KilledString = "被扑死";
 		this.m.Icon = "skills/active_227.png";
 		this.m.IconDisabled = "skills/active_227.png";
 		this.m.Overlay = "active_227";

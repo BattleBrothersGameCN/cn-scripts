@@ -14,7 +14,7 @@ this.oathtaker_joins_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "年轻的安瑟姆.(Young Anselm)",
+					Text = "小安瑟姆",
 					function getResult( _event )
 					{
 						return "B";

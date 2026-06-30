@@ -34,12 +34,12 @@ this.gambler_background <- this.inherit("scripts/skills/backgrounds/character_ba
 			"trait.bloodthirsty"
 		];
 		this.m.Titles = [
-			"二点牌(Deuces)",
-			"百搭牌(the Wild Card)",
-			"幸运制造者(the Luck Maker)",
+			"二点牌",
+			"百搭牌",
+			"幸运者",
 			"幸运星",
-			"牌术大师(the Cardsharper)",
-			"赌徒(the Gambler)"
+			"牌术大师",
+			"赌徒"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.CommonMale;

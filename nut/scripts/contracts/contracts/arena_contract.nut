@@ -354,7 +354,7 @@ this.arena_contract <- this.inherit("scripts/contracts/contract", {
 						this.Contract.m.BulletpointsObjectives[1] = "再次进入竞技场，对战一位流浪骑士和%amount%名掠袭者";
 					}
 
-					this.Text += "%SPEECH_ON%我听说北方人管他叫‘牛郎骑士’。可能我听错了。别告诉其他竞技场主我这么说北方佬——但这骑士可不是什么花架子，是实打实的危险。要是你不想你的镀金之路就此了结，我劝你趁早磨利家伙，开打前好好养精蓄锐。%SPEECH_OFF%";
+					this.Text += "%SPEECH_ON%我听说北方人管他叫‘游荡骑士’。可能我听错了。别告诉其他竞技场主我这么说北方佬——但这骑士可不是什么花架子，是实打实的危险。要是你不想你的镀金之路就此了结，我劝你趁早磨利家伙，开打前好好养精蓄锐。%SPEECH_OFF%";
 				}
 				else if (this.Flags.get("IsDesertDevil"))
 				{

@@ -24,8 +24,8 @@ this.houndmaster_background <- this.inherit("scripts/skills/backgrounds/characte
 		];
 		this.m.Titles = [
 			"驯犬师",
-			"养犬师(the Kennelmaster)",
-			"看狗人(the Dogkeeper)"
+			"养犬师",
+			"看狗人"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.AllMale;

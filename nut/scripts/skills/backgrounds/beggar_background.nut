@@ -30,9 +30,9 @@ this.beggar_background <- this.inherit("scripts/skills/backgrounds/character_bac
 			this.Const.Attributes.Bravery
 		];
 		this.m.Titles = [
-			"肮脏之人(the Dirty)",
+			"脏兮兮",
 			"穷光蛋",
-			"衣衫褴褛者(the Ragged)",
+			"破衣烂衫",
 			"病秧子",
 			"骗子",
 			"无业游民",

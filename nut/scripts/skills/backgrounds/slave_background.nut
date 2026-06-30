@@ -12,19 +12,19 @@ this.slave_background <- this.inherit("scripts/skills/backgrounds/character_back
 		this.m.HiringCost = this.Math.rand(19, 22) * 10;
 		this.m.DailyCost = 0;
 		this.m.Titles = [
-			"受奴役者(the Enslaved)",
-			"北方人(the Northerner)",
-			"俘虏(the Captive)",
-			"苍白者(the Pale)",
-			"囚犯(the Prisoner)",
-			"被劫持者(the Kidnapped)",
-			"倒霉蛋(the Unlucky)",
-			"负债者(the Indebted)",
-			"负债者(the Indebted)",
-			"不自由者(the Unfree)",
+			"受奴役者",
+			"北方人",
+			"俘虏",
+			"苍白者",
+			"囚犯",
+			"被劫持者",
+			"倒霉蛋",
+			"负债者",
+			"负债者",
+			"不自由者",
 			"受监者",
-			"受铐者(the Shackled)",
-			"被缚者(the Bound)"
+			"受铐者",
+			"被缚者"
 		];
 		this.m.Excluded = [
 			"trait.survivor",

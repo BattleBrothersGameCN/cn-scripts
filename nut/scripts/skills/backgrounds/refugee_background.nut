@@ -29,11 +29,11 @@ this.refugee_background <- this.inherit("scripts/skills/backgrounds/character_ba
 			"trait.bloodthirsty"
 		];
 		this.m.Titles = [
-			"难民(the Refugee)",
+			"难民",
 			"幸存者",
-			"远跑(Runsfar)",
-			"弃儿(the Derelict)",
-			"痛脚(the Surbated)"
+			"远跑",
+			"弃儿",
+			"痛脚"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.UntidyMale;

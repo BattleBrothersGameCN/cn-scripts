@@ -31,19 +31,19 @@ this.nomad_background <- this.inherit("scripts/skills/backgrounds/character_back
 			"trait.insecure"
 		];
 		this.m.Titles = [
-			"沙漠掠袭者(the Desert Raider)",
+			"沙漠掠袭者",
 			"·沙漠(of the Desert)",
-			"沙漠之子(Son of the Desert)",
-			"沙漠之灾(the Desert Scourge)",
-			"蝎子(the Scorpion)",
-			"游牧民(the Nomad)",
-			"红沙(Redsands)",
-			"鬣狗(the Hyena)",
-			"鹰(the Hawk)",
-			"大蛇(the Serpent)",
-			"自由者(the Free)",
-			"流浪者(the Wanderer)",
-			"拦路者(the Waylayer)"
+			"沙漠之子",
+			"沙漠之灾",
+			"蝎子",
+			"游牧民",
+			"红沙",
+			"鬣狗",
+			"鹰",
+			"大蛇",
+			"自由者",
+			"流浪者",
+			"拦路者"
 		];
 		this.m.Bodies = this.Const.Bodies.SouthernMuscular;
 		this.m.Faces = this.Const.Faces.SouthernMale;

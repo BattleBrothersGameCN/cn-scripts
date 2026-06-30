@@ -31,12 +31,12 @@ this.shepherd_background <- this.inherit("scripts/skills/backgrounds/character_b
 			"trait.bloodthirsty"
 		];
 		this.m.Titles = [
-			"牧羊人(the Shepherd)",
-			"谦卑者(the Humble)",
-			"平和者(the Peaceful)",
-			"山羊人(the Goatman)",
-			"蹄心(Hoofmind)",
-			"羊(the Sheep)"
+			"牧羊人",
+			"谦卑者",
+			"平和者",
+			"山羊人",
+			"蹄心",
+			"羊"
 		];
 		this.m.Faces = this.Const.Faces.AllMale;
 		this.m.Hairs = this.Const.Hair.CommonMale;

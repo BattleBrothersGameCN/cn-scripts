@@ -13,7 +13,7 @@ this.oathtakers_lore_event <- this.inherit("scripts/events/event", {
 		this.m.Cooldown = 99999.0 * this.World.getTime().SecondsPerDay;
 		this.m.Texts.resize(4);
 		this.m.Texts[0] = "谈论誓言。";
-		this.m.Texts[1] = "谈谈年轻的安瑟姆(Young Anselm)。";
+		this.m.Texts[1] = "谈谈小安瑟姆。";
 		this.m.Texts[2] = "谈谈那些糟糕的东西。";
 		this.m.Texts[3] = "我们已经说了所有需要说的话。";
 		this.m.Screens.push({

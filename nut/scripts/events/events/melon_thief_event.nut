@@ -167,7 +167,7 @@ this.melon_thief_event <- this.inherit("scripts/events/event", {
 				_event.m.Dude.setStartValuesEx([
 					"thief_background"
 				]);
-				_event.m.Dude.setTitle("西瓜小偷(the Melon Mugger)");
+				_event.m.Dude.setTitle("西瓜小偷");
 				_event.m.Dude.getSprite("head").setBrush("bust_head_03");
 				_event.m.Dude.getBackground().m.RawDescription = "%name%只不过是个普通的偷瓜贼 —— 别人问起来你总是这么说。";
 				_event.m.Dude.getBackground().buildDescription(true);

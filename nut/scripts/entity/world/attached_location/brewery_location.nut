@@ -5,7 +5,7 @@ this.brewery_location <- this.inherit("scripts/entity/world/attached_location", 
 		this.attached_location.create();
 		this.m.Name = "啤酒厂";
 		this.m.ID = "attached_location.brewery";
-		this.m.Description = "这家酿酒厂为当地酒馆和往来商人大量生产着啤酒。";
+		this.m.Description = "这座酿酒厂生产大量啤酒，同时供应给当地的酒馆与商人。";
 		this.m.Sprite = "world_brewery_01";
 		this.m.SpriteDestroyed = "world_brewery_01_ruins";
 	}

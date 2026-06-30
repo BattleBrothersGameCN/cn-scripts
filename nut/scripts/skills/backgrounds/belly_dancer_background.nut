@@ -102,7 +102,7 @@ this.belly_dancer_background <- this.inherit("scripts/skills/backgrounds/charact
 	{
 		this.character_background.onAdded();
 		local actor = this.getContainer().getActor();
-		actor.setTitle("肚皮舞者(the Belly Dancer)");
+		actor.setTitle("肚皮舞者");
 	}
 
 	function onAddEquipment()

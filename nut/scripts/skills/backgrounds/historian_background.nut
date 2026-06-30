@@ -36,9 +36,9 @@ this.historian_background <- this.inherit("scripts/skills/backgrounds/character_
 			this.Const.Attributes.Fatigue
 		];
 		this.m.Titles = [
-			"猫头鹰(the Owl)",
-			"好学者(the Studious)",
-			"历史学家(the Historian)"
+			"猫头鹰",
+			"好学者",
+			"历史学家"
 		];
 		this.m.Faces = this.Const.Faces.SmartMale;
 		this.m.Hairs = this.Const.Hair.TidyMale;

@@ -95,7 +95,7 @@ this.conquer_order <- this.inherit("scripts/ai/world/world_behavior", {
 					{
 						local news = this.World.Statistics.createNews();
 						news.set("征服者", this.World.FactionManager.getFaction(_entity.getFaction()).getName());
-						news.set("失败了(Defeated)", e.getOwner().getName());
+						news.set("被击败", e.getOwner().getName());
 						news.set("城市", e.getName());
 						this.World.Statistics.addNews("crisis_civilwar_town_conquered", news);
 						local defeatedFaction = e.getOwner();

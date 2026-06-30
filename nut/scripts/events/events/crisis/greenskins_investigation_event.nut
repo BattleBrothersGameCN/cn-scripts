@@ -64,7 +64,7 @@ this.greenskins_investigation_event <- this.inherit("scripts/events/event", {
 					Text = "我们没时间帮忙。",
 					function getResult( _event )
 					{
-						_event.m.NobleHouse.addPlayerRelation(-5.0, "拒绝 (Denied)" + _event.m.Noble.getName() + "一个恳求/请求");
+						_event.m.NobleHouse.addPlayerRelation(-5.0, "拒绝了" + _event.m.Noble.getName() + "的要求");
 						return 0;
 					}
 

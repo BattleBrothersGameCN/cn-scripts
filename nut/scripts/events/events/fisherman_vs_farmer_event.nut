@@ -47,10 +47,10 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 				{
 					local titles = [
 						"壮士",
-						"骄傲者(the Proud)",
-						"渔夫(the Fisherman)",
-						"臂力选手(the Armwrestler)",
-						"鱼(Fishes)"
+						"·众人之傲",
+						"渔夫",
+						"掰手腕大师",
+						"鱼"
 					];
 					_event.m.Fisherman.setTitle(titles[this.Math.rand(0, titles.len() - 1)]);
 					this.List.push({
@@ -101,10 +101,10 @@ this.fisherman_vs_farmer_event <- this.inherit("scripts/events/event", {
 				{
 					local titles = [
 						"壮士",
-						"骄傲者(the Proud)",
-						"雇农(the Farmhand)",
-						"臂力选手(the Armwrestler)",
-						"草(Weeds)"
+						"·众人之傲",
+						"雇农",
+						"掰手腕大师",
+						"草"
 					];
 					_event.m.Farmer.setTitle(titles[this.Math.rand(0, titles.len() - 1)]);
 					this.List.push({
