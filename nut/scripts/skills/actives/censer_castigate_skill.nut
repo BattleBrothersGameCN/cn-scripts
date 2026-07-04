@@ -80,7 +80,7 @@ this.censer_castigate_skill <- this.inherit("scripts/skills/skill", {
 			id = 8,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "在目标区域留下一片瘴气之云。"
+			text = "在目标区域留下一片瘴气云雾。"
 		});
 		return ret;
 	}
