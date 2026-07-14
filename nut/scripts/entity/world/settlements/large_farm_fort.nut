@@ -60,8 +60,14 @@ this.large_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"squire_background",
 			"swordmaster_background",
 			"cripple_background",
-			"paladin_background"
+			"executioner_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("paladin_background");
+		}
+
 		this.m.UIDescription = "高耸在开阔平原上的巨大城堡";
 		this.m.Description = "一个巨大的城堡矗立在周围敞开的平原上。这是贵族权力的象征，并且拥有庞大的武装力量，以牢牢掌握该地区。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";

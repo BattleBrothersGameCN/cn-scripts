@@ -61,7 +61,8 @@ this.medium_snow_fort <- this.inherit("scripts/entity/world/settlement", {
 			"deserter_background",
 			"disowned_noble_background",
 			"raider_background",
-			"retired_soldier_background"
+			"retired_soldier_background",
+			"executioner_background"
 		];
 		this.m.UIDescription = "这座石堡为守军挡住了雪";
 		this.m.Description = "这座石头建造的城堡既能抵御寒冷，也能抵御任何入侵者。";
@@ -174,14 +175,17 @@ this.medium_snow_fort <- this.inherit("scripts/entity/world/settlement", {
 		}
 
 		this.buildAttachedLocation(this.Math.rand(0, 1), "scripts/entity/world/attached_location/hunters_cabin_location", [
+			this.Const.World.TerrainType.Snow,
 			this.Const.World.TerrainType.Tundra,
 			this.Const.World.TerrainType.Hills
 		], [], 2, false, true);
 		this.buildAttachedLocation(this.Math.rand(0, 1), "scripts/entity/world/attached_location/trapper_location", [
+			this.Const.World.TerrainType.Snow,
 			this.Const.World.TerrainType.Tundra,
 			this.Const.World.TerrainType.Hills
 		], [], 2);
 		this.buildAttachedLocation(this.Math.rand(0, 1), "scripts/entity/world/attached_location/workshop_location", [
+			this.Const.World.TerrainType.Snow,
 			this.Const.World.TerrainType.Tundra,
 			this.Const.World.TerrainType.Hills
 		], [], 1, true);

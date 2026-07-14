@@ -51,7 +51,8 @@ this.small_coast_fort <- this.inherit("scripts/entity/world/settlement", {
 			"deserter_background",
 			"raider_background",
 			"raider_background",
-			"retired_soldier_background"
+			"retired_soldier_background",
+			"executioner_background"
 		];
 		this.m.UIDescription = "在附近的海岸线上高耸着一个木制城寨";
 		this.m.Description = "在附近的海岸线上高耸着一个木制城寨.";

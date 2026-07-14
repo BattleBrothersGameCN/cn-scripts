@@ -28,6 +28,8 @@ this.schrat_racial <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.DamageReceivedTotalMult *= 0.3;
 		}
+
+		_properties.DamageReceivedFireMult *= 3.0;
 	}
 
 	function onBeforeDamageReceived( _attacker, _skill, _hitInfo, _properties )

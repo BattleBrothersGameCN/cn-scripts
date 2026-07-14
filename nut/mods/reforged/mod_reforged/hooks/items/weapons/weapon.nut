@@ -1,0 +1,220 @@
+::Reforged.HooksMod.hookTree("scripts/items/weapons/weapon", function ( q )
+{
+	q.create = function ( __original )
+	{
+		return {
+			function create()
+			{
+				__original();
+
+				if (this.m.Reach < 0)
+				{
+					this.m.Reach += 999 + this.getDefaultReach();
+					this.m.Reach = ::Math.max(0, this.m.Reach);
+				}
+			}
+
+		}.create;
+	};
+});
+::Reforged.HooksMod.hook("scripts/items/weapons/weapon", function ( q )
+{
+	q.m.Reach <- -999;
+	q.getTooltip = function ( __original )
+	{
+		return {
+			function getTooltip()
+			{
+				local ret = __original();
+
+				if (this.isItemType(::Const.Items.ItemType.MeleeWeapon))
+				{
+					ret.push({
+						id = 20,
+						type = "text",
+						icon = "ui/icons/rf_reach.png",
+						text = ::Reforged.Mod.Tooltips.parseString("[触及距离|Concept.Reach]为") + this.m.Reach
+					});
+				}
+
+				if (this.isWeaponType(::Const.Items.WeaponType.Dagger, true, true))
+				{
+					ret.push({
+						id = 30,
+						type = "text",
+						icon = "ui/icons/special.png",
+						text = ::Reforged.Mod.Tooltips.parseString("每[回合|Concept.Turn]第一次切换为/掉本武器不消耗[行动点数|Concept.ActionPoints]")
+					});
+				}
+
+				return ret;
+			}
+
+		}.getTooltip;
+	};
+	q.getValue = function ( __original )
+	{
+		return {
+			function getValue()
+			{
+				if (this.m.ConditionMax == 0)
+				{
+					return this.m.Value;
+				}
+				else
+				{
+					return __original();
+				}
+			}
+
+		}.getValue;
+	};
+	q.onEquip = function ( __original )
+	{
+		return {
+			function onEquip()
+			{
+				__original();
+
+				if (this.isWeaponType(::Const.Items.WeaponType.Sling) && ::MSU.isEqual(this.getContainer().getActor(), ::MSU.getDummyPlayer()))
+				{
+					this.addSkill(::new("scripts/skills/actives/rf_sling_item_dummy_skill"));
+				}
+			}
+
+		}.onEquip;
+	};
+	q.onUpdateProperties = function ( __original )
+	{
+		return {
+			function onUpdateProperties( _properties )
+			{
+				__original(_properties);
+
+				if (this.isItemType(::Const.Items.ItemType.MeleeWeapon) && !this.getContainer().getActor().isDisarmed())
+				{
+					_properties.Reach += this.m.Reach;
+				}
+			}
+
+		}.onUpdateProperties;
+	};
+	q.isDroppedAsLoot = function ( __original )
+	{
+		return {
+			function isDroppedAsLoot()
+			{
+				if (!this.item.isDroppedAsLoot())
+				{
+					return false;
+				}
+
+				if (this.m.LastEquippedByFaction == ::Const.Faction.Player || !::MSU.isNull(this.getContainer()) && ::MSU.isKindOf(this.getContainer().getActor(), "player"))
+				{
+					return true;
+				}
+
+				return __original();
+			}
+
+		}.isDroppedAsLoot;
+	};
+	q.getReach <- {
+		function getReach()
+		{
+			return this.m.Reach;
+		}
+
+	}.getReach;
+	q.getDefaultReach <- {
+		function getDefaultReach()
+		{
+			local ret = 0;
+			local count = 0.0;
+
+			foreach( weaponType, reach in ::Reforged.Reach.WeaponTypeDefault )
+			{
+				if (this.isWeaponType(::Const.Items.WeaponType[weaponType]))
+				{
+					count++;
+					ret = ret + reach;
+				}
+			}
+
+			if (count == 0)
+			{
+				if (this.isItemType(::Const.Items.ItemType.MeleeWeapon))
+				{
+					ret = this.isItemType(::Const.Items.ItemType.TwoHanded) ? 5 : 4;
+				}
+			}
+			else
+			{
+				ret = ::Math.round(ret / count);
+			}
+
+			if (this.isItemType(::Const.Items.ItemType.MeleeWeapon))
+			{
+				if (ret < 5 && this.isItemType(::Const.Items.ItemType.TwoHanded))
+				{
+					ret = 5;
+				}
+
+				if (this.isAoE() || this.getRangeMax() > 1 && ret < 6)
+				{
+					ret = ret + 1;
+				}
+			}
+
+			return ret;
+		}
+
+	}.getDefaultReach;
+	q.isWeaponType = function ( __original )
+	{
+		return {
+			function isWeaponType( _t, _any = true, _only = false )
+			{
+				if (this.m.WeaponType == 0)
+				{
+					return _t == 0;
+				}
+
+				return __original(_t, _any, _only);
+			}
+
+		}.isWeaponType;
+	};
+	q.buildCategoriesFromWeaponType = function ()
+	{
+		return function ()
+		{
+			this.m.Categories = "";
+
+			if (this.m.WeaponType != ::Const.Items.WeaponType.None)
+			{
+				foreach( w in ::Const.Items.WeaponType )
+				{
+					if (this.isWeaponType(w))
+					{
+						this.m.Categories += ::Const.Items.getWeaponTypeName(w) + "/";
+					}
+				}
+			}
+
+			if (this.m.Categories != "")
+			{
+				this.m.Categories = this.m.Categories.slice(0, -1) + ", ";
+			}
+
+			if (this.isItemType(::Const.Items.ItemType.OneHanded))
+			{
+				this.m.Categories += "单手持";
+			}
+			else if (this.isItemType(::Const.Items.ItemType.TwoHanded))
+			{
+				this.m.Categories += "双手持";
+			}
+		};
+	};
+});

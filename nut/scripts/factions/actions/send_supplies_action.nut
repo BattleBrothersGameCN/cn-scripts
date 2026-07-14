@@ -70,7 +70,7 @@ this.send_supplies_action <- this.inherit("scripts/factions/faction_action", {
 	function onExecute( _faction )
 	{
 		local r = this.Math.rand(100, 200) * 0.01;
-		local party = _faction.spawnEntity(this.m.Start.getTile(), "补给商队", false, this.Const.World.Spawn.NobleCaravan, r * 100);
+		local party = _faction.spawnEntity(this.m.Start.getTile(), "补给车队", false, this.Const.World.Spawn.NobleCaravan, r * 100);
 		party.getSprite("base").Visible = false;
 		party.setMirrored(true);
 		party.setDescription("一支有武装护卫的商队，在定居点间运送给养、物资和装备。");

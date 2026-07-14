@@ -614,7 +614,6 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 			if (camp != null)
 			{
 				camp.onSpawned();
-				this.logInfo("废弃村落生成完成");
 			}
 		}
 		else if (this.m.BuildGolemLocation2)
@@ -642,7 +641,6 @@ this.build_unique_locations_action <- this.inherit("scripts/factions/faction_act
 			if (camp != null)
 			{
 				camp.onSpawned();
-				this.logInfo("圣殿遗迹生成完成");
 			}
 		}
 		else

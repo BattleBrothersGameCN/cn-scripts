@@ -48,7 +48,8 @@ this.small_tundra_fort <- this.inherit("scripts/entity/world/settlement", {
 			"deserter_background",
 			"deserter_background",
 			"retired_soldier_background",
-			"retired_soldier_background"
+			"retired_soldier_background",
+			"executioner_background"
 		];
 		this.m.UIDescription = "苔原上高耸着的一个木制城寨";
 		this.m.Description = "在冻土带的平地上，可以从很远的地方看到这个小小的防御工事。";

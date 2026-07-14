@@ -10,7 +10,7 @@ this.gladiator_origin_vs_oathtaker_event <- this.inherit("scripts/events/event",
 		this.m.Cooldown = 70.0 * this.World.getTime().SecondsPerDay;
 		this.m.Screens.push({
 			ID = "A",
-			Text = "[img]gfx/ui/events/event_26.png[/img]{%oathtaker%和%gladiator%正思考着武器的正确使用。Oathtaker倾向于认为每一次挥剑都由一种意图驱动，而这种意图是为了做好事。角斗士反驳道，保护自己的生命才是最重要的，所以每一次挥剑都已经具有了好的意图，因此其最终目的不应该是为自己，而应该是为看台上的观众。%oathtaker%抬起了他的眉毛说,%SPEECH_ON%你认为战斗就是表演吗，角斗士？%SPEECH_OFF%%gladiator%微笑着靠近他%SPEECH_ON%生命本身就是一场表演,Oathtaker，而我是这场表演的主角%SPEECH_OFF%...你很遗憾听到了他们的对话。}",
+			Text = "[img]gfx/ui/events/event_26.png[/img]{%oathtaker%和%gladiator%正思考着武器的正确使用。Oathtaker倾向于认为每一次挥剑都由一种意图驱动，而这种意图是为了做好事。角斗士反驳道，保护自己的生命才是最重要的，所以每一次挥剑都已经具有了好的意图，因此其最终目的不应该是为自己，而应该是为看台上的观众。%oathtaker%抬起了他的眉毛说,%SPEECH_ON%你认为战斗就是表演吗，角斗士？%SPEECH_OFF%%gladiator%微笑着靠近他%SPEECH_ON%生命本身就是一场表演，执誓者，而我是这场表演的主角。%SPEECH_OFF%...你很遗憾听到了他们的对话。}",
 			Image = "",
 			List = [],
 			Characters = [],

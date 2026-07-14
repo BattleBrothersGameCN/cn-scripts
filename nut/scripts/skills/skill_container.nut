@@ -461,6 +461,7 @@ this.skill_container <- {
 	{
 		local superCurrent = this.m.Actor.getCurrentProperties().getClone();
 		this.m.IsUpdating = true;
+		_caller.resetBeforeUse();
 
 		foreach( i, skill in this.m.Skills )
 		{
@@ -964,6 +965,24 @@ this.skill_container <- {
 			}
 
 			skill.onMovementFinished();
+		}
+
+		this.m.IsUpdating = false;
+		this.update();
+	}
+
+	function onTriggeredMovement( _caller, _targetEntity, _hitInfo )
+	{
+		this.m.IsUpdating = true;
+
+		foreach( i, skill in this.m.Skills )
+		{
+			if (skill.isGarbage())
+			{
+				continue;
+			}
+
+			skill.onTriggeredMovement(_caller, _targetEntity, _hitInfo);
 		}
 
 		this.m.IsUpdating = false;

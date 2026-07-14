@@ -4,7 +4,7 @@ this.southern_quickstart_scenario <- this.inherit("scripts/scenarios/world/start
 	{
 		this.m.ID = "scenario.southern_quickstart";
 		this.m.Name = "南方佣兵";
-		this.m.Description = "[p=c][img]gfx/ui/events/event_156.png[/img][/p][p]你和你那一小撮雇佣军多年来一直在做小商贩的肮脏勾当，但你跟强盗比还差一步。 你想变得更大。 你想要一切。 镀金者会给你指路。\n\n[color=#bcad8c]快速开始进入世界南部，没有任何特殊的优势或劣势。[/color][/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/event_156.png[/img][/p][p]多年来，你和你那一小撮佣兵，一直给一些不入流的小商人干着脏活，跟强盗也差不了多少。你想要更多。你想得到一切。镀金者将会为你指明道路。\n\n[color=#bcad8c]快速在世界南部开始，没有特殊的优势或劣势。[/color][/p]";
 		this.m.Difficulty = 1;
 		this.m.Order = 11;
 	}

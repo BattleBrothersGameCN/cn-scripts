@@ -6,6 +6,7 @@ this.gilders_embrace_shield <- this.inherit("scripts/items/shields/shield", {
 		this.m.ID = "shield.gilders_embrace";
 		this.m.Name = "镀金者之拥";
 		this.m.Description = "一面有着明亮镀金光泽的华丽金属盾牌，凭借着太阳的力量反射着最微弱的光线。";
+		this.m.ItemType = this.Const.Items.ItemType.Shield | this.Const.Items.ItemType.Legendary;
 		this.m.AddGenericSkill = true;
 		this.m.ShowOnCharacter = true;
 		this.m.SoundOnHit = this.Const.Sound.ShieldHitMetal;

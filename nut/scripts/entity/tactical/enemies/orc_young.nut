@@ -235,11 +235,11 @@ this.orc_young <- this.inherit("scripts/entity/tactical/actor", {
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.OrcYoung);
 
-		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 70)
+		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= this.Const.World.Scaling.Orcs.YoungThrowingSpecDay)
 		{
 			b.IsSpecializedInThrowing = true;
 
-			if (this.World.getTime().Days >= 150)
+			if (this.World.getTime().Days >= this.Const.World.Scaling.Orcs.YoungStatIncreaseDay)
 			{
 				b.RangedSkill += 5;
 			}

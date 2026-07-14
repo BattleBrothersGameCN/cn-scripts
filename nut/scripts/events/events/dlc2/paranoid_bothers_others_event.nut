@@ -15,7 +15,7 @@ this.paranoid_bothers_others_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "别那么多疑了。",
+					Text = "别那么疑神疑鬼的了。",
 					function getResult( _event )
 					{
 						return 0;

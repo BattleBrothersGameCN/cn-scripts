@@ -772,7 +772,17 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 				this.Tactical.addResource(r);
 			}
 
-			foreach( r in this.Const.Sound.ArenaHit )
+			foreach( r in this.Const.Sound.ArenaStart )
+			{
+				this.Tactical.addResource(r);
+			}
+
+			foreach( r in this.Const.Sound.ArenaEnd )
+			{
+				this.Tactical.addResource(r);
+			}
+
+			foreach( r in this.Const.Sound.ArenaOutro )
 			{
 				this.Tactical.addResource(r);
 			}
@@ -1043,6 +1053,222 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 	function isBattleEnded()
 	{
 		return this.Tactical.Entities.isCombatFinished();
+	}
+
+	function getMovementDamage( _originTile, _destinationTile, _victim )
+	{
+		return this.Math.max(0, this.Math.abs(_destinationTile.Level - _originTile.Level) - 1) * this.Const.Combat.FallingDamage;
+	}
+
+	function handleInvoluntaryMovement( _victim, _pusher, _originTile, _destinationTile, _skill, _onDamageCallback, _onMovementCallback )
+	{
+		_victim.setCurrentMovementType(this.Const.Tactical.MovementType.Involuntary);
+		local damage = this.getMovementDamage(_originTile, _destinationTile, _victim);
+		local hitInfo = clone this.Const.Tactical.HitInfo;
+		hitInfo.DamageRegular = damage;
+		hitInfo.DamageFatigue = this.Const.Combat.FatigueReceivedPerHit;
+		hitInfo.DamageDirect = 1.0;
+		hitInfo.DamageArmor = 0.0;
+		hitInfo.BodyPart = this.Const.BodyPart.Body;
+		hitInfo.BodyDamageMult = 1.0;
+		hitInfo.FatalityChanceMult = 1.0;
+		_pusher.getSkills().onTriggeredMovement(_skill, _victim, hitInfo);
+
+		if (hitInfo.DamageRegular == 0)
+		{
+			this.Tactical.getNavigator().teleport(_victim, _destinationTile, null, null, true);
+		}
+		else
+		{
+			local tag = {
+				Attacker = _pusher,
+				Skill = _skill,
+				HitInfo = hitInfo
+			};
+			local applyFallDamage = function ( _entity, _tag )
+			{
+				if (_tag.HitInfo.DamageRegular != 0)
+				{
+					_entity.onDamageReceived(_tag.Attacker, _tag.Skill, _tag.HitInfo);
+				}
+
+				if (_onDamageCallback != null)
+				{
+					_onDamageCallback(_entity, _tag);
+				}
+			};
+			this.Tactical.getNavigator().teleport(_victim, _destinationTile, applyFallDamage.bindenv(this), tag, true);
+		}
+
+		if (_onMovementCallback != null)
+		{
+			local tag = {
+				TargetTile = _originTile,
+				Actor = _pusher
+			};
+			this.Time.scheduleEvent(this.TimeUnit.Virtual, this.Const.Combat.OnMovementCallbackDelay, _onMovementCallback, tag);
+		}
+	}
+
+	function spawnMiasmaOnTile( _tile, _playerApplied = false, _applyImmediately = false, _timeout = this.Const.Combat.MiasmaTimeout )
+	{
+		local miasma_effect = {
+			Type = "miasma",
+			Tooltip = "瘴气弥漫此处，毒害所有活物",
+			IsPositive = false,
+			IsAppliedAtRoundStart = false,
+			IsAppliedAtTurnEnd = true,
+			IsAppliedOnMovement = false,
+			IsAppliedOnEnter = false,
+			IsByPlayer = _playerApplied,
+			Timeout = this.Time.getRound() + _timeout,
+			Callback = this.Const.Tactical.Common.onApplyMiasma,
+			function Applicable( _a )
+			{
+				return !_a.getFlags().has("undead");
+			}
+
+		};
+		local particles = [];
+
+		for( local i = 0; i < this.Const.Tactical.MiasmaParticles.len(); i = ++i )
+		{
+			particles.push({
+				Entity = true,
+				Brushes = this.Const.Tactical.MiasmaParticles[i].Brushes,
+				Tile = _tile,
+				Delay = this.Const.Tactical.MiasmaParticles[i].Delay,
+				Quantity = this.Const.Tactical.MiasmaParticles[i].Quantity,
+				Lifetime = this.Const.Tactical.MiasmaParticles[i].LifeTimeQuantity,
+				Rate = this.Const.Tactical.MiasmaParticles[i].SpawnRate,
+				Stages = this.Const.Tactical.MiasmaParticles[i].Stages
+			});
+		}
+
+		this.spawnEffectOnTile(_tile, "miasma", miasma_effect, particles);
+
+		if (_applyImmediately && _tile.IsOccupiedByActor)
+		{
+			miasma_effect.Callback(_tile, _tile.getEntity());
+		}
+	}
+
+	function spawnFireOnTile( _tile, _playerApplied = false, _applyImmediately = false, _timeout = this.Const.Combat.FireTimeout, _restrictedTerrain = null )
+	{
+		local fire_effect = {
+			Type = "fire",
+			Tooltip = "火焰在这里肆虐，熔化盔甲和血肉",
+			IsPositive = false,
+			IsAppliedAtRoundStart = false,
+			IsAppliedAtTurnEnd = true,
+			IsAppliedOnMovement = false,
+			IsAppliedOnEnter = false,
+			IsByPlayer = _playerApplied,
+			Timeout = this.Time.getRound() + _timeout,
+			Callback = this.Const.Tactical.Common.onApplyFire,
+			function Applicable( _a )
+			{
+				return true;
+			}
+
+		};
+		local subtypesToCheck = _restrictedTerrain != null ? _restrictedTerrain : this.Tactical.Entities.getNonFlammableTileSubtypes();
+
+		if (_tile.Type != this.Const.Tactical.TerrainType.ShallowWater && _tile.Type != this.Const.Tactical.TerrainType.DeepWater && subtypesToCheck.find(_tile.Subtype) == null)
+		{
+			local particles = [];
+
+			for( local i = 0; i < this.Const.Tactical.FireParticles.len(); i = ++i )
+			{
+				particles.push({
+					Entity = true,
+					Brushes = this.Const.Tactical.FireParticles[i].Brushes,
+					Tile = _tile,
+					Delay = this.Const.Tactical.FireParticles[i].Delay,
+					Quantity = this.Const.Tactical.FireParticles[i].Quantity,
+					Lifetime = this.Const.Tactical.FireParticles[i].LifeTimeQuantity,
+					Rate = this.Const.Tactical.FireParticles[i].SpawnRate,
+					Stages = this.Const.Tactical.FireParticles[i].Stages
+				});
+			}
+
+			this.spawnEffectOnTile(_tile, "fire", fire_effect, particles);
+			_tile.clear(this.Const.Tactical.DetailFlag.Scorchmark);
+			_tile.spawnDetail("impact_decal", this.Const.Tactical.DetailFlag.Scorchmark, false, true);
+		}
+
+		if (_applyImmediately && _tile.IsOccupiedByActor)
+		{
+			fire_effect.Callback(_tile, _tile.getEntity());
+		}
+	}
+
+	function spawnSmokeOnTile( _tile, _playerApplied = false, _applyImmediately = false, _timeout = this.Const.Combat.SmokeTimeout )
+	{
+		local smoke_effect = {
+			Type = "smoke",
+			Tooltip = "浓烟笼罩着这片区域，允许其中的人无视控制区域自由移动，并提供对远程攻击的保护",
+			IsPositive = true,
+			IsAppliedAtRoundStart = false,
+			IsAppliedAtTurnEnd = true,
+			IsAppliedOnMovement = false,
+			IsAppliedOnEnter = true,
+			IsByPlayer = _playerApplied,
+			Timeout = this.Time.getRound() + _timeout,
+			Callback = this.Const.Tactical.Common.onApplySmoke,
+			function Applicable( _a )
+			{
+				return true;
+			}
+
+		};
+		local particles = [];
+
+		for( local i = 0; i < this.Const.Tactical.SmokeParticles.len(); i = ++i )
+		{
+			particles.push({
+				Entity = true,
+				Brushes = this.Const.Tactical.SmokeParticles[i].Brushes,
+				Tile = _tile,
+				Delay = this.Const.Tactical.SmokeParticles[i].Delay,
+				Quantity = this.Const.Tactical.SmokeParticles[i].Quantity,
+				Lifetime = this.Const.Tactical.SmokeParticles[i].LifeTimeQuantity,
+				Rate = this.Const.Tactical.SmokeParticles[i].SpawnRate,
+				Stages = this.Const.Tactical.SmokeParticles[i].Stages
+			});
+		}
+
+		this.spawnEffectOnTile(_tile, "smoke", smoke_effect, particles);
+
+		if (_applyImmediately && _tile.IsOccupiedByActor)
+		{
+			smoke_effect.Callback(_tile, _tile.getEntity());
+		}
+	}
+
+	function spawnEffectOnTile( _tile, _effectType, _effect, _particles )
+	{
+		if (_tile.Properties.Effect != null && _tile.Properties.Effect.Type == _effectType)
+		{
+			_tile.Properties.Effect.Timeout = this.Time.getRound() + _effect.Timeout;
+		}
+		else
+		{
+			if (_tile.Properties.Effect != null)
+			{
+				this.Tactical.Entities.removeTileEffect(_tile);
+			}
+
+			_tile.Properties.Effect = clone _effect;
+			local spawnedParticles = [];
+
+			foreach( particleInfo in _particles )
+			{
+				spawnedParticles.push(this.Tactical.spawnParticleEffect(particleInfo.Entity, particleInfo.Brushes, particleInfo.Tile, particleInfo.Delay, particleInfo.Quantity, particleInfo.Lifetime, particleInfo.Rate, particleInfo.Stages));
+			}
+
+			this.Tactical.Entities.addTileEffect(_tile, _tile.Properties.Effect, spawnedParticles);
+		}
 	}
 
 	function setActionStateByMouseEvent( _mouseEvent )
@@ -2239,7 +2465,7 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 
 	function turnsequencebar_onNextTurn()
 	{
-		if (this.Tactical.getNavigator().IsTravelling)
+		if (this.Tactical.getNavigator().IsTravelling && this.Tactical.TurnSequenceBar.getActiveEntity() != null && this.Tactical.TurnSequenceBar.getActiveEntity().isAlive())
 		{
 			return false;
 		}
@@ -3081,11 +3307,29 @@ this.tactical_state <- this.inherit("scripts/states/state", {
 				break;
 			}
 
-			if (this.m.LastTileHovered != null && this.m.LastTileHovered.IsEmpty)
+			if (this.m.LastTileHovered != null && !this.m.LastTileHovered.IsCorpseSpawned)
 			{
-				local e = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/flying_skull");
-				e.setFaction(this.isScenarioMode() ? this.Const.Faction.OrientalBandits : this.World.FactionManager.getFactionOfType(this.Const.FactionType.OrientalBandits).getID());
-				e.assignRandomEquipment();
+				local flip = this.Math.rand(1, 2) == 1 ? true : false;
+				local decal;
+				decal = this.m.LastTileHovered.spawnDetail("bust_flesh_golem_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
+				local head_brushes = [
+					"bust_flesh_golem_head_01_dead",
+					"bust_flesh_golem_head_02_dead",
+					"bust_flesh_golem_head_03_dead"
+				];
+				decal = this.m.LastTileHovered.spawnDetail(head_brushes[this.Math.rand(0, head_brushes.len() - 1)], this.Const.Tactical.DetailFlag.Corpse, flip);
+				decal.Scale = 0.9;
+				decal.setBrightness(0.9);
+				local corpse = clone this.Const.Corpse;
+				corpse.CorpseName = "一具腐尸";
+				corpse.Tile = this.m.LastTileHovered;
+				corpse.IsResurrectable = false;
+				corpse.IsConsumable = true;
+				corpse.IsHeadAttached = false;
+				this.m.LastTileHovered.Properties.set("Corpse", corpse);
+				this.Tactical.Entities.addCorpse(this.m.LastTileHovered);
 			}
 
 			break;

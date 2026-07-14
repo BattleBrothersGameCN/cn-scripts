@@ -748,6 +748,14 @@ gt.Const.World.Spawn.Troops <- {
 		Row = 3,
 		Script = "scripts/entity/tactical/objective/donkey_military"
 	},
+	ManAtArms = {
+		ID = this.Const.EntityType.ManAtArms,
+		Variant = 0,
+		Strength = 30,
+		Cost = 25,
+		Row = 0,
+		Script = "scripts/entity/tactical/humans/noble_man_at_arms"
+	},
 	Wardog = {
 		ID = this.Const.EntityType.Wardog,
 		Variant = 0,
@@ -803,6 +811,14 @@ gt.Const.World.Spawn.Troops <- {
 		Cost = 25,
 		Row = 0,
 		Script = "scripts/entity/tactical/enemies/bandit_raider_wolf"
+	},
+	BanditMarauder = {
+		ID = this.Const.EntityType.BanditMarauder,
+		Variant = 0,
+		Strength = 28,
+		Cost = 22,
+		Row = 0,
+		Script = "scripts/entity/tactical/enemies/bandit_marauder"
 	},
 	BanditLeader = {
 		ID = this.Const.EntityType.BanditLeader,

@@ -1,0 +1,79 @@
+this.rf_pocket_sand_skill <- ::inherit("scripts/skills/actives/throw_dirt_skill", {
+	m = {
+		RemainingUses = 0
+	},
+	function create()
+	{
+		this.throw_dirt_skill.create();
+		this.m.ID = "actives.rf_pocket_sand_skill";
+		this.m.Name = "从口袋抛沙";
+	}
+
+	function getTooltip()
+	{
+		local ret = this.throw_dirt_skill.getTooltip();
+
+		if (this.getContainer().getActor().isPlacedOnMap())
+		{
+			if (this.getRemainingUses() == 0)
+			{
+				ret.push({
+					id = 20,
+					type = "text",
+					icon = "ui/tooltips/warning.png",
+					text = "剩余次数：" + ::MSU.Text.colorNegative("0")
+				});
+			}
+			else
+			{
+				ret.push({
+					id = 20,
+					type = "text",
+					icon = "ui/icons/special.png",
+					text = "剩余次数：" + ::MSU.Text.colorPositive(this.getRemainingUses())
+				});
+			}
+		}
+		else
+		{
+			ret.push({
+				id = 21,
+				type = "text",
+				icon = "ui/icons/special.png",
+				text = ::Reforged.Mod.Tooltips.parseString("战斗开始时，每有一个空的[背包槽位|Concept.BagSlots]，获得1次使用次数")
+			});
+		}
+
+		return ret;
+	}
+
+	function isUsable()
+	{
+		return this.throw_dirt_skill.isUsable() && this.m.RemainingUses != 0;
+	}
+
+	function onCombatStarted()
+	{
+		this.throw_dirt_skill.onCombatStarted();
+		this.m.RemainingUses = this.getMaximumUses();
+	}
+
+	function onUse( _user, _targetTile )
+	{
+		local ret = this.throw_dirt_skill.onUse(_user, _targetTile);
+		this.m.RemainingUses = ::Math.max(0, this.m.RemainingUses - 1);
+		return ret;
+	}
+
+	function getRemainingUses()
+	{
+		return this.m.RemainingUses;
+	}
+
+	function getMaximumUses()
+	{
+		local itemContainer = this.getContainer().getActor().getItems();
+		return itemContainer.getUnlockedBagSlots() - itemContainer.getAllItemsAtSlot(::Const.ItemSlot.Bag).len();
+	}
+
+});
