@@ -173,27 +173,7 @@ this.flesh_pull_skill <- this.inherit("scripts/skills/skill", {
 		skills.removeByID("effects.shieldwall");
 		skills.removeByID("effects.spearwall");
 		skills.removeByID("effects.riposte");
-		target.setCurrentMovementType(this.Const.Tactical.MovementType.Involuntary);
-		local damage = this.Math.max(0, this.Math.abs(this.m.DestinationTile.Level - _targetTile.Level) - 1) * this.Const.Combat.FallingDamage;
-
-		if (damage == 0)
-		{
-			this.Tactical.getNavigator().teleport(_targetTile.getEntity(), this.m.DestinationTile, null, null, true);
-		}
-		else
-		{
-			local tag = {
-				Attacker = _user,
-				Skill = this,
-				HitInfo = clone this.Const.Tactical.HitInfo
-			};
-			tag.HitInfo.DamageRegular = damage;
-			tag.HitInfo.DamageFatigue = this.Const.Combat.FatigueReceivedPerHit;
-			tag.HitInfo.DamageDirect = 1.0;
-			tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-			this.Tactical.getNavigator().teleport(_targetTile.getEntity(), this.m.DestinationTile, this.onPulledDown, tag, true);
-		}
-
+		this.Tactical.State.handleInvoluntaryMovement(target, _user, _targetTile, this.m.DestinationTile, this, null, null);
 		local stagger = this.new("scripts/skills/effects/staggered_effect");
 		target.getSkills().add(stagger);
 
@@ -203,11 +183,6 @@ this.flesh_pull_skill <- this.inherit("scripts/skills/skill", {
 		}
 
 		return true;
-	}
-
-	function onPulledDown( _entity, _tag )
-	{
-		_entity.onDamageReceived(_tag.Attacker, _tag.Skill, _tag.HitInfo);
 	}
 
 	function onDone( _data )

@@ -78,8 +78,14 @@ this.large_tundra_fort <- this.inherit("scripts/entity/world/settlement", {
 			"eunuch_background",
 			"hedge_knight_background",
 			"hedge_knight_background",
-			"paladin_background"
+			"executioner_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("paladin_background");
+		}
+
 		this.m.UIDescription = "高高耸立在周围苔原上的大城堡";
 		this.m.Description = "一个高耸于周围冻原的大堡垒，巩固了大片开阔地区的安全。许多人来到这里补给、修理并休息，以便再次出发。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";

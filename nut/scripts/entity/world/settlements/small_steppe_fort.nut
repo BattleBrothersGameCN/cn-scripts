@@ -45,7 +45,8 @@ this.small_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"deserter_background",
 			"deserter_background",
 			"retired_soldier_background",
-			"retired_soldier_background"
+			"retired_soldier_background",
+			"executioner_background"
 		];
 		this.m.UIDescription = "一座干旱草原上的小型木制堡垒";
 		this.m.Description = "这座小木堡视野开阔，俯瞰着干涸的草原，为疲惫的士兵提供荫凉。";

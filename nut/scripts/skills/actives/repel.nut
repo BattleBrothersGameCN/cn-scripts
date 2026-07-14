@@ -28,7 +28,7 @@ this.repel <- this.inherit("scripts/skills/skill", {
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsTooCloseShown = true;
 		this.m.IsWeaponSkill = true;
-		this.m.HitChanceBonus = 10;
+		this.m.HitChanceBonus = 0;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -54,7 +54,7 @@ this.repel <- this.inherit("scripts/skills/skill", {
 			id = 6,
 			type = "text",
 			icon = "ui/icons/hitchance.png",
-			text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]+10%[/color] 命中增益"
+			text = "有 [color=" + this.Const.UI.Color.PositiveValue + "]+" + this.getHitChanceModifier() + "%[/color] 命中几率"
 		});
 
 		if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInPolearms)
@@ -109,6 +109,11 @@ this.repel <- this.inherit("scripts/skills/skill", {
 		}
 
 		return null;
+	}
+
+	function getHitChanceModifier()
+	{
+		return 10;
 	}
 
 	function onAfterUpdate( _properties )
@@ -194,31 +199,7 @@ this.repel <- this.inherit("scripts/skills/skill", {
 		}
 
 		_user.getSkills().onTargetHit(this, target, this.Const.BodyPart.Body, 0, 0);
-		target.setCurrentMovementType(this.Const.Tactical.MovementType.Involuntary);
-		local damage = this.Math.max(0, this.Math.abs(knockToTile.Level - _targetTile.Level) - 1) * this.Const.Combat.FallingDamage;
-
-		if (damage == 0)
-		{
-			this.Tactical.getNavigator().teleport(target, knockToTile, null, null, true);
-		}
-		else
-		{
-			local p = this.getContainer().getActor().getCurrentProperties();
-			local tag = {
-				Attacker = _user,
-				Skill = this,
-				HitInfo = clone this.Const.Tactical.HitInfo,
-				HitInfoBash = null
-			};
-			tag.HitInfo.DamageRegular = damage;
-			tag.HitInfo.DamageFatigue = this.Const.Combat.FatigueReceivedPerHit;
-			tag.HitInfo.DamageDirect = 1.0;
-			tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-			tag.HitInfo.BodyDamageMult = 1.0;
-			tag.HitInfo.FatalityChanceMult = 1.0;
-			this.Tactical.getNavigator().teleport(target, knockToTile, this.onKnockedDown, tag, true);
-		}
-
+		this.Tactical.State.handleInvoluntaryMovement(target, _user, _targetTile, knockToTile, this, null, null);
 		return success;
 	}
 
@@ -226,30 +207,14 @@ this.repel <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.MeleeSkill += 10;
+			_properties.MeleeSkill += this.getHitChanceModifier();
+			this.m.HitChanceBonus += this.getHitChanceModifier();
 
 			if (_targetEntity != null && !this.getContainer().getActor().getCurrentProperties().IsSpecializedInPolearms && this.getContainer().getActor().getTile().getDistanceTo(_targetEntity.getTile()) == 1)
 			{
 				_properties.MeleeSkill += -15;
-				this.m.HitChanceBonus = -5;
+				this.m.HitChanceBonus += -15;
 			}
-			else
-			{
-				this.m.HitChanceBonus = 10;
-			}
-		}
-	}
-
-	function onKnockedDown( _entity, _tag )
-	{
-		if (_tag.HitInfo.DamageRegular != 0)
-		{
-			_entity.onDamageReceived(_tag.Attacker, _tag.Skill, _tag.HitInfo);
-		}
-
-		if (_tag.HitInfoBash != null)
-		{
-			_entity.onDamageReceived(_tag.Attacker, _tag.Skill, _tag.HitInfoBash);
 		}
 	}
 

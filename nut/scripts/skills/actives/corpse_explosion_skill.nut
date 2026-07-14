@@ -180,24 +180,6 @@ this.corpse_explosion_skill <- this.inherit("scripts/skills/skill", {
 			}
 		}
 
-		local p = {
-			Type = "miasma",
-			Tooltip = "瘴气弥漫此处，毒害所有活物",
-			IsPositive = false,
-			IsAppliedAtRoundStart = false,
-			IsAppliedAtTurnEnd = true,
-			IsAppliedOnMovement = false,
-			IsAppliedOnEnter = false,
-			IsByPlayer = false,
-			Timeout = this.Time.getRound() + 3,
-			Callback = this.Const.Tactical.Common.onApplyMiasma,
-			function Applicable( _a )
-			{
-				return !_a.getFlags().has("undead");
-			}
-
-		};
-
 		foreach( targetTile in targets )
 		{
 			if (targetTile.ID == _data.TargetTile.ID)
@@ -229,27 +211,7 @@ this.corpse_explosion_skill <- this.inherit("scripts/skills/skill", {
 				targetTile.getEntity().onDamageReceived(null, this, hitInfo);
 			}
 
-			if (targetTile.Properties.Effect != null && targetTile.Properties.Effect.Type == "miasma")
-			{
-				targetTile.Properties.Effect.Timeout = this.Time.getRound() + 3;
-			}
-			else
-			{
-				if (targetTile.Properties.Effect != null)
-				{
-					this.Tactical.Entities.removeTileEffect(targetTile);
-				}
-
-				targetTile.Properties.Effect = clone p;
-				local particles = [];
-
-				for( local i = 0; i < this.Const.Tactical.MiasmaParticles.len(); i = ++i )
-				{
-					particles.push(this.Tactical.spawnParticleEffect(true, this.Const.Tactical.MiasmaParticles[i].Brushes, targetTile, this.Const.Tactical.MiasmaParticles[i].Delay, this.Const.Tactical.MiasmaParticles[i].Quantity, this.Const.Tactical.MiasmaParticles[i].LifeTimeQuantity, this.Const.Tactical.MiasmaParticles[i].SpawnRate, this.Const.Tactical.MiasmaParticles[i].Stages));
-				}
-
-				this.Tactical.Entities.addTileEffect(targetTile, targetTile.Properties.Effect, particles);
-			}
+			this.Tactical.State.spawnMiasmaOnTile(targetTile);
 		}
 	}
 

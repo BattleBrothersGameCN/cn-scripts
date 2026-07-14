@@ -5,7 +5,7 @@ this.fault_finder_book_head <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.fault_finder_book_head";
 		this.m.Name = "智慧殿堂";
-		this.m.Description = "";
+		this.m.Description = "一本固定在皮带上，做成了头带的小书。其中的内容无法读懂。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = false;

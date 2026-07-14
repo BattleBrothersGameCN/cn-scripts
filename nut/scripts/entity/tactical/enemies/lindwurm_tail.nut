@@ -501,7 +501,7 @@ this.lindwurm_tail <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsImmuneToRoot = true;
 		b.IsImmuneToHeadshots = true;
 
-		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 180)
+		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= this.Const.World.Scaling.Beasts.LindwurmTailStatIncreaseDay)
 		{
 			b.MeleeSkill += 10;
 			b.DamageTotalMult += 0.1;

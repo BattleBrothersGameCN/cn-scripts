@@ -36,6 +36,7 @@ this.deserters_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 		}
 
 		local items = _bro.getItems();
+		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Offhand));
 		local shield = this.new("scripts/items/shields/faction_heater_shield");
 		shield.setFaction(_faction.getBanner());
@@ -182,7 +183,6 @@ this.deserters_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 		bros[0].m.XP = this.Const.LevelXP[bros[0].m.Level - 1];
 		bros[0].fillAttributeLevelUpValues(this.Const.XP.MaxLevelWithPerkpoints - 1);
 		local items = bros[0].getItems();
-		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Ammo));
 		items.equip(this.new("scripts/items/weapons/hatchet"));
 		bros[1].getBackground().m.RawDescription = "{从任何角度看，%name% 都是一个优秀的战士，但他只是讨厌在军队里当兵的薪水太低。 他对佣兵生命的追求是有道理的。 虽然他很轻浮，但你相信他短暂的忠诚感会被源源不断的好硬币所缓冲。}";
@@ -197,7 +197,6 @@ this.deserters_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 		bros[1].m.XP = this.Const.LevelXP[bros[1].m.Level - 1];
 		bros[1].fillAttributeLevelUpValues(this.Const.XP.MaxLevelWithPerkpoints - 1);
 		items = bros[1].getItems();
-		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Ammo));
 		items.equip(this.new("scripts/items/weapons/shortsword"));
 		bros[2].getBackground().m.RawDescription = "{%name% 就像很多逃兵一样。 你可以在他身上看到斗士的精神，但他的内心却在萎缩。 这并没有使他成为一个懦夫，就像许多人认为的逃兵那样，而只是一个可能需要改变的人。 希望佣兵工作的硬币能提供它。}";
@@ -212,7 +211,6 @@ this.deserters_scenario <- this.inherit("scripts/scenarios/world/starting_scenar
 		bros[2].m.XP = this.Const.LevelXP[bros[2].m.Level - 1];
 		bros[2].fillAttributeLevelUpValues(this.Const.XP.MaxLevelWithPerkpoints - 1);
 		items = bros[2].getItems();
-		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Offhand));
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Ammo));
 		items.equip(this.new("scripts/items/weapons/light_crossbow"));

@@ -772,8 +772,6 @@ this.character_screen <- {
 			return allowed;
 		}
 
-		local targetItem;
-
 		if (data.targetItemIdx != null)
 		{
 			if (targetItem != null)

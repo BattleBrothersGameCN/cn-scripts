@@ -76,7 +76,7 @@ this.explode_skill <- this.inherit("scripts/skills/skill", {
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " 爆炸成骨头碎片！");
 		}
 
-		this.Time.scheduleEvent(this.TimeUnit.Real, 300, function ( _user )
+		this.Time.scheduleEvent(this.TimeUnit.Virtual, 300, function ( _user )
 		{
 			_user.kill();
 		}, _user);

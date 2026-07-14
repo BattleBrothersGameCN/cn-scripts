@@ -53,7 +53,14 @@ this.smoke_effect <- this.inherit("scripts/skills/skill", {
 
 	function onNewRound()
 	{
-		local tile = this.getContainer().getActor().getTile();
+		local actor = this.getContainer().getActor();
+
+		if (!actor.isPlacedOnMap())
+		{
+			return;
+		}
+
+		local tile = actor.getTile();
 
 		if (tile.Properties.Effect == null || tile.Properties.Effect.Type != "smoke")
 		{
@@ -63,7 +70,14 @@ this.smoke_effect <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		local tile = this.getContainer().getActor().getTile();
+		local actor = this.getContainer().getActor();
+
+		if (!actor.isPlacedOnMap())
+		{
+			return;
+		}
+
+		local tile = actor.getTile();
 
 		if (tile.Properties.Effect == null || tile.Properties.Effect.Type != "smoke")
 		{

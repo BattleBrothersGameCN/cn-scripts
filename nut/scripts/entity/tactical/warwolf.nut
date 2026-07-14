@@ -71,6 +71,14 @@ this.warwolf <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.AIAgent.setActor(this);
 	}
 
+	function setVariant( _v )
+	{
+		this.m.Items.getAppearance().Body = "bust_wolf_0" + _v + "_body";
+		this.getSprite("body").setBrush("bust_wolf_0" + _v + "_body");
+		this.getSprite("head").setBrush("bust_wolf_0" + _v + "_head");
+		this.setDirty(true);
+	}
+
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
 		local flip = this.Math.rand(0, 100) < 50;

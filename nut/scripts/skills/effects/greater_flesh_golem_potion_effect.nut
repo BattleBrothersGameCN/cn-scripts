@@ -19,13 +19,12 @@ this.greater_flesh_golem_potion_effect <- this.inherit("scripts/skills/skill", {
 		return "该角色的身体发生了不可逆转的突变，过度分泌的腺体使化学平衡陷入了混乱。可以说是奇迹吧，这最终稳定在了一种对身体有益的状态。";
 	}
 
-	function onUpdate( _properties )
+	function onDeath( _fatalityType )
 	{
-	}
-
-	function onDeath()
-	{
-		this.World.Statistics.getFlags().set("isGreaterFleshGolemPotionAcquired", false);
+		if (_fatalityType != this.Const.FatalityType.Unconscious)
+		{
+			this.World.Statistics.getFlags().set("isGreaterFleshGolemPotionAcquired", false);
+		}
 	}
 
 	function onDismiss()

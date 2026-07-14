@@ -29,9 +29,11 @@ this.ai_switchto_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 			return this.Const.AI.Behavior.Score.Zero;
 		}
 
-		local hasQuickHands = _entity.getSkills().hasSkill("perk.quick_hands");
+		local skills = _entity.getSkills();
+		local quickHands = skills.getSkillByID("perk.quick_hands");
+		local hasQuickHands = quickHands != null && !quickHands.isSpent();
 
-		if (!hasQuickHands && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchItemAPCost)
+		if (!hasQuickHands && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchItemAPCost && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchTwoHanderAPCost && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchShieldAPCost)
 		{
 			return this.Const.AI.Behavior.Score.Zero;
 		}
@@ -202,33 +204,37 @@ this.ai_switchto_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 		}
 
 		local oldWeapon = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
+		local bagItems = _entity.getItems().getAllItemsAtSlot(this.Const.ItemSlot.Bag);
+		local offhand = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
+		local itemsToSwap = [];
 
 		if (oldWeapon != null)
 		{
+			itemsToSwap.push(oldWeapon);
 			_entity.getItems().unequip(oldWeapon);
 		}
 
+		itemsToSwap.push(this.m.WeaponToEquip);
 		_entity.getItems().removeFromBag(this.m.WeaponToEquip);
 
-		if (this.m.WeaponToEquip.getBlockedSlotType() != null && _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand) != null)
+		if (this.m.WeaponToEquip.getBlockedSlotType() != null && offhand != null)
 		{
 			local slotsRequired = 1;
+			itemsToSwap.push(offhand);
 
 			if (oldWeapon != null)
 			{
 				slotsRequired = ++slotsRequired;
 			}
 
-			local shield = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
-
 			if (_entity.getItems().getNumberOfEmptySlots(this.Const.ItemSlot.Bag) >= slotsRequired)
 			{
-				_entity.getItems().unequip(shield);
-				_entity.getItems().addToBag(shield);
+				_entity.getItems().unequip(offhand);
+				_entity.getItems().addToBag(offhand);
 			}
 			else
 			{
-				shield.drop(_entity.getTile());
+				offhand.drop(_entity.getTile());
 			}
 		}
 
@@ -239,7 +245,7 @@ this.ai_switchto_ranged <- this.inherit("scripts/ai/tactical/behavior", {
 			_entity.getItems().addToBag(oldWeapon);
 		}
 
-		_entity.getItems().payForAction([]);
+		_entity.getItems().payForAction(itemsToSwap);
 		this.m.WeaponToEquip = null;
 		this.getAgent().getIntentions().IsChangingWeapons = true;
 		return true;

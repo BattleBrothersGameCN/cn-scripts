@@ -1410,7 +1410,15 @@ this.contract <- {
 
 		if (_factionType == this.Const.FactionType.Bandits)
 		{
-			party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(enemyBase.getTile(), "强盗", false, this.Const.World.Spawn.BanditRaiders, _resources, this.getMinibossModifier());
+			if (this.Math.rand(1, 100) <= this.Const.World.Scaling.Brigands.GetMarauderSpawnChance(this.World.getTime().Days))
+			{
+				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(enemyBase.getTile(), "强盗", false, this.Const.World.Spawn.BanditMarauders, _resources, this.getMinibossModifier());
+			}
+			else
+			{
+				party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Bandits).spawnEntity(enemyBase.getTile(), "强盗", false, this.Const.World.Spawn.BanditRaiders, _resources, this.getMinibossModifier());
+			}
+
 			party.setDescription("一伙外出觅食的粗野强盗。");
 			party.setFootprintType(this.Const.World.FootprintsType.Brigands);
 			party.getLoot().Money = this.Math.rand(50, 100);

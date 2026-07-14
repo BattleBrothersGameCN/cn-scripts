@@ -17,15 +17,29 @@ this.ancient_watchtower_event <- this.inherit("scripts/events/event", {
 					Text = "好吧, 至少我们有一块土地。",
 					function getResult( _event )
 					{
-						this.World.uncoverFogOfWar(this.World.State.getPlayer().getPos(), 1900.0);
-						local locations = this.World.EntityManager.getLocations();
+						local radius = 1900.0;
+						this.World.uncoverFogOfWar(this.World.State.getPlayer().getPos(), radius);
+						local entities = this.World.getAllEntitiesAtPos(this.World.State.getPlayer().getPos(), radius);
 
-						foreach( location in locations )
+						foreach( entity in entities )
 						{
-							if (location.m.VisibilityMult > 0.0 && this.World.State.getPlayer().getTile().getDistanceTo(location.getTile()) < 1900)
+							if (entity.isLocation() && entity.m.VisibilityMult > 0.0 && !entity.isDiscovered())
 							{
+								local location = entity.location;
 								location.setDiscovered(true);
 								location.onDiscovered();
+
+								if (entity.isHiddenToPlayer() && location.getTypeID() != "location.battlefield")
+								{
+									this.World.Statistics.getFlags().increment("LocationsDiscovered");
+
+									if (this.World.Retinue.hasFollower("follower.cartographer"))
+									{
+										this.World.Retinue.getFollower("follower.cartographer").onLocationDiscovered(location);
+									}
+
+									this.World.Ambitions.onLocationDiscovered(location);
+								}
 							}
 						}
 

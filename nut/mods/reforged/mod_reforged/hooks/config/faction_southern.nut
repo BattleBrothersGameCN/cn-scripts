@@ -1,0 +1,228 @@
+::Reforged.Entities.editEntity("征召兵", null, {
+	XP = 250,
+	ActionPoints = 9,
+	Hitpoints = 55,
+	Bravery = 70,
+	Stamina = 120,
+	MeleeSkill = 60,
+	RangedSkill = 50,
+	MeleeDefense = 0,
+	RangedDefense = 0,
+	Initiative = 110,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("炮手", null, {
+	XP = 250,
+	ActionPoints = 9,
+	Hitpoints = 70,
+	Bravery = 70,
+	Stamina = 120,
+	MeleeSkill = 65,
+	RangedSkill = 75,
+	MeleeDefense = 5,
+	RangedDefense = 25,
+	Initiative = 120,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("军官", null, {
+	XP = 350,
+	ActionPoints = 9,
+	Hitpoints = 110,
+	Bravery = 80,
+	Stamina = 130,
+	MeleeSkill = 85,
+	RangedSkill = 60,
+	MeleeDefense = 25,
+	RangedDefense = 0,
+	Initiative = 110,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("角斗士", null, {
+	XP = 350,
+	ActionPoints = 9,
+	Hitpoints = 110,
+	Bravery = 90,
+	Stamina = 135,
+	MeleeSkill = 75,
+	RangedSkill = 65,
+	MeleeDefense = 20,
+	RangedDefense = 0,
+	Initiative = 125,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("刺客", null, {
+	XP = 350,
+	ActionPoints = 9,
+	Hitpoints = 80,
+	Bravery = 85,
+	Stamina = 125,
+	MeleeSkill = 80,
+	RangedSkill = 70,
+	MeleeDefense = 20,
+	RangedDefense = 20,
+	Initiative = 150,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("NomadCutthroat", null, {
+	XP = 175,
+	ActionPoints = 9,
+	Hitpoints = 55,
+	Bravery = 45,
+	Stamina = 100,
+	MeleeSkill = 50,
+	RangedSkill = 45,
+	MeleeDefense = 0,
+	RangedDefense = 0,
+	Initiative = 95,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("NomadArcher", null, {
+	XP = 225,
+	ActionPoints = 9,
+	Hitpoints = 60,
+	Bravery = 55,
+	Stamina = 115,
+	MeleeSkill = 50,
+	RangedSkill = 65,
+	MeleeDefense = 5,
+	RangedDefense = 15,
+	Initiative = 110,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("NomadOutlaw", null, {
+	XP = 250,
+	ActionPoints = 9,
+	Hitpoints = 75,
+	Bravery = 60,
+	Stamina = 125,
+	MeleeSkill = 65,
+	RangedSkill = 55,
+	MeleeDefense = 15,
+	RangedDefense = 0,
+	Initiative = 115,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("NomadLeader", null, {
+	XP = 375,
+	ActionPoints = 9,
+	Hitpoints = 100,
+	Bravery = 75,
+	Stamina = 130,
+	MeleeSkill = 75,
+	RangedSkill = 65,
+	MeleeDefense = 20,
+	RangedDefense = 0,
+	Initiative = 125,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("DesertDevil", null, {
+	XP = 450,
+	ActionPoints = 9,
+	Hitpoints = 90,
+	Bravery = 90,
+	Stamina = 130,
+	MeleeSkill = 90,
+	RangedSkill = 50,
+	MeleeDefense = 50,
+	RangedDefense = 15,
+	Initiative = 125,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("处决者", null, {
+	XP = 450,
+	ActionPoints = 9,
+	Hitpoints = 170,
+	Bravery = 90,
+	Stamina = 160,
+	MeleeSkill = 85,
+	RangedSkill = 50,
+	MeleeDefense = 30,
+	RangedDefense = 0,
+	Initiative = 115,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});
+::Reforged.Entities.editEntity("DesertStalker", null, {
+	XP = 450,
+	ActionPoints = 9,
+	Hitpoints = 80,
+	Bravery = 70,
+	Stamina = 135,
+	MeleeSkill = 65,
+	RangedSkill = 85,
+	MeleeDefense = 15,
+	RangedDefense = 25,
+	Initiative = 140,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		0,
+		0
+	],
+	FatigueRecoveryRate = 15
+});

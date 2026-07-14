@@ -97,11 +97,15 @@ this.censer_castigate_skill <- this.inherit("scripts/skills/skill", {
 			if (_targetEntity != null && !this.getContainer().getActor().getCurrentProperties().IsSpecializedInFlails && this.getContainer().getActor().getTile().getDistanceTo(_targetEntity.getTile()) == 1)
 			{
 				_properties.MeleeSkill += -15;
-				this.m.HitChanceBonus = -15;
+				this.m.HitChanceBonus += -15;
+			}
+			else if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInFlails)
+			{
+				this.m.HitChanceBonus += 0;
 			}
 			else
 			{
-				this.m.HitChanceBonus = 0;
+				this.m.IsShieldRelevant = false;
 			}
 		}
 	}
@@ -164,45 +168,7 @@ this.censer_castigate_skill <- this.inherit("scripts/skills/skill", {
 				ret = this.attackEntity(_user, tile.getEntity()) || ret;
 			}
 
-			local miasma_effect = {
-				Type = "miasma",
-				Tooltip = "瘴气弥漫此处，毒害所有活物",
-				IsPositive = false,
-				IsAppliedAtRoundStart = false,
-				IsAppliedAtTurnEnd = true,
-				IsAppliedOnMovement = false,
-				IsAppliedOnEnter = false,
-				IsByPlayer = false,
-				Timeout = this.Time.getRound() + 3,
-				Callback = this.Const.Tactical.Common.onApplyMiasma,
-				function Applicable( _a )
-				{
-					return !_a.getFlags().has("undead");
-				}
-
-			};
-
-			if (tile.Properties.Effect != null && tile.Properties.Effect.Type == "miasma")
-			{
-				tile.Properties.Effect.Timeout = this.Time.getRound() + 3;
-			}
-			else
-			{
-				if (tile.Properties.Effect != null)
-				{
-					this.Tactical.Entities.removeTileEffect(tile);
-				}
-
-				tile.Properties.Effect = clone miasma_effect;
-				local particles = [];
-
-				for( local i = 0; i < this.Const.Tactical.MiasmaParticles.len(); i = ++i )
-				{
-					particles.push(this.Tactical.spawnParticleEffect(true, this.Const.Tactical.MiasmaParticles[i].Brushes, tile, this.Const.Tactical.MiasmaParticles[i].Delay, this.Const.Tactical.MiasmaParticles[i].Quantity, this.Const.Tactical.MiasmaParticles[i].LifeTimeQuantity, this.Const.Tactical.MiasmaParticles[i].SpawnRate, this.Const.Tactical.MiasmaParticles[i].Stages));
-				}
-
-				this.Tactical.Entities.addTileEffect(tile, tile.Properties.Effect, particles);
-			}
+			this.Tactical.State.spawnMiasmaOnTile(tile);
 
 			if (!_user.isAlive() || _user.isDying())
 			{
