@@ -3111,6 +3111,20 @@ this.tooltip_events <- {
 					}
 				];
 
+			case "world-screen.topbar.TimeVeryFastButton":
+				return [
+					{
+						id = 1,
+						type = "title",
+						text = "很快 (3)"
+					},
+					{
+						id = 2,
+						type = "description",
+						text = "使时间流动速度比平常快得多。请谨慎使用。"
+					}
+				];
+
 			case "world-screen.topbar.options-module.ActiveContractButton":
 				return [
 					{
@@ -3651,7 +3665,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "这间盔甲店是寻找制作精良、经久耐用的防护用品的理想场所。损坏的装备也可以在这里修好，给钱就行。"
+						text = "盔甲店出售做工精良、结实耐用的护具。受损装备也可在此付费修理。"
 					}
 				];
 
@@ -4022,7 +4036,7 @@ this.tooltip_events <- {
 					{
 						id = 2,
 						type = "description",
-						text = "免费的《血肉与信仰》DLC为你添加了两个新的、非常独特的起源：解剖学家和宣誓者。 此外，还有两个新的旗帜、新装备、新的雇佣背景和许多新事件。"
+						text = "免费的《血肉与信仰》DLC为你添加了两个新的、非常独特的起源：解剖学家和执誓者。 此外，还有两个新的旗帜、新装备、新的雇佣背景和许多新事件。"
 					}
 				];
 

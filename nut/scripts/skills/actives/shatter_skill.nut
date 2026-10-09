@@ -33,7 +33,7 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.HitChanceBonus = -10;
+		this.m.HitChanceBonus = 0;
 		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 30;
@@ -47,26 +47,12 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 	function getTooltip()
 	{
 		local ret = this.getDefaultTooltip();
-
-		if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers)
-		{
-			ret.push({
-				id = 7,
-				type = "text",
-				icon = "ui/icons/hitchance.png",
-				text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]-5%[/color] 命中惩罚"
-			});
-		}
-		else
-		{
-			ret.push({
-				id = 7,
-				type = "text",
-				icon = "ui/icons/hitchance.png",
-				text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]-10%[/color] 命中惩罚"
-			});
-		}
-
+		ret.push({
+			id = 7,
+			type = "text",
+			icon = "ui/icons/hitchance.png",
+			text = "有 [color=" + this.Const.UI.Color.NegativeValue + "]" + this.getHitChanceModifier() + "%[/color] 命中几率"
+		});
 		ret.extend([
 			{
 				id = 8,
@@ -164,28 +150,7 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 			skills.removeByID("effects.shieldwall");
 			skills.removeByID("effects.spearwall");
 			skills.removeByID("effects.riposte");
-			_target.setCurrentMovementType(this.Const.Tactical.MovementType.Involuntary);
-			local damage = this.Math.max(0, this.Math.abs(knockToTile.Level - _targetTile.Level) - 1) * this.Const.Combat.FallingDamage;
-
-			if (damage == 0)
-			{
-				this.Tactical.getNavigator().teleport(_target, knockToTile, null, null, true);
-			}
-			else
-			{
-				local p = this.getContainer().getActor().getCurrentProperties();
-				local tag = {
-					Attacker = _user,
-					Skill = this,
-					HitInfo = clone this.Const.Tactical.HitInfo
-				};
-				tag.HitInfo.DamageRegular = damage;
-				tag.HitInfo.DamageDirect = 1.0;
-				tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-				tag.HitInfo.BodyDamageMult = 1.0;
-				tag.HitInfo.FatalityChanceMult = 1.0;
-				this.Tactical.getNavigator().teleport(_target, knockToTile, this.onKnockedDown, tag, true);
-			}
+			this.Tactical.State.handleInvoluntaryMovement(_target, _user, _targetTile, knockToTile, this, null, null);
 		}
 		else
 		{
@@ -204,11 +169,15 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
-	function onKnockedDown( _entity, _tag )
+	function getHitChanceModifier()
 	{
-		if (_tag.HitInfo.DamageRegular != 0)
+		if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers)
 		{
-			_entity.onDamageReceived(_tag.Attacker, _tag.Skill, _tag.HitInfo);
+			return -5;
+		}
+		else
+		{
+			return -10;
 		}
 	}
 
@@ -324,14 +293,8 @@ this.shatter_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers)
-			{
-				_properties.MeleeSkill -= 10;
-			}
-			else
-			{
-				_properties.MeleeSkill -= 5;
-			}
+			_properties.MeleeSkill += this.getHitChanceModifier();
+			this.m.HitChanceBonus += this.getHitChanceModifier();
 		}
 	}
 

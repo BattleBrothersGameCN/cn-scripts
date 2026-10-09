@@ -5,7 +5,7 @@ this.fault_finder_eye_mask <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.fault_finder_eye_mask";
 		this.m.Name = "秘眼面罩";
-		this.m.Description = "";
+		this.m.Description = "一面画有神秘符号的粗糙面具，遮住了一整张脸。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = false;

@@ -32,7 +32,7 @@ this.tail_slam_big_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsAOE = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.HitChanceBonus = -5;
+		this.m.HitChanceBonus = 0;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -128,28 +128,7 @@ this.tail_slam_big_skill <- this.inherit("scripts/skills/skill", {
 			skills.removeByID("effects.shieldwall");
 			skills.removeByID("effects.spearwall");
 			skills.removeByID("effects.riposte");
-			_target.setCurrentMovementType(this.Const.Tactical.MovementType.Involuntary);
-			local damage = this.Math.max(0, this.Math.abs(knockToTile.Level - _targetTile.Level) - 1) * this.Const.Combat.FallingDamage;
-
-			if (damage == 0)
-			{
-				this.Tactical.getNavigator().teleport(_target, knockToTile, null, null, true);
-			}
-			else
-			{
-				local p = this.getContainer().getActor().getCurrentProperties();
-				local tag = {
-					Attacker = _user,
-					Skill = this,
-					HitInfo = clone this.Const.Tactical.HitInfo
-				};
-				tag.HitInfo.DamageRegular = damage;
-				tag.HitInfo.DamageDirect = 1.0;
-				tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-				tag.HitInfo.BodyDamageMult = 1.0;
-				tag.HitInfo.FatalityChanceMult = 1.0;
-				this.Tactical.getNavigator().teleport(_target, knockToTile, this.onKnockedDown, tag, true);
-			}
+			this.Tactical.State.handleInvoluntaryMovement(_target, _user, _targetTile, knockToTile, this, null, null);
 		}
 		else
 		{
@@ -165,14 +144,6 @@ this.tail_slam_big_skill <- this.inherit("scripts/skills/skill", {
 			{
 				this.Tactical.EventLog.log(stun.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(_target)));
 			}
-		}
-	}
-
-	function onKnockedDown( _entity, _tag )
-	{
-		if (_tag.HitInfo.DamageRegular != 0)
-		{
-			_entity.onDamageReceived(_tag.Attacker, _tag.Skill, _tag.HitInfo);
 		}
 	}
 

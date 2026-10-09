@@ -31,25 +31,32 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 			return this.Const.AI.Behavior.Score.Zero;
 		}
 
-		local hasQuickHands = _entity.getSkills().hasSkill("perk.quick_hands");
+		local skills = _entity.getSkills();
+		local quickHands = skills.getSkillByID("perk.quick_hands");
+		local hasQuickHands = quickHands != null && !quickHands.isSpent();
 
-		if (!hasQuickHands && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchItemAPCost)
+		if (!hasQuickHands && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchItemAPCost && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchTwoHanderAPCost && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchShieldAPCost)
 		{
 			return this.Const.AI.Behavior.Score.Zero;
 		}
 
+		local bagItems = _entity.getItems().getAllItemsAtSlot(this.Const.ItemSlot.Bag);
 		local item = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
-		local attackSkill = _entity.getSkills().getAttackOfOpportunity();
+		local attackSkill = skills.getAttackOfOpportunity();
 
-		if (item != null && !_entity.getCurrentProperties().IsAbleToUseWeaponSkills && hasQuickHands && _entity.getActionPoints() == _entity.getActionPointsMax() && attackSkill != null && attackSkill.getActionPointCost() <= 4)
+		if (item != null && item.isItemType(this.Const.Items.ItemType.MeleeWeapon) && !_entity.getCurrentProperties().IsAbleToUseWeaponSkills && hasQuickHands && _entity.getActionPoints() == _entity.getActionPointsMax() && attackSkill != null && attackSkill.getActionPointCost() <= 4)
 		{
-			this.m.IsNegatingDisarm = true;
-			return this.Const.AI.Behavior.Score.SwitchToMelee * scoreMult * this.Const.AI.Behavior.SwitchToCounterDisarm;
+			if (bagItems.len() < _entity.getItems().getUnlockedBagSlots() || bagItems.filter(function ( i, v )
+			{
+				return !v.isItemType(this.Const.Items.ItemType.Shield);
+			}).len() > 0)
+			{
+				this.m.IsNegatingDisarm = true;
+				return this.Const.AI.Behavior.Score.SwitchToMelee * scoreMult * this.Const.AI.Behavior.SwitchToCounterDisarm;
+			}
 		}
 
-		local items = _entity.getItems().getAllItemsAtSlot(this.Const.ItemSlot.Bag);
-
-		if (items.len() == 0)
+		if (bagItems.len() == 0)
 		{
 			return this.Const.AI.Behavior.Score.Zero;
 		}
@@ -109,14 +116,19 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 			bestWeapon = item;
 		}
 
-		foreach( it in items )
+		foreach( it in bagItems )
 		{
 			if (!it.isItemType(this.Const.Items.ItemType.MeleeWeapon))
 			{
 				continue;
 			}
 
-			if (bestWeapon == null || item == null && it.getValue() > bestWeapon.getValue() || item != null && it.getValue() > bestWeapon.getValue() + 1000)
+			if (it.getBlockedSlotType() != null && _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchTwoHanderAPCost || _entity.getActionPoints() < this.Const.Tactical.Settings.SwitchItemAPCost)
+			{
+				continue;
+			}
+
+			if (bestWeapon == null || this.getWeaponScore(it) > this.getWeaponScore(bestWeapon))
 			{
 				bestWeapon = it;
 			}
@@ -133,6 +145,10 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 		{
 			scoreMult = scoreMult * this.Const.AI.Behavior.SwitchToQuickHandsMult;
 		}
+		else if (quickHands != null)
+		{
+			scoreMult = scoreMult * this.Const.AI.Behavior.AlreadySwitchedMult;
+		}
 
 		if (item == null)
 		{
@@ -144,7 +160,7 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 			scoreMult = scoreMult * this.Const.AI.Behavior.SwitchWeaponBecauseDisarmedMult;
 		}
 
-		if (_entity.getSkills().hasSkill("special.night"))
+		if (skills.hasSkill("special.night"))
 		{
 			scoreMult = scoreMult * this.Const.AI.Behavior.SwitchToMeleeAtNightMult;
 		}
@@ -154,12 +170,47 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 
 	function onExecute( _entity )
 	{
+		local oldWeapon = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
+		local bagItems = _entity.getItems().getAllItemsAtSlot(this.Const.ItemSlot.Bag);
+		local offhand = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
+		local itemsToSwap = [];
+
+		if (oldWeapon != null)
+		{
+			itemsToSwap.push(oldWeapon);
+		}
+
+		if (bagItems.len() == _entity.getItems().getUnlockedBagSlots())
+		{
+			foreach( item in bagItems )
+			{
+				if (item.isItemType(this.Const.Items.ItemType.Shield))
+				{
+					continue;
+				}
+
+				if (item.getBlockedSlotType() != null && offhand != null)
+				{
+					continue;
+				}
+
+				itemsToSwap.push(item);
+				break;
+			}
+		}
+
 		if (this.m.IsNegatingDisarm)
 		{
 			_entity.getSkills().removeByID("effects.disarmed");
-			_entity.getItems().payForAction([]);
-			_entity.getItems().payForAction([]);
+			_entity.getItems().payForAction(itemsToSwap);
+			_entity.getItems().payForAction(itemsToSwap);
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + "再次装备了他们的武器");
+
+			if (this.Const.AI.VerboseMode)
+			{
+				this.logInfo("* " + _entity.getName() + "：以武器反制缴械 \'" + oldWeapon.getID() + "\'!");
+			}
+
 			this.m.IsNegatingDisarm = false;
 			this.m.WeaponToEquip = null;
 			return true;
@@ -170,34 +221,32 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 			this.logInfo("* " + _entity.getName() + "：切换到近战武器 \'" + this.m.WeaponToEquip.getID() + "\'!");
 		}
 
-		local oldWeapon = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
-
 		if (oldWeapon != null)
 		{
 			_entity.getItems().unequip(oldWeapon);
 		}
 
+		itemsToSwap.push(this.m.WeaponToEquip);
 		_entity.getItems().removeFromBag(this.m.WeaponToEquip);
 
-		if (this.m.WeaponToEquip.getBlockedSlotType() != null && _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand) != null)
+		if (this.m.WeaponToEquip.getBlockedSlotType() != null && offhand != null)
 		{
 			local slotsRequired = 1;
+			itemsToSwap.push(offhand);
 
 			if (oldWeapon != null)
 			{
 				slotsRequired = ++slotsRequired;
 			}
 
-			local shield = _entity.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
-
 			if (_entity.getItems().getNumberOfEmptySlots(this.Const.ItemSlot.Bag) >= slotsRequired)
 			{
-				_entity.getItems().unequip(shield);
-				_entity.getItems().addToBag(shield);
+				_entity.getItems().unequip(offhand);
+				_entity.getItems().addToBag(offhand);
 			}
 			else
 			{
-				shield.drop(_entity.getTile());
+				offhand.drop(_entity.getTile());
 			}
 		}
 
@@ -208,10 +257,28 @@ this.ai_switchto_melee <- this.inherit("scripts/ai/tactical/behavior", {
 			_entity.getItems().addToBag(oldWeapon);
 		}
 
-		_entity.getItems().payForAction([]);
+		_entity.getItems().payForAction(itemsToSwap);
 		this.m.WeaponToEquip = null;
 		this.getAgent().getIntentions().IsChangingWeapons = true;
 		return true;
+	}
+
+	function getWeaponScore( weapon )
+	{
+		if (weapon == null)
+		{
+			return 0.0;
+		}
+
+		if (!weapon.isItemType(this.Const.Items.ItemType.MeleeWeapon))
+		{
+			return 0.0;
+		}
+
+		local score = 0.0;
+		score = score + weapon.getValue() / 1000;
+		score = score + weapon.getDamageMax() * (weapon.isDoubleGrippable() ? this.Const.Combat.DoubleGripDamageMult : 1.0) / 100;
+		return score;
 	}
 
 });

@@ -1,0 +1,38 @@
+::Reforged.HooksMod.hook("scripts/entity/tactical/enemies/goblin_leader", function ( q )
+{
+	q.onInit = function ()
+	{
+		return {
+			function onInit()
+			{
+				this.goblin.onInit();
+				local b = this.m.BaseProperties;
+				b.setValues(::Const.Tactical.Actor.GoblinLeader);
+				b.TargetAttractionMult = 1.5;
+				this.m.ActionPoints = b.ActionPoints;
+				this.m.Hitpoints = b.Hitpoints;
+				this.m.CurrentProperties = clone b;
+				this.m.ActionPointCosts = ::Const.DefaultMovementAPCost;
+				this.m.FatigueCosts = ::Const.DefaultMovementFatigueCost;
+				this.getSprite("head").setBrush("bust_goblin_03_head_01");
+				this.addDefaultStatusSprites();
+				this.m.Skills.add(::new("scripts/skills/perks/perk_captain"));
+				this.m.Skills.add(::new("scripts/skills/actives/goblin_whip"));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_duelist"));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_bullseye"));
+			}
+
+		}.onInit;
+	};
+	q.onSpawned = function ()
+	{
+		return {
+			function onSpawned()
+			{
+				::Reforged.Skills.addPerkGroupOfEquippedWeapon(this);
+				::Reforged.Skills.addPerkGroup(this, "pg.rf_sword");
+			}
+
+		}.onSpawned;
+	};
+});

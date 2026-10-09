@@ -363,7 +363,9 @@ gt.Const.World.MovementSettings <- {
 	PlayerDirectMoveRadius = 400.0
 };
 gt.Const.World.SpeedSettings <- {
+	NormalMult = 1.0,
 	FastMult = 2.0,
+	VeryFastMult = 4.0,
 	EscortMult = 3.75,
 	CampMult = 3.0
 };
@@ -565,6 +567,13 @@ this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.NW | this.Const.Direc
 this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.NW | this.Const.DirectionAsBit.NE | this.Const.DirectionAsBit.SE | this.Const.DirectionAsBit.S, "road_NW_NE_SE_S");
 this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.NW | this.Const.DirectionAsBit.NE | this.Const.DirectionAsBit.SW | this.Const.DirectionAsBit.N, "road_NW_NE_SW_N");
 this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.NW | this.Const.DirectionAsBit.NE | this.Const.DirectionAsBit.SW | this.Const.DirectionAsBit.S, "road_NW_NE_SW_S");
+this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.N, "road_N");
+this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.S, "road_S");
+this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.N | this.Const.DirectionAsBit.NE | this.Const.DirectionAsBit.NW, "road_N_NE_NW");
+this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.SE | this.Const.DirectionAsBit.S | this.Const.DirectionAsBit.SW, "road_SE_S_SW");
+this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.SE | this.Const.DirectionAsBit.S | this.Const.DirectionAsBit.SW | this.Const.DirectionAsBit.NW, "road_SE_S_SW_NW");
+this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.NE | this.Const.DirectionAsBit.SE | this.Const.DirectionAsBit.S | this.Const.DirectionAsBit.SW, "road_NE_SE_S_SW");
+this.Const.World.RoadBrushes.add(this.Const.DirectionAsBit.NE | this.Const.DirectionAsBit.SE | this.Const.DirectionAsBit.SW | this.Const.DirectionAsBit.NW, "road_NE_SE_SW_NW");
 gt.Const.World.TerrainBridgeBrushes <- [
 	"crossing_bridge_NE_SW",
 	"crossing_bridge_NE_SW",
@@ -730,7 +739,7 @@ gt.Const.World.ShoreBrushes <- {
 		}
 		else
 		{
-			this.logWarning("未定义海岸笔刷！");
+			this.logWarning("未定义的海岸笔刷 (" + _d + ")!");
 			return "未定义的海岸笔刷";
 		}
 	}
@@ -761,6 +770,7 @@ this.Const.World.ShoreBrushes.add(this.Const.DirectionAsBit.SW | this.Const.Dire
 this.Const.World.ShoreBrushes.add(this.Const.DirectionAsBit.SW | this.Const.DirectionAsBit.NW | this.Const.DirectionAsBit.N | this.Const.DirectionAsBit.NE, "shore_sw_nw_n_ne");
 this.Const.World.ShoreBrushes.add(this.Const.DirectionAsBit.SW | this.Const.DirectionAsBit.S, "shore_sw_s");
 this.Const.World.ShoreBrushes.add(this.Const.DirectionAsBit.SW | this.Const.DirectionAsBit.S | this.Const.DirectionAsBit.SE, "shore_sw_s_se");
+this.Const.World.ShoreBrushes.add(this.Const.DirectionAsBit.N | this.Const.DirectionAsBit.S, "shore_n_s");
 gt.Const.World.TimeOfDay <- {
 	Dawn = 0,
 	Morning = 1,

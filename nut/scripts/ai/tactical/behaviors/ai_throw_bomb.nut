@@ -118,8 +118,11 @@ this.ai_throw_bomb <- this.inherit("scripts/ai/tactical/behavior", {
 		}
 		else
 		{
-			_entity.getItems().payForAction([]);
-			_entity.getItems().equip(this.new(this.m.Selection.Item));
+			local bomb = this.new(this.m.Selection.Item);
+			_entity.getItems().payForAction([
+				bomb
+			]);
+			_entity.getItems().equip(bomb);
 			++this.m.BombsUsed;
 		}
 
@@ -235,6 +238,11 @@ this.ai_throw_bomb <- this.inherit("scripts/ai/tactical/behavior", {
 				}
 
 				if (targetTile.Type == this.Const.Tactical.TerrainType.ShallowWater || targetTile.Type == this.Const.Tactical.TerrainType.DeepWater)
+				{
+					continue;
+				}
+
+				if (this.Tactical.Entities.getNonFlammableTileSubtypes().find(targetTile.Subtype) != null)
 				{
 					continue;
 				}

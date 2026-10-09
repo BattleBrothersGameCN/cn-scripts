@@ -54,8 +54,14 @@ this.medium_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"squire_background",
 			"squire_background",
 			"cripple_background",
-			"paladin_background"
+			"executioner_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("paladin_background");
+		}
+
 		this.m.UIDescription = "一座被沃土包围的石堡";
 		this.m.Description = "一座被肥沃土地包围的石头城堡，是扼守此地的重要支点，也是当地军事行动的前哨站。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";
