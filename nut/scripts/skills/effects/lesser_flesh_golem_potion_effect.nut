@@ -19,13 +19,12 @@ this.lesser_flesh_golem_potion_effect <- this.inherit("scripts/skills/skill", {
 		return "使用了一种人工激素以后，该角色的身体发生了变化 — 按理说是变得更好了吧。";
 	}
 
-	function onUpdate( _properties )
+	function onDeath( _fatalityType )
 	{
-	}
-
-	function onDeath()
-	{
-		this.World.Statistics.getFlags().set("isLesserFleshGolemPotionAcquired", false);
+		if (_fatalityType != this.Const.FatalityType.Unconscious)
+		{
+			this.World.Statistics.getFlags().set("isLesserFleshGolemPotionAcquired", false);
+		}
 	}
 
 	function onDismiss()

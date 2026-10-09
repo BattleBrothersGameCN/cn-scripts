@@ -66,9 +66,14 @@ this.medium_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"vagabond_background",
 			"cripple_background",
 			"eunuch_background",
-			"sellsword_background",
-			"anatomist_background"
+			"sellsword_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("anatomist_background");
+		}
+
 		this.m.UIDescription = "一座分散而居的大型村庄，依靠渔业和少量的贸易为生。";
 		this.m.Description = "一座分散而居的大型村庄，依靠渔业和少量的贸易为生。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_02";

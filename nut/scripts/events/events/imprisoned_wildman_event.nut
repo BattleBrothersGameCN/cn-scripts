@@ -150,7 +150,7 @@ this.imprisoned_wildman_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "好吧，至少我们拿到了报酬。",
+					Text = "好吧，至少我们没白干。",
 					function getResult( _event )
 					{
 						return 0;

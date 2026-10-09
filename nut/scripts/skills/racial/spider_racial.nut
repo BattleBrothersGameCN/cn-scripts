@@ -66,7 +66,7 @@ this.spider_racial <- this.inherit("scripts/skills/skill", {
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
 	{
-		if (_targetEntity.getSkills().hasSkill("effects.web"))
+		if (_targetEntity != null && _targetEntity.getSkills().hasSkill("effects.web"))
 		{
 			_properties.DamageDirectMult *= 2.0;
 		}

@@ -65,8 +65,14 @@ this.large_tundra_village <- this.inherit("scripts/entity/world/settlement", {
 			"raider_background",
 			"sellsword_background",
 			"swordmaster_background",
-			"anatomist_background"
+			"executioner_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("anatomist_background");
+		}
+
 		this.m.UIDescription = "一座被荒芜苔原包围的大城市兼贸易中心";
 		this.m.Description = "这座被荒芜苔原包围的大型城市，不仅长期都是重要的贸易枢纽，还是思想家、艺术家的家园。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";

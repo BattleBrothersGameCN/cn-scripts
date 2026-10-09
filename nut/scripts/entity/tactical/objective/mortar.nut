@@ -2,7 +2,6 @@ this.mortar <- this.inherit("scripts/entity/tactical/actor", {
 	m = {},
 	function create()
 	{
-		this.m.IsAttackable = false;
 		this.m.IsActingEachTurn = true;
 		this.m.IsNonCombatant = true;
 		this.m.IsShakingOnHit = false;
@@ -45,6 +44,7 @@ this.mortar <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsMovable = false;
 		b.TargetAttractionMult = 2.0;
 		b.DamageReceivedTotalMult = 0.0;
+		this.m.IsAttackable = false;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;

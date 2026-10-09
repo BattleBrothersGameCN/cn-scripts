@@ -69,8 +69,14 @@ this.large_fishing_village <- this.inherit("scripts/entity/world/settlement", {
 			"retired_soldier_background",
 			"sellsword_background",
 			"swordmaster_background",
-			"anatomist_background"
+			"executioner_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("anatomist_background");
+		}
+
 		this.m.UIDescription = "一座大型沿海城市和贸易中心";
 		this.m.Description = "一个依赖贸易和渔业的大海港城市，也是旅客乘船到达或离开的重要枢纽。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";

@@ -5,7 +5,7 @@ this.fault_finder_facewrap <- this.inherit("scripts/items/helmets/helmet", {
 		this.helmet.create();
 		this.m.ID = "armor.head.fault_finder_facewrap";
 		this.m.Name = "皮革缠面";
-		this.m.Description = "";
+		this.m.Description = "厚重的皮革绑带，被随便地绕在头上提供防护。";
 		this.m.ShowOnCharacter = true;
 		this.m.IsDroppedAsLoot = true;
 		this.m.HideHair = false;

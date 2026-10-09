@@ -57,8 +57,14 @@ this.medium_coast_fort <- this.inherit("scripts/entity/world/settlement", {
 			"retired_soldier_background",
 			"sellsword_background",
 			"swordmaster_background",
-			"paladin_background"
+			"executioner_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("paladin_background");
+		}
+
 		this.m.UIDescription = "一个控制重要战略港口和保护附近贸易路线的石堡";
 		this.m.Description = "这座石头堡垒控制着具有重要战略意义的海上通道，保护着附近的贸易路线。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_02";

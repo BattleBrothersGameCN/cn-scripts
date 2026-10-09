@@ -47,7 +47,8 @@ this.small_farm_fort <- this.inherit("scripts/entity/world/settlement", {
 			"deserter_background",
 			"deserter_background",
 			"retired_soldier_background",
-			"retired_soldier_background"
+			"retired_soldier_background",
+			"executioner_background"
 		];
 		this.m.UIDescription = "一个木制城寨，可以俯瞰周围的田野";
 		this.m.Description = "一个木制城寨，可以俯瞰周围的田野.";

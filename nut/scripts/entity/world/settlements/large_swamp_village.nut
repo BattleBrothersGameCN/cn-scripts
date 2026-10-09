@@ -79,13 +79,18 @@ this.large_swamp_village <- this.inherit("scripts/entity/world/settlement", {
 			"swordmaster_background",
 			"cripple_background",
 			"eunuch_background",
-			"anatomist_background"
+			"executioner_background"
 		];
 
 		if (this.Const.DLC.Unhold)
 		{
 			this.m.DraftList.push("beast_hunter_background");
 			this.m.DraftList.push("beast_hunter_background");
+		}
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("anatomist_background");
 		}
 
 		this.m.UIDescription = "一座建立在沼泽干燥地带的中型城市";
