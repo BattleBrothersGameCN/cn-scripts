@@ -5,7 +5,7 @@ this.brigand_follower <- this.inherit("scripts/retinue/follower", {
 		this.follower.create();
 		this.m.ID = "follower.brigand";
 		this.m.Name = "强盗";
-		this.m.Description = "这位强盗或许已经年迈力衰，却也曾在这片土地上威震一时。为了一顿热饭，他很愿意与你分享他从联系人那里得来的商队情报。";
+		this.m.Description = "这位强盗或许已经年迈力衰，却也曾在这片土地上威震一时。为了一顿热饭，他很愿意与你分享他从联系人那里得来的车队情报。";
 		this.m.Image = "ui/campfire/brigand_01";
 		this.m.Cost = 2500;
 		this.m.Effects = [

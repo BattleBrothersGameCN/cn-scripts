@@ -92,7 +92,7 @@ this.privateering_contract <- this.inherit("scripts/contracts/contract", {
 				this.Contract.m.BulletpointsObjectives = [
 					"前往%feudfamily%的领地",
 					"劫掠和焚毁地点",
-					"摧毁商队或巡逻队",
+					"摧毁车队或巡逻队",
 					"在5天后返回"
 				];
 

@@ -1,0 +1,120 @@
+::MSU.Array.removeValues(::Const.Strings.BillNames, [
+	"月牙斧",
+	"斧枪"
+]);
+::MSU.Array.removeValues(::Const.Strings.CrossbowNames, [
+	"背弃者"
+]);
+::Const.Strings.CrossbowNames.extend([
+	"天蝎",
+	"铁照门",
+	"雷霆",
+	"黑伯劳",
+	"血箭",
+	"暗箭",
+	"龙牙",
+	"黑棘",
+	"破风者",
+	"钢铁风暴"
+]);
+::MSU.Array.removeValues(::Const.Strings.DaggerNames, [
+	"穿甲剑"
+]);
+::Const.Strings.DaggerNames.extend([
+	"背弃者"
+]);
+::Const.Strings.HandgonneNames.extend([
+	"震耳者",
+	"铁鸣",
+	"火山",
+	"铁流星",
+	"雷震",
+	"火风暴",
+	"炼狱",
+	"轰炎"
+]);
+::Const.Strings.LongaxeNames.extend([
+	"扑杀者"
+]);
+::Const.Strings.SwordlanceNames.extend([
+	"血月",
+	"食尸鬼之祸",
+	"夺魂者",
+	"暗影收割者",
+	"死亡之手",
+	"冷酷收割",
+	"血腥风暴",
+	"战争使者",
+	"死亡之风"
+]);
+::MSU.Array.removeValues(::Const.Strings.WarbrandNames, [
+	"战刀"
+]);
+::Const.Strings.WhipNames.extend([
+	"驱奴者",
+	"触手",
+	"藤蔓",
+	"放血者",
+	"刺鞭",
+	"棘鞭",
+	"血鞭"
+]);
+::Const.Strings.RF_KriegsmesserNames <- [
+	"战刀",
+	"开膛者",
+	"切削者",
+	"切割者",
+	"斩首者",
+	"掠袭者",
+	"饮血者",
+	"渴血者",
+	"暴行",
+	"切割",
+	"军用砍刀",
+	"撕裂者",
+	"碾压者",
+	"砍杀者",
+	"毁坏者",
+	"残害者",
+	"摧残者",
+	"残杀者",
+	"护手刀",
+	"刀锋",
+	"长刃",
+	"杀手",
+	"征服者",
+	"斩首者",
+	"祸乱之源",
+	"撕肉者",
+	"绞肉者"
+];
+::Const.Strings.RF_LongswordNames <- [
+	"切裂者",
+	"切削者",
+	"刀锋",
+	"切割者",
+	"剑",
+	"死亡使者",
+	"宽恕",
+	"杀手",
+	"利刃",
+	"战刃",
+	"长刃",
+	"饮血者",
+	"守誓者",
+	"晨光",
+	"审判",
+	"复仇者",
+	"血河",
+	"毒刺",
+	"闪电",
+	"打击者",
+	"剃刀",
+	"利刃",
+	"风刃",
+	"迅刃",
+	"切割",
+	"复仇",
+	"荣耀",
+	"征服者"
+];

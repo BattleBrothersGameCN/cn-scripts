@@ -67,20 +67,6 @@ this.greater_flesh_golem <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
-		local skillsToClear = [
-			"actives.flurry_skill",
-			"actives.spike_skill",
-			"actives.corpse_hurl_skill"
-		];
-
-		foreach( skillID in skillsToClear )
-		{
-			if (this.getSkills().hasSkill(skillID) && "clearAffectedTiles" in this.getSkills().getSkillByID(skillID))
-			{
-				this.getSkills().getSkillByID(skillID).clearAffectedTiles();
-			}
-		}
-
 		local flip = this.Math.rand(1, 100) < 50;
 
 		if (_tile != null)

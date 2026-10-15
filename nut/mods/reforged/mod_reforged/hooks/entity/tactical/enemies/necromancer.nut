@@ -1,0 +1,74 @@
+::Reforged.HooksMod.hook("scripts/entity/tactical/enemies/necromancer", function ( q )
+{
+	q.onInit = function ()
+	{
+		return {
+			function onInit()
+			{
+				this.human.onInit();
+				local b = this.m.BaseProperties;
+				b.setValues(::Const.Tactical.Actor.Necromancer);
+				b.TargetAttractionMult = 3.0;
+				b.IsAffectedByNight = false;
+				b.Vision = 8;
+				this.m.ActionPoints = b.ActionPoints;
+				this.m.Hitpoints = b.Hitpoints;
+				this.m.CurrentProperties = clone b;
+				this.setAppearance();
+				this.getSprite("socket").setBrush("bust_base_undead");
+				this.getSprite("head").Color = this.createColor("#ffffff");
+				this.getSprite("head").Saturation = 1.0;
+				this.getSprite("body").Saturation = 0.6;
+				this.m.Skills.add(::new("scripts/skills/actives/raise_undead"));
+				this.m.Skills.add(::new("scripts/skills/actives/possess_undead_skill"));
+				this.m.Skills.add(::Reforged.new("scripts/skills/perks/perk_inspiring_presence", function ( o )
+				{
+					o.m.IsForceEnabled = true;
+				}));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_rf_soul_link"));
+			}
+
+		}.onInit;
+	};
+	q.getLootForTile = function ( __original )
+	{
+		return {
+			function getLootForTile( _killer, _loot )
+			{
+				local ret = __original(_killer, _loot);
+
+				if (_killer == null || _killer.getFaction() == ::Const.Faction.Player || _killer.getFaction() == ::Const.Faction.PlayerAnimals)
+				{
+					if (::Math.rand(1, 100) <= 67)
+					{
+						ret.push(::new("scripts/items/loot/signet_ring_item"));
+					}
+				}
+
+				return ret;
+			}
+
+		}.getLootForTile;
+	};
+	q.makeMiniboss = function ( __original )
+	{
+		return {
+			function makeMiniboss()
+			{
+				local ret = __original();
+
+				if (ret)
+				{
+					this.m.Skills.add(::new("scripts/skills/perks/perk_nine_lives"));
+					this.m.Skills.add(::Reforged.new("scripts/skills/actives/wither_skill", function ( o )
+					{
+						o.m.FatigueCost = 10;
+					}));
+				}
+
+				return ret;
+			}
+
+		}.makeMiniboss;
+	};
+});

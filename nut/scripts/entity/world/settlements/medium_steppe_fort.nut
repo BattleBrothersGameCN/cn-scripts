@@ -55,7 +55,8 @@ this.medium_steppe_fort <- this.inherit("scripts/entity/world/settlement", {
 			"raider_background",
 			"retired_soldier_background",
 			"retired_soldier_background",
-			"sellsword_background"
+			"sellsword_background",
+			"executioner_background"
 		];
 		this.m.UIDescription = "一座石堡在平坦的草原上投射着力量";
 		this.m.Description = "这座石堡是该地区的一个战略据点，守望着周围平坦而干燥的土地。";

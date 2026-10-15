@@ -69,13 +69,18 @@ this.large_forest_fort <- this.inherit("scripts/entity/world/settlement", {
 			"squire_background",
 			"swordmaster_background",
 			"cripple_background",
-			"paladin_background"
+			"executioner_background"
 		];
 
 		if (this.Const.DLC.Unhold)
 		{
 			this.m.DraftList.push("beast_hunter_background");
 			this.m.DraftList.push("beast_hunter_background");
+		}
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("paladin_background");
 		}
 
 		this.m.UIDescription = "高耸于周围树林之上的城堡";

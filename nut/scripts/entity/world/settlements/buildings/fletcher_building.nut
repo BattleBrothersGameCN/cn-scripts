@@ -1,5 +1,6 @@
 this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildings/building", {
 	m = {
+		PriceMult = 1.25,
 		Stash = null
 	},
 	function getStash()
@@ -7,12 +8,17 @@ this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildin
 		return this.m.Stash;
 	}
 
+	function getPriceMult()
+	{
+		return this.m.PriceMult;
+	}
+
 	function create()
 	{
 		this.building.create();
 		this.m.ID = "building.fletcher";
 		this.m.Name = "弓弩店";
-		this.m.Description = "这里可以找到各种精心制作的远程武器";
+		this.m.Description = "弓弩店提供各种精心制作的远程武器。";
 		this.m.UIImage = "ui/settlements/building_11";
 		this.m.UIImageNight = "ui/settlements/building_11_night";
 		this.m.Tooltip = "world-town-screen.main-dialog-module.Fletcher";
@@ -78,7 +84,7 @@ this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildin
 		}
 	}
 
-	function onUpdateShopList()
+	function getDefaultShopList()
 	{
 		local list = [
 			{
@@ -170,18 +176,16 @@ this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildin
 
 		if (this.Const.DLC.Unhold)
 		{
-			list.extend([
-				{
-					R = 90,
-					P = 1.0,
-					S = "weapons/throwing_spear"
-				}
-			]);
+			list.push({
+				R = 90,
+				P = 1.0,
+				S = "weapons/throwing_spear"
+			});
 		}
 
 		foreach( i in this.Const.Items.NamedRangedWeapons )
 		{
-			if (this.Math.rand(1, 100) <= 50)
+			if (this.Math.rand(1, 100) <= 30)
 			{
 				list.push({
 					R = 99,
@@ -191,8 +195,7 @@ this.fletcher_building <- this.inherit("scripts/entity/world/settlements/buildin
 			}
 		}
 
-		this.m.Settlement.onUpdateShopList(this.m.ID, list);
-		this.fillStash(list, this.m.Stash, 1.25, false);
+		return list;
 	}
 
 	function onUpdateDraftList( _list )

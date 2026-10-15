@@ -56,7 +56,8 @@ this.small_snow_fort <- this.inherit("scripts/entity/world/settlement", {
 			"deserter_background",
 			"raider_background",
 			"retired_soldier_background",
-			"retired_soldier_background"
+			"retired_soldier_background",
+			"executioner_background"
 		];
 		this.m.UIDescription = "木制城寨在无尽的雪上显得很宽";
 		this.m.Description = "这座带有外郭的土丘在无尽的雪原上宽阔无垠，为驻扎在此的战团提供避寒之所和温暖的食物。";

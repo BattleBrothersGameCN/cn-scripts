@@ -243,7 +243,9 @@ gt.Const.Strings.EntityName <- [
 	"大型血肉魔像",
 	"寻衅侍僧",
 	"大先知",
-	"血肉摇篮"
+	"血肉摇篮",
+	"强盗劫掠者",
+	"重装兵"
 ];
 gt.Const.Strings.EntityNamePlural <- [
 	"死灵法师",
@@ -357,7 +359,9 @@ gt.Const.Strings.EntityNamePlural <- [
 	"大型血肉魔像",
 	"寻衅侍僧",
 	"大先知",
-	"血肉摇篮"
+	"血肉摇篮",
+	"强盗劫掠者",
+	"重装兵"
 ];
 gt.Const.Strings.Tactical.EntityName <- {
 	Boulder = "巨石",
@@ -389,7 +393,7 @@ gt.Const.Strings.FootprintsType <- [
 	"",
 	"北方士兵",
 	"镀金者的士兵",
-	"商队",
+	"一支商队",
 	"农民",
 	"民兵",
 	"难民",
@@ -1355,7 +1359,7 @@ gt.Const.Strings.PerkDescription <- {
 	Dodge = "快你一步！近战、远程防御增加，数值为角色实时主动值的[color=" + this.Const.UI.Color.PositiveValue + "]15%[/color]。",
 	Nimble = "轻甲专精！通过灵活闪避和偏转攻击，避免受到直接攻击。减少所受伤害，最多减少[color=" + this.Const.UI.Color.PositiveValue + "]60%[/color]，当盔甲和头盔的疲劳值上限减益超过[color=" + this.Const.UI.Color.PositiveValue + "]15[/color]点时，技能效果开始迅速下降。盔甲和头盔越轻，收益越多。\n\n“强壮”不影响该特技。\n\n不影响精神攻击和状态效果的伤害，但可以帮助避免受到它们。",
 	BattleForged = "重甲专精！受到的护甲伤害减少，减少的百分比等于盔甲和头盔实时总护甲值之和的[color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]。你的盔甲和头盔越重，增益越高。\n\n不影响精神攻击和状态效果的伤害，但可以帮助避免受到它们。",
-	Duelist = "人兵合一，直取空门！如果副手未持有物品或者仅携带投网等投掷工具，则可额外造成[color=" + this.Const.UI.Color.PositiveValue + "]+25%[/color]的穿甲伤害。不适用于双手武器。",
+	Duelist = "人兵合一，直取空门！如果副手未持有物品或者仅携带小圆盾或投网等投掷工具，则可额外造成[color=" + this.Const.UI.Color.PositiveValue + "]+25%[/color]的穿甲伤害。不适用于双手武器。",
 	CripplingStrikes = "致残你的敌人！近战、远程攻击造成创伤的阈值降低[color=" + this.Const.UI.Color.NegativeValue + "]33%[/color]。",
 	QuickHands = "找这个？战斗中，每回合第一次替换物品视为免费动作，不需要行动点数，盾牌除外。",
 	Bullseye = "中！当瞄准弹道受阻的目标时，受到的命中惩罚从[color=" + this.Const.UI.Color.NegativeValue + "]75%[/color]减少到[color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]。",
@@ -1392,7 +1396,7 @@ gt.Const.Strings.PerkDescription <- {
 	SpecThrowing = "精通投掷，先下手为强。投掷技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n攻击2格距离的目标时，伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]30%[/color]\n\n攻击3格距离的目标时，伤害增加 [color=" + this.Const.UI.Color.PositiveValue + "]20%[/color]。",
 	SpecAxe = "精通斧头，摧毁盾牌。斧技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n斧技能“裂盾”造成的盾牌伤害提高 [color=" + this.Const.UI.Color.PositiveValue + "]50%[/color]\n\n“环劈”的命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color]\n\n使用长斧攻击近身敌人不再有命中率惩罚。",
 	SpecCleaver = "精通砍刀，造成可怕的伤口。砍刀技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n使用砍刀和鞭子造成的每回合流血伤害分别加倍至 [color=" + this.Const.UI.Color.PositiveValue + "]10[/color]点和每回合[color=" + this.Const.UI.Color.PositiveValue + "]20[/color]点。\n\n“缴械”的命中率惩罚减半。",
-	SpecDagger = "精通匕首，迅捷而致命。匕首技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]。\n\n“刺击”、“穿刺”和“致命一击”的行动点消耗降低1，从而可在每回合中额外攻击一次。",
+	SpecDagger = "精通匕首，迅捷而致命。匕首技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color] 疲劳值积累\n\n“刺击”、“穿刺”、“致命一击”、“连环穿刺”和“洞穿”的行动点消耗降低1，从而可在每回合中额外攻击一次。",
 	SpecSword = "精通剑术，将对手失误化为自身优势。剑技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“还击”不再有命中率惩罚。\n\n“拖割”造成伤残的阈值降低 [color=" + this.Const.UI.Color.NegativeValue + "]50%[/color]\n\n剑技能“竖劈”和“挥斩”不再有命中率惩罚，并且命中率提高 [color=" + this.Const.UI.Color.PositiveValue + "]5%[/color] 。",
 	SpecSpear = "精通长矛，拒敌于外。矛技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n“矛墙”不再因敌人成功进入控制区而立即失效。此外，“矛墙”仍可主动启用，并继续对其他试图进入控制区域的敌人进行自动攻击。\n\n使用三叉矛和战叉攻击近身敌人不再有命中率惩罚。",
 	SpecPolearm = "精通长柄，拒敌于外。长柄技能积累的疲劳值减少 [color=" + this.Const.UI.Color.NegativeValue + "]25%[/color]\n\n长柄武器技能的行动点消耗降低至 [color=" + this.Const.UI.Color.NegativeValue + "]5[/color]，并且使用长柄武器攻击近身敌人不再有命中率惩罚。",

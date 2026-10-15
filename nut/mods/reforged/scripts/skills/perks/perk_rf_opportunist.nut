@@ -1,0 +1,214 @@
+this.perk_rf_opportunist <- ::inherit("scripts/skills/skill", {
+	m = {
+		FatigueCostMult = 0.5,
+		IsPrimed = false,
+		AttacksRemaining = 2,
+		TurnsRemaining = 2
+	},
+	function create()
+	{
+		this.m.ID = "perk.rf_opportunist";
+		this.m.Name = ::Const.Strings.PerkName.RF_Opportunist;
+		this.m.Description = "该角色不会浪费任何把武器拔出敌人尸体，投向另一名敌人的机会！";
+		this.m.Icon = "ui/perks/perk_rf_opportunist.png";
+		this.m.Type = ::Const.SkillType.Perk | ::Const.SkillType.StatusEffect;
+		this.m.Order = ::Const.SkillOrder.Last;
+	}
+
+	function isHidden()
+	{
+		return !this.getContainer().getActor().isPlacedOnMap() || !this.m.IsPrimed && (this.m.AttacksRemaining == 0 || this.m.TurnsRemaining == 0);
+	}
+
+	function getTooltip()
+	{
+		local ret = this.skill.getTooltip();
+		local weaponTypeName = ::Const.Items.getWeaponTypeName(::Const.Items.WeaponType.Throwing);
+
+		if (this.m.AttacksRemaining != 0 && this.m.TurnsRemaining != 0)
+		{
+			ret.push({
+				id = 10,
+				type = "text",
+				icon = "ui/icons/special.png",
+				text = ::Reforged.Mod.Tooltips.parseString(this.format("这场战斗中，下%i次%s攻击的[行动点数|Concept.ActionPoints]消耗%s。效果会在%s [回合后|Concept.Turn]消失", this.m.AttacksRemaining, weaponTypeName, ::MSU.Text.colorPositive("减半"), ::MSU.Text.colorNegative(this.m.TurnsRemaining)))
+			});
+		}
+
+		if (this.m.IsPrimed)
+		{
+			ret.push({
+				id = 11,
+				type = "text",
+				icon = "ui/icons/fatigue.png",
+				text = ::Reforged.Mod.Tooltips.parseString(this.format("只要不进行[等待|Concept.Wait]或结束[回合|Concept.Turn]，下次%s攻击便%s消耗[行动点数|Concept.ActionPoints]且仅积累%s的[疲劳值|Concept.Fatigue]", weaponTypeName, ::MSU.Text.colorPositive("no"), ::MSU.Text.colorizeMultWithText(this.m.FatigueCostMult, {
+					InvertColor = true
+				})))
+			});
+		}
+
+		return ret;
+	}
+
+	function canProcOntile( _tile )
+	{
+		if (!_tile.IsCorpseSpawned)
+		{
+			return false;
+		}
+
+		local corpse = _tile.Properties.get("Corpse");
+
+		if ("WasUsedForOpportunist" in corpse)
+		{
+			return false;
+		}
+
+		return this.getContainer().getActor().getAlliedFactions().find(corpse.Faction) == null;
+	}
+
+	function onQueryTileTooltip( _tile, _tooltip )
+	{
+		if (this.canProcOntile(_tile))
+		{
+			_tooltip.push({
+				id = 90,
+				type = "text",
+				icon = this.m.Icon,
+				text = "Can be used for " + ::MSU.Text.colorPositive(this.getName())
+			});
+		}
+	}
+
+	function onMovementFinished()
+	{
+		local tile = this.getContainer().getActor().getTile();
+
+		if (!this.canProcOntile(tile))
+		{
+			return;
+		}
+
+		local actor = this.getContainer().getActor();
+
+		if (!::Tactical.TurnSequenceBar.isActiveEntity(actor))
+		{
+			return;
+		}
+
+		local weapon = actor.getMainhandItem();
+
+		if (weapon == null || !weapon.isItemType(::Const.Items.ItemType.Weapon) || !weapon.isWeaponType(::Const.Items.WeaponType.Throwing) || weapon.getAmmoMax() == 0)
+		{
+			return;
+		}
+
+		weapon.setAmmo(::Math.min(weapon.getAmmoMax(), weapon.getAmmo() + 1));
+		this.spawnIcon("perk_rf_opportunist", tile);
+		tile.Properties.get("Corpse").WasUsedForOpportunist <- true;
+		this.m.IsPrimed = true;
+	}
+
+	function onAfterUpdate( _properties )
+	{
+		local actor = this.getContainer().getActor();
+
+		if (!actor.isPlacedOnMap())
+		{
+			return;
+		}
+
+		local weapon = actor.getMainhandItem();
+
+		if (weapon == null || !weapon.isItemType(::Const.Items.ItemType.Weapon) || !weapon.isWeaponType(::Const.Items.WeaponType.Throwing))
+		{
+			return;
+		}
+
+		local isPrimed = this.m.IsPrimed;
+		local attacksRemaining = this.m.AttacksRemaining;
+
+		if (actor.isPreviewing())
+		{
+			if (actor.getPreviewMovement() != null)
+			{
+				isPrimed = isPrimed || this.canProcOntile(actor.getPreviewMovement().End);
+			}
+			else if (actor.getPreviewSkill() != null)
+			{
+				if (attacksRemaining != 0 && this.isSkillValid(actor.getPreviewSkill()))
+				{
+					attacksRemaining--;
+				}
+			}
+		}
+
+		foreach( skill in weapon.getSkills() )
+		{
+			if (!this.isSkillValid(skill))
+			{
+				continue;
+			}
+
+			if (isPrimed)
+			{
+				skill.m.ActionPointCost = 0;
+				skill.m.FatigueCostMult *= this.m.FatigueCostMult;
+			}
+			else if (attacksRemaining != 0 && this.m.TurnsRemaining != 0 && skill.m.ActionPointCost > 1)
+			{
+				skill.m.ActionPointCost /= 2;
+			}
+		}
+	}
+
+	function onPayForItemAction( _skill, _items )
+	{
+		this.m.IsPrimed = false;
+	}
+
+	function onAnySkillExecuted( _skill, _targetTile, _targetEntity, _forFree )
+	{
+		if (this.m.AttacksRemaining != 0 && this.isSkillValid(_skill))
+		{
+			this.m.AttacksRemaining--;
+		}
+
+		this.m.IsPrimed = false;
+	}
+
+	function onTurnEnd()
+	{
+		this.m.IsPrimed = false;
+
+		if (this.m.TurnsRemaining != 0)
+		{
+			this.m.TurnsRemaining--;
+		}
+	}
+
+	function onWaitTurn()
+	{
+		this.m.IsPrimed = false;
+	}
+
+	function onCombatFinished()
+	{
+		this.skill.onCombatFinished();
+		this.m.IsPrimed = false;
+		this.m.AttacksRemaining = 2;
+		this.m.TurnsRemaining = 2;
+	}
+
+	function isSkillValid( _skill )
+	{
+		if (!_skill.isAttack() || !_skill.isRanged())
+		{
+			return false;
+		}
+
+		local weapon = _skill.getItem();
+		return !::MSU.isNull(weapon) && weapon.isItemType(::Const.Items.ItemType.Weapon) && weapon.isWeaponType(::Const.Items.WeaponType.Throwing);
+	}
+
+});

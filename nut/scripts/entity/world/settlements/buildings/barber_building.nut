@@ -5,7 +5,7 @@ this.barber_building <- this.inherit("scripts/entity/world/settlements/buildings
 		this.building.create();
 		this.m.ID = "building.barber";
 		this.m.Name = "理发店";
-		this.m.Description = "在理发店定制你的人的外表";
+		this.m.Description = "理发店可自定义队员外观";
 		this.m.UIImage = "ui/settlements/building_12";
 		this.m.UIImageNight = "ui/settlements/building_12_night";
 		this.m.Tooltip = "world-town-screen.main-dialog-module.Barber";

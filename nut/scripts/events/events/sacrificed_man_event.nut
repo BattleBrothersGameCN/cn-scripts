@@ -114,7 +114,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "我们当然可以这么做。",
+					Text = "当然了。",
 					function getResult( _event )
 					{
 						this.World.getPlayerRoster().add(_event.m.Dude);
@@ -150,7 +150,7 @@ this.sacrificed_man_event <- this.inherit("scripts/events/event", {
 			Characters = [],
 			Options = [
 				{
-					Text = "我们当然可以这么做。",
+					Text = "当然了。",
 					function getResult( _event )
 					{
 						this.World.getTemporaryRoster().clear();

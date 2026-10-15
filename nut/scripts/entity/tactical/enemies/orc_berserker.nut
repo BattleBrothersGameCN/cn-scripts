@@ -300,7 +300,7 @@ this.orc_berserker <- this.inherit("scripts/entity/tactical/actor", {
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.OrcBerserker);
 
-		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 190)
+		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= this.Const.World.Scaling.Orcs.BerserkerStatIncreaseDay)
 		{
 			b.MeleeSkill += 5;
 			b.DamageTotalMult += 0.1;

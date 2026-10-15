@@ -74,8 +74,14 @@ this.large_mountains_fort <- this.inherit("scripts/entity/world/settlement", {
 			"cripple_background",
 			"hedge_knight_background",
 			"hedge_knight_background",
-			"paladin_background"
+			"executioner_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("paladin_background");
+		}
+
 		this.m.UIDescription = "一座巨大的石头城堡建在陡峭的山中";
 		this.m.Description = "这座巨大的石头城堡建在陡峭的山中。许多人驻扎在这里以牢牢控制这片土地。";
 		this.m.UIBackgroundCenter = "ui/settlements/stronghold_03";

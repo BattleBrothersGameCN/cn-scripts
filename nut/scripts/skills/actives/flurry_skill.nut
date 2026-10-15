@@ -30,7 +30,6 @@ this.flurry_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsAOE = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
-		this.m.HitChanceBonus = -15;
 		this.m.DirectDamageMult = 0.2;
 		this.m.ActionPointCost = 12;
 		this.m.FatigueCost = 30;
@@ -50,6 +49,7 @@ this.flurry_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
+			this.m.HitChanceBonus -= 15;
 			_properties.DamageRegularMin += 40;
 			_properties.DamageRegularMax += 65;
 			_properties.DamageArmorMult *= 0.65;
@@ -80,6 +80,11 @@ this.flurry_skill <- this.inherit("scripts/skills/skill", {
 
 		while (numAttacks > 0)
 		{
+			if (!user.isAlive())
+			{
+				break;
+			}
+
 			local tile = targetTiles[currentTileIndex];
 
 			if (!tile.IsEmpty && tile.getEntity().isAttackable() && this.Math.abs(tile.Level - ownTile.Level) <= 1 && !user.isAlliedWith(tile.getEntity()))
@@ -87,7 +92,7 @@ this.flurry_skill <- this.inherit("scripts/skills/skill", {
 				this.m.Container.setBusy(true);
 				this.Time.scheduleEvent(this.TimeUnit.Virtual, attackDelay, function ( _skill )
 				{
-					if (tile.getEntity() != null && tile.getEntity().isAlive())
+					if (tile.getEntity() != null && tile.getEntity().isAlive() && user.isAlive())
 					{
 						this.spawnAttackEffect(tile, this.Const.Tactical.AttackEffectChop);
 						_skill.attackEntity(user, tile.getEntity());
@@ -108,7 +113,7 @@ this.flurry_skill <- this.inherit("scripts/skills/skill", {
 			{
 				if (numAttacks == 6)
 				{
-					  // [133]  OP_JMP            0      5    0    0
+					  // [140]  OP_JMP            0      5    0    0
 				}
 				else
 				{
@@ -116,7 +121,7 @@ this.flurry_skill <- this.inherit("scripts/skills/skill", {
 				}
 			}
 
-			  // [137]  OP_CLOSE          0      9    0    0
+			  // [144]  OP_CLOSE          0      9    0    0
 		}
 
 		return true;

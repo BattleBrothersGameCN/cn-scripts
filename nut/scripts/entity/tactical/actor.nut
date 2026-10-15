@@ -309,6 +309,11 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		return this.m.SoundVolume[_t];
 	}
 
+	function getIsActingImmediately()
+	{
+		return this.m.IsActingImmediately;
+	}
+
 	function getActionPointCostsRaw()
 	{
 		return this.m.ActionPointCosts;
@@ -1807,6 +1812,11 @@ this.actor <- this.inherit("scripts/entity/tactical/entity", {
 		if (_tile == null)
 		{
 			_tile = this.getTile();
+		}
+
+		if (!this.isPlacedOnMap())
+		{
+			return;
 		}
 
 		foreach( item in _loot )

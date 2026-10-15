@@ -22,7 +22,7 @@ this.oath_of_fortification_ambition <- this.inherit("scripts/ambitions/oaths/oat
 
 	function getRewardTooltip()
 	{
-		return "如果你在誓言期间从未损失过战团成员，你将获得额外的名望 (" + this.getBonusObjectiveProgress() + "已死亡)";
+		return "如果誓言期间，你从未在战斗中损失过战团成员，你将获得额外的名望 (" + this.getBonusObjectiveProgress() + "人已牺牲)。";
 	}
 
 	function getBonusObjectiveProgress()

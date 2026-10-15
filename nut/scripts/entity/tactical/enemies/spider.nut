@@ -290,11 +290,11 @@ this.spider <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsImmuneToPoison = true;
 		b.IsImmuneToDisarm = true;
 
-		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 25)
+		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= this.Const.World.Scaling.Beasts.WebknechtDamageIncreaseDay)
 		{
 			b.DamageDirectAdd += 0.05;
 
-			if (this.World.getTime().Days >= 50)
+			if (this.World.getTime().Days >= this.Const.World.Scaling.Beasts.WebknechtStatIncreaseDay)
 			{
 				b.DamageDirectAdd += 0.05;
 				b.MeleeDefense += 5;

@@ -19,9 +19,12 @@ this.grand_diviner_potion_effect <- this.inherit("scripts/skills/skill", {
 		return "该角色目睹了本不该看见的事物，历经了本不属于他们的经历。在他们少数独处的时间里，你曾瞥见过他们脸上那不加控制的恐惧。或许只是佣兵生活终于把他们压垮了罢了。";
 	}
 
-	function onDeath()
+	function onDeath( _fatalityType )
 	{
-		this.World.Statistics.getFlags().set("isGrandDivinerPotionAcquired", false);
+		if (_fatalityType != this.Const.FatalityType.Unconscious)
+		{
+			this.World.Statistics.getFlags().set("isGrandDivinerPotionAcquired", false);
+		}
 	}
 
 	function onDismiss()

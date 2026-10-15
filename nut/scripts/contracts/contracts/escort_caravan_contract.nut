@@ -312,13 +312,6 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 				this.World.Assets.setUseProvisions(false);
 				this.World.getCamera().moveTo(this.World.State.getPlayer());
 
-				if (!this.World.State.isPaused())
-				{
-					this.World.setSpeedMult(this.Const.World.SpeedSettings.EscortMult);
-				}
-
-				this.World.State.m.LastWorldSpeedMult = this.Const.World.SpeedSettings.EscortMult;
-
 				if (this.Flags.get("IsFleeing"))
 				{
 					this.Contract.setScreen("Failure1");
@@ -457,13 +450,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 				this.World.State.setEscortedEntity(null);
 				this.World.State.getPlayer().setVisible(true);
 				this.World.Assets.setUseProvisions(true);
-
-				if (!this.World.State.isPaused())
-				{
-					this.World.setSpeedMult(1.0);
-				}
-
-				this.World.State.m.LastWorldSpeedMult = 1.0;
+				this.World.State.resetSpeedToNormal();
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())
 				{
@@ -835,13 +822,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.State.setCampingAllowed(true);
 						this.World.State.getPlayer().setVisible(true);
 						this.World.Assets.setUseProvisions(true);
-
-						if (!this.World.State.isPaused())
-						{
-							this.World.setSpeedMult(1.0);
-						}
-
-						this.World.State.m.LastWorldSpeedMult = 1.0;
+						this.World.State.resetSpeedToNormal();
 						this.Contract.m.Caravan.die();
 						this.Contract.m.Caravan = null;
 						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationAttacked, "屠杀了一支你受命保护的商队");
@@ -1107,11 +1088,11 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 
 		if (faction.hasTrait(this.Const.FactionTrait.OrientalCityState))
 		{
-			party = faction.spawnEntity(this.m.Home.getTile(), "贸易商队", false, this.Const.World.Spawn.CaravanSouthernEscort, this.m.Home.getResources() * this.Math.rand(10, 25) * 0.01, this.getMinibossModifier());
+			party = faction.spawnEntity(this.m.Home.getTile(), "贸易车队", false, this.Const.World.Spawn.CaravanSouthernEscort, this.m.Home.getResources() * this.Math.rand(10, 25) * 0.01, this.getMinibossModifier());
 		}
 		else
 		{
-			party = faction.spawnEntity(this.m.Home.getTile(), "贸易商队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.4, this.getMinibossModifier());
+			party = faction.spawnEntity(this.m.Home.getTile(), "贸易车队", false, this.Const.World.Spawn.CaravanEscort, this.m.Home.getResources() * 0.4, this.getMinibossModifier());
 		}
 
 		party.getSprite("banner").Visible = false;
@@ -1382,13 +1363,7 @@ this.escort_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			this.World.State.setEscortedEntity(null);
 			this.World.State.getPlayer().setVisible(true);
 			this.World.Assets.setUseProvisions(true);
-
-			if (!this.World.State.isPaused())
-			{
-				this.World.setSpeedMult(1.0);
-			}
-
-			this.World.State.m.LastWorldSpeedMult = 1.0;
+			this.World.State.resetSpeedToNormal();
 
 			if (this.m.Destination != null && !this.m.Destination.isNull())
 			{

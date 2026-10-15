@@ -73,8 +73,14 @@ this.large_farming_village <- this.inherit("scripts/entity/world/settlement", {
 			"sellsword_background",
 			"squire_background",
 			"swordmaster_background",
-			"anatomist_background"
+			"executioner_background"
 		];
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("anatomist_background");
+		}
+
 		this.m.UIDescription = "一个以贸易和农业繁荣的大城市";
 		this.m.Description = "被茂盛的绿色草地、果园和田野包围的大城市。储备的食物通常是满的。";
 		this.m.UIBackgroundCenter = "ui/settlements/townhall_03";

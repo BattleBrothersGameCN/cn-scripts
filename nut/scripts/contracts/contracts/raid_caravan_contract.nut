@@ -12,7 +12,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 	{
 		this.contract.create();
 		this.m.Type = "contract.raid_caravan";
-		this.m.Name = "劫掠商队";
+		this.m.Name = "劫掠车队";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
@@ -77,7 +77,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"劫掠从%start%前往%dest%的商队",
+					"劫掠从%start%前往%dest%的车队",
 					"返回%townname%"
 				];
 
@@ -129,7 +129,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 				local enemyFaction = this.World.FactionManager.getFaction(this.Flags.get("EnemyNobleHouse"));
 				local best_start = this.World.getEntityByID(this.Flags.get("InterceptStart"));
 				local best_dest = this.World.getEntityByID(this.Flags.get("InterceptDest"));
-				local party = enemyFaction.spawnEntity(best_start.getTile(), "商队", false, this.Const.World.Spawn.NobleCaravan, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
+				local party = enemyFaction.spawnEntity(best_start.getTile(), "车队", false, this.Const.World.Spawn.NobleCaravan, 100 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.getSprite("base").Visible = false;
 				party.getSprite("banner").setBrush(enemyFaction.getBannerSmall());
 				party.setMirrored(true);
@@ -690,7 +690,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "摧毁了一支商队");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractSuccess, "摧毁了一支车队");
 						this.World.Contracts.finishActiveContract();
 						return 0;
 					}
@@ -722,7 +722,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
 						this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion() / 2);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "摧毁商队时遗漏了一些活口");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "摧毁车队时遗漏了一些活口");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -753,7 +753,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "摧毁商队时遗漏了一些活口");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "摧毁车队时遗漏了一些活口");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}
@@ -775,7 +775,7 @@ this.raid_caravan_contract <- this.inherit("scripts/contracts/contract", {
 					function getResult()
 					{
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractFail);
-						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "没能摧毁商队");
+						this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationNobleContractFail, "没能摧毁车队");
 						this.World.Contracts.finishActiveContract(true);
 						return 0;
 					}

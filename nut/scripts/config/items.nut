@@ -144,7 +144,10 @@ gt.Const.Items.NamedMeleeWeapons <- [
 	"weapons/named/named_two_handed_hammer",
 	"weapons/named/named_warbrand",
 	"weapons/named/named_warhammer",
-	"weapons/named/named_pike"
+	"weapons/named/named_pike",
+	"weapons/named/named_estoc",
+	"weapons/named/named_poleaxe",
+	"weapons/named/named_exesword"
 ];
 gt.Const.Items.NamedRangedWeapons <- [
 	"weapons/named/named_crossbow",

@@ -67,7 +67,7 @@ this.large_steppe_village <- this.inherit("scripts/entity/world/settlement", {
 			"swordmaster_background",
 			"cripple_background",
 			"eunuch_background",
-			"anatomist_background"
+			"executioner_background"
 		];
 
 		if (this.Const.DLC.Unhold)
@@ -84,6 +84,11 @@ this.large_steppe_village <- this.inherit("scripts/entity/world/settlement", {
 				"beggar_southern_background",
 				"cripple_southern_background"
 			]);
+		}
+
+		if (this.Const.DLC.Paladins)
+		{
+			this.m.DraftList.push("anatomist_background");
 		}
 
 		this.m.UIDescription = "一个以贸易和艺术品而繁荣的大城市";

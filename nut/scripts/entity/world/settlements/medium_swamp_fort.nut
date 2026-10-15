@@ -60,7 +60,8 @@ this.medium_swamp_fort <- this.inherit("scripts/entity/world/settlement", {
 			"deserter_background",
 			"disowned_noble_background",
 			"raider_background",
-			"retired_soldier_background"
+			"retired_soldier_background",
+			"executioner_background"
 		];
 		this.m.UIDescription = "一座石堡一直控制着穿过沼泽的路线";
 		this.m.Description = "一座石堡控制着通往周围沼泽和湿地的路线。";

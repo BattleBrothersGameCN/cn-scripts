@@ -97,7 +97,7 @@ this.possessed_undead_effect <- this.inherit("scripts/skills/skill", {
 					{
 						this.Time.scheduleEvent(this.TimeUnit.Real, 1800, function ( _d )
 						{
-							if (_d.isAlive())
+							if (_d != null && !_d.isNull() && _d.isAlive())
 							{
 								_d.setDirty(true);
 							}

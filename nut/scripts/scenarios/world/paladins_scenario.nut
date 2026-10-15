@@ -3,7 +3,7 @@ this.paladins_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 	function create()
 	{
 		this.m.ID = "scenario.paladins";
-		this.m.Name = "宣誓者";
+		this.m.Name = "执誓者";
 		this.m.Description = "[p=c][img]gfx/ui/events/event_180.png[/img][/p][p]执誓者奉行骑士精神，是高尚无私的战士，他们不效忠于君主，而是忠于其创始人“小安瑟姆”的理想和教诲。这支骑士团如今深陷困境，他们向你求助，希望你能扭转他们的命运。你能够引导这些狂热者成为优秀的佣兵吗？\n\n[color=#bcad8c]圣武士：[/color] 以两位久经沙场且装备精良的战士开始游戏。\n[color=#bcad8c]宣誓者：[/color] 你必须遵从初创者安塞姆的教诲，每隔十天宣下一则誓言，并为此同时承受奖励与惩罚，直至誓言完成为止。[/p]";
 		this.m.Difficulty = 2;
 		this.m.Order = 40;
@@ -57,7 +57,7 @@ this.paladins_scenario <- this.inherit("scripts/scenarios/world/starting_scenari
 		bros[1].setStartValuesEx([
 			"paladin_background"
 		]);
-		bros[1].getBackground().m.RawDescription = "{%name%，像许多誓言者中更为灵活的成员一样，努力成为像年轻的安瑟姆一样的人。他是一个年轻有为的人，尚未让世界的恐怖和压迫磨损他。在诚实的时刻，他提醒你自己。在反思的时刻，你意识到他将来很可能会像你现在这样。但在那之前，年轻人需要遵守誓言，因为这些誓言当然不会被浪费！ | 当安瑟姆展开他的任务时，%name%首先加入了他。虽然年轻的安瑟姆夭折了，但%name%仍然想要完成年轻人的愿景。他是誓言的热烈信徒，经常会发现他在崇拜和纪念年轻安瑟姆的头骨。}";
+		bros[1].getBackground().m.RawDescription = "{%name%，和许多其他矫健的执誓者一样，渴望能成为小安瑟姆那样的人。他是个年轻能干的小伙子，尚未被世间的恐怖和艰苦磨平棱角。说实话，他让你想起了从前的自己。沉静反思时，你意识到他有朝一日很可能变得与你如今无异。但在此之前，敬这世间的少年吧 —— 因为誓约绝不会在他们身上白白浪费！ | 当小安瑟姆踏上征程时，%name%正是他的第一位追随者。尽管小安瑟姆英年早逝，%name%仍执着于实现那位年轻人的愿景。他是誓言的坚定信徒，常常能看到他崇拜并缅怀小安瑟姆的头骨。}";
 		bros[1].setPlaceInFormation(5);
 		bros[1].m.PerkPoints = 0;
 		bros[1].m.LevelUps = 0;

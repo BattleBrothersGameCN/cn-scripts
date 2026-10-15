@@ -52,12 +52,6 @@ this.greater_flesh_golem_attack_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsSpent = false;
 	}
 
-	function isUsable()
-	{
-		local mainhand = this.m.Container.getActor().getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
-		return (mainhand == null || this.getContainer().hasSkill("effects.disarmed")) && this.skill.isUsable();
-	}
-
 	function onUpdate( _properties )
 	{
 		if (this.isUsable())

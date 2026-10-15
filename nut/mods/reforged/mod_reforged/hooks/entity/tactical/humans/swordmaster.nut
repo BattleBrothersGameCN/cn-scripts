@@ -1,0 +1,528 @@
+::Reforged.HooksMod.hook("scripts/entity/tactical/humans/swordmaster", function ( q )
+{
+	q.m.SwordmasterVariants <- {
+		BladeDancer = 0,
+		Metzger = 1,
+		Reaper = 2,
+		Precise = 3,
+		Versatile = 4
+	};
+	q.m.MyArmorVariant <- 0;
+	q.m.MyVariant <- 0;
+	q.onInit = function ()
+	{
+		return {
+			function onInit()
+			{
+				this.human.onInit();
+				local b = this.m.BaseProperties;
+				b.setValues(::Const.Tactical.Actor.Swordmaster);
+				b.IsSpecializedInSwords = true;
+				this.m.ActionPoints = b.ActionPoints;
+				this.m.Hitpoints = b.Hitpoints;
+				this.m.CurrentProperties = clone b;
+				this.setAppearance();
+				this.getSprite("socket").setBrush("bust_base_militia");
+				this.m.Skills.add(::new("scripts/skills/perks/perk_battle_flow"));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_crippling_strikes"));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_dodge"));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_coup_de_grace"));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_footwork"));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_rf_finesse"));
+				this.m.Skills.add(::new("scripts/skills/perks/perk_overwhelm"));
+				this.m.MyVariant = ::MSU.Table.randValue(this.m.SwordmasterVariants);
+
+				switch(this.m.MyVariant)
+				{
+				case this.m.SwordmasterVariants.Precise:
+					this.m.MyArmorVariant = 0;
+					break;
+
+				case this.m.SwordmasterVariants.Reaper:
+				case this.m.SwordmasterVariants.Versatile:
+					this.m.MyArmorVariant = 1;
+					this.getAIAgent().m.Properties.BehaviorMult[::Const.AI.Behavior.ID.LineBreaker] = 10.0;
+					this.getAIAgent().m.Properties.BehaviorMult[::Const.AI.Behavior.ID.KnockBack] = 10.0;
+					break;
+
+				case this.m.SwordmasterVariants.BladeDancer:
+				case this.m.SwordmasterVariants.Metzger:
+					this.m.MyArmorVariant = ::Math.rand(0, 1);
+					break;
+				}
+			}
+
+		}.onInit;
+	};
+	q.assignRandomEquipment = function ()
+	{
+		return {
+			function assignRandomEquipment()
+			{
+				if (this.m.Items.hasEmptySlot(::Const.ItemSlot.Body))
+				{
+					local armor;
+
+					if (this.m.MyArmorVariant == 0)
+					{
+						armor = "scripts/items/armor/noble_mail_armor";
+					}
+					else
+					{
+						armor = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/armor/rf_breastplate"
+							],
+							[
+								1,
+								"scripts/items/armor/rf_brigandine_armor"
+							]
+						]).roll();
+					}
+
+					this.m.Items.equip(::new(armor));
+					local bodyItem = this.getBodyItem();
+
+					if (bodyItem != null && !bodyItem.isItemType(::Const.Items.ItemType.Named) && ::Math.rand(1, 100) <= ::Reforged.Config.ArmorAttachmentChance.Tier3)
+					{
+						local armorAttachment;
+
+						if (this.m.MyArmorVariant == 0)
+						{
+							armorAttachment = ::MSU.Class.WeightedContainer([
+								[
+									1,
+									"scripts/items/armor_upgrades/direwolf_pelt_upgrade"
+								],
+								[
+									1,
+									"scripts/items/armor_upgrades/leather_shoulderguards_upgrade"
+								],
+								[
+									1,
+									"scripts/items/armor_upgrades/double_mail_upgrade"
+								]
+							]).roll();
+						}
+						else
+						{
+							armorAttachment = "scripts/items/armor_upgrades/direwolf_pelt_upgrade";
+						}
+
+						this.getBodyItem().setUpgrade(::new(armorAttachment));
+					}
+				}
+
+				if (this.m.Items.hasEmptySlot(::Const.ItemSlot.Head))
+				{
+					local helmet;
+
+					if (this.m.MyArmorVariant == 0)
+					{
+						helmet = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/helmets/mail_coif"
+							],
+							[
+								1,
+								"scripts/items/helmets/greatsword_hat"
+							],
+							[
+								1,
+								"scripts/items/helmets/reinforced_mail_coif"
+							],
+							[
+								1,
+								"scripts/items/helmets/nasal_helmet"
+							]
+						]).roll();
+					}
+					else
+					{
+						helmet = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/helmets/rf_greatsword_helm"
+							],
+							[
+								1,
+								"scripts/items/helmets/nasal_helmet_with_mail"
+							]
+						]).roll();
+					}
+
+					this.m.Items.equip(::new(helmet));
+				}
+
+				if (this.m.Items.hasEmptySlot(::Const.ItemSlot.Mainhand))
+				{
+					local weapons;
+
+					switch(this.m.MyVariant)
+					{
+					case this.m.SwordmasterVariants.BladeDancer:
+						weapons = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/weapons/noble_sword"
+							]
+						]);
+
+						if (this.m.Items.hasEmptySlot(::Const.ItemSlot.Offhand))
+						{
+							weapons.addArray([
+								[
+									1,
+									"scripts/items/weapons/longsword"
+								],
+								[
+									1,
+									"scripts/items/weapons/rf_greatsword"
+								],
+								[
+									1,
+									"scripts/items/weapons/warbrand"
+								]
+							]);
+						}
+
+						break;
+
+					case this.m.SwordmasterVariants.Versatile:
+						weapons = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/weapons/greatsword"
+							]
+						]);
+						break;
+
+					case this.m.SwordmasterVariants.Metzger:
+						weapons = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/weapons/shamshir"
+							]
+						]);
+						this.m.Items.equip(::new("scripts/items/shields/oriental/southern_light_shield"));
+						break;
+
+					case this.m.SwordmasterVariants.Precise:
+						weapons = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/weapons/fencing_sword"
+							],
+							[
+								1,
+								"scripts/items/weapons/rf_estoc"
+							]
+						]);
+						break;
+
+					case this.m.SwordmasterVariants.Reaper:
+						weapons = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/weapons/rf_greatsword"
+							],
+							[
+								1,
+								"scripts/items/weapons/warbrand"
+							],
+							[
+								1,
+								"scripts/items/weapons/greatsword"
+							]
+						]);
+						break;
+					}
+
+					this.m.Items.equip(::new(weapons.roll()));
+				}
+			}
+
+		}.assignRandomEquipment;
+	};
+	q.makeMiniboss = function ()
+	{
+		return {
+			function makeMiniboss()
+			{
+				if (!this.actor.makeMiniboss())
+				{
+					return false;
+				}
+
+				this.getSprite("miniboss").setBrush("bust_miniboss");
+				local r = ::Math.rand(1, 100);
+
+				if (r <= 60)
+				{
+					local weapon;
+
+					switch(this.m.MyVariant)
+					{
+					case this.m.SwordmasterVariants.BladeDancer:
+						weapon = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/weapons/named/named_sword"
+							],
+							[
+								1,
+								"scripts/items/weapons/named/named_rf_longsword"
+							],
+							[
+								1,
+								"scripts/items/weapons/named/named_warbrand"
+							]
+						]).roll();
+						break;
+
+					case this.m.SwordmasterVariants.Versatile:
+						weapon = "scripts/items/weapons/named/named_greatsword";
+						break;
+
+					case this.m.SwordmasterVariants.Metzger:
+						weapon = "scripts/items/weapons/named/named_shamshir";
+						this.m.Items.equip(::new("scripts/items/shields/oriental/southern_light_shield"));
+						break;
+
+					case this.m.SwordmasterVariants.Precise:
+						weapon = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/weapons/named/named_fencing_sword"
+							],
+							[
+								1,
+								"scripts/items/weapons/named/named_rf_estoc"
+							]
+						]).roll();
+						break;
+
+					case this.m.SwordmasterVariants.Reaper:
+						weapon = ::MSU.Class.WeightedContainer([
+							[
+								1,
+								"scripts/items/weapons/named/named_warbrand"
+							],
+							[
+								1,
+								"scripts/items/weapons/named/named_greatsword"
+							]
+						]).roll();
+						break;
+					}
+
+					this.m.Items.equip(::new(weapon));
+				}
+				else if (r <= 80)
+				{
+					local armor;
+
+					if (this.m.MyArmorVariant == 0)
+					{
+						armor = ::Reforged.ItemTable.NamedArmorNorthern.roll({
+							function Apply( _script, _weight )
+							{
+								local stam = ::ItemTables.ItemInfoByScript[_script].StaminaModifier;
+
+								if (stam < -16)
+								{
+									return 0.0;
+								}
+
+								return _weight;
+							}
+
+						});
+					}
+					else
+					{
+						armor = ::Reforged.ItemTable.NamedArmorNorthern.roll({
+							function Apply( _script, _weight )
+							{
+								local stam = ::ItemTables.ItemInfoByScript[_script].StaminaModifier;
+
+								if (stam > -26 || stam < -32)
+								{
+									return 0.0;
+								}
+
+								return _weight;
+							}
+
+						});
+					}
+
+					if (armor != null)
+					{
+						this.m.Items.equip(::new(armor));
+					}
+				}
+				else
+				{
+					local helmet;
+
+					if (this.m.MyArmorVariant == 0)
+					{
+						helmet = ::Reforged.ItemTable.NamedHelmetNorthern.roll({
+							function Apply( _script, _weight )
+							{
+								local stam = ::ItemTables.ItemInfoByScript[_script].StaminaModifier;
+
+								if (stam < -8)
+								{
+									return 0.0;
+								}
+
+								return _weight;
+							}
+
+						});
+					}
+					else
+					{
+						helmet = ::Reforged.ItemTable.NamedHelmetNorthern.roll({
+							function Apply( _script, _weight )
+							{
+								local stam = ::ItemTables.ItemInfoByScript[_script].StaminaModifier;
+
+								if (stam > -10 || stam < -16)
+								{
+									return 0.0;
+								}
+
+								return _weight;
+							}
+
+						});
+					}
+
+					if (helmet != null)
+					{
+						this.m.Items.equip(::new(helmet));
+					}
+				}
+
+				return true;
+			}
+
+		}.makeMiniboss;
+	};
+	q.onSpawned = function ()
+	{
+		return {
+			function onSpawned()
+			{
+				if (this.m.MyArmorVariant == 0)
+				{
+					this.m.Skills.add(::new("scripts/skills/perks/perk_relentless"));
+					this.m.Skills.add(::new("scripts/skills/perks/perk_nimble"));
+				}
+				else
+				{
+					this.m.Skills.add(::new("scripts/skills/perks/perk_rf_skirmisher"));
+					this.m.Skills.add(::new("scripts/skills/perks/perk_rf_poise"));
+				}
+
+				local mainhandItem = this.getMainhandItem();
+
+				if (mainhandItem != null)
+				{
+					::Reforged.Skills.addPerkGroupOfEquippedWeapon(this);
+
+					switch(this.m.MyVariant)
+					{
+					case this.m.SwordmasterVariants.BladeDancer:
+						this.m.Skills.add(::new("scripts/skills/perks/perk_duelist"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_swordmaster_blade_dancer"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_exploit_opening"));
+
+						switch(mainhandItem.getID())
+						{
+						case "weapon.warbrand":
+						case "weapon.named_warbrand":
+							this.m.Skills.add(::new("scripts/skills/perks/perk_rf_double_strike"));
+							break;
+						}
+
+						break;
+
+					case this.m.SwordmasterVariants.Versatile:
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_formidable_approach"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rotation"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_underdog"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_swordmaster_versatile_swordsman"));
+						break;
+
+					case this.m.SwordmasterVariants.Metzger:
+						this.m.Skills.add(::new("scripts/skills/perks/perk_duelist"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_swordmaster_metzger"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_rebuke"));
+						break;
+
+					case this.m.SwordmasterVariants.Precise:
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_fencer"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_swordmaster_precise"));
+						break;
+
+					case this.m.SwordmasterVariants.Reaper:
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_death_dealer"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_swordmaster_reaper"));
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_sweeping_strikes"));
+						break;
+					}
+				}
+
+				if (this.m.IsMiniboss)
+				{
+					switch(this.m.MyVariant)
+					{
+					case this.m.SwordmasterVariants.Metzger:
+						this.m.Skills.add(::new("scripts/skills/perks/perk_killing_frenzy"));
+						break;
+
+					case this.m.SwordmasterVariants.BladeDancer:
+					case this.m.SwordmasterVariants.Versatile:
+					case this.m.SwordmasterVariants.Precise:
+					case this.m.SwordmasterVariants.Reaper:
+						this.m.Skills.add(::new("scripts/skills/perks/perk_rf_pattern_recognition"));
+						break;
+					}
+				}
+			}
+
+		}.onSpawned;
+	};
+	q.onSkillsUpdated = function ( __original )
+	{
+		return {
+			function onSkillsUpdated()
+			{
+				__original();
+
+				if (this.m.MyVariant == this.m.SwordmasterVariants.BladeDancer)
+				{
+					local weapon = this.getMainhandItem();
+
+					if (weapon != null)
+					{
+						foreach( skill in weapon.getSkills() )
+						{
+							if (skill.isAOE())
+							{
+								skill.m.IsUsable = false;
+							}
+						}
+					}
+				}
+			}
+
+		}.onSkillsUpdated;
+	};
+});

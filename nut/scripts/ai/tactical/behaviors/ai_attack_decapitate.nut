@@ -3,6 +3,7 @@ this.ai_attack_decapitate <- this.inherit("scripts/ai/tactical/behavior", {
 		TargetTile = null,
 		PossibleSkills = [
 			"actives.decapitate",
+			"actives.exesword_decapitate",
 			"actives.golem_decapitate"
 		],
 		Skill = null

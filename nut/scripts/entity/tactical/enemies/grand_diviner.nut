@@ -98,46 +98,7 @@ this.grand_diviner <- this.inherit("scripts/entity/tactical/human", {
 			SpawnTile = spawnTile,
 			Faction = this.getFaction()
 		});
-		local miasma_effect = {
-			Type = "miasma",
-			Tooltip = "瘴气弥漫此处，毒害所有活物",
-			IsPositive = false,
-			IsAppliedAtRoundStart = false,
-			IsAppliedAtTurnEnd = true,
-			IsAppliedOnMovement = false,
-			IsAppliedOnEnter = false,
-			IsByPlayer = false,
-			Timeout = this.Time.getRound() + 3,
-			Callback = this.Const.Tactical.Common.onApplyMiasma,
-			function Applicable( _a )
-			{
-				return !_a.getFlags().has("undead");
-			}
-
-		};
-
-		if (_tile.Properties.Effect != null && _tile.Properties.Effect.Type == "miasma")
-		{
-			_tile.Properties.Effect.Timeout = this.Time.getRound() + 3;
-		}
-		else
-		{
-			if (_tile.Properties.Effect != null)
-			{
-				this.Tactical.Entities.removeTileEffect(_tile);
-			}
-
-			_tile.Properties.Effect = clone miasma_effect;
-			local particles = [];
-
-			for( local i = 0; i < this.Const.Tactical.MiasmaParticles.len(); i = ++i )
-			{
-				particles.push(this.Tactical.spawnParticleEffect(true, this.Const.Tactical.MiasmaParticles[i].Brushes, _tile, this.Const.Tactical.MiasmaParticles[i].Delay, this.Const.Tactical.MiasmaParticles[i].Quantity, this.Const.Tactical.MiasmaParticles[i].LifeTimeQuantity, this.Const.Tactical.MiasmaParticles[i].SpawnRate, this.Const.Tactical.MiasmaParticles[i].Stages));
-			}
-
-			this.Tactical.Entities.addTileEffect(_tile, _tile.Properties.Effect, particles);
-		}
-
+		this.Tactical.State.spawnMiasmaOnTile(_tile);
 		this.human.onDeath(_killer, _skill, null, this.Const.FatalityType.Unconscious);
 	}
 

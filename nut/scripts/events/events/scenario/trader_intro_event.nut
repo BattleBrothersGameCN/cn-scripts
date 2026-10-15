@@ -99,7 +99,7 @@ this.trader_intro_event <- this.inherit("scripts/events/event", {
 
 	function onPrepare()
 	{
-		this.m.Title = "贸易商队";
+		this.m.Title = "贸易车队";
 	}
 
 	function onPrepareVariables( _vars )

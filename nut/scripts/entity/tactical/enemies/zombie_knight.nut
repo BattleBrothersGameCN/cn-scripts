@@ -37,7 +37,7 @@ this.zombie_knight <- this.inherit("scripts/entity/tactical/enemies/zombie", {
 		b.IsImmuneToPoison = true;
 		b.FatigueDealtPerHitMult = 2.0;
 
-		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 90)
+		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= this.Const.World.Scaling.Undead.FallenHeroStatIncreaseDay)
 		{
 			b.MeleeSkill += 5;
 			b.DamageTotalMult += 0.1;

@@ -72,12 +72,9 @@ this.schrat <- this.inherit("scripts/entity/tactical/actor", {
 
 	function playSound( _type, _volume, _pitch = 1.0 )
 	{
-		if (_type == this.Const.Sound.ActorEvent.DamageReceived)
+		if (_type == this.Const.Sound.ActorEvent.DamageReceived && !this.isArmedWithShield())
 		{
-			if (!this.isArmedWithShield())
-			{
-				_type = this.Const.Sound.ActorEvent.Other1;
-			}
+			_type = this.Const.Sound.ActorEvent.Other1;
 		}
 
 		this.actor.playSound(_type, _volume, _pitch);
@@ -217,7 +214,7 @@ this.schrat <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsAffectedByInjuries = false;
 		b.IsImmuneToDisarm = true;
 
-		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 250)
+		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= this.Const.World.Scaling.Beasts.SchratStatIncreaseDay)
 		{
 			b.MeleeSkill += 5;
 		}
